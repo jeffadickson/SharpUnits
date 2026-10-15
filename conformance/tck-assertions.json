@@ -1,0 +1,202 @@
+{
+  "upstream": {
+    "repository": "unitsofmeasurement/unit-tck",
+    "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+  },
+  "note": "Exhaustive assertion ID inventory for the 16 TCK specification test classes. This does not indicate tests are ported or passing.",
+  "suites": [
+    {
+      "path": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "assertions": [
+        "41-A1",
+        "41-A2",
+        "41-A3",
+        "41-A4"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+      "assertions": [
+        "Setup",
+        "Setup"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "assertions": [
+        "46-A1",
+        "46-A2",
+        "46-A3",
+        "46-A4",
+        "46-A5"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "assertions": [
+        "45-A1",
+        "45-A2",
+        "45-A3",
+        "45-A4",
+        "45-A5",
+        "45-A6"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "assertions": [
+        "431-A1",
+        "431-A2",
+        "431-A3",
+        "431-A4",
+        "431-A5",
+        "431-A6",
+        "431-A7",
+        "431-A8",
+        "4311-A1",
+        "4311-A4",
+        "4311-A5",
+        "4311-A6",
+        "4312-A1",
+        "4312-A2",
+        "431-A9",
+        "431-A10"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+      "assertions": [
+        "44-A1",
+        "44-A2"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "assertions": [
+        "561-A1",
+        "561-A2",
+        "561-A3",
+        "561-A4"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+      "assertions": [
+        "551-A1",
+        "552-A1"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+      "assertions": [
+        "51-A1",
+        "51-A2"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "assertions": [
+        "53-A1",
+        "53-A2",
+        "53-A3",
+        "53-A4"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "assertions": [
+        "54-A01",
+        "54-A02",
+        "54-A03",
+        "54-A04",
+        "54-A05",
+        "54-A06",
+        "54-A07",
+        "54-A08",
+        "54-A09",
+        "54-A10"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "assertions": [
+        "52-A1",
+        "52-A2",
+        "52-A3",
+        "52-A4",
+        "52-A5",
+        "52-A6"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "assertions": [
+        "424-A1",
+        "424-A2",
+        "424-A3",
+        "424-A4",
+        "424-A5",
+        "424-A6"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "assertions": [
+        "423-A1",
+        "423-A2",
+        "423-A3",
+        "423-A4",
+        "423-A5",
+        "423-A6",
+        "423-A7",
+        "423-A8",
+        "423-A9",
+        "423-A10"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "assertions": [
+        "425-A1",
+        "425-A2",
+        "425-A3",
+        "425-A4",
+        "425-A5",
+        "425-A6",
+        "425-A7"
+      ]
+    },
+    {
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "assertions": [
+        "421-A1",
+        "421-A2",
+        "421-A3",
+        "421-A4",
+        "421-A5",
+        "421-A6",
+        "421-A7",
+        "421-A8",
+        "421-A9",
+        "42121-A1",
+        "42121-A2",
+        "42121-A3",
+        "42121-A4",
+        "42121-A5",
+        "42121-A6",
+        "42121-A7",
+        "42121-A8",
+        "42121-A9",
+        "42121-A10",
+        "42122-A1",
+        "42122-A2",
+        "42122-A3",
+        "42123-A1",
+        "42124-A1",
+        "42124-A2",
+        "42124-A3",
+        "42124-A4"
+      ]
+    }
+  ]
+}
