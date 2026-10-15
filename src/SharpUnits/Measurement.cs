@@ -1,12 +1,18 @@
 namespace SharpUnits;
 /// <summary>Measured SI quantity and independent standard uncertainty (1σ).</summary>
 /// <remarks>Assumes uncorrelated measurements; correlated quantities require covariance-aware propagation.</remarks>
-public readonly record struct Measurement(Quantity Value,double StandardUncertainty)
+public readonly record struct Measurement
 {
+ /// <summary>Measured physical quantity.</summary>
+ public Quantity Value { get; }
+ /// <summary>Standard uncertainty expressed in coherent SI units.</summary>
+ public double StandardUncertainty { get; }
  /// <summary>Constructs a measurement with finite nonnegative standard uncertainty.</summary>
- public Measurement
+ public Measurement(Quantity value,double standardUncertainty)
  {
-  if(!double.IsFinite(StandardUncertainty)||StandardUncertainty<0)throw new ArgumentOutOfRangeException(nameof(StandardUncertainty));
+  if(!double.IsFinite(standardUncertainty)||standardUncertainty<0)throw new ArgumentOutOfRangeException(nameof(standardUncertainty));
+  Value=value;
+  StandardUncertainty=standardUncertainty;
  }
  /// <summary>Adds independent measurements of compatible dimensions.</summary>
  public static Measurement operator +(Measurement a,Measurement b)
