@@ -1,27 +1,32 @@
-using System.Collections.Generic;
 namespace SharpUnits;
-/// <summary>Canonical multiplicative unit expression with SI dimension and scale.</summary>
-/// <remarks>Affine units must be converted to coherent SI before participating in unit algebra.</remarks>
-public readonly record struct UnitExpression(Dimension Dimension, double Scale)
+/// <summary>Backward-compatible unit-expression facade over canonical rational dimensional algebra.</summary>
+/// <remarks>Fractional results are available via RationalDimension; legacy Dimension rejects fractional exponents.</remarks>
+public readonly record struct UnitExpression
 {
+ private readonly RationalUnitExpression core;
+ /// <summary>Constructs from legacy integral dimensions.</summary>
+ public UnitExpression(Dimension dimension,double scale):this(new RationalUnitExpression(RationalDimension.From(dimension),scale)){}
+ /// <summary>Constructs from canonical rational dimensions.</summary>
+ public UnitExpression(RationalDimension dimension,double scale):this(new RationalUnitExpression(dimension,scale)){}
+ private UnitExpression(RationalUnitExpression value)=>core=value;
+ /// <summary>Legacy dimension projection, requiring integer exponents.</summary>
+ public Dimension Dimension=>core.Dimension.ToIntegerDimension();
+ /// <summary>Exact rational dimension vector.</summary>
+ public RationalDimension RationalDimension=>core.Dimension;
+ /// <summary>Multiplicative SI scale.</summary>
+ public double Scale=>core.Scale;
  /// <summary>Creates an expression from a linear unit.</summary>
- public static UnitExpression From(UnitDefinition unit)
- {
-  ArgumentNullException.ThrowIfNull(unit);
-  if(unit.Converter.Offset!=0)throw new InvalidOperationException("Affine units cannot be multiplied or divided.");
-  return new(unit.Dimension,unit.Converter.Scale);
- }
- /// <summary>Multiplies unit expressions.</summary>
- public static UnitExpression operator *(UnitExpression a,UnitExpression b)=>new(a.Dimension+b.Dimension,a.Scale*b.Scale);
- /// <summary>Divides unit expressions.</summary>
- public static UnitExpression operator /(UnitExpression a,UnitExpression b)=>new(a.Dimension-b.Dimension,a.Scale/b.Scale);
+ public static UnitExpression From(UnitDefinition unit)=>new(RationalUnitExpression.From(unit));
+ /// <summary>Multiplies expressions.</summary>
+ public static UnitExpression operator *(UnitExpression a,UnitExpression b)=>new(a.core*b.core);
+ /// <summary>Divides expressions.</summary>
+ public static UnitExpression operator /(UnitExpression a,UnitExpression b)=>new(a.core/b.core);
  /// <summary>Raises a unit to an integer power.</summary>
- public UnitExpression Pow(int exponent)
- {
-  static int CheckedMultiply(int x,int y)=>checked(x*y);
-  var d=Dimension;
-  return new(new Dimension(CheckedMultiply(d.Length,exponent),CheckedMultiply(d.Mass,exponent),CheckedMultiply(d.Time,exponent),CheckedMultiply(d.Current,exponent),CheckedMultiply(d.Temperature,exponent),CheckedMultiply(d.Amount,exponent),CheckedMultiply(d.Luminosity,exponent)),Math.Pow(Scale,exponent));
- }
- /// <summary>Checks dimensional compatibility independently of unit scale.</summary>
- public bool IsCompatibleWith(UnitExpression other)=>Dimension==other.Dimension;
+ public UnitExpression Pow(int exponent)=>new(core.Pow(exponent));
+ /// <summary>Raises a unit to an exact rational dimensional power.</summary>
+ public UnitExpression Pow(Rational exponent)=>new(core.Pow(exponent));
+ /// <summary>Returns a rational-dimensional root.</summary>
+ public UnitExpression Root(int degree)=>new(core.Root(degree));
+ /// <summary>Tests dimensional compatibility.</summary>
+ public bool IsCompatibleWith(UnitExpression other)=>core.IsCompatibleWith(other.core);
 }
