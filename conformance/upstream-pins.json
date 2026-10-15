@@ -1,0 +1,11 @@
+{
+  "tck": {
+    "repository": "unitsofmeasurement/unit-tck",
+    "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+  },
+  "indriya": {
+    "repository": "unitsofmeasurement/indriya",
+    "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+  },
+  "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+}
