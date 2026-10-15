@@ -16,3 +16,7 @@ Alpha prototype. Source baseline currently exists in the local project archive; 
 - Cross-platform .NET 8 build and tests
 
 See GitHub Issues for work tracking.
+
+## Requirements closure
+
+The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
