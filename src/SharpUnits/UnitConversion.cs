@@ -1,12 +1,18 @@
 namespace SharpUnits;
 /// <summary>Unit converter supporting linear and affine transformations to SI.</summary>
 /// <remarks>Absolute affine quantities such as Celsius must not be multiplied directly as unit expressions.</remarks>
-public readonly record struct UnitConversion(double Scale, double Offset)
+public readonly record struct UnitConversion
 {
+ /// <summary>Multiplicative factor to coherent SI.</summary>
+ public double Scale { get; }
+ /// <summary>Additive offset in coherent SI units.</summary>
+ public double Offset { get; }
  /// <summary>Creates a converter; scale must be finite and nonzero.</summary>
- public UnitConversion
+ public UnitConversion(double scale, double offset)
  {
-   if (!double.IsFinite(Scale) || Scale == 0 || !double.IsFinite(Offset))
+   Scale = scale;
+   Offset = offset;
+   if (!double.IsFinite(scale) || scale == 0 || !double.IsFinite(offset))
       throw new ArgumentOutOfRangeException(nameof(Scale), "Scale must be finite and nonzero; offset finite.");
  }
  /// <summary>Converts a value to the coherent SI representation.</summary>
