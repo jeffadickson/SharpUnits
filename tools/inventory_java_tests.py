@@ -16,12 +16,12 @@ SOURCES = {
     "indriya": ROOT / "upstream" / "indriya",
 }
 TEST_METHOD = re.compile(
-    r"@(?:org\\.junit\\.jupiter\\.api\\.|org\\.testng\\.annotations\\.)?Test\\b"
-    r"(?:\\s*\\([^)]*\\))?"
-    r"(?:(?!@Test)[\\s\\S]){0,1200}?"
-    r"\\b(?:public|protected|private)?\\s*(?:static\\s+)?"
-    r"(?:void|[A-Za-z_][\\w<>?,.\\[\\] ]*)\\s+"
-    r"([A-Za-z_][\\w]*)\\s*\\(",
+    r"@(?:org\.junit\.jupiter\.api\.|org\.testng\.annotations\.)?Test\b"
+    r"(?:\s*\([^)]*\))?"
+    r"(?:(?!@Test)[\s\S]){0,1200}?"
+    r"\b(?:public|protected|private)?\s*(?:static\s+)?"
+    r"(?:void|[A-Za-z_][\w<>?,.\[\] ]*)\s+"
+    r"([A-Za-z_][\w]*)\s*\(",
     re.MULTILINE,
 )
 
@@ -49,7 +49,7 @@ def main():
         "classes": records,
     }
     target = ROOT / "conformance" / "java-method-inventory.json"
-    target.write_text(json.dumps(output, indent=2) + "\\n", encoding="utf-8")
+    target.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     print(f"Inventoried {output['testClassCount']} classes and {output['detectedMethodCount']} candidate methods")
     if len(records) < 90:
         sys.exit("Upstream test inventory unexpectedly small")
