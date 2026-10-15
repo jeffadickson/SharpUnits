@@ -23,3 +23,7 @@ The other TCK classes listed in `upstream-test-inventory.md` are not yet mapped 
 ## Closure
 
 A TCK assertion requires a source path and ID, translated acceptance condition, implemented API, passing .NET test, and independent Java reference evidence. Missing cases are explicit gaps, not skipped tests.
+
+## Rational-dimension extension (2026-10-15)
+
+`RationalDimension` now represents fractional exponents without floating-point rounding. `RationalDimensionTests` covers nonintegral roots and exponent round trips. The legacy integer `Dimension.Root` still rejects fractional results, so migration of public quantity and unit-expression APIs to the rational representation remains open. This is **implemented but not yet verified by passing CI**. See JP-003 and Issue #7.
