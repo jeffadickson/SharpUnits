@@ -25,10 +25,16 @@ public sealed class TckDimensionTests
  {
   Assert.Equal(Dimension.ElectricCurrent,Dimension.Voltage-Dimension.Resistance);
  }
+ [Fact] public void Tck425A5_Root_ExactIntegerExponents()
+ {
+  Assert.Equal(Dimension.ElectricCurrent,Dimension.ElectricCurrent.Pow(2).Root(2));
+  Assert.Throws<InvalidOperationException>(()=>Dimension.Voltage.Root(2));
+  Assert.Throws<ArgumentOutOfRangeException>(()=>Dimension.Voltage.Root(0));
+ }
  [Fact] public void Tck425A6_Power_RepresentableIntegerPowers()
  {
   var d=Dimension.ElectricCurrent;
-  Assert.Equal(new Dimension(0,0,0,2,0,0,0),d+d);
+  Assert.Equal(new Dimension(0,0,0,2,0,0,0),d.Pow(2));
  }
  [Fact] public void Tck425A7_BaseDimensionComponents()
  {
@@ -37,5 +43,6 @@ public sealed class TckDimensionTests
   Assert.Equal(1,d.Mass);
   Assert.Equal(-3,d.Time);
   Assert.Equal(-1,d.Current);
+  Assert.Equal(-1,d.GetBaseDimensions()["I"]);
  }
 }
