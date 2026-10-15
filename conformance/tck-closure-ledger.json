@@ -1,0 +1,799 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+  "policy": "GAP until source-specific equivalent and passing cross-platform CI evidence are recorded; authored tests are not automatically verified",
+  "totalAssertions": 113,
+  "entries": [
+    {
+      "id": "41-A1",
+      "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "41-A2",
+      "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "41-A3",
+      "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "41-A4",
+      "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "Setup",
+      "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "Setup",
+      "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "46-A1",
+      "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "46-A2",
+      "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "46-A3",
+      "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "46-A4",
+      "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "46-A5",
+      "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A1",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A2",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A3",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A4",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A5",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "45-A6",
+      "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A1",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A2",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A3",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A4",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A5",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A6",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A7",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A8",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4311-A1",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4311-A4",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4311-A5",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4311-A6",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4312-A1",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "4312-A2",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A9",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "431-A10",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "44-A1",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "44-A2",
+      "source": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "561-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "561-A2",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "561-A3",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "561-A4",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "551-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "552-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "51-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "51-A2",
+      "source": "src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "53-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "53-A2",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "53-A3",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "53-A4",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A01",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A02",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A03",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A04",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A05",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A06",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A07",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A08",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A09",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "54-A10",
+      "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A1",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A2",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A3",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A4",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A5",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "52-A6",
+      "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A5",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "424-A6",
+      "source": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A5",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A6",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A7",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A8",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A9",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "423-A10",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A5",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A6",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "425-A7",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A5",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A6",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A7",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A8",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "421-A9",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A5",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A6",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A7",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A8",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A9",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42121-A10",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42122-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42122-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42122-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42123-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42124-A1",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42124-A2",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42124-A3",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    },
+    {
+      "id": "42124-A4",
+      "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "GAP",
+      "test": null,
+      "evidence": null
+    }
+  ]
+}
