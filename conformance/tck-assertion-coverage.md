@@ -10,9 +10,9 @@ Reference: unit-tck commit `96da910db2a9aca61580a14125dde94b5f1c0285`.
 | 425-A2 | testHashcode | Tck425A2_EqualDimensionsHaveEqualHashes | Authored, not CI-verified |
 | 425-A3 | testMultiply | Tck425A3_DimensionMultiplication | Authored, not CI-verified |
 | 425-A4 | testDivide | Tck425A4_DimensionDivision | Authored, not CI-verified |
-| 425-A5 | testRoot | none | **GAP** JP-003: rational dimension roots |
-| 425-A6 | testPow | Tck425A6_Power_RepresentableIntegerPowers | Partial: no public Dimension.Pow |
-| 425-A7 | testGetBaseDimensions | Tck425A7_BaseDimensionComponents | Partial: record properties, not dictionary API |
+| 425-A5 | testRoot | Tck425A5_Root_ExactIntegerExponents | Partial: integer-exact roots only; rational roots gap JP-003 |
+| 425-A6 | testPow | Tck425A6_Power_RepresentableIntegerPowers | Authored; CI unverified |
+| 425-A7 | testGetBaseDimensions | Tck425A7_BaseDimensionComponents | Authored; map API added, CI unverified |
 
 Java tests often check method availability through reflection; C# parity requires semantic equivalents rather than identical Java method names. The partial tests do not demonstrate full parity. They must not be counted as completed assertions until API-level acceptance and CI pass.
 
