@@ -17,7 +17,7 @@ public sealed class UnitRegistry
  public double Convert(double value,string from,string to)
  {
   var source=Resolve(from);var target=Resolve(to);
-  if(source.Dimension!=target.Dimension)throw new InvalidOperationException("Incompatible dimensions");
+  if(source.RationalDimension!=target.RationalDimension)throw new InvalidOperationException("Incompatible dimensions");
   return target.Converter.FromSi(source.Converter.ToSi(value));
  }
  /// <summary>Creates an SI registry containing electrical and temperature units.</summary>
