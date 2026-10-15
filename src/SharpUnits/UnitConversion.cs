@@ -19,6 +19,10 @@ public readonly record struct UnitConversion
  public double ToSi(double value) => checked(value * Scale + Offset);
  /// <summary>Converts an SI value back to the source unit.</summary>
  public double FromSi(double siValue) => (siValue - Offset) / Scale;
+ /// <summary>True if the converter leaves every finite value unchanged.</summary>
+ public bool IsIdentity => Scale == 1d && Offset == 0d;
+ /// <summary>True if the conversion has no additive offset.</summary>
+ public bool IsLinear => Offset == 0d;
  /// <summary>Returns the inverse affine mapping, from SI back to the original unit.</summary>
  public UnitConversion Inverse() => new(1d / Scale, -Offset / Scale);
  /// <summary>Composes this mapping with a subsequent affine mapping.</summary>
