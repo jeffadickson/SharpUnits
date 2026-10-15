@@ -13,6 +13,14 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Verify pinned Java test sources
+        shell: bash
+        run: |
+          test -f upstream/unit-tck/pom.xml
+          test -f upstream/indriya/pom.xml
+          echo "Java upstream sources available for test porting"
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
