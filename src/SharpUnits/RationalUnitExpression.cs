@@ -8,7 +8,7 @@ public readonly record struct RationalUnitExpression(RationalDimension Dimension
  {
   ArgumentNullException.ThrowIfNull(unit);
   if(unit.Converter.Offset!=0)throw new InvalidOperationException("Affine units cannot participate in unit products.");
-  return new(RationalDimension.From(unit.Dimension),unit.Converter.Scale);
+  return new(unit.RationalDimension,unit.Converter.Scale);
  }
  /// <summary>Combines unit dimensions and scale by multiplication.</summary>
  public static RationalUnitExpression operator *(RationalUnitExpression a,RationalUnitExpression b)=>
