@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "JP-008-001",
+      "requirement": "JP-008",
+      "operation": "convert",
+      "value": 250,
+      "from": "mA",
+      "to": "A",
+      "expected": 0.25
+    },
+    {
+      "id": "JP-009-001",
+      "requirement": "JP-009",
+      "operation": "convert",
+      "value": 212,
+      "from": "°F",
+      "to": "°C",
+      "expected": 100
+    },
+    {
+      "id": "JP-004-001",
+      "requirement": "JP-004",
+      "operation": "convert",
+      "value": 1,
+      "from": "V",
+      "to": "A",
+      "expectedError": "INCOMPATIBLE_DIMENSION"
+    }
+  ]
+}
