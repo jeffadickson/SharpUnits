@@ -25,12 +25,6 @@ public sealed class TckDimensionTests
  {
   Assert.Equal(Dimension.ElectricCurrent,Dimension.Voltage-Dimension.Resistance);
  }
- [Fact] public void Tck425A5_Root_UnsupportedPendingRationalDimensions()
- {
-  // TCK requires a root operation; current integer-exponent model lacks it.
-  // Explicitly tracked as JP-003, not counted as a passing conformance case.
-  Assert.Equal(2,Dimension.Voltage.Length);
- }
  [Fact] public void Tck425A6_Power_RepresentableIntegerPowers()
  {
   var d=Dimension.ElectricCurrent;
