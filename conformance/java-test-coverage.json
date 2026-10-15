@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 1,
+  "upstreamTestClassCount": 94,
+  "classes": [
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+      "path": "src/test/java/tech/units/tck/TCKRunnerTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/AbsQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/AbsSystemOfUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/AbsUnitTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/IndriyaPerformanceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/EBNFFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/EBNFPrefixTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/FormatExceptionsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/LocalMessagesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/LocalUnitFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/LocalUnitPrefixOtherLocalesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/LocalUnitPrefixTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/MixedQuantityFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/QuantityFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/SimpleUnitFormatAsciiTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/SimpleUnitFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/SymbolMapTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/UnitFormatRoundtripTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/format/UnitFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/AddConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/CalculusTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/CompositionEquivalenceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/DefaultNumberSystemTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/DoubleMultiplyConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/ExpConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/LogConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/MixedRadixTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/PowerOfPiConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/QuantitySummaryStatisticsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/RationalNumberTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/function/UnitConverterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/format/InternFormatTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/format/l10n/MessagesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/format/l10n/ResourcesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/function/common/QuantityFunctionsFilterTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/function/common/QuantityFunctionsGroupTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/function/common/QuantityFunctionsReducerTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/function/common/QuantityFunctionsSortTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/function/common/QuantityFunctionsTemperatureTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/internal/funtion/radix/MixedRadixSupportTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/AbsoluteVsRelativeTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/DecimalComparableQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/DefaultQuantityFactoryTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/DoubleComparableQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/MixedQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/NumberComparableQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/QuantitiesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/QuantityFactoryProviderTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/QuantityRangeTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/RelativeQuantitiesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/TemperatureTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/WolframTutorialTemperatureTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TemporalQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TimeQuantitiesConcurrentTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TimeQuantitiesTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TimeUnitQuantityTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TimedDataTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/quantity/time/TimedQuantityDataTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/spi/FormatServiceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/spi/MeasurementTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/spi/RangeTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/spi/ServiceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/spi/SystemOfUnitsServiceTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/ASUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/ASUnitsTimeTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/AlternateUnitTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/AngularTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/AnnotatedUnitTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/BaseUnitTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/PrefixTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/ProductUnitSerializationTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/ProductUnitTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitDimensionForeignImplTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitDimensionTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitOneTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitsBaseUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitsDerivedProductUnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    },
+    {
+      "source": "indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+      "path": "src/test/java/tech/units/indriya/unit/UnitsTest.java",
+      "status": "NOT_PORTED",
+      "dotnetTest": null,
+      "requirement": null
+    }
+  ]
+}
