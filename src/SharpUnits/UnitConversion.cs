@@ -19,6 +19,12 @@ public readonly record struct UnitConversion
  public double ToSi(double value) => checked(value * Scale + Offset);
  /// <summary>Converts an SI value back to the source unit.</summary>
  public double FromSi(double siValue) => (siValue - Offset) / Scale;
+ /// <summary>Returns the inverse affine mapping, from SI back to the original unit.</summary>
+ public UnitConversion Inverse() => new(1d / Scale, -Offset / Scale);
+ /// <summary>Composes this mapping with a subsequent affine mapping.</summary>
+ /// <remarks>The returned mapping applies this conversion first, then the next conversion.</remarks>
+ public UnitConversion Then(UnitConversion next) =>
+   new(Scale * next.Scale, Offset * next.Scale + next.Offset);
  /// <summary>Linear SI scale conversion.</summary>
  public static UnitConversion Linear(double scale) => new(scale, 0);
  /// <summary>Absolute degrees Celsius to kelvin.</summary>
