@@ -26,3 +26,7 @@ FundamentalTypesTest, TCKSetupTest, QuantityFormatTest, UnitFormatTest, Quantity
 
 ## Status
 Upstream suite inventory completed. Initial idiomatic xUnit behavioral ports below are authored; execution and exhaustive porting remain open.
+
+## Pinned source snapshots
+
+The exact upstream reference commits are recorded in [upstream-pins.json](upstream-pins.json). The initial product-unit cases are behavioral adaptations, not direct ports of named Java methods. Upstream test-method enumeration and reference execution remain outstanding.
