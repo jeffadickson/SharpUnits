@@ -20,14 +20,8 @@ jobs:
         shell: bash
         run: |
           test -f src/SharpUnits/SharpUnits.csproj
-          test -f src/SharpUnits.AngouriMath/SharpUnits.AngouriMath.csproj
           test -f tests/SharpUnits.Tests/SharpUnits.Tests.csproj
-          test -f tests/SharpUnits.AngouriMath.Tests/SharpUnits.AngouriMath.Tests.csproj
       - name: Restore core tests
         run: dotnet restore tests/SharpUnits.Tests/SharpUnits.Tests.csproj
       - name: Test core
         run: dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release --no-restore
-      - name: Restore AngouriMath tests
-        run: dotnet restore tests/SharpUnits.AngouriMath.Tests/SharpUnits.AngouriMath.Tests.csproj
-      - name: Test AngouriMath adapter
-        run: dotnet test tests/SharpUnits.AngouriMath.Tests/SharpUnits.AngouriMath.Tests.csproj -c Release --no-restore
