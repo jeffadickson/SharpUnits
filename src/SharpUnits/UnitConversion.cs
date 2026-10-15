@@ -32,13 +32,29 @@ public readonly record struct UnitConversion
  /// <summary>Absolute degrees Fahrenheit to kelvin.</summary>
  public static UnitConversion Fahrenheit => new(5d/9d, 459.67*5d/9d);
 }
-/// <summary>Describes a named unit with dimension and conversion to coherent SI.</summary>
-public sealed record UnitDefinition(string Symbol, Dimension Dimension, UnitConversion Converter)
+/// <summary>Describes a named unit with canonical rational dimensions and conversion to coherent SI.</summary>
+public sealed record UnitDefinition
 {
- /// <summary>Convert a numerical value to an SI quantity.</summary>
- public Quantity ToQuantity(double value) => new(Converter.ToSi(value), Dimension);
- /// <summary>Read a quantity expressed in this unit.</summary>
- public double FromQuantity(Quantity quantity) =>
-   quantity.Dimension == Dimension ? Converter.FromSi(quantity.SiValue)
-      : throw new InvalidOperationException("Incompatible dimensions");
+ /// <summary>Unit symbol.</summary>
+ public string Symbol { get; }
+ /// <summary>Canonical rational dimension vector.</summary>
+ public RationalDimension RationalDimension { get; }
+ /// <summary>Legacy integer dimension; only valid for integral exponents.</summary>
+ public Dimension Dimension => RationalDimension.ToIntegerDimension();
+ /// <summary>Conversion to coherent SI.</summary>
+ public UnitConversion Converter { get; }
+ /// <summary>Constructs from legacy integral dimensions.</summary>
+ public UnitDefinition(string symbol,Dimension dimension,UnitConversion converter):this(symbol,RationalDimension.From(dimension),converter){}
+ /// <summary>Constructs from canonical rational dimensions.</summary>
+ public UnitDefinition(string symbol,RationalDimension dimension,UnitConversion converter)
+ {
+  Symbol=symbol ?? throw new ArgumentNullException(nameof(symbol));
+  RationalDimension=dimension;
+  Converter=converter;
+ }
+ /// <summary>Converts a value into an SI quantity.</summary>
+ public Quantity ToQuantity(double value)=>new(Converter.ToSi(value),RationalDimension);
+ /// <summary>Converts a compatible SI quantity to this unit.</summary>
+ public double FromQuantity(Quantity quantity)=>quantity.RationalDimension==RationalDimension
+  ?Converter.FromSi(quantity.SiValue):throw new InvalidOperationException("Incompatible dimensions");
 }
