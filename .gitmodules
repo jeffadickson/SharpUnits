@@ -1,0 +1,6 @@
+[submodule "upstream/unit-tck"]
+	path = upstream/unit-tck
+	url = https://github.com/unitsofmeasurement/unit-tck.git
+[submodule "upstream/indriya"]
+	path = upstream/indriya
+	url = https://github.com/unitsofmeasurement/indriya.git
