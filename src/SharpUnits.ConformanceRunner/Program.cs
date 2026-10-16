@@ -16,11 +16,21 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
-  if(operation!="convert")throw new NotSupportedException("Unsupported operation");
+  if(operation!="convert"&&operation!="multiply"&&operation!="divide")throw new NotSupportedException("Unsupported operation");
   var value=test.GetProperty("value").GetDouble();
   var source=test.GetProperty("from").GetString()!;
   var target=test.GetProperty("to").GetString()!;
-  var result=registry.Convert(value,source,target);
+  double result;
+  if(operation=="convert")result=registry.Convert(value,source,target);
+  else
+  {
+   var left=RationalUnitExpression.From(registry.Resolve(source));
+   var right=RationalUnitExpression.From(registry.Resolve(target));
+   var expression=operation=="multiply"?left*right:left/right;
+   var output=RationalUnitExpression.From(registry.Resolve(test.GetProperty("resultUnit").GetString()!));
+   if(!expression.IsCompatibleWith(output))throw new InvalidOperationException("Incompatible dimensions");
+   result=value*expression.Scale/output.Scale;
+  }
   Console.WriteLine(JsonSerializer.Serialize(new {id,result}));
  }
  catch(InvalidOperationException)
