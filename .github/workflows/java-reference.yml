@@ -35,7 +35,8 @@ jobs:
       - name: Compare real Java and .NET fixture results
         shell: bash
         run: |
-          dotnet run --project src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release -- conformance/java-reference/cases.json > dotnet-reference.jsonl
+          dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release --nologo >&2
+          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/java-reference/cases.json > dotnet-reference.jsonl
           python3 tools/compare_java_dotnet.py java-reference.jsonl dotnet-reference.jsonl
       - name: Upload differential evidence
         if: always()
