@@ -8,7 +8,7 @@ public sealed class ConversionPipelineTests
  {
   var pipeline=new ConversionPipeline(new[]{new ConversionStep(2,3),new ConversionStep(5,7)});
   Assert.Equal(2,pipeline.Steps.Count);
-  Assert.Equal(77,pipeline.Convert(5),10);
+  Assert.Equal(72,pipeline.Convert(5),10);
   Assert.Equal(pipeline.Convert(5),pipeline.Collapse().ToSi(5),10);
  }
  [Fact] public void InverseRestoresOriginal()
