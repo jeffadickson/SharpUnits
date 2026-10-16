@@ -80,6 +80,42 @@
       "from": "A",
       "to": "V",
       "expectedError": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "JP-023-001",
+      "operation": "multiply",
+      "value": 2,
+      "from": "A",
+      "to": "Ω",
+      "resultUnit": "V",
+      "expected": 2
+    },
+    {
+      "id": "JP-023-002",
+      "operation": "multiply",
+      "value": 250,
+      "from": "mA",
+      "to": "kΩ",
+      "resultUnit": "V",
+      "expected": 250
+    },
+    {
+      "id": "JP-023-003",
+      "operation": "divide",
+      "value": 12,
+      "from": "V",
+      "to": "Ω",
+      "resultUnit": "A",
+      "expected": 12
+    },
+    {
+      "id": "JP-023-004",
+      "operation": "divide",
+      "value": 12,
+      "from": "V",
+      "to": "A",
+      "resultUnit": "Ω",
+      "expected": 12
     }
   ]
 }
