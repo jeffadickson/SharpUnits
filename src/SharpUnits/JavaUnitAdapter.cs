@@ -70,6 +70,13 @@ public sealed class JavaUnitAdapter
   var composed=definition.Converter.Then(converter.ToAffine());
   return new(new UnitDefinition(Symbol,Dimension,composed));
  }
+ /// <summary>Returns a unit compatible with the requested rational dimension, rejecting mismatches.</summary>
+ /// <remarks>CLR dimension-based equivalent of Java's typed asType operation.</remarks>
+ public JavaUnitAdapter AsType(RationalDimension requested)
+ {
+  if(Dimension!=requested)throw new InvalidOperationException("Requested quantity type is incompatible.");
+  return this;
+ }
  /// <summary>Returns an alternative symbol without changing the converter or dimension.</summary>
  public JavaUnitAdapter Alternate(string symbol)=>new(new UnitDefinition(symbol,Dimension,definition.Converter));
  /// <summary>Returns a representation of the registered base dimensions.</summary>
