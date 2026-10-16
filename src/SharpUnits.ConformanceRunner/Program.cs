@@ -16,7 +16,7 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
-  if(operation!="convert"&&operation!="multiply"&&operation!="divide")throw new NotSupportedException("Unsupported operation");
+  if(operation!="convert"&&operation!="multiply"&&operation!="divide"&&operation!="power")throw new NotSupportedException("Unsupported operation");
   var value=test.GetProperty("value").GetDouble();
   var source=test.GetProperty("from").GetString()!;
   var target=test.GetProperty("to").GetString()!;
@@ -25,8 +25,11 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
   else
   {
    var left=RationalUnitExpression.From(registry.Resolve(source));
-   var right=RationalUnitExpression.From(registry.Resolve(target));
-   var expression=operation=="multiply"?left*right:left/right;
+   var expression=operation=="power"
+     ?left.Pow(test.GetProperty("exponent").GetInt32())
+     :operation=="multiply"
+       ?left*RationalUnitExpression.From(registry.Resolve(target))
+       :left/RationalUnitExpression.From(registry.Resolve(target));
    var output=RationalUnitExpression.From(registry.Resolve(test.GetProperty("resultUnit").GetString()!));
    if(!expression.IsCompatibleWith(output))throw new InvalidOperationException("Incompatible dimensions");
    result=value*expression.Scale/output.Scale;
