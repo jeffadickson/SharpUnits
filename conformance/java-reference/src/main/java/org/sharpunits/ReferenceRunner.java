@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import javax.measure.Unit;
 import tech.units.indriya.unit.Units;
-import tech.units.indriya.unit.MetricPrefix;
+import javax.measure.MetricPrefix;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
