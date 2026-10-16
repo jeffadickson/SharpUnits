@@ -59,3 +59,18 @@ jobs:
           name: dotnet-conformance-jsonl
           path: dotnet-conformance.jsonl
           if-no-files-found: warn
+
+      - name: Export and independently validate Bode responses
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash
+        run: |
+          dotnet build demo/SharpUnits.BodeDemo.csproj -c Release --nologo >&2
+          dotnet demo/bin/Release/net10.0/SharpUnits.BodeDemo.dll > bode-output.csv
+          python3 tools/verify_bode_export.py bode-output.csv
+      - name: Upload Bode numerical evidence
+        if: matrix.os == 'ubuntu-latest' && always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bode-numerical-evidence
+          path: bode-output.csv
+          if-no-files-found: warn
