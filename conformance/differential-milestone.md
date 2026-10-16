@@ -17,3 +17,7 @@ The pinned upstream TCK has two setup tests that both use `@SpecAssertion(id="Se
 - Certifying any assertion as VERIFIED
 
 Do not confuse passing comparator self-tests with actual Java/.NET differential execution.
+
+## Java workflow implementation
+
+GitHub Actions workflow `.github/workflows/java-reference.yml` now attempts a pinned Java 17 Indriya build followed by a TCK Maven test run, uploading reports. This is **reference execution infrastructure**, not yet a verified successful TCK run or normalized cross-language differential comparison. Inspect Maven results and adjust the TCK's runner/profile/configuration as needed; a plain Maven test invocation may not exercise the full TCK FULL profile.
