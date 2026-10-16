@@ -1,0 +1,1 @@
+{"schemaVersion":1,"cases":[{"id":"JP-008-001","operation":"convert","value":250,"from":"mA","to":"A","expected":0.25},{"id":"JP-004-001","operation":"convert","value":1,"from":"V","to":"A","expectedError":"INCOMPATIBLE_DIMENSION"}]}
