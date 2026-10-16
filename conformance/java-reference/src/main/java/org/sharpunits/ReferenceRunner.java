@@ -37,6 +37,14 @@ public final class ReferenceRunner {
         double result;
         if(operation.equals("convert")) {
           result=unit(from).getConverterToAny(unit(to)).convert(test.path("value").asDouble());
+        } else if(operation.equals("quantityMultiply") || operation.equals("quantityDivide")) {
+          Unit<?> lhs=unit(from);
+          Unit<?> rhs=unit(to);
+          Unit<?> expression=operation.equals("quantityMultiply")?lhs.multiply(rhs):lhs.divide(rhs);
+          double magnitude=operation.equals("quantityMultiply")
+            ?test.path("value").asDouble()*test.path("rhsValue").asDouble()
+            :test.path("value").asDouble()/test.path("rhsValue").asDouble();
+          result=expression.getConverterToAny(unit(test.path("resultUnit").asText())).convert(magnitude);
         } else if(operation.equals("quantityAdd") || operation.equals("quantitySubtract")) {
           Unit<?> sourceUnit=unit(from);
           Unit<?> targetUnit=unit(to);
