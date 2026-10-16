@@ -45,6 +45,31 @@ public sealed class JavaUnitAdapter
   new UnitConversion(definition.Converter.Scale,definition.Converter.Offset+shift*definition.Converter.Scale)));
  /// <summary>Returns a unit with the inverse dimensional expression.</summary>
  public RationalUnitExpression Inverse()=>Expression.Pow(new Rational(-1,1));
+ /// <summary>Scales a linear unit by a boxed numeric value.</summary>
+ public JavaUnitAdapter Multiply(IConvertible factor)
+ {
+  ArgumentNullException.ThrowIfNull(factor);
+  return Multiply(factor.ToDouble(System.Globalization.CultureInfo.InvariantCulture));
+ }
+ /// <summary>Divides a linear unit by a boxed numeric value.</summary>
+ public JavaUnitAdapter Divide(IConvertible divisor)
+ {
+  ArgumentNullException.ThrowIfNull(divisor);
+  return Divide(divisor.ToDouble(System.Globalization.CultureInfo.InvariantCulture));
+ }
+ /// <summary>Shifts a unit by a boxed numeric value.</summary>
+ public JavaUnitAdapter Shift(IConvertible shift)
+ {
+  ArgumentNullException.ThrowIfNull(shift);
+  return Shift(shift.ToDouble(System.Globalization.CultureInfo.InvariantCulture));
+ }
+ /// <summary>Applies a subsequent converter to the source unit mapping.</summary>
+ public JavaUnitAdapter Transform(JavaUnitConverterAdapter converter)
+ {
+  ArgumentNullException.ThrowIfNull(converter);
+  var composed=definition.Converter.Then(converter.ToAffine());
+  return new(new UnitDefinition(Symbol,Dimension,composed));
+ }
  /// <summary>Returns an alternative symbol without changing the converter or dimension.</summary>
  public JavaUnitAdapter Alternate(string symbol)=>new(new UnitDefinition(symbol,Dimension,definition.Converter));
  /// <summary>Returns a representation of the registered base dimensions.</summary>
