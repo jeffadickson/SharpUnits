@@ -48,6 +48,38 @@
       "from": "A",
       "to": "mA",
       "expected": -3000
+    },
+    {
+      "id": "JP-008-006",
+      "operation": "convert",
+      "value": 1,
+      "from": "V",
+      "to": "V",
+      "expected": 1
+    },
+    {
+      "id": "JP-008-007",
+      "operation": "convert",
+      "value": 0.125,
+      "from": "A",
+      "to": "mA",
+      "expected": 125
+    },
+    {
+      "id": "JP-008-008",
+      "operation": "convert",
+      "value": -2.5,
+      "from": "kΩ",
+      "to": "Ω",
+      "expected": -2500
+    },
+    {
+      "id": "JP-004-002",
+      "operation": "convert",
+      "value": 1,
+      "from": "A",
+      "to": "V",
+      "expectedError": "INCOMPATIBLE_DIMENSION"
     }
   ]
 }
