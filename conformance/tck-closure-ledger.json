@@ -662,212 +662,218 @@
     {
       "id": "421-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A1_Equals",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A2_Dimension",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A3_SystemUnit",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A4_BaseUnits",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A5_Name",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A6_Symbol",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A7_HashCode",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A8_Equivalent",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "421-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck421A9_ToString",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A1_Alternate",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.UnitDivision",
-      "evidence": null
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A2_DivideUnit",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A3_DivideDouble",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A4_DivideNumber",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.UnitMultiplication",
-      "evidence": null
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A5_MultiplyUnit",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A6_MultiplyDouble",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A7_MultiplyNumber",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A8_Prefix",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.UnitShift",
-      "evidence": null
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A9_ShiftDouble",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42121-A10",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42121A10_ShiftNumber",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42122-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.UnitPowAndRoot",
-      "evidence": null
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42122A1_Pow",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42122-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.UnitPowAndRoot",
-      "evidence": null
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42122A2_Root",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42122-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42122A3_Transform",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42123-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42123A1_Inverse",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42124-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
       "status": "IMPLEMENTED_UNVERIFIED",
-      "test": "TckCoreBehaviorTests.UnitCompatibilityIgnoresScale",
-      "evidence": null
+      "test": "TckUnitExactSurfaceTests.Tck42124A1_Compatible",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42124-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42124A2_AsType",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42124-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42124A3_ConverterTo",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     },
     {
       "id": "42124-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitExactSurfaceTests.Tck42124A4_ConverterToAny",
       "evidence": null,
-      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
+      "reviewNote": "Assertion-specific CLR signature test authored. Java reflection checks public methods and return types; CLR analogue is not exact Java binary/API parity. Requires passing CI and semantic review."
     }
   ]
 }
