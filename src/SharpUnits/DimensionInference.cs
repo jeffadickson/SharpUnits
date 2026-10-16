@@ -67,6 +67,7 @@ public static class DimensionInference
   // One coefficient matrix, seven exact right-hand-side vectors.
   var a=new Rational[m,n+7];
   Rational Zero()=>new(0,1);
+  for(int i=0;i<m;i++)for(int j=0;j<n+7;j++)a[i,j]=Zero();
   for(int i=0;i<m;i++)
   {
    for(int j=0;j<n;j++)
