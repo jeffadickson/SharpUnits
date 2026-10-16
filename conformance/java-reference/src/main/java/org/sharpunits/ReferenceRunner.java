@@ -30,8 +30,19 @@ public final class ReferenceRunner {
       String from=test.path("from").asText();
       String to=test.path("to").asText();
       try {
-        if(!test.path("operation").asText().equals("convert")) throw new IllegalArgumentException("Unsupported operation");
-        double result=unit(from).getConverterToAny(unit(to)).convert(test.path("value").asDouble());
+        String operation=test.path("operation").asText();
+        double result;
+        if(operation.equals("convert")) {
+          result=unit(from).getConverterToAny(unit(to)).convert(test.path("value").asDouble());
+        } else if(operation.equals("multiply")) {
+          Unit<?> product=unit(from).multiply(unit(to));
+          Unit<?> resultUnit=unit(test.path("resultUnit").asText());
+          result=product.getConverterToAny(resultUnit).convert(test.path("value").asDouble());
+        } else if(operation.equals("divide")) {
+          Unit<?> quotient=unit(from).divide(unit(to));
+          Unit<?> resultUnit=unit(test.path("resultUnit").asText());
+          result=quotient.getConverterToAny(resultUnit).convert(test.path("value").asDouble());
+        } else throw new IllegalArgumentException("Unsupported operation");
         System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"result",result)));
       } catch(javax.measure.IncommensurableException ex) {
         System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","INCOMPATIBLE_DIMENSION")));
