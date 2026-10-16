@@ -33,14 +33,14 @@
       "evidence": null
     },
     {
-      "id": "Setup",
+      "id": "Setup-1",
       "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
       "status": "GAP",
       "test": null,
       "evidence": null
     },
     {
-      "id": "Setup",
+      "id": "Setup-2",
       "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
       "status": "GAP",
       "test": null,
