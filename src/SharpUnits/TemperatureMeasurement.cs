@@ -15,6 +15,7 @@ public readonly record struct TemperatureMeasurement
  /// <summary>Absolute or difference kind.</summary>
  public TemperatureKind Kind {get;}
  /// <summary>Constructs a validated measurement.</summary>
+ [System.Text.Json.Serialization.JsonConstructor]
  public TemperatureMeasurement(double kelvin,TemperatureKind kind)
  {
   if(!Enum.IsDefined(kind))throw new ArgumentOutOfRangeException(nameof(kind));
