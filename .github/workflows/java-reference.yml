@@ -22,6 +22,30 @@ jobs:
         run: mvn -B -f upstream/indriya/pom.xml -DskipTests install
       - name: Run pinned Java TCK against Indriya
         run: mvn -B -f upstream/unit-tck/pom.xml test
+      - name: Build Java fixture runner
+        run: mvn -B -f conformance/java-reference/pom.xml -DskipTests package dependency:build-classpath -Dmdep.outputFile=classpath.txt
+      - name: Run Indriya fixtures
+        shell: bash
+        run: |
+          java -cp "conformance/java-reference/target/classes:$(cat conformance/java-reference/classpath.txt)" org.sharpunits.ReferenceRunner conformance/java-reference/cases.json > java-reference.jsonl
+          python3 tools/check_fixture_expectations.py conformance/java-reference/cases.json java-reference.jsonl
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Compare real Java and .NET fixture results
+        shell: bash
+        run: |
+          dotnet run --project src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release -- conformance/java-reference/cases.json > dotnet-reference.jsonl
+          python3 tools/compare_java_dotnet.py java-reference.jsonl dotnet-reference.jsonl
+      - name: Upload differential evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-dotnet-differential
+          path: |
+            java-reference.jsonl
+            dotnet-reference.jsonl
+          if-no-files-found: warn
       - name: Upload Java test reports
         if: always()
         uses: actions/upload-artifact@v4
