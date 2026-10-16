@@ -246,6 +246,36 @@
       "to": "A",
       "resultUnit": "V",
       "expectedError": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "EE-001-001",
+      "operation": "quantityMultiply",
+      "value": 250,
+      "from": "mA",
+      "rhsValue": 4,
+      "to": "kΩ",
+      "resultUnit": "V",
+      "expected": 1000
+    },
+    {
+      "id": "EE-001-002",
+      "operation": "quantityDivide",
+      "value": 12,
+      "from": "V",
+      "rhsValue": 4,
+      "to": "Ω",
+      "resultUnit": "A",
+      "expected": 3
+    },
+    {
+      "id": "EE-001-003",
+      "operation": "quantityDivide",
+      "value": 12,
+      "from": "V",
+      "rhsValue": 3,
+      "to": "A",
+      "resultUnit": "Ω",
+      "expected": 4
     }
   ]
 }
