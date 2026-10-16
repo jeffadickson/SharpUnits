@@ -71,8 +71,12 @@ public static class FormulaTypeChecker
        return null;
       }
       return new(left.Dimension,left.Kind??right.Kind);
-     case FormulaOperator.Multiply:return new(left.Dimension+right.Dimension);
-     case FormulaOperator.Divide:return new(left.Dimension-right.Dimension);
+     case FormulaOperator.Multiply:
+      return new(left.Dimension+right.Dimension,
+       FormulaKindRules.Infer(FormulaOperator.Multiply,left.Kind,right.Kind));
+     case FormulaOperator.Divide:
+      return new(left.Dimension-right.Dimension,
+       FormulaKindRules.Infer(FormulaOperator.Divide,left.Kind,right.Kind));
      case FormulaOperator.Power:
       if(right.Dimension!=RationalDimension.From(Dimension.None))
       {
