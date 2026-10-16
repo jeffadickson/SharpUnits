@@ -560,51 +560,72 @@
     {
       "id": "425-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A1_DimensionEquality",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "equals(Object)",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A2_EqualDimensionsHaveEqualHashes",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "hashCode()",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A3_DimensionMultiplication",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "multiply(Dimension)",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A4_DimensionDivision",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "divide(Dimension)",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A5_Root_ExactIntegerExponents",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "root(int)",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A6_Power_RepresentableIntegerPowers",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "pow(int)",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "425-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "TckDimensionTests.Tck425A7_BaseDimensionComponents",
-      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901",
+      "javaMethod": "getBaseDimensions()",
+      "reviewNote": "Pinned Java TCK assertion checks public method presence via reflection, not arithmetic result. Existing xUnit test exercises behavior but does not prove matching API surface. Exact .NET adapter/signature verification required.",
+      "javaEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38856014203"
     },
     {
       "id": "421-A1",
