@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
-  "policy": "GAP until source-specific equivalent and passing cross-platform CI evidence are recorded; authored tests are not automatically verified",
+  "policy": "Mapped tests are IMPLEMENTED_UNVERIFIED until exact assertion semantics and cross-platform CI evidence are independently reconciled. Partial semantic adaptations do not establish full Java conformance.",
   "totalAssertions": 113,
   "entries": [
     {
@@ -133,8 +133,8 @@
     {
       "id": "431-A2",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckCoreBehaviorTests.QuantityValueEquality",
       "evidence": null
     },
     {
@@ -203,22 +203,22 @@
     {
       "id": "4311-A6",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckCoreBehaviorTests.QuantitySubtractionRetainsDimension",
       "evidence": null
     },
     {
       "id": "4312-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckCoreBehaviorTests.QuantityMultiplicationAndDivisionRoundTrip",
       "evidence": null
     },
     {
       "id": "4312-A2",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckCoreBehaviorTests.QuantityMultiplicationAndDivisionRoundTrip",
       "evidence": null
     },
     {
@@ -497,36 +497,36 @@
     {
       "id": "423-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A2_ConverterValueEquality",
       "evidence": null
     },
     {
       "id": "423-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A3_ConverterHashCode",
       "evidence": null
     },
     {
       "id": "423-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A4_Inverse",
       "evidence": null
     },
     {
       "id": "423-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A5_Identity",
       "evidence": null
     },
     {
       "id": "423-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A6_Linearity",
       "evidence": null
     },
     {
@@ -539,15 +539,15 @@
     {
       "id": "423-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A7A8_Convert",
       "evidence": null
     },
     {
       "id": "423-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckUnitConversionTests.Tck423A9_Composition",
       "evidence": null
     },
     {
@@ -560,50 +560,50 @@
     {
       "id": "425-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A1_DimensionEquality",
       "evidence": null
     },
     {
       "id": "425-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A2_EqualDimensionsHaveEqualHashes",
       "evidence": null
     },
     {
       "id": "425-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A3_DimensionMultiplication",
       "evidence": null
     },
     {
       "id": "425-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A4_DimensionDivision",
       "evidence": null
     },
     {
       "id": "425-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A5_Root_ExactIntegerExponents",
       "evidence": null
     },
     {
       "id": "425-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A6_Power_RepresentableIntegerPowers",
       "evidence": null
     },
     {
       "id": "425-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckDimensionTests.Tck425A7_BaseDimensionComponents",
       "evidence": null
     },
     {
@@ -770,8 +770,8 @@
     {
       "id": "42124-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "test": "TckCoreBehaviorTests.UnitCompatibilityIgnoresScale",
       "evidence": null
     },
     {
