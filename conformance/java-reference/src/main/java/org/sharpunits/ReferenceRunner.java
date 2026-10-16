@@ -16,6 +16,9 @@ public final class ReferenceRunner {
       case "V" -> Units.VOLT;
       case "Ω" -> Units.OHM;
       case "kΩ" -> MetricPrefix.KILO(Units.OHM);
+      case "A²" -> Units.AMPERE.pow(2);
+      case "V²" -> Units.VOLT.pow(2);
+      case "Ω²" -> Units.OHM.pow(2);
       case "K" -> Units.KELVIN;
       case "°C" -> Units.CELSIUS;
       default -> throw new IllegalArgumentException("Unknown unit: " + symbol);
