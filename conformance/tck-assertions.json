@@ -17,8 +17,8 @@
     {
       "path": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
       "assertions": [
-        "Setup",
-        "Setup"
+        "Setup-1",
+        "Setup-2"
       ]
     },
     {
