@@ -662,72 +662,82 @@
     {
       "id": "421-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "421-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A2",
@@ -739,16 +749,18 @@
     {
       "id": "42121-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A5",
@@ -760,23 +772,26 @@
     {
       "id": "42121-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42121-A9",
@@ -788,9 +803,10 @@
     {
       "id": "42121-A10",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42122-A1",
@@ -809,16 +825,18 @@
     {
       "id": "42122-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42123-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42124-A1",
@@ -830,23 +848,26 @@
     {
       "id": "42124-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42124-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     },
     {
       "id": "42124-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckUnitApiSurfaceTests.RequiredMethodsArePublic",
+      "evidence": null,
+      "reviewNote": "Initial CLR API surface mapping; generic method-name reflection is not an assertion-specific equivalence test. Requires exact signature and behavior review."
     }
   ]
 }
