@@ -146,6 +146,26 @@
       "resultUnit": "Ω",
       "exponent": 1,
       "expected": 1000
+    },
+    {
+      "id": "JP-003-001",
+      "operation": "root",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "resultUnit": "A",
+      "degree": 1,
+      "expected": 1
+    },
+    {
+      "id": "JP-003-002",
+      "operation": "root",
+      "value": 1,
+      "from": "V",
+      "to": "V",
+      "resultUnit": "V",
+      "degree": 1,
+      "expected": 1
     }
   ]
 }
