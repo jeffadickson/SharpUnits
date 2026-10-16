@@ -27,6 +27,9 @@ jobs:
       - name: Inventory upstream Java tests
         if: matrix.os == 'ubuntu-latest'
         run: python3 tools/inventory_java_tests.py
+      - name: Validate TCK assertion ledger
+        if: matrix.os == 'ubuntu-latest'
+        run: python3 tools/validate_tck_ledger.py
       - name: Require complete source tree
         shell: bash
         run: |
