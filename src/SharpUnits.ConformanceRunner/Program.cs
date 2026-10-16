@@ -10,6 +10,12 @@ if(args.Length!=1)
 }
 using var document=JsonDocument.Parse(File.ReadAllText(args[0]));
 var registry=UnitRegistry.CreateStandard();
+foreach(var symbol in new[]{"A","V","Ω"})
+{
+ var baseUnit=registry.Resolve(symbol);
+ var squared=RationalUnitExpression.From(baseUnit).Pow(2);
+ registry.Register(new UnitDefinition(symbol+"²",squared.Dimension,UnitConversion.Linear(squared.Scale)));
+}
 foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
 {
  var id=test.GetProperty("id").GetString()!;
