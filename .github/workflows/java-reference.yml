@@ -1,0 +1,33 @@
+name: Java reference TCK
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  java-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: |
+            upstream/unit-tck/pom.xml
+            upstream/indriya/pom.xml
+      - name: Build pinned Indriya reference
+        run: mvn -B -f upstream/indriya/pom.xml -DskipTests install
+      - name: Run pinned Java TCK against Indriya
+        run: mvn -B -f upstream/unit-tck/pom.xml test
+      - name: Upload Java test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-reference-test-reports
+          path: |
+            upstream/unit-tck/**/surefire-reports/**
+            upstream/indriya/**/surefire-reports/**
+          if-no-files-found: warn
