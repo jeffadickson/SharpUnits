@@ -166,6 +166,46 @@
       "resultUnit": "V",
       "degree": 1,
       "expected": 1
+    },
+    {
+      "id": "JP-023-008",
+      "operation": "power",
+      "value": 3,
+      "from": "A",
+      "to": "A",
+      "resultUnit": "A²",
+      "exponent": 2,
+      "expected": 3
+    },
+    {
+      "id": "JP-023-009",
+      "operation": "power",
+      "value": 4,
+      "from": "V",
+      "to": "V",
+      "resultUnit": "V²",
+      "exponent": 2,
+      "expected": 4
+    },
+    {
+      "id": "JP-003-003",
+      "operation": "root",
+      "value": 9,
+      "from": "A²",
+      "to": "A²",
+      "resultUnit": "A",
+      "degree": 2,
+      "expected": 9
+    },
+    {
+      "id": "JP-003-004",
+      "operation": "root",
+      "value": 16,
+      "from": "V²",
+      "to": "V²",
+      "resultUnit": "V",
+      "degree": 2,
+      "expected": 16
     }
   ]
 }
