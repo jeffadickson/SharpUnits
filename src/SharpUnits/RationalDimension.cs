@@ -20,6 +20,21 @@ public readonly record struct RationalDimension(Rational Length,Rational Mass,Ra
  public static RationalDimension operator -(RationalDimension a,RationalDimension b)=>new(a.Length-b.Length,a.Mass-b.Mass,a.Time-b.Time,a.Current-b.Current,a.Temperature-b.Temperature,a.Amount-b.Amount,a.Luminosity-b.Luminosity);
  /// <summary>Raises all exponents to a rational power.</summary>
  public RationalDimension Pow(Rational power)=>new(Length*power,Mass*power,Time*power,Current*power,Temperature*power,Amount*power,Luminosity*power);
+ /// <summary>Raises all exponents to an integer power.</summary>
+ public RationalDimension Pow(int power)=>Pow(new Rational(power,1));
+ /// <summary>Returns nonzero SI base dimensions as an immutable snapshot.</summary>
+ public IReadOnlyDictionary<string,Rational> GetBaseDimensions()
+ {
+  var values=new Dictionary<string,Rational>();
+  if(!Length.Numerator.IsZero)values["L"]=Length;
+  if(!Mass.Numerator.IsZero)values["M"]=Mass;
+  if(!Time.Numerator.IsZero)values["T"]=Time;
+  if(!Current.Numerator.IsZero)values["I"]=Current;
+  if(!Temperature.Numerator.IsZero)values["Θ"]=Temperature;
+  if(!Amount.Numerator.IsZero)values["N"]=Amount;
+  if(!Luminosity.Numerator.IsZero)values["J"]=Luminosity;
+  return new System.Collections.ObjectModel.ReadOnlyDictionary<string,Rational>(values);
+ }
  /// <summary>Returns the exact positive integer-degree root.</summary>
  public RationalDimension Root(int degree)
  {
