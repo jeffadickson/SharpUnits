@@ -57,6 +57,9 @@ public static class FormulaTypeChecker
     {
      case FormulaOperator.Add:
      case FormulaOperator.Subtract:
+      if(binary.Operator==FormulaOperator.Subtract && binary.Left is FormulaConstant zero
+         && zero.Value==0 && zero.Dimension==RationalDimension.From(Dimension.None))
+       return right;
       if(left.Dimension!=right.Dimension)
       {
        diagnostics.Add(new("SU-FORM-003","Addition/subtraction requires matching dimensions."));
