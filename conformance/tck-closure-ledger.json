@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
-  "policy": "Only exact assertion-equivalent tests with passing CI and upstream reference evidence can become VERIFIED; PARTIAL_BEHAVIORAL_MAPPING is not verification.",
+  "policy": "CI_PASS_BEHAVIORAL_REVIEW_PENDING confirms the linked xUnit test passed on three operating systems, not full JSR 385 TCK equivalence. VERIFIED requires upstream assertion review and Java reference evidence.",
   "totalAssertions": 113,
   "entries": [
     {
@@ -497,37 +497,37 @@
     {
       "id": "423-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A2_ConverterValueEquality",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A3_ConverterHashCode",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A4_Inverse",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A5_Identity",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A6_Linearity",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A7",
@@ -539,16 +539,16 @@
     {
       "id": "423-A8",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A7A8_Convert",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckUnitConversionTests.Tck423A9_Composition",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "423-A10",
@@ -560,51 +560,51 @@
     {
       "id": "425-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A1_DimensionEquality",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A2_EqualDimensionsHaveEqualHashes",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A3",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A3_DimensionMultiplication",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A4",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A4_DimensionDivision",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A5_Root_ExactIntegerExponents",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A6",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A6_Power_RepresentableIntegerPowers",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "425-A7",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
+      "status": "CI_PASS_BEHAVIORAL_REVIEW_PENDING",
       "test": "TckDimensionTests.Tck425A7_BaseDimensionComponents",
-      "evidence": null
+      "evidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901"
     },
     {
       "id": "421-A1",
