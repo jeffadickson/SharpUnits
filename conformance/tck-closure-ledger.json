@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
-  "policy": "Mapped tests are IMPLEMENTED_UNVERIFIED until exact assertion semantics and cross-platform CI evidence are independently reconciled. Partial semantic adaptations do not establish full Java conformance.",
+  "policy": "Only exact assertion-equivalent tests with passing CI and upstream reference evidence can become VERIFIED; PARTIAL_BEHAVIORAL_MAPPING is not verification.",
   "totalAssertions": 113,
   "entries": [
     {
@@ -147,22 +147,22 @@
     {
       "id": "431-A4",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityValueAndUnit",
       "evidence": null
     },
     {
       "id": "431-A5",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityValueAndUnit",
       "evidence": null
     },
     {
       "id": "431-A6",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityHashing",
       "evidence": null
     },
     {
@@ -182,22 +182,22 @@
     {
       "id": "4311-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityAdd",
       "evidence": null
     },
     {
       "id": "4311-A4",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityMultiplyScalarViaDimensionless",
       "evidence": null
     },
     {
       "id": "4311-A5",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.QuantityDivideScalarViaDimensionless",
       "evidence": null
     },
     {
@@ -679,8 +679,8 @@
     {
       "id": "42121-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.UnitDivision",
       "evidence": null
     },
     {
@@ -700,8 +700,8 @@
     {
       "id": "42121-A5",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.UnitMultiplication",
       "evidence": null
     },
     {
@@ -728,8 +728,8 @@
     {
       "id": "42121-A9",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.UnitShift",
       "evidence": null
     },
     {
@@ -742,15 +742,15 @@
     {
       "id": "42122-A1",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.UnitPowAndRoot",
       "evidence": null
     },
     {
       "id": "42122-A2",
       "source": "src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "TckAdditionalBehaviorTests.UnitPowAndRoot",
       "evidence": null
     },
     {
