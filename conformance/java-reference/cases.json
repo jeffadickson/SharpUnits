@@ -116,6 +116,36 @@
       "to": "A",
       "resultUnit": "Ω",
       "expected": 12
+    },
+    {
+      "id": "JP-023-005",
+      "operation": "power",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "resultUnit": "A",
+      "exponent": 1,
+      "expected": 1
+    },
+    {
+      "id": "JP-023-006",
+      "operation": "power",
+      "value": 1,
+      "from": "V",
+      "to": "V",
+      "resultUnit": "V",
+      "exponent": 1,
+      "expected": 1
+    },
+    {
+      "id": "JP-023-007",
+      "operation": "power",
+      "value": 1,
+      "from": "kΩ",
+      "to": "Ω",
+      "resultUnit": "Ω",
+      "exponent": 1,
+      "expected": 1000
     }
   ]
 }
