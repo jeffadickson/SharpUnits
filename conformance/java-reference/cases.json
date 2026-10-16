@@ -206,6 +206,46 @@
       "resultUnit": "V",
       "degree": 2,
       "expected": 16
+    },
+    {
+      "id": "JP-017-001",
+      "operation": "quantityAdd",
+      "value": 2,
+      "from": "A",
+      "rhsValue": 500,
+      "to": "mA",
+      "resultUnit": "A",
+      "expected": 2.5
+    },
+    {
+      "id": "JP-017-002",
+      "operation": "quantitySubtract",
+      "value": 5,
+      "from": "V",
+      "rhsValue": 1000,
+      "to": "V",
+      "resultUnit": "V",
+      "expected": -995
+    },
+    {
+      "id": "JP-017-003",
+      "operation": "quantityAdd",
+      "value": 1000,
+      "from": "mA",
+      "rhsValue": 2,
+      "to": "A",
+      "resultUnit": "A",
+      "expected": 3
+    },
+    {
+      "id": "JP-017-004",
+      "operation": "quantityAdd",
+      "value": 1,
+      "from": "V",
+      "rhsValue": 2,
+      "to": "A",
+      "resultUnit": "V",
+      "expectedError": "INCOMPATIBLE_DIMENSION"
     }
   ]
 }
