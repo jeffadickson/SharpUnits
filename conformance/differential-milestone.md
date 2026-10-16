@@ -25,3 +25,7 @@ GitHub Actions workflow `.github/workflows/java-reference.yml` now attempts a pi
 ## Verified Java baseline (2026-10-15)
 
 Java workflow https://github.com/jeffadickson/SharpUnits/actions/runs/38833971549 completed successfully. Maven Surefire reported **112 tests, 0 failures, 0 errors, 0 skipped**; TestNG reported **111 passes**. This is the pinned Java reference suite, not a SharpUnits conformance result. .NET CI for the same commit also completed successfully, but cross-language normalized fixtures have not yet been generated or compared. Full TCK profile/configuration coverage should still be audited against the suite inventory.
+
+## First passing real differential comparison
+
+GitHub Actions run https://github.com/jeffadickson/SharpUnits/actions/runs/38835290804 executed the pinned Java TCK (112 Surefire tests, 0 failures/errors), validated 6 shared Java fixture cases, executed the corresponding .NET 10 fixture runner, and reported **Differential comparison: 0 mismatch(es)**. The paired .NET CI run https://github.com/jeffadickson/SharpUnits/actions/runs/38835290858 also passed. This establishes evidence for these six cases only, not for all 113 TCK assertions.
