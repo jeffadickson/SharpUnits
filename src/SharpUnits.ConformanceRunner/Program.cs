@@ -16,7 +16,7 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
-  if(operation!="convert"&&operation!="multiply"&&operation!="divide"&&operation!="power")throw new NotSupportedException("Unsupported operation");
+  if(operation!="convert"&&operation!="multiply"&&operation!="divide"&&operation!="power"&&operation!="root")throw new NotSupportedException("Unsupported operation");
   var value=test.GetProperty("value").GetDouble();
   var source=test.GetProperty("from").GetString()!;
   var target=test.GetProperty("to").GetString()!;
@@ -25,7 +25,9 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
   else
   {
    var left=RationalUnitExpression.From(registry.Resolve(source));
-   var expression=operation=="power"
+   var expression=operation=="root"
+     ?left.Root(test.GetProperty("degree").GetInt32())
+     :operation=="power"
      ?left.Pow(test.GetProperty("exponent").GetInt32())
      :operation=="multiply"
        ?left*RationalUnitExpression.From(registry.Resolve(target))
