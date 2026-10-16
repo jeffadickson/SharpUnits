@@ -38,6 +38,10 @@ public final class ReferenceRunner {
           Unit<?> product=unit(from).multiply(unit(to));
           Unit<?> resultUnit=unit(test.path("resultUnit").asText());
           result=product.getConverterToAny(resultUnit).convert(test.path("value").asDouble());
+        } else if(operation.equals("power")) {
+          Unit<?> powered=unit(from).pow(test.path("exponent").asInt());
+          Unit<?> resultUnit=unit(test.path("resultUnit").asText());
+          result=powered.getConverterToAny(resultUnit).convert(test.path("value").asDouble());
         } else if(operation.equals("divide")) {
           Unit<?> quotient=unit(from).divide(unit(to));
           Unit<?> resultUnit=unit(test.path("resultUnit").asText());
