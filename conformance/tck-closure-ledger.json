@@ -126,114 +126,130 @@
     {
       "id": "431-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I01_431A1_AsType",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A2",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
-      "test": "TckCoreBehaviorTests.QuantityValueEquality",
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I02_431A2_Equals",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A3",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I03_431A3_GetScale",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A4",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityValueAndUnit",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I04_431A4_GetUnit",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A5",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityValueAndUnit",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I05_431A5_GetValue",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A6",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityHashing",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I06_431A6_HashCode",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A7",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I07_431A7_Equivalent",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A8",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I08_431A8_Inverse",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4311-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityAdd",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I09_4311A1_Add",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4311-A4",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityMultiplyScalarViaDimensionless",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4311-A5",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
-      "test": "TckAdditionalBehaviorTests.QuantityDivideScalarViaDimensionless",
-      "evidence": null
+      "test": "QuantityParitySurfaceTests.I11_4311A5_DivideNumber",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4311-A6",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
-      "test": "TckCoreBehaviorTests.QuantitySubtractionRetainsDimension",
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I12_4311A6_Subtract",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4312-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
-      "test": "TckCoreBehaviorTests.QuantityMultiplicationAndDivisionRoundTrip",
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I13_4312A1_DivideQuantity",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "4312-A2",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "IMPLEMENTED_UNVERIFIED",
-      "test": "TckCoreBehaviorTests.QuantityMultiplicationAndDivisionRoundTrip",
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A9",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I15_431A9_To",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "431-A10",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "QuantityParitySurfaceTests.I16_431A10_Comparable",
+      "evidence": null,
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
     },
     {
       "id": "44-A1",
