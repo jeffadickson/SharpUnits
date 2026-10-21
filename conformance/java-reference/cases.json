@@ -580,6 +580,58 @@
       "observe": "scale",
       "expected": "RELATIVE",
       "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-affine-multiply-absolute",
+      "operation": "quantityMultiply",
+      "value": 20,
+      "from": "°C",
+      "to": "A",
+      "rhsValue": 2,
+      "scale": "ABSOLUTE",
+      "rhsScale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 586.3,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-affine-divide-absolute",
+      "operation": "quantityDivide",
+      "value": 20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 10,
+      "scale": "ABSOLUTE",
+      "rhsScale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 1.0353169698039908,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-affine-multiply-relative",
+      "operation": "quantityMultiply",
+      "value": 20,
+      "from": "°C",
+      "to": "A",
+      "rhsValue": 2,
+      "scale": "RELATIVE",
+      "rhsScale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 40,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-affine-divide-relative",
+      "operation": "quantityDivide",
+      "value": 20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 10,
+      "scale": "RELATIVE",
+      "rhsScale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 2,
+      "absoluteTolerance": 1e-10
     }
   ]
 }
