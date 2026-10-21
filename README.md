@@ -4,6 +4,10 @@ C# dimensional analysis, electrical quantities, and symbolic engineering equatio
 
 ## Status
 
+GitHub CI is disabled at the user's request. The .NET and Java workflows are disabled
+in GitHub and retain only manual dispatch triggers in source. Re-enable them explicitly
+before requesting a manual GitHub run. Local build and test commands remain available.
+
 Alpha prototype. Source baseline currently exists in the local project archive; the full source import to GitHub is pending. Do not treat CI as passing until the complete source is uploaded and workflows execute.
 
 ## Engineering goals

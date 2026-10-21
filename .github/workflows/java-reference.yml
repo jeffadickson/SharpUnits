@@ -1,7 +1,6 @@
 name: Java reference TCK
 on:
-  push:
-  pull_request:
+  # Automatic CI disabled at the user's request. Workflow is also disabled in GitHub.
   workflow_dispatch:
 jobs:
   java-reference:
