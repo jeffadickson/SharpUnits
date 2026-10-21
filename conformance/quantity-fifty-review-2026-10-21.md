@@ -67,8 +67,10 @@ the compatibility adapter follows Indriya conventions.
 ## Verification and remaining work
 
 The full pinned TCK is executed in addition to the differential fixtures. Local
-build logs and results were used at each checkpoint; remote Windows/Ubuntu and
-Java CI results are linked from PR #8 once available. macOS CI remains disabled.
+build logs and results were used at each checkpoint. Implementation commit
+`ba3f53452906cc1e3fb9ce8753544b16c387872a` passed
+[Windows and Ubuntu CI](https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395) and
+[pinned Java TCK plus differential CI](https://github.com/jeffadickson/SharpUnits/actions/runs/39614054406). macOS CI remains disabled.
 Existing unrelated XML documentation warnings remain.
 
 No assertion is promoted to VERIFIED. Remaining issues include Java Number

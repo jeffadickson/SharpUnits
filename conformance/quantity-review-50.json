@@ -1126,5 +1126,13 @@
     "testQuantityOp1Subtract",
     "testQuantityOp2Divide",
     "testQuantityOp2Multiply"
-  ]
+  ],
+  "ciEvidence": {
+    "implementationCommit": "ba3f53452906cc1e3fb9ce8753544b16c387872a",
+    "dotnet": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395",
+    "java": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054406",
+    "windows": "PASS",
+    "ubuntu": "PASS",
+    "pinnedJavaAndDifferential": "PASS"
+  }
 }
