@@ -55,6 +55,7 @@ internal static class QuantityFixtures
             "quantityMultiply" => left.Multiply(right),
             "quantityDivide" => left.Divide(right),
             "quantityScalarMultiply" => left.Multiply((IConvertible)rhs.GetDouble()),
+            "quantityTypedScalarMultiply" => left.Multiply(ScalarInput(test)),
             "quantityScalarDivide" => left.Divide((IConvertible)rhs.GetDouble()),
             "quantityTo" => left.To(registry.Resolve(Text("to"))),
             "quantityInverse" => left.Inverse(),

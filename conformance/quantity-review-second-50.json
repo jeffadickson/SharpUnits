@@ -221,6 +221,226 @@
         "result": false
       },
       "originalMismatch": true
+    },
+    {
+      "iteration": 11,
+      "case": "Q100-11",
+      "hypothesis": "Built-in sbyte numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -128.0,
+        "id": "Q100-11",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "dotnetAfter": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 12,
+      "case": "Q100-12",
+      "hypothesis": "Built-in byte numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 255.0,
+        "id": "Q100-12",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "dotnetAfter": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 13,
+      "case": "Q100-13",
+      "hypothesis": "Built-in short numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -32768.0,
+        "id": "Q100-13",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "dotnetAfter": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 14,
+      "case": "Q100-14",
+      "hypothesis": "Built-in ushort numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 65535.0,
+        "id": "Q100-14",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "dotnetAfter": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 15,
+      "case": "Q100-15",
+      "hypothesis": "Built-in int numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -2147483648.0,
+        "id": "Q100-15",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "dotnetAfter": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 16,
+      "case": "Q100-16",
+      "hypothesis": "Built-in uint numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 4294967295.0,
+        "id": "Q100-16",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "dotnetAfter": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 17,
+      "case": "Q100-17",
+      "hypothesis": "Built-in long numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -9.223372036854776e+18,
+        "id": "Q100-17",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "dotnetAfter": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 18,
+      "case": "Q100-18",
+      "hypothesis": "Built-in ulong numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 9.223372036854776e+18,
+        "id": "Q100-18",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "dotnetAfter": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 19,
+      "case": "Q100-19",
+      "hypothesis": "Built-in float numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.25,
+        "id": "Q100-19",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "dotnetAfter": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 20,
+      "case": "Q100-20",
+      "hypothesis": "Built-in decimal numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.125,
+        "id": "Q100-20",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "dotnetAfter": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -229,6 +449,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 481,
       "differentialCases": 118,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 491,
+      "differentialCases": 128,
       "mismatches": 0
     }
   ]

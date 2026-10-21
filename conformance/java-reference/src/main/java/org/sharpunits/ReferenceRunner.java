@@ -50,6 +50,7 @@ public final class ReferenceRunner {
       case "quantityMultiply" -> left.multiply(right);
       case "quantityDivide" -> left.divide(right);
       case "quantityScalarMultiply" -> left.multiply(test.path("rhsValue").asDouble());
+      case "quantityTypedScalarMultiply" -> left.multiply((Number)scalarInput(test));
       case "quantityScalarDivide" -> left.divide(test.path("rhsValue").asDouble());
       case "quantityTo" -> left.to(unit(test.path("to").asText()));
       case "quantityInverse" -> left.inverse();

@@ -1315,6 +1315,126 @@
       "scalarValue": "1e2",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-11",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "sbyte",
+      "scalarValue": "-128",
+      "expected": -128.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-12",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "byte",
+      "scalarValue": "255",
+      "expected": 255.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-13",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "short",
+      "scalarValue": "-32768",
+      "expected": -32768.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-14",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "ushort",
+      "scalarValue": "65535",
+      "expected": 65535.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-15",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "int",
+      "scalarValue": "-2147483648",
+      "expected": -2147483648.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-16",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "uint",
+      "scalarValue": "4294967295",
+      "expected": 4294967295.0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-17",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "long",
+      "scalarValue": "-9223372036854775808",
+      "expected": -9.223372036854776e+18,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-18",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "ulong",
+      "scalarValue": "9223372036854775808",
+      "expected": 9.223372036854776e+18,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-19",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "float",
+      "scalarValue": "1.25",
+      "expected": 1.25,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-20",
+      "operation": "quantityTypedScalarMultiply",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "observe": "magnitude",
+      "scalarKind": "decimal",
+      "scalarValue": "0.125",
+      "expected": 0.125,
+      "absoluteTolerance": 0
     }
   ]
 }
