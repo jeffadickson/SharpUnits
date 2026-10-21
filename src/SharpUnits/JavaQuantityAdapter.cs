@@ -11,7 +11,12 @@ public enum JavaQuantityScale
 }
 
 /// <summary>JSR 385-inspired .NET quantity adapter retaining the display unit.</summary>
-/// <remarks>Preserves the coherent-SI Quantity model. This is a CLR analogue, not Java binary compatibility.</remarks>
+/// <remarks>Preserves the coherent-SI Quantity model. This is a CLR analogue, not Java binary compatibility.
+/// Arithmetic follows Indriya rather than the physical policy of <see cref="AbsoluteTemperature"/>
+/// and <see cref="TemperatureDifference"/>. Two absolute Celsius operands are added in kelvin
+/// and converted back: 20 degrees Celsius plus 10 degrees Celsius yields 303.15 degrees Celsius
+/// (576.30 kelvin). For heating by ten degrees, mark the second operand
+/// <see cref="JavaQuantityScale.Relative"/>; the result is then 30 degrees Celsius.</remarks>
 public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComparable<JavaQuantityAdapter>
 {
  private readonly Quantity value;
@@ -61,6 +66,9 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public bool IsEquivalentTo(JavaQuantityAdapter? other)=>
   other is not null&&value.RationalDimension==other.value.RationalDimension&&CompareTo(other)==0;
  /// <summary>Adds compatible quantities in coherent SI; only two relative operands yield relative scale.</summary>
+ /// <remarks>Two absolute operands are permitted for Indriya compatibility, including affine units.
+ /// Use a relative second operand for a temperature increase, or use the dedicated temperature types
+ /// to enforce physical absolute-versus-difference arithmetic.</remarks>
  public JavaQuantityAdapter Add(JavaQuantityAdapter other)
  {
   RequireCompatible(other);
