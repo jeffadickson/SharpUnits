@@ -29,7 +29,10 @@ public sealed class QuantityReferenceFixtureTests
         var result = QuantityFixtures.Evaluate(test, registry);
         var expected = test.GetProperty("expected");
         if (expected.ValueKind == JsonValueKind.Number)
-            Assert.True(Math.Abs(expected.GetDouble() - Convert.ToDouble(result, System.Globalization.CultureInfo.InvariantCulture)) <= 1e-10, id);
+        {
+            var tolerance = test.TryGetProperty("absoluteTolerance", out var specified) ? specified.GetDouble() : 1e-10;
+            Assert.True(Math.Abs(expected.GetDouble() - Convert.ToDouble(result, System.Globalization.CultureInfo.InvariantCulture)) <= tolerance, id);
+        }
         else if (expected.ValueKind == JsonValueKind.String)
             Assert.Equal(expected.GetString(), Assert.IsType<string>(result));
         else

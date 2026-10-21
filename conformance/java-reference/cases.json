@@ -632,6 +632,121 @@
       "observe": "magnitude",
       "expected": 2,
       "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-01",
+      "operation": "quantityTo",
+      "value": 20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": 20.1,
+      "absoluteTolerance": 0,
+      "observe": "magnitude"
+    },
+    {
+      "id": "Q50-02",
+      "operation": "quantityTo",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": 1e-20,
+      "absoluteTolerance": 0,
+      "observe": "magnitude"
+    },
+    {
+      "id": "Q50-03",
+      "operation": "quantityTo",
+      "value": -1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": -1e-20,
+      "absoluteTolerance": 0,
+      "observe": "magnitude"
+    },
+    {
+      "id": "Q50-04",
+      "operation": "quantityTo",
+      "value": 0.1,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 0,
+      "resultUnit": "mA",
+      "expected": 0.1,
+      "absoluteTolerance": 0,
+      "observe": "magnitude"
+    },
+    {
+      "id": "Q50-05",
+      "operation": "quantityTo",
+      "value": 1e-320,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 0,
+      "resultUnit": "mA",
+      "expected": 1e-320,
+      "absoluteTolerance": 0,
+      "observe": "magnitude"
+    },
+    {
+      "id": "Q50-06",
+      "operation": "quantityEquals",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 2e-20,
+      "resultUnit": "°C",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-07",
+      "operation": "quantityCompare",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 2e-20,
+      "resultUnit": "°C",
+      "expected": -1,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-08",
+      "operation": "quantityEquals",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-09",
+      "operation": "quantityEquivalent",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 2e-20,
+      "resultUnit": "°C",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-10",
+      "operation": "quantityCompare",
+      "value": -1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": -1,
+      "absoluteTolerance": 0
     }
   ]
 }

@@ -21,18 +21,18 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
 {
  private readonly Quantity value;
  private readonly UnitDefinition unit;
+ private readonly double displayMagnitude;
  /// <summary>Explicit absolute or relative scale.</summary>
  public JavaQuantityScale Scale {get;}
  /// <summary>Display unit.</summary>
  public UnitDefinition Unit=>unit;
  /// <summary>Magnitude expressed in the display unit.</summary>
- public double Value=>Scale==JavaQuantityScale.Relative && unit.Converter.Offset!=0
-  ? value.SiValue/unit.Converter.Scale : unit.FromQuantity(value);
+ public double Value=>displayMagnitude;
  /// <summary>Coherent SI representation.</summary>
  public Quantity SiQuantity=>value;
  /// <summary>Creates a quantity with the specified display unit.</summary>
  public JavaQuantityAdapter(double magnitude,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)
-  :this(ToCoherent(magnitude,unit,scale),unit,scale){}
+  :this(ToCoherent(magnitude,unit,scale),unit,scale){displayMagnitude=magnitude;}
  private static Quantity ToCoherent(double magnitude,UnitDefinition unit,JavaQuantityScale scale)
  {
   ArgumentNullException.ThrowIfNull(unit);
@@ -49,10 +49,12 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(coherent.RationalDimension!=unit.RationalDimension)throw new InvalidOperationException("Quantity and unit dimensions differ.");
   if(!double.IsFinite(coherent.SiValue))throw new ArgumentOutOfRangeException(nameof(coherent));
   value=coherent;this.unit=unit;Scale=scale;
+  displayMagnitude=scale==JavaQuantityScale.Relative
+   ?coherent.SiValue/unit.Converter.Scale:unit.FromQuantity(coherent);
   if(!double.IsFinite(Value))throw new ArgumentOutOfRangeException(nameof(coherent));
  }
  /// <summary>Converts to a compatible display unit, preserving the scale kind.</summary>
- public JavaQuantityAdapter To(UnitDefinition target)=>new(value,target,Scale);
+ public JavaQuantityAdapter To(UnitDefinition target)=>unit.Equals(target)?this:new(value,target,Scale);
  /// <summary>Checks a registered semantic kind against the quantity dimension.</summary>
  public JavaQuantityAdapter AsType(QuantityKind kind,QuantityKindRegistry registry)
  {
@@ -139,11 +141,11 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   return Value.CompareTo(other.To(unit).Value);
  }
  /// <summary>Equality includes representation, unlike physical equivalence.</summary>
- public bool Equals(JavaQuantityAdapter? other)=>other is not null&&value.Equals(other.value)&&unit.Equals(other.unit)&&Scale==other.Scale;
+ public bool Equals(JavaQuantityAdapter? other)=>other is not null&&Value.Equals(other.Value)&&unit.Equals(other.unit)&&Scale==other.Scale;
  /// <summary>Object equality.</summary>
  public override bool Equals(object? obj)=>obj is JavaQuantityAdapter other&&Equals(other);
  /// <summary>Hash of quantity and representation.</summary>
- public override int GetHashCode()=>HashCode.Combine(value,unit,Scale);
+ public override int GetHashCode()=>HashCode.Combine(Value,unit,Scale);
  /// <summary>Invariant magnitude and display symbol.</summary>
  public override string ToString()=>$"{Value.ToString("R",CultureInfo.InvariantCulture)} {unit.Symbol}";
  private void RequireCompatible(JavaQuantityAdapter other)

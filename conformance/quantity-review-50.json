@@ -1,0 +1,224 @@
+{
+  "startingCommit": "630faff",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q50-01",
+      "hypothesis": "Same-unit conversion retains the supplied fractional Celsius magnitude",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-01",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-01",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q50-01",
+        "result": 20.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q50-02",
+      "hypothesis": "Positive Celsius magnitude smaller than offset precision is retained",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-02",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-02",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-02",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q50-03",
+      "hypothesis": "Negative Celsius magnitude smaller than offset precision is retained",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-03",
+        "result": -1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-03",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-03",
+        "result": -1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 4,
+      "case": "Q50-04",
+      "hypothesis": "Fractional prefixed magnitude survives same-unit conversion",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "dotnetAfter": {
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 5,
+      "case": "Q50-05",
+      "hypothesis": "Subnormal display magnitude survives coherent underflow",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-05",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q50-05",
+        "result": 9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q50-05",
+        "result": 1e-320
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 6,
+      "case": "Q50-06",
+      "hypothesis": "Distinct tiny Celsius representations remain unequal",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-06",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-06",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-06",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 7,
+      "case": "Q50-07",
+      "hypothesis": "Tiny Celsius comparison uses stored display magnitude",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-07",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q50-07",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-07",
+        "result": -1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 8,
+      "case": "Q50-08",
+      "hypothesis": "A nonzero tiny Celsius value is unequal to zero",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-08",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-08",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-08",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 9,
+      "case": "Q50-09",
+      "hypothesis": "Tiny Celsius equivalence does not collapse distinct values",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-09",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-09",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-09",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q50-10",
+      "hypothesis": "Negative tiny Celsius value sorts below zero",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-10",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q50-10",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-10",
+        "result": -1
+      },
+      "originalMismatch": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "testsPassed": 431,
+      "differentialCases": 68,
+      "mismatches": 0
+    }
+  ]
+}
