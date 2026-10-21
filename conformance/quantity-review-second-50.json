@@ -441,6 +441,226 @@
         "result": 0.125
       },
       "originalMismatch": false
+    },
+    {
+      "iteration": 21,
+      "case": "Q100-21",
+      "hypothesis": "Tiny Celsius survives identity converter with different CLR symbol",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-21",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 22,
+      "case": "Q100-22",
+      "hypothesis": "Signed tiny Celsius survives identity converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-22",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 23,
+      "case": "Q100-23",
+      "hypothesis": "Fractional Celsius survives identity converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-23",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 24,
+      "case": "Q100-24",
+      "hypothesis": "Direct scale ratio avoids underflow in tiny forward conversion",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "dotnetBefore": {
+        "id": "Q100-24",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 25,
+      "case": "Q100-25",
+      "hypothesis": "Signed direct scale ratio avoids underflow",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "dotnetBefore": {
+        "id": "Q100-25",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 26,
+      "case": "Q100-26",
+      "hypothesis": "Reverse power-of-two rescaling retains subnormal magnitude",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "dotnetBefore": {
+        "id": "Q100-26",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 27,
+      "case": "Q100-27",
+      "hypothesis": "Relative copied Celsius ignores offset",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "dotnetAfter": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 28,
+      "case": "Q100-28",
+      "hypothesis": "Fractional Fahrenheit survives equal converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-28",
+        "result": 32.099999999999966
+      },
+      "dotnetAfter": {
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 29,
+      "case": "Q100-29",
+      "hypothesis": "Tiny Fahrenheit survives equal converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-29",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 30,
+      "case": "Q100-30",
+      "hypothesis": "Comparison through equivalent converter retains ordering",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-30",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q100-30",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q100-30",
+        "result": -1
+      },
+      "originalMismatch": true
     }
   ],
   "checkpoints": [
@@ -456,6 +676,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 491,
       "differentialCases": 128,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 501,
+      "differentialCases": 138,
       "mismatches": 0
     }
   ]

@@ -32,11 +32,19 @@ internal static class QuantityFixtures
     public static object Evaluate(JsonElement test, UnitRegistry registry)
     {
         string Text(string name) => test.GetProperty(name).GetString()!;
+        UnitDefinition Resolve(string symbol) => symbol switch
+        {
+            "quarterA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.25)),
+            "eighthA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.125)),
+            "C-copy" => new(symbol,registry.Resolve("°C").RationalDimension,UnitConversion.Celsius),
+            "F-copy" => new(symbol,registry.Resolve("°F").RationalDimension,UnitConversion.Fahrenheit),
+            _ => registry.Resolve(symbol)
+        };
         JavaQuantityScale Scale(string name) => test.TryGetProperty(name, out var scale)
             ? Enum.Parse<JavaQuantityScale>(scale.GetString()!, true) : JavaQuantityScale.Absolute;
-        var left = new JavaQuantityAdapter(test.GetProperty("value").GetDouble(), registry.Resolve(Text("from")), Scale("scale"));
+        var left = new JavaQuantityAdapter(test.GetProperty("value").GetDouble(), Resolve(Text("from")), Scale("scale"));
         var right = new JavaQuantityAdapter(test.TryGetProperty("rhsValue", out var rhs) ? rhs.GetDouble() : 0,
-            registry.Resolve(Text("to")), Scale("rhsScale"));
+            Resolve(Text("to")), Scale("rhsScale"));
         var operation = Text("operation");
         if(operation=="quantityAcceptsScalar")
         {
@@ -57,7 +65,7 @@ internal static class QuantityFixtures
             "quantityScalarMultiply" => left.Multiply((IConvertible)rhs.GetDouble()),
             "quantityTypedScalarMultiply" => left.Multiply(ScalarInput(test)),
             "quantityScalarDivide" => left.Divide((IConvertible)rhs.GetDouble()),
-            "quantityTo" => left.To(registry.Resolve(Text("to"))),
+            "quantityTo" => left.To(Resolve(Text("to"))),
             "quantityInverse" => left.Inverse(),
             "quantityAsType" => left.AsType(Text("kind") switch
             {
@@ -74,6 +82,6 @@ internal static class QuantityFixtures
             if (observe.GetString() == "magnitude") return result.Value;
             if (observe.GetString() == "unitScale") return result.Unit.Converter.ToSi(1);
         }
-        return result.To(registry.Resolve(Text("resultUnit"))).Value;
+        return result.To(Resolve(Text("resultUnit"))).Value;
     }
 }

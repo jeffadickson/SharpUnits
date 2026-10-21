@@ -71,6 +71,8 @@ public final class ReferenceRunner {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
       case "mA" -> MetricPrefix.MILLI(Units.AMPERE);
+      case "quarterA" -> Units.AMPERE.divide(4);
+      case "eighthA" -> Units.AMPERE.divide(8);
       case "V" -> Units.VOLT;
       case "Ω" -> Units.OHM;
       case "kΩ" -> MetricPrefix.KILO(Units.OHM);
@@ -78,8 +80,8 @@ public final class ReferenceRunner {
       case "V²" -> Units.VOLT.pow(2);
       case "Ω²" -> Units.OHM.pow(2);
       case "K" -> Units.KELVIN;
-      case "°C" -> Units.CELSIUS;
-      case "°F" -> Units.KELVIN.multiply(5).divide(9).shift(459.67);
+      case "°C", "C-copy" -> Units.CELSIUS;
+      case "°F", "F-copy" -> Units.KELVIN.multiply(5).divide(9).shift(459.67);
       default -> throw new IllegalArgumentException("Unknown unit: " + symbol);
     };
   }

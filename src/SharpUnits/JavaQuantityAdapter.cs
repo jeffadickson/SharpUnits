@@ -56,7 +56,15 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(!double.IsFinite(Value))throw new ArgumentOutOfRangeException(nameof(coherent));
  }
  /// <summary>Converts to a compatible display unit, preserving the scale kind.</summary>
- public JavaQuantityAdapter To(UnitDefinition target)=>unit.Equals(target)?this:new(value,target,Scale);
+ public JavaQuantityAdapter To(UnitDefinition target)
+ {
+  ArgumentNullException.ThrowIfNull(target);
+  if(unit.RationalDimension!=target.RationalDimension)throw new InvalidOperationException("Incompatible dimensions.");
+  if(unit.Equals(target))return this;
+  var factor=unit.Converter.Scale/target.Converter.Scale;
+  var offset=Scale==JavaQuantityScale.Relative?0:(unit.Converter.Offset-target.Converter.Offset)/target.Converter.Scale;
+  return new(Value*factor+offset,target,Scale);
+ }
  /// <summary>Checks a registered semantic kind against the quantity dimension.</summary>
  public JavaQuantityAdapter AsType(QuantityKind kind,QuantityKindRegistry registry)
  {
