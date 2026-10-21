@@ -1,9 +1,27 @@
 using System.Text.Json;
+using System.Globalization;
 using SharpUnits;
 
 /// <summary>Executes fixtures through the public Java quantity adapter.</summary>
 internal static class QuantityFixtures
 {
+    private static IConvertible ScalarInput(JsonElement test)
+    {
+        var value=test.GetProperty("scalarValue").GetString()!;
+        var culture=CultureInfo.InvariantCulture;
+        return test.GetProperty("scalarKind").GetString() switch
+        {
+            "bool" => bool.Parse(value), "string" => value, "char" => value[0],
+            "datetime" => new DateTime(2020,1,1), "enum" => DayOfWeek.Monday, "dbnull" => DBNull.Value,
+            "sbyte" => sbyte.Parse(value,culture), "byte" => byte.Parse(value,culture),
+            "short" => short.Parse(value,culture), "ushort" => ushort.Parse(value,culture),
+            "int" => int.Parse(value,culture), "uint" => uint.Parse(value,culture),
+            "long" => long.Parse(value,culture), "ulong" => ulong.Parse(value,culture),
+            "float" => float.Parse(value,culture), "double" => double.Parse(value,culture),
+            "decimal" => decimal.Parse(value,culture),
+            _ => throw new NotSupportedException("Unknown scalar kind")
+        };
+    }
     public static string? ErrorCategory(Exception error, string? operation) => error switch
     {
         DivideByZeroException => "DIVIDE_BY_ZERO",
@@ -20,6 +38,13 @@ internal static class QuantityFixtures
         var right = new JavaQuantityAdapter(test.TryGetProperty("rhsValue", out var rhs) ? rhs.GetDouble() : 0,
             registry.Resolve(Text("to")), Scale("rhsScale"));
         var operation = Text("operation");
+        if(operation=="quantityAcceptsScalar")
+        {
+            var scalar=ScalarInput(test);
+            try { _=left.Multiply(scalar); return true; }
+            catch(ArgumentException) { return false; }
+            catch(InvalidCastException) { return false; }
+        }
         if (operation == "quantityCompare") return Math.Sign(left.CompareTo(right));
         if (operation == "quantityEquivalent") return left.IsEquivalentTo(right);
         if (operation == "quantityEquals") return left.Equals(right);

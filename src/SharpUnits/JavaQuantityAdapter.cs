@@ -114,16 +114,25 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  private (double Magnitude,UnitDefinition Unit) MultiplicativeOperand()=>unit.Converter.IsLinear
   ?(Value,unit):(value.SiValue,DerivedUnit(unit.RationalDimension));
  /// <summary>Multiplies by a boxed numeric scalar, converted to double.</summary>
+ /// <remarks>Accepts built-in integer, floating-point and decimal types. Strings, booleans,
+ /// characters, enums and other IConvertible implementations are not numeric scalar arguments.
+ /// Decimal and large integer precision may be lost when converted to double.</remarks>
  public JavaQuantityAdapter Multiply(IConvertible scalar)
  {
-  ArgumentNullException.ThrowIfNull(scalar);
-  return ScaleBy(scalar.ToDouble(CultureInfo.InvariantCulture),false);
+  return ScaleBy(NumericScalar(scalar),false);
  }
  /// <summary>Divides by a boxed numeric scalar, converted to double.</summary>
+ /// <remarks>Uses the same built-in numeric type restrictions as scalar multiplication.</remarks>
  public JavaQuantityAdapter Divide(IConvertible scalar)
  {
+  return ScaleBy(NumericScalar(scalar),true);
+ }
+ private static double NumericScalar(IConvertible scalar)
+ {
   ArgumentNullException.ThrowIfNull(scalar);
-  return ScaleBy(scalar.ToDouble(CultureInfo.InvariantCulture),true);
+  if(scalar is not (sbyte or byte or short or ushort or int or uint or long or ulong or float or double or decimal))
+   throw new ArgumentException("A built-in numeric scalar is required.",nameof(scalar));
+  return scalar.ToDouble(CultureInfo.InvariantCulture);
  }
  private JavaQuantityAdapter ScaleBy(double factor,bool divide)
  {

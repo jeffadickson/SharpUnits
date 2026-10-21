@@ -11,6 +11,26 @@ import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
+  private static Object scalarInput(JsonNode test) {
+    String value = test.path("scalarValue").asText();
+    return switch(test.path("scalarKind").asText()) {
+      case "bool" -> Boolean.valueOf(value);
+      case "string" -> value;
+      case "char" -> value.charAt(0);
+      case "datetime" -> java.time.LocalDateTime.of(2020, 1, 1, 0, 0);
+      case "enum" -> java.time.DayOfWeek.MONDAY;
+      case "dbnull" -> new Object(); // No Java Number equivalent for CLR DBNull.
+      case "sbyte" -> Byte.valueOf(value);
+      case "byte", "short" -> Short.valueOf(value);
+      case "ushort", "int" -> Integer.valueOf(value);
+      case "uint", "long" -> Long.valueOf(value);
+      case "ulong" -> new java.math.BigInteger(value);
+      case "float" -> Float.valueOf(value);
+      case "double" -> Double.valueOf(value);
+      case "decimal" -> new java.math.BigDecimal(value);
+      default -> throw new IllegalArgumentException("Unknown scalar kind");
+    };
+  }
   // Raw types are confined to the dynamic fixture boundary; Indriya checks unit compatibility.
   @SuppressWarnings({"rawtypes", "unchecked"})
   private static Object quantityResult(JsonNode test) throws javax.measure.IncommensurableException {
@@ -19,6 +39,8 @@ public final class ReferenceRunner {
     Quantity right = Quantities.getQuantity(test.path("rhsValue").asDouble(), unit(test.path("to").asText()),
         Quantity.Scale.valueOf(test.path("rhsScale").asText("ABSOLUTE")));
     String operation = test.path("operation").asText();
+    // Tests Number parameter admissibility, not arithmetic on invalid Java arguments.
+    if (operation.equals("quantityAcceptsScalar")) return Number.class.isInstance(scalarInput(test));
     if (operation.equals("quantityCompare")) return Integer.signum(((Comparable)left).compareTo(right));
     if (operation.equals("quantityEquivalent")) return left.isEquivalentTo(right);
     if (operation.equals("quantityEquals")) return left.equals(right);

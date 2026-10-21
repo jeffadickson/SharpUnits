@@ -1,6 +1,235 @@
 {
   "startingCommit": "cf417d451782bd4321842eeb67e0f0091294efb3",
   "ciPolicy": "GitHub CI remains disabled; local .NET 10 and pinned Java verification only",
-  "reviews": [],
-  "checkpoints": []
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q100-01",
+      "hypothesis": "Boolean true is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-01",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-01",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-01",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q100-02",
+      "hypothesis": "Boolean false cannot silently act as zero",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-02",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-02",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-02",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q100-03",
+      "hypothesis": "Numeric string is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-03",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-03",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-03",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 4,
+      "case": "Q100-04",
+      "hypothesis": "Whitespace numeric string is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-04",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-04",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-04",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 5,
+      "case": "Q100-05",
+      "hypothesis": "Character is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-05",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 6,
+      "case": "Q100-06",
+      "hypothesis": "Date/time is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-06",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 7,
+      "case": "Q100-07",
+      "hypothesis": "Enum underlying integer does not make it Number",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-07",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-07",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-07",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 8,
+      "case": "Q100-08",
+      "hypothesis": "DBNull has no numeric Number analogue",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-08",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 9,
+      "case": "Q100-09",
+      "hypothesis": "Signed numeric string must not bypass numeric API",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-09",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-09",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-09",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q100-10",
+      "hypothesis": "Scientific notation text must not bypass numeric API",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-10",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-10",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-10",
+        "result": false
+      },
+      "originalMismatch": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 481,
+      "differentialCases": 118,
+      "mismatches": 0
+    }
+  ]
 }

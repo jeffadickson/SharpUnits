@@ -1205,6 +1205,116 @@
       "observe": "magnitude",
       "absoluteTolerance": 1e-10,
       "expected": 0.03660992128866923
+    },
+    {
+      "id": "Q100-01",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "bool",
+      "scalarValue": "True",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-02",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "bool",
+      "scalarValue": "False",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-03",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "string",
+      "scalarValue": "2",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-04",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "string",
+      "scalarValue": " 2 ",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-05",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "char",
+      "scalarValue": "2",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-06",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "datetime",
+      "scalarValue": "2020-01-01",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-07",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "enum",
+      "scalarValue": "Monday",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-08",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "dbnull",
+      "scalarValue": "",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-09",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "string",
+      "scalarValue": "-2",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-10",
+      "operation": "quantityAcceptsScalar",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "scalarKind": "string",
+      "scalarValue": "1e2",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }
