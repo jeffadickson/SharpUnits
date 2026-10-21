@@ -28,6 +28,9 @@ def compare(java,dotnet):
         if a is None or b is None:
             problems.append(f"{identifier}: missing case")
             continue
+        if ("result" in a)==("error" in a) or ("result" in b)==("error" in b):
+            problems.append(f"{identifier}: exactly one result or error is required")
+            continue
         if a.get("error")!=b.get("error"):
             problems.append(f"{identifier}: error categories differ")
             continue
@@ -39,7 +42,7 @@ def compare(java,dotnet):
             relative=a.get("relativeTolerance",0)
             if not math.isclose(expected,actual,rel_tol=relative,abs_tol=absolute):
                 problems.append(f"{identifier}: numerical mismatch {expected} vs {actual}")
-        elif expected!=actual:
+        elif type(expected) is not type(actual) or expected!=actual:
             problems.append(f"{identifier}: value mismatch")
     return problems
 

@@ -13,6 +13,11 @@ adds executable magnitude, product representation, Fahrenheit, scalar, cast and
 zero-division cases. It supersedes earlier descriptions of products always using
 coherent display magnitudes. Compound unit identity remains partial.
 
+The [second fifty-iteration review](quantity-second-fifty-review.md) adds numeric
+input restrictions, supported scalar boundaries, rational converter evaluation and
+decimal additive checks. Its evidence is local because GitHub CI is disabled.
+Two tiny Fahrenheit cases retain explicitly bounded rather than bit-exact agreement.
+
 ## Assertion matrix
 
 The xUnit identifiers below are in `QuantityParitySurfaceTests`. The tests now check
@@ -36,7 +41,7 @@ compiler bridge methods. Our CLR tests do not imply that those Java signatures e
 | 431-A9 | testQuantityOp0To | `Quantity to(Unit)` / I15 To(UnitDefinition) | Affine double conversions supported; Number precision and non-affine converters absent |
 | 431-A10 | testQuantityIsComparable | Comparable assignability / I16 IComparable | CLR null sorts first; Java null comparison throws; double precision only |
 | 4311-A1 | testQuantityOp1Add | `Quantity add(Quantity)` / I09 Add | Affine and mixed-scale behavior corrected; arbitrary precision absent |
-| 4311-A4 | testQuantityOp1MultiplyByNumber | `Quantity multiply(Number)` / I10 Multiply(IConvertible) | IConvertible also accepts nonnumeric types; arbitrary precision absent |
+| 4311-A4 | testQuantityOp1MultiplyByNumber | `Quantity multiply(Number)` / I10 Multiply(IConvertible) | Runtime restricts input to supported numeric types; signature/type hierarchy and arbitrary precision remain different |
 | 4311-A5 | testQuantityOp1DivideByNumber | `Quantity divide(Number)` / I11 Divide(IConvertible) | Same numeric surface limitation; division by zero exception adaptation |
 | 4311-A6 | testQuantityOp1Subtract | `Quantity subtract(Quantity)` / I12 Subtract | Absolute subtraction now remains absolute; arbitrary precision absent |
 | 4312-A1 | testQuantityOp2Divide | `Quantity divide(Quantity)` / I13 Divide(adapter) | Result scale corrected to absolute; display unit identity remains partial |

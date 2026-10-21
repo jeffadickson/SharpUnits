@@ -61,9 +61,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   ArgumentNullException.ThrowIfNull(target);
   if(unit.RationalDimension!=target.RationalDimension)throw new InvalidOperationException("Incompatible dimensions.");
   if(unit.Equals(target))return this;
-  var factor=unit.Converter.Scale/target.Converter.Scale;
-  var offset=Scale==JavaQuantityScale.Relative?0:(unit.Converter.Offset-target.Converter.Offset)/target.Converter.Scale;
-  return new(Value*factor+offset,target,Scale);
+  return new(JavaDoubleArithmetic.Convert(Value,unit.Converter,target.Converter,Scale==JavaQuantityScale.Relative),target,Scale);
  }
  /// <summary>Checks a registered semantic kind against the quantity dimension.</summary>
  public JavaQuantityAdapter AsType(QuantityKind kind,QuantityKindRegistry registry)
@@ -77,7 +75,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  /// Incompatible dimensions return false as a .NET convenience.</remarks>
  public bool IsEquivalentTo(JavaQuantityAdapter? other)=>
   other is not null&&value.RationalDimension==other.value.RationalDimension&&CompareTo(other)==0;
- /// <summary>Adds compatible quantities in coherent SI; only two relative operands yield relative scale.</summary>
+ /// <summary>Adds compatible quantities with Indriya scale semantics; only two relative operands yield relative scale.</summary>
  /// <remarks>Two absolute operands are permitted for Indriya compatibility, including affine units.
  /// Use a relative second operand for a temperature increase, or use the dedicated temperature types
  /// to enforce physical absolute-versus-difference arithmetic.</remarks>
@@ -97,11 +95,9 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  private JavaQuantityAdapter AddOrSubtract(JavaQuantityAdapter other,bool subtract)
  {
   var resultScale=ResultScale(other);
-  var sign=subtract?-1d:1d;
-  var right=sign*other.Value*(other.unit.Converter.Scale/unit.Converter.Scale);
-  var offset=Scale==JavaQuantityScale.Relative&&resultScale==JavaQuantityScale.Absolute?-unit.Converter.Offset:0;
-  if(other.Scale==JavaQuantityScale.Absolute)offset+=sign*other.unit.Converter.Offset;
-  return new(JavaDoubleArithmetic.Add(Value,right,offset/unit.Converter.Scale),unit,resultScale);
+  return new(JavaDoubleArithmetic.Add(Value,other.Value,unit.Converter,other.unit.Converter,
+   Scale==JavaQuantityScale.Absolute,other.Scale==JavaQuantityScale.Absolute,
+   resultScale==JavaQuantityScale.Absolute,subtract),unit,resultScale);
  }
  private JavaQuantityScale ResultScale(JavaQuantityAdapter other)=>
   Scale==JavaQuantityScale.Relative&&other.Scale==JavaQuantityScale.Relative

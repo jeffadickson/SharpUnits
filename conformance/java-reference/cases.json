@@ -1666,6 +1666,108 @@
       "absoluteTolerance": 0,
       "scale": "RELATIVE",
       "rhsScale": "RELATIVE"
+    },
+    {
+      "id": "Q100-41",
+      "operation": "quantityTo",
+      "value": 1e-300,
+      "from": "largeA",
+      "to": "tinyA",
+      "observe": "magnitude",
+      "expected": 1e+100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-42",
+      "operation": "quantityTo",
+      "value": 1e+300,
+      "from": "tinyA",
+      "to": "largeA",
+      "observe": "magnitude",
+      "expected": 1e-100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-43",
+      "operation": "quantityTo",
+      "value": -1e-300,
+      "from": "largeA",
+      "to": "tinyA",
+      "observe": "magnitude",
+      "expected": -1e+100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-44",
+      "operation": "quantityTo",
+      "value": -1e+300,
+      "from": "tinyA",
+      "to": "largeA",
+      "observe": "magnitude",
+      "expected": -1e-100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-45",
+      "operation": "quantityTo",
+      "value": 1e-300,
+      "from": "largeA",
+      "to": "tinyA",
+      "observe": "magnitude",
+      "expected": 1e+100,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q100-46",
+      "operation": "quantityTo",
+      "value": 1e+300,
+      "from": "tinyA",
+      "to": "largeA",
+      "observe": "magnitude",
+      "expected": 1e-100,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q100-47",
+      "operation": "quantityTo",
+      "value": 5e-324,
+      "from": "mA",
+      "to": "A",
+      "observe": "magnitude",
+      "expected": 0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-48",
+      "operation": "quantityTo",
+      "value": 1e-323,
+      "from": "A",
+      "to": "mA",
+      "observe": "magnitude",
+      "expected": 1e-320,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-49",
+      "operation": "quantityTo",
+      "value": -1e-323,
+      "from": "A",
+      "to": "mA",
+      "observe": "magnitude",
+      "expected": -1e-320,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q100-50",
+      "operation": "quantityTo",
+      "value": 1.7e+300,
+      "from": "tinyA",
+      "to": "largeA",
+      "observe": "magnitude",
+      "expected": 1.7e-100,
+      "absoluteTolerance": 0
     }
   ]
 }

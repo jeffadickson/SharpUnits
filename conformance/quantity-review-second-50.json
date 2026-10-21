@@ -22,7 +22,12 @@
         "id": "Q100-01",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-01",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 2,
@@ -44,7 +49,12 @@
         "id": "Q100-02",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-02",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 3,
@@ -66,7 +76,12 @@
         "id": "Q100-03",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-03",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 4,
@@ -88,7 +103,12 @@
         "id": "Q100-04",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-04",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 5,
@@ -110,7 +130,12 @@
         "id": "Q100-05",
         "result": false
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 6,
@@ -132,7 +157,12 @@
         "id": "Q100-06",
         "result": false
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 7,
@@ -154,7 +184,12 @@
         "id": "Q100-07",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-07",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 8,
@@ -176,7 +211,12 @@
         "id": "Q100-08",
         "result": false
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 9,
@@ -198,7 +238,12 @@
         "id": "Q100-09",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-09",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 10,
@@ -220,7 +265,12 @@
         "id": "Q100-10",
         "result": false
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-10",
+        "result": false
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 11,
@@ -242,7 +292,12 @@
         "id": "Q100-11",
         "result": -128
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 12,
@@ -264,7 +319,12 @@
         "id": "Q100-12",
         "result": 255
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 13,
@@ -286,7 +346,12 @@
         "id": "Q100-13",
         "result": -32768
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 14,
@@ -308,7 +373,12 @@
         "id": "Q100-14",
         "result": 65535
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 15,
@@ -330,7 +400,12 @@
         "id": "Q100-15",
         "result": -2147483648
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 16,
@@ -352,7 +427,12 @@
         "id": "Q100-16",
         "result": 4294967295
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 17,
@@ -374,7 +454,12 @@
         "id": "Q100-17",
         "result": -9.223372036854776e+18
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 18,
@@ -396,7 +481,12 @@
         "id": "Q100-18",
         "result": 9.223372036854776e+18
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 19,
@@ -418,7 +508,12 @@
         "id": "Q100-19",
         "result": 1.25
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 20,
@@ -440,7 +535,12 @@
         "id": "Q100-20",
         "result": 0.125
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 21,
@@ -462,7 +562,12 @@
         "id": "Q100-21",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 22,
@@ -484,7 +589,12 @@
         "id": "Q100-22",
         "result": -1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 23,
@@ -506,7 +616,12 @@
         "id": "Q100-23",
         "result": 20.1
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 24,
@@ -528,7 +643,12 @@
         "id": "Q100-24",
         "result": 1e-323
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 25,
@@ -550,7 +670,12 @@
         "id": "Q100-25",
         "result": -1e-323
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 26,
@@ -572,7 +697,12 @@
         "id": "Q100-26",
         "result": 5e-324
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 27,
@@ -594,7 +724,12 @@
         "id": "Q100-27",
         "result": 1e-320
       },
-      "originalMismatch": false
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 28,
@@ -616,7 +751,12 @@
         "id": "Q100-28",
         "result": 32.1
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 29,
@@ -638,7 +778,12 @@
         "id": "Q100-29",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 30,
@@ -660,7 +805,12 @@
         "id": "Q100-30",
         "result": -1
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-30",
+        "result": -1
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 31,
@@ -682,7 +832,12 @@
         "id": "Q100-31",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 32,
@@ -704,7 +859,12 @@
         "id": "Q100-32",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 33,
@@ -726,7 +886,12 @@
         "id": "Q100-33",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 34,
@@ -748,7 +913,12 @@
         "id": "Q100-34",
         "result": 2e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 35,
@@ -771,7 +941,12 @@
         "id": "Q100-35",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-35",
+        "result": 1e-20
+      },
+      "bitExactOutput": false
     },
     {
       "iteration": 36,
@@ -794,7 +969,12 @@
         "id": "Q100-36",
         "result": 1e-20
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-36",
+        "result": 1e-20
+      },
+      "bitExactOutput": false
     },
     {
       "iteration": 37,
@@ -816,7 +996,12 @@
         "id": "Q100-37",
         "result": 0.3
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 38,
@@ -838,7 +1023,12 @@
         "id": "Q100-38",
         "result": 0.3
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 39,
@@ -860,7 +1050,12 @@
         "id": "Q100-39",
         "result": -273.05
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "bitExactOutput": true
     },
     {
       "iteration": 40,
@@ -882,7 +1077,285 @@
         "id": "Q100-40",
         "result": 0.1
       },
-      "originalMismatch": true
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 41,
+      "case": "Q100-41",
+      "hypothesis": "Finite conversion survives an overflowing scale ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-41",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-41: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 42,
+      "case": "Q100-42",
+      "hypothesis": "Finite conversion survives an underflowing scale ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-42",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 43,
+      "case": "Q100-43",
+      "hypothesis": "Signed conversion survives an overflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-43",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-43: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 44,
+      "case": "Q100-44",
+      "hypothesis": "Signed conversion survives an underflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-44",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 45,
+      "case": "Q100-45",
+      "hypothesis": "Relative conversion survives an overflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-45",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-45: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 46,
+      "case": "Q100-46",
+      "hypothesis": "Relative conversion survives an underflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-46",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 47,
+      "case": "Q100-47",
+      "hypothesis": "Genuine final underflow rounds to zero",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-47",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 48,
+      "case": "Q100-48",
+      "hypothesis": "Subnormal conversion follows decimal converter promotion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-48",
+        "result": 9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 49,
+      "case": "Q100-49",
+      "hypothesis": "Signed subnormal conversion follows decimal converter promotion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-49",
+        "result": -9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 50,
+      "case": "Q100-50",
+      "hypothesis": "Large finite display input survives extreme ratio conversion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-50",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "bitExactOutput": true
     }
   ],
   "checkpoints": [
@@ -913,6 +1386,69 @@
       "dotnetTestsPassed": 511,
       "differentialCases": 148,
       "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 521,
+      "differentialCases": 158,
+      "mismatches": 0
     }
+  ],
+  "failingCaseOutcomesResolved": 35,
+  "bitExactFinalCases": 48,
+  "boundedAgreementCases": [
+    "Q100-35",
+    "Q100-36"
+  ],
+  "completedDate": "2026-10-21",
+  "interpretation": "50 scenario review iterations with five compile/test checkpoints, not 50 commits or TCK closures. First ten inspect Java Number admissibility; the remaining forty execute actual Java quantity methods.",
+  "independentRoundingCheck": {
+    "script": "tools/check_quantity_rounding.py",
+    "seed": 385,
+    "conversionCases": 100,
+    "additionCases": 100,
+    "mismatches": 0,
+    "scope": "Exact Python Fraction oracle for CLR round-trip decimal coefficients, not full Java Number semantics"
+  },
+  "finalVerification": {
+    "dotnetTestsPassed": 521,
+    "differentialCases": 158,
+    "mismatchesOutsideDeclaredTolerances": 0,
+    "pythonComparatorTestsPassed": 10,
+    "ci": "DISABLED_BY_USER; no new CI run or formal closure claimed"
+  },
+  "pins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "tckSummary": {
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "notes": [
+    "First ten Java results are Number.class.isInstance admission checks; CLR results invoke public scalar multiplication. This is an API adaptation check, not Java arithmetic with invalid arguments.",
+    "New typed-scalar and custom-unit fixture instrumentation was compiled before collecting baselines; production code was unchanged in the 11-20 group.",
+    "Q100-24 through Q100-26 were refined to minimum-subnormal inputs so they actually expose intermediate underflow.",
+    "Before Q100-41 the console runner aborted on unexpected overflow; remaining before-results were captured by running cases individually. UNHANDLED_RUNNER_FAILURE records those real exits, not a normalized Java exception.",
+    "Two tiny Fahrenheit arithmetic cases remain numerically different within an explicit 1e-30 absolute tolerance. Java MathContext, Double formatting and general Number semantics are not verified."
+  ],
+  "normalizedSourceSha256": {
+    "src\\SharpUnits\\JavaQuantityAdapter.cs": "b92853a6a81a2b1934caee4edfbe3dc705f902c858a6b70795011b8da72df405",
+    "src\\SharpUnits\\JavaDoubleArithmetic.cs": "f02e90722461d290c7da3c7ad125dd6b6138e7d578f350fa117465e6a6ead48c",
+    "conformance\\java-reference\\cases.json": "45177d85573143b79349550a56564e7f38846feb7f06d44cfc8b9ca863b23e61"
+  },
+  "verificationHarnessCorrections": [
+    "Fixture expectation checks now honor per-case zero tolerances.",
+    "Differential comparison rejects boolean/numeric substitutions and records with neither result nor error."
   ]
 }

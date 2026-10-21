@@ -73,6 +73,8 @@ public final class ReferenceRunner {
       case "mA" -> MetricPrefix.MILLI(Units.AMPERE);
       case "quarterA" -> Units.AMPERE.divide(4);
       case "eighthA" -> Units.AMPERE.divide(8);
+      case "largeA" -> Units.AMPERE.multiply(1e200);
+      case "tinyA" -> Units.AMPERE.multiply(1e-200);
       case "V" -> Units.VOLT;
       case "Ω" -> Units.OHM;
       case "kΩ" -> MetricPrefix.KILO(Units.OHM);

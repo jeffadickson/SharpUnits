@@ -36,6 +36,8 @@ internal static class QuantityFixtures
         {
             "quarterA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.25)),
             "eighthA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.125)),
+            "largeA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(1e200)),
+            "tinyA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(1e-200)),
             "C-copy" => new(symbol,registry.Resolve("°C").RationalDimension,UnitConversion.Celsius),
             "F-copy" => new(symbol,registry.Resolve("°F").RationalDimension,UnitConversion.Fahrenheit),
             _ => registry.Resolve(symbol)

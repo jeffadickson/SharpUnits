@@ -229,7 +229,15 @@
         "Q50-04",
         "Q50-05"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-24",
+        "Q100-25",
+        "Q100-26",
+        "Q100-28",
+        "Q100-29"
+      ]
     },
     {
       "id": "431-A6",
@@ -306,7 +314,17 @@
       "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
       "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. CI passed for the implementation; formal review and the documented API distinctions remain open.",
       "javaCiEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054406 (ba3f534; 112 pinned TCK tests and 108 real differential fixtures)",
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-31",
+        "Q100-33",
+        "Q100-34",
+        "Q100-35",
+        "Q100-36",
+        "Q100-37",
+        "Q100-38"
+      ]
     },
     {
       "id": "4311-A4",
@@ -330,7 +348,30 @@
         "Q50-36",
         "Q50-40"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-01",
+        "Q100-02",
+        "Q100-03",
+        "Q100-04",
+        "Q100-05",
+        "Q100-06",
+        "Q100-07",
+        "Q100-08",
+        "Q100-09",
+        "Q100-10",
+        "Q100-11",
+        "Q100-12",
+        "Q100-13",
+        "Q100-14",
+        "Q100-15",
+        "Q100-16",
+        "Q100-17",
+        "Q100-18",
+        "Q100-19",
+        "Q100-20"
+      ]
     },
     {
       "id": "4311-A5",
@@ -353,7 +394,10 @@
         "Q50-35",
         "Q50-47"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [],
+      "secondReviewLimitation": "Scalar division shares the numeric input guard; new type probes invoke multiplication directly, not division."
     },
     {
       "id": "4311-A6",
@@ -370,7 +414,13 @@
       "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
       "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. CI passed for the implementation; formal review and the documented API distinctions remain open.",
       "javaCiEvidence": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054406 (ba3f534; 112 pinned TCK tests and 108 real differential fixtures)",
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-32",
+        "Q100-39",
+        "Q100-40"
+      ]
     },
     {
       "id": "4312-A1",
@@ -449,7 +499,29 @@
         "Q50-23",
         "Q50-24"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-21",
+        "Q100-22",
+        "Q100-23",
+        "Q100-24",
+        "Q100-25",
+        "Q100-26",
+        "Q100-27",
+        "Q100-28",
+        "Q100-29",
+        "Q100-41",
+        "Q100-42",
+        "Q100-43",
+        "Q100-44",
+        "Q100-45",
+        "Q100-46",
+        "Q100-47",
+        "Q100-48",
+        "Q100-49",
+        "Q100-50"
+      ]
     },
     {
       "id": "431-A10",
@@ -470,7 +542,11 @@
         "Q50-07",
         "Q50-10"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
+      "secondReviewCases": [
+        "Q100-30"
+      ]
     },
     {
       "id": "44-A1",
