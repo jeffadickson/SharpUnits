@@ -840,6 +840,210 @@
         "result": 0
       },
       "originalMismatch": false
+    },
+    {
+      "iteration": 41,
+      "case": "Q50-41",
+      "hypothesis": "ElectricCurrent cast accepts matching dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-41",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-41",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-41",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 42,
+      "case": "Q50-42",
+      "hypothesis": "ElectricPotential cast rejects current dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "INCOMPATIBLE_QUANTITY_TYPE",
+        "id": "Q50-42"
+      },
+      "dotnetBefore": {
+        "id": "Q50-42",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-42",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 43,
+      "case": "Q50-43",
+      "hypothesis": "ElectricPotential cast accepts voltage dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-43",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-43",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-43",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 44,
+      "case": "Q50-44",
+      "hypothesis": "ElectricResistance cast rejects voltage dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "INCOMPATIBLE_QUANTITY_TYPE",
+        "id": "Q50-44"
+      },
+      "dotnetBefore": {
+        "id": "Q50-44",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-44",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 45,
+      "case": "Q50-45",
+      "hypothesis": "ElectricResistance cast accepts resistance dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-45",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-45",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-45",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 46,
+      "case": "Q50-46",
+      "hypothesis": "Quantity division by a zero linear operand fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-46"
+      },
+      "dotnetBefore": {
+        "id": "Q50-46",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-46",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 47,
+      "case": "Q50-47",
+      "hypothesis": "Scalar division by zero fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-47"
+      },
+      "dotnetBefore": {
+        "id": "Q50-47",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-47",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 48,
+      "case": "Q50-48",
+      "hypothesis": "Inverse of zero fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-48"
+      },
+      "dotnetBefore": {
+        "id": "Q50-48",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-48",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 49,
+      "case": "Q50-49",
+      "hypothesis": "Zero relative Celsius divisor has zero coherent magnitude",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-49"
+      },
+      "dotnetBefore": {
+        "id": "Q50-49",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-49",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 50,
+      "case": "Q50-50",
+      "hypothesis": "Zero absolute Celsius divisor is not zero kelvin",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 0.03660992128866923,
+        "id": "Q50-50",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-50",
+        "result": 0.03660992128866923
+      },
+      "dotnetAfter": {
+        "id": "Q50-50",
+        "result": 0.03660992128866923
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -870,6 +1074,57 @@
       "testsPassed": 461,
       "differentialCases": 98,
       "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "testsPassed": 471,
+      "differentialCases": 108,
+      "mismatches": 0
     }
+  ],
+  "completedDate": "2026-10-21",
+  "interpretation": "50 numbered source/behavior review iterations, one independently executable scenario per iteration, compiled and tested in five groups of ten. These are not 50 commits or formal TCK closures.",
+  "originalCaseMismatchesCorrected": 22,
+  "fixtureSha256": "2485acc0987a789c0962c70cb14eecf6800fd2a9d5b214c7c7be31a6a1217ed1",
+  "upstreamPins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "notes": [
+    "Checkpoint 20 initially exposed an obsolete display-value expectation in I33_MultiplyElectrical; it now checks display value 1 and converted value 1000 V. Core physical behavior is retained.",
+    "Iterations 41-50 required new fixture cast/error instrumentation but no production correction. Their before/after results use the same production revision with that instrumentation.",
+    "BEHAVIOR_MATCHED describes only the recorded case, not complete API or Number semantics. No TCK assertions are promoted to VERIFIED."
+  ],
+  "tckSummary": {
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "quantityTckMethods": [
+    "testQuantityCastAsType",
+    "testQuantityEquals",
+    "testQuantityGetScale",
+    "testQuantityGetUnit",
+    "testQuantityGetValue",
+    "testQuantityHashCode",
+    "testQuantityIsComparable",
+    "testQuantityIsEquivalentTo",
+    "testQuantityOp0Inverse",
+    "testQuantityOp0To",
+    "testQuantityOp1Add",
+    "testQuantityOp1DivideByNumber",
+    "testQuantityOp1MultiplyByNumber",
+    "testQuantityOp1Subtract",
+    "testQuantityOp2Divide",
+    "testQuantityOp2Multiply"
   ]
 }

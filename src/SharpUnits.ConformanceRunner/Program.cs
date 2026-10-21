@@ -50,9 +50,9 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
   }
   Console.WriteLine(JsonSerializer.Serialize(new {id,result}));
  }
- catch(InvalidOperationException)
+ catch(Exception ex) when (QuantityFixtures.ErrorCategory(ex,test.GetProperty("operation").GetString()) is not null)
  {
-  Console.WriteLine(JsonSerializer.Serialize(new {id,error="INCOMPATIBLE_DIMENSION"}));
+  Console.WriteLine(JsonSerializer.Serialize(new {id,error=QuantityFixtures.ErrorCategory(ex,test.GetProperty("operation").GetString())}));
  }
  catch(Exception ex)
  {

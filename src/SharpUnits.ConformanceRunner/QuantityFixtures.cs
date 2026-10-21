@@ -4,6 +4,13 @@ using SharpUnits;
 /// <summary>Executes fixtures through the public Java quantity adapter.</summary>
 internal static class QuantityFixtures
 {
+    public static string? ErrorCategory(Exception error, string? operation) => error switch
+    {
+        DivideByZeroException => "DIVIDE_BY_ZERO",
+        InvalidOperationException when operation == "quantityAsType" => "INCOMPATIBLE_QUANTITY_TYPE",
+        InvalidOperationException => "INCOMPATIBLE_DIMENSION",
+        _ => null
+    };
     public static object Evaluate(JsonElement test, UnitRegistry registry)
     {
         string Text(string name) => test.GetProperty(name).GetString()!;
@@ -26,6 +33,13 @@ internal static class QuantityFixtures
             "quantityScalarDivide" => left.Divide((IConvertible)rhs.GetDouble()),
             "quantityTo" => left.To(registry.Resolve(Text("to"))),
             "quantityInverse" => left.Inverse(),
+            "quantityAsType" => left.AsType(Text("kind") switch
+            {
+                "current" => QuantityKind.Current,
+                "voltage" => QuantityKind.Voltage,
+                "resistance" => QuantityKind.Resistance,
+                _ => throw new NotSupportedException("Unknown quantity kind")
+            }, QuantityKindRegistry.CreateStandard()),
             _ => throw new NotSupportedException(operation)
         };
         if (test.TryGetProperty("observe", out var observe))

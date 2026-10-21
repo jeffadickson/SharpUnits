@@ -31,6 +31,12 @@ public final class ReferenceRunner {
       case "quantityScalarDivide" -> left.divide(test.path("rhsValue").asDouble());
       case "quantityTo" -> left.to(unit(test.path("to").asText()));
       case "quantityInverse" -> left.inverse();
+      case "quantityAsType" -> left.asType(switch (test.path("kind").asText()) {
+        case "current" -> javax.measure.quantity.ElectricCurrent.class;
+        case "voltage" -> javax.measure.quantity.ElectricPotential.class;
+        case "resistance" -> javax.measure.quantity.ElectricResistance.class;
+        default -> throw new IllegalArgumentException("Unknown quantity kind");
+      });
       default -> throw new IllegalArgumentException("Unsupported quantity operation: " + operation);
     };
     if (test.path("observe").asText().equals("scale")) return result.getScale().name();
@@ -96,6 +102,16 @@ public final class ReferenceRunner {
       } catch(javax.measure.UnconvertibleException ex) {
         if (!(ex.getCause() instanceof javax.measure.IncommensurableException)) throw ex;
         System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","INCOMPATIBLE_DIMENSION")));
+      } catch(ClassCastException ex) {
+        if (!test.path("operation").asText().equals("quantityAsType")) throw ex;
+        System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","INCOMPATIBLE_QUANTITY_TYPE")));
+      } catch(ArithmeticException ex) {
+        if (!"division by zero".equals(ex.getMessage())) throw ex;
+        System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","DIVIDE_BY_ZERO")));
+      } catch(IllegalArgumentException ex) {
+        // Pinned RationalNumber.of uses this exception for a reciprocal with zero divisor.
+        if (!"cannot initalize a rational number with divisor equal to ZERO".equals(ex.getMessage())) throw ex;
+        System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","DIVIDE_BY_ZERO")));
       }
     }
   }

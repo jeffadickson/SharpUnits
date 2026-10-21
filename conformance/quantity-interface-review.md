@@ -8,6 +8,11 @@ All 16 assertions inspect structure. They do **not** specify the arithmetic outc
 tested by our differential fixtures. C# properties, semantic kinds and `IConvertible`
 are explicitly CLR adaptations. No entry is promoted to VERIFIED by this review.
 
+The [2026-10-21 fifty-iteration review](quantity-fifty-review-2026-10-21.md)
+adds executable magnitude, product representation, Fahrenheit, scalar, cast and
+zero-division cases. It supersedes earlier descriptions of products always using
+coherent display magnitudes. Compound unit identity remains partial.
+
 ## Assertion matrix
 
 The xUnit identifiers below are in `QuantityParitySurfaceTests`. The tests now check
@@ -27,7 +32,7 @@ compiler bridge methods. Our CLR tests do not imply that those Java signatures e
 | 431-A5 | testQuantityGetValue | public getValue() / I05 Value | double is not arbitrary Java Number |
 | 431-A6 | testQuantityHashCode | `int hashCode()` / I06 GetHashCode() | Equal objects hash equally; Java numeric hash algorithm/identity not reproduced |
 | 431-A7 | testQuantityIsEquivalentTo | public isEquivalentTo / I07 IsEquivalentTo(adapter) | Null/incompatible dimensions return false in CLR; numeric precision limited |
-| 431-A8 | testQuantityOp0Inverse | public inverse() / I08 Inverse() | Linear inverse reconciled; Java constructs affine inverse but conversion fails later, while CLR rejects immediately; unit identity remains partial |
+| 431-A8 | testQuantityOp0Inverse | public inverse() / I08 Inverse() | Linear inverse reconciled; CLR rejects absolute affine inverse early and approximates relative affine unit representation; unit identity remains partial |
 | 431-A9 | testQuantityOp0To | `Quantity to(Unit)` / I15 To(UnitDefinition) | Affine double conversions supported; Number precision and non-affine converters absent |
 | 431-A10 | testQuantityIsComparable | Comparable assignability / I16 IComparable | CLR null sorts first; Java null comparison throws; double precision only |
 | 4311-A1 | testQuantityOp1Add | `Quantity add(Quantity)` / I09 Add | Affine and mixed-scale behavior corrected; arbitrary precision absent |
@@ -77,5 +82,5 @@ quotients, including system conversion before multiplication. All 58 fixtures ma
 A separate Java probe constructs the inverse of `20 °C` with magnitude `0.05`;
 asking its unit converter to convert to its system unit throws
 `UnsupportedOperationException` from `ProductUnit.getSystemConverter`, because its
-converter is not linear. SharpUnits rejects affine inversion immediately. This is
+converter is not linear. SharpUnits rejects absolute affine inversion immediately; relative affine inverse currently uses a linear reciprocal factor, which does not preserve Java's non-linear unit representation. This is
 an unresolved representational/API distinction, not a verified equivalence.

@@ -1089,6 +1089,122 @@
       "observe": "magnitude",
       "absoluteTolerance": 0,
       "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-41",
+      "operation": "quantityAsType",
+      "value": 5,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "kind": "current",
+      "expected": 5
+    },
+    {
+      "id": "Q50-42",
+      "operation": "quantityAsType",
+      "value": 5,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "kind": "voltage",
+      "expectedError": "INCOMPATIBLE_QUANTITY_TYPE"
+    },
+    {
+      "id": "Q50-43",
+      "operation": "quantityAsType",
+      "value": 5,
+      "from": "V",
+      "to": "V",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "kind": "voltage",
+      "expected": 5
+    },
+    {
+      "id": "Q50-44",
+      "operation": "quantityAsType",
+      "value": 5,
+      "from": "V",
+      "to": "V",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "kind": "resistance",
+      "expectedError": "INCOMPATIBLE_QUANTITY_TYPE"
+    },
+    {
+      "id": "Q50-45",
+      "operation": "quantityAsType",
+      "value": 5,
+      "from": "Ω",
+      "to": "Ω",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "kind": "resistance",
+      "expected": 5
+    },
+    {
+      "id": "Q50-46",
+      "operation": "quantityDivide",
+      "value": 1,
+      "from": "A",
+      "to": "Ω",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "expectedError": "DIVIDE_BY_ZERO"
+    },
+    {
+      "id": "Q50-47",
+      "operation": "quantityScalarDivide",
+      "value": 1,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "expectedError": "DIVIDE_BY_ZERO"
+    },
+    {
+      "id": "Q50-48",
+      "operation": "quantityInverse",
+      "value": 0,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "expectedError": "DIVIDE_BY_ZERO"
+    },
+    {
+      "id": "Q50-49",
+      "operation": "quantityDivide",
+      "value": 10,
+      "from": "K",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "rhsScale": "RELATIVE",
+      "expectedError": "DIVIDE_BY_ZERO"
+    },
+    {
+      "id": "Q50-50",
+      "operation": "quantityDivide",
+      "value": 10,
+      "from": "K",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "expected": 0.03660992128866923
     }
   ]
 }

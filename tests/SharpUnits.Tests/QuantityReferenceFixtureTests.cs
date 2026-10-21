@@ -21,9 +21,11 @@ public sealed class QuantityReferenceFixtureTests
         using var document = JsonDocument.Parse(json);
         var test = document.RootElement;
         var registry = UnitRegistry.CreateStandard();
-        if (test.TryGetProperty("expectedError", out _))
+        if (test.TryGetProperty("expectedError", out var expectedError))
         {
-            Assert.Throws<InvalidOperationException>(() => QuantityFixtures.Evaluate(test, registry));
+            var error=Record.Exception(() => QuantityFixtures.Evaluate(test, registry));
+            Assert.NotNull(error);
+            Assert.Equal(expectedError.GetString(),QuantityFixtures.ErrorCategory(error,test.GetProperty("operation").GetString()));
             return;
         }
         var result = QuantityFixtures.Evaluate(test, registry);

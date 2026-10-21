@@ -26,9 +26,11 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public JavaQuantityScale Scale {get;}
  /// <summary>Display unit.</summary>
  public UnitDefinition Unit=>unit;
- /// <summary>Magnitude expressed in the display unit.</summary>
+ /// <summary>Magnitude expressed in the display unit, retaining the supplied double representation.</summary>
  public double Value=>displayMagnitude;
- /// <summary>Coherent SI representation.</summary>
+ /// <summary>Coherent SI representation in double precision.</summary>
+ /// <remarks>Scaling and offsets may round or underflow independently of the retained display magnitude.
+ /// This property does not retain Java arbitrary Number precision.</remarks>
  public Quantity SiQuantity=>value;
  /// <summary>Creates a quantity with the specified display unit.</summary>
  public JavaQuantityAdapter(double magnitude,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)
@@ -135,7 +137,8 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  }
  /// <summary>Returns the inverse of a linear quantity, retaining scale and reciprocal display-unit factor.</summary>
  /// <remarks>For example, 250 mA becomes 0.004 (1/mA), whose coherent magnitude is 4 (1/A).
- /// Affine unit inversion is not supported.</remarks>
+ /// Absolute affine inversion is rejected. Relative affine inversion uses a linear reciprocal factor
+ /// and does not preserve Java's non-linear inverse unit representation.</remarks>
  public JavaQuantityAdapter Inverse()
  {
   RequireLinearAlgebra(this);
