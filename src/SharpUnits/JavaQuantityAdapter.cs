@@ -84,7 +84,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public JavaQuantityAdapter Add(JavaQuantityAdapter other)
  {
   RequireCompatible(other);
-  return new(value+other.value,unit,ResultScale(other));
+  return AddOrSubtract(other,false);
  }
  /// <summary>Subtracts compatible quantities using Indriya scale semantics.</summary>
  /// <remarks>Absolute minus absolute remains absolute, including for affine units.
@@ -92,7 +92,16 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public JavaQuantityAdapter Subtract(JavaQuantityAdapter other)
  {
   RequireCompatible(other);
-  return new(value-other.value,unit,ResultScale(other));
+  return AddOrSubtract(other,true);
+ }
+ private JavaQuantityAdapter AddOrSubtract(JavaQuantityAdapter other,bool subtract)
+ {
+  var resultScale=ResultScale(other);
+  var sign=subtract?-1d:1d;
+  var right=sign*other.Value*(other.unit.Converter.Scale/unit.Converter.Scale);
+  var offset=Scale==JavaQuantityScale.Relative&&resultScale==JavaQuantityScale.Absolute?-unit.Converter.Offset:0;
+  if(other.Scale==JavaQuantityScale.Absolute)offset+=sign*other.unit.Converter.Offset;
+  return new(JavaDoubleArithmetic.Add(Value,right,offset/unit.Converter.Scale),unit,resultScale);
  }
  private JavaQuantityScale ResultScale(JavaQuantityAdapter other)=>
   Scale==JavaQuantityScale.Relative&&other.Scale==JavaQuantityScale.Relative

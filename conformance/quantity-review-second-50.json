@@ -661,6 +661,228 @@
         "result": -1
       },
       "originalMismatch": true
+    },
+    {
+      "iteration": 31,
+      "case": "Q100-31",
+      "hypothesis": "Adding zero interval preserves tiny Celsius point",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-31",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q100-32",
+      "hypothesis": "Subtracting zero interval preserves tiny Celsius point",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-32",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q100-33",
+      "hypothesis": "Relative zero plus tiny Celsius point preserves coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-33",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q100-34",
+      "hypothesis": "Adding tiny Celsius interval does not lose point beside offset",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-34",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q100-35",
+      "hypothesis": "Zero Fahrenheit interval preserves tiny Fahrenheit coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "precisionDisposition": "Indriya returns 1.0000000000036774e-20 after shifted Fahrenheit arithmetic; declared 1e-30 absolute tolerance allows 1e-20 CLR result. This is bounded numerical agreement, not bit-exact Java MathContext equivalence.",
+      "java": {
+        "absoluteTolerance": 1e-30,
+        "id": "Q100-35",
+        "result": 1.0000000000036774e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-35",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-35",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 36,
+      "case": "Q100-36",
+      "hypothesis": "Relative zero plus tiny Fahrenheit point preserves coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "precisionDisposition": "Indriya returns 1.0000000000036774e-20 after shifted Fahrenheit arithmetic; declared 1e-30 absolute tolerance allows 1e-20 CLR result. This is bounded numerical agreement, not bit-exact Java MathContext equivalence.",
+      "java": {
+        "absoluteTolerance": 1e-30,
+        "id": "Q100-36",
+        "result": 1.0000000000036774e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-36",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-36",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 37,
+      "case": "Q100-37",
+      "hypothesis": "Relative decimal addition follows Java decimal promotion",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "dotnetBefore": {
+        "id": "Q100-37",
+        "result": 0.30000000000000004
+      },
+      "dotnetAfter": {
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 38,
+      "case": "Q100-38",
+      "hypothesis": "Linear decimal addition follows Java decimal promotion",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "dotnetBefore": {
+        "id": "Q100-38",
+        "result": 0.30000000000000004
+      },
+      "dotnetAfter": {
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 39,
+      "case": "Q100-39",
+      "hypothesis": "Absolute fractional subtraction retains Indriya absolute convention",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "dotnetBefore": {
+        "id": "Q100-39",
+        "result": -273.04999999999995
+      },
+      "dotnetAfter": {
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 40,
+      "case": "Q100-40",
+      "hypothesis": "Relative decimal subtraction avoids binary cancellation",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-40",
+        "result": 0.09999999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "originalMismatch": true
     }
   ],
   "checkpoints": [
@@ -683,6 +905,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 501,
       "differentialCases": 138,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 511,
+      "differentialCases": 148,
       "mismatches": 0
     }
   ]
