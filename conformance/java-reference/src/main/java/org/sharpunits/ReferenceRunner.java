@@ -50,6 +50,7 @@ public final class ReferenceRunner {
       case "Ω²" -> Units.OHM.pow(2);
       case "K" -> Units.KELVIN;
       case "°C" -> Units.CELSIUS;
+      case "°F" -> Units.KELVIN.multiply(5).divide(9).shift(459.67);
       default -> throw new IllegalArgumentException("Unknown unit: " + symbol);
     };
   }

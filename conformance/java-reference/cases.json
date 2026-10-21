@@ -860,6 +860,121 @@
       "expected": 146.575,
       "observe": "magnitude",
       "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-21",
+      "operation": "quantityTo",
+      "value": 32,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": 0,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-22",
+      "operation": "quantityTo",
+      "value": 212,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": 100,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-23",
+      "operation": "quantityTo",
+      "value": 18,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "resultUnit": "°C",
+      "expected": 10,
+      "absoluteTolerance": 1e-10,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-24",
+      "operation": "quantityTo",
+      "value": 10,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 0,
+      "resultUnit": "°F",
+      "expected": 18,
+      "absoluteTolerance": 1e-10,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-25",
+      "operation": "quantityAdd",
+      "value": 20,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 18,
+      "resultUnit": "°C",
+      "expected": 30,
+      "absoluteTolerance": 1e-10,
+      "rhsScale": "RELATIVE"
+    },
+    {
+      "id": "Q50-26",
+      "operation": "quantityAdd",
+      "value": 68,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 10,
+      "resultUnit": "°F",
+      "expected": 86,
+      "absoluteTolerance": 1e-10,
+      "rhsScale": "RELATIVE"
+    },
+    {
+      "id": "Q50-27",
+      "operation": "quantitySubtract",
+      "value": 68,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 20,
+      "resultUnit": "°F",
+      "expected": -459.67,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-28",
+      "operation": "quantityAdd",
+      "value": 18,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 20,
+      "resultUnit": "°F",
+      "expected": 86,
+      "absoluteTolerance": 1e-10,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-29",
+      "operation": "quantityAdd",
+      "value": 0,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 32,
+      "resultUnit": "°C",
+      "expected": 273.15,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-30",
+      "operation": "quantityScalarMultiply",
+      "value": 32,
+      "from": "°F",
+      "to": "°F",
+      "rhsValue": 2,
+      "resultUnit": "°F",
+      "expected": 523.67,
+      "absoluteTolerance": 1e-10
     }
   ]
 }

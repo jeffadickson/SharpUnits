@@ -420,6 +420,216 @@
         "result": 146.575
       },
       "originalMismatch": true
+    },
+    {
+      "iteration": 21,
+      "case": "Q50-21",
+      "hypothesis": "Absolute Fahrenheit freezing converts with offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-21",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-21",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-21",
+        "result": 0
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 22,
+      "case": "Q50-22",
+      "hypothesis": "Absolute Fahrenheit boiling converts with offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-22",
+        "result": 100.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-22",
+        "result": 100
+      },
+      "dotnetAfter": {
+        "id": "Q50-22",
+        "result": 100
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 23,
+      "case": "Q50-23",
+      "hypothesis": "Relative Fahrenheit conversion ignores offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-23",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-23",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q50-23",
+        "result": 10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 24,
+      "case": "Q50-24",
+      "hypothesis": "Relative Celsius conversion to Fahrenheit uses scale only",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-24",
+        "result": 18.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-24",
+        "result": 18
+      },
+      "dotnetAfter": {
+        "id": "Q50-24",
+        "result": 18
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 25,
+      "case": "Q50-25",
+      "hypothesis": "Absolute Celsius plus relative Fahrenheit is heating",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-25",
+        "result": 30.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-25",
+        "result": 30
+      },
+      "dotnetAfter": {
+        "id": "Q50-25",
+        "result": 30
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 26,
+      "case": "Q50-26",
+      "hypothesis": "Absolute Fahrenheit plus relative Celsius preserves left unit",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-26",
+        "result": 86.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-26",
+        "result": 85.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-26",
+        "result": 85.99999999999999
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 27,
+      "case": "Q50-27",
+      "hypothesis": "Two absolute Fahrenheit/Celsius operands subtract to absolute zero in left units",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-27",
+        "result": -459.67
+      },
+      "dotnetBefore": {
+        "id": "Q50-27",
+        "result": -459.66999999999996
+      },
+      "dotnetAfter": {
+        "id": "Q50-27",
+        "result": -459.66999999999996
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 28,
+      "case": "Q50-28",
+      "hypothesis": "Relative Fahrenheit plus absolute Celsius yields absolute Fahrenheit",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-28",
+        "result": 86.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-28",
+        "result": 85.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-28",
+        "result": 85.99999999999999
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 29,
+      "case": "Q50-29",
+      "hypothesis": "Absolute freezing temperatures add coherent magnitudes",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "dotnetBefore": {
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "dotnetAfter": {
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 30,
+      "case": "Q50-30",
+      "hypothesis": "Absolute Fahrenheit scalar multiplication operates in kelvin",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "dotnetBefore": {
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "dotnetAfter": {
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -435,6 +645,13 @@
       "build": "PASS",
       "testsPassed": 441,
       "differentialCases": 78,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "testsPassed": 451,
+      "differentialCases": 88,
       "mismatches": 0
     }
   ]
