@@ -747,6 +747,119 @@
       "resultUnit": "°C",
       "expected": -1,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-11",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "mA",
+      "to": "Ω",
+      "rhsValue": 3,
+      "expected": 6,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-12",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "mA",
+      "to": "Ω",
+      "rhsValue": 3,
+      "expected": 0.001,
+      "observe": "unitScale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-13",
+      "operation": "quantityDivide",
+      "value": 12,
+      "from": "V",
+      "to": "kΩ",
+      "rhsValue": 4,
+      "expected": 3,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-14",
+      "operation": "quantityDivide",
+      "value": 12,
+      "from": "V",
+      "to": "kΩ",
+      "rhsValue": 4,
+      "expected": 0.001,
+      "observe": "unitScale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-15",
+      "operation": "quantityMultiply",
+      "value": 20,
+      "from": "°C",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 586.3,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-16",
+      "operation": "quantityMultiply",
+      "value": 20,
+      "from": "°C",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 0.001,
+      "observe": "unitScale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-17",
+      "operation": "quantityMultiply",
+      "value": 20,
+      "from": "°C",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 40,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-18",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "mA",
+      "to": "A",
+      "rhsValue": 4,
+      "expected": 0.5,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-19",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "mA",
+      "to": "Ω",
+      "rhsValue": 3,
+      "expected": "ABSOLUTE",
+      "observe": "scale",
+      "absoluteTolerance": 1e-10,
+      "scale": "RELATIVE",
+      "rhsScale": "RELATIVE"
+    },
+    {
+      "id": "Q50-20",
+      "operation": "quantityDivide",
+      "value": 20,
+      "from": "°C",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 146.575,
+      "observe": "magnitude",
+      "absoluteTolerance": 1e-10
     }
   ]
 }

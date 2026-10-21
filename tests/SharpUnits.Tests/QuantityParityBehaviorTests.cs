@@ -72,7 +72,7 @@ public sealed class QuantityParityBehaviorTests
  }
  [Fact] public void I33_MultiplyElectrical()
  {
-  var p=Q(.25,"A").Multiply(Q(4,"kΩ")); Assert.Equal(RationalDimension.From(Dimension.Voltage),p.SiQuantity.RationalDimension); Assert.Equal(1000,p.Value,8);
+  var p=Q(.25,"A").Multiply(Q(4,"kΩ")); Assert.Equal(RationalDimension.From(Dimension.Voltage),p.SiQuantity.RationalDimension); Assert.Equal(1,p.Value,8); Assert.Equal(1000,p.To(U("V")).Value,8);
  }
  [Fact] public void I34_DivideElectrical()
  {

@@ -210,6 +210,216 @@
         "result": -1
       },
       "originalMismatch": true
+    },
+    {
+      "iteration": 11,
+      "case": "Q50-11",
+      "hypothesis": "Product preserves prefixed operand display magnitude",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-11",
+        "absoluteTolerance": 1e-10,
+        "result": 6.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-11",
+        "result": 0.006
+      },
+      "dotnetAfter": {
+        "id": "Q50-11",
+        "result": 6
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 12,
+      "case": "Q50-12",
+      "hypothesis": "Product retains prefixed operand unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-12",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-12",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-12",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 13,
+      "case": "Q50-13",
+      "hypothesis": "Quotient preserves scaled denominator display magnitude",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-13",
+        "absoluteTolerance": 1e-10,
+        "result": 3.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-13",
+        "result": 0.003
+      },
+      "dotnetAfter": {
+        "id": "Q50-13",
+        "result": 3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 14,
+      "case": "Q50-14",
+      "hypothesis": "Quotient retains reciprocal denominator unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-14",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-14",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-14",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 15,
+      "case": "Q50-15",
+      "hypothesis": "Affine operand becomes Kelvin but linear operand keeps prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-15",
+        "absoluteTolerance": 1e-10,
+        "result": 586.3
+      },
+      "dotnetBefore": {
+        "id": "Q50-15",
+        "result": 0.5862999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-15",
+        "result": 586.3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 16,
+      "case": "Q50-16",
+      "hypothesis": "Affine product retains the other operand unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-16",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-16",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-16",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 17,
+      "case": "Q50-17",
+      "hypothesis": "Relative affine product ignores offset and keeps other prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-17",
+        "absoluteTolerance": 1e-10,
+        "result": 40.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-17",
+        "result": 0.04
+      },
+      "dotnetAfter": {
+        "id": "Q50-17",
+        "result": 40
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 18,
+      "case": "Q50-18",
+      "hypothesis": "Dimensionless quotient retains scaled representation",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-18",
+        "absoluteTolerance": 1e-10,
+        "result": 0.5
+      },
+      "dotnetBefore": {
+        "id": "Q50-18",
+        "result": 0.0005
+      },
+      "dotnetAfter": {
+        "id": "Q50-18",
+        "result": 0.5
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 19,
+      "case": "Q50-19",
+      "hypothesis": "Relative operands yield absolute product while preserving prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-19",
+        "absoluteTolerance": 1e-10,
+        "result": "ABSOLUTE"
+      },
+      "dotnetBefore": {
+        "id": "Q50-19",
+        "result": "ABSOLUTE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-19",
+        "result": "ABSOLUTE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 20,
+      "case": "Q50-20",
+      "hypothesis": "Affine quotient converts only shifted operand to system unit",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-20",
+        "absoluteTolerance": 1e-10,
+        "result": 146.575
+      },
+      "dotnetBefore": {
+        "id": "Q50-20",
+        "result": 146575
+      },
+      "dotnetAfter": {
+        "id": "Q50-20",
+        "result": 146.575
+      },
+      "originalMismatch": true
     }
   ],
   "checkpoints": [
@@ -218,6 +428,13 @@
       "build": "PASS",
       "testsPassed": 431,
       "differentialCases": 68,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "testsPassed": 441,
+      "differentialCases": 78,
       "mismatches": 0
     }
   ]

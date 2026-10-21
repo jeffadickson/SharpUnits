@@ -87,21 +87,30 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  private JavaQuantityScale ResultScale(JavaQuantityAdapter other)=>
   Scale==JavaQuantityScale.Relative&&other.Scale==JavaQuantityScale.Relative
    ?JavaQuantityScale.Relative:JavaQuantityScale.Absolute;
- /// <summary>Multiplies quantities in coherent SI.</summary>
+ /// <summary>Multiplies quantities, retaining linear display-unit factors and converting affine operands to SI.</summary>
  public JavaQuantityAdapter Multiply(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
-  var result=value*other.value;
-  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Absolute);
+  return Combine(other,false);
  }
- /// <summary>Divides quantities in coherent SI.</summary>
+ /// <summary>Divides quantities, retaining linear display-unit factors and converting affine operands to SI.</summary>
  public JavaQuantityAdapter Divide(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
-  if(other.value.SiValue==0)throw new DivideByZeroException();
-  var result=value/other.value;
-  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Absolute);
+  return Combine(other,true);
  }
+ private JavaQuantityAdapter Combine(JavaQuantityAdapter other,bool divide)
+ {
+  var left=MultiplicativeOperand();var right=other.MultiplicativeOperand();
+  if(divide&&right.Magnitude==0)throw new DivideByZeroException();
+  var dimension=divide?unit.RationalDimension-other.unit.RationalDimension:unit.RationalDimension+other.unit.RationalDimension;
+  var factor=divide?left.Unit.Converter.Scale/right.Unit.Converter.Scale:left.Unit.Converter.Scale*right.Unit.Converter.Scale;
+  var symbol=$"({left.Unit.Symbol}{(divide?"/":"*")}{right.Unit.Symbol})";
+  var resultUnit=new UnitDefinition(symbol,dimension,UnitConversion.Linear(factor));
+  return new(divide?left.Magnitude/right.Magnitude:left.Magnitude*right.Magnitude,resultUnit,JavaQuantityScale.Absolute);
+ }
+ private (double Magnitude,UnitDefinition Unit) MultiplicativeOperand()=>unit.Converter.IsLinear
+  ?(Value,unit):(value.SiValue,DerivedUnit(unit.RationalDimension));
  /// <summary>Multiplies by a boxed numeric scalar, converted to double.</summary>
  public JavaQuantityAdapter Multiply(IConvertible scalar)
  {
