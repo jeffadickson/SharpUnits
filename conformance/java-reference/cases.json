@@ -975,6 +975,120 @@
       "resultUnit": "°F",
       "expected": 523.67,
       "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q50-31",
+      "operation": "quantityScalarMultiply",
+      "value": 20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 1,
+      "expected": 20.1,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-32",
+      "operation": "quantityScalarDivide",
+      "value": 1e-20,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 1,
+      "expected": 1e-20,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-33",
+      "operation": "quantityScalarMultiply",
+      "value": 1e-320,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 2e-320,
+      "observe": "magnitude",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-34",
+      "operation": "quantityScalarDivide",
+      "value": 1e-320,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 2,
+      "expected": 5e-321,
+      "observe": "magnitude",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-35",
+      "operation": "quantityScalarDivide",
+      "value": 2,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 4,
+      "expected": 0.5,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-36",
+      "operation": "quantityScalarMultiply",
+      "value": 20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 2,
+      "expected": 40.2,
+      "observe": "magnitude",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q50-37",
+      "operation": "quantityInverse",
+      "value": 0.1,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 0,
+      "expected": 10,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-38",
+      "operation": "quantityInverse",
+      "value": 1e-305,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 0,
+      "expected": 1e+305,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-39",
+      "operation": "quantityInverse",
+      "value": -0.1,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 0,
+      "expected": -10,
+      "observe": "magnitude",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q50-40",
+      "operation": "quantityScalarMultiply",
+      "value": 0,
+      "from": "°F",
+      "to": "°F",
+      "rhsValue": 3,
+      "expected": 0,
+      "observe": "magnitude",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
     }
   ]
 }

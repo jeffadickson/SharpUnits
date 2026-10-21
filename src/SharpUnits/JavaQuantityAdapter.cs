@@ -127,6 +127,9 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  {
   if(!double.IsFinite(factor))throw new ArgumentOutOfRangeException(nameof(factor));
   if(divide&&factor==0)throw new DivideByZeroException();
+  if(factor==1)return this;
+  if(Scale==JavaQuantityScale.Relative||unit.Converter.IsLinear)
+   return new(divide?Value/factor:Value*factor,unit,Scale);
   var result=divide?value.SiValue/factor:value.SiValue*factor;
   return new(new Quantity(result,value.RationalDimension),unit,Scale);
  }

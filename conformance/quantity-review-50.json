@@ -630,6 +630,216 @@
         "result": 523.67
       },
       "originalMismatch": false
+    },
+    {
+      "iteration": 31,
+      "case": "Q50-31",
+      "hypothesis": "Multiplication by one preserves fractional shifted magnitude",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-31",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-31",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q50-31",
+        "result": 20.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q50-32",
+      "hypothesis": "Division by one preserves a Celsius magnitude below offset precision",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-32",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-32",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-32",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q50-33",
+      "hypothesis": "Relative prefixed scalar multiplication avoids coherent underflow loss",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-33",
+        "result": 2e-320
+      },
+      "dotnetBefore": {
+        "id": "Q50-33",
+        "result": 1.9763e-320
+      },
+      "dotnetAfter": {
+        "id": "Q50-33",
+        "result": 2e-320
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q50-34",
+      "hypothesis": "Relative prefixed scalar division avoids coherent underflow loss",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-34",
+        "result": 5e-321
+      },
+      "dotnetBefore": {
+        "id": "Q50-34",
+        "result": 4.94e-321
+      },
+      "dotnetAfter": {
+        "id": "Q50-34",
+        "result": 5e-321
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q50-35",
+      "hypothesis": "Prefixed linear scalar division retains display unit",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "dotnetBefore": {
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "dotnetAfter": {
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 36,
+      "case": "Q50-36",
+      "hypothesis": "Relative Celsius scalar multiplication retains interval magnitude",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "dotnetBefore": {
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "dotnetAfter": {
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 37,
+      "case": "Q50-37",
+      "hypothesis": "Fractional prefixed inverse uses display magnitude reciprocal",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-37",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-37",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q50-37",
+        "result": 10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 38,
+      "case": "Q50-38",
+      "hypothesis": "Small prefixed inverse does not divide a rounded coherent reciprocal",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "dotnetBefore": {
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "dotnetAfter": {
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 39,
+      "case": "Q50-39",
+      "hypothesis": "Signed prefixed inverse retains sign and representation",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-39",
+        "result": -10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-39",
+        "result": -10
+      },
+      "dotnetAfter": {
+        "id": "Q50-39",
+        "result": -10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 40,
+      "case": "Q50-40",
+      "hypothesis": "Zero relative Fahrenheit interval scales without applying offset",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-40",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-40",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-40",
+        "result": 0
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -652,6 +862,13 @@
       "build": "PASS",
       "testsPassed": 451,
       "differentialCases": 88,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "testsPassed": 461,
+      "differentialCases": 98,
       "mismatches": 0
     }
   ]
