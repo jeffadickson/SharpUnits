@@ -2,7 +2,13 @@ using System.Globalization;
 namespace SharpUnits;
 
 /// <summary>Whether a quantity represents an absolute value or a relative interval.</summary>
-public enum JavaQuantityScale { Absolute, Relative }
+public enum JavaQuantityScale
+{
+ /// <summary>An absolute value, including the unit offset.</summary>
+ Absolute,
+ /// <summary>An interval, converted using only the unit scale factor.</summary>
+ Relative
+}
 
 /// <summary>JSR 385-inspired .NET quantity adapter retaining the display unit.</summary>
 /// <remarks>Preserves the coherent-SI Quantity model. This is a CLR analogue, not Java binary compatibility.</remarks>
@@ -49,43 +55,42 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(value.RationalDimension!=registry.DimensionOf(kind))throw new InvalidOperationException("Quantity kind dimensions disagree.");
   return this;
  }
- /// <summary>Checks coherent SI physical equivalence independent of display unit.</summary>
+ /// <summary>Checks equivalence using Indriya's left-unit comparison semantics.</summary>
+ /// <remarks>Scale is not compared directly. The right operand is converted according to its own scale.
+ /// Incompatible dimensions return false as a .NET convenience.</remarks>
  public bool IsEquivalentTo(JavaQuantityAdapter? other)=>
-  other is not null&&Scale==other.Scale&&value.RationalDimension==other.value.RationalDimension&&value.SiValue==other.value.SiValue;
- /// <summary>Adds quantities of compatible dimensions and scale.</summary>
+  other is not null&&value.RationalDimension==other.value.RationalDimension&&CompareTo(other)==0;
+ /// <summary>Adds compatible quantities in coherent SI; only two relative operands yield relative scale.</summary>
  public JavaQuantityAdapter Add(JavaQuantityAdapter other)
  {
   RequireCompatible(other);
-  if(Scale!=other.Scale)throw new InvalidOperationException("Quantity scale mismatch.");
-  if(Scale==JavaQuantityScale.Absolute&&unit.Converter.Offset!=0)
-   throw new InvalidOperationException("Absolute affine quantities cannot be added.");
-  return new(value+other.value,unit,Scale);
+  return new(value+other.value,unit,ResultScale(other));
  }
- /// <summary>Subtracts quantities; absolute subtraction yields a relative interval.</summary>
+ /// <summary>Subtracts compatible quantities using Indriya scale semantics.</summary>
+ /// <remarks>Absolute minus absolute remains absolute, including for affine units.
+ /// Use the dedicated temperature APIs when a physical temperature interval is required.</remarks>
  public JavaQuantityAdapter Subtract(JavaQuantityAdapter other)
  {
   RequireCompatible(other);
-  if(Scale!=other.Scale)throw new InvalidOperationException("Quantity scale mismatch.");
-  if(Scale==JavaQuantityScale.Absolute&&unit.Converter.Offset!=0)
-   return new(value-other.value,new UnitDefinition("Δ"+unit.Symbol,unit.RationalDimension,UnitConversion.Linear(unit.Converter.Scale)),JavaQuantityScale.Relative);
-  return new(value-other.value,unit,Scale);
+  return new(value-other.value,unit,ResultScale(other));
  }
+ private JavaQuantityScale ResultScale(JavaQuantityAdapter other)=>
+  Scale==JavaQuantityScale.Relative&&other.Scale==JavaQuantityScale.Relative
+   ?JavaQuantityScale.Relative:JavaQuantityScale.Absolute;
  /// <summary>Multiplies quantities in coherent SI.</summary>
  public JavaQuantityAdapter Multiply(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
-  RequireLinearAlgebra(this);RequireLinearAlgebra(other);
   var result=value*other.value;
-  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Relative);
+  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Absolute);
  }
  /// <summary>Divides quantities in coherent SI.</summary>
  public JavaQuantityAdapter Divide(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
-  RequireLinearAlgebra(this);RequireLinearAlgebra(other);
   if(other.value.SiValue==0)throw new DivideByZeroException();
   var result=value/other.value;
-  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Relative);
+  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Absolute);
  }
  /// <summary>Multiplies by a boxed numeric scalar, converted to double.</summary>
  public JavaQuantityAdapter Multiply(IConvertible scalar)
@@ -103,8 +108,6 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  {
   if(!double.IsFinite(factor))throw new ArgumentOutOfRangeException(nameof(factor));
   if(divide&&factor==0)throw new DivideByZeroException();
-  if(Scale==JavaQuantityScale.Absolute&&unit.Converter.Offset!=0)
-   throw new InvalidOperationException("Cannot scale absolute affine quantities.");
   var result=divide?value.SiValue/factor:value.SiValue*factor;
   return new(new Quantity(result,value.RationalDimension),unit,Scale);
  }
@@ -116,12 +119,12 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   var result=new Quantity(1d/value.SiValue,RationalDimension.From(Dimension.None)-value.RationalDimension);
   return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Relative);
  }
- /// <summary>Compares compatible coherent SI values.</summary>
+ /// <summary>Compares display values after converting the right operand to this unit, as Indriya does.</summary>
  public int CompareTo(JavaQuantityAdapter? other)
  {
   if(other is null)return 1;
   RequireCompatible(other);
-  return value.SiValue.CompareTo(other.value.SiValue);
+  return Value.CompareTo(other.To(unit).Value);
  }
  /// <summary>Equality includes representation, unlike physical equivalence.</summary>
  public bool Equals(JavaQuantityAdapter? other)=>other is not null&&value.Equals(other.value)&&unit.Equals(other.unit)&&Scale==other.Scale;

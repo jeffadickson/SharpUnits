@@ -21,7 +21,7 @@ jobs:
       - name: Build pinned Indriya reference
         run: mvn -B -f upstream/indriya/pom.xml -DskipTests install
       - name: Run pinned Java TCK against Indriya
-        run: mvn -B -f upstream/unit-tck/pom.xml test
+        run: python3 tools/run_pinned_tck.py
       - name: Build Java fixture runner
         run: mvn -B -f conformance/java-reference/pom.xml -DskipTests package dependency:build-classpath -Dmdep.outputFile=classpath.txt
       - name: Run Indriya fixtures

@@ -17,6 +17,9 @@ for case in cases:
   if row.get("error")!=case["expectedError"]:
    raise SystemExit(f"{case['id']}: wrong error")
  else:
-  if "error" in row or not math.isclose(row["result"],case["expected"],rel_tol=1e-12,abs_tol=1e-10):
+  expected=case["expected"]
+  result=row.get("result")
+  matches=(isinstance(result,(int,float)) and not isinstance(result,bool) and math.isclose(result,expected,rel_tol=1e-12,abs_tol=1e-10)) if isinstance(expected,(int,float)) and not isinstance(expected,bool) else type(result) is type(expected) and result==expected
+  if "error" in row or not matches:
    raise SystemExit(f"{case['id']}: wrong value")
 print(f"Validated {len(cases)} shared conformance fixtures")

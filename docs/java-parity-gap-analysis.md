@@ -14,7 +14,7 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-006 | Prefixes (SI decimal, binary where applicable) | Partial factories only | P0 | mA*kΩ, µV, kHz |
 | JP-007 | Arbitrary user-defined units | Partial UnitDefinition | P0 | registration, collision, identity |
 | JP-008 | Linear converters | Partial | P0 | round-trip, overflow, zero scale |
-| JP-009 | Affine converters | Partial | P0 | °C/°F/K, temperature differences |
+| JP-009 | Affine converters | Partial: Java adapter affine arithmetic reconciled; see quantity assertion review | P0 | °C/°F/K, temperature differences |
 | JP-010 | Converter composition/inverse | Missing | P0 | identity, composition, inverse |
 | JP-011 | Nonlinear converters | Missing | P1 | domain restrictions, invertibility |
 | JP-012 | Quantity conversion to compatible units | Partial | P0 | arbitrary compatible units |
@@ -22,7 +22,7 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-014 | Quantity parsing | Missing | P0 | numeric and unit locale cases |
 | JP-015 | Unit and quantity formatting | Missing | P0 | round-trip, locale, Unicode |
 | JP-016 | Precision strategies | double only | P1 | decimal, rational, large/small |
-| JP-017 | Quantity arithmetic and comparison | Partial | P0 | mixed scale, incompatible, NaN |
+| JP-017 | Quantity arithmetic and comparison | Partial: 25 real quantity differential fixtures; Number precision/inverse/unit identity remain open | P0 | mixed scale, incompatible, NaN |
 | JP-018 | Typed quantity interfaces | Partial electrical types | P0 | generic typed operations |
 | JP-019 | Dimension vs semantic kind | Missing systematic kind model | P0 | torque vs energy |
 | JP-020 | Unit systems and discovery | Missing | P1 | SI and custom registries |
@@ -33,9 +33,9 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-025 | Offset unit algebra safeguards | Partial warning only | P0 | reject °C multiplication |
 | JP-026 | Serialization interoperability | Missing | P1 | JSON versioned round-trip |
 | JP-027 | UnitsNet adapters | Missing | P0 | bidirectional loss accounting |
-| JP-028 | Java reference conformance corpus | Missing | P0 | independent fixtures |
+| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 48 real Java/.NET fixtures and exact pinned TCK runner | P0 | independent fixtures |
 | JP-029 | Documentation and examples | Partial XML docs | P1 | DocFX and examples |
-| JP-030 | .NET 10 CI proof | Workflow present, unverified | P0 | passing Linux/Windows/macOS |
+| JP-030 | .NET 10 CI proof | Workflow present, unverified | P0 | passing Ubuntu/Windows |
 
 ## Electrical engineering extensions beyond Java parity
 
@@ -61,3 +61,5 @@ Each requirement closes only after: implementation; documented acceptance criter
 - UnitsNet: https://github.com/angularsen/UnitsNet
 
 This is a functional capability inventory, not a claim that every Java method or overload has been exhaustively mapped. API-by-API inventory and pinned version conformance fixtures remain an open verification task.
+
+Quantity assertion review and execution evidence: [matrix](../conformance/quantity-interface-review.md), [results](../conformance/evidence/quantity-2026-10-20.md). These updates do not close JP-009, JP-017 or JP-028.

@@ -6,7 +6,7 @@ Canonical inventory: [Java parity gap analysis](java-parity-gap-analysis.md). JP
 - Stable requirement ID and acceptance criteria
 - Implementation path and commit SHA
 - xUnit test identifiers, including positive, negative, and boundary/round-trip tests where applicable
-- CI workflow URL showing tests passing on Linux, Windows and macOS
+- CI workflow URL showing tests passing on Ubuntu and Windows
 - XML API documentation and DocFX documentation link
 - Explicit reviewer approval and status CLOSED
 

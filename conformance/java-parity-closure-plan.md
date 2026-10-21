@@ -8,11 +8,13 @@ Pinned upstream TCK: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde9
 
 The inventory contains **113 annotation occurrences** in 16 Java classes. Two setup annotations both have upstream ID `Setup` and are internally distinguished as `Setup-1` and `Setup-2`. These are not 113 independently verified .NET assertions.
 
-The closure ledger currently records 83 GAP, 11 PARTIAL_BEHAVIORAL_MAPPING, 5 IMPLEMENTED_UNVERIFIED, and 14 CI_PASS_BEHAVIORAL_REVIEW_PENDING; **0 VERIFIED**.
+The closure ledger currently records 47 GAP, 16 PARTIAL_BEHAVIORAL_MAPPING, and 50 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
 
 The pinned Java TCK run has succeeded (112 Surefire tests); the separate cross-language fixture runner has succeeded. Neither establishes full SharpUnits conformance: normalized differential fixtures are not a one-to-one substitute for the official assertion corpus.
 
 ## Required next actions, in order
+
+The handoff supersedes the historical order below: QuantityInterfaceTest is first. See [the assertion review](quantity-interface-review.md).
 
 1. **UnitDimensionTest (7 annotations):** Review each pinned Java method and its fixture; record exact behavior, source method and corresponding xUnit test. Execute Java reference and C# equivalent, attach CI run and mark VERIFIED only when all expected behavior matches.
 2. **UnitConversionTest (10):** Repeat with affine conversion, inverse, identity, linearity, concatenation and conversion steps. Do not close `convert(Number)` using only a `double` test.
@@ -29,7 +31,7 @@ A ledger entry can be `VERIFIED` only when it has: exact upstream assertion ID a
 
 - Every inventory occurrence has a disposition and an auditable rationale.
 - No unreviewed gaps are represented as complete.
-- Core supported equivalents pass .NET 10 on Linux/Windows/macOS and match pinned Java reference cases.
+- Core supported equivalents pass .NET 10 on Ubuntu/Windows and match pinned Java reference cases.
 - Remaining intentional incompatibilities are documented as explicit adapter requirements.
 
 See `conformance/tck-closure-ledger.json` and `conformance/verification-protocol.md`.

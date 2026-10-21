@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
-  "policy": "CI_PASS_BEHAVIORAL_REVIEW_PENDING confirms the linked xUnit test passed on three operating systems, not full JSR 385 TCK equivalence. VERIFIED requires upstream assertion review and Java reference evidence.",
+  "policy": "Ubuntu and Windows CI are required; macOS is disabled. VERIFIED requires exact assertion review, Java execution, passing .NET CI and reviewer/date. CLR analogues do not establish Java API identity.",
   "totalAssertions": 113,
   "entries": [
     {
@@ -129,7 +129,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I01_431A1_AsType",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityCastAsType",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A2",
@@ -137,7 +144,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I02_431A2_Equals",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityEquals",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A3",
@@ -145,7 +159,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I03_431A3_GetScale",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityGetScale",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A4",
@@ -153,7 +174,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I04_431A4_GetUnit",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityGetUnit",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A5",
@@ -161,7 +189,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I05_431A5_GetValue",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityGetValue",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A6",
@@ -169,7 +204,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I06_431A6_HashCode",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityHashCode",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A7",
@@ -177,7 +219,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I07_431A7_Equivalent",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityIsEquivalentTo",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A8",
@@ -185,7 +234,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I08_431A8_Inverse",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp0Inverse",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4311-A1",
@@ -193,7 +249,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I09_4311A1_Add",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp1Add",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4311-A4",
@@ -201,7 +264,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp1MultiplyByNumber",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4311-A5",
@@ -209,7 +279,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I11_4311A5_DivideNumber",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp1DivideByNumber",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4311-A6",
@@ -217,7 +294,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I12_4311A6_Subtract",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp1Subtract",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4312-A1",
@@ -225,7 +309,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I13_4312A1_DivideQuantity",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp2Divide",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "4312-A2",
@@ -233,7 +324,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp2Multiply",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A9",
@@ -241,7 +339,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I15_431A9_To",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityOp0To",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "431-A10",
@@ -249,7 +354,14 @@
       "status": "PARTIAL_BEHAVIORAL_MAPPING",
       "test": "QuantityParitySurfaceTests.I16_431A10_Comparable",
       "evidence": null,
-      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED."
+      "reviewNote": "Assertion-specific CLR reflection analogue plus 34 behavioral tests. Java Number, Class-based asType, quantity scale, unit identity and affine semantics are not yet demonstrated equivalent; do not mark VERIFIED.",
+      "sourceMethod": "testQuantityIsComparable",
+      "reviewDate": "2026-10-20",
+      "reviewer": "Codex (source and executable differential review; independent human review pending)",
+      "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
+      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
+      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
     },
     {
       "id": "44-A1",

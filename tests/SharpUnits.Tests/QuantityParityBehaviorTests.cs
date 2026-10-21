@@ -66,9 +66,9 @@ public sealed class QuantityParityBehaviorTests
  {
   Assert.Equal(.75,Q(1,"A").Subtract(Q(250,"mA")).Value,10);
  }
- [Fact] public void I32_SubtractAffineProducesDifference()
+ [Fact] public void I32_SubtractAffineRetainsAbsoluteScale()
  {
-  var d=Q(100,"°C").Subtract(Q(20,"°C")); Assert.Equal(JavaQuantityScale.Relative,d.Scale); Assert.Equal(80,d.Value,9);
+  var d=Q(100,"°C").Subtract(Q(20,"°C")); Assert.Equal(JavaQuantityScale.Absolute,d.Scale); Assert.Equal(-193.15,d.Value,9);
  }
  [Fact] public void I33_MultiplyElectrical()
  {
@@ -102,17 +102,17 @@ public sealed class QuantityParityBehaviorTests
  {
   Assert.Throws<DivideByZeroException>(()=>Q(6,"A").Divide((IConvertible)0m));
  }
- [Fact] public void I41_AffineAbsoluteScalarRejected()
+ [Fact] public void I41_AffineAbsoluteScalarUsesSystemValue()
  {
-  Assert.Throws<InvalidOperationException>(()=>Q(20,"°C").Multiply((IConvertible)2m));
+  Assert.Equal(313.15,Q(20,"°C").Multiply((IConvertible)2m).Value,9);
  }
  [Fact] public void I42_KelvinScalarAllowed()
  {
   Assert.Equal(600,Q(300,"K").Multiply((IConvertible)2m).Value,10);
  }
- [Fact] public void I43_AbsoluteAffineAdditionRejected()
+ [Fact] public void I43_AbsoluteAffineAdditionUsesSystemValues()
  {
-  Assert.Throws<InvalidOperationException>(()=>Q(20,"°C").Add(Q(10,"°C")));
+  Assert.Equal(303.15,Q(20,"°C").Add(Q(10,"°C")).Value,9);
  }
  [Fact] public void I44_NonfiniteValueRejected()
  {

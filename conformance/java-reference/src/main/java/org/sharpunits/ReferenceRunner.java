@@ -6,9 +6,35 @@ import java.io.File;
 import javax.measure.Unit;
 import tech.units.indriya.unit.Units;
 import javax.measure.MetricPrefix;
+import javax.measure.Quantity;
+import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
+  // Raw types are confined to the dynamic fixture boundary; Indriya checks unit compatibility.
+  @SuppressWarnings({"rawtypes", "unchecked"})
+  private static Object quantityResult(JsonNode test) {
+    Quantity left = Quantities.getQuantity(test.path("value").asDouble(), unit(test.path("from").asText()),
+        Quantity.Scale.valueOf(test.path("scale").asText("ABSOLUTE")));
+    Quantity right = Quantities.getQuantity(test.path("rhsValue").asDouble(), unit(test.path("to").asText()),
+        Quantity.Scale.valueOf(test.path("rhsScale").asText("ABSOLUTE")));
+    String operation = test.path("operation").asText();
+    if (operation.equals("quantityCompare")) return Integer.signum(((Comparable)left).compareTo(right));
+    if (operation.equals("quantityEquivalent")) return left.isEquivalentTo(right);
+    if (operation.equals("quantityEquals")) return left.equals(right);
+    Quantity result = switch (operation) {
+      case "quantityAdd" -> left.add(right);
+      case "quantitySubtract" -> left.subtract(right);
+      case "quantityMultiply" -> left.multiply(right);
+      case "quantityDivide" -> left.divide(right);
+      case "quantityScalarMultiply" -> left.multiply(test.path("rhsValue").asDouble());
+      case "quantityScalarDivide" -> left.divide(test.path("rhsValue").asDouble());
+      case "quantityTo" -> left.to(unit(test.path("to").asText()));
+      default -> throw new IllegalArgumentException("Unsupported quantity operation: " + operation);
+    };
+    if (test.path("observe").asText().equals("scale")) return result.getScale().name();
+    return result.to(unit(test.path("resultUnit").asText())).getValue().doubleValue();
+  }
   private static Unit<?> unit(String symbol) {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
@@ -34,25 +60,15 @@ public final class ReferenceRunner {
       String to=test.path("to").asText();
       try {
         String operation=test.path("operation").asText();
+        if (operation.startsWith("quantity")) {
+          Object result = quantityResult(test);
+          System.out.println(mapper.writeValueAsString(java.util.Map.of("id", id, "result", result,
+              "absoluteTolerance", test.path("absoluteTolerance").asDouble(0))));
+          continue;
+        }
         double result;
         if(operation.equals("convert")) {
           result=unit(from).getConverterToAny(unit(to)).convert(test.path("value").asDouble());
-        } else if(operation.equals("quantityMultiply") || operation.equals("quantityDivide")) {
-          Unit<?> lhs=unit(from);
-          Unit<?> rhs=unit(to);
-          Unit<?> expression=operation.equals("quantityMultiply")?lhs.multiply(rhs):lhs.divide(rhs);
-          double magnitude=operation.equals("quantityMultiply")
-            ?test.path("value").asDouble()*test.path("rhsValue").asDouble()
-            :test.path("value").asDouble()/test.path("rhsValue").asDouble();
-          result=expression.getConverterToAny(unit(test.path("resultUnit").asText())).convert(magnitude);
-        } else if(operation.equals("quantityAdd") || operation.equals("quantitySubtract")) {
-          Unit<?> sourceUnit=unit(from);
-          Unit<?> targetUnit=unit(to);
-          double lhs=test.path("value").asDouble();
-          double rhs=test.path("rhsValue").asDouble();
-          double convertedRhs=targetUnit.getConverterToAny(sourceUnit).convert(rhs);
-          double sum=operation.equals("quantityAdd")?lhs+convertedRhs:lhs-convertedRhs;
-          result=sourceUnit.getConverterToAny(unit(test.path("resultUnit").asText())).convert(sum);
         } else if(operation.equals("multiply")) {
           Unit<?> product=unit(from).multiply(unit(to));
           Unit<?> resultUnit=unit(test.path("resultUnit").asText());
@@ -72,6 +88,9 @@ public final class ReferenceRunner {
         } else throw new IllegalArgumentException("Unsupported operation");
         System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"result",result)));
       } catch(javax.measure.IncommensurableException ex) {
+        System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","INCOMPATIBLE_DIMENSION")));
+      } catch(javax.measure.UnconvertibleException ex) {
+        if (!(ex.getCause() instanceof javax.measure.IncommensurableException)) throw ex;
         System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"error","INCOMPATIBLE_DIMENSION")));
       }
     }
