@@ -13,7 +13,7 @@ import tech.units.indriya.quantity.Quantities;
 public final class ReferenceRunner {
   // Raw types are confined to the dynamic fixture boundary; Indriya checks unit compatibility.
   @SuppressWarnings({"rawtypes", "unchecked"})
-  private static Object quantityResult(JsonNode test) {
+  private static Object quantityResult(JsonNode test) throws javax.measure.IncommensurableException {
     Quantity left = Quantities.getQuantity(test.path("value").asDouble(), unit(test.path("from").asText()),
         Quantity.Scale.valueOf(test.path("scale").asText("ABSOLUTE")));
     Quantity right = Quantities.getQuantity(test.path("rhsValue").asDouble(), unit(test.path("to").asText()),
@@ -30,9 +30,12 @@ public final class ReferenceRunner {
       case "quantityScalarMultiply" -> left.multiply(test.path("rhsValue").asDouble());
       case "quantityScalarDivide" -> left.divide(test.path("rhsValue").asDouble());
       case "quantityTo" -> left.to(unit(test.path("to").asText()));
+      case "quantityInverse" -> left.inverse();
       default -> throw new IllegalArgumentException("Unsupported quantity operation: " + operation);
     };
     if (test.path("observe").asText().equals("scale")) return result.getScale().name();
+    if (test.path("observe").asText().equals("magnitude")) return result.getValue().doubleValue();
+    if (test.path("observe").asText().equals("unitScale")) return result.getUnit().getConverterToAny(result.getUnit().getSystemUnit()).convert(1.0);
     return result.to(unit(test.path("resultUnit").asText())).getValue().doubleValue();
   }
   private static Unit<?> unit(String symbol) {

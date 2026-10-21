@@ -111,13 +111,17 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   var result=divide?value.SiValue/factor:value.SiValue*factor;
   return new(new Quantity(result,value.RationalDimension),unit,Scale);
  }
- /// <summary>Returns the multiplicative inverse of a linear quantity.</summary>
+ /// <summary>Returns the inverse of a linear quantity, retaining scale and reciprocal display-unit factor.</summary>
+ /// <remarks>For example, 250 mA becomes 0.004 (1/mA), whose coherent magnitude is 4 (1/A).
+ /// Affine unit inversion is not supported.</remarks>
  public JavaQuantityAdapter Inverse()
  {
   RequireLinearAlgebra(this);
   if(value.SiValue==0)throw new DivideByZeroException();
   var result=new Quantity(1d/value.SiValue,RationalDimension.From(Dimension.None)-value.RationalDimension);
-  return new(result,DerivedUnit(result.RationalDimension),JavaQuantityScale.Relative);
+  var reciprocalUnit=new UnitDefinition($"1/({unit.Symbol})",result.RationalDimension,
+   UnitConversion.Linear(1d/unit.Converter.Scale));
+  return new(result,reciprocalUnit,Scale);
  }
  /// <summary>Compares display values after converting the right operand to this unit, as Indriya does.</summary>
  public int CompareTo(JavaQuantityAdapter? other)

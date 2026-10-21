@@ -239,9 +239,9 @@
       "reviewDate": "2026-10-20",
       "reviewer": "Codex (source and executable differential review; independent human review pending)",
       "expectedSemantics": "See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.",
-      "javaEvidence": "conformance/evidence/quantity-2026-10-20.md (112 pinned TCK tests; 48 real Java fixtures)",
-      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture",
-      "limitations": "CLR analogue only; see assertion-specific API and behavioral limitations in conformance/quantity-interface-review.md. New CI evidence pending."
+      "javaEvidence": "conformance/evidence/quantity-inverse-results.json",
+      "behaviorTests": "QuantityReferenceFixtureTests.MatchesIndriyaQuantityFixture (Q-inverse-milliampere-*; six cases)",
+      "limitations": "Linear inverse scale and reciprocal unit factor reconciled; affine inverse and normalized unit identity remain partial. CLR surface adaptation."
     },
     {
       "id": "4311-A1",

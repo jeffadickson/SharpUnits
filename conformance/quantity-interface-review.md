@@ -27,7 +27,7 @@ compiler bridge methods. Our CLR tests do not imply that those Java signatures e
 | 431-A5 | testQuantityGetValue | public getValue() / I05 Value | double is not arbitrary Java Number |
 | 431-A6 | testQuantityHashCode | `int hashCode()` / I06 GetHashCode() | Equal objects hash equally; Java numeric hash algorithm/identity not reproduced |
 | 431-A7 | testQuantityIsEquivalentTo | public isEquivalentTo / I07 IsEquivalentTo(adapter) | Null/incompatible dimensions return false in CLR; numeric precision limited |
-| 431-A8 | testQuantityOp0Inverse | public inverse() / I08 Inverse() | Inverse still emits relative scale and SI placeholder unit; affine inverse unsupported |
+| 431-A8 | testQuantityOp0Inverse | public inverse() / I08 Inverse() | Linear inverse preserves scale and reciprocal unit factor; affine inverse unsupported; symbol/identity normalization remains partial |
 | 431-A9 | testQuantityOp0To | `Quantity to(Unit)` / I15 To(UnitDefinition) | Affine double conversions supported; Number precision and non-affine converters absent |
 | 431-A10 | testQuantityIsComparable | Comparable assignability / I16 IComparable | CLR null sorts first; Java null comparison throws; double precision only |
 | 4311-A1 | testQuantityOp1Add | `Quantity add(Quantity)` / I09 Add | Affine and mixed-scale behavior corrected; arbitrary precision absent |
@@ -47,6 +47,10 @@ yield absolute scale. `AbstractQuantity.compareTo` compares in the left unit,
 converting the right quantity according to its own scale. `isEquivalentTo` delegates
 to comparison, rather than comparing scale enums.
 
+Linear inverse was subsequently challenged with six cases: `250 mA` yields
+`0.004 (1/mA)` and preserves absolute/relative scale. Five failures were corrected;
+see [inverse evidence](evidence/quantity-inverse-results.json).
+
 These semantics can be surprising for temperatures. Absolute `20 °C + 10 °C` is
 `303.15 °C`; absolute `100 °C - 20 °C` is `-193.15 °C`, still absolute. The Java
 adapter now matches these behaviors. The dedicated temperature and core Quantity
@@ -61,7 +65,7 @@ electrical cases. It no longer synthesizes Java quantity results with unit arith
 The .NET runner invokes `JavaQuantityAdapter` rather than core `Quantity` operators.
 The same quantity fixtures execute as xUnit theories on Windows and Ubuntu.
 
-Before any further closure: fix inverse scale/representation, challenge compound
+Before any further closure: challenge affine inverse and compound
 unit identity, numeric precision/equality, typed casts and nonnumeric scalar inputs.
 Retain partial status until the exact remaining API adaptations have an accepted
 disposition and independent review. Formatting/factory/provider work follows this gate.

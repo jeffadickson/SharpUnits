@@ -514,6 +514,72 @@
       "expected": "ABSOLUTE",
       "absoluteTolerance": 1e-10,
       "observe": "scale"
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-magnitude",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 0.004,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-unitScale",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "unitScale",
+      "expected": 1000,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-scale",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-magnitude",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 0.004,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-unitScale",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "RELATIVE",
+      "observe": "unitScale",
+      "expected": 1000,
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-scale",
+      "operation": "quantityInverse",
+      "value": 250,
+      "from": "mA",
+      "to": "mA",
+      "scale": "RELATIVE",
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 1e-10
     }
   ]
 }

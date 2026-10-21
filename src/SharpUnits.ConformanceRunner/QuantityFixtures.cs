@@ -25,10 +25,15 @@ internal static class QuantityFixtures
             "quantityScalarMultiply" => left.Multiply((IConvertible)rhs.GetDouble()),
             "quantityScalarDivide" => left.Divide((IConvertible)rhs.GetDouble()),
             "quantityTo" => left.To(registry.Resolve(Text("to"))),
+            "quantityInverse" => left.Inverse(),
             _ => throw new NotSupportedException(operation)
         };
-        if (test.TryGetProperty("observe", out var observe) && observe.GetString() == "scale")
-            return result.Scale.ToString().ToUpperInvariant();
+        if (test.TryGetProperty("observe", out var observe))
+        {
+            if (observe.GetString() == "scale") return result.Scale.ToString().ToUpperInvariant();
+            if (observe.GetString() == "magnitude") return result.Value;
+            if (observe.GetString() == "unitScale") return result.Unit.Converter.ToSi(1);
+        }
         return result.To(registry.Resolve(Text("resultUnit"))).Value;
     }
 }
