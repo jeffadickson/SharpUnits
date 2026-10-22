@@ -33,7 +33,7 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-025 | Offset unit algebra safeguards | Partial: RationalUnitExpression rejects affine products; Java quantity adapter converts affine operands to SI | P0 | reject °C multiplication |
 | JP-026 | Serialization interoperability | Missing | P1 | JSON versioned round-trip |
 | JP-027 | UnitsNet adapters | Missing | P0 | bidirectional loss accounting |
-| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 208 shared fixtures, including 20 API admission probes; exact pinned TCK runner | P0 | independent fixtures |
+| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 258 shared fixtures, including 50 actual provider factory cases and 20 API admission probes; exact pinned TCK runner | P0 | independent fixtures |
 | JP-029 | Documentation and examples | Partial XML docs | P1 | DocFX and examples |
 | JP-030 | .NET 10 CI proof | GitHub workflows disabled by user; local .NET 10 checks do not provide new Ubuntu/Windows CI proof | P0 | passing Ubuntu/Windows |
 
@@ -67,3 +67,8 @@ Quantity assertion review and execution evidence: [matrix](../conformance/quanti
 The [second fifty-iteration review](../conformance/quantity-second-fifty-review.md) records local-only results after GitHub CI was disabled. Internal rational evaluation does not close JP-016 or establish full Java Number semantics.
 
 The [third fifty-scenario review](../conformance/quantity-third-fifty-review.md) records local inverse/scalar, exact standard Fahrenheit, unit-identity and division-admissibility results. GitHub CI remains disabled and no new formal closure is claimed.
+
+The [factory fifty-scenario review](../conformance/factory-fifty-review.md) adds a
+scale-preserving factory API, corrects signed-zero construction, and reconciles
+stale capability descriptions against current source. `51-A2` is a partial CLR
+behavioral mapping; service discovery, Java generic types and CI remain open.

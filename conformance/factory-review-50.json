@@ -776,81 +776,181 @@
       "iteration": 41,
       "case": "F50-41",
       "hypothesis": "Factory retains the exact supplied m unit object (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-41",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-41",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 42,
       "case": "F50-42",
       "hypothesis": "Factory retains the exact supplied mm unit object (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-42",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-42",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 43,
       "case": "F50-43",
       "hypothesis": "Factory retains the exact supplied A unit object (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-43",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-43",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 44,
       "case": "F50-44",
       "hypothesis": "Factory retains the exact supplied mA unit object (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-44",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-44",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 45,
       "case": "F50-45",
       "hypothesis": "Factory retains the exact supplied V unit object (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-45",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-45",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 46,
       "case": "F50-46",
       "hypothesis": "Factory retains the exact supplied mV unit object (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-46",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-46",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 47,
       "case": "F50-47",
       "hypothesis": "Factory retains the exact supplied \u03a9 unit object (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-47",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-47",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 48,
       "case": "F50-48",
       "hypothesis": "Factory retains the exact supplied k\u03a9 unit object (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-48",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-48",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 49,
       "case": "F50-49",
       "hypothesis": "Factory retains the exact supplied \u00b0C unit object (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-49",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-49",
+        "result": true
+      },
+      "exactOutput": true
     },
     {
       "iteration": 50,
       "case": "F50-50",
       "hypothesis": "Factory retains the exact supplied \u00b0F unit object (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "id": "F50-50",
+        "result": true,
+        "absoluteTolerance": 0.0
+      },
+      "dotnet": {
+        "id": "F50-50",
+        "result": true
+      },
+      "exactOutput": true
     }
   ],
   "checkpoints": [
@@ -889,6 +989,56 @@
       "mismatches": 0,
       "buildLogSha256": "71a2d6008c9cf3c5fb83d734deb658e00f6c0edf5e4890efa9cd9df0a0096a1c",
       "testLogSha256": "8ebaf8cd80486bc82274ceb24bcc6c450a209edc9e73ffed7293ec7d3beb2f98"
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 625,
+      "differentialCases": 258,
+      "mismatches": 0,
+      "buildLogSha256": "f5126eaa3c6f2f111ff73361b8375012f2ba25d8d224f1e19b5c7ac01c54d72f",
+      "testLogSha256": "aedbd8927b66cf228864d2a10cebcb143bf130d21b79903fe9c5e662743dc3ac"
     }
-  ]
+  ],
+  "javaTck": {
+    "tests": "112",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "factoryMethods": [
+      "testQuantityFactoryExists",
+      "testQuantityFactoryScale"
+    ]
+  },
+  "sourcePins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "fileSha256": {
+    "src/SharpUnits/QuantityFactory.cs": "7cafa1b69e8a049643d21b562c04bffe866ad196e58056f376c21e6eae8e0713",
+    "src/SharpUnits/JavaQuantityAdapter.cs": "dbc19f8f16f4d77dc8070e5dbf671a735a09c63ace6dd4efe4174d9d00872b47",
+    "src/SharpUnits.ConformanceRunner/FactoryFixtures.cs": "a5cd5fce77737157fb77e2d35b7c66c7ed50f564c77019a5537826fc3f6d53d3",
+    "conformance/java-reference/src/main/java/org/sharpunits/ReferenceRunner.java": "340b6fb008523a2c71381faa34dbd00f1a01597ce77e5189c76d5d861e66ac65",
+    "conformance/java-reference/cases.json": "1df7883537691aa984e4d78b3861d2ee4e4cb551c03941d16c4b4b2f73fb5dc4",
+    "tests/SharpUnits.Tests/FactoryReferenceFixtureTests.cs": "ad7aee14e912959333b5e410c3e86d2876b8c26994182eef5d084b1c6376203d",
+    "upstream/indriya/src/main/java/tech/units/indriya/function/DefaultNumberSystem.java": "af634be6084fe90a7b4618b0226d7eb20dd7eff1c17313a4987045d95480eb38",
+    "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java": "23a923ddfecd93beaf122cc76389f3cfe1d18ab0f29db2b0d4fa2e5e98ef7f31"
+  },
+  "additionalChecks": {
+    "pythonComparatorTests": 10,
+    "fractionOracleCases": 200,
+    "fractionOracleMismatches": 0,
+    "formalClosures": 0,
+    "newPartialMappings": [
+      "51-A2"
+    ],
+    "githubWorkflows": "disabled_manually"
+  }
 }

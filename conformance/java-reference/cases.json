@@ -2780,6 +2780,116 @@
       "observe": "scale",
       "expected": "ABSOLUTE",
       "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-41",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied m unit object (absolute)",
+      "from": "m",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-42",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied mm unit object (relative)",
+      "from": "mm",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-43",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied A unit object (absolute)",
+      "from": "A",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-44",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied mA unit object (relative)",
+      "from": "mA",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-45",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied V unit object (absolute)",
+      "from": "V",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-46",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied mV unit object (relative)",
+      "from": "mV",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-47",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied Ω unit object (absolute)",
+      "from": "Ω",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-48",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied kΩ unit object (relative)",
+      "from": "kΩ",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-49",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied °C unit object (absolute)",
+      "from": "°C",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-50",
+      "operation": "factoryCreate",
+      "description": "Factory retains the exact supplied °F unit object (relative)",
+      "from": "°F",
+      "value": 0.123,
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
     }
   ]
 }

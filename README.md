@@ -27,6 +27,9 @@ For temperatures, see [absolute values, intervals, and shifted units](docs/tempe
 The dedicated temperature types enforce physical arithmetic rules; `JavaQuantityAdapter`
 follows Indriya's compatibility conventions.
 
+`IJavaQuantityFactory.CreateJavaQuantity` creates quantities retaining their display
+unit and absolute/relative scale. See the [factory review and examples](conformance/factory-fifty-review.md).
+
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
