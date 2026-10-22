@@ -1,0 +1,6 @@
+{
+  "startingCommit": "9065fe8",
+  "ciPolicy": "GitHub CI remains disabled; local .NET 10 and pinned Java evidence only",
+  "reviews": [],
+  "checkpoints": []
+}
