@@ -186,81 +186,231 @@
       "iteration": 11,
       "case": "F50-11",
       "hypothesis": "Retain supplied double 0.123 mm (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-11",
+        "result": 0.123
+      },
+      "dotnet": {
+        "id": "F50-11",
+        "result": 0.123
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-11",
+        "result": 0.123
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 12,
       "case": "F50-12",
       "hypothesis": "Retain supplied double 0.29 mA (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-12",
+        "result": 0.29
+      },
+      "dotnet": {
+        "id": "F50-12",
+        "result": 0.29
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-12",
+        "result": 0.29
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 13,
       "case": "F50-13",
       "hypothesis": "Retain supplied double 1e-20 mV (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-13",
+        "result": 1e-20
+      },
+      "dotnet": {
+        "id": "F50-13",
+        "result": 1e-20
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-13",
+        "result": 1e-20
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 14,
       "case": "F50-14",
       "hypothesis": "Retain supplied double 1e+200 k\u03a9 (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-14",
+        "result": 1e+200
+      },
+      "dotnet": {
+        "id": "F50-14",
+        "result": 1e+200
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-14",
+        "result": 1e+200
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 15,
       "case": "F50-15",
       "hypothesis": "Retain supplied double 1e-20 \u00b0C (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-15",
+        "result": 1e-20
+      },
+      "dotnet": {
+        "id": "F50-15",
+        "result": 1e-20
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-15",
+        "result": 1e-20
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 16,
       "case": "F50-16",
       "hypothesis": "Retain supplied double 0.123 \u00b0F (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-16",
+        "result": 0.123
+      },
+      "dotnet": {
+        "id": "F50-16",
+        "result": 0.123
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-16",
+        "result": 0.123
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 17,
       "case": "F50-17",
-      "hypothesis": "Retain supplied double -0.0 m (absolute)",
-      "status": "PENDING",
-      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "hypothesis": "Canonicalize negative zero to positive zero during construction",
+      "status": "CASE_MATCHED",
+      "source": "DefaultQuantityFactory.create; NumberQuantity constructor; Calculator; DefaultNumberSystem.narrow",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-17",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F50-17",
+        "result": false
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-17",
+        "result": true
+      },
+      "originalMismatch": true
     },
     {
       "iteration": 18,
       "case": "F50-18",
-      "hypothesis": "Retain supplied double -0.0 V (relative)",
-      "status": "PENDING",
-      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "hypothesis": "Canonicalize negative zero to positive zero during construction",
+      "status": "CASE_MATCHED",
+      "source": "DefaultQuantityFactory.create; NumberQuantity constructor; Calculator; DefaultNumberSystem.narrow",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-18",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F50-18",
+        "result": false
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-18",
+        "result": true
+      },
+      "originalMismatch": true
     },
     {
       "iteration": 19,
       "case": "F50-19",
       "hypothesis": "Retain supplied double 5e-324 1 (absolute)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-19",
+        "result": 5e-324
+      },
+      "dotnet": {
+        "id": "F50-19",
+        "result": 5e-324
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-19",
+        "result": 5e-324
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 20,
       "case": "F50-20",
       "hypothesis": "Retain supplied double -123.456 A (relative)",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-20",
+        "result": -123.456
+      },
+      "dotnet": {
+        "id": "F50-20",
+        "result": -123.456
+      },
+      "exactOutput": true,
+      "dotnetBeforeCorrection": {
+        "id": "F50-20",
+        "result": -123.456
+      },
+      "originalMismatch": false
     },
     {
       "iteration": 21,
@@ -512,6 +662,15 @@
       "mismatches": 0,
       "buildLogSha256": "fa68b20912d097113d3afbc2478744b9039a7cd03dbec5e44af09ea212931761",
       "testLogSha256": "6422c851359c2b8236d7cdf4f650eb3875b00c0e8d2dbb24a684b159e90d3e8d"
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 595,
+      "differentialCases": 228,
+      "mismatches": 0,
+      "buildLogSha256": "eb5c716e2116c6485a8ad19edfc4eeda6fe8a559d5571cab13212bf7c2fde5b0",
+      "testLogSha256": "dfcb0a9110f2be5ca4d26c3223ef75cdcc0f559cca6f8d5dfa7b483c1fdcb0e7"
     }
   ]
 }

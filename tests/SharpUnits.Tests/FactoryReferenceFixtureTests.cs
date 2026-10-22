@@ -52,4 +52,13 @@ public sealed class FactoryReferenceFixtureTests
         Assert.Throws<ArgumentOutOfRangeException>(()=>factory.CreateJavaQuantity(double.PositiveInfinity,"A"));
         Assert.Throws<ArgumentOutOfRangeException>(()=>factory.CreateJavaQuantity(1,"A",(JavaQuantityScale)99));
     }
+
+    [Theory]
+    [InlineData("A",JavaQuantityScale.Absolute)]
+    [InlineData("°C",JavaQuantityScale.Relative)]
+    public void AdapterCanonicalizesNegativeZeroLikeIndriya(string symbol,JavaQuantityScale scale)
+    {
+        var quantity=new JavaQuantityAdapter(-0.0,UnitRegistry.CreateStandard().Resolve(symbol),scale);
+        Assert.Equal(0L,BitConverter.DoubleToInt64Bits(quantity.Value));
+    }
 }

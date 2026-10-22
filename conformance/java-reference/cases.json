@@ -2450,6 +2450,116 @@
       "expected": "RELATIVE",
       "absoluteTolerance": 0,
       "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-11",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 0.123 mm (absolute)",
+      "from": "mm",
+      "value": 0.123,
+      "observe": "magnitude",
+      "expected": 0.123,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-12",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 0.29 mA (relative)",
+      "from": "mA",
+      "value": 0.29,
+      "observe": "magnitude",
+      "expected": 0.29,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-13",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 1e-20 mV (absolute)",
+      "from": "mV",
+      "value": 1e-20,
+      "observe": "magnitude",
+      "expected": 1e-20,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-14",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 1e+200 kΩ (relative)",
+      "from": "kΩ",
+      "value": 1e+200,
+      "observe": "magnitude",
+      "expected": 1e+200,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-15",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 1e-20 °C (absolute)",
+      "from": "°C",
+      "value": 1e-20,
+      "observe": "magnitude",
+      "expected": 1e-20,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-16",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 0.123 °F (relative)",
+      "from": "°F",
+      "value": 0.123,
+      "observe": "magnitude",
+      "expected": 0.123,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-17",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double -0.0 m (absolute)",
+      "from": "m",
+      "value": -0.0,
+      "observe": "negativeZero",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-18",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double -0.0 V (relative)",
+      "from": "V",
+      "value": -0.0,
+      "observe": "negativeZero",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-19",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double 5e-324 1 (absolute)",
+      "from": "1",
+      "value": 5e-324,
+      "observe": "magnitude",
+      "expected": 5e-324,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-20",
+      "operation": "factoryCreate",
+      "description": "Retain supplied double -123.456 A (relative)",
+      "from": "A",
+      "value": -123.456,
+      "observe": "magnitude",
+      "expected": -123.456,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
     }
   ]
 }

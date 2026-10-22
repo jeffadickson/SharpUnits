@@ -28,7 +28,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public JavaQuantityScale Scale {get;}
  /// <summary>Display unit.</summary>
  public UnitDefinition Unit=>unit;
- /// <summary>Magnitude expressed in the display unit, retaining the supplied double representation.</summary>
+ /// <summary>Magnitude expressed in the display unit, with signed zero normalized to positive zero.</summary>
  public double Value=>displayMagnitude;
  /// <summary>Coherent SI representation in double precision.</summary>
  /// <remarks>Scaling and offsets may round or underflow independently of the retained display magnitude.
@@ -39,7 +39,8 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  {
   var coherent=ToCoherent(magnitude,unit,scale);
   if(!double.IsFinite(coherent.SiValue))throw new ArgumentOutOfRangeException(nameof(magnitude),"Coherent representation must be finite.");
-  value=coherent;this.unit=unit;Scale=scale;displayMagnitude=magnitude;
+  // Pinned Indriya NumberQuantity uses Calculator's number narrowing, which canonicalizes zero.
+  value=coherent;this.unit=unit;Scale=scale;displayMagnitude=magnitude==0?0:magnitude;
  }
  private static Quantity ToCoherent(double magnitude,UnitDefinition unit,JavaQuantityScale scale)
  {
