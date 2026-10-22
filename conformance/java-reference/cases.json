@@ -1768,6 +1768,116 @@
       "observe": "magnitude",
       "expected": 1.7e-100,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-01",
+      "operation": "quantityInverse",
+      "value": 0.123,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 8.130081300813009,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-02",
+      "operation": "quantityInverse",
+      "value": 0.29,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 3.4482758620689653,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-03",
+      "operation": "quantityInverse",
+      "value": 0.7,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 1.4285714285714286,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-04",
+      "operation": "quantityInverse",
+      "value": 0.3,
+      "from": "A",
+      "to": "A",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 3.3333333333333335,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-05",
+      "operation": "quantityInverse",
+      "value": -0.123,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": -8.130081300813009,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-06",
+      "operation": "quantityInverse",
+      "value": 1e-300,
+      "from": "mA",
+      "to": "mA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 1e+300,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-07",
+      "operation": "quantityInverse",
+      "value": 1e-200,
+      "from": "mA",
+      "to": "mA",
+      "scale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 1e+200,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-08",
+      "operation": "quantityInverse",
+      "value": 1e+200,
+      "from": "kΩ",
+      "to": "kΩ",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 1e-200,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-09",
+      "operation": "quantityInverse",
+      "value": 0.17,
+      "from": "kΩ",
+      "to": "kΩ",
+      "scale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 5.882352941176471,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-10",
+      "operation": "quantityInverse",
+      "value": 0.11,
+      "from": "quarterA",
+      "to": "quarterA",
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 9.090909090909092,
+      "absoluteTolerance": 0
     }
   ]
 }

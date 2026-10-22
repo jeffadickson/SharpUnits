@@ -8,6 +8,7 @@ namespace SharpUnits;
 /// Java MathContext rounding, numeric type identity and converter rational coefficients remain separate concerns.</remarks>
 internal static class JavaDoubleArithmetic
 {
+    internal static double Reciprocal(double magnitude)=>ToDouble(new Rational(1,1)/Fraction(magnitude));
     internal static double Convert(double magnitude,UnitConversion source,UnitConversion target,bool relative)
     {
         var coherent=Fraction(magnitude)*Fraction(source.Scale);

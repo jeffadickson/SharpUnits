@@ -1,6 +1,225 @@
 {
   "startingCommit": "9065fe8",
   "ciPolicy": "GitHub CI remains disabled; local .NET 10 and pinned Java evidence only",
-  "reviews": [],
-  "checkpoints": []
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q150-01",
+      "hypothesis": "Inverse preserves decimal reciprocal of .123 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-01",
+        "result": 8.130081300813009
+      },
+      "dotnetBefore": {
+        "id": "Q150-01",
+        "result": 8.130081300813007
+      },
+      "dotnetAfter": {
+        "id": "Q150-01",
+        "result": 8.130081300813009
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q150-02",
+      "hypothesis": "Inverse preserves decimal reciprocal of .29 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-02",
+        "result": 3.4482758620689653
+      },
+      "dotnetBefore": {
+        "id": "Q150-02",
+        "result": 3.4482758620689657
+      },
+      "dotnetAfter": {
+        "id": "Q150-02",
+        "result": 3.4482758620689653
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q150-03",
+      "hypothesis": "Inverse preserves decimal reciprocal of .7 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "dotnetBefore": {
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "dotnetAfter": {
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 4,
+      "case": "Q150-04",
+      "hypothesis": "Inverse preserves decimal reciprocal of .3 A (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "dotnetBefore": {
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "dotnetAfter": {
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 5,
+      "case": "Q150-05",
+      "hypothesis": "Inverse preserves decimal reciprocal of -.123 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-05",
+        "result": -8.130081300813009
+      },
+      "dotnetBefore": {
+        "id": "Q150-05",
+        "result": -8.130081300813007
+      },
+      "dotnetAfter": {
+        "id": "Q150-05",
+        "result": -8.130081300813009
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 6,
+      "case": "Q150-06",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e-300 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-06",
+        "result": 1e+300
+      },
+      "dotnetBefore": {
+        "id": "Q150-06",
+        "result": 9.999999999999999e+299
+      },
+      "dotnetAfter": {
+        "id": "Q150-06",
+        "result": 1e+300
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 7,
+      "case": "Q150-07",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e-200 mA (relative) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "dotnetBefore": {
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "dotnetAfter": {
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 8,
+      "case": "Q150-08",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e200 k\u03a9 (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "dotnetBefore": {
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "dotnetAfter": {
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 9,
+      "case": "Q150-09",
+      "hypothesis": "Inverse preserves decimal reciprocal of .17 k\u03a9 (relative) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-09",
+        "result": 5.882352941176471
+      },
+      "dotnetBefore": {
+        "id": "Q150-09",
+        "result": 5.88235294117647
+      },
+      "dotnetAfter": {
+        "id": "Q150-09",
+        "result": 5.882352941176471
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q150-10",
+      "hypothesis": "Inverse preserves decimal reciprocal of .11 quarterA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "dotnetBefore": {
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "dotnetAfter": {
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "originalMismatch": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 531,
+      "differentialCases": 168,
+      "mismatches": 0
+    }
+  ]
 }
