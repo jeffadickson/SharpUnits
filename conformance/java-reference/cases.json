@@ -2560,6 +2560,126 @@
       "expected": -123.456,
       "absoluteTolerance": 0,
       "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-21",
+      "operation": "factoryCreate",
+      "description": "Factory relative 10 °C converts to K",
+      "from": "°C",
+      "value": 10,
+      "observe": "converted",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE",
+      "to": "K"
+    },
+    {
+      "id": "F50-22",
+      "operation": "factoryCreate",
+      "description": "Factory absolute 10 °C converts to K",
+      "from": "°C",
+      "value": 10,
+      "observe": "converted",
+      "expected": 283.15,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE",
+      "to": "K"
+    },
+    {
+      "id": "F50-23",
+      "operation": "factoryCreate",
+      "description": "Factory relative 18 °F converts to K",
+      "from": "°F",
+      "value": 18,
+      "observe": "converted",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE",
+      "to": "K"
+    },
+    {
+      "id": "F50-24",
+      "operation": "factoryCreate",
+      "description": "Factory absolute 32 °F converts to K",
+      "from": "°F",
+      "value": 32,
+      "observe": "converted",
+      "expected": 273.15,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE",
+      "to": "K"
+    },
+    {
+      "id": "F50-25",
+      "operation": "factoryCreate",
+      "description": "Factory absolute 0 K converts to °C",
+      "from": "K",
+      "value": 0,
+      "observe": "converted",
+      "expected": -273.15,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE",
+      "to": "°C"
+    },
+    {
+      "id": "F50-26",
+      "operation": "factoryCreate",
+      "description": "Factory relative 10 K converts to °C",
+      "from": "K",
+      "value": 10,
+      "observe": "converted",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE",
+      "to": "°C"
+    },
+    {
+      "id": "F50-27",
+      "operation": "factoryCreate",
+      "description": "Factory relative 123 mm converts to m",
+      "from": "mm",
+      "value": 123,
+      "observe": "converted",
+      "expected": 0.123,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE",
+      "to": "m"
+    },
+    {
+      "id": "F50-28",
+      "operation": "factoryCreate",
+      "description": "Factory absolute 290 mA converts to A",
+      "from": "mA",
+      "value": 290,
+      "observe": "converted",
+      "expected": 0.29,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE",
+      "to": "A"
+    },
+    {
+      "id": "F50-29",
+      "operation": "factoryCreate",
+      "description": "Factory relative 0.125 kΩ converts to Ω",
+      "from": "kΩ",
+      "value": 0.125,
+      "observe": "converted",
+      "expected": 125,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE",
+      "to": "Ω"
+    },
+    {
+      "id": "F50-30",
+      "operation": "factoryCreate",
+      "description": "Factory absolute 125 mV converts to V",
+      "from": "mV",
+      "value": 125,
+      "observe": "converted",
+      "expected": 0.125,
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE",
+      "to": "V"
     }
   ]
 }

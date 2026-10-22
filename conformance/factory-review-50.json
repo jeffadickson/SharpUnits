@@ -416,81 +416,181 @@
       "iteration": 21,
       "case": "F50-21",
       "hypothesis": "Factory relative 10 \u00b0C converts to K",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 10.0,
+        "id": "F50-21"
+      },
+      "dotnet": {
+        "id": "F50-21",
+        "result": 10
+      },
+      "exactOutput": true
     },
     {
       "iteration": 22,
       "case": "F50-22",
       "hypothesis": "Factory absolute 10 \u00b0C converts to K",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 283.15,
+        "id": "F50-22"
+      },
+      "dotnet": {
+        "id": "F50-22",
+        "result": 283.15
+      },
+      "exactOutput": true
     },
     {
       "iteration": 23,
       "case": "F50-23",
       "hypothesis": "Factory relative 18 \u00b0F converts to K",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 10.0,
+        "id": "F50-23"
+      },
+      "dotnet": {
+        "id": "F50-23",
+        "result": 10
+      },
+      "exactOutput": true
     },
     {
       "iteration": 24,
       "case": "F50-24",
       "hypothesis": "Factory absolute 32 \u00b0F converts to K",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 273.15,
+        "id": "F50-24"
+      },
+      "dotnet": {
+        "id": "F50-24",
+        "result": 273.15
+      },
+      "exactOutput": true
     },
     {
       "iteration": 25,
       "case": "F50-25",
       "hypothesis": "Factory absolute 0 K converts to \u00b0C",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": -273.15,
+        "id": "F50-25"
+      },
+      "dotnet": {
+        "id": "F50-25",
+        "result": -273.15
+      },
+      "exactOutput": true
     },
     {
       "iteration": 26,
       "case": "F50-26",
       "hypothesis": "Factory relative 10 K converts to \u00b0C",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 10.0,
+        "id": "F50-26"
+      },
+      "dotnet": {
+        "id": "F50-26",
+        "result": 10
+      },
+      "exactOutput": true
     },
     {
       "iteration": 27,
       "case": "F50-27",
       "hypothesis": "Factory relative 123 mm converts to m",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 0.123,
+        "id": "F50-27"
+      },
+      "dotnet": {
+        "id": "F50-27",
+        "result": 0.123
+      },
+      "exactOutput": true
     },
     {
       "iteration": 28,
       "case": "F50-28",
       "hypothesis": "Factory absolute 290 mA converts to A",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 0.29,
+        "id": "F50-28"
+      },
+      "dotnet": {
+        "id": "F50-28",
+        "result": 0.29
+      },
+      "exactOutput": true
     },
     {
       "iteration": 29,
       "case": "F50-29",
       "hypothesis": "Factory relative 0.125 k\u03a9 converts to \u03a9",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 125.0,
+        "id": "F50-29"
+      },
+      "dotnet": {
+        "id": "F50-29",
+        "result": 125
+      },
+      "exactOutput": true
     },
     {
       "iteration": 30,
       "case": "F50-30",
       "hypothesis": "Factory absolute 125 mV converts to V",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "result": 0.125,
+        "id": "F50-30"
+      },
+      "dotnet": {
+        "id": "F50-30",
+        "result": 0.125
+      },
+      "exactOutput": true
     },
     {
       "iteration": 31,
@@ -671,6 +771,15 @@
       "mismatches": 0,
       "buildLogSha256": "eb5c716e2116c6485a8ad19edfc4eeda6fe8a559d5571cab13212bf7c2fde5b0",
       "testLogSha256": "dfcb0a9110f2be5ca4d26c3223ef75cdcc0f559cca6f8d5dfa7b483c1fdcb0e7"
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 605,
+      "differentialCases": 238,
+      "mismatches": 0,
+      "buildLogSha256": "40660c69ca758e8c09a49108ccfd352ca1fbcd214d02d49a3a236c355b168253",
+      "testLogSha256": "bd947cda90f9ea74f2fd34837ccc4c63a33f73d31306e86153c9527614221d1c"
     }
   ]
 }

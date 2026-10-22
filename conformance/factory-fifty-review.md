@@ -23,6 +23,26 @@ Source review: pinned `upstream/unit-tck/.../spi/QuantityFactoryTest.java` and
 delegate to `Quantities.getQuantity`). Numeric coverage is limited to double;
 this work does not establish arbitrary Java Number precision.
 
+## Factory usage and temperature semantics
+
+```csharp
+var registry = UnitRegistry.CreateStandard();
+IJavaQuantityFactory factory = new QuantityFactory(registry);
+var absolute = factory.CreateJavaQuantity(10, "°C"); // 283.15 K
+var interval = factory.CreateJavaQuantity(10, "°C", JavaQuantityScale.Relative); // 10 K interval
+```
+
+Both quantities retain magnitude 10 and the registered Celsius unit object. The
+two-argument overload defaults to absolute. The existing `IQuantityFactory.Create`
+still returns a coherent SI-only `Quantity`; it cannot represent scale identity.
+Use the dedicated temperature types to enforce physical temperature arithmetic.
+
+Construction canonicalizes signed zero, matching pinned Indriya's
+`NumberQuantity -> Calculator -> DefaultNumberSystem.narrow` path. Two shared
+scenarios initially failed because the adapter retained negative zero. Their
+before/after outputs are retained in the machine-readable review. Small nonzero
+display values remain intact even when their coherent representation rounds.
+
 ## Checkpoints
 
 Pending execution. No assertions are formally verified by this review.
