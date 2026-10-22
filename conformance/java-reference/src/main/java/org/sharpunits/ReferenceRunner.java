@@ -65,11 +65,13 @@ public final class ReferenceRunner {
     if (test.path("observe").asText().equals("scale")) return result.getScale().name();
     if (test.path("observe").asText().equals("magnitude")) return result.getValue().doubleValue();
     if (test.path("observe").asText().equals("unitScale")) return result.getUnit().getConverterToAny(result.getUnit().getSystemUnit()).convert(1.0);
+    if (test.path("observe").asText().equals("unitEquals")) return result.getUnit().equals(unit(test.path("resultUnit").asText()));
     return result.to(unit(test.path("resultUnit").asText())).getValue().doubleValue();
   }
   private static Unit<?> unit(String symbol) {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
+      case "1" -> tech.units.indriya.AbstractUnit.ONE;
       case "mA" -> MetricPrefix.MILLI(Units.AMPERE);
       case "quarterA" -> Units.AMPERE.divide(4);
       case "eighthA" -> Units.AMPERE.divide(8);

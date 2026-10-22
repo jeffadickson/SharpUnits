@@ -34,6 +34,10 @@ internal static class QuantityFixtures
         string Text(string name) => test.GetProperty(name).GetString()!;
         UnitDefinition Resolve(string symbol) => symbol switch
         {
+            "1" => new(symbol,Dimension.None,UnitConversion.Linear(1)),
+            "A²" => new(symbol,registry.Resolve("A").RationalDimension.Pow(2),UnitConversion.Linear(1)),
+            "V²" => new(symbol,registry.Resolve("V").RationalDimension.Pow(2),UnitConversion.Linear(1)),
+            "Ω²" => new(symbol,registry.Resolve("Ω").RationalDimension.Pow(2),UnitConversion.Linear(1)),
             "quarterA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.25)),
             "eighthA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(.125)),
             "largeA" => new(symbol,registry.Resolve("A").RationalDimension,UnitConversion.Linear(1e200)),
@@ -83,6 +87,7 @@ internal static class QuantityFixtures
             if (observe.GetString() == "scale") return result.Scale.ToString().ToUpperInvariant();
             if (observe.GetString() == "magnitude") return result.Value;
             if (observe.GetString() == "unitScale") return result.Unit.Converter.ToSi(1);
+            if (observe.GetString() == "unitEquals") return result.Unit.Equals(Resolve(Text("resultUnit")));
         }
         return result.To(Resolve(Text("resultUnit"))).Value;
     }

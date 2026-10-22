@@ -631,6 +631,216 @@
         "result": 523.67
       },
       "originalMismatch": false
+    },
+    {
+      "iteration": 31,
+      "case": "Q150-31",
+      "hypothesis": "A Divide A result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-31",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-31",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-31",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q150-32",
+      "hypothesis": "V Divide V result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-32",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-32",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-32",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q150-33",
+      "hypothesis": "\u03a9 Divide \u03a9 result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-33",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-33",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-33",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q150-34",
+      "hypothesis": "K Divide K result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-34",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-34",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-34",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q150-35",
+      "hypothesis": "mA Divide mA result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-35",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-35",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-35",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 36,
+      "case": "Q150-36",
+      "hypothesis": "k\u03a9 Divide k\u03a9 result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-36",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-36",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-36",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 37,
+      "case": "Q150-37",
+      "hypothesis": "A Multiply A result unit equality against A\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-37",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-37",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-37",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 38,
+      "case": "Q150-38",
+      "hypothesis": "V Multiply V result unit equality against V\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-38",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-38",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-38",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 39,
+      "case": "Q150-39",
+      "hypothesis": "\u03a9 Multiply \u03a9 result unit equality against \u03a9\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-39",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-39",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-39",
+        "result": true
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 40,
+      "case": "Q150-40",
+      "hypothesis": "A Multiply \u03a9 result unit equality against V, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "Q150-40",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-40",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-40",
+        "result": false
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -653,6 +863,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 551,
       "differentialCases": 188,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 561,
+      "differentialCases": 198,
       "mismatches": 0
     }
   ]

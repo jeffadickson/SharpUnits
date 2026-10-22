@@ -112,7 +112,10 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(divide&&right.Magnitude==0)throw new DivideByZeroException();
   var dimension=divide?unit.RationalDimension-other.unit.RationalDimension:unit.RationalDimension+other.unit.RationalDimension;
   var factor=divide?left.Unit.Converter.Scale/right.Unit.Converter.Scale:left.Unit.Converter.Scale*right.Unit.Converter.Scale;
-  var symbol=$"({left.Unit.Symbol}{(divide?"/":"*")}{right.Unit.Symbol})";
+  var sameUnit=left.Unit.Equals(right.Unit);
+  var symbol=sameUnit
+   ?divide?"1":$"{left.Unit.Symbol}²"
+   :$"({left.Unit.Symbol}{(divide?"/":"*")}{right.Unit.Symbol})";
   var resultUnit=new UnitDefinition(symbol,dimension,UnitConversion.Linear(factor));
   return new(divide?left.Magnitude/right.Magnitude:left.Magnitude*right.Magnitude,resultUnit,JavaQuantityScale.Absolute);
  }

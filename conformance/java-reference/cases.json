@@ -2110,6 +2110,126 @@
       "observe": "magnitude",
       "expected": 523.67,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-31",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-32",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "V",
+      "to": "V",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-33",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "Ω",
+      "to": "Ω",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-34",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "K",
+      "to": "K",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-35",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-36",
+      "operation": "quantityDivide",
+      "value": 2,
+      "from": "kΩ",
+      "to": "kΩ",
+      "rhsValue": 2,
+      "resultUnit": "1",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-37",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 2,
+      "resultUnit": "A²",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-38",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "V",
+      "to": "V",
+      "rhsValue": 2,
+      "resultUnit": "V²",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-39",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "Ω",
+      "to": "Ω",
+      "rhsValue": 2,
+      "resultUnit": "Ω²",
+      "observe": "unitEquals",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-40",
+      "operation": "quantityMultiply",
+      "value": 2,
+      "from": "A",
+      "to": "Ω",
+      "rhsValue": 2,
+      "resultUnit": "V",
+      "observe": "unitEquals",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }
