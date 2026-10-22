@@ -596,81 +596,181 @@
       "iteration": 31,
       "case": "F50-31",
       "hypothesis": "Two-argument factory defaults to absolute for m",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-31",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-31",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 32,
       "case": "F50-32",
       "hypothesis": "Two-argument factory defaults to absolute for mm",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-32",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-32",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 33,
       "case": "F50-33",
       "hypothesis": "Two-argument factory defaults to absolute for A",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-33",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-33",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 34,
       "case": "F50-34",
       "hypothesis": "Two-argument factory defaults to absolute for mA",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-34",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-34",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 35,
       "case": "F50-35",
       "hypothesis": "Two-argument factory defaults to absolute for V",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-35",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-35",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 36,
       "case": "F50-36",
       "hypothesis": "Two-argument factory defaults to absolute for mV",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-36",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-36",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 37,
       "case": "F50-37",
       "hypothesis": "Two-argument factory defaults to absolute for \u03a9",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-37",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-37",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 38,
       "case": "F50-38",
       "hypothesis": "Two-argument factory defaults to absolute for k\u03a9",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-38",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-38",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 39,
       "case": "F50-39",
       "hypothesis": "Two-argument factory defaults to absolute for \u00b0C",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-39",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-39",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 40,
       "case": "F50-40",
       "hypothesis": "Two-argument factory defaults to absolute for \u00b0F",
-      "status": "PENDING",
+      "status": "CASE_MATCHED",
       "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
-      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-40",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-40",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
     },
     {
       "iteration": 41,
@@ -780,6 +880,15 @@
       "mismatches": 0,
       "buildLogSha256": "40660c69ca758e8c09a49108ccfd352ca1fbcd214d02d49a3a236c355b168253",
       "testLogSha256": "bd947cda90f9ea74f2fd34837ccc4c63a33f73d31306e86153c9527614221d1c"
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 615,
+      "differentialCases": 248,
+      "mismatches": 0,
+      "buildLogSha256": "71a2d6008c9cf3c5fb83d734deb658e00f6c0edf5e4890efa9cd9df0a0096a1c",
+      "testLogSha256": "8ebaf8cd80486bc82274ceb24bcc6c450a209edc9e73ffed7293ec7d3beb2f98"
     }
   ]
 }

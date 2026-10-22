@@ -2680,6 +2680,106 @@
       "absoluteTolerance": 0,
       "scale": "ABSOLUTE",
       "to": "V"
+    },
+    {
+      "id": "F50-31",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for m",
+      "from": "m",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-32",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for mm",
+      "from": "mm",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-33",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for A",
+      "from": "A",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-34",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for mA",
+      "from": "mA",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-35",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for V",
+      "from": "V",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-36",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for mV",
+      "from": "mV",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-37",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for Ω",
+      "from": "Ω",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-38",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for kΩ",
+      "from": "kΩ",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-39",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for °C",
+      "from": "°C",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-40",
+      "operation": "factoryCreateDefault",
+      "description": "Two-argument factory defaults to absolute for °F",
+      "from": "°F",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
     }
   ]
 }
