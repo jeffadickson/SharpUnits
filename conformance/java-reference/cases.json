@@ -1878,6 +1878,126 @@
       "observe": "magnitude",
       "expected": 9.090909090909092,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-11",
+      "operation": "quantityScalarDivide",
+      "value": 0.7,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 0.23333333333333334,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-12",
+      "operation": "quantityScalarDivide",
+      "value": -0.7,
+      "from": "A",
+      "to": "A",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": -0.23333333333333334,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-13",
+      "operation": "quantityScalarDivide",
+      "value": 0.1,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 0.03333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-14",
+      "operation": "quantityScalarDivide",
+      "value": 0.3,
+      "from": "mA",
+      "to": "mA",
+      "rhsValue": 7.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 0.04285714285714286,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-15",
+      "operation": "quantityScalarDivide",
+      "value": 20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": -175.4,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-16",
+      "operation": "quantityScalarDivide",
+      "value": -20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": -188.8,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-17",
+      "operation": "quantityScalarDivide",
+      "value": 20.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 3.0,
+      "scale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 6.7,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-18",
+      "operation": "quantityScalarDivide",
+      "value": 0.1,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 10.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": -245.825,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-19",
+      "operation": "quantityScalarDivide",
+      "value": 0.7,
+      "from": "°C",
+      "to": "°C",
+      "rhsValue": 3.0,
+      "scale": "RELATIVE",
+      "observe": "magnitude",
+      "expected": 0.23333333333333334,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-20",
+      "operation": "quantityScalarDivide",
+      "value": 0.7,
+      "from": "quarterA",
+      "to": "quarterA",
+      "rhsValue": 3.0,
+      "scale": "ABSOLUTE",
+      "observe": "magnitude",
+      "expected": 0.23333333333333334,
+      "absoluteTolerance": 0
     }
   ]
 }

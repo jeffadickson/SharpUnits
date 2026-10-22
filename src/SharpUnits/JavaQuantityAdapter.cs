@@ -152,10 +152,9 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(!double.IsFinite(factor))throw new ArgumentOutOfRangeException(nameof(factor));
   if(divide&&factor==0)throw new DivideByZeroException();
   if(factor==1)return this;
-  if(Scale==JavaQuantityScale.Relative||unit.Converter.IsLinear)
-   return new(divide?Value/factor:Value*factor,unit,Scale);
-  var result=divide?value.SiValue/factor:value.SiValue*factor;
-  return new(new Quantity(result,value.RationalDimension),unit,Scale);
+  if(divide||(Scale==JavaQuantityScale.Absolute&&!unit.Converter.IsLinear))
+   return new(JavaDoubleArithmetic.Scale(Value,factor,unit.Converter,Scale==JavaQuantityScale.Relative,divide),unit,Scale);
+  return new(Value*factor,unit,Scale);
  }
  /// <summary>Returns the inverse of a linear quantity, retaining scale and reciprocal display-unit factor.</summary>
  /// <remarks>For example, 250 mA becomes 0.004 (1/mA), whose coherent magnitude is 4 (1/A).

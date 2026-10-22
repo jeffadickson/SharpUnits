@@ -9,6 +9,15 @@ namespace SharpUnits;
 internal static class JavaDoubleArithmetic
 {
     internal static double Reciprocal(double magnitude)=>ToDouble(new Rational(1,1)/Fraction(magnitude));
+    internal static double Scale(double magnitude,double factor,UnitConversion converter,bool relative,bool divide)
+    {
+        var affine=!relative&&!converter.IsLinear;
+        var value=Fraction(magnitude);
+        if(affine)value=value*Fraction(converter.Scale)+Fraction(converter.Offset);
+        value=divide?value/Fraction(factor):value*Fraction(factor);
+        if(affine)value=(value-Fraction(converter.Offset))/Fraction(converter.Scale);
+        return ToDouble(value);
+    }
     internal static double Convert(double magnitude,UnitConversion source,UnitConversion target,bool relative)
     {
         var coherent=Fraction(magnitude)*Fraction(source.Scale);

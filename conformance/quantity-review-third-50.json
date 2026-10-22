@@ -211,6 +211,216 @@
         "result": 9.090909090909092
       },
       "originalMismatch": false
+    },
+    {
+      "iteration": 11,
+      "case": "Q150-11",
+      "hypothesis": "Scalar division of .7 A by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-11"
+      },
+      "dotnetBefore": {
+        "id": "Q150-11",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-11",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 12,
+      "case": "Q150-12",
+      "hypothesis": "Scalar division of -.7 A by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-12"
+      },
+      "dotnetBefore": {
+        "id": "Q150-12",
+        "result": -0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-12",
+        "result": -0.23333333333333334
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 13,
+      "case": "Q150-13",
+      "hypothesis": "Scalar division of .1 mA by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.03333333333333333,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-13"
+      },
+      "dotnetBefore": {
+        "id": "Q150-13",
+        "result": 0.03333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-13",
+        "result": 0.03333333333333333
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 14,
+      "case": "Q150-14",
+      "hypothesis": "Scalar division of .3 mA by 7 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.04285714285714286,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-14"
+      },
+      "dotnetBefore": {
+        "id": "Q150-14",
+        "result": 0.04285714285714286
+      },
+      "dotnetAfter": {
+        "id": "Q150-14",
+        "result": 0.04285714285714286
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 15,
+      "case": "Q150-15",
+      "hypothesis": "Scalar division of 20.1 \u00b0C by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -175.4,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-15"
+      },
+      "dotnetBefore": {
+        "id": "Q150-15",
+        "result": -175.39999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q150-15",
+        "result": -175.4
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 16,
+      "case": "Q150-16",
+      "hypothesis": "Scalar division of -20.1 \u00b0C by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -188.8,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-16"
+      },
+      "dotnetBefore": {
+        "id": "Q150-16",
+        "result": -188.79999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q150-16",
+        "result": -188.8
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 17,
+      "case": "Q150-17",
+      "hypothesis": "Scalar division of 20.1 \u00b0C by 3 preserves decimal promotion and relative semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 6.7,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-17"
+      },
+      "dotnetBefore": {
+        "id": "Q150-17",
+        "result": 6.7
+      },
+      "dotnetAfter": {
+        "id": "Q150-17",
+        "result": 6.7
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 18,
+      "case": "Q150-18",
+      "hypothesis": "Scalar division of .1 \u00b0C by 10 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -245.825,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-18"
+      },
+      "dotnetBefore": {
+        "id": "Q150-18",
+        "result": -245.825
+      },
+      "dotnetAfter": {
+        "id": "Q150-18",
+        "result": -245.825
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 19,
+      "case": "Q150-19",
+      "hypothesis": "Scalar division of .7 \u00b0C by 3 preserves decimal promotion and relative semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-19"
+      },
+      "dotnetBefore": {
+        "id": "Q150-19",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-19",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 20,
+      "case": "Q150-20",
+      "hypothesis": "Scalar division of .7 quarterA by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-20"
+      },
+      "dotnetBefore": {
+        "id": "Q150-20",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-20",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true
     }
   ],
   "checkpoints": [
@@ -219,6 +429,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 531,
       "differentialCases": 168,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 541,
+      "differentialCases": 178,
       "mismatches": 0
     }
   ]
