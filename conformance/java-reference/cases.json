@@ -1998,6 +1998,118 @@
       "observe": "magnitude",
       "expected": 0.23333333333333334,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-21",
+      "operation": "quantityTo",
+      "value": 32,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-22",
+      "operation": "quantityTo",
+      "value": 68,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 20,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-23",
+      "operation": "quantityTo",
+      "value": 212,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-24",
+      "operation": "quantityTo",
+      "value": 0,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 32,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-25",
+      "operation": "quantityTo",
+      "value": 20,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 68,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-26",
+      "operation": "quantityTo",
+      "value": 100,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 212,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-27",
+      "operation": "quantityTo",
+      "value": 18,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q150-28",
+      "operation": "quantityTo",
+      "value": 10,
+      "from": "°C",
+      "to": "°F",
+      "rhsValue": 0,
+      "observe": "magnitude",
+      "expected": 18,
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "Q150-29",
+      "operation": "quantitySubtract",
+      "value": 68,
+      "from": "°F",
+      "to": "°C",
+      "rhsValue": 20,
+      "observe": "magnitude",
+      "expected": -459.67,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "Q150-30",
+      "operation": "quantityScalarMultiply",
+      "value": 32,
+      "from": "°F",
+      "to": "°F",
+      "rhsValue": 2,
+      "observe": "magnitude",
+      "expected": 523.67,
+      "absoluteTolerance": 0
     }
   ]
 }

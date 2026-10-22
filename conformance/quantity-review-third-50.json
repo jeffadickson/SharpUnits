@@ -421,6 +421,216 @@
         "result": 0.23333333333333334
       },
       "originalMismatch": true
+    },
+    {
+      "iteration": 21,
+      "case": "Q150-21",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-21",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-21",
+        "result": -2.08e-14
+      },
+      "dotnetAfter": {
+        "id": "Q150-21",
+        "result": 0
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 22,
+      "case": "Q150-22",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-22",
+        "result": 20.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-22",
+        "result": 19.999999999999982
+      },
+      "dotnetAfter": {
+        "id": "Q150-22",
+        "result": 20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 23,
+      "case": "Q150-23",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-23",
+        "result": 100.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-23",
+        "result": 99.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q150-23",
+        "result": 100
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 24,
+      "case": "Q150-24",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-24",
+        "result": 32.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-24",
+        "result": 32.000000000000036
+      },
+      "dotnetAfter": {
+        "id": "Q150-24",
+        "result": 32
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 25,
+      "case": "Q150-25",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-25",
+        "result": 68.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-25",
+        "result": 68.00000000000003
+      },
+      "dotnetAfter": {
+        "id": "Q150-25",
+        "result": 68
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 26,
+      "case": "Q150-26",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-26",
+        "result": 212.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-26",
+        "result": 212.00000000000003
+      },
+      "dotnetAfter": {
+        "id": "Q150-26",
+        "result": 212
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 27,
+      "case": "Q150-27",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-27",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-27",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q150-27",
+        "result": 10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 28,
+      "case": "Q150-28",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-28",
+        "result": 18.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-28",
+        "result": 18
+      },
+      "dotnetAfter": {
+        "id": "Q150-28",
+        "result": 18
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 29,
+      "case": "Q150-29",
+      "hypothesis": "Canonical Fahrenheit Subtract uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-29",
+        "result": -459.67
+      },
+      "dotnetBefore": {
+        "id": "Q150-29",
+        "result": -459.66999999999996
+      },
+      "dotnetAfter": {
+        "id": "Q150-29",
+        "result": -459.67
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 30,
+      "case": "Q150-30",
+      "hypothesis": "Canonical Fahrenheit ScalarMultiply uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "dotnetBefore": {
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "dotnetAfter": {
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "originalMismatch": false
     }
   ],
   "checkpoints": [
@@ -436,6 +646,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 541,
       "differentialCases": 178,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 551,
+      "differentialCases": 188,
       "mismatches": 0
     }
   ]

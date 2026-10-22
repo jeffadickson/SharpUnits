@@ -13,17 +13,24 @@ internal static class JavaDoubleArithmetic
     {
         var affine=!relative&&!converter.IsLinear;
         var value=Fraction(magnitude);
-        if(affine)value=value*Fraction(converter.Scale)+Fraction(converter.Offset);
+        if(affine)value=value*ScaleOf(converter)+OffsetOf(converter);
         value=divide?value/Fraction(factor):value*Fraction(factor);
-        if(affine)value=(value-Fraction(converter.Offset))/Fraction(converter.Scale);
+        if(affine)value=(value-OffsetOf(converter))/ScaleOf(converter);
         return ToDouble(value);
     }
     internal static double Convert(double magnitude,UnitConversion source,UnitConversion target,bool relative)
     {
-        var coherent=Fraction(magnitude)*Fraction(source.Scale);
-        if(!relative)coherent=coherent+Fraction(source.Offset)-Fraction(target.Offset);
-        return ToDouble(coherent/Fraction(target.Scale));
+        var coherent=Fraction(magnitude)*ScaleOf(source);
+        if(!relative)coherent=coherent+OffsetOf(source)-OffsetOf(target);
+        return ToDouble(coherent/ScaleOf(target));
     }
+    // Recognize the standard Fahrenheit converter's definition, rather than treating
+    // its public binary64 coefficients as exact rational metadata. Other user-defined
+    // converters retain the supplied round-trip decimal coefficients.
+    private static Rational ScaleOf(UnitConversion converter)=>converter==UnitConversion.Fahrenheit
+        ?new Rational(5,9):Fraction(converter.Scale);
+    private static Rational OffsetOf(UnitConversion converter)=>converter==UnitConversion.Fahrenheit
+        ?new Rational(45967,180):Fraction(converter.Offset);
 
     private static Rational Fraction(double value)
     {
@@ -56,13 +63,13 @@ internal static class JavaDoubleArithmetic
     internal static double Add(double left,double right,UnitConversion source,UnitConversion other,
         bool leftAbsolute,bool rightAbsolute,bool resultAbsolute,bool subtract)
     {
-        var a=Fraction(left)*Fraction(source.Scale);
-        var b=Fraction(right)*Fraction(other.Scale);
-        if(leftAbsolute)a+=Fraction(source.Offset);
-        if(rightAbsolute)b+=Fraction(other.Offset);
+        var a=Fraction(left)*ScaleOf(source);
+        var b=Fraction(right)*ScaleOf(other);
+        if(leftAbsolute)a+=OffsetOf(source);
+        if(rightAbsolute)b+=OffsetOf(other);
         var result=subtract?a-b:a+b;
-        if(resultAbsolute)result-=Fraction(source.Offset);
-        return ToDouble(result/Fraction(source.Scale));
+        if(resultAbsolute)result-=OffsetOf(source);
+        return ToDouble(result/ScaleOf(source));
     }
 
     private static (BigInteger Digits,int Exponent) Parts(double value)

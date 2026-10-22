@@ -34,26 +34,18 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  public Quantity SiQuantity=>value;
  /// <summary>Creates a quantity with the specified display unit.</summary>
  public JavaQuantityAdapter(double magnitude,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)
-  :this(ToCoherent(magnitude,unit,scale),unit,scale){displayMagnitude=magnitude;}
+ {
+  var coherent=ToCoherent(magnitude,unit,scale);
+  if(!double.IsFinite(coherent.SiValue))throw new ArgumentOutOfRangeException(nameof(magnitude),"Coherent representation must be finite.");
+  value=coherent;this.unit=unit;Scale=scale;displayMagnitude=magnitude;
+ }
  private static Quantity ToCoherent(double magnitude,UnitDefinition unit,JavaQuantityScale scale)
  {
   ArgumentNullException.ThrowIfNull(unit);
   if(!Enum.IsDefined(scale))throw new ArgumentOutOfRangeException(nameof(scale));
   if(!double.IsFinite(magnitude))throw new ArgumentOutOfRangeException(nameof(magnitude));
-  return scale==JavaQuantityScale.Relative
-   ?new Quantity(magnitude*unit.Converter.Scale,unit.RationalDimension)
-   :unit.ToQuantity(magnitude);
- }
- private JavaQuantityAdapter(Quantity coherent,UnitDefinition unit,JavaQuantityScale scale)
- {
-  ArgumentNullException.ThrowIfNull(unit);
-  if(!Enum.IsDefined(scale))throw new ArgumentOutOfRangeException(nameof(scale));
-  if(coherent.RationalDimension!=unit.RationalDimension)throw new InvalidOperationException("Quantity and unit dimensions differ.");
-  if(!double.IsFinite(coherent.SiValue))throw new ArgumentOutOfRangeException(nameof(coherent));
-  value=coherent;this.unit=unit;Scale=scale;
-  displayMagnitude=scale==JavaQuantityScale.Relative
-   ?coherent.SiValue/unit.Converter.Scale:unit.FromQuantity(coherent);
-  if(!double.IsFinite(Value))throw new ArgumentOutOfRangeException(nameof(coherent));
+  return new Quantity(JavaDoubleArithmetic.Convert(magnitude,unit.Converter,UnitConversion.Linear(1),
+   scale==JavaQuantityScale.Relative),unit.RationalDimension);
  }
  /// <summary>Converts to a compatible display unit, preserving the scale kind.</summary>
  public JavaQuantityAdapter To(UnitDefinition target)
