@@ -18,6 +18,11 @@ input restrictions, supported scalar boundaries, rational converter evaluation a
 decimal additive checks. Its evidence is local because GitHub CI is disabled.
 Two tiny Fahrenheit cases retain explicitly bounded rather than bit-exact agreement.
 
+The [third fifty-scenario review](quantity-third-fifty-review.md) adds direct
+inverse/scalar decimal evaluation, exact standard Fahrenheit coefficients, limited
+unit-identity normalization and direct scalar-division argument probes. Its local
+evidence does not advance formal VERIFIED status.
+
 ## Assertion matrix
 
 The xUnit identifiers below are in `QuantityParitySurfaceTests`. The tests now check

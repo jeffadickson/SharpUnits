@@ -205,7 +205,20 @@
         "Q50-14",
         "Q50-16"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-31",
+        "Q150-32",
+        "Q150-33",
+        "Q150-34",
+        "Q150-35",
+        "Q150-36",
+        "Q150-37",
+        "Q150-38",
+        "Q150-39",
+        "Q150-40"
+      ]
     },
     {
       "id": "431-A5",
@@ -297,7 +310,20 @@
         "Q50-39",
         "Q50-48"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-01",
+        "Q150-02",
+        "Q150-03",
+        "Q150-04",
+        "Q150-05",
+        "Q150-06",
+        "Q150-07",
+        "Q150-08",
+        "Q150-09",
+        "Q150-10"
+      ]
     },
     {
       "id": "4311-A1",
@@ -371,6 +397,10 @@
         "Q100-18",
         "Q100-19",
         "Q100-20"
+      ],
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-30"
       ]
     },
     {
@@ -397,7 +427,31 @@
       "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
       "secondReviewEvidence": "conformance/quantity-review-second-50.json (local only; GitHub CI disabled by user; no VERIFIED closure)",
       "secondReviewCases": [],
-      "secondReviewLimitation": "Scalar division shares the numeric input guard; new type probes invoke multiplication directly, not division."
+      "secondReviewLimitation": "Scalar division shares the numeric input guard; new type probes invoke multiplication directly, not division.",
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-11",
+        "Q150-12",
+        "Q150-13",
+        "Q150-14",
+        "Q150-15",
+        "Q150-16",
+        "Q150-17",
+        "Q150-18",
+        "Q150-19",
+        "Q150-20",
+        "Q150-41",
+        "Q150-42",
+        "Q150-43",
+        "Q150-44",
+        "Q150-45",
+        "Q150-46",
+        "Q150-47",
+        "Q150-48",
+        "Q150-49",
+        "Q150-50"
+      ],
+      "thirdReviewScope": "Actual Java scalar division for Q150-11..20; Number parameter admissibility against direct CLR Divide for Q150-41..50."
     },
     {
       "id": "4311-A6",
@@ -420,6 +474,10 @@
         "Q100-32",
         "Q100-39",
         "Q100-40"
+      ],
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-29"
       ]
     },
     {
@@ -446,7 +504,16 @@
         "Q50-49",
         "Q50-50"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-31",
+        "Q150-32",
+        "Q150-33",
+        "Q150-34",
+        "Q150-35",
+        "Q150-36"
+      ]
     },
     {
       "id": "4312-A2",
@@ -471,7 +538,14 @@
         "Q50-17",
         "Q50-19"
       ],
-      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)"
+      "iterationEvidence": "conformance/quantity-review-50.json (local and CI evidence for ba3f534; 50 scenarios; no formal assertion closure)",
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-37",
+        "Q150-38",
+        "Q150-39",
+        "Q150-40"
+      ]
     },
     {
       "id": "431-A9",
@@ -521,6 +595,17 @@
         "Q100-48",
         "Q100-49",
         "Q100-50"
+      ],
+      "thirdReviewEvidence": "conformance/quantity-review-third-50.json (local only; GitHub CI disabled; no VERIFIED closure)",
+      "thirdReviewCases": [
+        "Q150-21",
+        "Q150-22",
+        "Q150-23",
+        "Q150-24",
+        "Q150-25",
+        "Q150-26",
+        "Q150-27",
+        "Q150-28"
       ]
     },
     {

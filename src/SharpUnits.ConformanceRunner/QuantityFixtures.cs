@@ -52,10 +52,10 @@ internal static class QuantityFixtures
         var right = new JavaQuantityAdapter(test.TryGetProperty("rhsValue", out var rhs) ? rhs.GetDouble() : 0,
             Resolve(Text("to")), Scale("rhsScale"));
         var operation = Text("operation");
-        if(operation=="quantityAcceptsScalar")
+        if(operation is "quantityAcceptsScalar" or "quantityAcceptsScalarDivide")
         {
             var scalar=ScalarInput(test);
-            try { _=left.Multiply(scalar); return true; }
+            try { _=operation=="quantityAcceptsScalarDivide"?left.Divide(scalar):left.Multiply(scalar); return true; }
             catch(ArgumentException) { return false; }
             catch(InvalidCastException) { return false; }
         }

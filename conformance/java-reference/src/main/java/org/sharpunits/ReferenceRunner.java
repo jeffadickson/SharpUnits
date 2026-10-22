@@ -40,7 +40,8 @@ public final class ReferenceRunner {
         Quantity.Scale.valueOf(test.path("rhsScale").asText("ABSOLUTE")));
     String operation = test.path("operation").asText();
     // Tests Number parameter admissibility, not arithmetic on invalid Java arguments.
-    if (operation.equals("quantityAcceptsScalar")) return Number.class.isInstance(scalarInput(test));
+    if (operation.equals("quantityAcceptsScalar") || operation.equals("quantityAcceptsScalarDivide"))
+      return Number.class.isInstance(scalarInput(test));
     if (operation.equals("quantityCompare")) return Integer.signum(((Comparable)left).compareTo(right));
     if (operation.equals("quantityEquivalent")) return left.isEquivalentTo(right);
     if (operation.equals("quantityEquals")) return left.equals(right);

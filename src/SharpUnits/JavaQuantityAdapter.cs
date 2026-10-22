@@ -16,7 +16,9 @@ public enum JavaQuantityScale
 /// and <see cref="TemperatureDifference"/>. Two absolute Celsius operands are added in kelvin
 /// and converted back: 20 degrees Celsius plus 10 degrees Celsius yields 303.15 degrees Celsius
 /// (576.30 kelvin). For heating by ten degrees, mark the second operand
-/// <see cref="JavaQuantityScale.Relative"/>; the result is then 30 degrees Celsius.</remarks>
+/// <see cref="JavaQuantityScale.Relative"/>; the result is then 30 degrees Celsius.
+/// The standard Fahrenheit converter is evaluated using its defining 5/9 scale and 459.67-degree shift.
+/// Other converters use their supplied coefficients. This does not implement general Java Number precision.</remarks>
 public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComparable<JavaQuantityAdapter>
 {
  private readonly Quantity value;
@@ -95,12 +97,15 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   Scale==JavaQuantityScale.Relative&&other.Scale==JavaQuantityScale.Relative
    ?JavaQuantityScale.Relative:JavaQuantityScale.Absolute;
  /// <summary>Multiplies quantities, retaining linear display-unit factors and converting affine operands to SI.</summary>
+ /// <remarks>Identical A, V and ohm operands expose their squared-unit representation.
+ /// General compound-unit identity and normalization remain incomplete.</remarks>
  public JavaQuantityAdapter Multiply(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
   return Combine(other,false);
  }
  /// <summary>Divides quantities, retaining linear display-unit factors and converting affine operands to SI.</summary>
+ /// <remarks>Identical operand units cancel to the dimensionless unit representation.</remarks>
  public JavaQuantityAdapter Divide(JavaQuantityAdapter other)
  {
   ArgumentNullException.ThrowIfNull(other);
@@ -113,8 +118,8 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   var dimension=divide?unit.RationalDimension-other.unit.RationalDimension:unit.RationalDimension+other.unit.RationalDimension;
   var factor=divide?left.Unit.Converter.Scale/right.Unit.Converter.Scale:left.Unit.Converter.Scale*right.Unit.Converter.Scale;
   var sameUnit=left.Unit.Equals(right.Unit);
-  var symbol=sameUnit
-   ?divide?"1":$"{left.Unit.Symbol}²"
+  var knownSquare=sameUnit&&!divide&&left.Unit.Symbol is "A" or "V" or "Ω";
+  var symbol=sameUnit&&divide?"1":knownSquare?$"{left.Unit.Symbol}²"
    :$"({left.Unit.Symbol}{(divide?"/":"*")}{right.Unit.Symbol})";
   var resultUnit=new UnitDefinition(symbol,dimension,UnitConversion.Linear(factor));
   return new(divide?left.Magnitude/right.Magnitude:left.Magnitude*right.Magnitude,resultUnit,JavaQuantityScale.Absolute);
