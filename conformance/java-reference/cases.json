@@ -2340,6 +2340,116 @@
       "scalarValue": "1e2",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "F50-01",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains absolute scale for system unit m",
+      "from": "m",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-02",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains relative scale for system unit m",
+      "from": "m",
+      "value": 10,
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-03",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains absolute scale for system unit A",
+      "from": "A",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-04",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains relative scale for system unit A",
+      "from": "A",
+      "value": 10,
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-05",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains absolute scale for system unit V",
+      "from": "V",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-06",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains relative scale for system unit V",
+      "from": "V",
+      "value": 10,
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-07",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains absolute scale for system unit Ω",
+      "from": "Ω",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-08",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains relative scale for system unit Ω",
+      "from": "Ω",
+      "value": 10,
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
+    },
+    {
+      "id": "F50-09",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains absolute scale for system unit K",
+      "from": "K",
+      "value": 10,
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0,
+      "scale": "ABSOLUTE"
+    },
+    {
+      "id": "F50-10",
+      "operation": "factoryCreate",
+      "description": "Provider factory retains relative scale for system unit K",
+      "from": "K",
+      "value": 10,
+      "observe": "scale",
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "scale": "RELATIVE"
     }
   ]
 }

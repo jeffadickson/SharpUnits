@@ -1,0 +1,517 @@
+{
+  "startingCommit": "aff2374",
+  "ciPolicy": "Disabled by user; local evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "F50-01",
+      "hypothesis": "Provider factory retains absolute scale for system unit m",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-01",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-01",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 2,
+      "case": "F50-02",
+      "hypothesis": "Provider factory retains relative scale for system unit m",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-02",
+        "result": "RELATIVE"
+      },
+      "dotnet": {
+        "id": "F50-02",
+        "result": "RELATIVE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 3,
+      "case": "F50-03",
+      "hypothesis": "Provider factory retains absolute scale for system unit A",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-03",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-03",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 4,
+      "case": "F50-04",
+      "hypothesis": "Provider factory retains relative scale for system unit A",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-04",
+        "result": "RELATIVE"
+      },
+      "dotnet": {
+        "id": "F50-04",
+        "result": "RELATIVE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 5,
+      "case": "F50-05",
+      "hypothesis": "Provider factory retains absolute scale for system unit V",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-05",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-05",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 6,
+      "case": "F50-06",
+      "hypothesis": "Provider factory retains relative scale for system unit V",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-06",
+        "result": "RELATIVE"
+      },
+      "dotnet": {
+        "id": "F50-06",
+        "result": "RELATIVE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 7,
+      "case": "F50-07",
+      "hypothesis": "Provider factory retains absolute scale for system unit \u03a9",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-07",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-07",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 8,
+      "case": "F50-08",
+      "hypothesis": "Provider factory retains relative scale for system unit \u03a9",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-08",
+        "result": "RELATIVE"
+      },
+      "dotnet": {
+        "id": "F50-08",
+        "result": "RELATIVE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 9,
+      "case": "F50-09",
+      "hypothesis": "Provider factory retains absolute scale for system unit K",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-09",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "F50-09",
+        "result": "ABSOLUTE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 10,
+      "case": "F50-10",
+      "hypothesis": "Provider factory retains relative scale for system unit K",
+      "status": "CASE_MATCHED",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "F50-10",
+        "result": "RELATIVE"
+      },
+      "dotnet": {
+        "id": "F50-10",
+        "result": "RELATIVE"
+      },
+      "exactOutput": true
+    },
+    {
+      "iteration": 11,
+      "case": "F50-11",
+      "hypothesis": "Retain supplied double 0.123 mm (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 12,
+      "case": "F50-12",
+      "hypothesis": "Retain supplied double 0.29 mA (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 13,
+      "case": "F50-13",
+      "hypothesis": "Retain supplied double 1e-20 mV (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 14,
+      "case": "F50-14",
+      "hypothesis": "Retain supplied double 1e+200 k\u03a9 (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 15,
+      "case": "F50-15",
+      "hypothesis": "Retain supplied double 1e-20 \u00b0C (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 16,
+      "case": "F50-16",
+      "hypothesis": "Retain supplied double 0.123 \u00b0F (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 17,
+      "case": "F50-17",
+      "hypothesis": "Retain supplied double -0.0 m (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 18,
+      "case": "F50-18",
+      "hypothesis": "Retain supplied double -0.0 V (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 19,
+      "case": "F50-19",
+      "hypothesis": "Retain supplied double 5e-324 1 (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 20,
+      "case": "F50-20",
+      "hypothesis": "Retain supplied double -123.456 A (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 21,
+      "case": "F50-21",
+      "hypothesis": "Factory relative 10 \u00b0C converts to K",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 22,
+      "case": "F50-22",
+      "hypothesis": "Factory absolute 10 \u00b0C converts to K",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 23,
+      "case": "F50-23",
+      "hypothesis": "Factory relative 18 \u00b0F converts to K",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 24,
+      "case": "F50-24",
+      "hypothesis": "Factory absolute 32 \u00b0F converts to K",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 25,
+      "case": "F50-25",
+      "hypothesis": "Factory absolute 0 K converts to \u00b0C",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 26,
+      "case": "F50-26",
+      "hypothesis": "Factory relative 10 K converts to \u00b0C",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 27,
+      "case": "F50-27",
+      "hypothesis": "Factory relative 123 mm converts to m",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 28,
+      "case": "F50-28",
+      "hypothesis": "Factory absolute 290 mA converts to A",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 29,
+      "case": "F50-29",
+      "hypothesis": "Factory relative 0.125 k\u03a9 converts to \u03a9",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 30,
+      "case": "F50-30",
+      "hypothesis": "Factory absolute 125 mV converts to V",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 31,
+      "case": "F50-31",
+      "hypothesis": "Two-argument factory defaults to absolute for m",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 32,
+      "case": "F50-32",
+      "hypothesis": "Two-argument factory defaults to absolute for mm",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 33,
+      "case": "F50-33",
+      "hypothesis": "Two-argument factory defaults to absolute for A",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 34,
+      "case": "F50-34",
+      "hypothesis": "Two-argument factory defaults to absolute for mA",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 35,
+      "case": "F50-35",
+      "hypothesis": "Two-argument factory defaults to absolute for V",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 36,
+      "case": "F50-36",
+      "hypothesis": "Two-argument factory defaults to absolute for mV",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 37,
+      "case": "F50-37",
+      "hypothesis": "Two-argument factory defaults to absolute for \u03a9",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 38,
+      "case": "F50-38",
+      "hypothesis": "Two-argument factory defaults to absolute for k\u03a9",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 39,
+      "case": "F50-39",
+      "hypothesis": "Two-argument factory defaults to absolute for \u00b0C",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 40,
+      "case": "F50-40",
+      "hypothesis": "Two-argument factory defaults to absolute for \u00b0F",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 41,
+      "case": "F50-41",
+      "hypothesis": "Factory retains the exact supplied m unit object (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 42,
+      "case": "F50-42",
+      "hypothesis": "Factory retains the exact supplied mm unit object (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 43,
+      "case": "F50-43",
+      "hypothesis": "Factory retains the exact supplied A unit object (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 44,
+      "case": "F50-44",
+      "hypothesis": "Factory retains the exact supplied mA unit object (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 45,
+      "case": "F50-45",
+      "hypothesis": "Factory retains the exact supplied V unit object (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 46,
+      "case": "F50-46",
+      "hypothesis": "Factory retains the exact supplied mV unit object (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 47,
+      "case": "F50-47",
+      "hypothesis": "Factory retains the exact supplied \u03a9 unit object (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 48,
+      "case": "F50-48",
+      "hypothesis": "Factory retains the exact supplied k\u03a9 unit object (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 49,
+      "case": "F50-49",
+      "hypothesis": "Factory retains the exact supplied \u00b0C unit object (absolute)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    },
+    {
+      "iteration": 50,
+      "case": "F50-50",
+      "hypothesis": "Factory retains the exact supplied \u00b0F unit object (relative)",
+      "status": "PENDING",
+      "source": "QuantityFactoryTest.testQuantityFactoryScale; DefaultQuantityFactory.create",
+      "before": "API_ABSENT: IQuantityFactory.Create returns SI-only Quantity"
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 583,
+      "differentialCases": 218,
+      "mismatches": 0,
+      "buildLogSha256": "fa68b20912d097113d3afbc2478744b9039a7cd03dbec5e44af09ea212931761",
+      "testLogSha256": "6422c851359c2b8236d7cdf4f650eb3875b00c0e8d2dbb24a684b159e90d3e8d"
+    }
+  ]
+}

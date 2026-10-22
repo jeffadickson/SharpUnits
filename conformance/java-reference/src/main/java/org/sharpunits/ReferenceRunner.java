@@ -11,6 +11,33 @@ import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
+  /** Uses the installed service-provider factory, including its default-scale overload. */
+  @SuppressWarnings({"rawtypes", "unchecked"})
+  private static Object factoryResult(JsonNode test) {
+    String symbol = test.path("from").asText();
+    Unit source = unit(symbol);
+    Class type = switch (symbol) {
+      case "m", "mm" -> javax.measure.quantity.Length.class;
+      case "A", "mA" -> javax.measure.quantity.ElectricCurrent.class;
+      case "V", "mV" -> javax.measure.quantity.ElectricPotential.class;
+      case "Ω", "kΩ" -> javax.measure.quantity.ElectricResistance.class;
+      case "K", "°C", "°F" -> javax.measure.quantity.Temperature.class;
+      case "1" -> javax.measure.quantity.Dimensionless.class;
+      default -> throw new IllegalArgumentException("Unsupported factory unit");
+    };
+    javax.measure.spi.QuantityFactory factory = javax.measure.spi.ServiceProvider.current().getQuantityFactory(type);
+    Quantity result = test.path("operation").asText().equals("factoryCreateDefault")
+        ? factory.create(test.path("value").asDouble(), source)
+        : factory.create(test.path("value").asDouble(), source, Quantity.Scale.valueOf(test.path("scale").asText()));
+    return switch (test.path("observe").asText()) {
+      case "scale" -> result.getScale().name();
+      case "magnitude" -> result.getValue().doubleValue();
+      case "negativeZero" -> Double.doubleToRawLongBits(result.getValue().doubleValue()) == Long.MIN_VALUE;
+      case "unitEquals" -> result.getUnit() == source;
+      case "converted" -> result.to(unit(test.path("to").asText())).getValue().doubleValue();
+      default -> throw new IllegalArgumentException("Unknown factory observation");
+    };
+  }
   private static Object scalarInput(JsonNode test) {
     String value = test.path("scalarValue").asText();
     return switch(test.path("scalarKind").asText()) {
@@ -72,6 +99,9 @@ public final class ReferenceRunner {
   private static Unit<?> unit(String symbol) {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
+      case "m" -> Units.METRE;
+      case "mm" -> MetricPrefix.MILLI(Units.METRE);
+      case "mV" -> MetricPrefix.MILLI(Units.VOLT);
       case "1" -> tech.units.indriya.AbstractUnit.ONE;
       case "mA" -> MetricPrefix.MILLI(Units.AMPERE);
       case "quarterA" -> Units.AMPERE.divide(4);
@@ -100,6 +130,11 @@ public final class ReferenceRunner {
       String to=test.path("to").asText();
       try {
         String operation=test.path("operation").asText();
+        if (operation.startsWith("factory")) {
+          System.out.println(mapper.writeValueAsString(java.util.Map.of("id", id, "result", factoryResult(test),
+              "absoluteTolerance", test.path("absoluteTolerance").asDouble(0))));
+          continue;
+        }
         if (operation.startsWith("quantity")) {
           Object result = quantityResult(test);
           System.out.println(mapper.writeValueAsString(java.util.Map.of("id", id, "result", result,

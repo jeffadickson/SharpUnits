@@ -22,6 +22,11 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
+  if(operation?.StartsWith("factory",StringComparison.Ordinal)==true)
+  {
+   Console.WriteLine(JsonSerializer.Serialize(new {id,result=FactoryFixtures.Evaluate(test,registry)}));
+   continue;
+  }
   if(operation?.StartsWith("quantity",StringComparison.Ordinal)==true)
   {
    var quantityResult=QuantityFixtures.Evaluate(test,registry);
