@@ -26,8 +26,10 @@ try {
         if(!$failed.Success){throw "Mutation test did not execute: $($mutant.id)"}
         $record=[ordered]@{id=$mutant.id;compiled=$true;failedTests=[int]$failed.Groups[1].Value;
             result=if([int]$failed.Groups[1].Value -gt 0){'KILLED'}else{'SURVIVED'};
-            logSha256=(Get-FileHash -LiteralPath $log -Algorithm SHA256).Hash}
-        $records.Add($record); $record | ConvertTo-Json -Compress
+            logSha256=(Get-FileHash -LiteralPath $log -Algorithm SHA256).Hash;
+            testEvidence=$output.Substring($output.IndexOf('Test run for'))}
+        $records.Add($record)
+        [pscustomobject]@{id=$record.id;result=$record.result;failedTests=$record.failedTests} | ConvertTo-Json -Compress
     }
 }
 finally {

@@ -77,9 +77,21 @@
     {
       "id": "46-A5",
       "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ParserReferenceFixtureTests.MatchesIndriyaParserFixture",
+      "evidence": "conformance/parser-review-50.json",
+      "sourceMethod": "QuantityFormatTest.testQuantityFormatParse",
+      "expectedSemantics": "Every registered Java QuantityFormat implementation exposes a public parse method (structural reflection assertion).",
+      "dotnetSemantics": "QuantityTextFormat exposes existing SI-only Parse and additive ParseJavaQuantity; 50 scenarios compare supported decimal/rational input observations with pinned SimpleQuantityFormat.",
+      "javaEvidence": "Pinned Java TCK: 112 tests pass including five QuantityFormatTest methods; shared parser cases recorded separately.",
+      "remainingGap": "CLR method names, types and registration are adaptations. Full Java unit grammar, parse cursor, arbitrary Number retention and CI/reviewer closure remain absent.",
+      "requirements": [
+        "JP-014",
+        "JP-014-DECIMAL",
+        "JP-014-RATIONAL",
+        "JP-014-INVALID",
+        "JP-014-LEGACY"
+      ]
     },
     {
       "id": "45-A1",

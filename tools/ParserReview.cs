@@ -59,7 +59,7 @@ bool Match(JsonNode? a,JsonNode? b,double tolerance)
         return double.IsFinite(x)&&double.IsFinite(y)&&Math.Abs(x-y)<=tolerance;
     return JsonNode.DeepEquals(a,b);
 }
-if(command!="record")throw new ArgumentException("Use prepare or record.");
+if(command is not ("record" or "check"))throw new ArgumentException("Use prepare, record or check.");
 var java=Rows($"../parse50-java-{count}.jsonl");var clr=Rows($"../parse50-dotnet-{count}.jsonl");
 var all=JsonNode.Parse(File.ReadAllText(casesPath))!["cases"]!.AsArray();
 if(java.Count!=all.Count||clr.Count!=all.Count)throw new InvalidOperationException("Output count differs from corpus.");
@@ -75,6 +75,7 @@ foreach(var test in all)
     if(!Match(j[key],c[key],jt)||!Match(expected,j[key],et)||!Match(expected,c[key],et))
         throw new InvalidOperationException($"{id}: Java {j[key]}, CLR {c[key]}, expected {expected}");
 }
+if(command=="check") { Console.WriteLine($"Validated {all.Count} shared Java/CLR cases."); return; }
 var manifest=JsonNode.Parse(File.ReadAllText(manifestPath))!.AsObject();
 foreach(var r in manifest["reviews"]!.AsArray().Where(r=>r!["iteration"]!.GetValue<int>()>count-10&&r["iteration"]!.GetValue<int>()<=count))
 {

@@ -30,6 +30,10 @@ follows Indriya's compatibility conventions.
 `IJavaQuantityFactory.CreateJavaQuantity` creates quantities retaining their display
 unit and absolute/relative scale. See the [factory review and examples](conformance/factory-fifty-review.md).
 
+`QuantityTextFormat.ParseJavaQuantity` retains display values and units for a
+documented subset of Java decimal/rational syntax. See the
+[parser review, coverage and remaining gaps](conformance/parser-fifty-review.md).
+
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.

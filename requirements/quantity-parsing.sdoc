@@ -33,7 +33,7 @@ UID: JP-014-INVALID
 STATUS: Active
 TITLE: Malformed input and resource limits
 STATEMENT: The adapter parser shall reject malformed numeric tokens, unknown units, nonfinite results and inputs exceeding its documented resource limits without returning a partial quantity.
-COMMENT: Unit syntax is restricted to exact registered symbols. Verification includes seeded malformed-input fuzzing and negative tests; Java permissive suffix parsing and unbounded numeric types are not promised.
+COMMENT: Unit syntax is restricted to exact registered symbols. Verification includes seeded malformed-input fuzzing and negative tests; Java cursor APIs and unbounded numeric types are not promised.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-014

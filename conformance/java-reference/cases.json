@@ -3214,6 +3214,86 @@
       "observe": "magnitude",
       "expected": 0,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-41",
+      "operation": "parseAccepts",
+      "text": "NaN A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-42",
+      "operation": "parseAccepts",
+      "text": "Infinity V",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-43",
+      "operation": "parseAccepts",
+      "text": "1e+ A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-44",
+      "operation": "parseAccepts",
+      "text": "1,5 A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-45",
+      "operation": "parseAccepts",
+      "text": "1A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-46",
+      "operation": "parseAccepts",
+      "text": "one A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-47",
+      "operation": "parseAccepts",
+      "text": "1÷x A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-48",
+      "operation": "parseAccepts",
+      "text": "1 unknown",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-49",
+      "operation": "parseAccepts",
+      "text": "1.2.3 V",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-50",
+      "operation": "parseAccepts",
+      "text": "1\u0085A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }

@@ -1,0 +1,796 @@
+[DOCUMENT]
+TITLE: SharpUnits pinned TCK assertion requirements
+
+[REQUIREMENT]
+UID: TCK-41-A1
+STATUS: Active
+TITLE: Pinned assertion 41-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A2
+STATUS: Active
+TITLE: Pinned assertion 41-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A3
+STATUS: Active
+TITLE: Pinned assertion 41-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A4
+STATUS: Active
+TITLE: Pinned assertion 41-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-Setup-1
+STATUS: Active
+TITLE: Pinned assertion Setup-1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/TCKSetupTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-Setup-2
+STATUS: Active
+TITLE: Pinned assertion Setup-2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/TCKSetupTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A1
+STATUS: Active
+TITLE: Pinned assertion 46-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A2
+STATUS: Active
+TITLE: Pinned assertion 46-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A3
+STATUS: Active
+TITLE: Pinned assertion 46-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A4
+STATUS: Active
+TITLE: Pinned assertion 46-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A5
+STATUS: Active
+TITLE: Pinned assertion 46-A5
+STATEMENT: Every registered Java QuantityFormat implementation exposes a public parse method (structural reflection assertion).
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ParserReferenceFixtureTests.MatchesIndriyaParserFixture. Evidence: conformance/parser-review-50.json. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: TCK-45-A1
+STATUS: Active
+TITLE: Pinned assertion 45-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-45-A2
+STATUS: Active
+TITLE: Pinned assertion 45-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-45-A3
+STATUS: Active
+TITLE: Pinned assertion 45-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-45-A4
+STATUS: Active
+TITLE: Pinned assertion 45-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-45-A5
+STATUS: Active
+TITLE: Pinned assertion 45-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-45-A6
+STATUS: Active
+TITLE: Pinned assertion 45-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A1
+STATUS: Active
+TITLE: Pinned assertion 431-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I01_431A1_AsType. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A2
+STATUS: Active
+TITLE: Pinned assertion 431-A2
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I02_431A2_Equals. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A3
+STATUS: Active
+TITLE: Pinned assertion 431-A3
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I03_431A3_GetScale. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A4
+STATUS: Active
+TITLE: Pinned assertion 431-A4
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I04_431A4_GetUnit. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A5
+STATUS: Active
+TITLE: Pinned assertion 431-A5
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I05_431A5_GetValue. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A6
+STATUS: Active
+TITLE: Pinned assertion 431-A6
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I06_431A6_HashCode. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A7
+STATUS: Active
+TITLE: Pinned assertion 431-A7
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I07_431A7_Equivalent. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A8
+STATUS: Active
+TITLE: Pinned assertion 431-A8
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I08_431A8_Inverse. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4311-A1
+STATUS: Active
+TITLE: Pinned assertion 4311-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I09_4311A1_Add. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4311-A4
+STATUS: Active
+TITLE: Pinned assertion 4311-A4
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4311-A5
+STATUS: Active
+TITLE: Pinned assertion 4311-A5
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I11_4311A5_DivideNumber. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4311-A6
+STATUS: Active
+TITLE: Pinned assertion 4311-A6
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I12_4311A6_Subtract. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4312-A1
+STATUS: Active
+TITLE: Pinned assertion 4312-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I13_4312A1_DivideQuantity. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-4312-A2
+STATUS: Active
+TITLE: Pinned assertion 4312-A2
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A9
+STATUS: Active
+TITLE: Pinned assertion 431-A9
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I15_431A9_To. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-431-A10
+STATUS: Active
+TITLE: Pinned assertion 431-A10
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: QuantityParitySurfaceTests.I16_431A10_Comparable. Evidence: https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395 (ba3f534; Windows and Ubuntu; 471 .NET tests). Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-44-A1
+STATUS: Active
+TITLE: Pinned assertion 44-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-44-A2
+STATUS: Active
+TITLE: Pinned assertion 44-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A1
+STATUS: Active
+TITLE: Pinned assertion 561-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A2
+STATUS: Active
+TITLE: Pinned assertion 561-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A3
+STATUS: Active
+TITLE: Pinned assertion 561-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A4
+STATUS: Active
+TITLE: Pinned assertion 561-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-551-A1
+STATUS: Active
+TITLE: Pinned assertion 551-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-552-A1
+STATUS: Active
+TITLE: Pinned assertion 552-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-51-A1
+STATUS: Active
+TITLE: Pinned assertion 51-A1
+STATEMENT: Every available Java service provider supplies a factory for every discovered javax.measure.Quantity subtype.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-51-A2
+STATUS: Active
+TITLE: Pinned assertion 51-A2
+STATEMENT: Each available Java provider creates Length quantity 10 in the system unit with ABSOLUTE and RELATIVE scale preserved.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FactoryReferenceFixtureTests.MatchesIndriyaFactoryFixture. Evidence: conformance/factory-review-50.json. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-53-A1
+STATUS: Active
+TITLE: Pinned assertion 53-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-53-A2
+STATUS: Active
+TITLE: Pinned assertion 53-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-53-A3
+STATUS: Active
+TITLE: Pinned assertion 53-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-53-A4
+STATUS: Active
+TITLE: Pinned assertion 53-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A01
+STATUS: Active
+TITLE: Pinned assertion 54-A01
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A02
+STATUS: Active
+TITLE: Pinned assertion 54-A02
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A03
+STATUS: Active
+TITLE: Pinned assertion 54-A03
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A04
+STATUS: Active
+TITLE: Pinned assertion 54-A04
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A05
+STATUS: Active
+TITLE: Pinned assertion 54-A05
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A06
+STATUS: Active
+TITLE: Pinned assertion 54-A06
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A07
+STATUS: Active
+TITLE: Pinned assertion 54-A07
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A08
+STATUS: Active
+TITLE: Pinned assertion 54-A08
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A09
+STATUS: Active
+TITLE: Pinned assertion 54-A09
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-54-A10
+STATUS: Active
+TITLE: Pinned assertion 54-A10
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A1
+STATUS: Active
+TITLE: Pinned assertion 52-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A2
+STATUS: Active
+TITLE: Pinned assertion 52-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A3
+STATUS: Active
+TITLE: Pinned assertion 52-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A4
+STATUS: Active
+TITLE: Pinned assertion 52-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A5
+STATUS: Active
+TITLE: Pinned assertion 52-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-52-A6
+STATUS: Active
+TITLE: Pinned assertion 52-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A1
+STATUS: Active
+TITLE: Pinned assertion 424-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A1_Equals. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A2
+STATUS: Active
+TITLE: Pinned assertion 424-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A2_HashCode. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A3
+STATUS: Active
+TITLE: Pinned assertion 424-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A3_Name. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A4
+STATUS: Active
+TITLE: Pinned assertion 424-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A4_Symbol. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A5
+STATUS: Active
+TITLE: Pinned assertion 424-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A5_Value. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-424-A6
+STATUS: Active
+TITLE: Pinned assertion 424-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckPrefixApiSurfaceTests.Tck424A6_Exponent. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A1
+STATUS: Active
+TITLE: Pinned assertion 423-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A1_ProviderAvailable. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A2
+STATUS: Active
+TITLE: Pinned assertion 423-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A2_EqualityMethod. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A3
+STATUS: Active
+TITLE: Pinned assertion 423-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A3_HashCodeMethod. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A4
+STATUS: Active
+TITLE: Pinned assertion 423-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A4_InverseMethod. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A5
+STATUS: Active
+TITLE: Pinned assertion 423-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A5_IdentityProperty. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A6
+STATUS: Active
+TITLE: Pinned assertion 423-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A6_LinearProperty. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A7
+STATUS: Active
+TITLE: Pinned assertion 423-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A7_NumericOverload. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A8
+STATUS: Active
+TITLE: Pinned assertion 423-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A8_DoubleOverload. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A9
+STATUS: Active
+TITLE: Pinned assertion 423-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A9_Concatenation. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-423-A10
+STATUS: Active
+TITLE: Pinned assertion 423-A10
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckConverterApiSurfaceTests.Tck423A10_ConversionSteps. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A1
+STATUS: Active
+TITLE: Pinned assertion 425-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A1_EqualsIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A2
+STATUS: Active
+TITLE: Pinned assertion 425-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A2_HashCodeIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A3
+STATUS: Active
+TITLE: Pinned assertion 425-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A3_MultiplyOperatorIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A4
+STATUS: Active
+TITLE: Pinned assertion 425-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A4_DivideOperatorIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A5
+STATUS: Active
+TITLE: Pinned assertion 425-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A5_RootIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A6
+STATUS: Active
+TITLE: Pinned assertion 425-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A6_PowIsPublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-425-A7
+STATUS: Active
+TITLE: Pinned assertion 425-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckDimensionApiSurfaceTests.Tck425A7_BaseDimensionsArePublic. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A1
+STATUS: Active
+TITLE: Pinned assertion 421-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A1_Equals. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A2
+STATUS: Active
+TITLE: Pinned assertion 421-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A2_Dimension. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A3
+STATUS: Active
+TITLE: Pinned assertion 421-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A3_SystemUnit. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A4
+STATUS: Active
+TITLE: Pinned assertion 421-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A4_BaseUnits. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A5
+STATUS: Active
+TITLE: Pinned assertion 421-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A5_Name. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A6
+STATUS: Active
+TITLE: Pinned assertion 421-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A6_Symbol. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A7
+STATUS: Active
+TITLE: Pinned assertion 421-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A7_HashCode. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A8
+STATUS: Active
+TITLE: Pinned assertion 421-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A8_Equivalent. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-421-A9
+STATUS: Active
+TITLE: Pinned assertion 421-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck421A9_ToString. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A1
+STATUS: Active
+TITLE: Pinned assertion 42121-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A1_Alternate. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A2
+STATUS: Active
+TITLE: Pinned assertion 42121-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A2_DivideUnit. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A3
+STATUS: Active
+TITLE: Pinned assertion 42121-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A3_DivideDouble. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A4
+STATUS: Active
+TITLE: Pinned assertion 42121-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A4_DivideNumber. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A5
+STATUS: Active
+TITLE: Pinned assertion 42121-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A5_MultiplyUnit. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A6
+STATUS: Active
+TITLE: Pinned assertion 42121-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A6_MultiplyDouble. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A7
+STATUS: Active
+TITLE: Pinned assertion 42121-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A7_MultiplyNumber. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A8
+STATUS: Active
+TITLE: Pinned assertion 42121-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A8_Prefix. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A9
+STATUS: Active
+TITLE: Pinned assertion 42121-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A9_ShiftDouble. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42121-A10
+STATUS: Active
+TITLE: Pinned assertion 42121-A10
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42121A10_ShiftNumber. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42122-A1
+STATUS: Active
+TITLE: Pinned assertion 42122-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42122A1_Pow. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42122-A2
+STATUS: Active
+TITLE: Pinned assertion 42122-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42122A2_Root. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42122-A3
+STATUS: Active
+TITLE: Pinned assertion 42122-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42122A3_Transform. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42123-A1
+STATUS: Active
+TITLE: Pinned assertion 42123-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42123A1_Inverse. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42124-A1
+STATUS: Active
+TITLE: Pinned assertion 42124-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42124A1_Compatible. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42124-A2
+STATUS: Active
+TITLE: Pinned assertion 42124-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42124A2_AsType. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42124-A3
+STATUS: Active
+TITLE: Pinned assertion 42124-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42124A3_ConverterTo. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-42124-A4
+STATUS: Active
+TITLE: Pinned assertion 42124-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: IMPLEMENTED_UNVERIFIED. Verification: TckUnitExactSurfaceTests.Tck42124A4_ConverterToAny. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.

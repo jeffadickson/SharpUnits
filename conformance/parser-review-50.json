@@ -260,7 +260,7 @@
     {
       "iteration": 16,
       "case": "P50-16",
-      "text": "2\u2003A",
+      "text": "2 A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
       "status": "CASE_MATCHED",
@@ -277,7 +277,7 @@
     {
       "iteration": 17,
       "case": "P50-17",
-      "text": "2\u001CV",
+      "text": "2\u001cV",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
       "status": "CASE_MATCHED",
@@ -311,7 +311,7 @@
     {
       "iteration": 19,
       "case": "P50-19",
-      "text": "2\u2007A",
+      "text": "2 A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
       "status": "CASE_MATCHED",
@@ -328,7 +328,7 @@
     {
       "iteration": 20,
       "case": "P50-20",
-      "text": "2\u00A0A",
+      "text": "2 A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
       "status": "CASE_MATCHED",
@@ -471,7 +471,7 @@
       "java": {
         "id": "P50-28",
         "absoluteTolerance": 0,
-        "result": 1.23456789012345677E18
+        "result": 1.2345678901234568E+18
       },
       "dotnet": {
         "id": "P50-28",
@@ -573,7 +573,7 @@
       "java": {
         "absoluteTolerance": 0,
         "id": "P50-34",
-        "result": 1.0E-20
+        "result": 1E-20
       },
       "dotnet": {
         "id": "P50-34",
@@ -658,7 +658,7 @@
       "java": {
         "absoluteTolerance": 0,
         "id": "P50-39",
-        "result": 1.0E-320
+        "result": 1E-320
       },
       "dotnet": {
         "id": "P50-39",
@@ -688,7 +688,16 @@
       "text": "NaN A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-41",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-41",
+        "result": false
+      }
     },
     {
       "iteration": 42,
@@ -696,7 +705,16 @@
       "text": "Infinity V",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-42",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-42",
+        "result": false
+      }
     },
     {
       "iteration": 43,
@@ -704,7 +722,16 @@
       "text": "1e+ A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-43",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-43",
+        "result": false
+      }
     },
     {
       "iteration": 44,
@@ -712,7 +739,16 @@
       "text": "1,5 A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-44",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-44",
+        "result": false
+      }
     },
     {
       "iteration": 45,
@@ -720,7 +756,16 @@
       "text": "1A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-45",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-45",
+        "result": false
+      }
     },
     {
       "iteration": 46,
@@ -728,7 +773,16 @@
       "text": "one A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-46",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-46",
+        "result": false
+      }
     },
     {
       "iteration": 47,
@@ -736,7 +790,16 @@
       "text": "1÷x A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-47",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-47",
+        "result": false
+      }
     },
     {
       "iteration": 48,
@@ -744,7 +807,16 @@
       "text": "1 unknown",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-48",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-48",
+        "result": false
+      }
     },
     {
       "iteration": 49,
@@ -752,7 +824,16 @@
       "text": "1.2.3 V",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-49",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-49",
+        "result": false
+      }
     },
     {
       "iteration": 50,
@@ -760,7 +841,16 @@
       "text": "1\u0085A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "API_ABSENT: existing Parse returns SI-only Quantity",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-50",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-50",
+        "result": false
+      }
     }
   ],
   "checkpoints": [
@@ -791,6 +881,78 @@
       "dotnetTestsPassed": 677,
       "differentialCases": 298,
       "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 687,
+      "differentialCases": 308,
+      "mismatches": 0
     }
-  ]
+  ],
+  "javaTck": {
+    "tests": 112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "formatMethods": [
+      "testEnsureGotQuantityFormat",
+      "testQuantityFormatFormat",
+      "testQuantityFormatFormatAppendable",
+      "testQuantityFormatFormatIsLocalSensitive",
+      "testQuantityFormatParse"
+    ]
+  },
+  "requirements": {
+    "tool": "StrictDoc 0.30.4",
+    "records": 154,
+    "documents": 3,
+    "result": "HTML export PASS",
+    "ids": [
+      "JP-014",
+      "JP-014-DECIMAL",
+      "JP-014-RATIONAL",
+      "JP-014-INVALID",
+      "JP-014-LEGACY",
+      "TCK-46-A5"
+    ]
+  },
+  "adversarial": {
+    "fscheckCasesPerProperty": 300,
+    "replaySeeds": [
+      "385,385",
+      "385,387"
+    ],
+    "malformedFuzzCases": 1000,
+    "fuzzSeed": 385014,
+    "manualMutationsKilled": 5,
+    "manualMutationsTotal": 5,
+    "restoredSourceTestCount": 687
+  },
+  "coverageEvidence": "conformance/parser-coverage-50.json",
+  "knownDifferences": "conformance/parser-known-differences.json",
+  "formalClosures": 0,
+  "sourcePins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "fileSha256": {
+    "src/SharpUnits/JavaQuantityTextParser.cs": "C4E590C347FBA57F64B833184C9A489D55CA3802EE2C4B9E605CD39CAA8FC110",
+    "src/SharpUnits/QuantityTextFormat.cs": "A7774B60443E8F2964A5047CF2D863F1F64E500BA8F14B659AF548EEA62886C5",
+    "src/SharpUnits/JavaDoubleArithmetic.cs": "DEBA027A978E37A37FFF8791CD3097B8679C15721020EE2AA7BCD32B614A793E",
+    "tests/SharpUnits.Tests/ParserRobustnessTests.cs": "1F8B84086A2305DACE1BDEAB25354480E7D8211BF07F4A9DCA3B344C175608E3",
+    "tests/SharpUnits.Tests/ParserReferenceFixtureTests.cs": "56878E0ADA65DCD4D05F65672352F37EBBAADAA909314997C583B8AACC49A628",
+    "conformance/java-reference/cases.json": "C532F6195CBCD6CC6ABFC7216696290816E884FD976DD16EAFC1802CC81DECE8",
+    "conformance/java-reference/src/main/java/org/sharpunits/ReferenceRunner.java": "EDA0DFB23175491F3300292CDB3BA17F1FD1F9320A00E333072352EF3A77B3AA",
+    "requirements/capabilities.sdoc": "5D2142A12F2EE3F48EADDC7400FEBDFA080C174876E9425A7E5B8295155069C2",
+    "requirements/quantity-parsing.sdoc": "72D286395CD961898BDF208EB845760F28F88C7DAC51FD0A648ADF94F05E56C4",
+    "requirements/tck-assertions.sdoc": "1F238529A21BAB972102D5EBFCA9728D366663A0BB5A1675978FB0482358A3A0"
+  }
 }

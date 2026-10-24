@@ -188,7 +188,7 @@ UID: JP-028
 STATUS: Active
 TITLE: Java reference conformance corpus
 STATEMENT: SharpUnits shall provide Java reference conformance corpus within a documented compatibility envelope.
-COMMENT: Inventory disposition: Implemented, partial coverage: 258 shared fixtures, including 50 actual provider factory cases and 20 API admission probes; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Implemented, partial coverage: 308 shared fixtures including 50 parser scenarios, plus four separately recorded parser incompatibilities; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-029

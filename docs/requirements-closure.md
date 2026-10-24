@@ -1,6 +1,13 @@
 # Requirements closure policy
 
-Canonical inventory: [Java parity gap analysis](java-parity-gap-analysis.md). JP-001 through JP-030 and EE-001 through EE-007 remain tracked independently of GitHub issue closure.
+Canonical requirements use [StrictDoc capability records](../requirements/capabilities.sdoc),
+[parsing requirements](../requirements/quantity-parsing.sdoc), and
+[TCK assertion records](../requirements/tck-assertions.sdoc). Stable JP/EE IDs are
+preserved from the [Java parity gap analysis](java-parity-gap-analysis.md).
+The Markdown matrix summarizes dispositions; the ledger retains assertion evidence.
+StrictDoc `Active` denotes requirement lifecycle, not verified implementation.
+Export using StrictDoc 0.30.4 and `tools/Export-Requirements.ps1`.
+Requirements remain independent of GitHub issue closure.
 
 ## Evidence required for each requirement
 - Stable requirement ID and acceptance criteria
