@@ -6,8 +6,9 @@ namespace SharpUnits;
 
 /// <summary>Parses a bounded subset of Indriya's invariant quantity syntax.</summary>
 /// <remarks>Accepts decimal/scientific literals or two signed integers joined by ÷, followed by
-/// Java whitespace and an exact registered symbol. Missing units mean dimensionless. Display
-/// values round once to double; arbitrary Number identity and compound-unit grammar are not retained.
+/// Java whitespace and a registered symbol (including the Celsius compatibility alias).
+/// Missing units mean dimensionless. Display values round once to double;
+/// arbitrary Number identity is not retained.
 /// Input is limited to 4096 characters and numeric tokens to 1024 characters to bound allocation.</remarks>
 internal static partial class JavaQuantityTextParser
 {
@@ -18,15 +19,15 @@ internal static partial class JavaQuantityTextParser
         if(text.Length>4096)throw new FormatException("Quantity text exceeds 4096 characters.");
         var position=0;
         SkipWhitespace(text,ref position);
-        var start=position;
-        while(position<text.Length&&!IsJavaWhitespace(text[position]))position++;
-        var token=text[start..position];
-        if(token.Length==0||token.Length>1024)throw new FormatException("Invalid numeric token length.");
-        var division=token.IndexOf('÷');
+        var token=ReadLiteral(text,ref position);
         double magnitude;
-        if(division>=0)
+        if(position<text.Length&&text[position]=='÷')
         {
-            var numerator=token[..division];var denominator=token[(division+1)..];
+            position++;
+            SkipWhitespace(text,ref position);
+            var numerator=token;var denominator=ReadLiteral(text,ref position);
+            if(numerator.Length+denominator.Length+1>1024)
+                throw new FormatException("Rational numeric tokens exceed 1024 characters.");
             if(!Integer().IsMatch(numerator)||!Integer().IsMatch(denominator))
                 throw new FormatException("Rational quantities require two signed integers.");
             var fraction=new Rational(BigInteger.Parse(numerator,CultureInfo.InvariantCulture),
@@ -43,8 +44,19 @@ internal static partial class JavaQuantityTextParser
         var end=text.Length;
         while(end>position&&IsJavaWhitespace(text[end-1]))end--;
         var symbol=text[position..end];
-        var unit=symbol.Length==0?new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1)):registry.Resolve(symbol);
+        var unit=symbol.Length==0?new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1)):JavaUnitTextParser.Resolve(symbol,registry);
         return new JavaQuantityAdapter(magnitude,unit);
+    }
+
+    // Match RationalNumberScanner: a division sign ends the numerator; Java whitespace
+    // may precede the next literal after that sign, but not precede the division sign itself.
+    private static string ReadLiteral(string text,ref int position)
+    {
+        var start=position;
+        while(position<text.Length&&!IsJavaWhitespace(text[position])&&text[position]!='÷')position++;
+        var token=text[start..position];
+        if(token.Length==0||token.Length>1024)throw new FormatException("Invalid numeric token length.");
+        return token;
     }
 
     private static void SkipWhitespace(string text,ref int position)

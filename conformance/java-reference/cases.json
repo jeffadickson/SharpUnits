@@ -3294,6 +3294,167 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-01",
+      "operation": "parseQuantity",
+      "text": "1÷ 2 A",
+      "observe": "magnitude",
+      "expected": 0.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-02",
+      "operation": "parseQuantity",
+      "text": "-3÷ 4 V",
+      "observe": "magnitude",
+      "expected": -0.75,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-03",
+      "operation": "parseQuantity",
+      "text": "1÷\t3 Ω",
+      "observe": "magnitude",
+      "expected": 0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-04",
+      "operation": "parseQuantity",
+      "text": "5÷\n2 K",
+      "observe": "magnitude",
+      "expected": 2.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-05",
+      "operation": "parseQuantity",
+      "text": "7÷\r\n2 A",
+      "observe": "magnitude",
+      "expected": 3.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-06",
+      "operation": "parseQuantity",
+      "text": "1÷\u20033 A",
+      "observe": "magnitude",
+      "expected": 0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-07",
+      "operation": "parseQuantity",
+      "text": "0÷ 7 A",
+      "observe": "magnitude",
+      "expected": 0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-08",
+      "operation": "parseQuantity",
+      "text": "1÷ -2 A",
+      "observe": "magnitude",
+      "expected": -0.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-09",
+      "operation": "parseAccepts",
+      "text": "1 ÷2 A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-10",
+      "operation": "parseAccepts",
+      "text": "1÷ 0 A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-11",
+      "operation": "parseAccepts",
+      "text": "1 ℃",
+      "observe": "magnitude",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-12",
+      "operation": "parseQuantity",
+      "text": "20 ℃",
+      "observe": "magnitude",
+      "expected": 20,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-13",
+      "operation": "parseQuantity",
+      "text": "-40 ℃",
+      "observe": "magnitude",
+      "expected": -40,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-14",
+      "operation": "parseQuantity",
+      "text": "0.000001 ℃",
+      "observe": "magnitude",
+      "expected": 1E-06,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-15",
+      "operation": "parseQuantity",
+      "text": "-0 ℃",
+      "observe": "negativeZero",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-16",
+      "operation": "parseQuantity",
+      "text": "20 ℃",
+      "observe": "unitMatches",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "resultUnit": "°C"
+    },
+    {
+      "id": "G50-17",
+      "operation": "parseQuantity",
+      "text": "20 ℃",
+      "observe": "scale",
+      "expected": "ABSOLUTE",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-18",
+      "operation": "parseQuantity",
+      "text": "1÷ 2 ℃",
+      "observe": "magnitude",
+      "expected": 0.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-19",
+      "operation": "parseQuantity",
+      "text": "1\t℃",
+      "observe": "magnitude",
+      "expected": 1,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-20",
+      "operation": "parseAccepts",
+      "text": "1 ℃ trailing",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }

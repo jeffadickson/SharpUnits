@@ -1,0 +1,602 @@
+{
+  "startingCommit": "9d469b2",
+  "ciPolicy": "Disabled by user; local evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "G50-01",
+      "text": "1÷ 2 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-01",
+        "result": 0.5
+      },
+      "dotnet": {
+        "id": "G50-01",
+        "result": 0.5
+      }
+    },
+    {
+      "iteration": 2,
+      "case": "G50-02",
+      "text": "-3÷ 4 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-02",
+        "result": -0.75
+      },
+      "dotnet": {
+        "id": "G50-02",
+        "result": -0.75
+      }
+    },
+    {
+      "iteration": 3,
+      "case": "G50-03",
+      "text": "1÷\t3 Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-03",
+        "result": 0.3333333333333333
+      },
+      "dotnet": {
+        "id": "G50-03",
+        "result": 0.3333333333333333
+      }
+    },
+    {
+      "iteration": 4,
+      "case": "G50-04",
+      "text": "5÷\n2 K",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-04",
+        "result": 2.5
+      },
+      "dotnet": {
+        "id": "G50-04",
+        "result": 2.5
+      }
+    },
+    {
+      "iteration": 5,
+      "case": "G50-05",
+      "text": "7÷\r\n2 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-05",
+        "result": 3.5
+      },
+      "dotnet": {
+        "id": "G50-05",
+        "result": 3.5
+      }
+    },
+    {
+      "iteration": 6,
+      "case": "G50-06",
+      "text": "1÷\u20033 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-06",
+        "result": 0.3333333333333333
+      },
+      "dotnet": {
+        "id": "G50-06",
+        "result": 0.3333333333333333
+      }
+    },
+    {
+      "iteration": 7,
+      "case": "G50-07",
+      "text": "0÷ 7 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-07",
+        "result": 0.0
+      },
+      "dotnet": {
+        "id": "G50-07",
+        "result": 0
+      }
+    },
+    {
+      "iteration": 8,
+      "case": "G50-08",
+      "text": "1÷ -2 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-08",
+        "result": -0.5
+      },
+      "dotnet": {
+        "id": "G50-08",
+        "result": -0.5
+      }
+    },
+    {
+      "iteration": 9,
+      "case": "G50-09",
+      "text": "1 ÷2 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-09",
+        "result": false
+      },
+      "dotnet": {
+        "id": "G50-09",
+        "result": false
+      }
+    },
+    {
+      "iteration": 10,
+      "case": "G50-10",
+      "text": "1÷ 0 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-10",
+        "result": false
+      },
+      "dotnet": {
+        "id": "G50-10",
+        "result": false
+      }
+    },
+    {
+      "iteration": 11,
+      "case": "G50-11",
+      "text": "1 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-11",
+        "result": true
+      },
+      "dotnet": {
+        "id": "G50-11",
+        "result": true
+      }
+    },
+    {
+      "iteration": 12,
+      "case": "G50-12",
+      "text": "20 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-12",
+        "result": 20.0
+      },
+      "dotnet": {
+        "id": "G50-12",
+        "result": 20
+      }
+    },
+    {
+      "iteration": 13,
+      "case": "G50-13",
+      "text": "-40 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-13",
+        "result": -40.0
+      },
+      "dotnet": {
+        "id": "G50-13",
+        "result": -40
+      }
+    },
+    {
+      "iteration": 14,
+      "case": "G50-14",
+      "text": "0.000001 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-14",
+        "result": 1.0E-6
+      },
+      "dotnet": {
+        "id": "G50-14",
+        "result": 1E-06
+      }
+    },
+    {
+      "iteration": 15,
+      "case": "G50-15",
+      "text": "-0 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-15",
+        "result": false
+      },
+      "dotnet": {
+        "id": "G50-15",
+        "result": false
+      }
+    },
+    {
+      "iteration": 16,
+      "case": "G50-16",
+      "text": "20 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-16",
+        "result": true
+      },
+      "dotnet": {
+        "id": "G50-16",
+        "result": true
+      }
+    },
+    {
+      "iteration": 17,
+      "case": "G50-17",
+      "text": "20 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-17",
+        "result": "ABSOLUTE"
+      },
+      "dotnet": {
+        "id": "G50-17",
+        "result": "ABSOLUTE"
+      }
+    },
+    {
+      "iteration": 18,
+      "case": "G50-18",
+      "text": "1÷ 2 ℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-18",
+        "result": 0.5
+      },
+      "dotnet": {
+        "id": "G50-18",
+        "result": 0.5
+      }
+    },
+    {
+      "iteration": 19,
+      "case": "G50-19",
+      "text": "1\t℃",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-19",
+        "result": 1.0
+      },
+      "dotnet": {
+        "id": "G50-19",
+        "result": 1
+      }
+    },
+    {
+      "iteration": 20,
+      "case": "G50-20",
+      "text": "1 ℃ trailing",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-20",
+        "result": false
+      },
+      "dotnet": {
+        "id": "G50-20",
+        "result": false
+      }
+    },
+    {
+      "iteration": 21,
+      "case": "G50-21",
+      "text": "2 A/V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 22,
+      "case": "G50-22",
+      "text": "3 V/Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 23,
+      "case": "G50-23",
+      "text": "4 A*Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 24,
+      "case": "G50-24",
+      "text": "5 mA*kΩ",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 25,
+      "case": "G50-25",
+      "text": "6 mV/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 26,
+      "case": "G50-26",
+      "text": "7 V/kΩ",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 27,
+      "case": "G50-27",
+      "text": "8 (V/Ω)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 28,
+      "case": "G50-28",
+      "text": "9 (A*Ω)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 29,
+      "case": "G50-29",
+      "text": "10 A/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 30,
+      "case": "G50-30",
+      "text": "11 V·A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 31,
+      "case": "G50-31",
+      "text": "1 A/A/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 32,
+      "case": "G50-32",
+      "text": "2 A/(A/A)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 33,
+      "case": "G50-33",
+      "text": "3 V/Ω/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 34,
+      "case": "G50-34",
+      "text": "4 (A/A)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 35,
+      "case": "G50-35",
+      "text": "5 A^2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 36,
+      "case": "G50-36",
+      "text": "6 (A^2)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 37,
+      "case": "G50-37",
+      "text": "7 A^-1*A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 38,
+      "case": "G50-38",
+      "text": "8 mA^2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 39,
+      "case": "G50-39",
+      "text": "9 (mA*kΩ)/V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 40,
+      "case": "G50-40",
+      "text": "10 V/(mA*kΩ)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 41,
+      "case": "G50-41",
+      "text": "1÷ 2 V/Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 42,
+      "case": "G50-42",
+      "text": "2 (mA*kΩ)/(V/A)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 43,
+      "case": "G50-43",
+      "text": "3 A/A/A/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 44,
+      "case": "G50-44",
+      "text": "4 (A/A/A)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 45,
+      "case": "G50-45",
+      "text": "5 V/(Ω/A)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 46,
+      "case": "G50-46",
+      "text": "1 unknown/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 47,
+      "case": "G50-47",
+      "text": "1 (A/V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 48,
+      "case": "G50-48",
+      "text": "1 A**Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 49,
+      "case": "G50-49",
+      "text": "1 A/unknown",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 50,
+      "case": "G50-50",
+      "text": "1 A trailing",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
+      "status": "PENDING"
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 707,
+      "differentialCases": 328,
+      "mismatches": 0
+    },
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 697,
+      "differentialCases": 318,
+      "mismatches": 0
+    }
+  ]
+}
