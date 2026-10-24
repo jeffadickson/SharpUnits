@@ -3,7 +3,7 @@ $ErrorActionPreference='Stop'
 $dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
 $env:JAVA_HOME=(Resolve-Path '../tools-runtime/jdk/jdk-17.0.20.1+1').Path
 $classpath='conformance/java-reference/target/classes;'+(Get-Content conformance/java-reference/classpath.txt -Raw).Trim()
-& "$env:JAVA_HOME/bin/java.exe" -cp $classpath org.sharpunits.ReferenceRunner conformance/java-reference/cases.json > "../parse50-java-$Count.jsonl"
+& "$env:JAVA_HOME/bin/java.exe" '-Dfile.encoding=UTF-8' -cp $classpath org.sharpunits.ReferenceRunner conformance/java-reference/cases.json > "../parse50-java-$Count.jsonl"
 if($LASTEXITCODE){throw 'Java fixtures failed'}
 & $dotnet build tests/SharpUnits.Tests -c Release --nologo *> "../parse50-build-$Count.log"
 if($LASTEXITCODE){Get-Content "../parse50-build-$Count.log" -Tail 20;throw 'Build failed'}

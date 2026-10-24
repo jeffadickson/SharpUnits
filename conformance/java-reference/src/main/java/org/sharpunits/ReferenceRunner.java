@@ -20,7 +20,7 @@ public final class ReferenceRunner {
     return switch(test.path("observe").asText()) {
       case "scale" -> result.getScale().name();
       case "negativeZero" -> Double.doubleToRawLongBits(result.getValue().doubleValue()) == Long.MIN_VALUE;
-      case "unit" -> result.getUnit().equals(tech.units.indriya.AbstractUnit.ONE) ? "1" : tech.units.indriya.format.SimpleUnitFormat.getInstance().format(result.getUnit());
+      case "unitMatches" -> result.getUnit().equals(unit(test.path("resultUnit").asText()));
       case "magnitude" -> result.getValue().doubleValue();
       default -> throw new IllegalArgumentException("Unknown parser observation");
     };

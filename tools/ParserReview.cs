@@ -14,8 +14,11 @@ var command=args[0];var count=int.Parse(args[1],CultureInfo.InvariantCulture);
 var plans=new List<JsonObject>();
 void Add(string text,object expected,string observe="magnitude",bool admission=false)
 {
-    plans.Add(new JsonObject { ["id"]=$"P50-{plans.Count+1:00}",["operation"]=admission?"parseAccepts":"parseQuantity",
-        ["text"]=text,["observe"]=observe,["expected"]=JsonSerializer.SerializeToNode(expected),["absoluteTolerance"]=0 });
+    var test=new JsonObject { ["id"]=$"P50-{plans.Count+1:00}",["operation"]=admission?"parseAccepts":"parseQuantity",
+        ["text"]=text,["observe"]=observe,["expected"]=JsonSerializer.SerializeToNode(expected),["absoluteTolerance"]=0 };
+    // Unit equality is distinct from SimpleUnitFormat's canonical label (e.g. Celsius's ℃).
+    if(observe=="unit") { test["observe"]="unitMatches";test["resultUnit"]=(string)expected;test["expected"]=true; }
+    plans.Add(test);
 }
 Add("250 mA",250d);Add("+2.5 V",2.5);Add("-12.5 °C",-12.5);Add("0 K",0d);Add("-0 A",false,"negativeZero");
 Add("1e-3 A",.001);Add(".5 V",.5);Add("5. Ω",5d);Add("12 kΩ",12d);Add("0.123 °C",.123);

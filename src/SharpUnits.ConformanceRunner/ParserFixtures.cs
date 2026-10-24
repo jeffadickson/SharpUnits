@@ -6,7 +6,8 @@ internal static class ParserFixtures
 {
     public static object Evaluate(JsonElement test)
     {
-        var formatter=new QuantityTextFormat(UnitRegistry.CreateStandard());
+        var registry=UnitRegistry.CreateStandard();
+        var formatter=new QuantityTextFormat(registry);
         if(test.GetProperty("operation").GetString()=="parseAccepts")
         {
             try{formatter.ParseJavaQuantity(test.GetProperty("text").GetString()!);return true;}
@@ -17,7 +18,8 @@ internal static class ParserFixtures
         {
             "scale"=>quantity.Scale.ToString().ToUpperInvariant(),
             "negativeZero"=>BitConverter.DoubleToInt64Bits(quantity.Value)==long.MinValue,
-            "unit"=>quantity.Unit.Symbol,
+            "unitMatches"=>quantity.Unit.Equals(test.GetProperty("resultUnit").GetString()=="1"
+                ?new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1)):registry.Resolve(test.GetProperty("resultUnit").GetString()!)),
             "magnitude"=>quantity.Value,
             _=>throw new NotSupportedException("Unknown parser observation")
         };
