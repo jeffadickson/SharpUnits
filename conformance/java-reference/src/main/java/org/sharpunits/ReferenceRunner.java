@@ -11,6 +11,20 @@ import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
+  private static Object parserResult(JsonNode test) {
+    if(test.path("operation").asText().equals("parseAccepts")) {
+      try { tech.units.indriya.format.SimpleQuantityFormat.getInstance().parse(test.path("text").asText()); return true; }
+      catch(javax.measure.format.MeasurementParseException | IllegalArgumentException | IndexOutOfBoundsException ex) { return false; }
+    }
+    Quantity<?> result=tech.units.indriya.format.SimpleQuantityFormat.getInstance().parse(test.path("text").asText());
+    return switch(test.path("observe").asText()) {
+      case "scale" -> result.getScale().name();
+      case "negativeZero" -> Double.doubleToRawLongBits(result.getValue().doubleValue()) == Long.MIN_VALUE;
+      case "unit" -> result.getUnit().equals(tech.units.indriya.AbstractUnit.ONE) ? "1" : tech.units.indriya.format.SimpleUnitFormat.getInstance().format(result.getUnit());
+      case "magnitude" -> result.getValue().doubleValue();
+      default -> throw new IllegalArgumentException("Unknown parser observation");
+    };
+  }
   /** Uses the installed service-provider factory, including its default-scale overload. */
   @SuppressWarnings({"rawtypes", "unchecked"})
   private static Object factoryResult(JsonNode test) {
@@ -130,6 +144,10 @@ public final class ReferenceRunner {
       String to=test.path("to").asText();
       try {
         String operation=test.path("operation").asText();
+        if(operation.startsWith("parse")) {
+          System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"result",parserResult(test),"absoluteTolerance",0)));
+          continue;
+        }
         if (operation.startsWith("factory")) {
           System.out.println(mapper.writeValueAsString(java.util.Map.of("id", id, "result", factoryResult(test),
               "absoluteTolerance", test.path("absoluteTolerance").asDouble(0))));

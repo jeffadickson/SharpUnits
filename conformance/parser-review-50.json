@@ -1,0 +1,602 @@
+{
+  "startingCommit": "098acf2",
+  "ciPolicy": "Disabled by user; local evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "P50-01",
+      "text": "250 mA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-01",
+        "absoluteTolerance": 0,
+        "result": 250.0
+      },
+      "dotnet": {
+        "id": "P50-01",
+        "result": 250
+      }
+    },
+    {
+      "iteration": 2,
+      "case": "P50-02",
+      "text": "\u002B2.5 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-02",
+        "absoluteTolerance": 0,
+        "result": 2.5
+      },
+      "dotnet": {
+        "id": "P50-02",
+        "result": 2.5
+      }
+    },
+    {
+      "iteration": 3,
+      "case": "P50-03",
+      "text": "-12.5 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-03",
+        "absoluteTolerance": 0,
+        "result": -12.5
+      },
+      "dotnet": {
+        "id": "P50-03",
+        "result": -12.5
+      }
+    },
+    {
+      "iteration": 4,
+      "case": "P50-04",
+      "text": "0 K",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-04",
+        "absoluteTolerance": 0,
+        "result": 0.0
+      },
+      "dotnet": {
+        "id": "P50-04",
+        "result": 0
+      }
+    },
+    {
+      "iteration": 5,
+      "case": "P50-05",
+      "text": "-0 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-05",
+        "absoluteTolerance": 0,
+        "result": false
+      },
+      "dotnet": {
+        "id": "P50-05",
+        "result": false
+      }
+    },
+    {
+      "iteration": 6,
+      "case": "P50-06",
+      "text": "1e-3 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-06",
+        "absoluteTolerance": 0,
+        "result": 0.001
+      },
+      "dotnet": {
+        "id": "P50-06",
+        "result": 0.001
+      }
+    },
+    {
+      "iteration": 7,
+      "case": "P50-07",
+      "text": ".5 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-07",
+        "absoluteTolerance": 0,
+        "result": 0.5
+      },
+      "dotnet": {
+        "id": "P50-07",
+        "result": 0.5
+      }
+    },
+    {
+      "iteration": 8,
+      "case": "P50-08",
+      "text": "5. \u03A9",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-08",
+        "absoluteTolerance": 0,
+        "result": 5.0
+      },
+      "dotnet": {
+        "id": "P50-08",
+        "result": 5
+      }
+    },
+    {
+      "iteration": 9,
+      "case": "P50-09",
+      "text": "12 k\u03A9",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-09",
+        "absoluteTolerance": 0,
+        "result": 12.0
+      },
+      "dotnet": {
+        "id": "P50-09",
+        "result": 12
+      }
+    },
+    {
+      "iteration": 10,
+      "case": "P50-10",
+      "text": "0.123 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "id": "P50-10",
+        "absoluteTolerance": 0,
+        "result": 0.123
+      },
+      "dotnet": {
+        "id": "P50-10",
+        "result": 0.123
+      }
+    },
+    {
+      "iteration": 11,
+      "case": "P50-11",
+      "text": "  2 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-11",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-11",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 12,
+      "case": "P50-12",
+      "text": "\t2 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-12",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-12",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 13,
+      "case": "P50-13",
+      "text": "2\tmA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-13",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-13",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 14,
+      "case": "P50-14",
+      "text": "2\nV",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-14",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-14",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 15,
+      "case": "P50-15",
+      "text": "2\r\n\u03A9",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-15",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-15",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 16,
+      "case": "P50-16",
+      "text": "2\u2003A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-16",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-16",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 17,
+      "case": "P50-17",
+      "text": "2\u001CV",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-17",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-17",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 18,
+      "case": "P50-18",
+      "text": "2\u2028K",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "P50-18",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-18",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 19,
+      "case": "P50-19",
+      "text": "2\u2007A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-19",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-19",
+        "result": false
+      }
+    },
+    {
+      "iteration": 20,
+      "case": "P50-20",
+      "text": "2\u00A0A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "P50-20",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "P50-20",
+        "result": false
+      }
+    },
+    {
+      "iteration": 21,
+      "case": "P50-21",
+      "text": "1\u00F73 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 22,
+      "case": "P50-22",
+      "text": "-1\u00F73 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 23,
+      "case": "P50-23",
+      "text": "1\u00F7-3 \u03A9",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 24,
+      "case": "P50-24",
+      "text": "-1\u00F7-3 K",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 25,
+      "case": "P50-25",
+      "text": "5\u00F72 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 26,
+      "case": "P50-26",
+      "text": "0\u00F77 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 27,
+      "case": "P50-27",
+      "text": "\u002B3\u00F7\u002B4 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 28,
+      "case": "P50-28",
+      "text": "12345678901234567890\u00F710 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 29,
+      "case": "P50-29",
+      "text": "1\u00F70 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 30,
+      "case": "P50-30",
+      "text": "1\u00F72\u00F73 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 31,
+      "case": "P50-31",
+      "text": "3",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 32,
+      "case": "P50-32",
+      "text": "3 ",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 33,
+      "case": "P50-33",
+      "text": "20 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 34,
+      "case": "P50-34",
+      "text": "1e-20 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 35,
+      "case": "P50-35",
+      "text": "20 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 36,
+      "case": "P50-36",
+      "text": "4 k\u03A9",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 37,
+      "case": "P50-37",
+      "text": "1e-3 mA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 38,
+      "case": "P50-38",
+      "text": "-0.0 \u00B0C",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 39,
+      "case": "P50-39",
+      "text": "1e-320 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 40,
+      "case": "P50-40",
+      "text": "1e-400 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 41,
+      "case": "P50-41",
+      "text": "NaN A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 42,
+      "case": "P50-42",
+      "text": "Infinity V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 43,
+      "case": "P50-43",
+      "text": "1e\u002B A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 44,
+      "case": "P50-44",
+      "text": "1,5 A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 45,
+      "case": "P50-45",
+      "text": "1A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 46,
+      "case": "P50-46",
+      "text": "one A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 47,
+      "case": "P50-47",
+      "text": "1\u00F7x A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 48,
+      "case": "P50-48",
+      "text": "1 unknown",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 49,
+      "case": "P50-49",
+      "text": "1.2.3 V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 50,
+      "case": "P50-50",
+      "text": "1\u0085A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "API_ABSENT: existing Parse returns SI-only Quantity",
+      "status": "PENDING"
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 647,
+      "differentialCases": 268,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 657,
+      "differentialCases": 278,
+      "mismatches": 0
+    }
+  ]
+}

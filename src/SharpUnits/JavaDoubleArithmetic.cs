@@ -42,7 +42,7 @@ internal static class JavaDoubleArithmetic
 
     // Round the final rational once to nearest binary64, ties to even. Avoid casting
     // numerator and denominator separately: either may exceed binary64's range.
-    private static double ToDouble(Rational value)
+    internal static double ToDouble(Rational value)
     {
         if(value.Numerator.IsZero)return 0;
         var negative=value.Numerator.Sign<0;
