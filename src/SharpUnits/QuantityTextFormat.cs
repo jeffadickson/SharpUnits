@@ -7,6 +7,47 @@ public sealed class QuantityTextFormat
  private readonly UnitRegistry registry;
  /// <summary>Creates a formatter using an explicit unit registry.</summary>
  public QuantityTextFormat(UnitRegistry registry)=>this.registry=registry??throw new ArgumentNullException(nameof(registry));
+ /// <summary>Reports that the supported Java formatting profile is invariant rather than locale sensitive.</summary>
+ public bool IsLocaleSensitive=>false;
+ /// <summary>Formats retained display values using the supported pinned Java double/unit text conventions.</summary>
+ /// <remarks>Does not retain arbitrary Java Number types or parsed decimal lexical precision.
+ /// Scale markers are not emitted. General compound/Fahrenheit unit-label generation is incomplete.</remarks>
+ public string FormatJavaQuantity(JavaQuantityAdapter quantity)
+ {
+  ArgumentNullException.ThrowIfNull(quantity);
+  var number=JavaNumberText.Format(quantity.Value);var unit=JavaSymbol(quantity.Unit);
+  return unit.Length==0?number:number+" "+unit;
+ }
+ /// <summary>Appends Java-profile text and returns the original builder.</summary>
+ public System.Text.StringBuilder FormatJavaQuantity(JavaQuantityAdapter quantity,System.Text.StringBuilder destination)
+ {
+  ArgumentNullException.ThrowIfNull(destination);
+  return destination.Append(FormatJavaQuantity(quantity));
+ }
+ /// <summary>Writes Java-profile text, returning the original writer without flushing or closing it.</summary>
+ /// <exception cref="IOException">The destination rejects a write; errors propagate to the caller.</exception>
+ public TextWriter FormatJavaQuantity(JavaQuantityAdapter quantity,TextWriter destination)
+ {
+  ArgumentNullException.ThrowIfNull(destination);
+  destination.Write(FormatJavaQuantity(quantity));
+  return destination;
+ }
+ private static string JavaSymbol(UnitDefinition unit)
+ {
+  // Canonicalize only recognized definitions. A caller-defined symbol alone does not
+  // prove it denotes Celsius, a micro-prefixed SI unit, or the canonical dimensionless unit.
+  if(unit.Symbol is "1" or "one"&&unit.RationalDimension==RationalDimension.From(Dimension.None)
+   &&unit.Converter.IsIdentity&&unit.ExactLinearScale is null)return "";
+  if(unit.Symbol is "°C" or "℃"&&unit.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)
+   &&unit.Converter==UnitConversion.Celsius)return "℃";
+  if(unit.Symbol.Length==2&&unit.Symbol[0]=='µ'&&unit.Converter.IsLinear&&JavaDoubleArithmetic.ScaleOf(unit)==new Rational(1,1000000))
+  {
+   RationalDimension? expected=unit.Symbol[1] switch {'A'=>RationalDimension.From(Dimension.ElectricCurrent),'V'=>RationalDimension.From(Dimension.Voltage),
+    'Ω'=>RationalDimension.From(Dimension.Resistance),'K'=>new RationalDimension(0,0,0,0,1,0,0),_=>null};
+   if(expected is not null&&expected.Value==unit.RationalDimension)return "μ"+unit.Symbol[1];
+  }
+  return unit.Symbol;
+ }
  /// <summary>Parses invariant decimal or integer-rational text, retaining its unit and absolute scale.</summary>
  /// <remarks>Uses Java whitespace, registered symbols, the Celsius compatibility alias and linear
  /// unit expressions with right-associated operators, parentheses, caret/double-star powers and

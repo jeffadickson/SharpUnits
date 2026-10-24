@@ -11,6 +11,34 @@ import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
+  private static Object formatResult(JsonNode test) throws java.io.IOException {
+    java.util.Locale previous=java.util.Locale.getDefault();
+    try {
+      if(test.has("locale")) java.util.Locale.setDefault(java.util.Locale.forLanguageTag(test.path("locale").asText()));
+      var format=tech.units.indriya.format.SimpleQuantityFormat.getInstance();
+      String operation=test.path("operation").asText();
+      if(operation.equals("formatLocale"))return format.isLocaleSensitive();
+      Quantity<?> quantity=test.has("text")?format.parse(test.path("text").asText())
+          :Quantities.getQuantity(test.path("value").asDouble(),unit(test.path("from").asText()),Quantity.Scale.valueOf(test.path("scale").asText("ABSOLUTE")));
+      if(operation.equals("formatRoundTrip")) {
+        Quantity<?> restored=format.parse(format.format(quantity));
+        return test.path("observe").asText().equals("scale")?restored.getScale()==quantity.getScale()
+            :restored.getValue().doubleValue()==quantity.getValue().doubleValue()&&restored.getUnit().isCompatible(quantity.getUnit());
+      }
+      boolean identity=test.path("observe").asText().equals("identity");
+      if(operation.equals("formatAppendable")) {
+        StringBuilder destination=new StringBuilder(test.path("prefix").asText(""));
+        Appendable returned=format.format(quantity,(Appendable)destination);
+        return identity?returned==destination:destination.toString();
+      }
+      if(operation.equals("formatWriter")) {
+        java.io.StringWriter destination=new java.io.StringWriter();destination.write(test.path("prefix").asText(""));
+        Appendable returned=format.format(quantity,(Appendable)destination);
+        return identity?returned==destination:destination.toString();
+      }
+      return format.format(quantity);
+    } finally {java.util.Locale.setDefault(previous);}
+  }
   @SuppressWarnings({"rawtypes", "unchecked"})
   private static Object parserResult(JsonNode test) throws javax.measure.IncommensurableException {
     if(test.path("operation").asText().equals("parseAccepts")) {
@@ -117,6 +145,12 @@ public final class ReferenceRunner {
   private static Unit<?> unit(String symbol) {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
+      case "µA", "μA" -> MetricPrefix.MICRO(Units.AMPERE);
+      case "µV" -> MetricPrefix.MICRO(Units.VOLT);
+      case "µΩ" -> MetricPrefix.MICRO(Units.OHM);
+      case "µK" -> MetricPrefix.MICRO(Units.KELVIN);
+      case "nA" -> MetricPrefix.NANO(Units.AMPERE);
+      case "kV" -> MetricPrefix.KILO(Units.VOLT);
       case "A³" -> Units.AMPERE.pow(3);
       case "pow23A" -> Units.AMPERE.pow(23);
       case "invA" -> Units.AMPERE.inverse();
@@ -155,6 +189,10 @@ public final class ReferenceRunner {
       String to=test.path("to").asText();
       try {
         String operation=test.path("operation").asText();
+        if(operation.startsWith("format")) {
+          System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"result",formatResult(test),"absoluteTolerance",0)));
+          continue;
+        }
         if(operation.startsWith("parse")) {
           System.out.println(mapper.writeValueAsString(java.util.Map.of("id",id,"result",parserResult(test),"absoluteTolerance",0)));
           continue;

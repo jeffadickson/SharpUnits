@@ -4582,6 +4582,186 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-001",
+      "operation": "formatQuantity",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-002",
+      "operation": "formatQuantity",
+      "value": -0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-003",
+      "operation": "formatQuantity",
+      "value": 1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-004",
+      "operation": "formatQuantity",
+      "value": -1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-1 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-005",
+      "operation": "formatQuantity",
+      "value": 42,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "42 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-006",
+      "operation": "formatQuantity",
+      "value": 250,
+      "from": "mA",
+      "scale": "ABSOLUTE",
+      "expected": "250 mA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-007",
+      "operation": "formatQuantity",
+      "value": -250,
+      "from": "mA",
+      "scale": "ABSOLUTE",
+      "expected": "-250 mA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-008",
+      "operation": "formatQuantity",
+      "value": 2147483647,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "2147483647 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-009",
+      "operation": "formatQuantity",
+      "value": 2147483648,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "2147483648 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-010",
+      "operation": "formatQuantity",
+      "value": -2147483649,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-2147483649 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-011",
+      "operation": "formatQuantity",
+      "value": 4294967296,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "4294967296 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-012",
+      "operation": "formatQuantity",
+      "value": 9007199254740991,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "9007199254740991 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-013",
+      "operation": "formatQuantity",
+      "value": 9007199254740992,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "9007199254740992 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-014",
+      "operation": "formatQuantity",
+      "value": 9.223372036854775E+18,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "9223372036854774784 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-015",
+      "operation": "formatQuantity",
+      "value": 9.223372036854776E+18,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "9223372036854775807 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-016",
+      "operation": "formatQuantity",
+      "value": -9.223372036854776E+18,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-9223372036854775808 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-017",
+      "operation": "formatQuantity",
+      "value": 1E+20,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "100000000000000000000 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-018",
+      "operation": "formatQuantity",
+      "value": 1E+23,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "99999999999999990000000 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-019",
+      "operation": "formatQuantity",
+      "value": -1E+23,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-99999999999999990000000 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-020",
+      "operation": "formatQuantity",
+      "value": 1E+100,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 A",
+      "absoluteTolerance": 0
     }
   ]
 }
