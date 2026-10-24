@@ -1,0 +1,1002 @@
+{
+  "startingCommit": "e982406",
+  "ciPolicy": "Disabled by user; local evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "H100-001",
+      "text": "2 A²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-001",
+        "result": 2.0
+      },
+      "dotnet": {
+        "id": "H100-001",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 2,
+      "case": "H100-002",
+      "text": "3 V²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-002",
+        "result": 3.0
+      },
+      "dotnet": {
+        "id": "H100-002",
+        "result": 3
+      }
+    },
+    {
+      "iteration": 3,
+      "case": "H100-003",
+      "text": "4 Ω²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-003",
+        "result": 4.0
+      },
+      "dotnet": {
+        "id": "H100-003",
+        "result": 4
+      }
+    },
+    {
+      "iteration": 4,
+      "case": "H100-004",
+      "text": "5 A³",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-004",
+        "result": true
+      },
+      "dotnet": {
+        "id": "H100-004",
+        "result": true
+      }
+    },
+    {
+      "iteration": 5,
+      "case": "H100-005",
+      "text": "6 A¹",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-005",
+        "result": 6.0
+      },
+      "dotnet": {
+        "id": "H100-005",
+        "result": 6
+      }
+    },
+    {
+      "iteration": 6,
+      "case": "H100-006",
+      "text": "7 (A²)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-006",
+        "result": 7.0
+      },
+      "dotnet": {
+        "id": "H100-006",
+        "result": 7
+      }
+    },
+    {
+      "iteration": 7,
+      "case": "H100-007",
+      "text": "8 A²/A²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-007",
+        "result": 8.0
+      },
+      "dotnet": {
+        "id": "H100-007",
+        "result": 8
+      }
+    },
+    {
+      "iteration": 8,
+      "case": "H100-008",
+      "text": "9 (V²)/V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-008",
+        "result": 9.0
+      },
+      "dotnet": {
+        "id": "H100-008",
+        "result": 9
+      }
+    },
+    {
+      "iteration": 9,
+      "case": "H100-009",
+      "text": "10 Ω²/Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-009",
+        "result": 10.0
+      },
+      "dotnet": {
+        "id": "H100-009",
+        "result": 10
+      }
+    },
+    {
+      "iteration": 10,
+      "case": "H100-010",
+      "text": "11 (A³)/(A²)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "H100-010",
+        "result": 11.0
+      },
+      "dotnet": {
+        "id": "H100-010",
+        "result": 11
+      }
+    },
+    {
+      "iteration": 11,
+      "case": "H100-011",
+      "text": "1 A**2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "H100-011",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-011",
+        "result": true
+      }
+    },
+    {
+      "iteration": 12,
+      "case": "H100-012",
+      "text": "2 (A**2)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "H100-012",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-012",
+        "result": 2
+      }
+    },
+    {
+      "iteration": 13,
+      "case": "H100-013",
+      "text": "3 A^0",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 3.0,
+        "id": "H100-013",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-013",
+        "result": 3
+      }
+    },
+    {
+      "iteration": 14,
+      "case": "H100-014",
+      "text": "4 A**0",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 4.0,
+        "id": "H100-014",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-014",
+        "result": 4
+      }
+    },
+    {
+      "iteration": 15,
+      "case": "H100-015",
+      "text": "5 A^00",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "H100-015",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-015",
+        "result": 5
+      }
+    },
+    {
+      "iteration": 16,
+      "case": "H100-016",
+      "text": "6 A^-0",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "H100-016",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-016",
+        "result": true
+      }
+    },
+    {
+      "iteration": 17,
+      "case": "H100-017",
+      "text": "7 (A²)^0",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "H100-017",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-017",
+        "result": true
+      }
+    },
+    {
+      "iteration": 18,
+      "case": "H100-018",
+      "text": "8 A²³",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "H100-018",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-018",
+        "result": true
+      }
+    },
+    {
+      "iteration": 19,
+      "case": "H100-019",
+      "text": "1 A**foo",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "H100-019",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-019",
+        "result": false
+      }
+    },
+    {
+      "iteration": 20,
+      "case": "H100-020",
+      "text": "1 A^2foo",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "H100-020",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-020",
+        "result": false
+      }
+    },
+    {
+      "iteration": 21,
+      "case": "H100-021",
+      "text": "1 A^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 22,
+      "case": "H100-022",
+      "text": "2 (A²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 23,
+      "case": "H100-023",
+      "text": "3 (V²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 24,
+      "case": "H100-024",
+      "text": "4 (Ω²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 25,
+      "case": "H100-025",
+      "text": "5 (A³)^1:3",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 26,
+      "case": "H100-026",
+      "text": "6 A^2:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 27,
+      "case": "H100-027",
+      "text": "7 A^3:3",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 28,
+      "case": "H100-028",
+      "text": "8 A^0:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 29,
+      "case": "H100-029",
+      "text": "9 A^1:0",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 30,
+      "case": "H100-030",
+      "text": "10 A^1:-2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 31,
+      "case": "H100-031",
+      "text": "1 (A^1:2)^2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 32,
+      "case": "H100-032",
+      "text": "2 A^2:1",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 33,
+      "case": "H100-033",
+      "text": "3 A**1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 34,
+      "case": "H100-034",
+      "text": "4 A¹:²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 35,
+      "case": "H100-035",
+      "text": "5 (A²)^-1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 36,
+      "case": "H100-036",
+      "text": "6 (A^1:2)*(A^1:2)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 37,
+      "case": "H100-037",
+      "text": "7 (mA²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 38,
+      "case": "H100-038",
+      "text": "8 (kΩ²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 39,
+      "case": "H100-039",
+      "text": "9 (mA²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 40,
+      "case": "H100-040",
+      "text": "1 A^1:bad",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 41,
+      "case": "H100-041",
+      "text": "2 A*2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 42,
+      "case": "H100-042",
+      "text": "3 A/2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 43,
+      "case": "H100-043",
+      "text": "4 V*3",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 44,
+      "case": "H100-044",
+      "text": "5 Ω/4",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 45,
+      "case": "H100-045",
+      "text": "6 A*-2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 46,
+      "case": "H100-046",
+      "text": "7 A/-2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 47,
+      "case": "H100-047",
+      "text": "8 (A*2)/A",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 48,
+      "case": "H100-048",
+      "text": "9 A/2/Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 49,
+      "case": "H100-049",
+      "text": "10 A/2*Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 50,
+      "case": "H100-050",
+      "text": "11 A*2/Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 51,
+      "case": "H100-051",
+      "text": "1 A/(2)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 52,
+      "case": "H100-052",
+      "text": "1 A*2147483647",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 53,
+      "case": "H100-053",
+      "text": "1 A*-2147483648",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 54,
+      "case": "H100-054",
+      "text": "2 mA*1000",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 55,
+      "case": "H100-055",
+      "text": "3 kΩ/1000",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 56,
+      "case": "H100-056",
+      "text": "4 A/2/V",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 57,
+      "case": "H100-057",
+      "text": "5 (A/2)*2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 58,
+      "case": "H100-058",
+      "text": "6 A*2*3",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 59,
+      "case": "H100-059",
+      "text": "7 A/2/2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 60,
+      "case": "H100-060",
+      "text": "1 A*word",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 61,
+      "case": "H100-061",
+      "text": "1 QA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 62,
+      "case": "H100-062",
+      "text": "1 RA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 63,
+      "case": "H100-063",
+      "text": "1 YA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 64,
+      "case": "H100-064",
+      "text": "1 ZA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 65,
+      "case": "H100-065",
+      "text": "1 EA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 66,
+      "case": "H100-066",
+      "text": "1 PA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 67,
+      "case": "H100-067",
+      "text": "1 TA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 68,
+      "case": "H100-068",
+      "text": "1 GA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 69,
+      "case": "H100-069",
+      "text": "1 MA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 70,
+      "case": "H100-070",
+      "text": "1 kA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 71,
+      "case": "H100-071",
+      "text": "1 hA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 72,
+      "case": "H100-072",
+      "text": "1 daA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 73,
+      "case": "H100-073",
+      "text": "1 dA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 74,
+      "case": "H100-074",
+      "text": "1 cA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 75,
+      "case": "H100-075",
+      "text": "1 mA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 76,
+      "case": "H100-076",
+      "text": "1 µA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 77,
+      "case": "H100-077",
+      "text": "1 nA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 78,
+      "case": "H100-078",
+      "text": "1 pA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 79,
+      "case": "H100-079",
+      "text": "1 fA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 80,
+      "case": "H100-080",
+      "text": "1 aA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 81,
+      "case": "H100-081",
+      "text": "1 zA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 82,
+      "case": "H100-082",
+      "text": "1 yA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 83,
+      "case": "H100-083",
+      "text": "1 rA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 84,
+      "case": "H100-084",
+      "text": "1 qA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 85,
+      "case": "H100-085",
+      "text": "1 µA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 86,
+      "case": "H100-086",
+      "text": "1 μA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 87,
+      "case": "H100-087",
+      "text": "2 daV",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 88,
+      "case": "H100-088",
+      "text": "3 hΩ",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 89,
+      "case": "H100-089",
+      "text": "4 nA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 90,
+      "case": "H100-090",
+      "text": "5 kV",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 91,
+      "case": "H100-091",
+      "text": "2 (µA*GΩ)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 92,
+      "case": "H100-092",
+      "text": "3 (kV/mA)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 93,
+      "case": "H100-093",
+      "text": "4 µA²",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 94,
+      "case": "H100-094",
+      "text": "5 (µA²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 95,
+      "case": "H100-095",
+      "text": "6 (kΩ/1000)",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 96,
+      "case": "H100-096",
+      "text": "7 A/2*Ω",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 97,
+      "case": "H100-097",
+      "text": "8 (A²)^1:2",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 98,
+      "case": "H100-098",
+      "text": "9 qA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 99,
+      "case": "H100-099",
+      "text": "1 xxA",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    },
+    {
+      "iteration": 100,
+      "case": "H100-100",
+      "text": "1 A*2^foo",
+      "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
+      "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
+      "status": "PENDING"
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 754,
+      "differentialCases": 368,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 764,
+      "differentialCases": 378,
+      "mismatches": 0
+    }
+  ]
+}

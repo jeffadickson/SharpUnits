@@ -7,7 +7,7 @@ internal static class JavaUnitTextParser
     internal static UnitDefinition Resolve(string symbol,UnitRegistry registry)
     {
         try{return ResolveSimple(symbol,registry);}
-        catch(KeyNotFoundException) when(symbol.IndexOfAny(['*','/','·','(',')','^'])>=0)
+        catch(KeyNotFoundException) when(symbol.IndexOfAny(['*','/','·','(',')','^','¹','²','³'])>=0)
         {
             // Exact registrations take priority. Composite metadata retains the input expression;
             // dimensional compatibility does not imply equality with a named alternate Java unit.
@@ -76,22 +76,40 @@ internal static class JavaUnitTextParser
             {
                 var start=position;
                 while(position<text.Length&&!JavaQuantityTextParser.IsJavaWhitespace(text[position])
-                    &&text[position] is not ('*' or '/' or '·' or '(' or ')' or '^'))position++;
+                    &&text[position] is not ('*' or '/' or '·' or '(' or ')' or '^' or '¹' or '²' or '³'))position++;
                 if(position==start)throw new FormatException("Expected a registered unit symbol.");
                 result=RationalUnitExpression.From(ResolveSimple(text[start..position],registry));
             }
             SkipWhitespace();
-            if(position<text.Length&&text[position]=='^')
+            if(position<text.Length&&(text[position] is '^' or '¹' or '²' or '³'
+                ||text[position]=='*'&&position+1<text.Length&&text[position+1]=='*'))
             {
-                position++;var start=position;
-                if(position<text.Length&&text[position]=='-')position++;
-                while(position<text.Length&&char.IsAsciiDigit(text[position]))position++;
-                if(!int.TryParse(text[start..position],System.Globalization.NumberStyles.AllowLeadingSign,
-                    System.Globalization.CultureInfo.InvariantCulture,out var power)||power is < -1024 or >1024)
-                    throw new FormatException("Unit powers must be integers from -1024 to 1024.");
+                if(text[position]=='^')position++;
+                else if(text[position]=='*')position+=2;
+                var power=ReadExponentInteger();
                 result=result.Pow(new Rational(power,1));
             }
             return result;
+        }
+
+        private int ReadExponentInteger()
+        {
+            var negative=position<text.Length&&text[position]=='-';
+            if(negative)position++;
+            var start=position;var magnitude=0;
+            while(position<text.Length)
+            {
+                var digit=text[position] switch {'¹'=>1,'²'=>2,'³'=>3,>= '0' and <= '9'=>text[position]-'0',_=>-1};
+                if(digit<0)break;
+                magnitude=magnitude*10+digit;
+                if(magnitude>1024)throw new FormatException("Unit exponent magnitude exceeds 1024.");
+                position++;
+            }
+            if(position==start)throw new FormatException("Expected exponent digits.");
+            // Pinned SimpleUnitFormat.readExponent uses zero as its default-one sentinel,
+            // even for an explicit zero literal. Native Pow(0) retains conventional algebra.
+            if(magnitude==0)magnitude=1;
+            return negative?-magnitude:magnitude;
         }
 
         private void SkipWhitespace()

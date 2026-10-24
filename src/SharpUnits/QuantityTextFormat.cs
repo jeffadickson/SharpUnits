@@ -9,7 +9,9 @@ public sealed class QuantityTextFormat
  public QuantityTextFormat(UnitRegistry registry)=>this.registry=registry??throw new ArgumentNullException(nameof(registry));
  /// <summary>Parses invariant decimal or integer-rational text, retaining its unit and absolute scale.</summary>
  /// <remarks>Uses Java whitespace, registered symbols, the Celsius compatibility alias and linear
- /// unit expressions with right-associated operators, parentheses and integer powers (-1024 to 1024).
+ /// unit expressions with right-associated operators, parentheses, caret/double-star powers and
+ /// superscript digits 1/2/3 (exponent magnitude at most 1024). Pinned Java treats an explicit
+ /// zero exponent as its default-one sentinel; native unit Pow(0) keeps conventional algebra.
  /// Groups/operators are limited to depth 64. Affine units cannot participate in compound algebra.
  /// Whitespace is permitted after ÷ before the denominator. A missing unit denotes dimensionless.
  /// Unlike <see cref="Parse"/>, this preserves the display magnitude. Input is limited to 4096 characters

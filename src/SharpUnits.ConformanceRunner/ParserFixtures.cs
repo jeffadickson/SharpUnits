@@ -11,6 +11,15 @@ internal static class ParserFixtures
         {
             "1"=>new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1)),
             "A²"=>new UnitDefinition("A²",Dimension.ElectricCurrent.Pow(2),UnitConversion.Linear(1)),
+            "V²"=>new UnitDefinition("V²",Dimension.Voltage.Pow(2),UnitConversion.Linear(1)),
+            "Ω²"=>new UnitDefinition("Ω²",Dimension.Resistance.Pow(2),UnitConversion.Linear(1)),
+            "A³"=>new UnitDefinition("A³",Dimension.ElectricCurrent.Pow(3),UnitConversion.Linear(1)),
+            "pow23A"=>new UnitDefinition("pow23A",Dimension.ElectricCurrent.Pow(23),UnitConversion.Linear(1)),
+            "invA"=>new UnitDefinition("invA",Dimension.ElectricCurrent.Pow(-1),UnitConversion.Linear(1)),
+            "sqrtA"=>new UnitDefinition("sqrtA",RationalDimension.From(Dimension.ElectricCurrent).Root(2),UnitConversion.Linear(1)),
+            "invSqrtA"=>new UnitDefinition("invSqrtA",RationalDimension.From(Dimension.ElectricCurrent).Pow(new Rational(-1,2)),UnitConversion.Linear(1)),
+            "AperΩ"=>new UnitDefinition("AperΩ",Dimension.ElectricCurrent-Dimension.Resistance,UnitConversion.Linear(1)),
+            "AperV"=>new UnitDefinition("AperV",Dimension.ElectricCurrent-Dimension.Voltage,UnitConversion.Linear(1)),
             var symbol=>registry.Resolve(symbol!)
         };
         var formatter=new QuantityTextFormat(registry);

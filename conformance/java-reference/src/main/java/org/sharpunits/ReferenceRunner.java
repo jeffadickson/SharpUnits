@@ -117,6 +117,13 @@ public final class ReferenceRunner {
   private static Unit<?> unit(String symbol) {
     return switch(symbol) {
       case "A" -> Units.AMPERE;
+      case "A³" -> Units.AMPERE.pow(3);
+      case "pow23A" -> Units.AMPERE.pow(23);
+      case "invA" -> Units.AMPERE.inverse();
+      case "sqrtA" -> Units.AMPERE.root(2);
+      case "invSqrtA" -> Units.AMPERE.root(2).inverse();
+      case "AperΩ" -> Units.AMPERE.divide(Units.OHM);
+      case "AperV" -> Units.AMPERE.divide(Units.VOLT);
       case "m" -> Units.METRE;
       case "mm" -> MetricPrefix.MILLI(Units.METRE);
       case "mV" -> MetricPrefix.MILLI(Units.VOLT);
