@@ -64,6 +64,8 @@ public sealed class ParserRobustnessTests
         var formatter=Format();
         Assert.Throws<ArgumentNullException>(()=>formatter.ParseJavaQuantity(null!));
         Assert.Throws<FormatException>(()=>formatter.ParseJavaQuantity(new string('1',4097)));
+        Assert.Throws<FormatException>(()=>formatter.ParseJavaQuantity("1 A"+new string(' ',4094)));
+        Assert.Equal(1,formatter.ParseJavaQuantity("1 A"+new string(' ',4093)).Value);
         Assert.Throws<FormatException>(()=>formatter.ParseJavaQuantity(new string('1',1025)+" A"));
         Assert.Throws<DivideByZeroException>(()=>formatter.ParseJavaQuantity("1÷0 A"));
         Assert.Throws<KeyNotFoundException>(()=>formatter.ParseJavaQuantity("1 unknown"));

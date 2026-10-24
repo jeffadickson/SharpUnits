@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 // Reproducible scenario preparation and checkpoint recording. Run from the repository root.
 // This tool never infers a pass from an authored expectation: Java and CLR outputs must both match it.
-var jsonOptions=new JsonSerializerOptions { WriteIndented=true };
+var jsonOptions=new JsonSerializerOptions { WriteIndented=true,Encoder=System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
 var casesPath="conformance/java-reference/cases.json";
 var manifestPath="conformance/parser-review-50.json";
 var command=args[0];var count=int.Parse(args[1],CultureInfo.InvariantCulture);

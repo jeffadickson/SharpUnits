@@ -3050,6 +3050,86 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-21",
+      "operation": "parseQuantity",
+      "text": "1\u00F73 A",
+      "observe": "magnitude",
+      "expected": 0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-22",
+      "operation": "parseQuantity",
+      "text": "-1\u00F73 V",
+      "observe": "magnitude",
+      "expected": -0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-23",
+      "operation": "parseQuantity",
+      "text": "1\u00F7-3 \u03A9",
+      "observe": "magnitude",
+      "expected": -0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-24",
+      "operation": "parseQuantity",
+      "text": "-1\u00F7-3 K",
+      "observe": "magnitude",
+      "expected": 0.3333333333333333,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-25",
+      "operation": "parseQuantity",
+      "text": "5\u00F72 \u00B0C",
+      "observe": "magnitude",
+      "expected": 2.5,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-26",
+      "operation": "parseQuantity",
+      "text": "0\u00F77 A",
+      "observe": "magnitude",
+      "expected": 0,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-27",
+      "operation": "parseQuantity",
+      "text": "\u002B3\u00F7\u002B4 V",
+      "observe": "magnitude",
+      "expected": 0.75,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-28",
+      "operation": "parseQuantity",
+      "text": "12345678901234567890\u00F710 A",
+      "observe": "magnitude",
+      "expected": 1.2345678901234568E+18,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-29",
+      "operation": "parseAccepts",
+      "text": "1\u00F70 A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "P50-30",
+      "operation": "parseAccepts",
+      "text": "1\u00F72\u00F73 A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }
