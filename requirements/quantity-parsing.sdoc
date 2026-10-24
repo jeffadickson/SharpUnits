@@ -1,0 +1,49 @@
+[DOCUMENT]
+TITLE: SharpUnits quantity parsing requirements
+
+[REQUIREMENT]
+UID: JP-014
+STATUS: Active
+TITLE: Quantity parsing compatibility
+STATEMENT: SharpUnits shall provide quantity parsing with a documented Java compatibility envelope.
+COMMENT: Full Java grammar, localization, cursor APIs and arbitrary Number precision remain open. See docs/java-parity-gap-analysis.md and conformance/parser-fifty-review.md.
+
+[REQUIREMENT]
+UID: JP-014-DECIMAL
+STATUS: Active
+TITLE: Finite decimal input
+STATEMENT: The adapter parser shall accept invariant signed decimal and scientific literals separated from a registered unit by Java whitespace, preserving the display magnitude and unit with absolute scale.
+COMMENT: Implementation: src/SharpUnits/JavaQuantityTextParser.cs. Verification: tests/SharpUnits.Tests/ParserReferenceFixtureTests.cs. Evidence: conformance/parser-review-50.json.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-RATIONAL
+STATUS: Active
+TITLE: Rational input
+STATEMENT: The adapter parser shall accept two signed integer literals joined by the division sign and round the exact rational once to a finite display double; a zero denominator shall be rejected.
+COMMENT: Implementation: src/SharpUnits/JavaQuantityTextParser.cs and JavaDoubleArithmetic.cs. Verification: ParserReferenceFixtureTests and ParserRobustnessTests. Evidence: conformance/parser-review-50.json.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-INVALID
+STATUS: Active
+TITLE: Malformed input and resource limits
+STATEMENT: The adapter parser shall reject malformed numeric tokens, unknown units, nonfinite results and inputs exceeding its documented resource limits without returning a partial quantity.
+COMMENT: Unit syntax is restricted to exact registered symbols. Verification includes seeded malformed-input fuzzing and negative tests; Java cursor APIs and unbounded numeric types are not promised.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-LEGACY
+STATUS: Active
+TITLE: Existing parser compatibility
+STATEMENT: QuantityTextFormat.Parse shall preserve its existing SI-only behavior while ParseJavaQuantity exposes the new adapter parser.
+COMMENT: Verification: QuantityTextFormatTests and ParserRobustnessTests. Evidence: conformance/parser-fifty-review.md.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014

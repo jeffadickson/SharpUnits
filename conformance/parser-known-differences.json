@@ -1,0 +1,55 @@
+{
+  "note": "Four observed incompatibilities and one shared rejection guard; not counted as matching conformance cases.",
+  "cases": [
+    {
+      "id": "P-LIMIT-01",
+      "operation": "parseAccepts",
+      "text": "1 A trailing",
+      "expectedJava": false,
+      "expectedDotnet": false,
+      "reason": "Both reject this unconsumed suffix; this guards against an overly permissive CLR parser.",
+      "javaActual": false,
+      "dotnetActual": false
+    },
+    {
+      "id": "P-LIMIT-02",
+      "operation": "parseAccepts",
+      "text": "1 A/V",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "General compound-unit grammar is not implemented by this parser.",
+      "javaActual": true,
+      "dotnetActual": false
+    },
+    {
+      "id": "P-LIMIT-03",
+      "operation": "parseAccepts",
+      "text": "1÷ 2 A",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "The CLR subset requires a contiguous rational token.",
+      "javaActual": true,
+      "dotnetActual": false
+    },
+    {
+      "id": "P-LIMIT-04",
+      "operation": "parseAccepts",
+      "text": "1 ℃",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "The default CLR registry uses °C and does not automatically resolve Java format aliases.",
+      "javaActual": true,
+      "dotnetActual": false
+    },
+    {
+      "id": "P-LIMIT-05",
+      "operation": "parseAccepts",
+      "text": "1e309 A",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Java retains arbitrary finite BigDecimal magnitude; the CLR adapter requires finite doubles.",
+      "javaActual": true,
+      "dotnetActual": false
+    }
+  ]
+}

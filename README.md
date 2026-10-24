@@ -4,7 +4,13 @@ C# dimensional analysis, electrical quantities, and symbolic engineering equatio
 
 ## Status
 
-Alpha prototype. Source baseline currently exists in the local project archive; the full source import to GitHub is pending. Do not treat CI as passing until the complete source is uploaded and workflows execute.
+GitHub CI is disabled at the user's request. The .NET and Java workflows are disabled
+in GitHub and retain only manual dispatch triggers in source. Re-enable them explicitly
+before requesting a manual GitHub run. Local build and test commands remain available.
+
+Alpha .NET 10 library. Java compatibility work is in progress; passing tests do not
+imply full JSR 385 conformance. See the [assertion review](conformance/quantity-interface-review.md)
+for executable evidence and remaining differences.
 
 ## Engineering goals
 
@@ -13,9 +19,20 @@ Alpha prototype. Source baseline currently exists in the local project archive; 
 - Typed Ohm's law and electrical quantity algebra
 - Dimension-checked symbolic solving using optional AngouriMath adapter
 - Traceable requirements, STRIDE assessment, XML API documentation and DocFX
-- Cross-platform .NET 8 build and tests
+- Cross-platform .NET 10 build and tests
 
 See GitHub Issues for work tracking.
+
+For temperatures, see [absolute values, intervals, and shifted units](docs/temperature-semantic-envelope.md).
+The dedicated temperature types enforce physical arithmetic rules; `JavaQuantityAdapter`
+follows Indriya's compatibility conventions.
+
+`IJavaQuantityFactory.CreateJavaQuantity` creates quantities retaining their display
+unit and absolute/relative scale. See the [factory review and examples](conformance/factory-fifty-review.md).
+
+`QuantityTextFormat.ParseJavaQuantity` retains display values and units for a
+documented subset of Java decimal/rational syntax. See the
+[parser review, coverage and remaining gaps](conformance/parser-fifty-review.md).
 
 ## Requirements closure
 

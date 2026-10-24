@@ -22,27 +22,28 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
-  if(operation!="convert"&&operation!="multiply"&&operation!="divide"&&operation!="power"&&operation!="root"&&operation!="quantityAdd"&&operation!="quantitySubtract"&&operation!="quantityMultiply"&&operation!="quantityDivide")throw new NotSupportedException("Unsupported operation");
+  if(operation?.StartsWith("parse",StringComparison.Ordinal)==true)
+  {
+   Console.WriteLine(JsonSerializer.Serialize(new {id,result=ParserFixtures.Evaluate(test)}));
+   continue;
+  }
+  if(operation?.StartsWith("factory",StringComparison.Ordinal)==true)
+  {
+   Console.WriteLine(JsonSerializer.Serialize(new {id,result=FactoryFixtures.Evaluate(test,registry)}));
+   continue;
+  }
+  if(operation?.StartsWith("quantity",StringComparison.Ordinal)==true)
+  {
+   var quantityResult=QuantityFixtures.Evaluate(test,registry);
+   Console.WriteLine(JsonSerializer.Serialize(new {id,result=quantityResult}));
+   continue;
+  }
+  if(operation!="convert"&&operation!="multiply"&&operation!="divide"&&operation!="power"&&operation!="root")throw new NotSupportedException("Unsupported operation");
   var value=test.GetProperty("value").GetDouble();
   var source=test.GetProperty("from").GetString()!;
   var target=test.GetProperty("to").GetString()!;
   double result;
   if(operation=="convert")result=registry.Convert(value,source,target);
-  else if(operation=="quantityMultiply"||operation=="quantityDivide")
-  {
-   var left=registry.Resolve(source).ToQuantity(value);
-   var right=registry.Resolve(target).ToQuantity(test.GetProperty("rhsValue").GetDouble());
-   var combined=operation=="quantityMultiply"?left*right:left/right;
-   var unit=registry.Resolve(test.GetProperty("resultUnit").GetString()!);
-   result=unit.FromQuantity(combined);
-  }
-  else if(operation=="quantityAdd"||operation=="quantitySubtract")
-  {
-   var left=registry.Resolve(source).ToQuantity(value);
-   var right=registry.Resolve(target).ToQuantity(test.GetProperty("rhsValue").GetDouble());
-   var combined=operation=="quantityAdd"?left+right:left-right;
-   result=registry.Resolve(test.GetProperty("resultUnit").GetString()!).FromQuantity(combined);
-  }
   else
   {
    var left=RationalUnitExpression.From(registry.Resolve(source));
@@ -59,9 +60,9 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
   }
   Console.WriteLine(JsonSerializer.Serialize(new {id,result}));
  }
- catch(InvalidOperationException)
+ catch(Exception ex) when (QuantityFixtures.ErrorCategory(ex,test.GetProperty("operation").GetString()) is not null)
  {
-  Console.WriteLine(JsonSerializer.Serialize(new {id,error="INCOMPATIBLE_DIMENSION"}));
+  Console.WriteLine(JsonSerializer.Serialize(new {id,error=QuantityFixtures.ErrorCategory(ex,test.GetProperty("operation").GetString())}));
  }
  catch(Exception ex)
  {

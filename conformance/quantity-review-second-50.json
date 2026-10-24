@@ -1,0 +1,1454 @@
+{
+  "startingCommit": "cf417d451782bd4321842eeb67e0f0091294efb3",
+  "ciPolicy": "GitHub CI remains disabled; local .NET 10 and pinned Java verification only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q100-01",
+      "hypothesis": "Boolean true is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-01",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-01",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-01",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-01",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q100-02",
+      "hypothesis": "Boolean false cannot silently act as zero",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-02",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-02",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-02",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-02",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q100-03",
+      "hypothesis": "Numeric string is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-03",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-03",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-03",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-03",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 4,
+      "case": "Q100-04",
+      "hypothesis": "Whitespace numeric string is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-04",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-04",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-04",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-04",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 5,
+      "case": "Q100-05",
+      "hypothesis": "Character is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-05",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-05",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 6,
+      "case": "Q100-06",
+      "hypothesis": "Date/time is not a Number scalar",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-06",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-06",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 7,
+      "case": "Q100-07",
+      "hypothesis": "Enum underlying integer does not make it Number",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-07",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-07",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-07",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-07",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 8,
+      "case": "Q100-08",
+      "hypothesis": "DBNull has no numeric Number analogue",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-08",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-08",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 9,
+      "case": "Q100-09",
+      "hypothesis": "Signed numeric string must not bypass numeric API",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-09",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-09",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-09",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-09",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q100-10",
+      "hypothesis": "Scientific notation text must not bypass numeric API",
+      "source": "javax.measure.Quantity.multiply(Number); Number.class.isInstance",
+      "scope": "API argument admissibility; CLR equivalents, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-10",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q100-10",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q100-10",
+        "result": false
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-10",
+        "result": false
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 11,
+      "case": "Q100-11",
+      "hypothesis": "Built-in sbyte numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -128.0,
+        "id": "Q100-11",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "dotnetAfter": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-11",
+        "result": -128
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 12,
+      "case": "Q100-12",
+      "hypothesis": "Built-in byte numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 255.0,
+        "id": "Q100-12",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "dotnetAfter": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-12",
+        "result": 255
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 13,
+      "case": "Q100-13",
+      "hypothesis": "Built-in short numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -32768.0,
+        "id": "Q100-13",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "dotnetAfter": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-13",
+        "result": -32768
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 14,
+      "case": "Q100-14",
+      "hypothesis": "Built-in ushort numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 65535.0,
+        "id": "Q100-14",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "dotnetAfter": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-14",
+        "result": 65535
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 15,
+      "case": "Q100-15",
+      "hypothesis": "Built-in int numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -2147483648.0,
+        "id": "Q100-15",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "dotnetAfter": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-15",
+        "result": -2147483648
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 16,
+      "case": "Q100-16",
+      "hypothesis": "Built-in uint numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 4294967295.0,
+        "id": "Q100-16",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "dotnetAfter": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-16",
+        "result": 4294967295
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 17,
+      "case": "Q100-17",
+      "hypothesis": "Built-in long numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -9.223372036854776e+18,
+        "id": "Q100-17",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "dotnetAfter": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-17",
+        "result": -9.223372036854776e+18
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 18,
+      "case": "Q100-18",
+      "hypothesis": "Built-in ulong numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 9.223372036854776e+18,
+        "id": "Q100-18",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "dotnetAfter": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-18",
+        "result": 9.223372036854776e+18
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 19,
+      "case": "Q100-19",
+      "hypothesis": "Built-in float numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.25,
+        "id": "Q100-19",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "dotnetAfter": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-19",
+        "result": 1.25
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 20,
+      "case": "Q100-20",
+      "hypothesis": "Built-in decimal numeric scalar remains supported at representative boundary",
+      "source": "Quantity.multiply(Number); NumberQuantity.multiply; CLR built-in scalar adaptation",
+      "scope": "actual scalar multiplication; unsigned types map to wider Java Number types; double output does not prove exact integer storage",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.125,
+        "id": "Q100-20",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "dotnetAfter": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-20",
+        "result": 0.125
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 21,
+      "case": "Q100-21",
+      "hypothesis": "Tiny Celsius survives identity converter with different CLR symbol",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-21",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-21",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 22,
+      "case": "Q100-22",
+      "hypothesis": "Signed tiny Celsius survives identity converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-22",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-22",
+        "result": -1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 23,
+      "case": "Q100-23",
+      "hypothesis": "Fractional Celsius survives identity converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-23",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-23",
+        "result": 20.1
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 24,
+      "case": "Q100-24",
+      "hypothesis": "Direct scale ratio avoids underflow in tiny forward conversion",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "dotnetBefore": {
+        "id": "Q100-24",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-24",
+        "result": 1e-323
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 25,
+      "case": "Q100-25",
+      "hypothesis": "Signed direct scale ratio avoids underflow",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "dotnetBefore": {
+        "id": "Q100-25",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-25",
+        "result": -1e-323
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 26,
+      "case": "Q100-26",
+      "hypothesis": "Reverse power-of-two rescaling retains subnormal magnitude",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "dotnetBefore": {
+        "id": "Q100-26",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-26",
+        "result": 5e-324
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 27,
+      "case": "Q100-27",
+      "hypothesis": "Relative copied Celsius ignores offset",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "dotnetAfter": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-27",
+        "result": 1e-320
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 28,
+      "case": "Q100-28",
+      "hypothesis": "Fractional Fahrenheit survives equal converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-28",
+        "result": 32.099999999999966
+      },
+      "dotnetAfter": {
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-28",
+        "result": 32.1
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 29,
+      "case": "Q100-29",
+      "hypothesis": "Tiny Fahrenheit survives equal converter",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-29",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-29",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 30,
+      "case": "Q100-30",
+      "hypothesis": "Comparison through equivalent converter retains ordering",
+      "source": "ScaleHelper.convertTo; AbstractQuantity.compareTo",
+      "scope": "converter behavior; copy names resolve to original Java units and distinct equivalent CLR converters",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-30",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q100-30",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q100-30",
+        "result": -1
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-30",
+        "result": -1
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 31,
+      "case": "Q100-31",
+      "hypothesis": "Adding zero interval preserves tiny Celsius point",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-31",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-31",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q100-32",
+      "hypothesis": "Subtracting zero interval preserves tiny Celsius point",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-32",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-32",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q100-33",
+      "hypothesis": "Relative zero plus tiny Celsius point preserves coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-33",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-33",
+        "result": 1e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q100-34",
+      "hypothesis": "Adding tiny Celsius interval does not lose point beside offset",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-34",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-34",
+        "result": 2e-20
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q100-35",
+      "hypothesis": "Zero Fahrenheit interval preserves tiny Fahrenheit coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "precisionDisposition": "Indriya returns 1.0000000000036774e-20 after shifted Fahrenheit arithmetic; declared 1e-30 absolute tolerance allows 1e-20 CLR result. This is bounded numerical agreement, not bit-exact Java MathContext equivalence.",
+      "java": {
+        "absoluteTolerance": 1e-30,
+        "id": "Q100-35",
+        "result": 1.0000000000036774e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-35",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-35",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-35",
+        "result": 1e-20
+      },
+      "bitExactOutput": false
+    },
+    {
+      "iteration": 36,
+      "case": "Q100-36",
+      "hypothesis": "Relative zero plus tiny Fahrenheit point preserves coordinate",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "precisionDisposition": "Indriya returns 1.0000000000036774e-20 after shifted Fahrenheit arithmetic; declared 1e-30 absolute tolerance allows 1e-20 CLR result. This is bounded numerical agreement, not bit-exact Java MathContext equivalence.",
+      "java": {
+        "absoluteTolerance": 1e-30,
+        "id": "Q100-36",
+        "result": 1.0000000000036774e-20
+      },
+      "dotnetBefore": {
+        "id": "Q100-36",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-36",
+        "result": 1e-20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-36",
+        "result": 1e-20
+      },
+      "bitExactOutput": false
+    },
+    {
+      "iteration": 37,
+      "case": "Q100-37",
+      "hypothesis": "Relative decimal addition follows Java decimal promotion",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "dotnetBefore": {
+        "id": "Q100-37",
+        "result": 0.30000000000000004
+      },
+      "dotnetAfter": {
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-37",
+        "result": 0.3
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 38,
+      "case": "Q100-38",
+      "hypothesis": "Linear decimal addition follows Java decimal promotion",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "dotnetBefore": {
+        "id": "Q100-38",
+        "result": 0.30000000000000004
+      },
+      "dotnetAfter": {
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-38",
+        "result": 0.3
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 39,
+      "case": "Q100-39",
+      "hypothesis": "Absolute fractional subtraction retains Indriya absolute convention",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "dotnetBefore": {
+        "id": "Q100-39",
+        "result": -273.04999999999995
+      },
+      "dotnetAfter": {
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-39",
+        "result": -273.05
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 40,
+      "case": "Q100-40",
+      "hypothesis": "Relative decimal subtraction avoids binary cancellation",
+      "source": "ScaleHelper.addition; DefaultNumberSystem.addWideAndNarrow; BigDecimal.valueOf promotion",
+      "scope": "finite double display arithmetic; no full Java Number precision claim",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "dotnetBefore": {
+        "id": "Q100-40",
+        "result": 0.09999999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-40",
+        "result": 0.1
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 41,
+      "case": "Q100-41",
+      "hypothesis": "Finite conversion survives an overflowing scale ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-41",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-41: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-41",
+        "result": 1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 42,
+      "case": "Q100-42",
+      "hypothesis": "Finite conversion survives an underflowing scale ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-42",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-42",
+        "result": 1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 43,
+      "case": "Q100-43",
+      "hypothesis": "Signed conversion survives an overflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-43",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-43: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-43",
+        "result": -1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 44,
+      "case": "Q100-44",
+      "hypothesis": "Signed conversion survives an underflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-44",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-44",
+        "result": -1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 45,
+      "case": "Q100-45",
+      "hypothesis": "Relative conversion survives an overflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "dotnetBefore": {
+        "id": "Q100-45",
+        "error": "UNHANDLED_RUNNER_FAILURE",
+        "diagnostic": "Q100-45: ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'magnitude')"
+      },
+      "dotnetAfter": {
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-45",
+        "result": 1e+100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 46,
+      "case": "Q100-46",
+      "hypothesis": "Relative conversion survives an underflowing ratio",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-46",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-46",
+        "result": 1e-100
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 47,
+      "case": "Q100-47",
+      "hypothesis": "Genuine final underflow rounds to zero",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-47",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q100-47",
+        "result": 0
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 48,
+      "case": "Q100-48",
+      "hypothesis": "Subnormal conversion follows decimal converter promotion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-48",
+        "result": 9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-48",
+        "result": 1e-320
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 49,
+      "case": "Q100-49",
+      "hypothesis": "Signed subnormal conversion follows decimal converter promotion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q100-49",
+        "result": -9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-49",
+        "result": -1e-320
+      },
+      "bitExactOutput": true
+    },
+    {
+      "iteration": 50,
+      "case": "Q100-50",
+      "hypothesis": "Large finite display input survives extreme ratio conversion",
+      "source": "MultiplyConverter.convert(Number); ScaleHelper.convertTo; RationalNumber",
+      "scope": "finite input/output with extreme converter factors; final output remains double",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "dotnetBefore": {
+        "id": "Q100-50",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q100-50",
+        "result": 1.7e-100
+      },
+      "bitExactOutput": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 481,
+      "differentialCases": 118,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 491,
+      "differentialCases": 128,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 501,
+      "differentialCases": 138,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 511,
+      "differentialCases": 148,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 521,
+      "differentialCases": 158,
+      "mismatches": 0
+    }
+  ],
+  "failingCaseOutcomesResolved": 35,
+  "bitExactFinalCases": 48,
+  "boundedAgreementCases": [
+    "Q100-35",
+    "Q100-36"
+  ],
+  "completedDate": "2026-10-21",
+  "interpretation": "50 scenario review iterations with five compile/test checkpoints, not 50 commits or TCK closures. First ten inspect Java Number admissibility; the remaining forty execute actual Java quantity methods.",
+  "independentRoundingCheck": {
+    "script": "tools/check_quantity_rounding.py",
+    "seed": 385,
+    "conversionCases": 100,
+    "additionCases": 100,
+    "mismatches": 0,
+    "scope": "Exact Python Fraction oracle for CLR round-trip decimal coefficients, not full Java Number semantics"
+  },
+  "finalVerification": {
+    "dotnetTestsPassed": 521,
+    "differentialCases": 158,
+    "mismatchesOutsideDeclaredTolerances": 0,
+    "pythonComparatorTestsPassed": 10,
+    "ci": "DISABLED_BY_USER; no new CI run or formal closure claimed"
+  },
+  "pins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "tckSummary": {
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "notes": [
+    "First ten Java results are Number.class.isInstance admission checks; CLR results invoke public scalar multiplication. This is an API adaptation check, not Java arithmetic with invalid arguments.",
+    "New typed-scalar and custom-unit fixture instrumentation was compiled before collecting baselines; production code was unchanged in the 11-20 group.",
+    "Q100-24 through Q100-26 were refined to minimum-subnormal inputs so they actually expose intermediate underflow.",
+    "Before Q100-41 the console runner aborted on unexpected overflow; remaining before-results were captured by running cases individually. UNHANDLED_RUNNER_FAILURE records those real exits, not a normalized Java exception.",
+    "Two tiny Fahrenheit arithmetic cases remain numerically different within an explicit 1e-30 absolute tolerance. Java MathContext, Double formatting and general Number semantics are not verified."
+  ],
+  "normalizedSourceSha256": {
+    "src\\SharpUnits\\JavaQuantityAdapter.cs": "b92853a6a81a2b1934caee4edfbe3dc705f902c858a6b70795011b8da72df405",
+    "src\\SharpUnits\\JavaDoubleArithmetic.cs": "f02e90722461d290c7da3c7ad125dd6b6138e7d578f350fa117465e6a6ead48c",
+    "conformance\\java-reference\\cases.json": "45177d85573143b79349550a56564e7f38846feb7f06d44cfc8b9ca863b23e61"
+  },
+  "verificationHarnessCorrections": [
+    "Fixture expectation checks now honor per-case zero tolerances.",
+    "Differential comparison rejects boolean/numeric substitutions and records with neither result nor error."
+  ]
+}
