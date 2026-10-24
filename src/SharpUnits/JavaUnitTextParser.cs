@@ -3,7 +3,7 @@ namespace SharpUnits;
 /// <summary>Parses bounded Java-style linear unit expressions without changing the caller's registry.</summary>
 internal static class JavaUnitTextParser
 {
-    // @relation(JP-014-ALIAS, JP-014-COMPOUND, scope=file)
+    // @relation(JP-014-ALIAS, JP-014-COMPOUND, JP-014-POWERS, JP-014-ROOTS, scope=file)
     internal static UnitDefinition Resolve(string symbol,UnitRegistry registry)
     {
         try{return ResolveSimple(symbol,registry);}
@@ -88,6 +88,15 @@ internal static class JavaUnitTextParser
                 else if(text[position]=='*')position+=2;
                 var power=ReadExponentInteger();
                 result=result.Pow(new Rational(power,1));
+                if(position<text.Length&&text[position]==':')
+                {
+                    position++;
+                    var root=ReadExponentInteger();
+                    // Java applies pow and root sequentially; negative roots invert the
+                    // positive root. Combining the floating exponents can change rounding.
+                    result=result.Root(Math.Abs(root));
+                    if(root<0)result=new RationalUnitExpression(RationalDimension.From(Dimension.None),1)/result;
+                }
             }
             return result;
         }

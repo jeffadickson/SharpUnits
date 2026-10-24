@@ -12,6 +12,8 @@ public sealed class QuantityTextFormat
  /// unit expressions with right-associated operators, parentheses, caret/double-star powers and
  /// superscript digits 1/2/3 (exponent magnitude at most 1024). Pinned Java treats an explicit
  /// zero exponent as its default-one sentinel; native unit Pow(0) keeps conventional algebra.
+ /// Colon-root exponents are supported with root magnitude at most 1024; zero roots likewise
+ /// denote Java's default-one sentinel. Scale evaluation applies power and root sequentially.
  /// Groups/operators are limited to depth 64. Affine units cannot participate in compound algebra.
  /// Whitespace is permitted after ÷ before the denominator. A missing unit denotes dimensionless.
  /// Unlike <see cref="Parse"/>, this preserves the display magnitude. Input is limited to 4096 characters
