@@ -3543,6 +3543,95 @@
       "observe": "unitScale",
       "expected": 1,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-31",
+      "operation": "parseQuantity",
+      "text": "1 A/A/A",
+      "observe": "converted",
+      "expected": 1,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-32",
+      "operation": "parseQuantity",
+      "text": "2 A/(A/A)",
+      "observe": "converted",
+      "expected": 2,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-33",
+      "operation": "parseQuantity",
+      "text": "3 V/Ω/A",
+      "observe": "compatible",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "resultUnit": "A²"
+    },
+    {
+      "id": "G50-34",
+      "operation": "parseQuantity",
+      "text": "4 (A/A)/A",
+      "observe": "compatible",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-35",
+      "operation": "parseQuantity",
+      "text": "5 A^2",
+      "observe": "compatible",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "resultUnit": "A²"
+    },
+    {
+      "id": "G50-36",
+      "operation": "parseQuantity",
+      "text": "6 (A^2)/A",
+      "observe": "converted",
+      "expected": 6,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-37",
+      "operation": "parseQuantity",
+      "text": "7 A^-1*A",
+      "observe": "converted",
+      "expected": 7,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "G50-38",
+      "operation": "parseQuantity",
+      "text": "8 mA^2",
+      "observe": "unitScale",
+      "expected": 1E-06,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-39",
+      "operation": "parseQuantity",
+      "text": "9 (mA*kΩ)/V",
+      "observe": "converted",
+      "expected": 9,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "G50-40",
+      "operation": "parseQuantity",
+      "text": "10 V/(mA*kΩ)",
+      "observe": "converted",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
     }
   ]
 }

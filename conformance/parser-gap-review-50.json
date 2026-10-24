@@ -518,7 +518,16 @@
       "text": "1 A/A/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-31",
+        "result": 1.0
+      },
+      "dotnet": {
+        "id": "G50-31",
+        "result": 1
+      }
     },
     {
       "iteration": 32,
@@ -526,7 +535,16 @@
       "text": "2 A/(A/A)",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-32",
+        "result": 2.0
+      },
+      "dotnet": {
+        "id": "G50-32",
+        "result": 2
+      }
     },
     {
       "iteration": 33,
@@ -534,7 +552,16 @@
       "text": "3 V/Ω/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-33",
+        "result": true
+      },
+      "dotnet": {
+        "id": "G50-33",
+        "result": true
+      }
     },
     {
       "iteration": 34,
@@ -542,7 +569,16 @@
       "text": "4 (A/A)/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-34",
+        "result": false
+      },
+      "dotnet": {
+        "id": "G50-34",
+        "result": false
+      }
     },
     {
       "iteration": 35,
@@ -550,7 +586,16 @@
       "text": "5 A^2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-35",
+        "result": true
+      },
+      "dotnet": {
+        "id": "G50-35",
+        "result": true
+      }
     },
     {
       "iteration": 36,
@@ -558,7 +603,16 @@
       "text": "6 (A^2)/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-36",
+        "result": 6.0
+      },
+      "dotnet": {
+        "id": "G50-36",
+        "result": 6
+      }
     },
     {
       "iteration": 37,
@@ -566,7 +620,16 @@
       "text": "7 A^-1*A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-37",
+        "result": 7.0
+      },
+      "dotnet": {
+        "id": "G50-37",
+        "result": 7
+      }
     },
     {
       "iteration": 38,
@@ -574,7 +637,16 @@
       "text": "8 mA^2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-38",
+        "result": 1.0E-6
+      },
+      "dotnet": {
+        "id": "G50-38",
+        "result": 1E-06
+      }
     },
     {
       "iteration": 39,
@@ -582,7 +654,16 @@
       "text": "9 (mA*kΩ)/V",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-39",
+        "result": 9.0
+      },
+      "dotnet": {
+        "id": "G50-39",
+        "result": 9
+      }
     },
     {
       "iteration": 40,
@@ -590,7 +671,16 @@
       "text": "10 V/(mA*kΩ)",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "G50-40",
+        "result": 10.0
+      },
+      "dotnet": {
+        "id": "G50-40",
+        "result": 10
+      }
     },
     {
       "iteration": 41,
@@ -693,6 +783,13 @@
       "build": "PASS",
       "dotnetTestsPassed": 723,
       "differentialCases": 338,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 733,
+      "differentialCases": 348,
       "mismatches": 0
     }
   ]
