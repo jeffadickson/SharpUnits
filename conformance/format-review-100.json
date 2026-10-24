@@ -516,7 +516,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.5 A",
+        "id": "F100-021"
+      },
+      "dotnet": {
+        "id": "F100-021",
+        "result": "0.5 A"
+      }
     },
     {
       "iteration": 22,
@@ -532,7 +541,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.5 A",
+        "id": "F100-022"
+      },
+      "dotnet": {
+        "id": "F100-022",
+        "result": "-0.5 A"
+      }
     },
     {
       "iteration": 23,
@@ -548,7 +566,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.125 A",
+        "id": "F100-023"
+      },
+      "dotnet": {
+        "id": "F100-023",
+        "result": "0.125 A"
+      }
     },
     {
       "iteration": 24,
@@ -564,7 +591,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.125 A",
+        "id": "F100-024"
+      },
+      "dotnet": {
+        "id": "F100-024",
+        "result": "-0.125 A"
+      }
     },
     {
       "iteration": 25,
@@ -580,7 +616,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.1 A",
+        "id": "F100-025"
+      },
+      "dotnet": {
+        "id": "F100-025",
+        "result": "0.1 A"
+      }
     },
     {
       "iteration": 26,
@@ -596,7 +641,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.1 A",
+        "id": "F100-026"
+      },
+      "dotnet": {
+        "id": "F100-026",
+        "result": "-0.1 A"
+      }
     },
     {
       "iteration": 27,
@@ -612,7 +666,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.3333333333333333 A",
+        "id": "F100-027"
+      },
+      "dotnet": {
+        "id": "F100-027",
+        "result": "0.3333333333333333 A"
+      }
     },
     {
       "iteration": 28,
@@ -628,7 +691,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "3.141592653589793 A",
+        "id": "F100-028"
+      },
+      "dotnet": {
+        "id": "F100-028",
+        "result": "3.141592653589793 A"
+      }
     },
     {
       "iteration": 29,
@@ -644,7 +716,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.001 A",
+        "id": "F100-029"
+      },
+      "dotnet": {
+        "id": "F100-029",
+        "result": "0.001 A"
+      }
     },
     {
       "iteration": 30,
@@ -660,7 +741,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "1.0E-4 A",
+        "id": "F100-030"
+      },
+      "dotnet": {
+        "id": "F100-030",
+        "result": "1.0E-4 A"
+      }
     },
     {
       "iteration": 31,
@@ -676,7 +766,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-031",
+        "result": "1.0E-5 A"
+      },
+      "dotnet": {
+        "id": "F100-031",
+        "result": "1.0E-5 A"
+      }
     },
     {
       "iteration": 32,
@@ -692,7 +791,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-032",
+        "result": "1.0E-20 A"
+      },
+      "dotnet": {
+        "id": "F100-032",
+        "result": "1.0E-20 A"
+      }
     },
     {
       "iteration": 33,
@@ -708,7 +816,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-033",
+        "result": "-1.0E-20 A"
+      },
+      "dotnet": {
+        "id": "F100-033",
+        "result": "-1.0E-20 A"
+      }
     },
     {
       "iteration": 34,
@@ -724,7 +841,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-034",
+        "result": "4.9E-324 A"
+      },
+      "dotnet": {
+        "id": "F100-034",
+        "result": "4.9E-324 A"
+      }
     },
     {
       "iteration": 35,
@@ -740,7 +866,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-035",
+        "result": "1.0E-323 A"
+      },
+      "dotnet": {
+        "id": "F100-035",
+        "result": "1.0E-323 A"
+      }
     },
     {
       "iteration": 36,
@@ -756,7 +891,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-036",
+        "result": "1.0E-322 A"
+      },
+      "dotnet": {
+        "id": "F100-036",
+        "result": "1.0E-322 A"
+      }
     },
     {
       "iteration": 37,
@@ -772,7 +916,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-037",
+        "result": "2.2250738585072014E-308 A"
+      },
+      "dotnet": {
+        "id": "F100-037",
+        "result": "2.2250738585072014E-308 A"
+      }
     },
     {
       "iteration": 38,
@@ -788,7 +941,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-038",
+        "result": "1.00000005E7 A"
+      },
+      "dotnet": {
+        "id": "F100-038",
+        "result": "1.00000005E7 A"
+      }
     },
     {
       "iteration": 39,
@@ -804,7 +966,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-039",
+        "result": "9999999.5 A"
+      },
+      "dotnet": {
+        "id": "F100-039",
+        "result": "9999999.5 A"
+      }
     },
     {
       "iteration": 40,
@@ -820,7 +991,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-040",
+        "result": "-1.00000005E7 A"
+      },
+      "dotnet": {
+        "id": "F100-040",
+        "result": "-1.00000005E7 A"
+      }
     },
     {
       "iteration": 41,
@@ -836,7 +1016,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-041",
+        "result": "20 ℃"
+      },
+      "dotnet": {
+        "id": "F100-041",
+        "result": "20 ℃"
+      }
     },
     {
       "iteration": 42,
@@ -852,7 +1041,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-042",
+        "result": "-40 ℃"
+      },
+      "dotnet": {
+        "id": "F100-042",
+        "result": "-40 ℃"
+      }
     },
     {
       "iteration": 43,
@@ -868,7 +1066,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-043",
+        "result": "273.15 K"
+      },
+      "dotnet": {
+        "id": "F100-043",
+        "result": "273.15 K"
+      }
     },
     {
       "iteration": 44,
@@ -884,7 +1091,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-044",
+        "result": "250 mA"
+      },
+      "dotnet": {
+        "id": "F100-044",
+        "result": "250 mA"
+      }
     },
     {
       "iteration": 45,
@@ -900,7 +1116,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-045",
+        "result": "1.25 mV"
+      },
+      "dotnet": {
+        "id": "F100-045",
+        "result": "1.25 mV"
+      }
     },
     {
       "iteration": 46,
@@ -916,7 +1141,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-046",
+        "result": "0.5 kΩ"
+      },
+      "dotnet": {
+        "id": "F100-046",
+        "result": "0.5 kΩ"
+      }
     },
     {
       "iteration": 47,
@@ -932,7 +1166,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-047",
+        "result": "1 μA"
+      },
+      "dotnet": {
+        "id": "F100-047",
+        "result": "1 μA"
+      }
     },
     {
       "iteration": 48,
@@ -948,7 +1191,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-048",
+        "result": "2 μA"
+      },
+      "dotnet": {
+        "id": "F100-048",
+        "result": "2 μA"
+      }
     },
     {
       "iteration": 49,
@@ -964,7 +1216,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-049",
+        "result": "3 μV"
+      },
+      "dotnet": {
+        "id": "F100-049",
+        "result": "3 μV"
+      }
     },
     {
       "iteration": 50,
@@ -980,7 +1241,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-050",
+        "result": "4 μΩ"
+      },
+      "dotnet": {
+        "id": "F100-050",
+        "result": "4 μΩ"
+      }
     },
     {
       "iteration": 51,
@@ -996,7 +1266,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "5 μK",
+        "id": "F100-051"
+      },
+      "dotnet": {
+        "id": "F100-051",
+        "result": "5 μK"
+      }
     },
     {
       "iteration": 52,
@@ -1012,7 +1291,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "6 nA",
+        "id": "F100-052"
+      },
+      "dotnet": {
+        "id": "F100-052",
+        "result": "6 nA"
+      }
     },
     {
       "iteration": 53,
@@ -1028,7 +1316,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "7 kV",
+        "id": "F100-053"
+      },
+      "dotnet": {
+        "id": "F100-053",
+        "result": "7 kV"
+      }
     },
     {
       "iteration": 54,
@@ -1044,7 +1341,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "8 A²",
+        "id": "F100-054"
+      },
+      "dotnet": {
+        "id": "F100-054",
+        "result": "8 A²"
+      }
     },
     {
       "iteration": 55,
@@ -1060,7 +1366,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "9 V²",
+        "id": "F100-055"
+      },
+      "dotnet": {
+        "id": "F100-055",
+        "result": "9 V²"
+      }
     },
     {
       "iteration": 56,
@@ -1076,7 +1391,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "10 Ω²",
+        "id": "F100-056"
+      },
+      "dotnet": {
+        "id": "F100-056",
+        "result": "10 Ω²"
+      }
     },
     {
       "iteration": 57,
@@ -1092,7 +1416,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "1",
+        "id": "F100-057"
+      },
+      "dotnet": {
+        "id": "F100-057",
+        "result": "1"
+      }
     },
     {
       "iteration": 58,
@@ -1108,7 +1441,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.5",
+        "id": "F100-058"
+      },
+      "dotnet": {
+        "id": "F100-058",
+        "result": "0.5"
+      }
     },
     {
       "iteration": 59,
@@ -1124,7 +1466,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "10 ℃",
+        "id": "F100-059"
+      },
+      "dotnet": {
+        "id": "F100-059",
+        "result": "10 ℃"
+      }
     },
     {
       "iteration": 60,
@@ -1140,7 +1491,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.25 mA",
+        "id": "F100-060"
+      },
+      "dotnet": {
+        "id": "F100-060",
+        "result": "0.25 mA"
+      }
     },
     {
       "iteration": 61,
@@ -1156,7 +1516,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "0.25 A",
+        "id": "F100-061",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-061",
+        "result": "0.25 A"
+      }
     },
     {
       "iteration": 62,
@@ -1173,7 +1542,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "prefix: 1.25 A",
+        "id": "F100-062",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-062",
+        "result": "prefix: 1.25 A"
+      }
     },
     {
       "iteration": 63,
@@ -1190,7 +1568,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "Ω→2.25 A",
+        "id": "F100-063",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-063",
+        "result": "Ω→2.25 A"
+      }
     },
     {
       "iteration": 64,
@@ -1207,7 +1594,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "line\n3.25 A",
+        "id": "F100-064",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-064",
+        "result": "line\n3.25 A"
+      }
     },
     {
       "iteration": 65,
@@ -1224,7 +1620,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "\t4.25 A",
+        "id": "F100-065",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-065",
+        "result": "\t4.25 A"
+      }
     },
     {
       "iteration": 66,
@@ -1241,7 +1646,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-066",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-066",
+        "result": true
+      }
     },
     {
       "iteration": 67,
@@ -1259,7 +1673,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-067",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-067",
+        "result": true
+      }
     },
     {
       "iteration": 68,
@@ -1277,7 +1700,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-068",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-068",
+        "result": true
+      }
     },
     {
       "iteration": 69,
@@ -1295,7 +1727,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-069",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-069",
+        "result": true
+      }
     },
     {
       "iteration": 70,
@@ -1313,7 +1754,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-070",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-070",
+        "result": true
+      }
     },
     {
       "iteration": 71,
@@ -1330,7 +1780,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w0|0.5 mA",
+        "id": "F100-071"
+      },
+      "dotnet": {
+        "id": "F100-071",
+        "result": "w0|0.5 mA"
+      }
     },
     {
       "iteration": 72,
@@ -1347,7 +1806,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w1|1.5 mA",
+        "id": "F100-072"
+      },
+      "dotnet": {
+        "id": "F100-072",
+        "result": "w1|1.5 mA"
+      }
     },
     {
       "iteration": 73,
@@ -1364,7 +1832,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w2|2.5 mA",
+        "id": "F100-073"
+      },
+      "dotnet": {
+        "id": "F100-073",
+        "result": "w2|2.5 mA"
+      }
     },
     {
       "iteration": 74,
@@ -1381,7 +1858,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w3|3.5 mA",
+        "id": "F100-074"
+      },
+      "dotnet": {
+        "id": "F100-074",
+        "result": "w3|3.5 mA"
+      }
     },
     {
       "iteration": 75,
@@ -1398,7 +1884,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w4|4.5 mA",
+        "id": "F100-075"
+      },
+      "dotnet": {
+        "id": "F100-075",
+        "result": "w4|4.5 mA"
+      }
     },
     {
       "iteration": 76,
@@ -1416,7 +1911,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-076"
+      },
+      "dotnet": {
+        "id": "F100-076",
+        "result": true
+      }
     },
     {
       "iteration": 77,
@@ -1434,7 +1938,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-077"
+      },
+      "dotnet": {
+        "id": "F100-077",
+        "result": true
+      }
     },
     {
       "iteration": 78,
@@ -1452,7 +1965,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-078"
+      },
+      "dotnet": {
+        "id": "F100-078",
+        "result": true
+      }
     },
     {
       "iteration": 79,
@@ -1470,7 +1992,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-079"
+      },
+      "dotnet": {
+        "id": "F100-079",
+        "result": true
+      }
     },
     {
       "iteration": 80,
@@ -1488,7 +2019,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-080"
+      },
+      "dotnet": {
+        "id": "F100-080",
+        "result": true
+      }
     },
     {
       "iteration": 81,
@@ -1505,7 +2045,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-081",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-081",
+        "result": "1.25 ℃"
+      }
     },
     {
       "iteration": 82,
@@ -1522,7 +2071,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-082",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-082",
+        "result": "1.25 ℃"
+      }
     },
     {
       "iteration": 83,
@@ -1539,7 +2097,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-083",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-083",
+        "result": "1.25 ℃"
+      }
     },
     {
       "iteration": 84,
@@ -1556,7 +2123,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-084",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-084",
+        "result": "1.25 ℃"
+      }
     },
     {
       "iteration": 85,
@@ -1573,7 +2149,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-085",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-085",
+        "result": "1.25 ℃"
+      }
     },
     {
       "iteration": 86,
@@ -1590,7 +2175,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-086",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-086",
+        "result": false
+      }
     },
     {
       "iteration": 87,
@@ -1607,7 +2201,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-087",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-087",
+        "result": false
+      }
     },
     {
       "iteration": 88,
@@ -1624,7 +2227,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-088",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-088",
+        "result": false
+      }
     },
     {
       "iteration": 89,
@@ -1641,7 +2253,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-089",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-089",
+        "result": false
+      }
     },
     {
       "iteration": 90,
@@ -1658,7 +2279,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-090",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-090",
+        "result": false
+      }
     },
     {
       "iteration": 91,
@@ -1674,7 +2304,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-091"
+      },
+      "dotnet": {
+        "id": "F100-091",
+        "result": true
+      }
     },
     {
       "iteration": 92,
@@ -1690,7 +2329,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-092"
+      },
+      "dotnet": {
+        "id": "F100-092",
+        "result": true
+      }
     },
     {
       "iteration": 93,
@@ -1706,7 +2354,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-093"
+      },
+      "dotnet": {
+        "id": "F100-093",
+        "result": true
+      }
     },
     {
       "iteration": 94,
@@ -1722,7 +2379,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-094"
+      },
+      "dotnet": {
+        "id": "F100-094",
+        "result": true
+      }
     },
     {
       "iteration": 95,
@@ -1738,7 +2404,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-095"
+      },
+      "dotnet": {
+        "id": "F100-095",
+        "result": true
+      }
     },
     {
       "iteration": 96,
@@ -1754,7 +2429,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-096"
+      },
+      "dotnet": {
+        "id": "F100-096",
+        "result": true
+      }
     },
     {
       "iteration": 97,
@@ -1770,7 +2454,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-097"
+      },
+      "dotnet": {
+        "id": "F100-097",
+        "result": true
+      }
     },
     {
       "iteration": 98,
@@ -1786,7 +2479,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "absoluteTolerance": 0,
+        "id": "F100-098"
+      },
+      "dotnet": {
+        "id": "F100-098",
+        "result": true
+      }
     },
     {
       "iteration": 99,
@@ -1803,7 +2505,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0,
+        "id": "F100-099"
+      },
+      "dotnet": {
+        "id": "F100-099",
+        "result": false
+      }
     },
     {
       "iteration": 100,
@@ -1820,7 +2531,16 @@
       },
       "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
       "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0,
+        "id": "F100-100"
+      },
+      "dotnet": {
+        "id": "F100-100",
+        "result": false
+      }
     }
   ],
   "checkpoints": [
@@ -1836,6 +2556,62 @@
       "build": "PASS",
       "dotnetTestsPassed": 874,
       "differentialCases": 478,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 884,
+      "differentialCases": 488,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 894,
+      "differentialCases": 498,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 904,
+      "differentialCases": 508,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "dotnetTestsPassed": 914,
+      "differentialCases": 518,
+      "mismatches": 0
+    },
+    {
+      "iteration": 70,
+      "build": "PASS",
+      "dotnetTestsPassed": 924,
+      "differentialCases": 528,
+      "mismatches": 0
+    },
+    {
+      "iteration": 80,
+      "build": "PASS",
+      "dotnetTestsPassed": 934,
+      "differentialCases": 538,
+      "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "dotnetTestsPassed": 948,
+      "differentialCases": 548,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "dotnetTestsPassed": 958,
+      "differentialCases": 558,
       "mismatches": 0
     }
   ]

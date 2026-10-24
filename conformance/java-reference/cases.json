@@ -4762,6 +4762,766 @@
       "scale": "ABSOLUTE",
       "expected": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 A",
       "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-021",
+      "operation": "formatQuantity",
+      "value": 0.5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.5 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-022",
+      "operation": "formatQuantity",
+      "value": -0.5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-0.5 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-023",
+      "operation": "formatQuantity",
+      "value": 0.125,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.125 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-024",
+      "operation": "formatQuantity",
+      "value": -0.125,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-0.125 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-025",
+      "operation": "formatQuantity",
+      "value": 0.1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.1 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-026",
+      "operation": "formatQuantity",
+      "value": -0.1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-0.1 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-027",
+      "operation": "formatQuantity",
+      "value": 0.3333333333333333,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.3333333333333333 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-028",
+      "operation": "formatQuantity",
+      "value": 3.141592653589793,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "3.141592653589793 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-029",
+      "operation": "formatQuantity",
+      "value": 0.001,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.001 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-030",
+      "operation": "formatQuantity",
+      "value": 0.0001,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.0E-4 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-031",
+      "operation": "formatQuantity",
+      "value": 1E-05,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.0E-5 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-032",
+      "operation": "formatQuantity",
+      "value": 1E-20,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.0E-20 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-033",
+      "operation": "formatQuantity",
+      "value": -1E-20,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-1.0E-20 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-034",
+      "operation": "formatQuantity",
+      "value": 5E-324,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "4.9E-324 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-035",
+      "operation": "formatQuantity",
+      "value": 1E-323,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.0E-323 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-036",
+      "operation": "formatQuantity",
+      "value": 1E-322,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.0E-322 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-037",
+      "operation": "formatQuantity",
+      "value": 2.2250738585072014E-308,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "2.2250738585072014E-308 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-038",
+      "operation": "formatQuantity",
+      "value": 10000000.5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "1.00000005E7 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-039",
+      "operation": "formatQuantity",
+      "value": 9999999.5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "9999999.5 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-040",
+      "operation": "formatQuantity",
+      "value": -10000000.5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "-1.00000005E7 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-041",
+      "operation": "formatQuantity",
+      "value": 20,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "20 ℃",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-042",
+      "operation": "formatQuantity",
+      "value": -40,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "-40 ℃",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-043",
+      "operation": "formatQuantity",
+      "value": 273.15,
+      "from": "K",
+      "scale": "ABSOLUTE",
+      "expected": "273.15 K",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-044",
+      "operation": "formatQuantity",
+      "value": 250,
+      "from": "mA",
+      "scale": "ABSOLUTE",
+      "expected": "250 mA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-045",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "mV",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 mV",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-046",
+      "operation": "formatQuantity",
+      "value": 0.5,
+      "from": "kΩ",
+      "scale": "ABSOLUTE",
+      "expected": "0.5 kΩ",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-047",
+      "operation": "formatQuantity",
+      "value": 1,
+      "from": "µA",
+      "scale": "ABSOLUTE",
+      "expected": "1 μA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-048",
+      "operation": "formatQuantity",
+      "value": 2,
+      "from": "μA",
+      "scale": "ABSOLUTE",
+      "expected": "2 μA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-049",
+      "operation": "formatQuantity",
+      "value": 3,
+      "from": "µV",
+      "scale": "ABSOLUTE",
+      "expected": "3 μV",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-050",
+      "operation": "formatQuantity",
+      "value": 4,
+      "from": "µΩ",
+      "scale": "ABSOLUTE",
+      "expected": "4 μΩ",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-051",
+      "operation": "formatQuantity",
+      "value": 5,
+      "from": "µK",
+      "scale": "ABSOLUTE",
+      "expected": "5 μK",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-052",
+      "operation": "formatQuantity",
+      "value": 6,
+      "from": "nA",
+      "scale": "ABSOLUTE",
+      "expected": "6 nA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-053",
+      "operation": "formatQuantity",
+      "value": 7,
+      "from": "kV",
+      "scale": "ABSOLUTE",
+      "expected": "7 kV",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-054",
+      "operation": "formatQuantity",
+      "value": 8,
+      "from": "A²",
+      "scale": "ABSOLUTE",
+      "expected": "8 A²",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-055",
+      "operation": "formatQuantity",
+      "value": 9,
+      "from": "V²",
+      "scale": "ABSOLUTE",
+      "expected": "9 V²",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-056",
+      "operation": "formatQuantity",
+      "value": 10,
+      "from": "Ω²",
+      "scale": "ABSOLUTE",
+      "expected": "10 Ω²",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-057",
+      "operation": "formatQuantity",
+      "value": 1,
+      "from": "1",
+      "scale": "ABSOLUTE",
+      "expected": "1",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-058",
+      "operation": "formatQuantity",
+      "value": 0.5,
+      "from": "1",
+      "scale": "ABSOLUTE",
+      "expected": "0.5",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-059",
+      "operation": "formatQuantity",
+      "value": 10,
+      "from": "°C",
+      "scale": "RELATIVE",
+      "expected": "10 ℃",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-060",
+      "operation": "formatQuantity",
+      "value": 0.25,
+      "from": "mA",
+      "scale": "RELATIVE",
+      "expected": "0.25 mA",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-061",
+      "operation": "formatAppendable",
+      "value": 0.25,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "0.25 A",
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-062",
+      "operation": "formatAppendable",
+      "value": 1.25,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "prefix: 1.25 A",
+      "absoluteTolerance": 0,
+      "prefix": "prefix: "
+    },
+    {
+      "id": "F100-063",
+      "operation": "formatAppendable",
+      "value": 2.25,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "Ω→2.25 A",
+      "absoluteTolerance": 0,
+      "prefix": "Ω→"
+    },
+    {
+      "id": "F100-064",
+      "operation": "formatAppendable",
+      "value": 3.25,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "line\n3.25 A",
+      "absoluteTolerance": 0,
+      "prefix": "line\n"
+    },
+    {
+      "id": "F100-065",
+      "operation": "formatAppendable",
+      "value": 4.25,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": "\t4.25 A",
+      "absoluteTolerance": 0,
+      "prefix": "\t"
+    },
+    {
+      "id": "F100-066",
+      "operation": "formatAppendable",
+      "value": 1,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "observe": "identity"
+    },
+    {
+      "id": "F100-067",
+      "operation": "formatAppendable",
+      "value": 2,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "prefix: ",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-068",
+      "operation": "formatAppendable",
+      "value": 3,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "Ω→",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-069",
+      "operation": "formatAppendable",
+      "value": 4,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "line\n",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-070",
+      "operation": "formatAppendable",
+      "value": 5,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "\t",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-071",
+      "operation": "formatWriter",
+      "value": 0.5,
+      "from": "mA",
+      "scale": "RELATIVE",
+      "expected": "w0|0.5 mA",
+      "absoluteTolerance": 0,
+      "prefix": "w0|"
+    },
+    {
+      "id": "F100-072",
+      "operation": "formatWriter",
+      "value": 1.5,
+      "from": "mA",
+      "scale": "ABSOLUTE",
+      "expected": "w1|1.5 mA",
+      "absoluteTolerance": 0,
+      "prefix": "w1|"
+    },
+    {
+      "id": "F100-073",
+      "operation": "formatWriter",
+      "value": 2.5,
+      "from": "mA",
+      "scale": "RELATIVE",
+      "expected": "w2|2.5 mA",
+      "absoluteTolerance": 0,
+      "prefix": "w2|"
+    },
+    {
+      "id": "F100-074",
+      "operation": "formatWriter",
+      "value": 3.5,
+      "from": "mA",
+      "scale": "ABSOLUTE",
+      "expected": "w3|3.5 mA",
+      "absoluteTolerance": 0,
+      "prefix": "w3|"
+    },
+    {
+      "id": "F100-075",
+      "operation": "formatWriter",
+      "value": 4.5,
+      "from": "mA",
+      "scale": "RELATIVE",
+      "expected": "w4|4.5 mA",
+      "absoluteTolerance": 0,
+      "prefix": "w4|"
+    },
+    {
+      "id": "F100-076",
+      "operation": "formatWriter",
+      "value": 1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "p",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-077",
+      "operation": "formatWriter",
+      "value": 2,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "p",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-078",
+      "operation": "formatWriter",
+      "value": 3,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "p",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-079",
+      "operation": "formatWriter",
+      "value": 4,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "p",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-080",
+      "operation": "formatWriter",
+      "value": 5,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "prefix": "p",
+      "observe": "identity"
+    },
+    {
+      "id": "F100-081",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 ℃",
+      "absoluteTolerance": 0,
+      "locale": "de-DE"
+    },
+    {
+      "id": "F100-082",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 ℃",
+      "absoluteTolerance": 0,
+      "locale": "fr-FR"
+    },
+    {
+      "id": "F100-083",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 ℃",
+      "absoluteTolerance": 0,
+      "locale": "tr-TR"
+    },
+    {
+      "id": "F100-084",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 ℃",
+      "absoluteTolerance": 0,
+      "locale": "ar-EG"
+    },
+    {
+      "id": "F100-085",
+      "operation": "formatQuantity",
+      "value": 1.25,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": "1.25 ℃",
+      "absoluteTolerance": 0,
+      "locale": "en-US"
+    },
+    {
+      "id": "F100-086",
+      "operation": "formatLocale",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "locale": "de-DE"
+    },
+    {
+      "id": "F100-087",
+      "operation": "formatLocale",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "locale": "fr-FR"
+    },
+    {
+      "id": "F100-088",
+      "operation": "formatLocale",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "locale": "tr-TR"
+    },
+    {
+      "id": "F100-089",
+      "operation": "formatLocale",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "locale": "ar-EG"
+    },
+    {
+      "id": "F100-090",
+      "operation": "formatLocale",
+      "value": 0,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "locale": "en-US"
+    },
+    {
+      "id": "F100-091",
+      "operation": "formatRoundTrip",
+      "value": 1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-092",
+      "operation": "formatRoundTrip",
+      "value": 0.1,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-093",
+      "operation": "formatRoundTrip",
+      "value": 0.0001,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-094",
+      "operation": "formatRoundTrip",
+      "value": 5E-324,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-095",
+      "operation": "formatRoundTrip",
+      "value": 1E+23,
+      "from": "A",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-096",
+      "operation": "formatRoundTrip",
+      "value": 20,
+      "from": "°C",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-097",
+      "operation": "formatRoundTrip",
+      "value": 0.25,
+      "from": "µA",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-098",
+      "operation": "formatRoundTrip",
+      "value": -0.5,
+      "from": "1",
+      "scale": "ABSOLUTE",
+      "expected": true,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "F100-099",
+      "operation": "formatRoundTrip",
+      "value": 10,
+      "from": "°C",
+      "scale": "RELATIVE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "observe": "scale"
+    },
+    {
+      "id": "F100-100",
+      "operation": "formatRoundTrip",
+      "value": 1,
+      "from": "A",
+      "scale": "RELATIVE",
+      "expected": false,
+      "absoluteTolerance": 0,
+      "observe": "scale"
     }
   ]
 }
