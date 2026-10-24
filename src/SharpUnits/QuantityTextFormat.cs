@@ -8,7 +8,9 @@ public sealed class QuantityTextFormat
  /// <summary>Creates a formatter using an explicit unit registry.</summary>
  public QuantityTextFormat(UnitRegistry registry)=>this.registry=registry??throw new ArgumentNullException(nameof(registry));
  /// <summary>Parses invariant decimal or integer-rational text, retaining its unit and absolute scale.</summary>
- /// <remarks>Uses Java whitespace, registered symbols and the Celsius compatibility alias.
+ /// <remarks>Uses Java whitespace, registered symbols, the Celsius compatibility alias and linear
+ /// unit expressions with right-associated operators, parentheses and integer powers (-1024 to 1024).
+ /// Groups/operators are limited to depth 64. Affine units cannot participate in compound algebra.
  /// Whitespace is permitted after ÷ before the denominator. A missing unit denotes dimensionless.
  /// Unlike <see cref="Parse"/>, this preserves the display magnitude. Input is limited to 4096 characters
  /// and the numeric token to 1024 characters. This is a subset of Indriya's grammar.</remarks>

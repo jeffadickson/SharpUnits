@@ -6,7 +6,7 @@ namespace SharpUnits;
 
 /// <summary>Parses a bounded subset of Indriya's invariant quantity syntax.</summary>
 /// <remarks>Accepts decimal/scientific literals or two signed integers joined by ÷, followed by
-/// Java whitespace and a registered symbol (including the Celsius compatibility alias).
+/// Java whitespace and registered symbols, Celsius aliases or bounded linear unit expressions.
 /// Missing units mean dimensionless. Display values round once to double;
 /// arbitrary Number identity is not retained.
 /// Input is limited to 4096 characters and numeric tokens to 1024 characters to bound allocation.</remarks>
@@ -66,7 +66,7 @@ internal static partial class JavaQuantityTextParser
 
     // Java Character.isWhitespace excludes nonbreaking spaces, and includes the four
     // information separators. CLR char.IsWhiteSpace has a different set (notably U+0085).
-    private static bool IsJavaWhitespace(char value)=>value is >= '\t' and <= '\r' or >= '\u001c' and <= '\u001f'
+    internal static bool IsJavaWhitespace(char value)=>value is >= '\t' and <= '\r' or >= '\u001c' and <= '\u001f'
         ||value is not ('\u00a0' or '\u2007' or '\u202f')&&char.GetUnicodeCategory(value) is
             UnicodeCategory.SpaceSeparator or UnicodeCategory.LineSeparator or UnicodeCategory.ParagraphSeparator;
 

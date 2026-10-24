@@ -11,7 +11,8 @@ import tech.units.indriya.quantity.Quantities;
 
 /** Executes shared fixtures against Indriya and emits normalized JSONL. */
 public final class ReferenceRunner {
-  private static Object parserResult(JsonNode test) {
+  @SuppressWarnings({"rawtypes", "unchecked"})
+  private static Object parserResult(JsonNode test) throws javax.measure.IncommensurableException {
     if(test.path("operation").asText().equals("parseAccepts")) {
       try { tech.units.indriya.format.SimpleQuantityFormat.getInstance().parse(test.path("text").asText()); return true; }
       catch(javax.measure.format.MeasurementParseException | IllegalArgumentException | IndexOutOfBoundsException ex) { return false; }
@@ -22,6 +23,9 @@ public final class ReferenceRunner {
       case "negativeZero" -> Double.doubleToRawLongBits(result.getValue().doubleValue()) == Long.MIN_VALUE;
       case "unitMatches" -> result.getUnit().equals(unit(test.path("resultUnit").asText()));
       case "magnitude" -> result.getValue().doubleValue();
+      case "unitScale" -> result.getUnit().getConverterToAny(result.getUnit().getSystemUnit()).convert(1.0);
+      case "compatible" -> result.getUnit().isCompatible(unit(test.path("resultUnit").asText()));
+      case "converted" -> ((Quantity)result).to(unit(test.path("resultUnit").asText())).getValue().doubleValue();
       default -> throw new IllegalArgumentException("Unknown parser observation");
     };
   }

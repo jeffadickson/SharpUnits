@@ -3455,6 +3455,94 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-21",
+      "operation": "parseQuantity",
+      "text": "2 A/V",
+      "observe": "unitScale",
+      "expected": 1,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-22",
+      "operation": "parseQuantity",
+      "text": "3 V/Ω",
+      "observe": "converted",
+      "expected": 3,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-23",
+      "operation": "parseQuantity",
+      "text": "4 A*Ω",
+      "observe": "converted",
+      "expected": 4,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "G50-24",
+      "operation": "parseQuantity",
+      "text": "5 mA*kΩ",
+      "observe": "converted",
+      "expected": 5,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "G50-25",
+      "operation": "parseQuantity",
+      "text": "6 mV/A",
+      "observe": "converted",
+      "expected": 0.006,
+      "absoluteTolerance": 0,
+      "resultUnit": "Ω"
+    },
+    {
+      "id": "G50-26",
+      "operation": "parseQuantity",
+      "text": "7 V/kΩ",
+      "observe": "converted",
+      "expected": 0.007,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-27",
+      "operation": "parseQuantity",
+      "text": "8 (V/Ω)",
+      "observe": "converted",
+      "expected": 8,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-28",
+      "operation": "parseQuantity",
+      "text": "9 (A*Ω)",
+      "observe": "converted",
+      "expected": 9,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "G50-29",
+      "operation": "parseQuantity",
+      "text": "10 A/A",
+      "observe": "converted",
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "G50-30",
+      "operation": "parseQuantity",
+      "text": "11 V·A",
+      "observe": "unitScale",
+      "expected": 1,
+      "absoluteTolerance": 0
     }
   ]
 }

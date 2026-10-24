@@ -3,7 +3,7 @@ $ErrorActionPreference='Stop'
 # Cobertura is produced by coverlet.collector; report only measured lines and branches.
 # Generated regex internals, Java, tooling and uninstrumented runner code are not implied covered.
 [xml]$report=Get-Content -LiteralPath $CoveragePath
-$classes=@($report.coverage.packages.package.classes.class | Where-Object { $_.filename -match 'JavaQuantityTextParser.cs|QuantityTextFormat.cs|JavaDoubleArithmetic.cs' })
+$classes=@($report.coverage.packages.package.classes.class | Where-Object { $_.filename -match 'JavaQuantityTextParser.cs|JavaUnitTextParser.cs|QuantityTextFormat.cs|JavaDoubleArithmetic.cs' })
 $records=foreach($class in $classes){
     $lines=@($class.lines.line)
     $branchesCovered=0; $branchesValid=0
