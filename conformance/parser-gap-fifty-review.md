@@ -1,5 +1,9 @@
 # Parser gap implementation review
 
+Follow-up: [the hundred-review grammar increment](parser-grammar-hundred-review.md)
+implements the power/root, integer-factor and prefix gaps listed below. This
+document preserves its original checkpoint and coverage evidence.
+
 Starting commit: `9d469b2`. This increment targets the three executable gaps
 previously recorded as P-LIMIT-02 (compound units), P-LIMIT-03 (whitespace after
 rational division), and P-LIMIT-04 (Celsius alias). Arbitrary Java Number storage

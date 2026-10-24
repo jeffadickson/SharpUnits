@@ -5,7 +5,7 @@ TITLE: SharpUnits remaining Java unit grammar requirements
 UID: JP-014-POWERS
 STATUS: Active
 TITLE: Java textual power forms
-STATEMENT: The Java quantity parser shall support bounded ASCII, double-star and superscript 1/2/3 power notation using pinned SimpleUnitFormat semantics, including the zero-literal sentinel, without changing native unit power APIs.
+STATEMENT: The Java quantity parser shall support bounded ASCII, double-star and superscript 1/2/3 power notation using pinned SimpleUnitFormat semantics, including zero or missing-digit default-one sentinels, without changing native unit power APIs.
 COMMENT: Implementation: JavaUnitTextParser.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. Exponent magnitude remains bounded by 1024.
 RELATIONS:
 - TYPE: Parent

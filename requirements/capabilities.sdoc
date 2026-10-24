@@ -41,7 +41,7 @@ UID: JP-006
 STATUS: Active
 TITLE: Prefixes (SI decimal, binary where applicable)
 STATEMENT: SharpUnits shall provide Prefixes (SI decimal, binary where applicable) within a documented compatibility envelope.
-COMMENT: Inventory disposition: Partial factories only. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: decimal prefix catalog and Java parser inference on coherent registered units; broader discovery/binary grammar gaps. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-007
@@ -90,7 +90,7 @@ UID: JP-013
 STATUS: Active
 TITLE: Unit parsing
 STATEMENT: SharpUnits shall provide Unit parsing within a documented compatibility envelope.
-COMMENT: Inventory disposition: Partial: Java quantity path adds bounded linear expressions with pinned right-associated operators; legacy parser retains left association; full Java grammar absent. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: Java path supports superscripts/double-star/colon roots, integer factors and single SI prefixes with pinned association; legacy parser unchanged; full grammar incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-015
@@ -104,7 +104,7 @@ UID: JP-016
 STATUS: Active
 TITLE: Precision strategies
 STATEMENT: SharpUnits shall provide Precision strategies within a documented compatibility envelope.
-COMMENT: Inventory disposition: double only. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: public magnitudes remain double; bounded exact linear unit factors retained by Java quantity adapter; arbitrary Number and interchange gaps. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-017
@@ -188,7 +188,7 @@ UID: JP-028
 STATUS: Active
 TITLE: Java reference conformance corpus
 STATEMENT: SharpUnits shall provide Java reference conformance corpus within a documented compatibility envelope.
-COMMENT: Inventory disposition: Implemented, partial coverage: 358 shared fixtures; three original parser probes repaired, one arbitrary-Number probe still differs; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Implemented, partial coverage: 458 shared fixtures; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-029

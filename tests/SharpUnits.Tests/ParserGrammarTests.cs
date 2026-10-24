@@ -55,6 +55,11 @@ public sealed class ParserGrammarTests
         Assert.True(registry.Register(custom));
         Assert.Same(custom,format.ParseJavaQuantity("2 nA").Unit);
         Assert.Equal(84,format.ParseJavaQuantity("2 nA").SiQuantity.SiValue);
+        // A double projection of one is not necessarily an exactly coherent factor.
+        var nearOne=format.ParseJavaQuantity("1 ((A*2147483647)*(A*2147483645))/((A*2147483646)^2)").Unit;
+        Assert.True(nearOne.Converter.IsIdentity);
+        Assert.True(registry.Register(nearOne));
+        Assert.Throws<KeyNotFoundException>(()=>format.ParseJavaQuantity("1 q"+nearOne.Symbol));
         Assert.Throws<KeyNotFoundException>(()=>format.ParseJavaQuantity("1 kmA"));
         Assert.Equal(1,SiPrefixes.Apply("k",registry.Resolve("mA")).Converter.Scale);
     }
@@ -101,6 +106,8 @@ public sealed class ParserGrammarTests
         var registry=UnitRegistry.CreateStandard();var format=new QuantityTextFormat(registry);
         Assert.Equal(RationalDimension.From(Dimension.ElectricCurrent),format.ParseJavaQuantity("1 A^0").Unit.RationalDimension);
         Assert.Equal(RationalDimension.From(Dimension.ElectricCurrent),format.ParseJavaQuantity("1 A^1:0").Unit.RationalDimension);
+        Assert.Equal(RationalDimension.From(Dimension.ElectricCurrent),format.ParseJavaQuantity("1 A^").Unit.RationalDimension);
+        Assert.Equal(RationalDimension.From(Dimension.ElectricCurrent),format.ParseJavaQuantity("1 A**").Unit.RationalDimension);
         Assert.Equal(RationalDimension.From(Dimension.None),new UnitExpressionParser(registry).Parse("A^0").Dimension);
         Assert.Equal(RationalDimension.From(Dimension.None),RationalUnitExpression.From(registry.Resolve("A")).Pow(0).Dimension);
     }
@@ -111,7 +118,7 @@ public sealed class ParserGrammarTests
         var format=new QuantityTextFormat(UnitRegistry.CreateStandard());
         Assert.Throws<FormatException>(()=>format.ParseJavaQuantity("1 A^1:1025"));
         Assert.Throws<FormatException>(()=>format.ParseJavaQuantity("1 A^1:-1025"));
-        Assert.Throws<FormatException>(()=>format.ParseJavaQuantity("1 A**"));
+        Assert.Throws<FormatException>(()=>format.ParseJavaQuantity("1 A**unexpected"));
         const int seed=385016;var random=new Random(seed);
         for(var i=0;i<1000;i++)
         {

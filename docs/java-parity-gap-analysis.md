@@ -11,17 +11,17 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-003 | Rational powers/roots | Implemented in RationalDimension/RationalUnitExpression; numeric scale uses double; unverified | P0 | square root, rational exponent |
 | JP-004 | Dimensional equality and compatibility | Partial | P0 | positive/negative |
 | JP-005 | Named derived and alternate units | Missing | P0 | V, Ω, W, Hz, N, Pa, J |
-| JP-006 | Prefixes (SI decimal, binary where applicable) | Partial factories only | P0 | mA*kΩ, µV, kHz |
+| JP-006 | Prefixes (SI decimal, binary where applicable) | Partial: decimal prefix catalog and Java parser inference on coherent registered units; broader discovery/binary grammar gaps | P0 | mA*kΩ, µV, kHz |
 | JP-007 | Arbitrary user-defined units | Partial UnitDefinition | P0 | registration, collision, identity |
 | JP-008 | Linear converters | Partial | P0 | round-trip, overflow, zero scale |
 | JP-009 | Affine converters | Partial: Java adapter affine arithmetic reconciled; see quantity assertion review | P0 | °C/°F/K, temperature differences |
 | JP-010 | Converter composition/inverse | Partial: UnitConversion and JavaUnitConverterAdapter; Java Number/step identity gaps | P0 | identity, composition, inverse |
 | JP-011 | Nonlinear converters | Missing | P1 | domain restrictions, invertibility |
 | JP-012 | Quantity conversion to compatible units | Partial | P0 | arbitrary compatible units |
-| JP-013 | Unit parsing | Partial: Java quantity path adds bounded linear expressions with pinned right-associated operators; legacy parser retains left association; full Java grammar absent | P0 | parentheses, symbols, prefixes |
-| JP-014 | Quantity parsing | Partial: rational denominator whitespace, Celsius alias and linear compound-unit gaps now have Java/.NET evidence; arbitrary Number, full grammar and locale gaps remain | P0 | numeric and unit locale cases |
+| JP-013 | Unit parsing | Partial: Java path supports superscripts/double-star/colon roots, integer factors and single SI prefixes with pinned association; legacy parser unchanged; full grammar incomplete | P0 | parentheses, symbols, prefixes |
+| JP-014 | Quantity parsing | Partial: 100 additional grammar scenarios plus four repaired baseline probes and default-exponent correction; finite-double, grammar and locale limits remain | P0 | numeric and unit locale cases |
 | JP-015 | Unit and quantity formatting | Partial: QuantityTextFormat invariant SI-to-display formatting; Java Number text, appendable and locale APIs absent | P0 | round-trip, locale, Unicode |
-| JP-016 | Precision strategies | double only | P1 | decimal, rational, large/small |
+| JP-016 | Precision strategies | Partial: public magnitudes remain double; bounded exact linear unit factors retained by Java quantity adapter; arbitrary Number and interchange gaps | P1 | decimal, rational, large/small |
 | JP-017 | Quantity arithmetic and comparison | Partial: 185 shared quantity fixtures; signed-zero construction corrected; Number precision, affine inverse and general unit identity remain open | P0 | mixed scale, incompatible, NaN |
 | JP-018 | Typed quantity interfaces | Partial electrical types | P0 | generic typed operations |
 | JP-019 | Dimension vs semantic kind | Missing systematic kind model | P0 | torque vs energy |
@@ -33,7 +33,7 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-025 | Offset unit algebra safeguards | Partial: RationalUnitExpression rejects affine products; Java quantity adapter converts affine operands to SI | P0 | reject °C multiplication |
 | JP-026 | Serialization interoperability | Missing | P1 | JSON versioned round-trip |
 | JP-027 | UnitsNet adapters | Missing | P0 | bidirectional loss accounting |
-| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 358 shared fixtures; three original parser probes repaired, one arbitrary-Number probe still differs; exact pinned TCK runner | P0 | independent fixtures |
+| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 458 shared fixtures; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner | P0 | independent fixtures |
 | JP-029 | Documentation and examples | Partial XML docs | P1 | DocFX and examples |
 | JP-030 | .NET 10 CI proof | GitHub workflows disabled by user; local .NET 10 checks do not provide new Ubuntu/Windows CI proof | P0 | passing Ubuntu/Windows |
 

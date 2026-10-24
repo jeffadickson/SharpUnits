@@ -11,7 +11,7 @@ public sealed class QuantityTextFormat
  /// <remarks>Uses Java whitespace, registered symbols, the Celsius compatibility alias and linear
  /// unit expressions with right-associated operators, parentheses, caret/double-star powers and
  /// superscript digits 1/2/3 (exponent magnitude at most 1024). Pinned Java treats an explicit
- /// zero exponent as its default-one sentinel; native unit Pow(0) keeps conventional algebra.
+ /// zero or missing exponent as its default-one sentinel; native unit Pow(0) keeps conventional algebra.
  /// Colon-root exponents are supported with root magnitude at most 1024; zero roots likewise
  /// denote Java's default-one sentinel. Scale evaluation applies power and root sequentially.
  /// Nonzero signed 32-bit unit factors and single SI prefixes on registered coherent linear

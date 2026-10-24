@@ -40,7 +40,7 @@ internal static class JavaUnitTextParser
                 catch(KeyNotFoundException){continue;}
                 // Default Java labels contain a single prefix on coherent units, not nested
                 // prefixes on mA/kΩ. Affine prefixes remain a separate compatibility gap.
-                if(!basis.Converter.IsIdentity)continue;
+                if(!basis.Converter.IsIdentity||basis.ExactLinearScale is not null)continue;
                 var power=System.Numerics.BigInteger.Pow(10,Math.Abs(entry.Value));
                 var factor=entry.Value>=0?new Rational(power,1):new Rational(1,power);
                 return UnitDefinition.FromExactLinear(normalized,basis.RationalDimension,factor);
@@ -178,7 +178,7 @@ internal static class JavaUnitTextParser
         {
             var negative=position<text.Length&&text[position]=='-';
             if(negative)position++;
-            var start=position;var magnitude=0;
+            var magnitude=0;
             while(position<text.Length)
             {
                 var digit=text[position] switch {'¹'=>1,'²'=>2,'³'=>3,>= '0' and <= '9'=>text[position]-'0',_=>-1};
@@ -187,9 +187,9 @@ internal static class JavaUnitTextParser
                 if(magnitude>1024)throw new FormatException("Unit exponent magnitude exceeds 1024.");
                 position++;
             }
-            if(position==start)throw new FormatException("Expected exponent digits.");
             // Pinned SimpleUnitFormat.readExponent uses zero as its default-one sentinel,
-            // even for an explicit zero literal. Native Pow(0) retains conventional algebra.
+            // for missing digits as well as an explicit zero literal. Unrecognized suffixes
+            // are still rejected by the expression reader. Native Pow(0) is unchanged.
             if(magnitude==0)magnitude=1;
             return negative?-magnitude:magnitude;
         }

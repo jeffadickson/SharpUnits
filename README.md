@@ -34,6 +34,9 @@ unit and absolute/relative scale. See the [factory review and examples](conforma
 documented subset of Java decimal/rational and linear compound-unit syntax. It also
 accepts whitespace after `÷` and the `℃` alias. See the
 [parser gap implementations and evidence](conformance/parser-gap-fifty-review.md).
+The [100-review grammar increment](conformance/parser-grammar-hundred-review.md)
+adds superscript/double-star powers, colon roots, integer unit factors and automatic
+SI prefixes. Java-specific default-exponent conventions and remaining limits are explicit.
 
 ## Requirements closure
 

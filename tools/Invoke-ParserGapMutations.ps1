@@ -1,4 +1,10 @@
 $ErrorActionPreference='Stop'
+$grammarCampaign=Join-Path $PSScriptRoot 'Invoke-ParserGrammarMutations.ps1'
+if(Test-Path -LiteralPath $grammarCampaign){
+    # The maintained grammar campaign includes the moved exact-factor implementation.
+    & $grammarCampaign
+    return
+}
 $dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
 $quantity=(Resolve-Path src/SharpUnits/JavaQuantityTextParser.cs).Path
 $units=(Resolve-Path src/SharpUnits/JavaUnitTextParser.cs).Path

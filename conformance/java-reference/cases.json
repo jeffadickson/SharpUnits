@@ -4495,6 +4495,93 @@
       "expected": 5000,
       "absoluteTolerance": 0,
       "resultUnit": "V"
+    },
+    {
+      "id": "H100-091",
+      "operation": "parseQuantity",
+      "text": "2 (µA*GΩ)",
+      "observe": "converted",
+      "expected": 2000,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "H100-092",
+      "operation": "parseQuantity",
+      "text": "3 (kV/mA)",
+      "observe": "converted",
+      "expected": 3000000,
+      "absoluteTolerance": 0,
+      "resultUnit": "Ω"
+    },
+    {
+      "id": "H100-093",
+      "operation": "parseQuantity",
+      "text": "4 µA²",
+      "observe": "unitScale",
+      "expected": 1E-12,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-094",
+      "operation": "parseQuantity",
+      "text": "5 (µA²)^1:2",
+      "observe": "converted",
+      "expected": 5E-06,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-095",
+      "operation": "parseQuantity",
+      "text": "6 (kΩ/1000)",
+      "observe": "converted",
+      "expected": 6,
+      "absoluteTolerance": 0,
+      "resultUnit": "Ω"
+    },
+    {
+      "id": "H100-096",
+      "operation": "parseQuantity",
+      "text": "7 A/2*Ω",
+      "observe": "converted",
+      "expected": 3.5,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "H100-097",
+      "operation": "parseQuantity",
+      "text": "8 (A²)^1:2",
+      "observe": "converted",
+      "expected": 8,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-098",
+      "operation": "parseQuantity",
+      "text": "9 qA",
+      "observe": "converted",
+      "expected": 9E-30,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-099",
+      "operation": "parseAccepts",
+      "text": "1 xxA",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-100",
+      "operation": "parseAccepts",
+      "text": "1 A*2^foo",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }

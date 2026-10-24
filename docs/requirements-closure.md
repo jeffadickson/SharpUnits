@@ -9,6 +9,10 @@ StrictDoc `Active` denotes requirement lifecycle, not verified implementation.
 Export using StrictDoc 0.30.4 and `tools/Export-Requirements.ps1`.
 Requirements remain independent of GitHub issue closure.
 
+The [remaining grammar requirements](../requirements/parser-grammar.sdoc) add stable
+IDs for textual powers, roots, integer factors and prefix inference. Exact linear
+factor metadata is not a claim of arbitrary Java Number storage or precision.
+
 ## Evidence required for each requirement
 - Stable requirement ID and acceptance criteria
 - Implementation path and commit SHA

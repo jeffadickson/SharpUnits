@@ -1,0 +1,97 @@
+{
+  "note": "Six independently executed limits remain; a seventh missing-exponent discrepancy was corrected. Not part of the matching corpus.",
+  "cases": [
+    {
+      "id": "GRAMMAR-LIMIT-01",
+      "operation": "parseAccepts",
+      "text": "1 A*2147483648",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "CLR integer unit factors are bounded to signed 32-bit values; pinned Java's integer scanner can wrap overflow.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT",
+      "javaObservedUnitScale": -2147483648.0
+    },
+    {
+      "id": "GRAMMAR-LIMIT-02",
+      "operation": "parseAccepts",
+      "text": "1 A*2.5",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Fractional numeric unit factors are not implemented.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT"
+    },
+    {
+      "id": "GRAMMAR-LIMIT-03",
+      "operation": "parseAccepts",
+      "text": "1 m℃",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Automatic prefix inference is restricted to coherent linear units.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT"
+    },
+    {
+      "id": "GRAMMAR-LIMIT-04",
+      "operation": "parseAccepts",
+      "text": "1 A^",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Missing exponent defaults now agree with Java; original strict rejection is preserved in before results.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": true,
+      "status": "RESOLVED_LOCAL_BEHAVIOR"
+    },
+    {
+      "id": "GRAMMAR-LIMIT-05",
+      "operation": "parseAccepts",
+      "text": "1 A^1:1025",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Root order exceeds the CLR parser's explicit resource bound.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT"
+    },
+    {
+      "id": "GRAMMAR-LIMIT-06",
+      "operation": "parseAccepts",
+      "text": "1e309 A",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Public magnitudes remain finite doubles rather than arbitrary Java Number values.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT"
+    },
+    {
+      "id": "GRAMMAR-LIMIT-07",
+      "operation": "parseAccepts",
+      "text": "1 ((A*2147483647)/(A*2147483646))^1024",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Exact unit factor growth exceeds the CLR parser's 16384-bit allocation budget.",
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": false,
+      "status": "OPEN_LIMIT"
+    }
+  ]
+}
