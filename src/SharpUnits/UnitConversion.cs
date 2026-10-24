@@ -46,7 +46,21 @@ public sealed record UnitDefinition
  /// <summary>Legacy integer dimension; only valid for integral exponents.</summary>
  public Dimension Dimension => RationalDimension.ToIntegerDimension();
  /// <summary>Conversion to coherent SI.</summary>
+ /// <remarks>This is a double projection. Java adapter operations can retain an exact linear
+ /// factor on parser-created units; legacy conversion APIs continue using this projection.</remarks>
  public UnitConversion Converter { get; }
+ // Non-null only when a parsed rational factor differs from its round-trip-decimal
+ // double projection. Record equality then distinguishes units with different exact semantics.
+ internal Rational? ExactLinearScale { get; init; }
+ internal static UnitDefinition FromExactLinear(string symbol,RationalDimension dimension,Rational scale)
+ {
+  var approximation=JavaDoubleArithmetic.ToDouble(scale);
+  var converter=UnitConversion.Linear(approximation);
+  return new UnitDefinition(symbol,dimension,converter)
+  {
+   ExactLinearScale=JavaDoubleArithmetic.Fraction(approximation)==scale?null:scale
+  };
+ }
  /// <summary>Constructs from legacy integral dimensions.</summary>
  public UnitDefinition(string symbol,Dimension dimension,UnitConversion converter):this(symbol,RationalDimension.From(dimension),converter){}
  /// <summary>Constructs from canonical rational dimensions.</summary>

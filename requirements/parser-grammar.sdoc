@@ -26,7 +26,7 @@ UID: JP-014-INTEGER-FACTOR
 STATUS: Active
 TITLE: Integer factors in unit expressions
 STATEMENT: The Java quantity parser shall support nonzero signed 32-bit integer factors after multiplication/division, preserving pinned operator association and scale.
-COMMENT: Implementation: JavaUnitTextParser.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. Fractional numeric factors and Java integer-overflow quirks outside this range remain explicit gaps.
+COMMENT: Implementation: JavaUnitTextParser.cs, UnitDefinition and JavaDoubleArithmetic. Verification: ParserGrammarTests and shared H100 scenarios, including conversion through nonterminating factors 1/3 and 1/7. Exact internal linear factors use a 16384-bit allocation budget. Evidence: conformance/parser-grammar-review-100.json. Fractional numeric factors and Java integer-overflow quirks outside this range remain explicit gaps.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-014

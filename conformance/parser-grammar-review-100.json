@@ -688,7 +688,16 @@
       "text": "2 A*2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 4.0,
+        "id": "H100-041",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-041",
+        "result": 4
+      }
     },
     {
       "iteration": 42,
@@ -696,7 +705,16 @@
       "text": "3 A/2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.5,
+        "id": "H100-042",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-042",
+        "result": 1.5
+      }
     },
     {
       "iteration": 43,
@@ -704,7 +722,16 @@
       "text": "4 V*3",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 12.0,
+        "id": "H100-043",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-043",
+        "result": 12
+      }
     },
     {
       "iteration": 44,
@@ -712,7 +739,16 @@
       "text": "5 Ω/4",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.25,
+        "id": "H100-044",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-044",
+        "result": 1.25
+      }
     },
     {
       "iteration": 45,
@@ -720,7 +756,16 @@
       "text": "6 A*-2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -12.0,
+        "id": "H100-045",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-045",
+        "result": -12
+      }
     },
     {
       "iteration": 46,
@@ -728,7 +773,16 @@
       "text": "7 A/-2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -3.5,
+        "id": "H100-046",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-046",
+        "result": -3.5
+      }
     },
     {
       "iteration": 47,
@@ -736,7 +790,16 @@
       "text": "8 (A*2)/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 16.0,
+        "id": "H100-047",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-047",
+        "result": 16
+      }
     },
     {
       "iteration": 48,
@@ -744,7 +807,16 @@
       "text": "9 A/2/Ω",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 4.5,
+        "id": "H100-048",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-048",
+        "result": 4.5
+      }
     },
     {
       "iteration": 49,
@@ -752,7 +824,16 @@
       "text": "10 A/2*Ω",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "H100-049",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-049",
+        "result": 5
+      }
     },
     {
       "iteration": 50,
@@ -760,7 +841,16 @@
       "text": "11 A*2/Ω",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 22.0,
+        "id": "H100-050",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-050",
+        "result": 22
+      }
     },
     {
       "iteration": 51,
@@ -768,7 +858,16 @@
       "text": "1 A/(2)",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "H100-051",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-051",
+        "result": false
+      }
     },
     {
       "iteration": 52,
@@ -776,7 +875,16 @@
       "text": "1 A*2147483647",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.147483647E9,
+        "id": "H100-052",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-052",
+        "result": 2147483647
+      }
     },
     {
       "iteration": 53,
@@ -784,7 +892,16 @@
       "text": "1 A*-2147483648",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -2.147483648E9,
+        "id": "H100-053",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-053",
+        "result": -2147483648
+      }
     },
     {
       "iteration": 54,
@@ -792,15 +909,33 @@
       "text": "2 mA*1000",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "H100-054",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-054",
+        "result": 2
+      }
     },
     {
       "iteration": 55,
       "case": "H100-055",
-      "text": "3 kΩ/1000",
+      "text": "3 A/3",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.0,
+        "id": "H100-055",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-055",
+        "result": 1
+      }
     },
     {
       "iteration": 56,
@@ -808,7 +943,16 @@
       "text": "4 A/2/V",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 2.0,
+        "id": "H100-056",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-056",
+        "result": 2
+      }
     },
     {
       "iteration": 57,
@@ -816,7 +960,16 @@
       "text": "5 (A/2)*2",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "H100-057",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-057",
+        "result": 5
+      }
     },
     {
       "iteration": 58,
@@ -824,15 +977,33 @@
       "text": "6 A*2*3",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 36.0,
+        "id": "H100-058",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-058",
+        "result": 36
+      }
     },
     {
       "iteration": 59,
       "case": "H100-059",
-      "text": "7 A/2/2",
+      "text": "7 A/7",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 1.0,
+        "id": "H100-059",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-059",
+        "result": 1
+      }
     },
     {
       "iteration": 60,
@@ -840,7 +1011,16 @@
       "text": "1 A*word",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See parser-grammar-baseline.json at e982406; no unexecuted per-case baseline output is claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "H100-060",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "H100-060",
+        "result": false
+      }
     },
     {
       "iteration": 61,
@@ -1190,6 +1370,20 @@
       "build": "PASS",
       "dotnetTestsPassed": 788,
       "differentialCases": 398,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 801,
+      "differentialCases": 408,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "dotnetTestsPassed": 811,
+      "differentialCases": 418,
       "mismatches": 0
     }
   ]

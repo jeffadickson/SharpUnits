@@ -36,8 +36,8 @@ Add("7 (mA²)^1:2",.007,"converted",target:"A");Add("8 (kΩ²)^1:2",8000d,"conve
 Add("2 A*2",4d,"converted",target:"A");Add("3 A/2",1.5,"converted",target:"A");Add("4 V*3",12d,"converted",target:"V");Add("5 Ω/4",1.25,"converted",target:"Ω");
 Add("6 A*-2",-12d,"converted",target:"A");Add("7 A/-2",-3.5,"converted",target:"A");Add("8 (A*2)/A",16d,"converted",target:"1");Add("9 A/2/Ω",4.5,"converted",target:"AperΩ");
 Add("10 A/2*Ω",5d,"converted",target:"V");Add("11 A*2/Ω",22d,"converted",target:"AperΩ");Add("1 A/(2)",false,admission:true);Add("1 A*2147483647",2147483647d,"unitScale");
-Add("1 A*-2147483648",-2147483648d,"unitScale");Add("2 mA*1000",2d,"converted",target:"A");Add("3 kΩ/1000",3d,"converted",target:"Ω");Add("4 A/2/V",2d,"converted",target:"AperV");
-Add("5 (A/2)*2",5d,"converted",target:"A");Add("6 A*2*3",36d,"converted",target:"A");Add("7 A/2/2",1.75,"converted",target:"A");Add("1 A*word",false,admission:true);
+Add("1 A*-2147483648",-2147483648d,"unitScale");Add("2 mA*1000",2d,"converted",target:"A");Add("3 A/3",1d,"converted",target:"A");Add("4 A/2/V",2d,"converted",target:"AperV");
+Add("5 (A/2)*2",5d,"converted",target:"A");Add("6 A*2*3",36d,"converted",target:"A");Add("7 A/7",1d,"converted",target:"A");Add("1 A*word",false,admission:true);
 // 61-90: every SI decimal prefix, micro aliases and longest-prefix matching.
 foreach(var (prefix,exponent) in new (string,int)[]{("Q",30),("R",27),("Y",24),("Z",21),("E",18),("P",15),("T",12),("G",9),("M",6),("k",3),("h",2),("da",1),("d",-1),("c",-2),("m",-3),("µ",-6),("n",-9),("p",-12),("f",-15),("a",-18),("z",-21),("y",-24),("r",-27),("q",-30)})
     Add("1 "+prefix+"A",double.Parse("1e"+exponent,CultureInfo.InvariantCulture),"unitScale");

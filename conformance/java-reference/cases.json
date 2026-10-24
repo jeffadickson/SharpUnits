@@ -4073,6 +4073,182 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-041",
+      "operation": "parseQuantity",
+      "text": "2 A*2",
+      "observe": "converted",
+      "expected": 4,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-042",
+      "operation": "parseQuantity",
+      "text": "3 A/2",
+      "observe": "converted",
+      "expected": 1.5,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-043",
+      "operation": "parseQuantity",
+      "text": "4 V*3",
+      "observe": "converted",
+      "expected": 12,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "H100-044",
+      "operation": "parseQuantity",
+      "text": "5 Ω/4",
+      "observe": "converted",
+      "expected": 1.25,
+      "absoluteTolerance": 0,
+      "resultUnit": "Ω"
+    },
+    {
+      "id": "H100-045",
+      "operation": "parseQuantity",
+      "text": "6 A*-2",
+      "observe": "converted",
+      "expected": -12,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-046",
+      "operation": "parseQuantity",
+      "text": "7 A/-2",
+      "observe": "converted",
+      "expected": -3.5,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-047",
+      "operation": "parseQuantity",
+      "text": "8 (A*2)/A",
+      "observe": "converted",
+      "expected": 16,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "H100-048",
+      "operation": "parseQuantity",
+      "text": "9 A/2/Ω",
+      "observe": "converted",
+      "expected": 4.5,
+      "absoluteTolerance": 0,
+      "resultUnit": "AperΩ"
+    },
+    {
+      "id": "H100-049",
+      "operation": "parseQuantity",
+      "text": "10 A/2*Ω",
+      "observe": "converted",
+      "expected": 5,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "H100-050",
+      "operation": "parseQuantity",
+      "text": "11 A*2/Ω",
+      "observe": "converted",
+      "expected": 22,
+      "absoluteTolerance": 0,
+      "resultUnit": "AperΩ"
+    },
+    {
+      "id": "H100-051",
+      "operation": "parseAccepts",
+      "text": "1 A/(2)",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-052",
+      "operation": "parseQuantity",
+      "text": "1 A*2147483647",
+      "observe": "unitScale",
+      "expected": 2147483647,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-053",
+      "operation": "parseQuantity",
+      "text": "1 A*-2147483648",
+      "observe": "unitScale",
+      "expected": -2147483648,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-054",
+      "operation": "parseQuantity",
+      "text": "2 mA*1000",
+      "observe": "converted",
+      "expected": 2,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-055",
+      "operation": "parseQuantity",
+      "text": "3 A/3",
+      "observe": "converted",
+      "expected": 1,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-056",
+      "operation": "parseQuantity",
+      "text": "4 A/2/V",
+      "observe": "converted",
+      "expected": 2,
+      "absoluteTolerance": 0,
+      "resultUnit": "AperV"
+    },
+    {
+      "id": "H100-057",
+      "operation": "parseQuantity",
+      "text": "5 (A/2)*2",
+      "observe": "converted",
+      "expected": 5,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-058",
+      "operation": "parseQuantity",
+      "text": "6 A*2*3",
+      "observe": "converted",
+      "expected": 36,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-059",
+      "operation": "parseQuantity",
+      "text": "7 A/7",
+      "observe": "converted",
+      "expected": 1,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-060",
+      "operation": "parseAccepts",
+      "text": "1 A*word",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }

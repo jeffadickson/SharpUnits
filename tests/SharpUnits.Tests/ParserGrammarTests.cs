@@ -26,6 +26,38 @@ public sealed class ParserGrammarTests
         return parsed.Unit.RationalDimension==RationalDimension.From(Dimension.ElectricCurrent)&&parsed.Value==1;
     }
 
+    [Property(MaxTest=300,Replay="385,397")]
+    public bool IntegerUnitDivisorsRoundOnce(short magnitude,PositiveInt generated)
+    {
+        var divisor=1+generated.Get%31;var registry=UnitRegistry.CreateStandard();
+        var parsed=new QuantityTextFormat(registry).ParseJavaQuantity(FormattableString.Invariant($"{magnitude} A/{divisor}"));
+        return parsed.To(registry.Resolve("A")).Value==(double)magnitude/divisor;
+    }
+
+    [Fact]
+    public void ExactUnitFactorsSurviveConversionAndArithmetic()
+    {
+        var registry=UnitRegistry.CreateStandard();var format=new QuantityTextFormat(registry);
+        var third=format.ParseJavaQuantity("3 A/3");var ampere=registry.Resolve("A");
+        Assert.Equal(1,third.SiQuantity.SiValue);
+        Assert.Equal(1,third.To(ampere).Value);
+        Assert.Equal(3,third.To(ampere).To(third.Unit).Value);
+        Assert.Equal(2,third.Add(format.ParseJavaQuantity("1 A")).To(ampere).Value);
+        Assert.Equal(1,third.Multiply(format.ParseJavaQuantity("1 A")).To(new UnitDefinition("A²",Dimension.ElectricCurrent.Pow(2),UnitConversion.Linear(1))).Value);
+        Assert.Equal(1,third.Divide(format.ParseJavaQuantity("1 A")).To(new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1))).Value);
+        Assert.Equal(3,format.ParseJavaQuantity("1 A/3").Inverse().To(new UnitDefinition("invA",Dimension.ElectricCurrent.Pow(-1),UnitConversion.Linear(1))).Value);
+        Assert.Equal(third.Unit,format.ParseJavaQuantity("2 A/3").Unit);
+        Assert.NotEqual(third.Unit,new UnitDefinition(third.Unit.Symbol,third.Unit.RationalDimension,third.Unit.Converter));
+    }
+
+    [Fact]
+    public void IntegerFactorAndExactArithmeticBudgetsAreExplicit()
+    {
+        var format=new QuantityTextFormat(UnitRegistry.CreateStandard());
+        foreach(var text in new[]{"1 A*0","1 A/0","1 A*2147483648","1 A*-2147483649","1 ((A*2147483647)/(A*2147483646))^1024"})
+            Assert.Throws<FormatException>(()=>format.ParseJavaQuantity(text));
+    }
+
     [Fact]
     public void JavaZeroSentinelsDoNotChangeNativePowerZero()
     {

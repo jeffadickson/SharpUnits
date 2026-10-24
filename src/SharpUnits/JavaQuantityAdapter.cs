@@ -47,7 +47,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   ArgumentNullException.ThrowIfNull(unit);
   if(!Enum.IsDefined(scale))throw new ArgumentOutOfRangeException(nameof(scale));
   if(!double.IsFinite(magnitude))throw new ArgumentOutOfRangeException(nameof(magnitude));
-  return new Quantity(JavaDoubleArithmetic.Convert(magnitude,unit.Converter,UnitConversion.Linear(1),
+  return new Quantity(JavaDoubleArithmetic.ToCoherent(magnitude,unit,
    scale==JavaQuantityScale.Relative),unit.RationalDimension);
  }
  /// <summary>Converts to a compatible display unit, preserving the scale kind.</summary>
@@ -56,7 +56,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   ArgumentNullException.ThrowIfNull(target);
   if(unit.RationalDimension!=target.RationalDimension)throw new InvalidOperationException("Incompatible dimensions.");
   if(unit.Equals(target))return this;
-  return new(JavaDoubleArithmetic.Convert(Value,unit.Converter,target.Converter,Scale==JavaQuantityScale.Relative),target,Scale);
+  return new(JavaDoubleArithmetic.Convert(Value,unit,target,Scale==JavaQuantityScale.Relative),target,Scale);
  }
  /// <summary>Checks a registered semantic kind against the quantity dimension.</summary>
  public JavaQuantityAdapter AsType(QuantityKind kind,QuantityKindRegistry registry)
@@ -90,7 +90,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  private JavaQuantityAdapter AddOrSubtract(JavaQuantityAdapter other,bool subtract)
  {
   var resultScale=ResultScale(other);
-  return new(JavaDoubleArithmetic.Add(Value,other.Value,unit.Converter,other.unit.Converter,
+  return new(JavaDoubleArithmetic.Add(Value,other.Value,unit,other.unit,
    Scale==JavaQuantityScale.Absolute,other.Scale==JavaQuantityScale.Absolute,
    resultScale==JavaQuantityScale.Absolute,subtract),unit,resultScale);
  }
@@ -123,6 +123,10 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   var symbol=sameUnit&&divide?"1":knownSquare?$"{left.Unit.Symbol}²"
    :$"({left.Unit.Symbol}{(divide?"/":"*")}{right.Unit.Symbol})";
   var resultUnit=new UnitDefinition(symbol,dimension,UnitConversion.Linear(factor));
+  if(left.Unit.ExactLinearScale is not null||right.Unit.ExactLinearScale is not null)
+   resultUnit=UnitDefinition.FromExactLinear(symbol,dimension,divide
+    ?JavaDoubleArithmetic.ScaleOf(left.Unit)/JavaDoubleArithmetic.ScaleOf(right.Unit)
+    :JavaDoubleArithmetic.ScaleOf(left.Unit)*JavaDoubleArithmetic.ScaleOf(right.Unit));
   return new(divide?left.Magnitude/right.Magnitude:left.Magnitude*right.Magnitude,resultUnit,JavaQuantityScale.Absolute);
  }
  private (double Magnitude,UnitDefinition Unit) MultiplicativeOperand()=>unit.Converter.IsLinear
@@ -154,7 +158,7 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   if(divide&&factor==0)throw new DivideByZeroException();
   if(factor==1)return this;
   if(divide||(Scale==JavaQuantityScale.Absolute&&!unit.Converter.IsLinear))
-   return new(JavaDoubleArithmetic.Scale(Value,factor,unit.Converter,Scale==JavaQuantityScale.Relative,divide),unit,Scale);
+   return new(JavaDoubleArithmetic.Scale(Value,factor,unit,Scale==JavaQuantityScale.Relative,divide),unit,Scale);
   return new(Value*factor,unit,Scale);
  }
  /// <summary>Returns the inverse of a linear quantity, retaining scale and reciprocal display-unit factor.</summary>
@@ -166,8 +170,8 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
   RequireLinearAlgebra(this);
   if(Value==0)throw new DivideByZeroException();
   var dimension=RationalDimension.From(Dimension.None)-unit.RationalDimension;
-  var reciprocalUnit=new UnitDefinition($"1/({unit.Symbol})",dimension,
-   UnitConversion.Linear(1d/unit.Converter.Scale));
+  var reciprocalUnit=UnitDefinition.FromExactLinear($"1/({unit.Symbol})",dimension,
+   new Rational(1,1)/JavaDoubleArithmetic.ScaleOf(unit));
   return new(JavaDoubleArithmetic.Reciprocal(Value),reciprocalUnit,Scale);
  }
  /// <summary>Compares display values after converting the right operand to this unit, as Indriya does.</summary>

@@ -9,21 +9,25 @@ namespace SharpUnits;
 internal static class JavaDoubleArithmetic
 {
     internal static double Reciprocal(double magnitude)=>ToDouble(new Rational(1,1)/Fraction(magnitude));
-    internal static double Scale(double magnitude,double factor,UnitConversion converter,bool relative,bool divide)
+    internal static double Scale(double magnitude,double factor,UnitDefinition unit,bool relative,bool divide)
     {
+        var converter=unit.Converter;
         var affine=!relative&&!converter.IsLinear;
         var value=Fraction(magnitude);
-        if(affine)value=value*ScaleOf(converter)+OffsetOf(converter);
+        if(affine)value=value*ScaleOf(unit)+OffsetOf(converter);
         value=divide?value/Fraction(factor):value*Fraction(factor);
-        if(affine)value=(value-OffsetOf(converter))/ScaleOf(converter);
+        if(affine)value=(value-OffsetOf(converter))/ScaleOf(unit);
         return ToDouble(value);
     }
-    internal static double Convert(double magnitude,UnitConversion source,UnitConversion target,bool relative)
+    internal static double Convert(double magnitude,UnitDefinition source,UnitDefinition target,bool relative)
     {
         var coherent=Fraction(magnitude)*ScaleOf(source);
-        if(!relative)coherent=coherent+OffsetOf(source)-OffsetOf(target);
+        if(!relative)coherent=coherent+OffsetOf(source.Converter)-OffsetOf(target.Converter);
         return ToDouble(coherent/ScaleOf(target));
     }
+    internal static double ToCoherent(double magnitude,UnitDefinition unit,bool relative)
+        =>ToDouble(Fraction(magnitude)*ScaleOf(unit)+(relative?new Rational(0,1):OffsetOf(unit.Converter)));
+    internal static Rational ScaleOf(UnitDefinition unit)=>unit.ExactLinearScale??ScaleOf(unit.Converter);
     // Recognize the standard Fahrenheit converter's definition, rather than treating
     // its public binary64 coefficients as exact rational metadata. Other user-defined
     // converters retain the supplied round-trip decimal coefficients.
@@ -32,7 +36,7 @@ internal static class JavaDoubleArithmetic
     private static Rational OffsetOf(UnitConversion converter)=>converter==UnitConversion.Fahrenheit
         ?new Rational(45967,180):Fraction(converter.Offset);
 
-    private static Rational Fraction(double value)
+    internal static Rational Fraction(double value)
     {
         var parts=Parts(value);
         return parts.Exponent>=0
@@ -60,15 +64,15 @@ internal static class JavaDoubleArithmetic
         return negative?-result:result;
     }
 
-    internal static double Add(double left,double right,UnitConversion source,UnitConversion other,
+    internal static double Add(double left,double right,UnitDefinition source,UnitDefinition other,
         bool leftAbsolute,bool rightAbsolute,bool resultAbsolute,bool subtract)
     {
         var a=Fraction(left)*ScaleOf(source);
         var b=Fraction(right)*ScaleOf(other);
-        if(leftAbsolute)a+=OffsetOf(source);
-        if(rightAbsolute)b+=OffsetOf(other);
+        if(leftAbsolute)a+=OffsetOf(source.Converter);
+        if(rightAbsolute)b+=OffsetOf(other.Converter);
         var result=subtract?a-b:a+b;
-        if(resultAbsolute)result-=OffsetOf(source);
+        if(resultAbsolute)result-=OffsetOf(source.Converter);
         return ToDouble(result/ScaleOf(source));
     }
 
