@@ -31,8 +31,9 @@ follows Indriya's compatibility conventions.
 unit and absolute/relative scale. See the [factory review and examples](conformance/factory-fifty-review.md).
 
 `QuantityTextFormat.ParseJavaQuantity` retains display values and units for a
-documented subset of Java decimal/rational syntax. See the
-[parser review, coverage and remaining gaps](conformance/parser-fifty-review.md).
+documented subset of Java decimal/rational and linear compound-unit syntax. It also
+accepts whitespace after `÷` and the `℃` alias. See the
+[parser gap implementations and evidence](conformance/parser-gap-fifty-review.md).
 
 ## Requirements closure
 

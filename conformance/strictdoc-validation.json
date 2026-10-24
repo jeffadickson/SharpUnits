@@ -3,10 +3,10 @@
   "version": "0.30.4",
   "result": "PASS",
   "documents": 3,
-  "requirementIds": 154,
+  "requirementIds": 157,
   "sourceSha256": {
-    "capabilities.sdoc": "5D2142A12F2EE3F48EADDC7400FEBDFA080C174876E9425A7E5B8295155069C2",
-    "quantity-parsing.sdoc": "72D286395CD961898BDF208EB845760F28F88C7DAC51FD0A648ADF94F05E56C4",
+    "capabilities.sdoc": "A2C50B8208FE81010AA98AF93DE4DD509C491E9C3D01143D465D6130B1E96CC7",
+    "quantity-parsing.sdoc": "D047C8C70E5CA59A1A7647234163A311C0AB8A2D0C963B507993B3323E62B245",
     "tck-assertions.sdoc": "1F238529A21BAB972102D5EBFCA9728D366663A0BB5A1675978FB0482358A3A0"
   },
   "note": "Parsing, graph validation and HTML export; not implementation verification."

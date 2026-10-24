@@ -84,8 +84,12 @@ foreach(var r in manifest["reviews"]!.AsArray().Where(r=>r!["iteration"]!.GetVal
 }
 var build=File.ReadAllText($"../gap50-build-{count}.log");var tests=File.ReadAllText($"../gap50-test-{count}.log");
 if(!build.Contains("Build succeeded.")||!tests.Contains("Failed:     0"))throw new InvalidOperationException("Checkpoint did not pass.");
-manifest["checkpoints"]!.AsArray().Add(new JsonObject { ["iteration"]=count,["build"]="PASS",
+var checkpoints=manifest["checkpoints"]!.AsArray();
+// Re-executing a checkpoint replaces its record rather than inventing another iteration.
+for(var i=checkpoints.Count-1;i>=0;i--)if(checkpoints[i]!["iteration"]!.GetValue<int>()==count)checkpoints.RemoveAt(i);
+checkpoints.Add(new JsonObject { ["iteration"]=count,["build"]="PASS",
     ["dotnetTestsPassed"]=int.Parse(Regex.Match(tests,@"Passed:\s+(\d+)").Groups[1].Value,CultureInfo.InvariantCulture),
     ["differentialCases"]=all.Count,["mismatches"]=0 });
+manifest["checkpoints"]=new JsonArray(checkpoints.OrderBy(c=>c!["iteration"]!.GetValue<int>()).Select(c=>c!.DeepClone()).ToArray());
 File.WriteAllText(manifestPath,manifest.ToJsonString(jsonOptions)+"\n");
 Console.WriteLine($"Validated {all.Count} shared Java/CLR cases; checkpoint {count} passed.");

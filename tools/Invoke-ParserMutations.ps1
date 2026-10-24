@@ -1,4 +1,11 @@
 $ErrorActionPreference='Stop'
+$currentCampaign=Join-Path $PSScriptRoot 'Invoke-ParserGapMutations.ps1'
+if(Test-Path -LiteralPath $currentCampaign){
+    # The historical five-target campaign is retained below for older checkouts.
+    # Current grammar targets moved into JavaUnitTextParser; use the maintained campaign.
+    & $currentCampaign
+    return
+}
 $dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
 $source=(Resolve-Path src/SharpUnits/JavaQuantityTextParser.cs).Path
 $original=[IO.File]::ReadAllBytes($source)

@@ -18,8 +18,8 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-010 | Converter composition/inverse | Partial: UnitConversion and JavaUnitConverterAdapter; Java Number/step identity gaps | P0 | identity, composition, inverse |
 | JP-011 | Nonlinear converters | Missing | P1 | domain restrictions, invertibility |
 | JP-012 | Quantity conversion to compatible units | Partial | P0 | arbitrary compatible units |
-| JP-013 | Unit parsing | Partial: registered linear symbols, parentheses, products/quotients and integer powers; full Java grammar absent | P0 | parentheses, symbols, prefixes |
-| JP-014 | Quantity parsing | Partial: adapter parser supports decimal/scientific and contiguous integer-rational input, Java whitespace and unit preservation; full grammar/locale/Number gaps | P0 | numeric and unit locale cases |
+| JP-013 | Unit parsing | Partial: Java quantity path adds bounded linear expressions with pinned right-associated operators; legacy parser retains left association; full Java grammar absent | P0 | parentheses, symbols, prefixes |
+| JP-014 | Quantity parsing | Partial: rational denominator whitespace, Celsius alias and linear compound-unit gaps now have Java/.NET evidence; arbitrary Number, full grammar and locale gaps remain | P0 | numeric and unit locale cases |
 | JP-015 | Unit and quantity formatting | Partial: QuantityTextFormat invariant SI-to-display formatting; Java Number text, appendable and locale APIs absent | P0 | round-trip, locale, Unicode |
 | JP-016 | Precision strategies | double only | P1 | decimal, rational, large/small |
 | JP-017 | Quantity arithmetic and comparison | Partial: 185 shared quantity fixtures; signed-zero construction corrected; Number precision, affine inverse and general unit identity remain open | P0 | mixed scale, incompatible, NaN |
@@ -33,7 +33,7 @@ Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and Uni
 | JP-025 | Offset unit algebra safeguards | Partial: RationalUnitExpression rejects affine products; Java quantity adapter converts affine operands to SI | P0 | reject °C multiplication |
 | JP-026 | Serialization interoperability | Missing | P1 | JSON versioned round-trip |
 | JP-027 | UnitsNet adapters | Missing | P0 | bidirectional loss accounting |
-| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 308 shared fixtures including 50 parser scenarios, plus four separately recorded parser incompatibilities; exact pinned TCK runner | P0 | independent fixtures |
+| JP-028 | Java reference conformance corpus | Implemented, partial coverage: 358 shared fixtures; three original parser probes repaired, one arbitrary-Number probe still differs; exact pinned TCK runner | P0 | independent fixtures |
 | JP-029 | Documentation and examples | Partial XML docs | P1 | DocFX and examples |
 | JP-030 | .NET 10 CI proof | GitHub workflows disabled by user; local .NET 10 checks do not provide new Ubuntu/Windows CI proof | P0 | passing Ubuntu/Windows |
 

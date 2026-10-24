@@ -63,6 +63,18 @@ public sealed class ParserGapTests
     }
 
     [Fact]
+    public void RationalSizeBudgetSpansBothLiteralsAndDimensionlessFactorsWork()
+    {
+        var registry=UnitRegistry.CreateStandard();var format=new QuantityTextFormat(registry);
+        var small=new string('1',511);var large=new string('1',512);
+        Assert.Equal(1,format.ParseJavaQuantity(small+"÷ "+small+" A").Value);
+        // 511 + division sign + 512 digits exactly fills the numeric budget.
+        Assert.Equal(.1,format.ParseJavaQuantity(small+"÷ "+large+" A").Value);
+        Assert.Throws<FormatException>(()=>format.ParseJavaQuantity(large+"÷ "+large+" A"));
+        Assert.Equal(1,format.ParseJavaQuantity("1 A/1").To(registry.Resolve("A")).Value);
+    }
+
+    [Fact]
     public void SeededMalformedCompoundFuzzingRejectsMissingGroups()
     {
         const int seed=385015;var random=new Random(seed);

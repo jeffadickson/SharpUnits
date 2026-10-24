@@ -14,7 +14,9 @@ $records=foreach($class in $classes){
     }
     [ordered]@{name=$class.name;file=$class.filename;linesCovered=@($lines | Where-Object {[int]$_.hits -gt 0}).Count;
         linesValid=$lines.Count;branchesCovered=$branchesCovered;branchesValid=$branchesValid;
-        lineRate=[double]$class.'line-rate';branchRate=[double]$class.'branch-rate'}
+        lineRate=[double]$class.'line-rate';branchRate=[double]$class.'branch-rate';
+        uncoveredLineNumbers=@($lines | Where-Object {[int]$_.hits -eq 0} | ForEach-Object {[int]$_.number});
+        partiallyCoveredBranchLines=@($lines | Where-Object {$_.branch -eq 'True' -and $_.'condition-coverage' -notmatch '^100%'} | ForEach-Object {[int]$_.number})}
 }
 $summary=[ordered]@{tool='coverlet.collector 6.0.4';reportSha256=(Get-FileHash -LiteralPath $CoveragePath -Algorithm SHA256).Hash;
     overall=[ordered]@{linesCovered=[int]$report.coverage.'lines-covered';linesValid=[int]$report.coverage.'lines-valid';

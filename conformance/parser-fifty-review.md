@@ -1,5 +1,8 @@
 # Quantity parsing review
 
+Follow-up: the [parser gap review](parser-gap-fifty-review.md) implements three of
+the four incompatibilities recorded below. This document preserves the earlier evidence.
+
 Starting commit: `098acf2`. Review date: 2026-10-24. GitHub CI stays disabled.
 
 Scope: add an adapter-returning parser preserving the display unit and absolute

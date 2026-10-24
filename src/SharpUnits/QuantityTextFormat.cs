@@ -17,6 +17,7 @@ public sealed class QuantityTextFormat
  /// <exception cref="FormatException">The number is malformed, nonfinite or exceeds resource limits.</exception>
  /// <exception cref="KeyNotFoundException">The unit symbol is not registered.</exception>
  /// <exception cref="DivideByZeroException">A rational denominator is zero.</exception>
+ /// <exception cref="ArgumentOutOfRangeException">The coherent representation cannot be stored as a finite double.</exception>
  public JavaQuantityAdapter ParseJavaQuantity(string text)=>JavaQuantityTextParser.Parse(text,registry);
  /// <summary>Formats an SI quantity in a selected registered unit.</summary>
  public string Format(Quantity quantity,string symbol)

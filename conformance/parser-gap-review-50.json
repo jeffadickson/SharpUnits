@@ -90,7 +90,7 @@
     {
       "iteration": 6,
       "case": "G50-06",
-      "text": "1÷\u20033 A",
+      "text": "1÷ 3 A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
       "status": "CASE_MATCHED",
@@ -233,7 +233,7 @@
       "java": {
         "absoluteTolerance": 0,
         "id": "G50-14",
-        "result": 1.0E-6
+        "result": 1E-06
       },
       "dotnet": {
         "id": "G50-14",
@@ -641,7 +641,7 @@
       "java": {
         "absoluteTolerance": 0,
         "id": "G50-38",
-        "result": 1.0E-6
+        "result": 1E-06
       },
       "dotnet": {
         "id": "G50-38",
@@ -688,7 +688,16 @@
       "text": "1÷ 2 V/Ω",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": 0.5,
+        "id": "G50-41"
+      },
+      "dotnet": {
+        "id": "G50-41",
+        "result": 0.5
+      }
     },
     {
       "iteration": 42,
@@ -696,7 +705,16 @@
       "text": "2 (mA*kΩ)/(V/A)",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": 2.0,
+        "id": "G50-42"
+      },
+      "dotnet": {
+        "id": "G50-42",
+        "result": 2
+      }
     },
     {
       "iteration": 43,
@@ -704,7 +722,16 @@
       "text": "3 A/A/A/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": 3.0,
+        "id": "G50-43"
+      },
+      "dotnet": {
+        "id": "G50-43",
+        "result": 3
+      }
     },
     {
       "iteration": 44,
@@ -712,7 +739,16 @@
       "text": "4 (A/A/A)/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": 4.0,
+        "id": "G50-44"
+      },
+      "dotnet": {
+        "id": "G50-44",
+        "result": 4
+      }
     },
     {
       "iteration": 45,
@@ -720,7 +756,16 @@
       "text": "5 V/(Ω/A)",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "G50-45"
+      },
+      "dotnet": {
+        "id": "G50-45",
+        "result": true
+      }
     },
     {
       "iteration": 46,
@@ -728,7 +773,16 @@
       "text": "1 unknown/A",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": false,
+        "id": "G50-46"
+      },
+      "dotnet": {
+        "id": "G50-46",
+        "result": false
+      }
     },
     {
       "iteration": 47,
@@ -736,7 +790,16 @@
       "text": "1 (A/V",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": false,
+        "id": "G50-47"
+      },
+      "dotnet": {
+        "id": "G50-47",
+        "result": false
+      }
     },
     {
       "iteration": 48,
@@ -744,7 +807,16 @@
       "text": "1 A**Ω",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": false,
+        "id": "G50-48"
+      },
+      "dotnet": {
+        "id": "G50-48",
+        "result": false
+      }
     },
     {
       "iteration": 49,
@@ -752,7 +824,16 @@
       "text": "1 A/unknown",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": false,
+        "id": "G50-49"
+      },
+      "dotnet": {
+        "id": "G50-49",
+        "result": false
+      }
     },
     {
       "iteration": 50,
@@ -760,22 +841,31 @@
       "text": "1 A trailing",
       "source": "SimpleQuantityFormat.parse; RationalNumberScanner; SimpleUnitFormat.parse",
       "before": "See baseline parser-known-differences.json at 9d469b2; per-scenario baseline output is not claimed",
-      "status": "PENDING"
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": false,
+        "id": "G50-50"
+      },
+      "dotnet": {
+        "id": "G50-50",
+        "result": false
+      }
     }
   ],
   "checkpoints": [
-    {
-      "iteration": 20,
-      "build": "PASS",
-      "dotnetTestsPassed": 707,
-      "differentialCases": 328,
-      "mismatches": 0
-    },
     {
       "iteration": 10,
       "build": "PASS",
       "dotnetTestsPassed": 697,
       "differentialCases": 318,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 707,
+      "differentialCases": 328,
       "mismatches": 0
     },
     {
@@ -791,6 +881,123 @@
       "dotnetTestsPassed": 733,
       "differentialCases": 348,
       "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 744,
+      "differentialCases": 358,
+      "mismatches": 0
     }
-  ]
+  ],
+  "resolvedOriginalProbes": [
+    {
+      "id": "P-LIMIT-02",
+      "operation": "parseAccepts",
+      "text": "1 A/V",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    },
+    {
+      "id": "P-LIMIT-03",
+      "operation": "parseAccepts",
+      "text": "1÷ 2 A",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    },
+    {
+      "id": "P-LIMIT-04",
+      "operation": "parseAccepts",
+      "text": "1 ℃",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    }
+  ],
+  "remainingOriginalProbes": [
+    {
+      "id": "P-LIMIT-05",
+      "operation": "parseAccepts",
+      "text": "1e309 A",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Java retains arbitrary finite BigDecimal magnitude; the CLR adapter requires finite doubles.",
+      "javaActual": true,
+      "dotnetActual": false,
+      "baselineDotnetAt9d469b2": false,
+      "status": "OPEN"
+    }
+  ],
+  "requirements": {
+    "tool": "StrictDoc 0.30.4",
+    "records": 157,
+    "result": "PASS",
+    "implementedSubsetIds": [
+      "JP-014-COMPOUND",
+      "JP-014-RATIONAL-SPACE",
+      "JP-014-ALIAS"
+    ],
+    "verificationLimit": "Local behavioral evidence; not formal TCK closure"
+  },
+  "javaTck": {
+    "tests": 112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "adversarial": {
+    "newPropertyCases": 600,
+    "newPropertyReplaySeeds": [
+      "385,389",
+      "385,391"
+    ],
+    "newMalformedCompoundCases": 1000,
+    "newFuzzSeed": 385015,
+    "manualMutations": 5,
+    "killed": 5,
+    "restoredSourceTests": 744
+  },
+  "coverageEvidence": "conformance/parser-gap-coverage-50.json",
+  "sourcePins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "formalClosures": 0,
+  "fileSha256": {
+    "src/SharpUnits/JavaQuantityTextParser.cs": "6FC63842D8AC366B303CFDAD835241144F3D487B98A76D67AD7DFD1D67B58918",
+    "src/SharpUnits/JavaUnitTextParser.cs": "7081FEB3E52EA8335B140EB256F08E009AC08CC32E9C8D48CDBACB73709D6F84",
+    "src/SharpUnits/QuantityTextFormat.cs": "56E24BC57C1F5F161EC5018082D05616368D2B512759A7A3A0E15109C31E431D",
+    "tests/SharpUnits.Tests/ParserGapTests.cs": "081FC27086D71A3E5CE2E2B20B428B408B59489D4998A95758D52F9062DB074D",
+    "src/SharpUnits.ConformanceRunner/ParserFixtures.cs": "C35374D8B9CF2B88F54C9E905CC1BAC9E4D2A71DD74CFB5A5C96AB7450789B5D",
+    "conformance/java-reference/src/main/java/org/sharpunits/ReferenceRunner.java": "003697A053C15D8AFA94AE1D77505666893238C2FB02D369F4B34FDA82BEF8E6",
+    "conformance/java-reference/cases.json": "DB8D208C3331C98985DB9E97330A6F12D27DAD2528B371824F5A7563C7E5C773",
+    "tools/ParserGapReview.cs": "BCC801B15D705497DA26051FF4988C90EE438BD605297ED7A3D029D60B3A93C3",
+    "requirements/quantity-parsing.sdoc": "D047C8C70E5CA59A1A7647234163A311C0AB8A2D0C963B507993B3323E62B245",
+    "requirements/capabilities.sdoc": "A2C50B8208FE81010AA98AF93DE4DD509C491E9C3D01143D465D6130B1E96CC7",
+    "requirements/tck-assertions.sdoc": "1F238529A21BAB972102D5EBFCA9728D366663A0BB5A1675978FB0482358A3A0"
+  }
 }

@@ -23,7 +23,7 @@ UID: JP-014-RATIONAL
 STATUS: Active
 TITLE: Rational input
 STATEMENT: The adapter parser shall accept two signed integer literals joined by the division sign and round the exact rational once to a finite display double; a zero denominator shall be rejected.
-COMMENT: Implementation: src/SharpUnits/JavaQuantityTextParser.cs and JavaDoubleArithmetic.cs. Verification: ParserReferenceFixtureTests and ParserRobustnessTests. Evidence: conformance/parser-review-50.json.
+COMMENT: Implementation: src/SharpUnits/JavaQuantityTextParser.cs and JavaDoubleArithmetic.cs. Verification: ParserReferenceFixtureTests, ParserRobustnessTests and ParserGapTests. Whitespace after the division sign is supported; combined literal length plus the sign is limited to 1024 characters. Evidence: conformance/parser-review-50.json and conformance/parser-gap-review-50.json.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-014
@@ -33,7 +33,7 @@ UID: JP-014-INVALID
 STATUS: Active
 TITLE: Malformed input and resource limits
 STATEMENT: The adapter parser shall reject malformed numeric tokens, unknown units, nonfinite results and inputs exceeding its documented resource limits without returning a partial quantity.
-COMMENT: Unit syntax is restricted to exact registered symbols. Verification includes seeded malformed-input fuzzing and negative tests; Java cursor APIs and unbounded numeric types are not promised.
+COMMENT: Unit syntax supports registered symbols, the Celsius alias and bounded linear expressions. Verification includes seeded malformed-input fuzzing and negative tests; Java cursor APIs and unbounded numeric types are not promised. Numeric and expression limits are intentional differences.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-014

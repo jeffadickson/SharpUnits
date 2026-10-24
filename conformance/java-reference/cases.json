@@ -3632,6 +3632,91 @@
       "expected": 10,
       "absoluteTolerance": 0,
       "resultUnit": "1"
+    },
+    {
+      "id": "G50-41",
+      "operation": "parseQuantity",
+      "text": "1÷ 2 V/Ω",
+      "observe": "converted",
+      "expected": 0.5,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-42",
+      "operation": "parseQuantity",
+      "text": "2 (mA*kΩ)/(V/A)",
+      "observe": "converted",
+      "expected": 2,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "G50-43",
+      "operation": "parseQuantity",
+      "text": "3 A/A/A/A",
+      "observe": "converted",
+      "expected": 3,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "G50-44",
+      "operation": "parseQuantity",
+      "text": "4 (A/A/A)/A",
+      "observe": "converted",
+      "expected": 4,
+      "absoluteTolerance": 0,
+      "resultUnit": "1"
+    },
+    {
+      "id": "G50-45",
+      "operation": "parseQuantity",
+      "text": "5 V/(Ω/A)",
+      "observe": "compatible",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "resultUnit": "A²"
+    },
+    {
+      "id": "G50-46",
+      "operation": "parseAccepts",
+      "text": "1 unknown/A",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-47",
+      "operation": "parseAccepts",
+      "text": "1 (A/V",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-48",
+      "operation": "parseAccepts",
+      "text": "1 A**Ω",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-49",
+      "operation": "parseAccepts",
+      "text": "1 A/unknown",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "G50-50",
+      "operation": "parseAccepts",
+      "text": "1 A trailing",
+      "observe": "magnitude",
+      "expected": false,
+      "absoluteTolerance": 0
     }
   ]
 }
