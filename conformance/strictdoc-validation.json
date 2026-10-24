@@ -2,13 +2,14 @@
   "tool": "StrictDoc",
   "version": "0.30.4",
   "result": "PASS",
-  "documents": 4,
-  "requirementIds": 161,
+  "documents": 5,
+  "requirementIds": 166,
   "sourceSha256": {
-    "capabilities.sdoc": "ABC3921A856A0CCF02AF7D72C10AF1CA4F927BD7AB4078D5DEBDFCD8AA219DEB",
+    "capabilities.sdoc": "E7CCF87A69BE812F04A24155F293895FE5FE2E80B329057D1BC71C8D5C71CEA3",
     "parser-grammar.sdoc": "0936528E9351275C770560F560ED98AE4FFFB208A34DC437C30240161B100889",
+    "quantity-formatting.sdoc": "7F19411D4A714D368C0DF6C10401078FDEF0C61D1B6C3573120BEFE7FEE4307A",
     "quantity-parsing.sdoc": "D047C8C70E5CA59A1A7647234163A311C0AB8A2D0C963B507993B3323E62B245",
-    "tck-assertions.sdoc": "1F238529A21BAB972102D5EBFCA9728D366663A0BB5A1675978FB0482358A3A0"
+    "tck-assertions.sdoc": "03846627A241E749E5CABE8B72E1F56867C8CB57E00B127109CE0F5A9F30FF4A"
   },
   "note": "Parsing, graph validation and HTML export; not implementation verification."
 }

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "environment": "Windows; .NET SDK 10.0.402; pinned JDK 17.0.20.1",
+  "dotnetTests": 962,
+  "sharedCases": 558,
+  "formatScenarios": 100,
+  "formatFuzzCases": 512,
+  "formatFuzzSeed": 385415,
+  "pinnedJavaTckTests": 112,
+  "formalClosures": 0,
+  "strictDocRequirements": 166,
+  "strictDocDocuments": 5,
+  "ci": {
+    "dotnet": "disabled_manually",
+    "java": "disabled_manually",
+    "macOS": "disabled"
+  },
+  "evidenceSha256": {
+    "format100-final-test.log": "E3BEC528F2704345299DCD29E6700ABD8504164480563D11303E55C5A07D5188",
+    "format100-tck.log": "48D0B057A1C863988037337D9753F8CB46F95BC34235164A97BEC10F6F4F5627",
+    "format100-harness-tests.log": "734CC0BE35EB3A2C8880BD4FC81559B4A4F5EFF5DAB90F2A9EEFE93A80F20531",
+    "format100-final-build.log": "6A1FDC1488F3908AF7E5D7A5801113D9045DB9BD30029463D0D06587BB54AB93",
+    "format100-fraction.log": "67137AA7DBAF4A11FECCCF93C4814AF59575791065F7A31C1A3C010E045ABE9C"
+  }
+}

@@ -56,23 +56,53 @@
     {
       "id": "46-A2",
       "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture",
+      "evidence": "conformance/format-review-100.json",
+      "sourceMethod": "QuantityFormatTest.testQuantityFormatFormat",
+      "expectedSemantics": "Registered Java formatters expose public Appendable format(Quantity, Appendable). A2 and A3 check the same signature.",
+      "dotnetSemantics": "Retained-value finite-double formatting, StringBuilder/TextWriter append and destination identity, invariant IsLocaleSensitive=false; CLR API adaptations do not satisfy exact Java reflection signatures.",
+      "javaEvidence": "Pinned TCK: 112 passing tests; conformance/format-review-100.json: 558 actual Java/CLR observations with no mismatches, plus conformance/format-fuzz.json.",
+      "remainingGap": "Java API identity and registered service/configuration discovery; arbitrary Number lexical precision and general unit labels; Windows/Ubuntu CI intentionally disabled and independent closure review pending.",
+      "additionalTests": [
+        "FormattingRobustnessTests.NullArgumentsAreRejected",
+        "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
+        "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
+      ]
     },
     {
       "id": "46-A3",
       "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture",
+      "evidence": "conformance/format-review-100.json",
+      "sourceMethod": "QuantityFormatTest.testQuantityFormatFormatAppendable",
+      "expectedSemantics": "Registered Java formatters expose public Appendable format(Quantity, Appendable). A2 and A3 check the same signature.",
+      "dotnetSemantics": "Retained-value finite-double formatting, StringBuilder/TextWriter append and destination identity, invariant IsLocaleSensitive=false; CLR API adaptations do not satisfy exact Java reflection signatures.",
+      "javaEvidence": "Pinned TCK: 112 passing tests; conformance/format-review-100.json: 558 actual Java/CLR observations with no mismatches, plus conformance/format-fuzz.json.",
+      "remainingGap": "Java API identity and registered service/configuration discovery; arbitrary Number lexical precision and general unit labels; Windows/Ubuntu CI intentionally disabled and independent closure review pending.",
+      "additionalTests": [
+        "FormattingRobustnessTests.NullArgumentsAreRejected",
+        "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
+        "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
+      ]
     },
     {
       "id": "46-A4",
       "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture",
+      "evidence": "conformance/format-review-100.json",
+      "sourceMethod": "QuantityFormatTest.testQuantityFormatFormatIsLocalSensitive",
+      "expectedSemantics": "Registered Java formatters expose public isLocaleSensitive (structural reflection assertion).",
+      "dotnetSemantics": "Retained-value finite-double formatting, StringBuilder/TextWriter append and destination identity, invariant IsLocaleSensitive=false; CLR API adaptations do not satisfy exact Java reflection signatures.",
+      "javaEvidence": "Pinned TCK: 112 passing tests; conformance/format-review-100.json: 558 actual Java/CLR observations with no mismatches, plus conformance/format-fuzz.json.",
+      "remainingGap": "Java API identity and registered service/configuration discovery; arbitrary Number lexical precision and general unit labels; Windows/Ubuntu CI intentionally disabled and independent closure review pending.",
+      "additionalTests": [
+        "FormattingRobustnessTests.NullArgumentsAreRejected",
+        "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
+        "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
+      ]
     },
     {
       "id": "46-A5",

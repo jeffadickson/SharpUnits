@@ -8,7 +8,7 @@ Pinned upstream TCK: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde9
 
 The inventory contains **113 annotation occurrences** in 16 Java classes. Two setup annotations both have upstream ID `Setup` and are internally distinguished as `Setup-1` and `Setup-2`. These are not 113 independently verified .NET assertions.
 
-The closure ledger currently records 47 GAP, 16 PARTIAL_BEHAVIORAL_MAPPING, and 50 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
+The closure ledger currently records 42 GAP, 21 PARTIAL_BEHAVIORAL_MAPPING, and 50 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
 
 The pinned Java TCK run has succeeded (112 Surefire tests); the separate cross-language fixture runner has succeeded. Neither establishes full SharpUnits conformance: normalized differential fixtures are not a one-to-one substitute for the official assertion corpus.
 
@@ -35,3 +35,5 @@ A ledger entry can be `VERIFIED` only when it has: exact upstream assertion ID a
 - Remaining intentional incompatibilities are documented as explicit adapter requirements.
 
 See `conformance/tck-closure-ledger.json` and `conformance/verification-protocol.md`.
+
+Latest formatting evidence: [100-scenario formatting review](format-hundred-review.md). GitHub workflows remain disabled at the user’s request; local execution is not current CI evidence.

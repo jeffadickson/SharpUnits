@@ -30,6 +30,25 @@ public sealed class FormattingRobustnessTests
         Assert.Throws<ArgumentNullException>(()=>formatter.FormatJavaQuantity(quantity,(TextWriter)null!));
     }
 
+    [Theory]
+    [InlineData("°C",1,"1 °C")]
+    [InlineData("µx",0.000001,"1 µx")]
+    [InlineData("1",2,"1 1")]
+    public void CustomDefinitionsAreNotCanonicalizedBySymbolAlone(string symbol,double factor,string expected)
+    {
+        var quantity=new JavaQuantityAdapter(1,new UnitDefinition(symbol,Dimension.ElectricCurrent,UnitConversion.Linear(factor)));
+        Assert.Equal(expected,Formatter().FormatJavaQuantity(quantity));
+    }
+
+    [Fact]
+    public void WriterProviderCannotChangeNumericConvention()
+    {
+        var formatter=Formatter();var quantity=formatter.ParseJavaQuantity("0.125 A");
+        using var writer=new StringWriter(System.Globalization.CultureInfo.GetCultureInfo("de-DE"));
+        formatter.FormatJavaQuantity(quantity,writer);
+        Assert.Equal("0.125 A",writer.ToString());
+    }
+
     [Fact]
     public void WriterOwnershipAndFailuresStayWithCaller()
     {

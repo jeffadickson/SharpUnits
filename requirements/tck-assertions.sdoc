@@ -55,21 +55,21 @@ UID: TCK-46-A2
 STATUS: Active
 TITLE: Pinned assertion 46-A2
 STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-46-A3
 STATUS: Active
 TITLE: Pinned assertion 46-A3
 STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-46-A4
 STATUS: Active
 TITLE: Pinned assertion 46-A4
 STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-46-A5

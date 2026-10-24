@@ -5,6 +5,10 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current continuation (2026-10-24)
+
+See [formatting review](../conformance/format-hundred-review.md): 100 numbered formatting scenarios, compile/full tests every ten; final 962 .NET tests, 558 shared cases and 512 seeded binary64 comparisons pass. Pinned Java TCK: 112 passing tests. Ledger: 42 gaps, 50 implemented/unverified, 21 partial mappings, zero verified closures. Both GitHub workflows remain disabled by current user instruction, superseding older CI directions below. Next gaps include arbitrary Number precision, unit-label normalization, formatting registration and provider/service APIs.
+
 ## Objective
 
 Close the JSR 385 / Indriya compatibility gaps in a disciplined, auditable fashion. Do not divert into additional AC circuit, metrology, or symbolic DSL features. The existing optional features must not regress.
