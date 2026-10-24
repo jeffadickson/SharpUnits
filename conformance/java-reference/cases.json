@@ -4249,6 +4249,252 @@
       "observe": "magnitude",
       "expected": false,
       "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-061",
+      "operation": "parseQuantity",
+      "text": "1 QA",
+      "observe": "unitScale",
+      "expected": 1E+30,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-062",
+      "operation": "parseQuantity",
+      "text": "1 RA",
+      "observe": "unitScale",
+      "expected": 1E+27,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-063",
+      "operation": "parseQuantity",
+      "text": "1 YA",
+      "observe": "unitScale",
+      "expected": 1E+24,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-064",
+      "operation": "parseQuantity",
+      "text": "1 ZA",
+      "observe": "unitScale",
+      "expected": 1E+21,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-065",
+      "operation": "parseQuantity",
+      "text": "1 EA",
+      "observe": "unitScale",
+      "expected": 1E+18,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-066",
+      "operation": "parseQuantity",
+      "text": "1 PA",
+      "observe": "unitScale",
+      "expected": 1000000000000000,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-067",
+      "operation": "parseQuantity",
+      "text": "1 TA",
+      "observe": "unitScale",
+      "expected": 1000000000000,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-068",
+      "operation": "parseQuantity",
+      "text": "1 GA",
+      "observe": "unitScale",
+      "expected": 1000000000,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-069",
+      "operation": "parseQuantity",
+      "text": "1 MA",
+      "observe": "unitScale",
+      "expected": 1000000,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-070",
+      "operation": "parseQuantity",
+      "text": "1 kA",
+      "observe": "unitScale",
+      "expected": 1000,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-071",
+      "operation": "parseQuantity",
+      "text": "1 hA",
+      "observe": "unitScale",
+      "expected": 100,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-072",
+      "operation": "parseQuantity",
+      "text": "1 daA",
+      "observe": "unitScale",
+      "expected": 10,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-073",
+      "operation": "parseQuantity",
+      "text": "1 dA",
+      "observe": "unitScale",
+      "expected": 0.1,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-074",
+      "operation": "parseQuantity",
+      "text": "1 cA",
+      "observe": "unitScale",
+      "expected": 0.01,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-075",
+      "operation": "parseQuantity",
+      "text": "1 mA",
+      "observe": "unitScale",
+      "expected": 0.001,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-076",
+      "operation": "parseQuantity",
+      "text": "1 µA",
+      "observe": "unitScale",
+      "expected": 1E-06,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-077",
+      "operation": "parseQuantity",
+      "text": "1 nA",
+      "observe": "unitScale",
+      "expected": 1E-09,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-078",
+      "operation": "parseQuantity",
+      "text": "1 pA",
+      "observe": "unitScale",
+      "expected": 1E-12,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-079",
+      "operation": "parseQuantity",
+      "text": "1 fA",
+      "observe": "unitScale",
+      "expected": 1E-15,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-080",
+      "operation": "parseQuantity",
+      "text": "1 aA",
+      "observe": "unitScale",
+      "expected": 1E-18,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-081",
+      "operation": "parseQuantity",
+      "text": "1 zA",
+      "observe": "unitScale",
+      "expected": 1E-21,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-082",
+      "operation": "parseQuantity",
+      "text": "1 yA",
+      "observe": "unitScale",
+      "expected": 1E-24,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-083",
+      "operation": "parseQuantity",
+      "text": "1 rA",
+      "observe": "unitScale",
+      "expected": 1E-27,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-084",
+      "operation": "parseQuantity",
+      "text": "1 qA",
+      "observe": "unitScale",
+      "expected": 1E-30,
+      "absoluteTolerance": 0
+    },
+    {
+      "id": "H100-085",
+      "operation": "parseQuantity",
+      "text": "1 µA",
+      "observe": "converted",
+      "expected": 1E-06,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-086",
+      "operation": "parseQuantity",
+      "text": "1 μA",
+      "observe": "converted",
+      "expected": 1E-06,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-087",
+      "operation": "parseQuantity",
+      "text": "2 daV",
+      "observe": "converted",
+      "expected": 20,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
+    },
+    {
+      "id": "H100-088",
+      "operation": "parseQuantity",
+      "text": "3 hΩ",
+      "observe": "converted",
+      "expected": 300,
+      "absoluteTolerance": 0,
+      "resultUnit": "Ω"
+    },
+    {
+      "id": "H100-089",
+      "operation": "parseQuantity",
+      "text": "4 nA",
+      "observe": "converted",
+      "expected": 4E-09,
+      "absoluteTolerance": 0,
+      "resultUnit": "A"
+    },
+    {
+      "id": "H100-090",
+      "operation": "parseQuantity",
+      "text": "5 kV",
+      "observe": "converted",
+      "expected": 5000,
+      "absoluteTolerance": 0,
+      "resultUnit": "V"
     }
   ]
 }

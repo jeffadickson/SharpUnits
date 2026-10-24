@@ -34,6 +34,43 @@ public sealed class ParserGrammarTests
         return parsed.To(registry.Resolve("A")).Value==(double)magnitude/divisor;
     }
 
+    [Property(MaxTest=300,Replay="385,399")]
+    public bool PrefixConversionMatchesIndependentDecimalParsing(short magnitude,PositiveInt generated)
+    {
+        (string Symbol,int Exponent)[] choices=[("d",-1),("c",-2),("n",-9),("M",6),("da",1),("Q",30),("q",-30)];
+        var prefix=choices[generated.Get%choices.Length];var registry=UnitRegistry.CreateStandard();
+        var parsed=new QuantityTextFormat(registry).ParseJavaQuantity(FormattableString.Invariant($"{magnitude} {prefix.Symbol}A"));
+        var expected=double.Parse(FormattableString.Invariant($"{magnitude}e{prefix.Exponent}"),System.Globalization.CultureInfo.InvariantCulture);
+        return parsed.To(registry.Resolve("A")).Value==expected;
+    }
+
+    [Fact]
+    public void PrefixesAreLocalAndExactRegistrationsOverrideInference()
+    {
+        var registry=UnitRegistry.CreateStandard();var format=new QuantityTextFormat(registry);
+        Assert.Equal(1e-9,format.ParseJavaQuantity("1 nA").To(registry.Resolve("A")).Value);
+        Assert.Throws<KeyNotFoundException>(()=>registry.Resolve("nA"));
+        Assert.True(format.ParseJavaQuantity("1 µA").Equals(format.ParseJavaQuantity("1 μA")));
+        var custom=new UnitDefinition("nA",Dimension.ElectricCurrent,UnitConversion.Linear(42));
+        Assert.True(registry.Register(custom));
+        Assert.Same(custom,format.ParseJavaQuantity("2 nA").Unit);
+        Assert.Equal(84,format.ParseJavaQuantity("2 nA").SiQuantity.SiValue);
+        Assert.Throws<KeyNotFoundException>(()=>format.ParseJavaQuantity("1 kmA"));
+        Assert.Equal(1,SiPrefixes.Apply("k",registry.Resolve("mA")).Converter.Scale);
+    }
+
+    [Fact]
+    public void SeededUnknownPrefixSuffixFuzzingRejectsMissingUnits()
+    {
+        const int seed=385017;var random=new Random(seed);
+        var format=new QuantityTextFormat(UnitRegistry.CreateStandard());string[] prefixes=["q","Q","da","µ","μ","n","M"];
+        for(var i=0;i<1000;i++)
+        {
+            var text="1 "+prefixes[random.Next(prefixes.Length)]+"unknown"+i.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            Assert.True(Record.Exception(()=>format.ParseJavaQuantity(text)) is KeyNotFoundException,$"seed={seed}, case={i}, input={text}");
+        }
+    }
+
     [Fact]
     public void ExactUnitFactorsSurviveConversionAndArithmetic()
     {

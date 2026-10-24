@@ -3,7 +3,7 @@ namespace SharpUnits;
 /// <summary>Parses bounded Java-style linear unit expressions without changing the caller's registry.</summary>
 internal static class JavaUnitTextParser
 {
-    // @relation(JP-014-ALIAS, JP-014-COMPOUND, JP-014-POWERS, JP-014-ROOTS, scope=file)
+    // @relation(JP-014-ALIAS, JP-014-COMPOUND, JP-014-POWERS, JP-014-ROOTS, JP-014-INTEGER-FACTOR, JP-014-PREFIXES, scope=file)
     internal static UnitDefinition Resolve(string symbol,UnitRegistry registry)
     {
         try{return ResolveSimple(symbol,registry);}
@@ -31,6 +31,20 @@ internal static class JavaUnitTextParser
             // An exact caller registration wins over this compatibility alias.
             if(symbol=="℃")return registry.Resolve("°C");
             if(symbol=="1")return new UnitDefinition("1",Dimension.None,UnitConversion.Linear(1));
+            var normalized=symbol.Length>0&&symbol[0]=='μ'?"µ"+symbol[1..]:symbol;
+            foreach(var entry in SiPrefixes.Definitions.OrderByDescending(pair=>pair.Key.Length))
+            {
+                if(!normalized.StartsWith(entry.Key,StringComparison.Ordinal)||normalized.Length==entry.Key.Length)continue;
+                UnitDefinition basis;
+                try{basis=registry.Resolve(normalized[entry.Key.Length..]);}
+                catch(KeyNotFoundException){continue;}
+                // Default Java labels contain a single prefix on coherent units, not nested
+                // prefixes on mA/kΩ. Affine prefixes remain a separate compatibility gap.
+                if(!basis.Converter.IsIdentity)continue;
+                var power=System.Numerics.BigInteger.Pow(10,Math.Abs(entry.Value));
+                var factor=entry.Value>=0?new Rational(power,1):new Rational(1,power);
+                return UnitDefinition.FromExactLinear(normalized,basis.RationalDimension,factor);
+            }
             throw;
         }
     }

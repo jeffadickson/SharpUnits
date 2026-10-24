@@ -35,8 +35,8 @@ RELATIONS:
 UID: JP-014-PREFIXES
 STATUS: Active
 TITLE: Automatic decimal-prefix resolution
-STATEMENT: The Java quantity parser shall resolve supported decimal prefix symbols on registered linear units without registry mutation, with exact registrations taking precedence.
-COMMENT: Implementation: JavaUnitTextParser.cs and SiPrefixes.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. Aliases, affine prefixes and general Java unit discovery are not implied.
+STATEMENT: The Java quantity parser shall resolve supported single decimal prefixes on registered coherent linear units without registry mutation, with exact registrations taking precedence.
+COMMENT: Implementation: JavaUnitTextParser.cs and SiPrefixes.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. The Greek micro alias is normalized. Nested/affine prefixes and general Java unit discovery are not implied.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-014

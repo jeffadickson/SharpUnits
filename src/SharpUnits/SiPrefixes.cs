@@ -7,6 +7,8 @@ public static class SiPrefixes
   ["Q"]=30,["R"]=27,["Y"]=24,["Z"]=21,["E"]=18,["P"]=15,["T"]=12,["G"]=9,["M"]=6,["k"]=3,["h"]=2,["da"]=1,
   ["d"]=-1,["c"]=-2,["m"]=-3,["µ"]=-6,["n"]=-9,["p"]=-12,["f"]=-15,["a"]=-18,["z"]=-21,["y"]=-24,["r"]=-27,["q"]=-30
  };
+ // Shared internally so the Java parser and explicit prefix API use one symbol catalog.
+ internal static IEnumerable<KeyValuePair<string,int>> Definitions=>Exponents;
  /// <summary>Creates a prefixed linear unit. Affine units cannot be prefixed.</summary>
  public static UnitDefinition Apply(string prefix,UnitDefinition unit)
  {

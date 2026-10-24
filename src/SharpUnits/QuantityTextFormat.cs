@@ -14,6 +14,10 @@ public sealed class QuantityTextFormat
  /// zero exponent as its default-one sentinel; native unit Pow(0) keeps conventional algebra.
  /// Colon-root exponents are supported with root magnitude at most 1024; zero roots likewise
  /// denote Java's default-one sentinel. Scale evaluation applies power and root sequentially.
+ /// Nonzero signed 32-bit unit factors and single SI prefixes on registered coherent linear
+ /// units are supported. Exact linear factors have a 16384-bit budget and are retained by Java
+ /// adapter conversion; native converter APIs expose double projections. Affine/nested prefixes
+ /// and fractional numeric unit factors remain outside this grammar subset.
  /// Groups/operators are limited to depth 64. Affine units cannot participate in compound algebra.
  /// Whitespace is permitted after ÷ before the denominator. A missing unit denotes dimensionless.
  /// Unlike <see cref="Parse"/>, this preserves the display magnitude. Input is limited to 4096 characters
