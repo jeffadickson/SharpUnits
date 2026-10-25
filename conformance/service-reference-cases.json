@@ -1,0 +1,804 @@
+{
+  "cases": [
+    {
+      "id": "S100-001",
+      "operation": "serviceUnit",
+      "argument": "ONE",
+      "expected": {
+        "label": "one",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "One",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-002",
+      "operation": "serviceUnit",
+      "argument": "AMPERE",
+      "expected": {
+        "label": "A",
+        "dimension": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Ampere",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-003",
+      "operation": "serviceUnit",
+      "argument": "CANDELA",
+      "expected": {
+        "label": "cd",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "one": 1.0,
+        "name": "Candela",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-004",
+      "operation": "serviceUnit",
+      "argument": "KELVIN",
+      "expected": {
+        "label": "K",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Kelvin",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-005",
+      "operation": "serviceUnit",
+      "argument": "KILOGRAM",
+      "expected": {
+        "label": "kg",
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Kilogram",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-006",
+      "operation": "serviceUnit",
+      "argument": "METRE",
+      "expected": {
+        "label": "m",
+        "dimension": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Metre",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-007",
+      "operation": "serviceUnit",
+      "argument": "MOLE",
+      "expected": {
+        "label": "mol",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "one": 1.0,
+        "name": "Mole",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-008",
+      "operation": "serviceUnit",
+      "argument": "SECOND",
+      "expected": {
+        "label": "s",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Second",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-009",
+      "operation": "serviceUnit",
+      "argument": "GRAM",
+      "expected": {
+        "label": "g",
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 0.001,
+        "name": "Gram",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-010",
+      "operation": "serviceUnit",
+      "argument": "RADIAN",
+      "expected": {
+        "label": "rad",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Radian",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-011",
+      "operation": "serviceUnit",
+      "argument": "STERADIAN",
+      "expected": {
+        "label": "sr",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Steradian",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-012",
+      "operation": "serviceUnit",
+      "argument": "HERTZ",
+      "expected": {
+        "label": "Hz",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Hertz",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-013",
+      "operation": "serviceUnit",
+      "argument": "NEWTON",
+      "expected": {
+        "label": "N",
+        "dimension": [
+          1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Newton",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-014",
+      "operation": "serviceUnit",
+      "argument": "PASCAL",
+      "expected": {
+        "label": "Pa",
+        "dimension": [
+          -1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Pascal",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-015",
+      "operation": "serviceUnit",
+      "argument": "JOULE",
+      "expected": {
+        "label": "J",
+        "dimension": [
+          2,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Joule",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-016",
+      "operation": "serviceUnit",
+      "argument": "WATT",
+      "expected": {
+        "label": "W",
+        "dimension": [
+          2,
+          1,
+          -3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Watt",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-017",
+      "operation": "serviceUnit",
+      "argument": "COULOMB",
+      "expected": {
+        "label": "C",
+        "dimension": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Coulomb",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-018",
+      "operation": "serviceUnit",
+      "argument": "VOLT",
+      "expected": {
+        "label": "V",
+        "dimension": [
+          2,
+          1,
+          -3,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Volt",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-019",
+      "operation": "serviceUnit",
+      "argument": "FARAD",
+      "expected": {
+        "label": "F",
+        "dimension": [
+          -2,
+          -1,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Farad",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-020",
+      "operation": "serviceUnit",
+      "argument": "OHM",
+      "expected": {
+        "label": "\u03A9",
+        "dimension": [
+          2,
+          1,
+          -3,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Ohm",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-021",
+      "operation": "serviceUnit",
+      "argument": "SIEMENS",
+      "expected": {
+        "label": "S",
+        "dimension": [
+          -2,
+          -1,
+          3,
+          2,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Siemens",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-022",
+      "operation": "serviceUnit",
+      "argument": "WEBER",
+      "expected": {
+        "label": "Wb",
+        "dimension": [
+          2,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Weber",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-023",
+      "operation": "serviceUnit",
+      "argument": "TESLA",
+      "expected": {
+        "label": "T",
+        "dimension": [
+          0,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Tesla",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-024",
+      "operation": "serviceUnit",
+      "argument": "HENRY",
+      "expected": {
+        "label": "H",
+        "dimension": [
+          2,
+          1,
+          -2,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Henry",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-025",
+      "operation": "serviceUnit",
+      "argument": "CELSIUS",
+      "expected": {
+        "label": "\u2103",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "one": 274.15,
+        "name": "Celsius",
+        "zero": 273.15
+      }
+    },
+    {
+      "id": "S100-026",
+      "operation": "serviceUnit",
+      "argument": "LUMEN",
+      "expected": {
+        "label": "lm",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "one": 1.0,
+        "name": "Lumen",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-027",
+      "operation": "serviceUnit",
+      "argument": "LUX",
+      "expected": {
+        "label": "lx",
+        "dimension": [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "one": 1.0,
+        "name": "Lux",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-028",
+      "operation": "serviceUnit",
+      "argument": "BECQUEREL",
+      "expected": {
+        "label": "Bq",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Becquerel",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-029",
+      "operation": "serviceUnit",
+      "argument": "GRAY",
+      "expected": {
+        "label": "Gy",
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Gray",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-030",
+      "operation": "serviceUnit",
+      "argument": "SIEVERT",
+      "expected": {
+        "label": "Sv",
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Sievert",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-031",
+      "operation": "serviceUnit",
+      "argument": "KATAL",
+      "expected": {
+        "label": "kat",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "one": 1.0,
+        "name": "Katal",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-032",
+      "operation": "serviceUnit",
+      "argument": "METRE_PER_SECOND",
+      "expected": {
+        "label": "m/s",
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Metre per Second",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-033",
+      "operation": "serviceUnit",
+      "argument": "METRE_PER_SQUARE_SECOND",
+      "expected": {
+        "label": "m/s\u00B2",
+        "dimension": [
+          1,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Metre per square second",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-034",
+      "operation": "serviceUnit",
+      "argument": "SQUARE_METRE",
+      "expected": {
+        "label": "m\u00B2",
+        "dimension": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Square metre",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-035",
+      "operation": "serviceUnit",
+      "argument": "CUBIC_METRE",
+      "expected": {
+        "label": "m\u00B3",
+        "dimension": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 1.0,
+        "name": "Cubic metre",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-036",
+      "operation": "serviceUnit",
+      "argument": "KILOMETRE_PER_HOUR",
+      "expected": {
+        "label": "km/h",
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 0.2777777777777778,
+        "name": "Kilometre per hour",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-037",
+      "operation": "serviceUnit",
+      "argument": "PERCENT",
+      "expected": {
+        "label": "%",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 0.01,
+        "name": "Percent",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-038",
+      "operation": "serviceUnit",
+      "argument": "MINUTE",
+      "expected": {
+        "label": "min",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 60.0,
+        "name": "Minute",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-039",
+      "operation": "serviceUnit",
+      "argument": "HOUR",
+      "expected": {
+        "label": "h",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 3600.0,
+        "name": "Hour",
+        "zero": 0.0
+      }
+    },
+    {
+      "id": "S100-040",
+      "operation": "serviceUnit",
+      "argument": "DAY",
+      "expected": {
+        "label": "d",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one": 86400.0,
+        "name": "Day",
+        "zero": 0.0
+      }
+    }
+  ]
+}

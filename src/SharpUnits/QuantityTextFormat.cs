@@ -32,7 +32,7 @@ public sealed class QuantityTextFormat
   destination.Write(FormatJavaQuantity(quantity));
   return destination;
  }
- private static string JavaSymbol(UnitDefinition unit)
+ internal static string JavaSymbol(UnitDefinition unit)
  {
   // Canonicalize only recognized definitions. A caller-defined symbol alone does not
   // prove it denotes Celsius, a micro-prefixed SI unit, or the canonical dimensionless unit.
