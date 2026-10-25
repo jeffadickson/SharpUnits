@@ -130,7 +130,7 @@ foreach(var row in prefixes.Split('\n'))
     var p=row.Trim().Split('|');plans.Add(new JsonObject{["gap"]=$"ASCII prefixed ohm binding {p[0]}",["kind"]="asciiPrefix",["prefixName"]=p[0],["prefixSymbol"]=p[1]});
 }
 if(plans.Count!=100)throw new Exception("Incomplete implementation inventory.");
-for(var i=0;i<plans.Count;i++){plans[i]["id"]=$"UF100-{i+1:000}";plans[i]["requirement"]=$"JP-UF-{i+1:000}";}
+for(var i=0;i<plans.Count;i++){plans[i]["id"]=$"UF100-{i+1:000}";plans[i]["requirement"]=$"JP-UF-{i+1:000}";plans[i]["operation"]="unitFormat";}
 const string manifestPath="conformance/unitformat-gap-review-100.json",casesPath="conformance/unitformat-reference-cases.json";
 var command=args[0];var count=args.Length>1?int.Parse(args[1]):0;
 if(command=="init")

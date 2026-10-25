@@ -71,7 +71,7 @@ public final class UnitFormatReferenceRunner {
         for(JsonNode test:JSON.readTree(new java.io.File(args[0])).path("cases")) {
             Object result;
             try {result=observe(test);}
-            catch(IllegalArgumentException error){result="INVALID";}
+            catch(RuntimeException error){if(error instanceof IllegalArgumentException || error instanceof javax.measure.format.MeasurementParseException)result="INVALID";else throw error;}
             System.out.println(JSON.writeValueAsString(Map.of("id",test.path("id").asText(),"result",result)));
         }
     }

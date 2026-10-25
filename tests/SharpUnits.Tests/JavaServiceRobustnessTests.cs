@@ -70,7 +70,7 @@ public sealed class JavaServiceRobustnessTests
         var formats=JavaServiceProvider.Current.FormatService;
         foreach(var family in new[]{"EBNF","LOCAL","NUMBERDELIMITER","NUMBERSPACE","ASCII"})
         {
-            Assert.Null(formats.GetQuantityFormat(family));Assert.Null(formats.GetUnitFormat(family));
+            Assert.Null(formats.GetQuantityFormat(family));if(family!="ASCII")Assert.Null(formats.GetUnitFormat(family));
             Assert.DoesNotContain(family,formats.QuantityFormatNames);Assert.DoesNotContain(family,formats.UnitFormatNames);
         }
     }

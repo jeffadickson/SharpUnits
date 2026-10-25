@@ -22,6 +22,11 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
  try
  {
   var operation=test.GetProperty("operation").GetString();
+  if(operation=="unitFormat")
+  {
+   Console.WriteLine(JsonSerializer.Serialize(new {id,result=UnitFormatFixtures.Evaluate(test)}));
+   continue;
+  }
   if(operation?.StartsWith("service",StringComparison.Ordinal)==true)
   {
    Console.WriteLine(JsonSerializer.Serialize(new {id,result=ServiceFixtures.Evaluate(test)}));

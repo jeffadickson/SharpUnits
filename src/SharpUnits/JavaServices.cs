@@ -87,40 +87,18 @@ public sealed class JavaSystemOfUnitsService
     public IReadOnlyList<JavaPrefix> BinaryPrefixes=>binary;
 }
 
-/// <summary>Bounded invariant SIMPLE unit formatting and parsing.</summary>
-/// <remarks>General Java unit normalization, mutable labels, ASCII/EBNF/locale formats and parse cursors
-/// are not represented. Registry definitions and the existing bounded parser determine accepted input.</remarks>
-public sealed class JavaUnitTextFormat
-{
-    private readonly QuantityTextFormat quantities;
-    internal JavaUnitTextFormat(UnitRegistry registry)=>quantities=new(registry);
-    /// <summary>Reports the invariant formatting convention.</summary>
-    public bool IsLocaleSensitive=>false;
-    /// <summary>Formats supported unit definitions, including canonical dimensionless text.</summary>
-    public string Format(UnitDefinition unit)
-    {
-        ArgumentNullException.ThrowIfNull(unit);
-        var symbol=QuantityTextFormat.JavaSymbol(unit);
-        return symbol.Length==0?"one":symbol;
-    }
-    /// <summary>Parses a unit within the bounded Java parser grammar.</summary>
-    public UnitDefinition Parse(string text)
-    {
-        ArgumentNullException.ThrowIfNull(text);
-        return quantities.ParseJavaQuantity("1 "+text).Unit;
-    }
-}
-
 /// <summary>Discovers the actually supported SIMPLE format profile.</summary>
-/// <remarks>Indriya also registers ASCII, EBNF, LOCAL and NUMBERDELIMITER formats.
+/// <remarks>Indriya also registers EBNF, LOCAL and NUMBERDELIMITER formats.
 /// Unsupported names return null and are not advertised as implemented.</remarks>
 public sealed class JavaFormatService
 {
     private readonly QuantityTextFormat quantities;
     private readonly JavaUnitTextFormat units;
+    private readonly JavaUnitTextFormat asciiUnits;
     private static readonly IReadOnlyList<string> quantityNames=Array.AsReadOnly(new[]{"SIMPLE"});
-    private static readonly IReadOnlyList<string> unitNames=Array.AsReadOnly(new[]{"SIMPLE_DEFAULT"});
-    internal JavaFormatService(UnitRegistry registry){quantities=new(registry);units=new(registry);}
+    private static readonly IReadOnlyList<string> unitNames=Array.AsReadOnly(new[]{"SIMPLE_DEFAULT","SIMPLE_ASCII"});
+    /// <summary>Creates isolated services with a shared default label database.</summary>
+    public JavaFormatService(UnitRegistry registry){units=new(registry);asciiUnits=new(registry,JavaUnitFormatFlavor.Ascii,units);quantities=new(registry,units);}
     /// <summary>Gets the supported default quantity formatter.</summary>
     public QuantityTextFormat GetQuantityFormat()=>quantities;
     /// <summary>Looks up a supported quantity format name using Java's current-locale case folding.</summary>
@@ -139,7 +117,7 @@ public sealed class JavaFormatService
     {
         ArgumentNullException.ThrowIfNull(name);
         var key=name.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
-        return key is "SIMPLE_DEFAULT" or "DEFAULT"?units:null;
+        return key switch {"SIMPLE_DEFAULT" or "DEFAULT"=>units,"SIMPLE_ASCII" or "ASCII"=>asciiUnits,_=>null};
     }
     /// <summary>Looks up a name and optional variant using Java's underscore convention.</summary>
     public JavaUnitTextFormat? GetUnitFormat(string name,string? variant)

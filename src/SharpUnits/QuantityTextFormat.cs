@@ -5,8 +5,12 @@ namespace SharpUnits;
 public sealed class QuantityTextFormat
 {
  private readonly UnitRegistry registry;
+ private readonly JavaUnitTextFormat? javaUnits;
  /// <summary>Creates a formatter using an explicit unit registry.</summary>
  public QuantityTextFormat(UnitRegistry registry)=>this.registry=registry??throw new ArgumentNullException(nameof(registry));
+ // Service-created formatters share the unit-label database for both formatting and
+ // parsing. The existing public constructor retains its original registry contract.
+ internal QuantityTextFormat(UnitRegistry registry,JavaUnitTextFormat units):this(registry)=>javaUnits=units;
  /// <summary>Reports that the supported Java formatting profile is invariant rather than locale sensitive.</summary>
  public bool IsLocaleSensitive=>false;
  /// <summary>Formats retained display values using the supported pinned Java double/unit text conventions.</summary>
@@ -16,6 +20,7 @@ public sealed class QuantityTextFormat
  {
   ArgumentNullException.ThrowIfNull(quantity);
   var number=JavaNumberText.Format(quantity.Value);var unit=JavaSymbol(quantity.Unit);
+  if(unit.Length!=0&&javaUnits is not null)unit=javaUnits.Format(quantity.Unit);
   return unit.Length==0?number:number+" "+unit;
  }
  /// <summary>Appends Java-profile text and returns the original builder.</summary>
@@ -67,7 +72,7 @@ public sealed class QuantityTextFormat
  /// <exception cref="KeyNotFoundException">The unit symbol is not registered.</exception>
  /// <exception cref="DivideByZeroException">A rational denominator is zero.</exception>
  /// <exception cref="ArgumentOutOfRangeException">The coherent representation cannot be stored as a finite double.</exception>
- public JavaQuantityAdapter ParseJavaQuantity(string text)=>JavaQuantityTextParser.Parse(text,registry);
+ public JavaQuantityAdapter ParseJavaQuantity(string text)=>javaUnits is null?JavaQuantityTextParser.Parse(text,registry):javaUnits.ParseQuantity(text);
  /// <summary>Formats an SI quantity in a selected registered unit.</summary>
  public string Format(Quantity quantity,string symbol)
  {
