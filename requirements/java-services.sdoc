@@ -1,0 +1,1002 @@
+[DOCUMENT]
+TITLE: SharpUnits Java service and unit catalog requirements
+
+[REQUIREMENT]
+UID: JP-SPI-001
+STATUS: Active
+TITLE: serviceUnit: ONE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: ONE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-002
+STATUS: Active
+TITLE: serviceUnit: AMPERE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: AMPERE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-003
+STATUS: Active
+TITLE: serviceUnit: CANDELA
+STATEMENT: The supported CLR service profile shall supply serviceUnit: CANDELA according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-004
+STATUS: Active
+TITLE: serviceUnit: KELVIN
+STATEMENT: The supported CLR service profile shall supply serviceUnit: KELVIN according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-005
+STATUS: Active
+TITLE: serviceUnit: KILOGRAM
+STATEMENT: The supported CLR service profile shall supply serviceUnit: KILOGRAM according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-006
+STATUS: Active
+TITLE: serviceUnit: METRE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: METRE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-007
+STATUS: Active
+TITLE: serviceUnit: MOLE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: MOLE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-008
+STATUS: Active
+TITLE: serviceUnit: SECOND
+STATEMENT: The supported CLR service profile shall supply serviceUnit: SECOND according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-009
+STATUS: Active
+TITLE: serviceUnit: GRAM
+STATEMENT: The supported CLR service profile shall supply serviceUnit: GRAM according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-010
+STATUS: Active
+TITLE: serviceUnit: RADIAN
+STATEMENT: The supported CLR service profile shall supply serviceUnit: RADIAN according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-011
+STATUS: Active
+TITLE: serviceUnit: STERADIAN
+STATEMENT: The supported CLR service profile shall supply serviceUnit: STERADIAN according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-012
+STATUS: Active
+TITLE: serviceUnit: HERTZ
+STATEMENT: The supported CLR service profile shall supply serviceUnit: HERTZ according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-013
+STATUS: Active
+TITLE: serviceUnit: NEWTON
+STATEMENT: The supported CLR service profile shall supply serviceUnit: NEWTON according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-014
+STATUS: Active
+TITLE: serviceUnit: PASCAL
+STATEMENT: The supported CLR service profile shall supply serviceUnit: PASCAL according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-015
+STATUS: Active
+TITLE: serviceUnit: JOULE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: JOULE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-016
+STATUS: Active
+TITLE: serviceUnit: WATT
+STATEMENT: The supported CLR service profile shall supply serviceUnit: WATT according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-017
+STATUS: Active
+TITLE: serviceUnit: COULOMB
+STATEMENT: The supported CLR service profile shall supply serviceUnit: COULOMB according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-018
+STATUS: Active
+TITLE: serviceUnit: VOLT
+STATEMENT: The supported CLR service profile shall supply serviceUnit: VOLT according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-019
+STATUS: Active
+TITLE: serviceUnit: FARAD
+STATEMENT: The supported CLR service profile shall supply serviceUnit: FARAD according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-020
+STATUS: Active
+TITLE: serviceUnit: OHM
+STATEMENT: The supported CLR service profile shall supply serviceUnit: OHM according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-021
+STATUS: Active
+TITLE: serviceUnit: SIEMENS
+STATEMENT: The supported CLR service profile shall supply serviceUnit: SIEMENS according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-022
+STATUS: Active
+TITLE: serviceUnit: WEBER
+STATEMENT: The supported CLR service profile shall supply serviceUnit: WEBER according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-023
+STATUS: Active
+TITLE: serviceUnit: TESLA
+STATEMENT: The supported CLR service profile shall supply serviceUnit: TESLA according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-024
+STATUS: Active
+TITLE: serviceUnit: HENRY
+STATEMENT: The supported CLR service profile shall supply serviceUnit: HENRY according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-025
+STATUS: Active
+TITLE: serviceUnit: CELSIUS
+STATEMENT: The supported CLR service profile shall supply serviceUnit: CELSIUS according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-026
+STATUS: Active
+TITLE: serviceUnit: LUMEN
+STATEMENT: The supported CLR service profile shall supply serviceUnit: LUMEN according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-027
+STATUS: Active
+TITLE: serviceUnit: LUX
+STATEMENT: The supported CLR service profile shall supply serviceUnit: LUX according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-028
+STATUS: Active
+TITLE: serviceUnit: BECQUEREL
+STATEMENT: The supported CLR service profile shall supply serviceUnit: BECQUEREL according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-029
+STATUS: Active
+TITLE: serviceUnit: GRAY
+STATEMENT: The supported CLR service profile shall supply serviceUnit: GRAY according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-030
+STATUS: Active
+TITLE: serviceUnit: SIEVERT
+STATEMENT: The supported CLR service profile shall supply serviceUnit: SIEVERT according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-031
+STATUS: Active
+TITLE: serviceUnit: KATAL
+STATEMENT: The supported CLR service profile shall supply serviceUnit: KATAL according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-032
+STATUS: Active
+TITLE: serviceUnit: METRE_PER_SECOND
+STATEMENT: The supported CLR service profile shall supply serviceUnit: METRE_PER_SECOND according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-033
+STATUS: Active
+TITLE: serviceUnit: METRE_PER_SQUARE_SECOND
+STATEMENT: The supported CLR service profile shall supply serviceUnit: METRE_PER_SQUARE_SECOND according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-034
+STATUS: Active
+TITLE: serviceUnit: SQUARE_METRE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: SQUARE_METRE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-035
+STATUS: Active
+TITLE: serviceUnit: CUBIC_METRE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: CUBIC_METRE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-036
+STATUS: Active
+TITLE: serviceUnit: KILOMETRE_PER_HOUR
+STATEMENT: The supported CLR service profile shall supply serviceUnit: KILOMETRE_PER_HOUR according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-037
+STATUS: Active
+TITLE: serviceUnit: PERCENT
+STATEMENT: The supported CLR service profile shall supply serviceUnit: PERCENT according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-038
+STATUS: Active
+TITLE: serviceUnit: MINUTE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: MINUTE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-039
+STATUS: Active
+TITLE: serviceUnit: HOUR
+STATEMENT: The supported CLR service profile shall supply serviceUnit: HOUR according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-040
+STATUS: Active
+TITLE: serviceUnit: DAY
+STATEMENT: The supported CLR service profile shall supply serviceUnit: DAY according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-041
+STATUS: Active
+TITLE: serviceUnit: WEEK
+STATEMENT: The supported CLR service profile shall supply serviceUnit: WEEK according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-042
+STATUS: Active
+TITLE: serviceUnit: YEAR
+STATEMENT: The supported CLR service profile shall supply serviceUnit: YEAR according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-043
+STATUS: Active
+TITLE: serviceUnit: MONTH
+STATEMENT: The supported CLR service profile shall supply serviceUnit: MONTH according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-044
+STATUS: Active
+TITLE: serviceUnit: LITRE
+STATEMENT: The supported CLR service profile shall supply serviceUnit: LITRE according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-045
+STATUS: Active
+TITLE: serviceType: Dimensionless
+STATEMENT: The supported CLR service profile shall supply serviceType: Dimensionless according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-046
+STATUS: Active
+TITLE: serviceType: ElectricCurrent
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricCurrent according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-047
+STATUS: Active
+TITLE: serviceType: LuminousIntensity
+STATEMENT: The supported CLR service profile shall supply serviceType: LuminousIntensity according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-048
+STATUS: Active
+TITLE: serviceType: Temperature
+STATEMENT: The supported CLR service profile shall supply serviceType: Temperature according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-049
+STATUS: Active
+TITLE: serviceType: Mass
+STATEMENT: The supported CLR service profile shall supply serviceType: Mass according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-050
+STATUS: Active
+TITLE: serviceType: Length
+STATEMENT: The supported CLR service profile shall supply serviceType: Length according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-051
+STATUS: Active
+TITLE: serviceType: AmountOfSubstance
+STATEMENT: The supported CLR service profile shall supply serviceType: AmountOfSubstance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-052
+STATUS: Active
+TITLE: serviceType: Time
+STATEMENT: The supported CLR service profile shall supply serviceType: Time according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-053
+STATUS: Active
+TITLE: serviceType: Angle
+STATEMENT: The supported CLR service profile shall supply serviceType: Angle according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-054
+STATUS: Active
+TITLE: serviceType: SolidAngle
+STATEMENT: The supported CLR service profile shall supply serviceType: SolidAngle according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-055
+STATUS: Active
+TITLE: serviceType: Frequency
+STATEMENT: The supported CLR service profile shall supply serviceType: Frequency according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-056
+STATUS: Active
+TITLE: serviceType: Force
+STATEMENT: The supported CLR service profile shall supply serviceType: Force according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-057
+STATUS: Active
+TITLE: serviceType: Pressure
+STATEMENT: The supported CLR service profile shall supply serviceType: Pressure according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-058
+STATUS: Active
+TITLE: serviceType: Energy
+STATEMENT: The supported CLR service profile shall supply serviceType: Energy according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-059
+STATUS: Active
+TITLE: serviceType: Power
+STATEMENT: The supported CLR service profile shall supply serviceType: Power according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-060
+STATUS: Active
+TITLE: serviceType: ElectricCharge
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricCharge according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-061
+STATUS: Active
+TITLE: serviceType: ElectricPotential
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricPotential according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-062
+STATUS: Active
+TITLE: serviceType: ElectricCapacitance
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricCapacitance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-063
+STATUS: Active
+TITLE: serviceType: ElectricResistance
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricResistance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-064
+STATUS: Active
+TITLE: serviceType: ElectricConductance
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricConductance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-065
+STATUS: Active
+TITLE: serviceType: MagneticFlux
+STATEMENT: The supported CLR service profile shall supply serviceType: MagneticFlux according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-066
+STATUS: Active
+TITLE: serviceType: MagneticFluxDensity
+STATEMENT: The supported CLR service profile shall supply serviceType: MagneticFluxDensity according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-067
+STATUS: Active
+TITLE: serviceType: ElectricInductance
+STATEMENT: The supported CLR service profile shall supply serviceType: ElectricInductance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-068
+STATUS: Active
+TITLE: serviceType: LuminousFlux
+STATEMENT: The supported CLR service profile shall supply serviceType: LuminousFlux according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-069
+STATUS: Active
+TITLE: serviceType: Illuminance
+STATEMENT: The supported CLR service profile shall supply serviceType: Illuminance according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-070
+STATUS: Active
+TITLE: serviceType: Radioactivity
+STATEMENT: The supported CLR service profile shall supply serviceType: Radioactivity according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-071
+STATUS: Active
+TITLE: serviceType: RadiationDoseAbsorbed
+STATEMENT: The supported CLR service profile shall supply serviceType: RadiationDoseAbsorbed according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-072
+STATUS: Active
+TITLE: serviceType: RadiationDoseEffective
+STATEMENT: The supported CLR service profile shall supply serviceType: RadiationDoseEffective according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-073
+STATUS: Active
+TITLE: serviceType: CatalyticActivity
+STATEMENT: The supported CLR service profile shall supply serviceType: CatalyticActivity according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-074
+STATUS: Active
+TITLE: serviceType: Speed
+STATEMENT: The supported CLR service profile shall supply serviceType: Speed according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-075
+STATUS: Active
+TITLE: serviceType: Acceleration
+STATEMENT: The supported CLR service profile shall supply serviceType: Acceleration according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-076
+STATUS: Active
+TITLE: serviceType: Area
+STATEMENT: The supported CLR service profile shall supply serviceType: Area according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-077
+STATUS: Active
+TITLE: serviceType: Volume
+STATEMENT: The supported CLR service profile shall supply serviceType: Volume according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-020
+
+[REQUIREMENT]
+UID: JP-SPI-078
+STATUS: Active
+TITLE: serviceContract: available
+STATEMENT: The supported CLR service profile shall supply serviceContract: available according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-079
+STATUS: Active
+TITLE: serviceContract: current
+STATEMENT: The supported CLR service profile shall supply serviceContract: current according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-080
+STATUS: Active
+TITLE: serviceContract: priority
+STATEMENT: The supported CLR service profile shall supply serviceContract: priority according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-081
+STATUS: Active
+TITLE: serviceContract: quantityDefault
+STATEMENT: The supported CLR service profile shall supply serviceContract: quantityDefault according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-082
+STATUS: Active
+TITLE: serviceContract: quantityNamed
+STATEMENT: The supported CLR service profile shall supply serviceContract: quantityNamed according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-083
+STATUS: Active
+TITLE: serviceContract: quantityNames
+STATEMENT: The supported CLR service profile shall supply serviceContract: quantityNames according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-084
+STATUS: Active
+TITLE: serviceContract: unitDefault
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitDefault according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-085
+STATUS: Active
+TITLE: serviceContract: unitNamed
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitNamed according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-086
+STATUS: Active
+TITLE: serviceContract: unitNames
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitNames according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-087
+STATUS: Active
+TITLE: serviceContract: unitVariant
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitVariant according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-088
+STATUS: Active
+TITLE: serviceContract: systemDefault
+STATEMENT: The supported CLR service profile shall supply serviceContract: systemDefault according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-089
+STATUS: Active
+TITLE: serviceContract: systemNamed
+STATEMENT: The supported CLR service profile shall supply serviceContract: systemNamed according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-090
+STATUS: Active
+TITLE: serviceContract: systemsAvailable
+STATEMENT: The supported CLR service profile shall supply serviceContract: systemsAvailable according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-091
+STATUS: Active
+TITLE: serviceContract: systemName
+STATEMENT: The supported CLR service profile shall supply serviceContract: systemName according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-092
+STATUS: Active
+TITLE: serviceContract: systemUnits
+STATEMENT: The supported CLR service profile shall supply serviceContract: systemUnits according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-093
+STATUS: Active
+TITLE: serviceContract: unitByString
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitByString according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-094
+STATUS: Active
+TITLE: serviceContract: unitsByDimension
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitsByDimension according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-095
+STATUS: Active
+TITLE: serviceContract: unitByType
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitByType according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-096
+STATUS: Active
+TITLE: serviceContract: typedFactory
+STATEMENT: The supported CLR service profile shall supply serviceContract: typedFactory according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-097
+STATUS: Active
+TITLE: serviceContract: metricPrefixes
+STATEMENT: The supported CLR service profile shall supply serviceContract: metricPrefixes according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-098
+STATUS: Active
+TITLE: serviceContract: binaryPrefixes
+STATEMENT: The supported CLR service profile shall supply serviceContract: binaryPrefixes according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-099
+STATUS: Active
+TITLE: serviceContract: unitFormatFormat
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitFormatFormat according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
+
+[REQUIREMENT]
+UID: JP-SPI-100
+STATUS: Active
+TITLE: serviceContract: unitFormatParse
+STATEMENT: The supported CLR service profile shall supply serviceContract: unitFormatParse according to independently executed pinned Indriya observations, with CLR API differences explicitly retained.
+COMMENT: Implementation: JavaServices.cs and JavaUnitCatalogData.cs. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json. This requirement is not a claim of Java API identity or formal TCK closure.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-021
