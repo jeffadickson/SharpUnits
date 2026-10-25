@@ -925,6 +925,390 @@
       "requirement": "JP-UF-060",
       "operation": "unitFormat",
       "expected": "Bq"
+    },
+    {
+      "gap": "ASCII catalog binding GRAY",
+      "kind": "asciiUnit",
+      "field": "GRAY",
+      "id": "UF100-061",
+      "requirement": "JP-UF-061",
+      "operation": "unitFormat",
+      "expected": "Gy"
+    },
+    {
+      "gap": "ASCII catalog binding SIEVERT",
+      "kind": "asciiUnit",
+      "field": "SIEVERT",
+      "id": "UF100-062",
+      "requirement": "JP-UF-062",
+      "operation": "unitFormat",
+      "expected": "Sv"
+    },
+    {
+      "gap": "ASCII catalog binding KATAL",
+      "kind": "asciiUnit",
+      "field": "KATAL",
+      "id": "UF100-063",
+      "requirement": "JP-UF-063",
+      "operation": "unitFormat",
+      "expected": "kat"
+    },
+    {
+      "gap": "ASCII catalog binding METRE_PER_SECOND",
+      "kind": "asciiUnit",
+      "field": "METRE_PER_SECOND",
+      "id": "UF100-064",
+      "requirement": "JP-UF-064",
+      "operation": "unitFormat",
+      "expected": "m*s^-1"
+    },
+    {
+      "gap": "ASCII catalog binding METRE_PER_SQUARE_SECOND",
+      "kind": "asciiUnit",
+      "field": "METRE_PER_SQUARE_SECOND",
+      "id": "UF100-065",
+      "requirement": "JP-UF-065",
+      "operation": "unitFormat",
+      "expected": "m*s^-2"
+    },
+    {
+      "gap": "ASCII catalog binding SQUARE_METRE",
+      "kind": "asciiUnit",
+      "field": "SQUARE_METRE",
+      "id": "UF100-066",
+      "requirement": "JP-UF-066",
+      "operation": "unitFormat",
+      "expected": "m\u00B2"
+    },
+    {
+      "gap": "ASCII catalog binding CUBIC_METRE",
+      "kind": "asciiUnit",
+      "field": "CUBIC_METRE",
+      "id": "UF100-067",
+      "requirement": "JP-UF-067",
+      "operation": "unitFormat",
+      "expected": "m\u00B3"
+    },
+    {
+      "gap": "ASCII catalog binding KILOMETRE_PER_HOUR",
+      "kind": "asciiUnit",
+      "field": "KILOMETRE_PER_HOUR",
+      "id": "UF100-068",
+      "requirement": "JP-UF-068",
+      "operation": "unitFormat",
+      "expected": "km/h"
+    },
+    {
+      "gap": "ASCII catalog binding PERCENT",
+      "kind": "asciiUnit",
+      "field": "PERCENT",
+      "id": "UF100-069",
+      "requirement": "JP-UF-069",
+      "operation": "unitFormat",
+      "expected": "%"
+    },
+    {
+      "gap": "ASCII catalog binding MINUTE",
+      "kind": "asciiUnit",
+      "field": "MINUTE",
+      "id": "UF100-070",
+      "requirement": "JP-UF-070",
+      "operation": "unitFormat",
+      "expected": "min"
+    },
+    {
+      "gap": "ASCII catalog binding HOUR",
+      "kind": "asciiUnit",
+      "field": "HOUR",
+      "id": "UF100-071",
+      "requirement": "JP-UF-071",
+      "operation": "unitFormat",
+      "expected": "h"
+    },
+    {
+      "gap": "ASCII catalog binding DAY",
+      "kind": "asciiUnit",
+      "field": "DAY",
+      "id": "UF100-072",
+      "requirement": "JP-UF-072",
+      "operation": "unitFormat",
+      "expected": "d"
+    },
+    {
+      "gap": "ASCII catalog binding WEEK",
+      "kind": "asciiUnit",
+      "field": "WEEK",
+      "id": "UF100-073",
+      "requirement": "JP-UF-073",
+      "operation": "unitFormat",
+      "expected": "wk"
+    },
+    {
+      "gap": "ASCII catalog binding YEAR",
+      "kind": "asciiUnit",
+      "field": "YEAR",
+      "id": "UF100-074",
+      "requirement": "JP-UF-074",
+      "operation": "unitFormat",
+      "expected": "yr"
+    },
+    {
+      "gap": "ASCII catalog binding MONTH",
+      "kind": "asciiUnit",
+      "field": "MONTH",
+      "id": "UF100-075",
+      "requirement": "JP-UF-075",
+      "operation": "unitFormat",
+      "expected": "mo"
+    },
+    {
+      "gap": "ASCII catalog binding LITRE",
+      "kind": "asciiUnit",
+      "field": "LITRE",
+      "id": "UF100-076",
+      "requirement": "JP-UF-076",
+      "operation": "unitFormat",
+      "expected": "l"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding QUETTA",
+      "kind": "asciiPrefix",
+      "prefixName": "QUETTA",
+      "prefixSymbol": "Q",
+      "id": "UF100-077",
+      "requirement": "JP-UF-077",
+      "operation": "unitFormat",
+      "expected": "QOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding RONNA",
+      "kind": "asciiPrefix",
+      "prefixName": "RONNA",
+      "prefixSymbol": "R",
+      "id": "UF100-078",
+      "requirement": "JP-UF-078",
+      "operation": "unitFormat",
+      "expected": "ROhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding YOTTA",
+      "kind": "asciiPrefix",
+      "prefixName": "YOTTA",
+      "prefixSymbol": "Y",
+      "id": "UF100-079",
+      "requirement": "JP-UF-079",
+      "operation": "unitFormat",
+      "expected": "YOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ZETTA",
+      "kind": "asciiPrefix",
+      "prefixName": "ZETTA",
+      "prefixSymbol": "Z",
+      "id": "UF100-080",
+      "requirement": "JP-UF-080",
+      "operation": "unitFormat",
+      "expected": "ZOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding EXA",
+      "kind": "asciiPrefix",
+      "prefixName": "EXA",
+      "prefixSymbol": "E",
+      "id": "UF100-081",
+      "requirement": "JP-UF-081",
+      "operation": "unitFormat",
+      "expected": "EOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding PETA",
+      "kind": "asciiPrefix",
+      "prefixName": "PETA",
+      "prefixSymbol": "P",
+      "id": "UF100-082",
+      "requirement": "JP-UF-082",
+      "operation": "unitFormat",
+      "expected": "POhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding TERA",
+      "kind": "asciiPrefix",
+      "prefixName": "TERA",
+      "prefixSymbol": "T",
+      "id": "UF100-083",
+      "requirement": "JP-UF-083",
+      "operation": "unitFormat",
+      "expected": "TOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding GIGA",
+      "kind": "asciiPrefix",
+      "prefixName": "GIGA",
+      "prefixSymbol": "G",
+      "id": "UF100-084",
+      "requirement": "JP-UF-084",
+      "operation": "unitFormat",
+      "expected": "GOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MEGA",
+      "kind": "asciiPrefix",
+      "prefixName": "MEGA",
+      "prefixSymbol": "M",
+      "id": "UF100-085",
+      "requirement": "JP-UF-085",
+      "operation": "unitFormat",
+      "expected": "MOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding KILO",
+      "kind": "asciiPrefix",
+      "prefixName": "KILO",
+      "prefixSymbol": "k",
+      "id": "UF100-086",
+      "requirement": "JP-UF-086",
+      "operation": "unitFormat",
+      "expected": "kOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding HECTO",
+      "kind": "asciiPrefix",
+      "prefixName": "HECTO",
+      "prefixSymbol": "h",
+      "id": "UF100-087",
+      "requirement": "JP-UF-087",
+      "operation": "unitFormat",
+      "expected": "hOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding DECA",
+      "kind": "asciiPrefix",
+      "prefixName": "DECA",
+      "prefixSymbol": "da",
+      "id": "UF100-088",
+      "requirement": "JP-UF-088",
+      "operation": "unitFormat",
+      "expected": "daOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding DECI",
+      "kind": "asciiPrefix",
+      "prefixName": "DECI",
+      "prefixSymbol": "d",
+      "id": "UF100-089",
+      "requirement": "JP-UF-089",
+      "operation": "unitFormat",
+      "expected": "dOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding CENTI",
+      "kind": "asciiPrefix",
+      "prefixName": "CENTI",
+      "prefixSymbol": "c",
+      "id": "UF100-090",
+      "requirement": "JP-UF-090",
+      "operation": "unitFormat",
+      "expected": "cOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MILLI",
+      "kind": "asciiPrefix",
+      "prefixName": "MILLI",
+      "prefixSymbol": "m",
+      "id": "UF100-091",
+      "requirement": "JP-UF-091",
+      "operation": "unitFormat",
+      "expected": "mOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MICRO",
+      "kind": "asciiPrefix",
+      "prefixName": "MICRO",
+      "prefixSymbol": "\u00B5",
+      "id": "UF100-092",
+      "requirement": "JP-UF-092",
+      "operation": "unitFormat",
+      "expected": "microOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding NANO",
+      "kind": "asciiPrefix",
+      "prefixName": "NANO",
+      "prefixSymbol": "n",
+      "id": "UF100-093",
+      "requirement": "JP-UF-093",
+      "operation": "unitFormat",
+      "expected": "nOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding PICO",
+      "kind": "asciiPrefix",
+      "prefixName": "PICO",
+      "prefixSymbol": "p",
+      "id": "UF100-094",
+      "requirement": "JP-UF-094",
+      "operation": "unitFormat",
+      "expected": "pOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding FEMTO",
+      "kind": "asciiPrefix",
+      "prefixName": "FEMTO",
+      "prefixSymbol": "f",
+      "id": "UF100-095",
+      "requirement": "JP-UF-095",
+      "operation": "unitFormat",
+      "expected": "fOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ATTO",
+      "kind": "asciiPrefix",
+      "prefixName": "ATTO",
+      "prefixSymbol": "a",
+      "id": "UF100-096",
+      "requirement": "JP-UF-096",
+      "operation": "unitFormat",
+      "expected": "aOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ZEPTO",
+      "kind": "asciiPrefix",
+      "prefixName": "ZEPTO",
+      "prefixSymbol": "z",
+      "id": "UF100-097",
+      "requirement": "JP-UF-097",
+      "operation": "unitFormat",
+      "expected": "zOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding YOCTO",
+      "kind": "asciiPrefix",
+      "prefixName": "YOCTO",
+      "prefixSymbol": "y",
+      "id": "UF100-098",
+      "requirement": "JP-UF-098",
+      "operation": "unitFormat",
+      "expected": "yOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding RONTO",
+      "kind": "asciiPrefix",
+      "prefixName": "RONTO",
+      "prefixSymbol": "r",
+      "id": "UF100-099",
+      "requirement": "JP-UF-099",
+      "operation": "unitFormat",
+      "expected": "rOhm"
+    },
+    {
+      "gap": "ASCII prefixed ohm binding QUECTO",
+      "kind": "asciiPrefix",
+      "prefixName": "QUECTO",
+      "prefixSymbol": "q",
+      "id": "UF100-100",
+      "requirement": "JP-UF-100",
+      "operation": "unitFormat",
+      "expected": "qOhm"
     }
   ]
 }

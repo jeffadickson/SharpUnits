@@ -1238,7 +1238,9 @@
         "id": "UF100-061",
         "requirement": "JP-UF-061"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Gy",
+      "dotnet": "Gy"
     },
     {
       "iteration": 62,
@@ -1250,7 +1252,9 @@
         "id": "UF100-062",
         "requirement": "JP-UF-062"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Sv",
+      "dotnet": "Sv"
     },
     {
       "iteration": 63,
@@ -1262,7 +1266,9 @@
         "id": "UF100-063",
         "requirement": "JP-UF-063"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kat",
+      "dotnet": "kat"
     },
     {
       "iteration": 64,
@@ -1274,7 +1280,9 @@
         "id": "UF100-064",
         "requirement": "JP-UF-064"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m*s^-1",
+      "dotnet": "m*s^-1"
     },
     {
       "iteration": 65,
@@ -1286,7 +1294,9 @@
         "id": "UF100-065",
         "requirement": "JP-UF-065"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m*s^-2",
+      "dotnet": "m*s^-2"
     },
     {
       "iteration": 66,
@@ -1298,7 +1308,9 @@
         "id": "UF100-066",
         "requirement": "JP-UF-066"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m\u00B2",
+      "dotnet": "m\u00B2"
     },
     {
       "iteration": 67,
@@ -1310,7 +1322,9 @@
         "id": "UF100-067",
         "requirement": "JP-UF-067"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m\u00B3",
+      "dotnet": "m\u00B3"
     },
     {
       "iteration": 68,
@@ -1322,7 +1336,9 @@
         "id": "UF100-068",
         "requirement": "JP-UF-068"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "km/h",
+      "dotnet": "km/h"
     },
     {
       "iteration": 69,
@@ -1334,7 +1350,9 @@
         "id": "UF100-069",
         "requirement": "JP-UF-069"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "%",
+      "dotnet": "%"
     },
     {
       "iteration": 70,
@@ -1346,7 +1364,9 @@
         "id": "UF100-070",
         "requirement": "JP-UF-070"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "min",
+      "dotnet": "min"
     },
     {
       "iteration": 71,
@@ -1358,7 +1378,9 @@
         "id": "UF100-071",
         "requirement": "JP-UF-071"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "h",
+      "dotnet": "h"
     },
     {
       "iteration": 72,
@@ -1370,7 +1392,9 @@
         "id": "UF100-072",
         "requirement": "JP-UF-072"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "d",
+      "dotnet": "d"
     },
     {
       "iteration": 73,
@@ -1382,7 +1406,9 @@
         "id": "UF100-073",
         "requirement": "JP-UF-073"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "wk",
+      "dotnet": "wk"
     },
     {
       "iteration": 74,
@@ -1394,7 +1420,9 @@
         "id": "UF100-074",
         "requirement": "JP-UF-074"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "yr",
+      "dotnet": "yr"
     },
     {
       "iteration": 75,
@@ -1406,7 +1434,9 @@
         "id": "UF100-075",
         "requirement": "JP-UF-075"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mo",
+      "dotnet": "mo"
     },
     {
       "iteration": 76,
@@ -1418,7 +1448,9 @@
         "id": "UF100-076",
         "requirement": "JP-UF-076"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "l",
+      "dotnet": "l"
     },
     {
       "iteration": 77,
@@ -1431,7 +1463,9 @@
         "id": "UF100-077",
         "requirement": "JP-UF-077"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "QOhm",
+      "dotnet": "QOhm"
     },
     {
       "iteration": 78,
@@ -1444,7 +1478,9 @@
         "id": "UF100-078",
         "requirement": "JP-UF-078"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "ROhm",
+      "dotnet": "ROhm"
     },
     {
       "iteration": 79,
@@ -1457,7 +1493,9 @@
         "id": "UF100-079",
         "requirement": "JP-UF-079"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "YOhm",
+      "dotnet": "YOhm"
     },
     {
       "iteration": 80,
@@ -1470,7 +1508,9 @@
         "id": "UF100-080",
         "requirement": "JP-UF-080"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "ZOhm",
+      "dotnet": "ZOhm"
     },
     {
       "iteration": 81,
@@ -1483,7 +1523,9 @@
         "id": "UF100-081",
         "requirement": "JP-UF-081"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "EOhm",
+      "dotnet": "EOhm"
     },
     {
       "iteration": 82,
@@ -1496,7 +1538,9 @@
         "id": "UF100-082",
         "requirement": "JP-UF-082"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "POhm",
+      "dotnet": "POhm"
     },
     {
       "iteration": 83,
@@ -1509,7 +1553,9 @@
         "id": "UF100-083",
         "requirement": "JP-UF-083"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "TOhm",
+      "dotnet": "TOhm"
     },
     {
       "iteration": 84,
@@ -1522,7 +1568,9 @@
         "id": "UF100-084",
         "requirement": "JP-UF-084"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "GOhm",
+      "dotnet": "GOhm"
     },
     {
       "iteration": 85,
@@ -1535,7 +1583,9 @@
         "id": "UF100-085",
         "requirement": "JP-UF-085"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "MOhm",
+      "dotnet": "MOhm"
     },
     {
       "iteration": 86,
@@ -1548,7 +1598,9 @@
         "id": "UF100-086",
         "requirement": "JP-UF-086"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kOhm",
+      "dotnet": "kOhm"
     },
     {
       "iteration": 87,
@@ -1561,7 +1613,9 @@
         "id": "UF100-087",
         "requirement": "JP-UF-087"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "hOhm",
+      "dotnet": "hOhm"
     },
     {
       "iteration": 88,
@@ -1574,7 +1628,9 @@
         "id": "UF100-088",
         "requirement": "JP-UF-088"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "daOhm",
+      "dotnet": "daOhm"
     },
     {
       "iteration": 89,
@@ -1587,7 +1643,9 @@
         "id": "UF100-089",
         "requirement": "JP-UF-089"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "dOhm",
+      "dotnet": "dOhm"
     },
     {
       "iteration": 90,
@@ -1600,7 +1658,9 @@
         "id": "UF100-090",
         "requirement": "JP-UF-090"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "cOhm",
+      "dotnet": "cOhm"
     },
     {
       "iteration": 91,
@@ -1613,7 +1673,9 @@
         "id": "UF100-091",
         "requirement": "JP-UF-091"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mOhm",
+      "dotnet": "mOhm"
     },
     {
       "iteration": 92,
@@ -1626,7 +1688,9 @@
         "id": "UF100-092",
         "requirement": "JP-UF-092"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "microOhm",
+      "dotnet": "microOhm"
     },
     {
       "iteration": 93,
@@ -1639,7 +1703,9 @@
         "id": "UF100-093",
         "requirement": "JP-UF-093"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "nOhm",
+      "dotnet": "nOhm"
     },
     {
       "iteration": 94,
@@ -1652,7 +1718,9 @@
         "id": "UF100-094",
         "requirement": "JP-UF-094"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "pOhm",
+      "dotnet": "pOhm"
     },
     {
       "iteration": 95,
@@ -1665,7 +1733,9 @@
         "id": "UF100-095",
         "requirement": "JP-UF-095"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "fOhm",
+      "dotnet": "fOhm"
     },
     {
       "iteration": 96,
@@ -1678,7 +1748,9 @@
         "id": "UF100-096",
         "requirement": "JP-UF-096"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "aOhm",
+      "dotnet": "aOhm"
     },
     {
       "iteration": 97,
@@ -1691,7 +1763,9 @@
         "id": "UF100-097",
         "requirement": "JP-UF-097"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "zOhm",
+      "dotnet": "zOhm"
     },
     {
       "iteration": 98,
@@ -1704,7 +1778,9 @@
         "id": "UF100-098",
         "requirement": "JP-UF-098"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "yOhm",
+      "dotnet": "yOhm"
     },
     {
       "iteration": 99,
@@ -1717,7 +1793,9 @@
         "id": "UF100-099",
         "requirement": "JP-UF-099"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "rOhm",
+      "dotnet": "rOhm"
     },
     {
       "iteration": 100,
@@ -1730,7 +1808,9 @@
         "id": "UF100-100",
         "requirement": "JP-UF-100"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "qOhm",
+      "dotnet": "qOhm"
     }
   ],
   "checkpoints": [
@@ -1774,6 +1854,34 @@
       "build": "PASS",
       "testsPassed": 1200,
       "matched": 60,
+      "mismatches": 0
+    },
+    {
+      "iteration": 70,
+      "build": "PASS",
+      "testsPassed": 1210,
+      "matched": 70,
+      "mismatches": 0
+    },
+    {
+      "iteration": 80,
+      "build": "PASS",
+      "testsPassed": 1220,
+      "matched": 80,
+      "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "testsPassed": 1230,
+      "matched": 90,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "testsPassed": 1240,
+      "matched": 100,
       "mismatches": 0
     }
   ]
