@@ -12,7 +12,9 @@ from pathlib import Path
 def load(path):
     rows={}
     # Both runners emit UTF-8 JSONL; the Windows process locale must not corrupt unit labels.
-    for line in Path(path).read_text(encoding="utf-8").splitlines():
+    # JSONL is framed by LF, not Unicode's broader line-separator set. NEL and
+    # U+2028/U+2029 are legal unescaped characters inside a JSON string label.
+    for line in Path(path).read_text(encoding="utf-8").split("\n"):
         if not line.strip():
             continue
         record=json.loads(line)

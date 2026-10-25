@@ -35,6 +35,14 @@ class ComparatorTests(unittest.TestCase):
    escaped.write_text(json.dumps(record,ensure_ascii=True)+"\n",encoding="utf-8")
    self.assertEqual(record["result"],comparison.load(raw)["unicode"]["result"])
    self.assertEqual([],comparison.compare(comparison.load(raw),comparison.load(escaped)))
+ def test_jsonl_does_not_split_unicode_label_separators(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   raw=pathlib.Path(tmp)/"java.jsonl";escaped=pathlib.Path(tmp)/"dotnet.jsonl"
+   record={"id":"unicode-lines","result":"\u0085label\u2028part\u2029end"}
+   raw.write_text(json.dumps(record,ensure_ascii=False)+"\n",encoding="utf-8")
+   escaped.write_text(json.dumps(record,ensure_ascii=True)+"\n",encoding="utf-8")
+   self.assertEqual(record["result"],comparison.load(raw)["unicode-lines"]["result"])
+   self.assertEqual([],comparison.compare(comparison.load(raw),comparison.load(escaped)))
  def test_boolean_is_not_a_numeric_result(self):
   for expected,actual in [(True,1),(False,0)]:
    with self.subTest(expected=expected):

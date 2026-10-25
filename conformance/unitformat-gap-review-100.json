@@ -15,7 +15,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-001",
-        "requirement": "JP-UF-001"
+        "requirement": "JP-UF-001",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "start|A",
@@ -34,7 +35,8 @@
         "identity": true,
         "ascii": false,
         "id": "UF100-002",
-        "requirement": "JP-UF-002"
+        "requirement": "JP-UF-002",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -53,7 +55,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-003",
-        "requirement": "JP-UF-003"
+        "requirement": "JP-UF-003",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "start|A",
@@ -72,7 +75,8 @@
         "identity": true,
         "ascii": false,
         "id": "UF100-004",
-        "requirement": "JP-UF-004"
+        "requirement": "JP-UF-004",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -97,7 +101,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-005",
-        "requirement": "JP-UF-005"
+        "requirement": "JP-UF-005",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "\u03A9\u2192ampx",
@@ -122,7 +127,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-006",
-        "requirement": "JP-UF-006"
+        "requirement": "JP-UF-006",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "\u03A9\u2192ampx",
@@ -147,7 +153,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-007",
-        "requirement": "JP-UF-007"
+        "requirement": "JP-UF-007",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "ampx",
@@ -172,7 +179,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-008",
-        "requirement": "JP-UF-008"
+        "requirement": "JP-UF-008",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -202,7 +210,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-009",
-        "requirement": "JP-UF-009"
+        "requirement": "JP-UF-009",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "new",
@@ -232,7 +241,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-010",
-        "requirement": "JP-UF-010"
+        "requirement": "JP-UF-010",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -257,7 +267,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-011",
-        "requirement": "JP-UF-011"
+        "requirement": "JP-UF-011",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -282,7 +293,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-012",
-        "requirement": "JP-UF-012"
+        "requirement": "JP-UF-012",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "A",
@@ -312,7 +324,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-013",
-        "requirement": "JP-UF-013"
+        "requirement": "JP-UF-013",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -342,7 +355,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-014",
-        "requirement": "JP-UF-014"
+        "requirement": "JP-UF-014",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -372,7 +386,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-015",
-        "requirement": "JP-UF-015"
+        "requirement": "JP-UF-015",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "shared",
@@ -402,7 +417,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-016",
-        "requirement": "JP-UF-016"
+        "requirement": "JP-UF-016",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "A",
@@ -437,7 +453,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-017",
-        "requirement": "JP-UF-017"
+        "requirement": "JP-UF-017",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -472,7 +489,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-018",
-        "requirement": "JP-UF-018"
+        "requirement": "JP-UF-018",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -507,7 +525,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-019",
-        "requirement": "JP-UF-019"
+        "requirement": "JP-UF-019",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -537,7 +556,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-020",
-        "requirement": "JP-UF-020"
+        "requirement": "JP-UF-020",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -567,7 +587,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-021",
-        "requirement": "JP-UF-021"
+        "requirement": "JP-UF-021",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "amps",
@@ -592,7 +613,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-022",
-        "requirement": "JP-UF-022"
+        "requirement": "JP-UF-022",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -617,7 +639,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-023",
-        "requirement": "JP-UF-023"
+        "requirement": "JP-UF-023",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -642,7 +665,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-024",
-        "requirement": "JP-UF-024"
+        "requirement": "JP-UF-024",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -667,7 +691,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-025",
-        "requirement": "JP-UF-025"
+        "requirement": "JP-UF-025",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -692,7 +717,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-026",
-        "requirement": "JP-UF-026"
+        "requirement": "JP-UF-026",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "\u03B1\u03BC\u03C0",
@@ -717,7 +743,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-027",
-        "requirement": "JP-UF-027"
+        "requirement": "JP-UF-027",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "name/with space",
@@ -742,7 +769,8 @@
         "identity": false,
         "ascii": true,
         "id": "UF100-028",
-        "requirement": "JP-UF-028"
+        "requirement": "JP-UF-028",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "INVALID",
@@ -767,7 +795,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-029",
-        "requirement": "JP-UF-029"
+        "requirement": "JP-UF-029",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "A",
@@ -792,7 +821,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-030",
-        "requirement": "JP-UF-030"
+        "requirement": "JP-UF-030",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "A",
@@ -811,7 +841,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-031",
-        "requirement": "JP-UF-031"
+        "requirement": "JP-UF-031",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "2 amps",
@@ -830,7 +861,8 @@
         "identity": false,
         "ascii": false,
         "id": "UF100-032",
-        "requirement": "JP-UF-032"
+        "requirement": "JP-UF-032",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": true,
@@ -844,7 +876,8 @@
         "kind": "asciiUnit",
         "field": "ONE",
         "id": "UF100-033",
-        "requirement": "JP-UF-033"
+        "requirement": "JP-UF-033",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "one",
@@ -858,7 +891,8 @@
         "kind": "asciiUnit",
         "field": "AMPERE",
         "id": "UF100-034",
-        "requirement": "JP-UF-034"
+        "requirement": "JP-UF-034",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "A",
@@ -872,7 +906,8 @@
         "kind": "asciiUnit",
         "field": "CANDELA",
         "id": "UF100-035",
-        "requirement": "JP-UF-035"
+        "requirement": "JP-UF-035",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "cd",
@@ -886,7 +921,8 @@
         "kind": "asciiUnit",
         "field": "KELVIN",
         "id": "UF100-036",
-        "requirement": "JP-UF-036"
+        "requirement": "JP-UF-036",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "K",
@@ -900,7 +936,8 @@
         "kind": "asciiUnit",
         "field": "KILOGRAM",
         "id": "UF100-037",
-        "requirement": "JP-UF-037"
+        "requirement": "JP-UF-037",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "kg",
@@ -914,7 +951,8 @@
         "kind": "asciiUnit",
         "field": "METRE",
         "id": "UF100-038",
-        "requirement": "JP-UF-038"
+        "requirement": "JP-UF-038",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "m",
@@ -928,7 +966,8 @@
         "kind": "asciiUnit",
         "field": "MOLE",
         "id": "UF100-039",
-        "requirement": "JP-UF-039"
+        "requirement": "JP-UF-039",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "mol",
@@ -942,7 +981,8 @@
         "kind": "asciiUnit",
         "field": "SECOND",
         "id": "UF100-040",
-        "requirement": "JP-UF-040"
+        "requirement": "JP-UF-040",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "s",
@@ -956,7 +996,8 @@
         "kind": "asciiUnit",
         "field": "GRAM",
         "id": "UF100-041",
-        "requirement": "JP-UF-041"
+        "requirement": "JP-UF-041",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "g",
@@ -970,7 +1011,8 @@
         "kind": "asciiUnit",
         "field": "RADIAN",
         "id": "UF100-042",
-        "requirement": "JP-UF-042"
+        "requirement": "JP-UF-042",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "rad",
@@ -984,7 +1026,8 @@
         "kind": "asciiUnit",
         "field": "STERADIAN",
         "id": "UF100-043",
-        "requirement": "JP-UF-043"
+        "requirement": "JP-UF-043",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "sr",
@@ -998,7 +1041,8 @@
         "kind": "asciiUnit",
         "field": "HERTZ",
         "id": "UF100-044",
-        "requirement": "JP-UF-044"
+        "requirement": "JP-UF-044",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Hz",
@@ -1012,7 +1056,8 @@
         "kind": "asciiUnit",
         "field": "NEWTON",
         "id": "UF100-045",
-        "requirement": "JP-UF-045"
+        "requirement": "JP-UF-045",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "N",
@@ -1026,7 +1071,8 @@
         "kind": "asciiUnit",
         "field": "PASCAL",
         "id": "UF100-046",
-        "requirement": "JP-UF-046"
+        "requirement": "JP-UF-046",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Pa",
@@ -1040,7 +1086,8 @@
         "kind": "asciiUnit",
         "field": "JOULE",
         "id": "UF100-047",
-        "requirement": "JP-UF-047"
+        "requirement": "JP-UF-047",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "J",
@@ -1054,7 +1101,8 @@
         "kind": "asciiUnit",
         "field": "WATT",
         "id": "UF100-048",
-        "requirement": "JP-UF-048"
+        "requirement": "JP-UF-048",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "W",
@@ -1068,7 +1116,8 @@
         "kind": "asciiUnit",
         "field": "COULOMB",
         "id": "UF100-049",
-        "requirement": "JP-UF-049"
+        "requirement": "JP-UF-049",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "C",
@@ -1082,7 +1131,8 @@
         "kind": "asciiUnit",
         "field": "VOLT",
         "id": "UF100-050",
-        "requirement": "JP-UF-050"
+        "requirement": "JP-UF-050",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "V",
@@ -1096,7 +1146,8 @@
         "kind": "asciiUnit",
         "field": "FARAD",
         "id": "UF100-051",
-        "requirement": "JP-UF-051"
+        "requirement": "JP-UF-051",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "F",
@@ -1110,7 +1161,8 @@
         "kind": "asciiUnit",
         "field": "OHM",
         "id": "UF100-052",
-        "requirement": "JP-UF-052"
+        "requirement": "JP-UF-052",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Ohm",
@@ -1124,7 +1176,8 @@
         "kind": "asciiUnit",
         "field": "SIEMENS",
         "id": "UF100-053",
-        "requirement": "JP-UF-053"
+        "requirement": "JP-UF-053",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "S",
@@ -1138,7 +1191,8 @@
         "kind": "asciiUnit",
         "field": "WEBER",
         "id": "UF100-054",
-        "requirement": "JP-UF-054"
+        "requirement": "JP-UF-054",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Wb",
@@ -1152,7 +1206,8 @@
         "kind": "asciiUnit",
         "field": "TESLA",
         "id": "UF100-055",
-        "requirement": "JP-UF-055"
+        "requirement": "JP-UF-055",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "T",
@@ -1166,7 +1221,8 @@
         "kind": "asciiUnit",
         "field": "HENRY",
         "id": "UF100-056",
-        "requirement": "JP-UF-056"
+        "requirement": "JP-UF-056",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "H",
@@ -1180,7 +1236,8 @@
         "kind": "asciiUnit",
         "field": "CELSIUS",
         "id": "UF100-057",
-        "requirement": "JP-UF-057"
+        "requirement": "JP-UF-057",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Celsius",
@@ -1194,7 +1251,8 @@
         "kind": "asciiUnit",
         "field": "LUMEN",
         "id": "UF100-058",
-        "requirement": "JP-UF-058"
+        "requirement": "JP-UF-058",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "lm",
@@ -1208,7 +1266,8 @@
         "kind": "asciiUnit",
         "field": "LUX",
         "id": "UF100-059",
-        "requirement": "JP-UF-059"
+        "requirement": "JP-UF-059",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "lx",
@@ -1222,7 +1281,8 @@
         "kind": "asciiUnit",
         "field": "BECQUEREL",
         "id": "UF100-060",
-        "requirement": "JP-UF-060"
+        "requirement": "JP-UF-060",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Bq",
@@ -1236,7 +1296,8 @@
         "kind": "asciiUnit",
         "field": "GRAY",
         "id": "UF100-061",
-        "requirement": "JP-UF-061"
+        "requirement": "JP-UF-061",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Gy",
@@ -1250,7 +1311,8 @@
         "kind": "asciiUnit",
         "field": "SIEVERT",
         "id": "UF100-062",
-        "requirement": "JP-UF-062"
+        "requirement": "JP-UF-062",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "Sv",
@@ -1264,7 +1326,8 @@
         "kind": "asciiUnit",
         "field": "KATAL",
         "id": "UF100-063",
-        "requirement": "JP-UF-063"
+        "requirement": "JP-UF-063",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "kat",
@@ -1278,7 +1341,8 @@
         "kind": "asciiUnit",
         "field": "METRE_PER_SECOND",
         "id": "UF100-064",
-        "requirement": "JP-UF-064"
+        "requirement": "JP-UF-064",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "m*s^-1",
@@ -1292,7 +1356,8 @@
         "kind": "asciiUnit",
         "field": "METRE_PER_SQUARE_SECOND",
         "id": "UF100-065",
-        "requirement": "JP-UF-065"
+        "requirement": "JP-UF-065",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "m*s^-2",
@@ -1306,7 +1371,8 @@
         "kind": "asciiUnit",
         "field": "SQUARE_METRE",
         "id": "UF100-066",
-        "requirement": "JP-UF-066"
+        "requirement": "JP-UF-066",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "m\u00B2",
@@ -1320,7 +1386,8 @@
         "kind": "asciiUnit",
         "field": "CUBIC_METRE",
         "id": "UF100-067",
-        "requirement": "JP-UF-067"
+        "requirement": "JP-UF-067",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "m\u00B3",
@@ -1334,7 +1401,8 @@
         "kind": "asciiUnit",
         "field": "KILOMETRE_PER_HOUR",
         "id": "UF100-068",
-        "requirement": "JP-UF-068"
+        "requirement": "JP-UF-068",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "km/h",
@@ -1348,7 +1416,8 @@
         "kind": "asciiUnit",
         "field": "PERCENT",
         "id": "UF100-069",
-        "requirement": "JP-UF-069"
+        "requirement": "JP-UF-069",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "%",
@@ -1362,7 +1431,8 @@
         "kind": "asciiUnit",
         "field": "MINUTE",
         "id": "UF100-070",
-        "requirement": "JP-UF-070"
+        "requirement": "JP-UF-070",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "min",
@@ -1376,7 +1446,8 @@
         "kind": "asciiUnit",
         "field": "HOUR",
         "id": "UF100-071",
-        "requirement": "JP-UF-071"
+        "requirement": "JP-UF-071",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "h",
@@ -1390,7 +1461,8 @@
         "kind": "asciiUnit",
         "field": "DAY",
         "id": "UF100-072",
-        "requirement": "JP-UF-072"
+        "requirement": "JP-UF-072",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "d",
@@ -1404,7 +1476,8 @@
         "kind": "asciiUnit",
         "field": "WEEK",
         "id": "UF100-073",
-        "requirement": "JP-UF-073"
+        "requirement": "JP-UF-073",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "wk",
@@ -1418,7 +1491,8 @@
         "kind": "asciiUnit",
         "field": "YEAR",
         "id": "UF100-074",
-        "requirement": "JP-UF-074"
+        "requirement": "JP-UF-074",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "yr",
@@ -1432,7 +1506,8 @@
         "kind": "asciiUnit",
         "field": "MONTH",
         "id": "UF100-075",
-        "requirement": "JP-UF-075"
+        "requirement": "JP-UF-075",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "mo",
@@ -1446,7 +1521,8 @@
         "kind": "asciiUnit",
         "field": "LITRE",
         "id": "UF100-076",
-        "requirement": "JP-UF-076"
+        "requirement": "JP-UF-076",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "l",
@@ -1461,7 +1537,8 @@
         "prefixName": "QUETTA",
         "prefixSymbol": "Q",
         "id": "UF100-077",
-        "requirement": "JP-UF-077"
+        "requirement": "JP-UF-077",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "QOhm",
@@ -1476,7 +1553,8 @@
         "prefixName": "RONNA",
         "prefixSymbol": "R",
         "id": "UF100-078",
-        "requirement": "JP-UF-078"
+        "requirement": "JP-UF-078",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "ROhm",
@@ -1491,7 +1569,8 @@
         "prefixName": "YOTTA",
         "prefixSymbol": "Y",
         "id": "UF100-079",
-        "requirement": "JP-UF-079"
+        "requirement": "JP-UF-079",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "YOhm",
@@ -1506,7 +1585,8 @@
         "prefixName": "ZETTA",
         "prefixSymbol": "Z",
         "id": "UF100-080",
-        "requirement": "JP-UF-080"
+        "requirement": "JP-UF-080",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "ZOhm",
@@ -1521,7 +1601,8 @@
         "prefixName": "EXA",
         "prefixSymbol": "E",
         "id": "UF100-081",
-        "requirement": "JP-UF-081"
+        "requirement": "JP-UF-081",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "EOhm",
@@ -1536,7 +1617,8 @@
         "prefixName": "PETA",
         "prefixSymbol": "P",
         "id": "UF100-082",
-        "requirement": "JP-UF-082"
+        "requirement": "JP-UF-082",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "POhm",
@@ -1551,7 +1633,8 @@
         "prefixName": "TERA",
         "prefixSymbol": "T",
         "id": "UF100-083",
-        "requirement": "JP-UF-083"
+        "requirement": "JP-UF-083",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "TOhm",
@@ -1566,7 +1649,8 @@
         "prefixName": "GIGA",
         "prefixSymbol": "G",
         "id": "UF100-084",
-        "requirement": "JP-UF-084"
+        "requirement": "JP-UF-084",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "GOhm",
@@ -1581,7 +1665,8 @@
         "prefixName": "MEGA",
         "prefixSymbol": "M",
         "id": "UF100-085",
-        "requirement": "JP-UF-085"
+        "requirement": "JP-UF-085",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "MOhm",
@@ -1596,7 +1681,8 @@
         "prefixName": "KILO",
         "prefixSymbol": "k",
         "id": "UF100-086",
-        "requirement": "JP-UF-086"
+        "requirement": "JP-UF-086",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "kOhm",
@@ -1611,7 +1697,8 @@
         "prefixName": "HECTO",
         "prefixSymbol": "h",
         "id": "UF100-087",
-        "requirement": "JP-UF-087"
+        "requirement": "JP-UF-087",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "hOhm",
@@ -1626,7 +1713,8 @@
         "prefixName": "DECA",
         "prefixSymbol": "da",
         "id": "UF100-088",
-        "requirement": "JP-UF-088"
+        "requirement": "JP-UF-088",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "daOhm",
@@ -1641,7 +1729,8 @@
         "prefixName": "DECI",
         "prefixSymbol": "d",
         "id": "UF100-089",
-        "requirement": "JP-UF-089"
+        "requirement": "JP-UF-089",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "dOhm",
@@ -1656,7 +1745,8 @@
         "prefixName": "CENTI",
         "prefixSymbol": "c",
         "id": "UF100-090",
-        "requirement": "JP-UF-090"
+        "requirement": "JP-UF-090",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "cOhm",
@@ -1671,7 +1761,8 @@
         "prefixName": "MILLI",
         "prefixSymbol": "m",
         "id": "UF100-091",
-        "requirement": "JP-UF-091"
+        "requirement": "JP-UF-091",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "mOhm",
@@ -1686,7 +1777,8 @@
         "prefixName": "MICRO",
         "prefixSymbol": "\u00B5",
         "id": "UF100-092",
-        "requirement": "JP-UF-092"
+        "requirement": "JP-UF-092",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "microOhm",
@@ -1701,7 +1793,8 @@
         "prefixName": "NANO",
         "prefixSymbol": "n",
         "id": "UF100-093",
-        "requirement": "JP-UF-093"
+        "requirement": "JP-UF-093",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "nOhm",
@@ -1716,7 +1809,8 @@
         "prefixName": "PICO",
         "prefixSymbol": "p",
         "id": "UF100-094",
-        "requirement": "JP-UF-094"
+        "requirement": "JP-UF-094",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "pOhm",
@@ -1731,7 +1825,8 @@
         "prefixName": "FEMTO",
         "prefixSymbol": "f",
         "id": "UF100-095",
-        "requirement": "JP-UF-095"
+        "requirement": "JP-UF-095",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "fOhm",
@@ -1746,7 +1841,8 @@
         "prefixName": "ATTO",
         "prefixSymbol": "a",
         "id": "UF100-096",
-        "requirement": "JP-UF-096"
+        "requirement": "JP-UF-096",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "aOhm",
@@ -1761,7 +1857,8 @@
         "prefixName": "ZEPTO",
         "prefixSymbol": "z",
         "id": "UF100-097",
-        "requirement": "JP-UF-097"
+        "requirement": "JP-UF-097",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "zOhm",
@@ -1776,7 +1873,8 @@
         "prefixName": "YOCTO",
         "prefixSymbol": "y",
         "id": "UF100-098",
-        "requirement": "JP-UF-098"
+        "requirement": "JP-UF-098",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "yOhm",
@@ -1791,7 +1889,8 @@
         "prefixName": "RONTO",
         "prefixSymbol": "r",
         "id": "UF100-099",
-        "requirement": "JP-UF-099"
+        "requirement": "JP-UF-099",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "rOhm",
@@ -1806,7 +1905,8 @@
         "prefixName": "QUECTO",
         "prefixSymbol": "q",
         "id": "UF100-100",
-        "requirement": "JP-UF-100"
+        "requirement": "JP-UF-100",
+        "operation": "unitFormat"
       },
       "status": "IMPLEMENTED_PROFILE_MATCH",
       "java": "qOhm",
@@ -1880,7 +1980,7 @@
     {
       "iteration": 100,
       "build": "PASS",
-      "testsPassed": 1240,
+      "testsPassed": 1298,
       "matched": 100,
       "mismatches": 0
     }

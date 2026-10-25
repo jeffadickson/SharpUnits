@@ -172,7 +172,7 @@ if(command!="record")throw new ArgumentException("Use init/prepare/expect/record
 var manifest=JsonNode.Parse(File.ReadAllText(manifestPath))!.AsObject();
 foreach(var review in manifest["reviews"]!.AsArray().Take(count))
 {
-    var id=review!["input"]!["id"]!.GetValue<string>();review["java"]=java[id]["result"]!.DeepClone();review["dotnet"]=clr[id]["result"]!.DeepClone();review["status"]="IMPLEMENTED_PROFILE_MATCH";
+    var id=review!["input"]!["id"]!.GetValue<string>();review["input"]!["operation"]="unitFormat";review["java"]=java[id]["result"]!.DeepClone();review["dotnet"]=clr[id]["result"]!.DeepClone();review["status"]="IMPLEMENTED_PROFILE_MATCH";
 }
 var log=File.ReadAllText($"../unitformat100-test-{count}.log");if(!log.Contains("Failed:     0"))throw new Exception("Full tests did not pass.");
 var checkpoints=manifest["checkpoints"]!.AsArray();for(var i=checkpoints.Count-1;i>=0;i--)if(checkpoints[i]!["iteration"]!.GetValue<int>()==count)checkpoints.RemoveAt(i);

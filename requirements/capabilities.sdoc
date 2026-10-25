@@ -97,7 +97,7 @@ UID: JP-015
 STATUS: Active
 TITLE: Unit and quantity formatting
 STATEMENT: SharpUnits shall provide Unit and quantity formatting within a documented compatibility envelope.
-COMMENT: Inventory disposition: Partial: Retained-value finite-double Java formatting, CLR append destinations and invariant locale profile; arbitrary Number precision, Java API identity and general unit labels remain partial. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: retained-value double text, mutable default labels/aliases, appendable unit output and bounded SIMPLE ASCII catalog/prefix profiles; general normalization, Java unit/API identity, arbitrary Number precision and EBNF/LOCAL remain incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-016
@@ -188,7 +188,7 @@ UID: JP-028
 STATUS: Active
 TITLE: Java reference conformance corpus
 STATEMENT: SharpUnits shall provide Java reference conformance corpus within a documented compatibility envelope.
-COMMENT: Inventory disposition: Implemented, partial coverage: 726 shared observations across quantity/parser/format and service corpora; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Implemented, partial coverage: 872 shared observations across quantity/parser/format and service corpora; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-029

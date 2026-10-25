@@ -99,8 +99,8 @@ COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReference
 UID: TCK-45-A3
 STATUS: Active
 TITLE: Pinned assertion 45-A3
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Every configured Java unit formatter exposes public Appendable format(Unit, Appendable). CLR adaptation and behavior shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat and UnitFormatRobustnessTests. Evidence: conformance/unitformat-gap-review-100.json and conformance/unitformat-gap-hundred-review.md. Exact Java API/unit identity and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-45-A4
@@ -113,8 +113,8 @@ COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReference
 UID: TCK-45-A5
 STATUS: Active
 TITLE: Pinned assertion 45-A5
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Every configured Java unit formatter exposes a public label method. CLR adaptation and mutable-label behavior shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat and UnitFormatRobustnessTests. Evidence: conformance/unitformat-gap-review-100.json and conformance/unitformat-gap-hundred-review.md. Exact Java API/unit identity and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-45-A6

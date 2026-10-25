@@ -50,3 +50,5 @@ unmapped structural requirements. Arbitrary Number precision/storage, full forma
 families, assembly/service discovery and independent review remain open even where
 an assertion now has a partial mapping. The ledger policy still requires independent
 review and CI evidence for formal closure; GitHub CI remains disabled by user request.
+
+Follow-up: the [unit-format review](unitformat-gap-hundred-review.md) adds bounded ASCII, mutable labels and appendable formatting; 45-A3/45-A5 now have partial mappings. Earlier counts above are historical.

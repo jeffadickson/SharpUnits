@@ -1,0 +1,613 @@
+{
+  "cases": [
+    {
+      "id": "UF-EDGE-001",
+      "operation": "unitFormat",
+      "gap": "System text lookup follows shared labels",
+      "kind": "globalLookup",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": true
+    },
+    {
+      "id": "UF-EDGE-002",
+      "operation": "unitFormat",
+      "gap": "Default speed follows component labels",
+      "kind": "format",
+      "unit": "METRE_PER_SECOND",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met/s"
+    },
+    {
+      "id": "UF-EDGE-003",
+      "operation": "unitFormat",
+      "gap": "ASCII speed follows component labels",
+      "kind": "format",
+      "unit": "METRE_PER_SECOND",
+      "text": null,
+      "ascii": true,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met*s^-1"
+    },
+    {
+      "id": "UF-EDGE-004",
+      "operation": "unitFormat",
+      "gap": "Default area without label follows component labels",
+      "kind": "format",
+      "unit": "SQUARE_METRE",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeLabel",
+          "name": null,
+          "unit": "SQUARE_METRE"
+        },
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met²"
+    },
+    {
+      "id": "UF-EDGE-005",
+      "operation": "unitFormat",
+      "gap": "Default volume without label follows component labels",
+      "kind": "format",
+      "unit": "CUBIC_METRE",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeLabel",
+          "name": null,
+          "unit": "CUBIC_METRE"
+        },
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met³"
+    },
+    {
+      "id": "UF-EDGE-006",
+      "operation": "unitFormat",
+      "gap": "Default area macro masks ASCII component override",
+      "kind": "format",
+      "unit": "SQUARE_METRE",
+      "text": null,
+      "ascii": true,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "m²"
+    },
+    {
+      "id": "UF-EDGE-007",
+      "operation": "unitFormat",
+      "gap": "ASCII area after default macro removal",
+      "kind": "defaultAreaRemoval",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "m^2"
+    },
+    {
+      "id": "UF-EDGE-008",
+      "operation": "unitFormat",
+      "gap": "ASCII square alias",
+      "kind": "parse",
+      "unit": "SQUARE_METRE",
+      "text": "m2",
+      "ascii": true,
+      "actions": [],
+      "expected": true
+    },
+    {
+      "id": "UF-EDGE-009",
+      "operation": "unitFormat",
+      "gap": "ASCII Celsius alias",
+      "kind": "parse",
+      "unit": "CELSIUS",
+      "text": "Cel",
+      "ascii": true,
+      "actions": [],
+      "expected": true
+    },
+    {
+      "id": "UF-EDGE-010",
+      "operation": "unitFormat",
+      "gap": "Default micro Ohm alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "µOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "μΩ"
+    },
+    {
+      "id": "UF-EDGE-011",
+      "operation": "unitFormat",
+      "gap": "ASCII micro Ohm alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "microOhm"
+    },
+    {
+      "id": "UF-EDGE-012",
+      "operation": "unitFormat",
+      "gap": "Default month alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "month",
+      "ascii": false,
+      "actions": [],
+      "expected": "mo"
+    },
+    {
+      "id": "UF-EDGE-013",
+      "operation": "unitFormat",
+      "gap": "Default day alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "day",
+      "ascii": false,
+      "actions": [],
+      "expected": "d"
+    },
+    {
+      "id": "UF-EDGE-014",
+      "operation": "unitFormat",
+      "gap": "ASCII micro ampere alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microA",
+      "ascii": true,
+      "actions": [],
+      "expected": "microA"
+    },
+    {
+      "id": "UF-EDGE-015",
+      "operation": "unitFormat",
+      "gap": "ASCII micro gram alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microg",
+      "ascii": true,
+      "actions": [],
+      "expected": "microg"
+    },
+    {
+      "id": "UF-EDGE-016",
+      "operation": "unitFormat",
+      "gap": "ASCII micro litre alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microL",
+      "ascii": true,
+      "actions": [],
+      "expected": "microL"
+    },
+    {
+      "id": "UF-EDGE-017",
+      "operation": "unitFormat",
+      "gap": "ASCII kilogram alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "kg",
+      "ascii": true,
+      "actions": [],
+      "expected": "kg"
+    },
+    {
+      "id": "UF-EDGE-018",
+      "operation": "unitFormat",
+      "gap": "Removing null alias is a no-op",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeAlias",
+          "name": null,
+          "unit": "A"
+        }
+      ],
+      "expected": "A"
+    },
+    {
+      "id": "UF-EDGE-019",
+      "operation": "unitFormat",
+      "gap": "NBSP may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": " label",
+          "unit": "A"
+        }
+      ],
+      "expected": " label"
+    },
+    {
+      "id": "UF-EDGE-020",
+      "operation": "unitFormat",
+      "gap": "NEL may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "\u0085label",
+          "unit": "A"
+        }
+      ],
+      "expected": "\u0085label"
+    },
+    {
+      "id": "UF-EDGE-021",
+      "operation": "unitFormat",
+      "gap": "NUL may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "\u0000label",
+          "unit": "A"
+        }
+      ],
+      "expected": "\u0000label"
+    },
+    {
+      "id": "UF-EDGE-022",
+      "operation": "unitFormat",
+      "gap": "Aliases are case sensitive",
+      "kind": "parse",
+      "unit": "A",
+      "text": "foo",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "alias",
+          "name": "Foo",
+          "unit": "A"
+        }
+      ],
+      "expected": "INVALID"
+    },
+    {
+      "id": "UF-EDGE-023",
+      "operation": "unitFormat",
+      "gap": "Removing current parse name retains no binding",
+      "kind": "parse",
+      "unit": "A",
+      "text": "amps",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "amps",
+          "unit": "A"
+        },
+        {
+          "op": "removeAlias",
+          "name": "amps",
+          "unit": "A"
+        }
+      ],
+      "expected": "INVALID"
+    },
+    {
+      "id": "UF-EDGE-024",
+      "operation": "unitFormat",
+      "gap": "Removing aliases preserves another unit's collision binding",
+      "kind": "parse",
+      "unit": "V",
+      "text": "shared",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "shared",
+          "unit": "A"
+        },
+        {
+          "op": "label",
+          "name": "shared",
+          "unit": "V"
+        },
+        {
+          "op": "removeAliases",
+          "name": null,
+          "unit": "A"
+        }
+      ],
+      "expected": true
+    },
+    {
+      "id": "UF-EDGE-025",
+      "operation": "unitFormat",
+      "gap": "ASCII cubic alias",
+      "kind": "parse",
+      "unit": "CUBIC_METRE",
+      "text": "m3",
+      "ascii": true,
+      "actions": [],
+      "expected": true
+    },
+    {
+      "id": "UF-EDGE-026",
+      "operation": "unitFormat",
+      "gap": "Component aliases change product dimensions",
+      "kind": "parseDimension",
+      "unit": "A",
+      "text": "m/s",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "alias",
+          "name": "m",
+          "unit": "A"
+        }
+      ],
+      "expected": "[0, 0, -1, 1, 0, 0, 0]"
+    },
+    {
+      "id": "UF-EDGE-027",
+      "operation": "unitFormat",
+      "gap": "Default identifier classification across all UTF-16 code units",
+      "kind": "identifierBmp",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "65128:953F49BD8D536E8FD9B70C07D4B90437141ABDCFC165E2B881291B39CE17385D"
+    },
+    {
+      "id": "UF-EDGE-028",
+      "operation": "unitFormat",
+      "gap": "ASCII identifier classification across all UTF-16 code units",
+      "kind": "identifierBmp",
+      "unit": "A",
+      "text": null,
+      "ascii": true,
+      "actions": [],
+      "expected": "99:97475658E781D0D9AA00E64E8F3EE407571632365451E576AC79C542FE9F2731"
+    },
+    {
+      "id": "UF-EDGE-029",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ki",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "KiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "KiOhm"
+    },
+    {
+      "id": "UF-EDGE-030",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ki",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "KiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "KiΩ"
+    },
+    {
+      "id": "UF-EDGE-031",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Mi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "MiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "MiOhm"
+    },
+    {
+      "id": "UF-EDGE-032",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Mi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "MiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "MiΩ"
+    },
+    {
+      "id": "UF-EDGE-033",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Gi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "GiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "GiOhm"
+    },
+    {
+      "id": "UF-EDGE-034",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Gi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "GiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "GiΩ"
+    },
+    {
+      "id": "UF-EDGE-035",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ti",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "TiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "TiOhm"
+    },
+    {
+      "id": "UF-EDGE-036",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ti",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "TiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "TiΩ"
+    },
+    {
+      "id": "UF-EDGE-037",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Pi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "PiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "PiOhm"
+    },
+    {
+      "id": "UF-EDGE-038",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Pi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "PiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "PiΩ"
+    },
+    {
+      "id": "UF-EDGE-039",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ei",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "EiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "EiOhm"
+    },
+    {
+      "id": "UF-EDGE-040",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ei",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "EiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "EiΩ"
+    },
+    {
+      "id": "UF-EDGE-041",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Zi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "ZiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "ZiOhm"
+    },
+    {
+      "id": "UF-EDGE-042",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Zi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "ZiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "ZiΩ"
+    },
+    {
+      "id": "UF-EDGE-043",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Yi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "YiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "YiOhm"
+    },
+    {
+      "id": "UF-EDGE-044",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Yi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "YiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "YiΩ"
+    },
+    {
+      "id": "UF-EDGE-045",
+      "operation": "unitFormat",
+      "gap": "ASCII volume after default macro removal",
+      "kind": "defaultVolumeRemoval",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "m^3"
+    },
+    {
+      "id": "UF-EDGE-046",
+      "operation": "unitFormat",
+      "gap": "ASCII preserves unrelated foreign base symbol",
+      "kind": "format",
+      "unit": "__FOREIGN__",
+      "text": null,
+      "ascii": true,
+      "actions": [],
+      "expected": "privateβ"
+    }
+  ]
+}

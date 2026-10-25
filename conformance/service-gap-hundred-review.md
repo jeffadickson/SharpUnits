@@ -176,3 +176,5 @@ the known-limit file intentionally records differences separately from passing c
 Both GitHub workflows remain `disabled_manually`, their sources retain manual
 dispatch only, and macOS stays disabled. Local Windows results are not new GitHub
 or Ubuntu CI evidence. Work remains on draft PR #8; no merge or formal closure is claimed.
+
+Follow-up: the [unit-format review](unitformat-gap-hundred-review.md) adds bounded ASCII, mutable labels and appendable formatting; 45-A3/45-A5 now have partial mappings. Earlier counts above are historical.

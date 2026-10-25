@@ -323,9 +323,14 @@
     {
       "id": "45-A3",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat",
+      "evidence": "conformance/unitformat-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testUnitFormatFormatAppendable",
+      "expectedSemantics": "Every configured Java unit formatter has a public Appendable format(Unit, Appendable) method.",
+      "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures.",
+      "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
+      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user."
     },
     {
       "id": "45-A4",
@@ -342,9 +347,14 @@
     {
       "id": "45-A5",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat",
+      "evidence": "conformance/unitformat-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testUnitFormatLabel",
+      "expectedSemantics": "Every configured Java unit formatter has a public label method.",
+      "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures.",
+      "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
+      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user."
     },
     {
       "id": "45-A6",

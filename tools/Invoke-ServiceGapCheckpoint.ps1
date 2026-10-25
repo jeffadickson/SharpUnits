@@ -21,6 +21,10 @@ foreach($path in @('conformance/service-edge-cases.json','conformance/service-fi
  if(Test-Path $path){$expected+=(Get-Content $path -Raw|ConvertFrom-Json).cases.Count}
 }
 if(Test-Path tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs){$expected+=10}
+foreach($path in @('conformance/unitformat-reference-cases.json','conformance/unitformat-supplement-cases.json')){
+ if(Test-Path $path){$expected+=(Get-Content $path -Raw|ConvertFrom-Json).cases.Count}
+}
+if(Test-Path tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs){$expected+=12}
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected -or [int]$trx.TestRun.ResultSummary.Counters.failed -ne 0){throw "Incomplete test execution: expected $expected tests"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../services100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}

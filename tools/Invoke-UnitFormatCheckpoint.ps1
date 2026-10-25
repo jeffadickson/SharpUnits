@@ -16,6 +16,7 @@ if($LASTEXITCODE){Get-Content "../unitformat100-build-$Count.log" -Tail 25;throw
 if($LASTEXITCODE){Get-Content "../unitformat100-test-$Count.log" -Tail 25;throw 'Tests failed'}
 [xml]$trx=Get-Content "../unitformat100-test-results/unitformat-$Count.trx"
 $expected=1140+$Count
+if(Test-Path conformance/unitformat-supplement-cases.json){$expected+=(Get-Content conformance/unitformat-supplement-cases.json -Raw|ConvertFrom-Json).cases.Count}
 if(Test-Path tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs){$expected+=12}
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected){throw "Incomplete tests: expected $expected"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../unitformat100-runner-$Count.log"

@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-25",
+  "baselineCommit": "8cbdf09",
+  "environment": "Windows; .NET SDK 10.0.402; pinned JDK 17.0.20.1",
+  "implementationItems": 100,
+  "statefulContracts": 32,
+  "asciiCatalogBindings": 44,
+  "metricOhmBindings": 24,
+  "supplementalObservations": 46,
+  "differentialObservationsTotal": 872,
+  "dotnetTestsExecuted": 1298,
+  "pinnedJavaTckTests": 112,
+  "formalClosures": 0,
+  "ledger": {
+    "implementedUnverified": 50,
+    "partial": 49,
+    "verified": 0,
+    "gap": 14
+  },
+  "requirements": {
+    "documents": 7,
+    "strictdoc": "0.30.4",
+    "records": 374
+  },
+  "coverage": {
+    "linesCovered": 1622,
+    "linesValid": 1721,
+    "branchesCovered": 1368,
+    "branchesValid": 1634
+  },
+  "mutation": {
+    "counterexample": {
+      "shrunk": 0,
+      "original": 1,
+      "replay": "385,611",
+      "shrinks": 1
+    },
+    "killed": 13,
+    "limitations": "Targeted manual campaign, not exhaustive",
+    "compiledNonEquivalent": 13
+  },
+  "properties": {
+    "casesEach": 300,
+    "replays": [
+      "385,611",
+      "385,613"
+    ]
+  },
+  "malformedFuzz": {
+    "seed": 385615,
+    "cases": 1000
+  },
+  "identifierClassifications": {
+    "codeUnitsPerFlavor": 65536,
+    "defaultAccepted": 65128,
+    "asciiAccepted": 99,
+    "limitations": "Initial UTF-16 code unit acceptance, not all label strings or Unicode scalar sequences"
+  },
+  "checkpointCount": 10,
+  "ci": {
+    "macOS": "disabled",
+    "java": "disabled_manually",
+    "newRemoteCiEvidence": false,
+    "dotnet": "disabled_manually"
+  },
+  "hashes": {
+    "../unitformat100-service-filter-dotnet.jsonl": "FAB15A1E7CD2CCCE51452B49BD8E8EFC93F03B9D123B1049455F3FA937EAED40",
+    "../unitformat100-service-reference-java.jsonl": "14C7F4EE2E348A208653106B1502CA7793CB1722C78C4051696AA38B05FC7BED",
+    "../unitformat100-service-edge-dotnet.jsonl": "4AE2DB9DC82F1E170A2ECA3A24BAB8E7AD7019D09317512E16B1E2FB2D28B656",
+    "../unitformat100-harness-tests.log": "F4BE3A76C50745774B109D1D1F37AA6DF4D1E4E8063B4C77E445B0716FA12229",
+    "../unitformat100-service-filter-java.jsonl": "9F49BB78D90DE434DFC2553019185E155A6C971E78E97899CF9D6E3C8D244DB5",
+    "../unitformat100-service-edge-java.jsonl": "C4FB3F92BD7CB1E2A594DA045DBE54A0C51860757B0F5F4BED5061EFA7D604A2",
+    "../unitformat100-service-reference-dotnet.jsonl": "45C9E02987119E0B18D31DAF971250CC0433F7AE37A9EE81DA5772526114C6EE",
+    "../unitformat100-final-build.log": "E90C679F7CEBD94BB5F6103F3ACFA9ED2DB83114DB7CD0D665190D0FEE366FDF",
+    "../unitformat100-java-100.jsonl": "7A493ABC84F1F5C6D2359582AF17EB4B7D92A950ECC6830D5FC501BEC6E0F333",
+    "src/SharpUnits/QuantityTextFormat.cs": "044B78DBAB52D687C9EB4A0F77BD9DDAE769D0FD9C7FD841DD63C4997385F7ED",
+    "../unitformat100-supplement-java.jsonl": "2CD9346C6F7EB291D17D43336661D4AF4668CD0866B11F1DB60DB44A9067532E",
+    "../unitformat100-supplement-dotnet.jsonl": "9759EBF270894629BD8AD2A5084004AF18B31A4F41597F969CBF4FD2343E8971",
+    "../unitformat100-dotnet-100.jsonl": "009452EB08CDE47C617515F86E6A76013F0D2EB4CC77BA15A4DC5968950C53BE",
+    "src/SharpUnits/JavaUnitAsciiData.cs": "599C70B289B159AD351B3258EB82DFBB8E2C2B268A8C0C0E357A6E0018DCC712",
+    "../unitformat100-regression-java.jsonl": "75D638ADBBF44E0F343FC92F83CB03A9382F9F9DE184824BFAC4EF1C1DDF1BA9",
+    "src/SharpUnits/UnitRegistry.cs": "3B1329C781FAB909F28C7871569E7D8E905251EFBC4386B4026C630EE058C702",
+    "src/SharpUnits/JavaUnitTextFormat.cs": "0633375B8AAD9FD93956F6C322603022C0B55FFCE72EC98A2572778B6A0B4366",
+    "../unitformat100-tck.log": "96CB7520F65B565FDE90F75008EB85135E694FFF1203E325423C811126E9136D",
+    "../unitformat100-fraction.log": "67137AA7DBAF4A11FECCCF93C4814AF59575791065F7A31C1A3C010E045ABE9C",
+    "src/SharpUnits/JavaServices.cs": "E04CB495AD7A0C80DC7607133F283F06D0804C30C7A1FCCC6EAB8EC2158526CC",
+    "../unitformat100-final-test.log": "F2D2D7F5C03F9ACF37C0091443A017DBA176E93FA99BC222B2DDB367CCFD5DAB",
+    "../unitformat100-regression-dotnet.jsonl": "6C129FC5FF194358627AB9060F3D62ABCB73C5961785ECB9091E53317661B9C9"
+  }
+}

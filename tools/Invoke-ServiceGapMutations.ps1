@@ -6,7 +6,7 @@ $original=@{};foreach($file in @($units,$arithmetic)){$original[$file]=[IO.File]
 # Each non-equivalent mutation must compile, execute the targeted tests, and be detected.
 $mutants=@(
  @{id='ProviderPriority';file=$units;pattern='Priority=>10';replacement='Priority=>0'},
- @{id='UnitLookupCase';file=$units;pattern='return labels.GetValueOrDefault\(text\);';replacement='return labels.Values.FirstOrDefault(u=>string.Equals(u.Symbol,text,StringComparison.OrdinalIgnoreCase));'},
+ @{id='UnitLookupCase';file=$units;pattern='string.Equals\(format.Format\(unit\),text,StringComparison.Ordinal\)';replacement='string.Equals(format.Format(unit),text,StringComparison.OrdinalIgnoreCase)'},
  @{id='NullTypeLookup';file=$units;pattern='quantityType is null\?null:types.GetValueOrDefault\(quantityType\)';replacement='quantityType is null?throw new ArgumentNullException(nameof(quantityType)):types.GetValueOrDefault(quantityType)'},
  @{id='FormatLocale';file=$units;pattern='name.ToUpper\(System.Globalization.CultureInfo.CurrentCulture\)';replacement='name.ToUpperInvariant()';matches=2},
  @{id='BinaryMetadata';file=$units;pattern='new JavaPrefix\(symbol,1024,index\+1\)';replacement='new JavaPrefix(symbol,2,10*(index+1))'},

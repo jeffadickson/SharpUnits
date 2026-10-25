@@ -40,7 +40,7 @@ public sealed class JavaUnitTextFormat
         ArgumentNullException.ThrowIfNull(registry);
         if(!Enum.IsDefined(flavor))throw new ArgumentOutOfRangeException(nameof(flavor));
         this.flavor=flavor;
-        var units=registry.Snapshot().Select(pair=>pair.Value).Distinct().ToArray();
+        var units=registry.Snapshot().Select(pair=>pair.Value).Distinct().OrderBy(unit=>unit.Symbol,StringComparer.Ordinal).ToArray();
         if(flavor==JavaUnitFormatFlavor.Default)SeedDefault(units);
         else
         {
@@ -127,6 +127,18 @@ public sealed class JavaUnitTextFormat
             }
             return fallback.Format(unit);
         }
+        if(byUnit.TryGetValue(unit,out var product))
+        {
+            string M()=>Format(catalog["METRE"].Unit);
+            string S()=>Format(catalog["SECOND"].Unit);
+            switch(product.Field)
+            {
+                case "METRE_PER_SECOND":return M()+"/"+S();
+                case "METRE_PER_SQUARE_SECOND":return M()+"/"+S()+"²";
+                case "SQUARE_METRE":return M()+"²";
+                case "CUBIC_METRE":return M()+"³";
+            }
+        }
         var symbol=QuantityTextFormat.JavaSymbol(unit);
         return symbol.Length==0?"one":symbol;
     }
@@ -182,6 +194,15 @@ public sealed class JavaUnitTextFormat
         var factor=exponent>=0?new Rational(power,1):new Rational(1,power);
         return UnitDefinition.FromExactLinear(symbol+unit.Symbol,unit.RationalDimension,JavaDoubleArithmetic.ScaleOf(unit)*factor);
     }
+    private static IEnumerable<(string Name,UnitDefinition Unit)> BinaryOhmAliases(UnitDefinition unit)
+    {
+        // Prefix metadata is radix 1024 with ordinal exponent, not an early-rounded
+        // decimal projection of 2^(10*n). Keep exact factors through adapter conversion.
+        var symbols=new[]{"Ki","Mi","Gi","Ti","Pi","Ei","Zi","Yi"};
+        for(var i=0;i<symbols.Length;i++)
+            yield return (symbols[i]+"Ohm",UnitDefinition.FromExactLinear(symbols[i]+unit.Symbol,unit.RationalDimension,
+                JavaDoubleArithmetic.ScaleOf(unit)*new Rational(BigInteger.Pow(1024,i+1),1)));
+    }
     private void SeedDefault(UnitDefinition[] units)
     {
         foreach(var unit in units)
@@ -207,10 +228,25 @@ public sealed class JavaUnitTextFormat
         }
         foreach(var pair in new[]{("DAY","day"),("WEEK","week"),("YEAR","y"),("YEAR","year"),("YEAR","days365"),("YEAR","a"),("MONTH","mon"),("MONTH","month")})
             if(units.Contains(catalog[pair.Item1].Unit))names[pair.Item2]=catalog[pair.Item1].Unit;
-        if(units.Contains(catalog["OHM"].Unit))names["Ohm"]=catalog["OHM"].Unit;
+        if(units.Contains(catalog["OHM"].Unit))
+        {
+            names["Ohm"]=catalog["OHM"].Unit;
+            foreach(var binary in BinaryOhmAliases(catalog["OHM"].Unit))names[binary.Name]=binary.Unit;
+        }
         if(units.Contains(catalog["SQUARE_METRE"].Unit))names["m2"]=catalog["SQUARE_METRE"].Unit;
         if(units.Contains(catalog["CUBIC_METRE"].Unit))names["m3"]=catalog["CUBIC_METRE"].Unit;
         if(units.Contains(catalog["CELSIUS"].Unit))names["°C"]=catalog["CELSIUS"].Unit;
+        OverlayRegistrations(units);
+    }
+    private void OverlayRegistrations(UnitDefinition[] units)
+    {
+        // Explicit registry entries win over inferred prefixes regardless of hash-map
+        // enumeration order. Product graphs still resolve mutable components at parse time.
+        foreach(var unit in units)
+        {
+            if(byUnit.GetValueOrDefault(unit)?.Field is "METRE_PER_SECOND" or "METRE_PER_SQUARE_SECOND")continue;
+            var symbol=QuantityTextFormat.JavaSymbol(unit);Seed(unit,symbol.Length==0?"one":symbol);names[unit.Symbol]=unit;
+        }
     }
     private void SeedAscii(UnitDefinition[] units)
     {
@@ -227,8 +263,11 @@ public sealed class JavaUnitTextFormat
             if(field is "GRAM" or "LITRE")
                 foreach(var prefix in SiPrefixes.Definitions)Seed(Prefix(unit,prefix.Key,prefix.Value),prefix.Key=="µ"?(field=="GRAM"?"microg":"microL"):prefix.Key+(field=="GRAM"?"g":"L"));
             if(field=="OHM")
+            {
                 foreach(var prefix in JavaUnitAsciiData.Prefixes())
                     Seed(Prefix(unit,prefix.Prefix,SiPrefixes.Exponent(prefix.Prefix)),prefix.Label);
+                foreach(var binary in BinaryOhmAliases(unit))Seed(binary.Unit,binary.Name);
+            }
         }
         if(units.Contains(catalog["CELSIUS"].Unit))names["Cel"]=catalog["CELSIUS"].Unit;
         if(units.Contains(catalog["SQUARE_METRE"].Unit))names["m2"]=catalog["SQUARE_METRE"].Unit;

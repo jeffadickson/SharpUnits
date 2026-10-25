@@ -17,13 +17,12 @@ public sealed class JavaUnitSystem
     // @relation(JP-020, scope=file)
     internal static JavaUnitSystem Default { get; }=new();
     private readonly ReadOnlyCollection<JavaUnitEntry> entries;
-    private readonly IReadOnlyDictionary<string,UnitDefinition> labels;
     private readonly IReadOnlyDictionary<string,UnitDefinition> types;
 
     private JavaUnitSystem()
     {
         entries=Array.AsReadOnly(JavaUnitCatalogData.Entries());
-        labels=entries.ToDictionary(entry=>entry.Unit.Symbol,entry=>entry.Unit,StringComparer.Ordinal);
+        var labels=entries.ToDictionary(entry=>entry.Unit.Symbol,entry=>entry.Unit,StringComparer.Ordinal);
         types=JavaUnitCatalogData.Types().ToDictionary(pair=>pair.Key,pair=>labels[pair.Value],StringComparer.Ordinal);
     }
 
@@ -33,11 +32,13 @@ public sealed class JavaUnitSystem
     public IReadOnlyList<JavaUnitEntry> Entries=>entries;
     /// <summary>Gets an immutable snapshot of all units in this system.</summary>
     public IReadOnlyList<UnitDefinition> Units=>Array.AsReadOnly(entries.Select(entry=>entry.Unit).ToArray());
-    /// <summary>Looks up a unit by exact formatted text, returning null when absent.</summary>
+    /// <summary>Looks up current shared-default formatted text, returning null when absent.</summary>
+    /// <remarks>Catalog metadata remains immutable, but label changes affect text lookup as in pinned Java.</remarks>
     public UnitDefinition? GetUnit(string text)
     {
         ArgumentNullException.ThrowIfNull(text);
-        return labels.GetValueOrDefault(text);
+        var format=JavaServiceProvider.Current.FormatService.GetUnitFormat();
+        return entries.Select(entry=>entry.Unit).FirstOrDefault(unit=>string.Equals(format.Format(unit),text,StringComparison.Ordinal));
     }
     /// <summary>Looks up a Java quantity-type identifier; null and unknown types return null.</summary>
     /// <remarks>Matches the pinned system's HashMap lookup, unlike its null-rejecting text lookup.</remarks>
@@ -87,7 +88,7 @@ public sealed class JavaSystemOfUnitsService
     public IReadOnlyList<JavaPrefix> BinaryPrefixes=>binary;
 }
 
-/// <summary>Discovers the actually supported SIMPLE format profile.</summary>
+/// <summary>Discovers bounded SIMPLE default and ASCII unit-format profiles.</summary>
 /// <remarks>Indriya also registers EBNF, LOCAL and NUMBERDELIMITER formats.
 /// Unsupported names return null and are not advertised as implemented.</remarks>
 public sealed class JavaFormatService
@@ -112,7 +113,7 @@ public sealed class JavaFormatService
     public IReadOnlyList<string> QuantityFormatNames=>quantityNames;
     /// <summary>Gets the supported default unit formatter.</summary>
     public JavaUnitTextFormat GetUnitFormat()=>units;
-    /// <summary>Looks up SIMPLE_DEFAULT or its DEFAULT alias.</summary>
+    /// <summary>Looks up SIMPLE_DEFAULT/SIMPLE_ASCII or their DEFAULT/ASCII aliases.</summary>
     public JavaUnitTextFormat? GetUnitFormat(string name)
     {
         ArgumentNullException.ThrowIfNull(name);
