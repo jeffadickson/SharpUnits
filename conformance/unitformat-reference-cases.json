@@ -645,6 +645,286 @@
       "requirement": "JP-UF-030",
       "operation": "unitFormat",
       "expected": "A"
+    },
+    {
+      "gap": "Quantity formatting observes shared unit labels",
+      "kind": "quantityFormat",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-031",
+      "requirement": "JP-UF-031",
+      "operation": "unitFormat",
+      "expected": "2 amps"
+    },
+    {
+      "gap": "Quantity parsing observes shared unit aliases",
+      "kind": "quantityParse",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-032",
+      "requirement": "JP-UF-032",
+      "operation": "unitFormat",
+      "expected": true
+    },
+    {
+      "gap": "ASCII catalog binding ONE",
+      "kind": "asciiUnit",
+      "field": "ONE",
+      "id": "UF100-033",
+      "requirement": "JP-UF-033",
+      "operation": "unitFormat",
+      "expected": "one"
+    },
+    {
+      "gap": "ASCII catalog binding AMPERE",
+      "kind": "asciiUnit",
+      "field": "AMPERE",
+      "id": "UF100-034",
+      "requirement": "JP-UF-034",
+      "operation": "unitFormat",
+      "expected": "A"
+    },
+    {
+      "gap": "ASCII catalog binding CANDELA",
+      "kind": "asciiUnit",
+      "field": "CANDELA",
+      "id": "UF100-035",
+      "requirement": "JP-UF-035",
+      "operation": "unitFormat",
+      "expected": "cd"
+    },
+    {
+      "gap": "ASCII catalog binding KELVIN",
+      "kind": "asciiUnit",
+      "field": "KELVIN",
+      "id": "UF100-036",
+      "requirement": "JP-UF-036",
+      "operation": "unitFormat",
+      "expected": "K"
+    },
+    {
+      "gap": "ASCII catalog binding KILOGRAM",
+      "kind": "asciiUnit",
+      "field": "KILOGRAM",
+      "id": "UF100-037",
+      "requirement": "JP-UF-037",
+      "operation": "unitFormat",
+      "expected": "kg"
+    },
+    {
+      "gap": "ASCII catalog binding METRE",
+      "kind": "asciiUnit",
+      "field": "METRE",
+      "id": "UF100-038",
+      "requirement": "JP-UF-038",
+      "operation": "unitFormat",
+      "expected": "m"
+    },
+    {
+      "gap": "ASCII catalog binding MOLE",
+      "kind": "asciiUnit",
+      "field": "MOLE",
+      "id": "UF100-039",
+      "requirement": "JP-UF-039",
+      "operation": "unitFormat",
+      "expected": "mol"
+    },
+    {
+      "gap": "ASCII catalog binding SECOND",
+      "kind": "asciiUnit",
+      "field": "SECOND",
+      "id": "UF100-040",
+      "requirement": "JP-UF-040",
+      "operation": "unitFormat",
+      "expected": "s"
+    },
+    {
+      "gap": "ASCII catalog binding GRAM",
+      "kind": "asciiUnit",
+      "field": "GRAM",
+      "id": "UF100-041",
+      "requirement": "JP-UF-041",
+      "operation": "unitFormat",
+      "expected": "g"
+    },
+    {
+      "gap": "ASCII catalog binding RADIAN",
+      "kind": "asciiUnit",
+      "field": "RADIAN",
+      "id": "UF100-042",
+      "requirement": "JP-UF-042",
+      "operation": "unitFormat",
+      "expected": "rad"
+    },
+    {
+      "gap": "ASCII catalog binding STERADIAN",
+      "kind": "asciiUnit",
+      "field": "STERADIAN",
+      "id": "UF100-043",
+      "requirement": "JP-UF-043",
+      "operation": "unitFormat",
+      "expected": "sr"
+    },
+    {
+      "gap": "ASCII catalog binding HERTZ",
+      "kind": "asciiUnit",
+      "field": "HERTZ",
+      "id": "UF100-044",
+      "requirement": "JP-UF-044",
+      "operation": "unitFormat",
+      "expected": "Hz"
+    },
+    {
+      "gap": "ASCII catalog binding NEWTON",
+      "kind": "asciiUnit",
+      "field": "NEWTON",
+      "id": "UF100-045",
+      "requirement": "JP-UF-045",
+      "operation": "unitFormat",
+      "expected": "N"
+    },
+    {
+      "gap": "ASCII catalog binding PASCAL",
+      "kind": "asciiUnit",
+      "field": "PASCAL",
+      "id": "UF100-046",
+      "requirement": "JP-UF-046",
+      "operation": "unitFormat",
+      "expected": "Pa"
+    },
+    {
+      "gap": "ASCII catalog binding JOULE",
+      "kind": "asciiUnit",
+      "field": "JOULE",
+      "id": "UF100-047",
+      "requirement": "JP-UF-047",
+      "operation": "unitFormat",
+      "expected": "J"
+    },
+    {
+      "gap": "ASCII catalog binding WATT",
+      "kind": "asciiUnit",
+      "field": "WATT",
+      "id": "UF100-048",
+      "requirement": "JP-UF-048",
+      "operation": "unitFormat",
+      "expected": "W"
+    },
+    {
+      "gap": "ASCII catalog binding COULOMB",
+      "kind": "asciiUnit",
+      "field": "COULOMB",
+      "id": "UF100-049",
+      "requirement": "JP-UF-049",
+      "operation": "unitFormat",
+      "expected": "C"
+    },
+    {
+      "gap": "ASCII catalog binding VOLT",
+      "kind": "asciiUnit",
+      "field": "VOLT",
+      "id": "UF100-050",
+      "requirement": "JP-UF-050",
+      "operation": "unitFormat",
+      "expected": "V"
+    },
+    {
+      "gap": "ASCII catalog binding FARAD",
+      "kind": "asciiUnit",
+      "field": "FARAD",
+      "id": "UF100-051",
+      "requirement": "JP-UF-051",
+      "operation": "unitFormat",
+      "expected": "F"
+    },
+    {
+      "gap": "ASCII catalog binding OHM",
+      "kind": "asciiUnit",
+      "field": "OHM",
+      "id": "UF100-052",
+      "requirement": "JP-UF-052",
+      "operation": "unitFormat",
+      "expected": "Ohm"
+    },
+    {
+      "gap": "ASCII catalog binding SIEMENS",
+      "kind": "asciiUnit",
+      "field": "SIEMENS",
+      "id": "UF100-053",
+      "requirement": "JP-UF-053",
+      "operation": "unitFormat",
+      "expected": "S"
+    },
+    {
+      "gap": "ASCII catalog binding WEBER",
+      "kind": "asciiUnit",
+      "field": "WEBER",
+      "id": "UF100-054",
+      "requirement": "JP-UF-054",
+      "operation": "unitFormat",
+      "expected": "Wb"
+    },
+    {
+      "gap": "ASCII catalog binding TESLA",
+      "kind": "asciiUnit",
+      "field": "TESLA",
+      "id": "UF100-055",
+      "requirement": "JP-UF-055",
+      "operation": "unitFormat",
+      "expected": "T"
+    },
+    {
+      "gap": "ASCII catalog binding HENRY",
+      "kind": "asciiUnit",
+      "field": "HENRY",
+      "id": "UF100-056",
+      "requirement": "JP-UF-056",
+      "operation": "unitFormat",
+      "expected": "H"
+    },
+    {
+      "gap": "ASCII catalog binding CELSIUS",
+      "kind": "asciiUnit",
+      "field": "CELSIUS",
+      "id": "UF100-057",
+      "requirement": "JP-UF-057",
+      "operation": "unitFormat",
+      "expected": "Celsius"
+    },
+    {
+      "gap": "ASCII catalog binding LUMEN",
+      "kind": "asciiUnit",
+      "field": "LUMEN",
+      "id": "UF100-058",
+      "requirement": "JP-UF-058",
+      "operation": "unitFormat",
+      "expected": "lm"
+    },
+    {
+      "gap": "ASCII catalog binding LUX",
+      "kind": "asciiUnit",
+      "field": "LUX",
+      "id": "UF100-059",
+      "requirement": "JP-UF-059",
+      "operation": "unitFormat",
+      "expected": "lx"
+    },
+    {
+      "gap": "ASCII catalog binding BECQUEREL",
+      "kind": "asciiUnit",
+      "field": "BECQUEREL",
+      "id": "UF100-060",
+      "requirement": "JP-UF-060",
+      "operation": "unitFormat",
+      "expected": "Bq"
     }
   ]
 }

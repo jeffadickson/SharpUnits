@@ -813,7 +813,9 @@
         "id": "UF100-031",
         "requirement": "JP-UF-031"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "2 amps",
+      "dotnet": "2 amps"
     },
     {
       "iteration": 32,
@@ -830,7 +832,9 @@
         "id": "UF100-032",
         "requirement": "JP-UF-032"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
     },
     {
       "iteration": 33,
@@ -842,7 +846,9 @@
         "id": "UF100-033",
         "requirement": "JP-UF-033"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "one",
+      "dotnet": "one"
     },
     {
       "iteration": 34,
@@ -854,7 +860,9 @@
         "id": "UF100-034",
         "requirement": "JP-UF-034"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
     },
     {
       "iteration": 35,
@@ -866,7 +874,9 @@
         "id": "UF100-035",
         "requirement": "JP-UF-035"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "cd",
+      "dotnet": "cd"
     },
     {
       "iteration": 36,
@@ -878,7 +888,9 @@
         "id": "UF100-036",
         "requirement": "JP-UF-036"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "K",
+      "dotnet": "K"
     },
     {
       "iteration": 37,
@@ -890,7 +902,9 @@
         "id": "UF100-037",
         "requirement": "JP-UF-037"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kg",
+      "dotnet": "kg"
     },
     {
       "iteration": 38,
@@ -902,7 +916,9 @@
         "id": "UF100-038",
         "requirement": "JP-UF-038"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m",
+      "dotnet": "m"
     },
     {
       "iteration": 39,
@@ -914,7 +930,9 @@
         "id": "UF100-039",
         "requirement": "JP-UF-039"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mol",
+      "dotnet": "mol"
     },
     {
       "iteration": 40,
@@ -926,7 +944,9 @@
         "id": "UF100-040",
         "requirement": "JP-UF-040"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "s",
+      "dotnet": "s"
     },
     {
       "iteration": 41,
@@ -938,7 +958,9 @@
         "id": "UF100-041",
         "requirement": "JP-UF-041"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "g",
+      "dotnet": "g"
     },
     {
       "iteration": 42,
@@ -950,7 +972,9 @@
         "id": "UF100-042",
         "requirement": "JP-UF-042"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "rad",
+      "dotnet": "rad"
     },
     {
       "iteration": 43,
@@ -962,7 +986,9 @@
         "id": "UF100-043",
         "requirement": "JP-UF-043"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "sr",
+      "dotnet": "sr"
     },
     {
       "iteration": 44,
@@ -974,7 +1000,9 @@
         "id": "UF100-044",
         "requirement": "JP-UF-044"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Hz",
+      "dotnet": "Hz"
     },
     {
       "iteration": 45,
@@ -986,7 +1014,9 @@
         "id": "UF100-045",
         "requirement": "JP-UF-045"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "N",
+      "dotnet": "N"
     },
     {
       "iteration": 46,
@@ -998,7 +1028,9 @@
         "id": "UF100-046",
         "requirement": "JP-UF-046"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Pa",
+      "dotnet": "Pa"
     },
     {
       "iteration": 47,
@@ -1010,7 +1042,9 @@
         "id": "UF100-047",
         "requirement": "JP-UF-047"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "J",
+      "dotnet": "J"
     },
     {
       "iteration": 48,
@@ -1022,7 +1056,9 @@
         "id": "UF100-048",
         "requirement": "JP-UF-048"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "W",
+      "dotnet": "W"
     },
     {
       "iteration": 49,
@@ -1034,7 +1070,9 @@
         "id": "UF100-049",
         "requirement": "JP-UF-049"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "C",
+      "dotnet": "C"
     },
     {
       "iteration": 50,
@@ -1046,7 +1084,9 @@
         "id": "UF100-050",
         "requirement": "JP-UF-050"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "V",
+      "dotnet": "V"
     },
     {
       "iteration": 51,
@@ -1058,7 +1098,9 @@
         "id": "UF100-051",
         "requirement": "JP-UF-051"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "F",
+      "dotnet": "F"
     },
     {
       "iteration": 52,
@@ -1070,7 +1112,9 @@
         "id": "UF100-052",
         "requirement": "JP-UF-052"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Ohm",
+      "dotnet": "Ohm"
     },
     {
       "iteration": 53,
@@ -1082,7 +1126,9 @@
         "id": "UF100-053",
         "requirement": "JP-UF-053"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "S",
+      "dotnet": "S"
     },
     {
       "iteration": 54,
@@ -1094,7 +1140,9 @@
         "id": "UF100-054",
         "requirement": "JP-UF-054"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Wb",
+      "dotnet": "Wb"
     },
     {
       "iteration": 55,
@@ -1106,7 +1154,9 @@
         "id": "UF100-055",
         "requirement": "JP-UF-055"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "T",
+      "dotnet": "T"
     },
     {
       "iteration": 56,
@@ -1118,7 +1168,9 @@
         "id": "UF100-056",
         "requirement": "JP-UF-056"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "H",
+      "dotnet": "H"
     },
     {
       "iteration": 57,
@@ -1130,7 +1182,9 @@
         "id": "UF100-057",
         "requirement": "JP-UF-057"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Celsius",
+      "dotnet": "Celsius"
     },
     {
       "iteration": 58,
@@ -1142,7 +1196,9 @@
         "id": "UF100-058",
         "requirement": "JP-UF-058"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "lm",
+      "dotnet": "lm"
     },
     {
       "iteration": 59,
@@ -1154,7 +1210,9 @@
         "id": "UF100-059",
         "requirement": "JP-UF-059"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "lx",
+      "dotnet": "lx"
     },
     {
       "iteration": 60,
@@ -1166,7 +1224,9 @@
         "id": "UF100-060",
         "requirement": "JP-UF-060"
       },
-      "status": "PENDING"
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Bq",
+      "dotnet": "Bq"
     },
     {
       "iteration": 61,
@@ -1693,6 +1753,27 @@
       "build": "PASS",
       "testsPassed": 1170,
       "matched": 30,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "testsPassed": 1180,
+      "matched": 40,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "testsPassed": 1190,
+      "matched": 50,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "testsPassed": 1200,
+      "matched": 60,
       "mismatches": 0
     }
   ]

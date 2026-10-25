@@ -4,6 +4,34 @@ internal static class JavaUnitAsciiData
 {
  internal static (string Field,string Label,bool Own)[] Definitions()=>new (string,string,bool)[]
  {
+  ("ONE","one",true),
+  ("AMPERE","A",true),
+  ("CANDELA","cd",true),
+  ("KELVIN","K",true),
+  ("KILOGRAM","kg",true),
+  ("METRE","m",true),
+  ("MOLE","mol",true),
+  ("SECOND","s",true),
+  ("GRAM","g",true),
+  ("RADIAN","rad",true),
+  ("STERADIAN","sr",true),
+  ("HERTZ","Hz",true),
+  ("NEWTON","N",true),
+  ("PASCAL","Pa",true),
+  ("JOULE","J",true),
+  ("WATT","W",true),
+  ("COULOMB","C",true),
+  ("VOLT","V",true),
+  ("FARAD","F",true),
+  ("OHM","Ohm",true),
+  ("SIEMENS","S",true),
+  ("WEBER","Wb",true),
+  ("TESLA","T",true),
+  ("HENRY","H",true),
+  ("CELSIUS","Celsius",true),
+  ("LUMEN","lm",true),
+  ("LUX","lx",true),
+  ("BECQUEREL","Bq",true),
  };
  internal static (string Prefix,string Label)[] Prefixes()=>new (string,string)[]
  {
