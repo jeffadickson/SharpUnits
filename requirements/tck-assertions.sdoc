@@ -47,8 +47,8 @@ COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet
 UID: TCK-46-A1
 STATUS: Active
 TITLE: Pinned assertion 46-A1
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Configured quantity formatter list is nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-46-A2
@@ -85,15 +85,15 @@ RELATIONS:
 UID: TCK-45-A1
 STATUS: Active
 TITLE: Pinned assertion 45-A1
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Configured unit formatter list is nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-45-A2
 STATUS: Active
 TITLE: Pinned assertion 45-A2
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `String format(Unit)` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-45-A3
@@ -106,8 +106,8 @@ COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet
 UID: TCK-45-A4
 STATUS: Active
 TITLE: Pinned assertion 45-A4
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `isLocaleSensitive` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-45-A5
@@ -120,8 +120,8 @@ COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet
 UID: TCK-45-A6
 STATUS: Active
 TITLE: Pinned assertion 45-A6
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/UnitFormatTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `parse` method exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-431-A1
@@ -295,8 +295,8 @@ COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet
 UID: TCK-51-A1
 STATUS: Active
 TITLE: Pinned assertion 51-A1
-STATEMENT: Every available Java service provider supplies a factory for every discovered javax.measure.Quantity subtype.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Quantity factories exist for configured Java quantity types. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-51-A2
@@ -309,141 +309,141 @@ COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FactoryReference
 UID: TCK-53-A1
 STATUS: Active
 TITLE: Pinned assertion 53-A1
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: `ServiceProvider.available()` is non-null. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-53-A2
 STATUS: Active
 TITLE: Pinned assertion 53-A2
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Available providers are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-53-A3
 STATUS: Active
 TITLE: Pinned assertion 53-A3
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Current provider is non-null. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-53-A4
 STATUS: Active
 TITLE: Pinned assertion 53-A4
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Current provider priority is an int within int bounds. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A01
 STATUS: Active
 TITLE: Pinned assertion 54-A01
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Each provider exposes non-null FormatService. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A02
 STATUS: Active
 TITLE: Pinned assertion 54-A02
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Quantity format names are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A03
 STATUS: Active
 TITLE: Pinned assertion 54-A03
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Default **unit** format exists and quantity names are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A04
 STATUS: Active
 TITLE: Pinned assertion 54-A04
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Unit format names are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A05
 STATUS: Active
 TITLE: Pinned assertion 54-A05
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Default unit format exists and unit names are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A06
 STATUS: Active
 TITLE: Pinned assertion 54-A06
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Each provider exposes SystemOfUnitsService. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A07
 STATUS: Active
 TITLE: Pinned assertion 54-A07
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Default system exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A08
 STATUS: Active
 TITLE: Pinned assertion 54-A08
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Available systems are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A09
 STATUS: Active
 TITLE: Pinned assertion 54-A09
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Binary prefixes are non-null/nonempty with pinned count. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-54-A10
 STATUS: Active
 TITLE: Pinned assertion 54-A10
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ServicesTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Metric prefixes are non-null/nonempty with pinned count. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A1
 STATUS: Active
 TITLE: Pinned assertion 52-A1
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Each provider has a service with available systems. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A2
 STATUS: Active
 TITLE: Pinned assertion 52-A2
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `getName` method exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A3
 STATUS: Active
 TITLE: Pinned assertion 52-A3
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `getUnit(Class)` returns Unit. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A4
 STATUS: Active
 TITLE: Pinned assertion 52-A4
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `getUnit(String)` returns Unit. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A5
 STATUS: Active
 TITLE: Pinned assertion 52-A5
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `getUnits` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-52-A6
 STATUS: Active
 TITLE: Pinned assertion 52-A6
-STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java with an explicit API and behavioral disposition.
-COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+STATEMENT: Public `getUnits(Dimension)` returns Set. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
 
 [REQUIREMENT]
 UID: TCK-424-A1

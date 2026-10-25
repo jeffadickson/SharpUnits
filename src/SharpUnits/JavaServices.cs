@@ -39,11 +39,11 @@ public sealed class JavaUnitSystem
         ArgumentNullException.ThrowIfNull(text);
         return labels.GetValueOrDefault(text);
     }
-    /// <summary>Looks up the system unit for a Java quantity-type identifier; unknown types return null.</summary>
-    public UnitDefinition? GetUnitForQuantity(string quantityType)
+    /// <summary>Looks up a Java quantity-type identifier; null and unknown types return null.</summary>
+    /// <remarks>Matches the pinned system's HashMap lookup, unlike its null-rejecting text lookup.</remarks>
+    public UnitDefinition? GetUnitForQuantity(string? quantityType)
     {
-        ArgumentNullException.ThrowIfNull(quantityType);
-        return types.GetValueOrDefault(quantityType);
+        return quantityType is null?null:types.GetValueOrDefault(quantityType);
     }
     /// <summary>Returns a snapshot filtered by dimension, preserving distinct alternate units.</summary>
     public IReadOnlyList<UnitDefinition> GetUnits(RationalDimension dimension)=>
@@ -59,7 +59,7 @@ public sealed class JavaUnitSystem
 
 /// <summary>Metadata for one exact decimal or binary prefix.</summary>
 /// <param name="Symbol">Case-sensitive prefix symbol.</param>
-/// <param name="Base">Radix of the prefix factor.</param>
+/// <param name="Base">Radix of the prefix factor: 10 for metric, 1024 for pinned binary prefixes.</param>
 /// <param name="Exponent">Power of the radix; no early floating-point evaluation is required.</param>
 public sealed record JavaPrefix(string Symbol,int Base,int Exponent);
 

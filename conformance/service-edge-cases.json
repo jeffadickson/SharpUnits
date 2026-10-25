@@ -3,78 +3,79 @@
     {
       "argument": "quantityUnknown",
       "id": "SPI-EDGE-quantityUnknown",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitUnknown",
       "id": "SPI-EDGE-unitUnknown",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitVariantNull",
       "id": "SPI-EDGE-unitVariantNull",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitVariantEmpty",
       "id": "SPI-EDGE-unitVariantEmpty",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "systemUnknown",
       "id": "SPI-EDGE-systemUnknown",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "systemCase",
       "id": "SPI-EDGE-systemCase",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitCase",
       "id": "SPI-EDGE-unitCase",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitName",
       "id": "SPI-EDGE-unitName",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "celsiusAliasLookup",
       "id": "SPI-EDGE-celsiusAliasLookup",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "factoryIdentity",
       "id": "SPI-EDGE-factoryIdentity",
-      "expected": true,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "factoryScale",
       "id": "SPI-EDGE-factoryScale",
-      "expected": "RELATIVE",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": "RELATIVE"
     },
     {
       "argument": "factoryRaw",
       "id": "SPI-EDGE-factoryRaw",
-      "expected": 2.0,
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": 2.0
     },
     {
       "argument": "prefixCatalog",
       "id": "SPI-EDGE-prefixCatalog",
+      "operation": "serviceEdge",
       "expected": [
         "Ei|1024|6",
         "E|10|18",
@@ -108,70 +109,87 @@
         "y|10|-24",
         "z|10|-21",
         "µ|10|-6"
-      ],
-      "operation": "serviceEdge"
+      ]
     },
     {
       "argument": "dimensionlessUnits",
       "id": "SPI-EDGE-dimensionlessUnits",
+      "operation": "serviceEdge",
       "expected": [
         "%",
         "one",
         "rad",
         "sr"
-      ],
-      "operation": "serviceEdge"
+      ]
     },
     {
       "argument": "frequencyUnits",
       "id": "SPI-EDGE-frequencyUnits",
+      "operation": "serviceEdge",
       "expected": [
         "Bq",
         "Hz"
-      ],
-      "operation": "serviceEdge"
+      ]
     },
     {
       "argument": "quantityLocale",
-      "expected": true,
       "id": "SPI-EDGE-quantityLocale-en-US",
       "locale": "en-US",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitLocale",
-      "expected": true,
       "id": "SPI-EDGE-unitLocale-en-US",
       "locale": "en-US",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "quantityLocale",
-      "expected": false,
       "id": "SPI-EDGE-quantityLocale-tr-TR",
       "locale": "tr-TR",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": false
     },
     {
       "argument": "unitLocale",
-      "expected": false,
       "id": "SPI-EDGE-unitLocale-tr-TR",
       "locale": "tr-TR",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": false
     },
     {
       "argument": "quantityLocale",
-      "expected": true,
       "id": "SPI-EDGE-quantityLocale-de-DE",
       "locale": "de-DE",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
     },
     {
       "argument": "unitLocale",
-      "expected": true,
       "id": "SPI-EDGE-unitLocale-de-DE",
       "locale": "de-DE",
-      "operation": "serviceEdge"
+      "operation": "serviceEdge",
+      "expected": true
+    },
+    {
+      "id": "SPI-EDGE-nullQuantityType",
+      "operation": "serviceEdge",
+      "argument": "nullQuantityType",
+      "expected": true
+    },
+    {
+      "id": "SPI-EDGE-unmappedFactory",
+      "operation": "serviceEdge",
+      "argument": "unmappedFactory",
+      "expected": true
+    },
+    {
+      "operation": "serviceEdge",
+      "argument": "unitLocaleSensitive",
+      "id": "SPI-EDGE-unitLocaleSensitive",
+      "expected": false
     }
   ]
 }

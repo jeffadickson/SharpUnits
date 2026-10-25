@@ -27,6 +27,14 @@ class ComparatorTests(unittest.TestCase):
    p=pathlib.Path(tmp)/"cases.jsonl"
    p.write_text('{"id":"a","result":1}\n{"id":"a","result":2}\n')
    with self.assertRaises(ValueError):comparison.load(p)
+ def test_raw_utf8_labels_match_json_unicode_escapes(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   raw=pathlib.Path(tmp)/"java.jsonl";escaped=pathlib.Path(tmp)/"dotnet.jsonl"
+   record={"id":"unicode","result":"20 \u2103; \u03bcA; \u03a9"}
+   raw.write_text(json.dumps(record,ensure_ascii=False)+"\n",encoding="utf-8")
+   escaped.write_text(json.dumps(record,ensure_ascii=True)+"\n",encoding="utf-8")
+   self.assertEqual(record["result"],comparison.load(raw)["unicode"]["result"])
+   self.assertEqual([],comparison.compare(comparison.load(raw),comparison.load(escaped)))
  def test_boolean_is_not_a_numeric_result(self):
   for expected,actual in [(True,1),(False,0)]:
    with self.subTest(expected=expected):

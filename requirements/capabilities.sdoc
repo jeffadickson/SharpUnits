@@ -132,14 +132,14 @@ UID: JP-020
 STATUS: Active
 TITLE: Unit systems and discovery
 STATEMENT: SharpUnits shall provide Unit systems and discovery within a documented compatibility envelope.
-COMMENT: Inventory disposition: Partial: explicit registries and named provider catalog; Java automatic/type-based discovery absent. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: immutable built-in Java-style system with 44 unit definitions and 33 identifier-based quantity mappings; external discovery and Java type identity remain absent. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-021
 STATUS: Active
 TITLE: SPI/providers/extensibility
 STATEMENT: SharpUnits shall provide SPI/providers/extensibility within a documented compatibility envelope.
-COMMENT: Inventory disposition: Partial: CLR provider catalog and scale-preserving IJavaQuantityFactory; no Java service-loader or generic factory equivalence. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Partial: built-in provider/current/priority, bounded SIMPLE format discovery, system services, cached factory metadata and prefix catalogs; external ServiceLoader and Java API identity remain incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-022
@@ -188,7 +188,7 @@ UID: JP-028
 STATUS: Active
 TITLE: Java reference conformance corpus
 STATEMENT: SharpUnits shall provide Java reference conformance corpus within a documented compatibility envelope.
-COMMENT: Inventory disposition: Implemented, partial coverage: 558 shared fixtures; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+COMMENT: Inventory disposition: Implemented, partial coverage: 726 shared observations across quantity/parser/format and service corpora; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: JP-029

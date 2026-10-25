@@ -1,0 +1,424 @@
+{
+  "cases": [
+    {
+      "operation": "serviceFilter",
+      "argument": "ONE",
+      "id": "SPI-FILTER-ONE",
+      "expected": [
+        "%",
+        "one",
+        "rad",
+        "sr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "AMPERE",
+      "id": "SPI-FILTER-AMPERE",
+      "expected": [
+        "A"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "CANDELA",
+      "id": "SPI-FILTER-CANDELA",
+      "expected": [
+        "cd",
+        "lm"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "KELVIN",
+      "id": "SPI-FILTER-KELVIN",
+      "expected": [
+        "K",
+        "℃"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "KILOGRAM",
+      "id": "SPI-FILTER-KILOGRAM",
+      "expected": [
+        "g",
+        "kg"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "METRE",
+      "id": "SPI-FILTER-METRE",
+      "expected": [
+        "m"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "MOLE",
+      "id": "SPI-FILTER-MOLE",
+      "expected": [
+        "mol"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "SECOND",
+      "id": "SPI-FILTER-SECOND",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "GRAM",
+      "id": "SPI-FILTER-GRAM",
+      "expected": [
+        "g",
+        "kg"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "RADIAN",
+      "id": "SPI-FILTER-RADIAN",
+      "expected": [
+        "%",
+        "one",
+        "rad",
+        "sr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "STERADIAN",
+      "id": "SPI-FILTER-STERADIAN",
+      "expected": [
+        "%",
+        "one",
+        "rad",
+        "sr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "HERTZ",
+      "id": "SPI-FILTER-HERTZ",
+      "expected": [
+        "Bq",
+        "Hz"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "NEWTON",
+      "id": "SPI-FILTER-NEWTON",
+      "expected": [
+        "N"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "PASCAL",
+      "id": "SPI-FILTER-PASCAL",
+      "expected": [
+        "Pa"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "JOULE",
+      "id": "SPI-FILTER-JOULE",
+      "expected": [
+        "J"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "WATT",
+      "id": "SPI-FILTER-WATT",
+      "expected": [
+        "W"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "COULOMB",
+      "id": "SPI-FILTER-COULOMB",
+      "expected": [
+        "C"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "VOLT",
+      "id": "SPI-FILTER-VOLT",
+      "expected": [
+        "V"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "FARAD",
+      "id": "SPI-FILTER-FARAD",
+      "expected": [
+        "F"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "OHM",
+      "id": "SPI-FILTER-OHM",
+      "expected": [
+        "Ω"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "SIEMENS",
+      "id": "SPI-FILTER-SIEMENS",
+      "expected": [
+        "S"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "WEBER",
+      "id": "SPI-FILTER-WEBER",
+      "expected": [
+        "Wb"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "TESLA",
+      "id": "SPI-FILTER-TESLA",
+      "expected": [
+        "T"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "HENRY",
+      "id": "SPI-FILTER-HENRY",
+      "expected": [
+        "H"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "CELSIUS",
+      "id": "SPI-FILTER-CELSIUS",
+      "expected": [
+        "K",
+        "℃"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "LUMEN",
+      "id": "SPI-FILTER-LUMEN",
+      "expected": [
+        "cd",
+        "lm"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "LUX",
+      "id": "SPI-FILTER-LUX",
+      "expected": [
+        "lx"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "BECQUEREL",
+      "id": "SPI-FILTER-BECQUEREL",
+      "expected": [
+        "Bq",
+        "Hz"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "GRAY",
+      "id": "SPI-FILTER-GRAY",
+      "expected": [
+        "Gy",
+        "Sv"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "SIEVERT",
+      "id": "SPI-FILTER-SIEVERT",
+      "expected": [
+        "Gy",
+        "Sv"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "KATAL",
+      "id": "SPI-FILTER-KATAL",
+      "expected": [
+        "kat"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "METRE_PER_SECOND",
+      "id": "SPI-FILTER-METRE_PER_SECOND",
+      "expected": [
+        "km/h",
+        "m/s"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "METRE_PER_SQUARE_SECOND",
+      "id": "SPI-FILTER-METRE_PER_SQUARE_SECOND",
+      "expected": [
+        "m/s²"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "SQUARE_METRE",
+      "id": "SPI-FILTER-SQUARE_METRE",
+      "expected": [
+        "m²"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "CUBIC_METRE",
+      "id": "SPI-FILTER-CUBIC_METRE",
+      "expected": [
+        "l",
+        "m³"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "KILOMETRE_PER_HOUR",
+      "id": "SPI-FILTER-KILOMETRE_PER_HOUR",
+      "expected": [
+        "km/h",
+        "m/s"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "PERCENT",
+      "id": "SPI-FILTER-PERCENT",
+      "expected": [
+        "%",
+        "one",
+        "rad",
+        "sr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "MINUTE",
+      "id": "SPI-FILTER-MINUTE",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "HOUR",
+      "id": "SPI-FILTER-HOUR",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "DAY",
+      "id": "SPI-FILTER-DAY",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "WEEK",
+      "id": "SPI-FILTER-WEEK",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "YEAR",
+      "id": "SPI-FILTER-YEAR",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "MONTH",
+      "id": "SPI-FILTER-MONTH",
+      "expected": [
+        "d",
+        "h",
+        "min",
+        "mo",
+        "s",
+        "wk",
+        "yr"
+      ]
+    },
+    {
+      "operation": "serviceFilter",
+      "argument": "LITRE",
+      "id": "SPI-FILTER-LITRE",
+      "expected": [
+        "l",
+        "m³"
+      ]
+    }
+  ]
+}

@@ -49,9 +49,14 @@
     {
       "id": "46-A1",
       "source": "src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "QuantityFormatTest.testEnsureGotQuantityFormat",
+      "expectedSemantics": "Configured quantity formatter list is nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "46-A2",
@@ -294,16 +299,26 @@
     {
       "id": "45-A1",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testEnsureGotUnitFormat",
+      "expectedSemantics": "Configured unit formatter list is nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "45-A2",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testUnitFormatFormat",
+      "expectedSemantics": "Public `String format(Unit)` exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "45-A3",
@@ -315,9 +330,14 @@
     {
       "id": "45-A4",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testUnitFormatFormatIsLocalSensitive",
+      "expectedSemantics": "Public `isLocaleSensitive` exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "45-A5",
@@ -329,9 +349,14 @@
     {
       "id": "45-A6",
       "source": "src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "UnitFormatTest.testUnitFormatParse",
+      "expectedSemantics": "Public `parse` method exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "431-A1",
@@ -902,13 +927,15 @@
     {
       "id": "51-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null,
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "relatedEvidence": "conformance/factory-fifty-review.md",
       "sourceMethod": "QuantityFactoryTest.testQuantityFactoryExists",
-      "expectedSemantics": "Every available Java service provider supplies a factory for every discovered javax.measure.Quantity subtype.",
-      "remainingGap": "Explicit CLR IJavaQuantityFactory exists but automatic discovery and factories for all Java quantity types are absent. Remains GAP.",
-      "relatedEvidence": "conformance/factory-fifty-review.md"
+      "expectedSemantics": "Quantity factories exist for configured Java quantity types",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "51-A2",
@@ -977,142 +1004,242 @@
     {
       "id": "53-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServiceProviderTest.testAvailable",
+      "expectedSemantics": "`ServiceProvider.available()` is non-null",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "53-A2",
       "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServiceProviderTest.testAvailableNotEmpty",
+      "expectedSemantics": "Available providers are nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "53-A3",
       "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServiceProviderTest.testCurrent",
+      "expectedSemantics": "Current provider is non-null",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "53-A4",
       "source": "src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServiceProviderTest.testPriority",
+      "expectedSemantics": "Current provider priority is an int within int bounds",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A01",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testFormatService",
+      "expectedSemantics": "Each provider exposes non-null FormatService",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A02",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testFormatServiceQuantityFormatsAvailable",
+      "expectedSemantics": "Quantity format names are non-null/nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A03",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testFormatServiceQuantityFormatsDefault",
+      "expectedSemantics": "Default **unit** format exists and quantity names are nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A04",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testFormatServiceUnitFormatsAvailable",
+      "expectedSemantics": "Unit format names are non-null/nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A05",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testFormatServiceUnitFormatsDefault",
+      "expectedSemantics": "Default unit format exists and unit names are nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A06",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testSystemOfUnitsService",
+      "expectedSemantics": "Each provider exposes SystemOfUnitsService",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A07",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testSystemOfUnitsServiceDefaultSystem",
+      "expectedSemantics": "Default system exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A08",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testSystemOfUnitsServiceAvailableSystems",
+      "expectedSemantics": "Available systems are non-null/nonempty",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A09",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testSystemOfUnitsServicePrefixBinary",
+      "expectedSemantics": "Binary prefixes are non-null/nonempty with pinned count",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "54-A10",
       "source": "src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "ServicesTest.testSystemOfUnitsServicePrefixMetric",
+      "expectedSemantics": "Metric prefixes are non-null/nonempty with pinned count",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testEnsureGotSystemOfUnits",
+      "expectedSemantics": "Each provider has a service with available systems",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A2",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testSystemOfUnitsGetName",
+      "expectedSemantics": "Public `getName` method exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A3",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testSystemOfUnitsGetUnit",
+      "expectedSemantics": "Public `getUnit(Class)` returns Unit",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A4",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testSystemOfUnitsGetUnitForString",
+      "expectedSemantics": "Public `getUnit(String)` returns Unit",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A5",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testSystemOfUnitsGetUnits",
+      "expectedSemantics": "Public `getUnits` exists",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "52-A6",
       "source": "src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
-      "status": "GAP",
-      "test": null,
-      "evidence": null
+      "status": "PARTIAL_BEHAVIORAL_MAPPING",
+      "test": "ServiceReferenceFixtureTests.MatchesPinnedServiceObservation",
+      "evidence": "conformance/service-gap-review-100.json",
+      "sourceMethod": "SystemOfUnitsTest.testSystemOfUnitsGetUnitsForDimension",
+      "expectedSemantics": "Public `getUnits(Dimension)` returns Set",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
     {
       "id": "424-A1",

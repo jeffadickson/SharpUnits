@@ -13,5 +13,18 @@
     "before": "OrdinalIgnoreCase",
     "evidence": "conformance/service-edge-cases.json",
     "java": "Default-locale uppercase; Turkish simple lookup returns null"
+  },
+  "nullQuantityType": {
+    "after": "GetUnitForQuantity(null) returns null; textual lookups still reject null",
+    "evidence": "SPI-EDGE-nullQuantityType",
+    "requirement": "JP-SPI-095",
+    "before": "CLR rejected null type identifier",
+    "java": "System getUnit(Class) uses HashMap and returns null for null"
+  },
+  "utf8Comparator": {
+    "evidence": "ComparatorTests.test_raw_utf8_labels_match_json_unicode_escapes; all 558 earlier observations match",
+    "requirement": "JP-028-UTF8",
+    "before": "Platform-default decoding produced 18 false Unicode mismatches on Windows",
+    "after": "Explicit UTF-8 decoding"
   }
 }

@@ -12,8 +12,16 @@ if($LASTEXITCODE){throw 'Pinned Java observation failed'}
 if($LASTEXITCODE){throw 'Java observation retention failed'}
 & $dotnet build tests/SharpUnits.Tests -c Release --no-restore --nologo *> "../services100-build-$Count.log"
 if($LASTEXITCODE){Get-Content "../services100-build-$Count.log" -Tail 25;throw 'Build failed'}
-& $dotnet test tests/SharpUnits.Tests -c Release --no-build --nologo *> "../services100-test-$Count.log"
+& $dotnet test tests/SharpUnits.Tests -c Release --no-build --nologo --logger "trx;LogFileName=services100-$Count.trx" --results-directory ../services100-test-results *> "../services100-test-$Count.log"
 if($LASTEXITCODE){Get-Content "../services100-test-$Count.log" -Tail 25;throw 'Full tests failed'}
+# Count accounting detects missing test classes or aborted asynchronous property runners.
+[xml]$trx=Get-Content "../services100-test-results/services100-$Count.trx"
+$expected=962+$Count
+foreach($path in @('conformance/service-edge-cases.json','conformance/service-filter-cases.json')){
+ if(Test-Path $path){$expected+=(Get-Content $path -Raw|ConvertFrom-Json).cases.Count}
+}
+if(Test-Path tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs){$expected+=10}
+if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected -or [int]$trx.TestRun.ResultSummary.Counters.failed -ne 0){throw "Incomplete test execution: expected $expected tests"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../services100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}
 & $dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/service-reference-cases.json > "../services100-dotnet-$Count.jsonl"

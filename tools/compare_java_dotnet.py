@@ -11,7 +11,8 @@ from pathlib import Path
 
 def load(path):
     rows={}
-    for line in Path(path).read_text().splitlines():
+    # Both runners emit UTF-8 JSONL; the Windows process locale must not corrupt unit labels.
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
         record=json.loads(line)

@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "dotnet": [
+        "SIMPLE"
+      ],
+      "operation": "serviceLimit",
+      "java": [
+        "EBNF",
+        "LOCAL",
+        "NUMBERDELIMITER",
+        "SIMPLE"
+      ],
+      "argument": "quantityFormats",
+      "id": "SPI-LIMIT-QUANTITY-FAMILIES",
+      "disposition": "KNOWN_INCOMPATIBILITY_UNSUPPORTED_FORMAT_FAMILIES"
+    },
+    {
+      "dotnet": [
+        "SIMPLE_DEFAULT"
+      ],
+      "operation": "serviceLimit",
+      "java": [
+        "EBNF",
+        "LOCAL",
+        "SIMPLE_ASCII",
+        "SIMPLE_DEFAULT"
+      ],
+      "argument": "unitFormats",
+      "id": "SPI-LIMIT-UNIT-FAMILIES",
+      "disposition": "KNOWN_INCOMPATIBILITY_UNSUPPORTED_FORMAT_FAMILIES"
+    }
+  ]
+}

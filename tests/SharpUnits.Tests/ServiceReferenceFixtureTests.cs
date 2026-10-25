@@ -9,7 +9,7 @@ public sealed class ServiceReferenceFixtureTests
     // @relation(JP-020, JP-021, JP-006, scope=file)
     public static IEnumerable<object[]> Cases()
     {
-        foreach(var file in new[]{"service-reference-cases.json","service-edge-cases.json"})
+        foreach(var file in new[]{"service-reference-cases.json","service-edge-cases.json","service-filter-cases.json"})
         {
             using var data=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,file)));
             foreach(var test in data.RootElement.GetProperty("cases").EnumerateArray())yield return new object[]{test.GetProperty("id").GetString()!,test.GetRawText()};

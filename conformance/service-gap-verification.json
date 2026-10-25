@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-25",
+  "baselineCommit": "2cc3f49",
+  "environment": "Windows; .NET SDK 10.0.402; pinned JDK 17.0.20.1",
+  "implementedObligations": 100,
+  "catalogDefinitions": 44,
+  "quantityBindings": 33,
+  "serviceContracts": 23,
+  "dotnetTestsExecuted": 1140,
+  "javaTckTests": 112,
+  "sharedObservations": 726,
+  "sharedServiceObservations": 168,
+  "formalClosures": 0,
+  "ledger": {
+    "implementedUnverified": 50,
+    "gap": 16,
+    "partial": 47,
+    "verified": 0
+  },
+  "strictDoc": {
+    "records": 267,
+    "documents": 6
+  },
+  "coverage": {
+    "linesCovered": 1408,
+    "linesValid": 1507,
+    "branchesCovered": 1158,
+    "branchesValid": 1422
+  },
+  "mutation": {
+    "nonEquivalentCompiled": 8,
+    "killed": 8,
+    "exactSpeedCounterexample": 3,
+    "replay": "385,521",
+    "limitations": "Targeted manual campaign, not exhaustive"
+  },
+  "properties": {
+    "replays": [
+      "385,521",
+      "385,523"
+    ],
+    "casesEach": 300
+  },
+  "malformedNameFuzz": {
+    "seed": 385521,
+    "cases": 1000
+  },
+  "ci": {
+    "java": "disabled_manually",
+    "dotnet": "disabled_manually",
+    "newCiEvidence": false,
+    "macOS": "disabled"
+  },
+  "checkpointCount": 10,
+  "hashes": {
+    "../services100-edge-dotnet.jsonl": "4AE2DB9DC82F1E170A2ECA3A24BAB8E7AD7019D09317512E16B1E2FB2D28B656",
+    "../services100-tck.log": "F1D64CA4F151ECD87A6697605DEA55ABC5EB46B12E7FEE1E9378CADF868720CA",
+    "../services100-regression-java.jsonl": "D88AD3BE4A00EBCE1E83E75672094C244FAE7D4DB9016957B5FB8191BF7A8C58",
+    "../services100-final-build.log": "5816B2494FA583306AC816E5CA6F2040F008A50EF5A66915CCCA2C9FB8367686",
+    "../services100-fraction.log": "67137AA7DBAF4A11FECCCF93C4814AF59575791065F7A31C1A3C010E045ABE9C",
+    "../services100-edge-java.jsonl": "9A4DB4A7358D39CD7796D41C89478083C4A24305320FEB1CFA164D7606503BD0",
+    "../services100-filter-java.jsonl": "11989716BF96A243E3DA061F525BF9FD4BFC0B6F89BDABA80CE16B50D35A06DD",
+    "../services100-java-100.jsonl": "BBA0CBA3EAE4A4952CE99C79F2E43EA6604619AA6F136279BA31305266C92C97",
+    "../services100-dotnet-100.jsonl": "45C9E02987119E0B18D31DAF971250CC0433F7AE37A9EE81DA5772526114C6EE",
+    "src/SharpUnits/JavaServices.cs": "19BF0497DD1F30421DE24A685490795362246D1771FF048EFDF41892AA0EAFE7",
+    "../services100-harness-tests.log": "5A87F1AFD440461FD803E69B19295F6F2B8FA19881BFFE98F9305FC412A5E77E",
+    "../services100-regression-dotnet.jsonl": "6C129FC5FF194358627AB9060F3D62ABCB73C5961785ECB9091E53317661B9C9",
+    "src/SharpUnits/JavaUnitCatalogData.cs": "63CF5358BBD3F440C3B4EF7765C5BBFFD52412C03AE70229F04A778E07965CEF",
+    "../services100-final-test.log": "35D9ED0F7D499DEBB6D1104441B5F3CC230A0AA1F2168DDBD0016BDB882D57DD",
+    "../services100-filter-dotnet.jsonl": "FAB15A1E7CD2CCCE51452B49BD8E8EFC93F03B9D123B1049455F3FA937EAED40"
+  }
+}

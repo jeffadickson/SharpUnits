@@ -19,6 +19,14 @@ internal static class ServiceFixtures
         var provider=JavaServiceProvider.Current;
         var system=provider.SystemOfUnitsService.GetSystemOfUnits();
         var argument=test.GetProperty("argument").GetString()!;
+        if(test.GetProperty("operation").GetString()=="serviceFilter")return system.GetUnits(system.Entries.Single(entry=>entry.Field==argument).Unit.RationalDimension)
+            .Select(u=>u.Symbol).Order(StringComparer.Ordinal).ToArray();
+        if(test.GetProperty("operation").GetString()=="serviceLimit")return argument switch
+        {
+            "quantityFormats"=>provider.FormatService.QuantityFormatNames.Order(StringComparer.Ordinal).ToArray(),
+            "unitFormats"=>provider.FormatService.UnitFormatNames.Order(StringComparer.Ordinal).ToArray(),
+            _=>throw new NotSupportedException(argument)
+        };
         if(test.GetProperty("operation").GetString()=="serviceEdge")return argument switch
         {
             "quantityUnknown"=>provider.FormatService.GetQuantityFormat("missing") is null,
@@ -34,6 +42,9 @@ internal static class ServiceFixtures
             "factoryIdentity"=>ReferenceEquals(provider.GetQuantityFactory("Length"),provider.GetQuantityFactory("Length")),
             "factoryScale"=>provider.GetQuantityFactory("Temperature").Create(10,system.GetUnit("℃")!,JavaQuantityScale.Relative).Scale.ToString().ToUpperInvariant(),
             "factoryRaw"=>provider.GetQuantityFactory("Length").Create(2,system.GetUnit("A")!).Value,
+            "nullQuantityType"=>system.GetUnitForQuantity(null) is null,
+            "unmappedFactory"=>provider.GetQuantityFactory("custom.quantity").SystemUnit is null,
+            "unitLocaleSensitive"=>provider.FormatService.GetUnitFormat().IsLocaleSensitive,
             "prefixCatalog"=>provider.SystemOfUnitsService.MetricPrefixes.Concat(provider.SystemOfUnitsService.BinaryPrefixes)
                 .Select(p=>$"{p.Symbol}|{p.Base}|{p.Exponent}").Order(StringComparer.Ordinal).ToArray(),
             "dimensionlessUnits"=>system.GetUnits(RationalDimension.From(Dimension.None)).Select(u=>u.Symbol).Order(StringComparer.Ordinal).ToArray(),
@@ -43,7 +54,7 @@ internal static class ServiceFixtures
         if(test.GetProperty("operation").GetString()=="serviceUnit")
         {
             var entry=system.Entries.Single(entry=>entry.Field==argument);var unit=entry.Unit;var d=unit.Dimension;
-            return new {label=unit.Symbol,name=entry.Name,dimension=new[]{d.Length,d.Mass,d.Time,d.Current,d.Temperature,d.Amount,d.Luminosity},
+            return new {label=provider.FormatService.GetUnitFormat().Format(unit),name=entry.Name,dimension=new[]{d.Length,d.Mass,d.Time,d.Current,d.Temperature,d.Amount,d.Luminosity},
                 zero=unit.Converter.ToSi(0),one=unit.Converter.ToSi(1)};
         }
         if(test.GetProperty("operation").GetString()=="serviceType")return new {

@@ -2,6 +2,16 @@
 TITLE: SharpUnits Java service and unit catalog requirements
 
 [REQUIREMENT]
+UID: JP-028-UTF8
+STATUS: Active
+TITLE: Cross-platform Unicode evidence loading
+STATEMENT: The Java/CLR differential comparator shall decode runner JSONL as UTF-8 independently of the host locale, comparing raw Unicode unit labels with equivalent JSON escapes.
+COMMENT: Implementation: tools/compare_java_dotnet.py. Verification: ComparatorTests.test_raw_utf8_labels_match_json_unicode_escapes. Evidence: conformance/service-gap-hundred-review.md. This repairs the existing required Python conformance workflow; new service automation remains C#/PowerShell.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-028
+
+[REQUIREMENT]
 UID: JP-SPI-001
 STATUS: Active
 TITLE: serviceUnit: ONE

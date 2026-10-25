@@ -885,8 +885,8 @@
       "operation": "serviceType",
       "argument": "Dimensionless",
       "expected": {
-        "system": "one",
-        "factory": "one"
+        "factory": "one",
+        "system": "one"
       }
     },
     {
@@ -894,8 +894,8 @@
       "operation": "serviceType",
       "argument": "ElectricCurrent",
       "expected": {
-        "system": "A",
-        "factory": "A"
+        "factory": "A",
+        "system": "A"
       }
     },
     {
@@ -903,8 +903,8 @@
       "operation": "serviceType",
       "argument": "LuminousIntensity",
       "expected": {
-        "system": "cd",
-        "factory": "cd"
+        "factory": "cd",
+        "system": "cd"
       }
     },
     {
@@ -912,8 +912,8 @@
       "operation": "serviceType",
       "argument": "Temperature",
       "expected": {
-        "system": "K",
-        "factory": "K"
+        "factory": "K",
+        "system": "K"
       }
     },
     {
@@ -921,8 +921,8 @@
       "operation": "serviceType",
       "argument": "Mass",
       "expected": {
-        "system": "kg",
-        "factory": "kg"
+        "factory": "kg",
+        "system": "kg"
       }
     },
     {
@@ -930,8 +930,8 @@
       "operation": "serviceType",
       "argument": "Length",
       "expected": {
-        "system": "m",
-        "factory": "m"
+        "factory": "m",
+        "system": "m"
       }
     },
     {
@@ -939,8 +939,8 @@
       "operation": "serviceType",
       "argument": "AmountOfSubstance",
       "expected": {
-        "system": "mol",
-        "factory": "mol"
+        "factory": "mol",
+        "system": "mol"
       }
     },
     {
@@ -948,8 +948,8 @@
       "operation": "serviceType",
       "argument": "Time",
       "expected": {
-        "system": "s",
-        "factory": "s"
+        "factory": "s",
+        "system": "s"
       }
     },
     {
@@ -957,8 +957,8 @@
       "operation": "serviceType",
       "argument": "Angle",
       "expected": {
-        "system": "rad",
-        "factory": "rad"
+        "factory": "rad",
+        "system": "rad"
       }
     },
     {
@@ -966,8 +966,8 @@
       "operation": "serviceType",
       "argument": "SolidAngle",
       "expected": {
-        "system": "sr",
-        "factory": "sr"
+        "factory": "sr",
+        "system": "sr"
       }
     },
     {
@@ -975,8 +975,8 @@
       "operation": "serviceType",
       "argument": "Frequency",
       "expected": {
-        "system": "Hz",
-        "factory": "Hz"
+        "factory": "Hz",
+        "system": "Hz"
       }
     },
     {
@@ -984,8 +984,8 @@
       "operation": "serviceType",
       "argument": "Force",
       "expected": {
-        "system": "N",
-        "factory": "N"
+        "factory": "N",
+        "system": "N"
       }
     },
     {
@@ -993,8 +993,8 @@
       "operation": "serviceType",
       "argument": "Pressure",
       "expected": {
-        "system": "Pa",
-        "factory": "Pa"
+        "factory": "Pa",
+        "system": "Pa"
       }
     },
     {
@@ -1002,8 +1002,8 @@
       "operation": "serviceType",
       "argument": "Energy",
       "expected": {
-        "system": "J",
-        "factory": "J"
+        "factory": "J",
+        "system": "J"
       }
     },
     {
@@ -1011,8 +1011,8 @@
       "operation": "serviceType",
       "argument": "Power",
       "expected": {
-        "system": "W",
-        "factory": "W"
+        "factory": "W",
+        "system": "W"
       }
     },
     {
@@ -1020,8 +1020,8 @@
       "operation": "serviceType",
       "argument": "ElectricCharge",
       "expected": {
-        "system": "C",
-        "factory": "C"
+        "factory": "C",
+        "system": "C"
       }
     },
     {
@@ -1029,8 +1029,8 @@
       "operation": "serviceType",
       "argument": "ElectricPotential",
       "expected": {
-        "system": "V",
-        "factory": "V"
+        "factory": "V",
+        "system": "V"
       }
     },
     {
@@ -1038,8 +1038,8 @@
       "operation": "serviceType",
       "argument": "ElectricCapacitance",
       "expected": {
-        "system": "F",
-        "factory": "F"
+        "factory": "F",
+        "system": "F"
       }
     },
     {
@@ -1047,8 +1047,8 @@
       "operation": "serviceType",
       "argument": "ElectricResistance",
       "expected": {
-        "system": "\u03A9",
-        "factory": "\u03A9"
+        "factory": "\u03A9",
+        "system": "\u03A9"
       }
     },
     {
@@ -1056,8 +1056,8 @@
       "operation": "serviceType",
       "argument": "ElectricConductance",
       "expected": {
-        "system": "S",
-        "factory": "S"
+        "factory": "S",
+        "system": "S"
       }
     },
     {
@@ -1065,8 +1065,8 @@
       "operation": "serviceType",
       "argument": "MagneticFlux",
       "expected": {
-        "system": "Wb",
-        "factory": "Wb"
+        "factory": "Wb",
+        "system": "Wb"
       }
     },
     {
@@ -1074,8 +1074,8 @@
       "operation": "serviceType",
       "argument": "MagneticFluxDensity",
       "expected": {
-        "system": "T",
-        "factory": "T"
+        "factory": "T",
+        "system": "T"
       }
     },
     {
@@ -1083,8 +1083,8 @@
       "operation": "serviceType",
       "argument": "ElectricInductance",
       "expected": {
-        "system": "H",
-        "factory": "H"
+        "factory": "H",
+        "system": "H"
       }
     },
     {
@@ -1092,8 +1092,8 @@
       "operation": "serviceType",
       "argument": "LuminousFlux",
       "expected": {
-        "system": "lm",
-        "factory": "lm"
+        "factory": "lm",
+        "system": "lm"
       }
     },
     {
@@ -1101,8 +1101,8 @@
       "operation": "serviceType",
       "argument": "Illuminance",
       "expected": {
-        "system": "lx",
-        "factory": "lx"
+        "factory": "lx",
+        "system": "lx"
       }
     },
     {
@@ -1110,8 +1110,8 @@
       "operation": "serviceType",
       "argument": "Radioactivity",
       "expected": {
-        "system": "Bq",
-        "factory": "Bq"
+        "factory": "Bq",
+        "system": "Bq"
       }
     },
     {
@@ -1119,8 +1119,8 @@
       "operation": "serviceType",
       "argument": "RadiationDoseAbsorbed",
       "expected": {
-        "system": "Gy",
-        "factory": "Gy"
+        "factory": "Gy",
+        "system": "Gy"
       }
     },
     {
@@ -1128,8 +1128,8 @@
       "operation": "serviceType",
       "argument": "RadiationDoseEffective",
       "expected": {
-        "system": "Sv",
-        "factory": "Sv"
+        "factory": "Sv",
+        "system": "Sv"
       }
     },
     {
@@ -1137,8 +1137,8 @@
       "operation": "serviceType",
       "argument": "CatalyticActivity",
       "expected": {
-        "system": "kat",
-        "factory": "kat"
+        "factory": "kat",
+        "system": "kat"
       }
     },
     {
@@ -1146,8 +1146,8 @@
       "operation": "serviceType",
       "argument": "Speed",
       "expected": {
-        "system": "m/s",
-        "factory": "m/s"
+        "factory": "m/s",
+        "system": "m/s"
       }
     },
     {
@@ -1155,8 +1155,8 @@
       "operation": "serviceType",
       "argument": "Acceleration",
       "expected": {
-        "system": "m/s\u00B2",
-        "factory": "m/s\u00B2"
+        "factory": "m/s\u00B2",
+        "system": "m/s\u00B2"
       }
     },
     {
@@ -1164,8 +1164,8 @@
       "operation": "serviceType",
       "argument": "Area",
       "expected": {
-        "system": "m\u00B2",
-        "factory": "m\u00B2"
+        "factory": "m\u00B2",
+        "system": "m\u00B2"
       }
     },
     {
@@ -1173,8 +1173,8 @@
       "operation": "serviceType",
       "argument": "Volume",
       "expected": {
-        "system": "m\u00B3",
-        "factory": "m\u00B3"
+        "factory": "m\u00B3",
+        "system": "m\u00B3"
       }
     },
     {

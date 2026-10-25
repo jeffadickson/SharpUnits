@@ -5,6 +5,10 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current continuation (2026-10-25)
+
+The [service/catalog review](../conformance/service-gap-hundred-review.md) implements 100 scoped missing obligations: 44 unit definitions, 33 quantity bindings and 23 service contracts. Final verification: 1,140 .NET tests; 726 Java/CLR observations across separate corpora; 112 pinned Java TCK tests; eight new semantic mutants killed. StrictDoc validates 267 records in six documents. Ledger: 16 gaps, 50 implemented/unverified, 47 partial mappings, zero verified closures. GitHub CI stays disabled. Next gaps include full format families, mutable unit labels/appendable unit formatting, external discovery, Java API identity and Number precision.
+
 ## Current continuation (2026-10-24)
 
 See [formatting review](../conformance/format-hundred-review.md): 100 numbered formatting scenarios, compile/full tests every ten; final 962 .NET tests, 558 shared cases and 512 seeded binary64 comparisons pass. Pinned Java TCK: 112 passing tests. Ledger: 42 gaps, 50 implemented/unverified, 21 partial mappings, zero verified closures. Both GitHub workflows remain disabled by current user instruction, superseding older CI directions below. Next gaps include arbitrary Number precision, unit-label normalization, formatting registration and provider/service APIs.
