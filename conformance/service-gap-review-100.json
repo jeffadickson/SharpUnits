@@ -55,6 +55,20 @@
       "testsPassed": 1042,
       "matchedObligations": 80,
       "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "testsPassed": 1073,
+      "matchedObligations": 90,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "testsPassed": 1083,
+      "matchedObligations": 100,
+      "mismatches": 0
     }
   ],
   "startingCommit": "2cc3f49",
@@ -68,6 +82,8 @@
       "operation": "serviceUnit",
       "iteration": 1,
       "java": {
+        "zero": 0.0,
+        "name": "One",
         "one": 1.0,
         "dimension": [
           0,
@@ -78,9 +94,7 @@
           0,
           0
         ],
-        "label": "one",
-        "zero": 0.0,
-        "name": "One"
+        "label": "one"
       },
       "dotnet": {
         "label": "one",
@@ -107,6 +121,8 @@
       "operation": "serviceUnit",
       "iteration": 2,
       "java": {
+        "zero": 0.0,
+        "name": "Ampere",
         "one": 1.0,
         "dimension": [
           0,
@@ -117,9 +133,7 @@
           0,
           0
         ],
-        "label": "A",
-        "zero": 0.0,
-        "name": "Ampere"
+        "label": "A"
       },
       "dotnet": {
         "label": "A",
@@ -146,6 +160,8 @@
       "operation": "serviceUnit",
       "iteration": 3,
       "java": {
+        "zero": 0.0,
+        "name": "Candela",
         "one": 1.0,
         "dimension": [
           0,
@@ -156,9 +172,7 @@
           0,
           1
         ],
-        "label": "cd",
-        "zero": 0.0,
-        "name": "Candela"
+        "label": "cd"
       },
       "dotnet": {
         "label": "cd",
@@ -185,6 +199,8 @@
       "operation": "serviceUnit",
       "iteration": 4,
       "java": {
+        "zero": 0.0,
+        "name": "Kelvin",
         "one": 1.0,
         "dimension": [
           0,
@@ -195,9 +211,7 @@
           0,
           0
         ],
-        "label": "K",
-        "zero": 0.0,
-        "name": "Kelvin"
+        "label": "K"
       },
       "dotnet": {
         "label": "K",
@@ -224,6 +238,8 @@
       "operation": "serviceUnit",
       "iteration": 5,
       "java": {
+        "zero": 0.0,
+        "name": "Kilogram",
         "one": 1.0,
         "dimension": [
           0,
@@ -234,9 +250,7 @@
           0,
           0
         ],
-        "label": "kg",
-        "zero": 0.0,
-        "name": "Kilogram"
+        "label": "kg"
       },
       "dotnet": {
         "label": "kg",
@@ -263,6 +277,8 @@
       "operation": "serviceUnit",
       "iteration": 6,
       "java": {
+        "zero": 0.0,
+        "name": "Metre",
         "one": 1.0,
         "dimension": [
           1,
@@ -273,9 +289,7 @@
           0,
           0
         ],
-        "label": "m",
-        "zero": 0.0,
-        "name": "Metre"
+        "label": "m"
       },
       "dotnet": {
         "label": "m",
@@ -302,6 +316,8 @@
       "operation": "serviceUnit",
       "iteration": 7,
       "java": {
+        "zero": 0.0,
+        "name": "Mole",
         "one": 1.0,
         "dimension": [
           0,
@@ -312,9 +328,7 @@
           1,
           0
         ],
-        "label": "mol",
-        "zero": 0.0,
-        "name": "Mole"
+        "label": "mol"
       },
       "dotnet": {
         "label": "mol",
@@ -341,6 +355,8 @@
       "operation": "serviceUnit",
       "iteration": 8,
       "java": {
+        "zero": 0.0,
+        "name": "Second",
         "one": 1.0,
         "dimension": [
           0,
@@ -351,9 +367,7 @@
           0,
           0
         ],
-        "label": "s",
-        "zero": 0.0,
-        "name": "Second"
+        "label": "s"
       },
       "dotnet": {
         "label": "s",
@@ -380,6 +394,8 @@
       "operation": "serviceUnit",
       "iteration": 9,
       "java": {
+        "zero": 0.0,
+        "name": "Gram",
         "one": 0.001,
         "dimension": [
           0,
@@ -390,9 +406,7 @@
           0,
           0
         ],
-        "label": "g",
-        "zero": 0.0,
-        "name": "Gram"
+        "label": "g"
       },
       "dotnet": {
         "label": "g",
@@ -419,6 +433,8 @@
       "operation": "serviceUnit",
       "iteration": 10,
       "java": {
+        "zero": 0.0,
+        "name": "Radian",
         "one": 1.0,
         "dimension": [
           0,
@@ -429,9 +445,7 @@
           0,
           0
         ],
-        "label": "rad",
-        "zero": 0.0,
-        "name": "Radian"
+        "label": "rad"
       },
       "dotnet": {
         "label": "rad",
@@ -458,6 +472,8 @@
       "operation": "serviceUnit",
       "iteration": 11,
       "java": {
+        "zero": 0.0,
+        "name": "Steradian",
         "one": 1.0,
         "dimension": [
           0,
@@ -468,9 +484,7 @@
           0,
           0
         ],
-        "label": "sr",
-        "zero": 0.0,
-        "name": "Steradian"
+        "label": "sr"
       },
       "dotnet": {
         "label": "sr",
@@ -497,6 +511,8 @@
       "operation": "serviceUnit",
       "iteration": 12,
       "java": {
+        "zero": 0.0,
+        "name": "Hertz",
         "one": 1.0,
         "dimension": [
           0,
@@ -507,9 +523,7 @@
           0,
           0
         ],
-        "label": "Hz",
-        "zero": 0.0,
-        "name": "Hertz"
+        "label": "Hz"
       },
       "dotnet": {
         "label": "Hz",
@@ -536,6 +550,8 @@
       "operation": "serviceUnit",
       "iteration": 13,
       "java": {
+        "zero": 0.0,
+        "name": "Newton",
         "one": 1.0,
         "dimension": [
           1,
@@ -546,9 +562,7 @@
           0,
           0
         ],
-        "label": "N",
-        "zero": 0.0,
-        "name": "Newton"
+        "label": "N"
       },
       "dotnet": {
         "label": "N",
@@ -575,6 +589,8 @@
       "operation": "serviceUnit",
       "iteration": 14,
       "java": {
+        "zero": 0.0,
+        "name": "Pascal",
         "one": 1.0,
         "dimension": [
           -1,
@@ -585,9 +601,7 @@
           0,
           0
         ],
-        "label": "Pa",
-        "zero": 0.0,
-        "name": "Pascal"
+        "label": "Pa"
       },
       "dotnet": {
         "label": "Pa",
@@ -614,6 +628,8 @@
       "operation": "serviceUnit",
       "iteration": 15,
       "java": {
+        "zero": 0.0,
+        "name": "Joule",
         "one": 1.0,
         "dimension": [
           2,
@@ -624,9 +640,7 @@
           0,
           0
         ],
-        "label": "J",
-        "zero": 0.0,
-        "name": "Joule"
+        "label": "J"
       },
       "dotnet": {
         "label": "J",
@@ -653,6 +667,8 @@
       "operation": "serviceUnit",
       "iteration": 16,
       "java": {
+        "zero": 0.0,
+        "name": "Watt",
         "one": 1.0,
         "dimension": [
           2,
@@ -663,9 +679,7 @@
           0,
           0
         ],
-        "label": "W",
-        "zero": 0.0,
-        "name": "Watt"
+        "label": "W"
       },
       "dotnet": {
         "label": "W",
@@ -692,6 +706,8 @@
       "operation": "serviceUnit",
       "iteration": 17,
       "java": {
+        "zero": 0.0,
+        "name": "Coulomb",
         "one": 1.0,
         "dimension": [
           0,
@@ -702,9 +718,7 @@
           0,
           0
         ],
-        "label": "C",
-        "zero": 0.0,
-        "name": "Coulomb"
+        "label": "C"
       },
       "dotnet": {
         "label": "C",
@@ -731,6 +745,8 @@
       "operation": "serviceUnit",
       "iteration": 18,
       "java": {
+        "zero": 0.0,
+        "name": "Volt",
         "one": 1.0,
         "dimension": [
           2,
@@ -741,9 +757,7 @@
           0,
           0
         ],
-        "label": "V",
-        "zero": 0.0,
-        "name": "Volt"
+        "label": "V"
       },
       "dotnet": {
         "label": "V",
@@ -770,6 +784,8 @@
       "operation": "serviceUnit",
       "iteration": 19,
       "java": {
+        "zero": 0.0,
+        "name": "Farad",
         "one": 1.0,
         "dimension": [
           -2,
@@ -780,9 +796,7 @@
           0,
           0
         ],
-        "label": "F",
-        "zero": 0.0,
-        "name": "Farad"
+        "label": "F"
       },
       "dotnet": {
         "label": "F",
@@ -809,6 +823,8 @@
       "operation": "serviceUnit",
       "iteration": 20,
       "java": {
+        "zero": 0.0,
+        "name": "Ohm",
         "one": 1.0,
         "dimension": [
           2,
@@ -819,9 +835,7 @@
           0,
           0
         ],
-        "label": "\u03A9",
-        "zero": 0.0,
-        "name": "Ohm"
+        "label": "\u03A9"
       },
       "dotnet": {
         "label": "\u03A9",
@@ -848,6 +862,8 @@
       "operation": "serviceUnit",
       "iteration": 21,
       "java": {
+        "zero": 0.0,
+        "name": "Siemens",
         "one": 1.0,
         "dimension": [
           -2,
@@ -858,9 +874,7 @@
           0,
           0
         ],
-        "label": "S",
-        "zero": 0.0,
-        "name": "Siemens"
+        "label": "S"
       },
       "dotnet": {
         "label": "S",
@@ -887,6 +901,8 @@
       "operation": "serviceUnit",
       "iteration": 22,
       "java": {
+        "zero": 0.0,
+        "name": "Weber",
         "one": 1.0,
         "dimension": [
           2,
@@ -897,9 +913,7 @@
           0,
           0
         ],
-        "label": "Wb",
-        "zero": 0.0,
-        "name": "Weber"
+        "label": "Wb"
       },
       "dotnet": {
         "label": "Wb",
@@ -926,6 +940,8 @@
       "operation": "serviceUnit",
       "iteration": 23,
       "java": {
+        "zero": 0.0,
+        "name": "Tesla",
         "one": 1.0,
         "dimension": [
           0,
@@ -936,9 +952,7 @@
           0,
           0
         ],
-        "label": "T",
-        "zero": 0.0,
-        "name": "Tesla"
+        "label": "T"
       },
       "dotnet": {
         "label": "T",
@@ -965,6 +979,8 @@
       "operation": "serviceUnit",
       "iteration": 24,
       "java": {
+        "zero": 0.0,
+        "name": "Henry",
         "one": 1.0,
         "dimension": [
           2,
@@ -975,9 +991,7 @@
           0,
           0
         ],
-        "label": "H",
-        "zero": 0.0,
-        "name": "Henry"
+        "label": "H"
       },
       "dotnet": {
         "label": "H",
@@ -1004,6 +1018,8 @@
       "operation": "serviceUnit",
       "iteration": 25,
       "java": {
+        "zero": 273.15,
+        "name": "Celsius",
         "one": 274.15,
         "dimension": [
           0,
@@ -1014,9 +1030,7 @@
           0,
           0
         ],
-        "label": "\u2103",
-        "zero": 273.15,
-        "name": "Celsius"
+        "label": "\u2103"
       },
       "dotnet": {
         "label": "\u2103",
@@ -1043,6 +1057,8 @@
       "operation": "serviceUnit",
       "iteration": 26,
       "java": {
+        "zero": 0.0,
+        "name": "Lumen",
         "one": 1.0,
         "dimension": [
           0,
@@ -1053,9 +1069,7 @@
           0,
           1
         ],
-        "label": "lm",
-        "zero": 0.0,
-        "name": "Lumen"
+        "label": "lm"
       },
       "dotnet": {
         "label": "lm",
@@ -1082,6 +1096,8 @@
       "operation": "serviceUnit",
       "iteration": 27,
       "java": {
+        "zero": 0.0,
+        "name": "Lux",
         "one": 1.0,
         "dimension": [
           -2,
@@ -1092,9 +1108,7 @@
           0,
           1
         ],
-        "label": "lx",
-        "zero": 0.0,
-        "name": "Lux"
+        "label": "lx"
       },
       "dotnet": {
         "label": "lx",
@@ -1121,6 +1135,8 @@
       "operation": "serviceUnit",
       "iteration": 28,
       "java": {
+        "zero": 0.0,
+        "name": "Becquerel",
         "one": 1.0,
         "dimension": [
           0,
@@ -1131,9 +1147,7 @@
           0,
           0
         ],
-        "label": "Bq",
-        "zero": 0.0,
-        "name": "Becquerel"
+        "label": "Bq"
       },
       "dotnet": {
         "label": "Bq",
@@ -1160,6 +1174,8 @@
       "operation": "serviceUnit",
       "iteration": 29,
       "java": {
+        "zero": 0.0,
+        "name": "Gray",
         "one": 1.0,
         "dimension": [
           2,
@@ -1170,9 +1186,7 @@
           0,
           0
         ],
-        "label": "Gy",
-        "zero": 0.0,
-        "name": "Gray"
+        "label": "Gy"
       },
       "dotnet": {
         "label": "Gy",
@@ -1199,6 +1213,8 @@
       "operation": "serviceUnit",
       "iteration": 30,
       "java": {
+        "zero": 0.0,
+        "name": "Sievert",
         "one": 1.0,
         "dimension": [
           2,
@@ -1209,9 +1225,7 @@
           0,
           0
         ],
-        "label": "Sv",
-        "zero": 0.0,
-        "name": "Sievert"
+        "label": "Sv"
       },
       "dotnet": {
         "label": "Sv",
@@ -1238,6 +1252,8 @@
       "operation": "serviceUnit",
       "iteration": 31,
       "java": {
+        "zero": 0.0,
+        "name": "Katal",
         "one": 1.0,
         "dimension": [
           0,
@@ -1248,9 +1264,7 @@
           1,
           0
         ],
-        "label": "kat",
-        "zero": 0.0,
-        "name": "Katal"
+        "label": "kat"
       },
       "dotnet": {
         "label": "kat",
@@ -1277,6 +1291,8 @@
       "operation": "serviceUnit",
       "iteration": 32,
       "java": {
+        "zero": 0.0,
+        "name": "Metre per Second",
         "one": 1.0,
         "dimension": [
           1,
@@ -1287,9 +1303,7 @@
           0,
           0
         ],
-        "label": "m/s",
-        "zero": 0.0,
-        "name": "Metre per Second"
+        "label": "m/s"
       },
       "dotnet": {
         "label": "m/s",
@@ -1316,6 +1330,8 @@
       "operation": "serviceUnit",
       "iteration": 33,
       "java": {
+        "zero": 0.0,
+        "name": "Metre per square second",
         "one": 1.0,
         "dimension": [
           1,
@@ -1326,9 +1342,7 @@
           0,
           0
         ],
-        "label": "m/s\u00B2",
-        "zero": 0.0,
-        "name": "Metre per square second"
+        "label": "m/s\u00B2"
       },
       "dotnet": {
         "label": "m/s\u00B2",
@@ -1355,6 +1369,8 @@
       "operation": "serviceUnit",
       "iteration": 34,
       "java": {
+        "zero": 0.0,
+        "name": "Square metre",
         "one": 1.0,
         "dimension": [
           2,
@@ -1365,9 +1381,7 @@
           0,
           0
         ],
-        "label": "m\u00B2",
-        "zero": 0.0,
-        "name": "Square metre"
+        "label": "m\u00B2"
       },
       "dotnet": {
         "label": "m\u00B2",
@@ -1394,6 +1408,8 @@
       "operation": "serviceUnit",
       "iteration": 35,
       "java": {
+        "zero": 0.0,
+        "name": "Cubic metre",
         "one": 1.0,
         "dimension": [
           3,
@@ -1404,9 +1420,7 @@
           0,
           0
         ],
-        "label": "m\u00B3",
-        "zero": 0.0,
-        "name": "Cubic metre"
+        "label": "m\u00B3"
       },
       "dotnet": {
         "label": "m\u00B3",
@@ -1433,6 +1447,8 @@
       "operation": "serviceUnit",
       "iteration": 36,
       "java": {
+        "zero": 0.0,
+        "name": "Kilometre per hour",
         "one": 0.2777777777777778,
         "dimension": [
           1,
@@ -1443,9 +1459,7 @@
           0,
           0
         ],
-        "label": "km/h",
-        "zero": 0.0,
-        "name": "Kilometre per hour"
+        "label": "km/h"
       },
       "dotnet": {
         "label": "km/h",
@@ -1472,6 +1486,8 @@
       "operation": "serviceUnit",
       "iteration": 37,
       "java": {
+        "zero": 0.0,
+        "name": "Percent",
         "one": 0.01,
         "dimension": [
           0,
@@ -1482,9 +1498,7 @@
           0,
           0
         ],
-        "label": "%",
-        "zero": 0.0,
-        "name": "Percent"
+        "label": "%"
       },
       "dotnet": {
         "label": "%",
@@ -1511,6 +1525,8 @@
       "operation": "serviceUnit",
       "iteration": 38,
       "java": {
+        "zero": 0.0,
+        "name": "Minute",
         "one": 60.0,
         "dimension": [
           0,
@@ -1521,9 +1537,7 @@
           0,
           0
         ],
-        "label": "min",
-        "zero": 0.0,
-        "name": "Minute"
+        "label": "min"
       },
       "dotnet": {
         "label": "min",
@@ -1550,6 +1564,8 @@
       "operation": "serviceUnit",
       "iteration": 39,
       "java": {
+        "zero": 0.0,
+        "name": "Hour",
         "one": 3600.0,
         "dimension": [
           0,
@@ -1560,9 +1576,7 @@
           0,
           0
         ],
-        "label": "h",
-        "zero": 0.0,
-        "name": "Hour"
+        "label": "h"
       },
       "dotnet": {
         "label": "h",
@@ -1589,6 +1603,8 @@
       "operation": "serviceUnit",
       "iteration": 40,
       "java": {
+        "zero": 0.0,
+        "name": "Day",
         "one": 86400.0,
         "dimension": [
           0,
@@ -1599,9 +1615,7 @@
           0,
           0
         ],
-        "label": "d",
-        "zero": 0.0,
-        "name": "Day"
+        "label": "d"
       },
       "dotnet": {
         "label": "d",
@@ -1628,6 +1642,8 @@
       "operation": "serviceUnit",
       "iteration": 41,
       "java": {
+        "zero": 0.0,
+        "name": "Week",
         "one": 604800.0,
         "dimension": [
           0,
@@ -1638,9 +1654,7 @@
           0,
           0
         ],
-        "label": "wk",
-        "zero": 0.0,
-        "name": "Week"
+        "label": "wk"
       },
       "dotnet": {
         "label": "wk",
@@ -1667,6 +1681,8 @@
       "operation": "serviceUnit",
       "iteration": 42,
       "java": {
+        "zero": 0.0,
+        "name": "Year",
         "one": 3.1556952E7,
         "dimension": [
           0,
@@ -1677,9 +1693,7 @@
           0,
           0
         ],
-        "label": "yr",
-        "zero": 0.0,
-        "name": "Year"
+        "label": "yr"
       },
       "dotnet": {
         "label": "yr",
@@ -1706,6 +1720,8 @@
       "operation": "serviceUnit",
       "iteration": 43,
       "java": {
+        "zero": 0.0,
+        "name": "Month",
         "one": 2629746.0,
         "dimension": [
           0,
@@ -1716,9 +1732,7 @@
           0,
           0
         ],
-        "label": "mo",
-        "zero": 0.0,
-        "name": "Month"
+        "label": "mo"
       },
       "dotnet": {
         "label": "mo",
@@ -1745,6 +1759,8 @@
       "operation": "serviceUnit",
       "iteration": 44,
       "java": {
+        "zero": 0.0,
+        "name": "Litre",
         "one": 0.001,
         "dimension": [
           3,
@@ -1755,9 +1771,7 @@
           0,
           0
         ],
-        "label": "l",
-        "zero": 0.0,
-        "name": "Litre"
+        "label": "l"
       },
       "dotnet": {
         "label": "l",
@@ -2374,180 +2388,220 @@
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-081",
       "requirement": "JP-SPI-081",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 81
+      "iteration": 81,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "quantityNamed",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-082",
       "requirement": "JP-SPI-082",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 82
+      "iteration": 82,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "quantityNames",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-083",
       "requirement": "JP-SPI-083",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 83
+      "iteration": 83,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "unitDefault",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-084",
       "requirement": "JP-SPI-084",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 84
+      "iteration": 84,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "unitNamed",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-085",
       "requirement": "JP-SPI-085",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 85
+      "iteration": 85,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "unitNames",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-086",
       "requirement": "JP-SPI-086",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 86
+      "iteration": 86,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "unitVariant",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-087",
       "requirement": "JP-SPI-087",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 87
+      "iteration": 87,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "systemDefault",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-088",
       "requirement": "JP-SPI-088",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 88
+      "iteration": 88,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "systemNamed",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-089",
       "requirement": "JP-SPI-089",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 89
+      "iteration": 89,
+      "java": true,
+      "dotnet": true
     },
     {
       "argument": "systemsAvailable",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-090",
       "requirement": "JP-SPI-090",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 90
+      "iteration": 90,
+      "java": 1,
+      "dotnet": 1
     },
     {
       "argument": "systemName",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-091",
       "requirement": "JP-SPI-091",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 91
+      "iteration": 91,
+      "java": "Units",
+      "dotnet": "Units"
     },
     {
       "argument": "systemUnits",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-092",
       "requirement": "JP-SPI-092",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 92
+      "iteration": 92,
+      "java": 44,
+      "dotnet": 44
     },
     {
       "argument": "unitByString",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-093",
       "requirement": "JP-SPI-093",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 93
+      "iteration": 93,
+      "java": "A",
+      "dotnet": "A"
     },
     {
       "argument": "unitsByDimension",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-094",
       "requirement": "JP-SPI-094",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 94
+      "iteration": 94,
+      "java": 7,
+      "dotnet": 7
     },
     {
       "argument": "unitByType",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-095",
       "requirement": "JP-SPI-095",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 95
+      "iteration": 95,
+      "java": "K",
+      "dotnet": "K"
     },
     {
       "argument": "typedFactory",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-096",
       "requirement": "JP-SPI-096",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 96
+      "iteration": 96,
+      "java": 20.0,
+      "dotnet": 20
     },
     {
       "argument": "metricPrefixes",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-097",
       "requirement": "JP-SPI-097",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 97
+      "iteration": 97,
+      "java": 24,
+      "dotnet": 24
     },
     {
       "argument": "binaryPrefixes",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-098",
       "requirement": "JP-SPI-098",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 98
+      "iteration": 98,
+      "java": 8,
+      "dotnet": 8
     },
     {
       "argument": "unitFormatFormat",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-099",
       "requirement": "JP-SPI-099",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 99
+      "iteration": 99,
+      "java": "\u2103",
+      "dotnet": "\u2103"
     },
     {
       "argument": "unitFormatParse",
       "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
       "id": "S100-100",
       "requirement": "JP-SPI-100",
-      "status": "PENDING",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
       "operation": "serviceContract",
-      "iteration": 100
+      "iteration": 100,
+      "java": "\u03BCA",
+      "dotnet": "\u03BCA"
     }
   ],
   "policy": "One inventoried implementation obligation per numbered iteration; 44 unit definitions, 33 type bindings and 23 service contracts. Not 100 TCK assertions or closures."

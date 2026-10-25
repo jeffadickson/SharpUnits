@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "argument": "quantityUnknown",
+      "id": "SPI-EDGE-quantityUnknown",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitUnknown",
+      "id": "SPI-EDGE-unitUnknown",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitVariantNull",
+      "id": "SPI-EDGE-unitVariantNull",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitVariantEmpty",
+      "id": "SPI-EDGE-unitVariantEmpty",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "systemUnknown",
+      "id": "SPI-EDGE-systemUnknown",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "systemCase",
+      "id": "SPI-EDGE-systemCase",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitCase",
+      "id": "SPI-EDGE-unitCase",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitName",
+      "id": "SPI-EDGE-unitName",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "celsiusAliasLookup",
+      "id": "SPI-EDGE-celsiusAliasLookup",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "factoryIdentity",
+      "id": "SPI-EDGE-factoryIdentity",
+      "expected": true,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "factoryScale",
+      "id": "SPI-EDGE-factoryScale",
+      "expected": "RELATIVE",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "factoryRaw",
+      "id": "SPI-EDGE-factoryRaw",
+      "expected": 2.0,
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "prefixCatalog",
+      "id": "SPI-EDGE-prefixCatalog",
+      "expected": [
+        "Ei|1024|6",
+        "E|10|18",
+        "Gi|1024|3",
+        "G|10|9",
+        "Ki|1024|1",
+        "Mi|1024|2",
+        "M|10|6",
+        "Pi|1024|5",
+        "P|10|15",
+        "Q|10|30",
+        "R|10|27",
+        "Ti|1024|4",
+        "T|10|12",
+        "Yi|1024|8",
+        "Y|10|24",
+        "Zi|1024|7",
+        "Z|10|21",
+        "a|10|-18",
+        "c|10|-2",
+        "da|10|1",
+        "d|10|-1",
+        "f|10|-15",
+        "h|10|2",
+        "k|10|3",
+        "m|10|-3",
+        "n|10|-9",
+        "p|10|-12",
+        "q|10|-30",
+        "r|10|-27",
+        "y|10|-24",
+        "z|10|-21",
+        "µ|10|-6"
+      ],
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "dimensionlessUnits",
+      "id": "SPI-EDGE-dimensionlessUnits",
+      "expected": [
+        "%",
+        "one",
+        "rad",
+        "sr"
+      ],
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "frequencyUnits",
+      "id": "SPI-EDGE-frequencyUnits",
+      "expected": [
+        "Bq",
+        "Hz"
+      ],
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "quantityLocale",
+      "expected": true,
+      "id": "SPI-EDGE-quantityLocale-en-US",
+      "locale": "en-US",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitLocale",
+      "expected": true,
+      "id": "SPI-EDGE-unitLocale-en-US",
+      "locale": "en-US",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "quantityLocale",
+      "expected": false,
+      "id": "SPI-EDGE-quantityLocale-tr-TR",
+      "locale": "tr-TR",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitLocale",
+      "expected": false,
+      "id": "SPI-EDGE-unitLocale-tr-TR",
+      "locale": "tr-TR",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "quantityLocale",
+      "expected": true,
+      "id": "SPI-EDGE-quantityLocale-de-DE",
+      "locale": "de-DE",
+      "operation": "serviceEdge"
+    },
+    {
+      "argument": "unitLocale",
+      "expected": true,
+      "id": "SPI-EDGE-unitLocale-de-DE",
+      "locale": "de-DE",
+      "operation": "serviceEdge"
+    }
+  ]
+}

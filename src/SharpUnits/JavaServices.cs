@@ -70,7 +70,7 @@ public sealed class JavaSystemOfUnitsService
     private static readonly IReadOnlyList<JavaPrefix> metric=Array.AsReadOnly(SiPrefixes.Definitions
         .Select(pair=>new JavaPrefix(pair.Key,10,pair.Value)).ToArray());
     private static readonly IReadOnlyList<JavaPrefix> binary=Array.AsReadOnly(new[]{"Ki","Mi","Gi","Ti","Pi","Ei","Zi","Yi"}
-        .Select((symbol,index)=>new JavaPrefix(symbol,2,10*(index+1))).ToArray());
+        .Select((symbol,index)=>new JavaPrefix(symbol,1024,index+1)).ToArray());
     /// <summary>Gets the built-in default system.</summary>
     public JavaUnitSystem GetSystemOfUnits()=>JavaUnitSystem.Default;
     /// <summary>Looks up an exact system name; unknown names return null.</summary>
@@ -123,11 +123,12 @@ public sealed class JavaFormatService
     internal JavaFormatService(UnitRegistry registry){quantities=new(registry);units=new(registry);}
     /// <summary>Gets the supported default quantity formatter.</summary>
     public QuantityTextFormat GetQuantityFormat()=>quantities;
-    /// <summary>Looks up a supported quantity format name without culture-sensitive case folding.</summary>
+    /// <summary>Looks up a supported quantity format name using Java's current-locale case folding.</summary>
+    /// <remarks>As in pinned Indriya, lowercase simple is not recognized under Turkish casing.</remarks>
     public QuantityTextFormat? GetQuantityFormat(string name)
     {
         ArgumentNullException.ThrowIfNull(name);
-        return name.Equals("SIMPLE",StringComparison.OrdinalIgnoreCase)?quantities:null;
+        return name.ToUpper(System.Globalization.CultureInfo.CurrentCulture)=="SIMPLE"?quantities:null;
     }
     /// <summary>Gets implemented quantity format names, excluding unsupported Java families.</summary>
     public IReadOnlyList<string> QuantityFormatNames=>quantityNames;
@@ -137,7 +138,8 @@ public sealed class JavaFormatService
     public JavaUnitTextFormat? GetUnitFormat(string name)
     {
         ArgumentNullException.ThrowIfNull(name);
-        return name.Equals("SIMPLE_DEFAULT",StringComparison.OrdinalIgnoreCase)||name.Equals("DEFAULT",StringComparison.OrdinalIgnoreCase)?units:null;
+        var key=name.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
+        return key is "SIMPLE_DEFAULT" or "DEFAULT"?units:null;
     }
     /// <summary>Looks up a name and optional variant using Java's underscore convention.</summary>
     public JavaUnitTextFormat? GetUnitFormat(string name,string? variant)

@@ -1,0 +1,17 @@
+{
+  "binaryPrefix": {
+    "failingEvidence": "Test run for C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tests\\SharpUnits.Tests\\bin\\Release\\net10.0\\SharpUnits.Tests.dll (.NETCoreApp,Version=v10.0)\r\nA total of 1 test files matched the specified pattern.\r\n[xUnit.net 00:00:00.98]     SharpUnits.Tests.ServiceReferenceFixtureTests.MatchesPinnedServiceObservation(id: \"SPI-EDGE-prefixCatalog\", json: \"{\\r\\n      \\\"argument\\\": \\\"prefixCatalog\\\",\\r\\n   \"···) [FAIL]\r\n  Failed SharpUnits.Tests.ServiceReferenceFixtureTests.MatchesPinnedServiceObservation(id: \"SPI-EDGE-prefixCatalog\", json: \"{\\r\\n      \\\"argument\\\": \\\"prefixCatalog\\\",\\r\\n   \"···) [5 ms]\r\n  Error Message:\r\n   Assert.Equal() Failure: Strings differ\r\n              ↓ (pos 3)\r\nExpected: \"Ei|1024|6\"\r\nActual:   \"Ei|2|60\"\r\n              ↑ (pos 3)\r\n  Stack Trace:\r\n     at SharpUnits.Tests.ServiceReferenceFixtureTests.Compare(JsonElement expected, JsonElement actual) in C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tests\\SharpUnits.Tests\\ServiceReferenceFixtureTests.cs:line 40\r\n   at SharpUnits.Tests.ServiceReferenceFixtureTests.Compare(JsonElement expected, JsonElement actual) in C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tests\\SharpUnits.Tests\\ServiceReferenceFixtureTests.cs:line 36\r\n   at SharpUnits.Tests.ServiceReferenceFixtureTests.MatchesPinnedServiceObservation(String id, String json) in C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tests\\SharpUnits.Tests\\ServiceReferenceFixtureTests.cs:line 24\r\n   at InvokeStub_ServiceReferenceFixtureTests.MatchesPinnedServiceObservation(Object, Span`1)\r\n   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n\r\nFailed!  - Failed:     1, Passed:  1072, Skipped:     0, Total:  1073, Duration: 615 ms - SharpUnits.Tests.dll (net10.0)\r\n",
+    "requirement": "JP-SPI-098",
+    "sha256": "61A4AED108FEBF14EF308403241C331BF12146A6F819C7D39CD4F87954200374",
+    "java": "Radix 1024; exponents 1-8",
+    "failedTests": 1,
+    "after": "JavaPrefix uses radix 1024 and ordinal exponent",
+    "before": "Radix 2; exponents 10-80"
+  },
+  "formatNameCasing": {
+    "after": "CurrentCulture.ToUpper; exact key lookup",
+    "before": "OrdinalIgnoreCase",
+    "evidence": "conformance/service-edge-cases.json",
+    "java": "Default-locale uppercase; Turkish simple lookup returns null"
+  }
+}
