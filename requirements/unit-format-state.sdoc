@@ -1,0 +1,1002 @@
+[DOCUMENT]
+TITLE: SharpUnits mutable unit formatting and ASCII requirements
+
+[REQUIREMENT]
+UID: JP-UF-001
+STATUS: Active
+TITLE: StringBuilder append text
+STATEMENT: The supported CLR unit-format profile shall reconcile StringBuilder append text against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-002
+STATUS: Active
+TITLE: StringBuilder destination identity
+STATEMENT: The supported CLR unit-format profile shall reconcile StringBuilder destination identity against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-003
+STATUS: Active
+TITLE: TextWriter append text
+STATEMENT: The supported CLR unit-format profile shall reconcile TextWriter append text against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-004
+STATUS: Active
+TITLE: TextWriter destination identity
+STATEMENT: The supported CLR unit-format profile shall reconcile TextWriter destination identity against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-005
+STATUS: Active
+TITLE: Builder observes mutable label
+STATEMENT: The supported CLR unit-format profile shall reconcile Builder observes mutable label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-006
+STATUS: Active
+TITLE: Writer observes mutable label
+STATEMENT: The supported CLR unit-format profile shall reconcile Writer observes mutable label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-007
+STATUS: Active
+TITLE: Label changes formatting
+STATEMENT: The supported CLR unit-format profile shall reconcile Label changes formatting against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-008
+STATUS: Active
+TITLE: Label changes parsing
+STATEMENT: The supported CLR unit-format profile shall reconcile Label changes parsing against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-009
+STATUS: Active
+TITLE: Relabel changes current display
+STATEMENT: The supported CLR unit-format profile shall reconcile Relabel changes current display against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-010
+STATUS: Active
+TITLE: Relabel retains old parse alias
+STATEMENT: The supported CLR unit-format profile shall reconcile Relabel retains old parse alias against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-011
+STATUS: Active
+TITLE: Alias admits parse name
+STATEMENT: The supported CLR unit-format profile shall reconcile Alias admits parse name against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-012
+STATUS: Active
+TITLE: Alias does not rename display
+STATEMENT: The supported CLR unit-format profile shall reconcile Alias does not rename display against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-013
+STATUS: Active
+TITLE: Alias rebinding replaces parser owner
+STATEMENT: The supported CLR unit-format profile shall reconcile Alias rebinding replaces parser owner against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-014
+STATUS: Active
+TITLE: Label collision replaces parser owner
+STATEMENT: The supported CLR unit-format profile shall reconcile Label collision replaces parser owner against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-015
+STATUS: Active
+TITLE: Label collision preserves old owner's display
+STATEMENT: The supported CLR unit-format profile shall reconcile Label collision preserves old owner's display against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-016
+STATUS: Active
+TITLE: Remove label restores intrinsic display
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove label restores intrinsic display against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-017
+STATUS: Active
+TITLE: Remove label removes aliases
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove label removes aliases against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-018
+STATUS: Active
+TITLE: Remove aliases preserves current label
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove aliases preserves current label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-019
+STATUS: Active
+TITLE: Remove aliases removes old labels
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove aliases removes old labels against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-020
+STATUS: Active
+TITLE: Remove alias ignores unit argument
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove alias ignores unit argument against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-021
+STATUS: Active
+TITLE: Remove alias retains display label
+STATEMENT: The supported CLR unit-format profile shall reconcile Remove alias retains display label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-022
+STATUS: Active
+TITLE: Reject leading digit
+STATEMENT: The supported CLR unit-format profile shall reconcile Reject leading digit against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-023
+STATUS: Active
+TITLE: Reject leading mathematical operator
+STATEMENT: The supported CLR unit-format profile shall reconcile Reject leading mathematical operator against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-024
+STATUS: Active
+TITLE: Reject empty label
+STATEMENT: The supported CLR unit-format profile shall reconcile Reject empty label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-025
+STATUS: Active
+TITLE: Reject null label
+STATEMENT: The supported CLR unit-format profile shall reconcile Reject null label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-026
+STATUS: Active
+TITLE: Default admits Unicode label
+STATEMENT: The supported CLR unit-format profile shall reconcile Default admits Unicode label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-027
+STATUS: Active
+TITLE: Default validates only initial character
+STATEMENT: The supported CLR unit-format profile shall reconcile Default validates only initial character against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-028
+STATUS: Active
+TITLE: ASCII rejects non-ASCII label
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII rejects non-ASCII label against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-029
+STATUS: Active
+TITLE: Fresh formatter label state is isolated
+STATEMENT: The supported CLR unit-format profile shall reconcile Fresh formatter label state is isolated against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-030
+STATUS: Active
+TITLE: Default and ASCII state are distinct
+STATEMENT: The supported CLR unit-format profile shall reconcile Default and ASCII state are distinct against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-031
+STATUS: Active
+TITLE: Quantity formatting observes shared unit labels
+STATEMENT: The supported CLR unit-format profile shall reconcile Quantity formatting observes shared unit labels against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-032
+STATUS: Active
+TITLE: Quantity parsing observes shared unit aliases
+STATEMENT: The supported CLR unit-format profile shall reconcile Quantity parsing observes shared unit aliases against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-033
+STATUS: Active
+TITLE: ASCII catalog binding ONE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding ONE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-034
+STATUS: Active
+TITLE: ASCII catalog binding AMPERE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding AMPERE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-035
+STATUS: Active
+TITLE: ASCII catalog binding CANDELA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding CANDELA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-036
+STATUS: Active
+TITLE: ASCII catalog binding KELVIN
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding KELVIN against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-037
+STATUS: Active
+TITLE: ASCII catalog binding KILOGRAM
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding KILOGRAM against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-038
+STATUS: Active
+TITLE: ASCII catalog binding METRE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding METRE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-039
+STATUS: Active
+TITLE: ASCII catalog binding MOLE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding MOLE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-040
+STATUS: Active
+TITLE: ASCII catalog binding SECOND
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding SECOND against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-041
+STATUS: Active
+TITLE: ASCII catalog binding GRAM
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding GRAM against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-042
+STATUS: Active
+TITLE: ASCII catalog binding RADIAN
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding RADIAN against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-043
+STATUS: Active
+TITLE: ASCII catalog binding STERADIAN
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding STERADIAN against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-044
+STATUS: Active
+TITLE: ASCII catalog binding HERTZ
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding HERTZ against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-045
+STATUS: Active
+TITLE: ASCII catalog binding NEWTON
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding NEWTON against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-046
+STATUS: Active
+TITLE: ASCII catalog binding PASCAL
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding PASCAL against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-047
+STATUS: Active
+TITLE: ASCII catalog binding JOULE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding JOULE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-048
+STATUS: Active
+TITLE: ASCII catalog binding WATT
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding WATT against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-049
+STATUS: Active
+TITLE: ASCII catalog binding COULOMB
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding COULOMB against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-050
+STATUS: Active
+TITLE: ASCII catalog binding VOLT
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding VOLT against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-051
+STATUS: Active
+TITLE: ASCII catalog binding FARAD
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding FARAD against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-052
+STATUS: Active
+TITLE: ASCII catalog binding OHM
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding OHM against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-053
+STATUS: Active
+TITLE: ASCII catalog binding SIEMENS
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding SIEMENS against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-054
+STATUS: Active
+TITLE: ASCII catalog binding WEBER
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding WEBER against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-055
+STATUS: Active
+TITLE: ASCII catalog binding TESLA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding TESLA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-056
+STATUS: Active
+TITLE: ASCII catalog binding HENRY
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding HENRY against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-057
+STATUS: Active
+TITLE: ASCII catalog binding CELSIUS
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding CELSIUS against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-058
+STATUS: Active
+TITLE: ASCII catalog binding LUMEN
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding LUMEN against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-059
+STATUS: Active
+TITLE: ASCII catalog binding LUX
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding LUX against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-060
+STATUS: Active
+TITLE: ASCII catalog binding BECQUEREL
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding BECQUEREL against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-061
+STATUS: Active
+TITLE: ASCII catalog binding GRAY
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding GRAY against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-062
+STATUS: Active
+TITLE: ASCII catalog binding SIEVERT
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding SIEVERT against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-063
+STATUS: Active
+TITLE: ASCII catalog binding KATAL
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding KATAL against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-064
+STATUS: Active
+TITLE: ASCII catalog binding METRE_PER_SECOND
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding METRE_PER_SECOND against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-065
+STATUS: Active
+TITLE: ASCII catalog binding METRE_PER_SQUARE_SECOND
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding METRE_PER_SQUARE_SECOND against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-066
+STATUS: Active
+TITLE: ASCII catalog binding SQUARE_METRE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding SQUARE_METRE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-067
+STATUS: Active
+TITLE: ASCII catalog binding CUBIC_METRE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding CUBIC_METRE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-068
+STATUS: Active
+TITLE: ASCII catalog binding KILOMETRE_PER_HOUR
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding KILOMETRE_PER_HOUR against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-069
+STATUS: Active
+TITLE: ASCII catalog binding PERCENT
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding PERCENT against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-070
+STATUS: Active
+TITLE: ASCII catalog binding MINUTE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding MINUTE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-071
+STATUS: Active
+TITLE: ASCII catalog binding HOUR
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding HOUR against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-072
+STATUS: Active
+TITLE: ASCII catalog binding DAY
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding DAY against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-073
+STATUS: Active
+TITLE: ASCII catalog binding WEEK
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding WEEK against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-074
+STATUS: Active
+TITLE: ASCII catalog binding YEAR
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding YEAR against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-075
+STATUS: Active
+TITLE: ASCII catalog binding MONTH
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding MONTH against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-076
+STATUS: Active
+TITLE: ASCII catalog binding LITRE
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII catalog binding LITRE against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-077
+STATUS: Active
+TITLE: ASCII prefixed ohm binding QUETTA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding QUETTA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-078
+STATUS: Active
+TITLE: ASCII prefixed ohm binding RONNA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding RONNA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-079
+STATUS: Active
+TITLE: ASCII prefixed ohm binding YOTTA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding YOTTA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-080
+STATUS: Active
+TITLE: ASCII prefixed ohm binding ZETTA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding ZETTA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-081
+STATUS: Active
+TITLE: ASCII prefixed ohm binding EXA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding EXA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-082
+STATUS: Active
+TITLE: ASCII prefixed ohm binding PETA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding PETA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-083
+STATUS: Active
+TITLE: ASCII prefixed ohm binding TERA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding TERA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-084
+STATUS: Active
+TITLE: ASCII prefixed ohm binding GIGA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding GIGA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-085
+STATUS: Active
+TITLE: ASCII prefixed ohm binding MEGA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding MEGA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-086
+STATUS: Active
+TITLE: ASCII prefixed ohm binding KILO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding KILO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-087
+STATUS: Active
+TITLE: ASCII prefixed ohm binding HECTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding HECTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-088
+STATUS: Active
+TITLE: ASCII prefixed ohm binding DECA
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding DECA against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-089
+STATUS: Active
+TITLE: ASCII prefixed ohm binding DECI
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding DECI against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-090
+STATUS: Active
+TITLE: ASCII prefixed ohm binding CENTI
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding CENTI against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-091
+STATUS: Active
+TITLE: ASCII prefixed ohm binding MILLI
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding MILLI against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-092
+STATUS: Active
+TITLE: ASCII prefixed ohm binding MICRO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding MICRO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-093
+STATUS: Active
+TITLE: ASCII prefixed ohm binding NANO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding NANO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-094
+STATUS: Active
+TITLE: ASCII prefixed ohm binding PICO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding PICO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-095
+STATUS: Active
+TITLE: ASCII prefixed ohm binding FEMTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding FEMTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-096
+STATUS: Active
+TITLE: ASCII prefixed ohm binding ATTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding ATTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-097
+STATUS: Active
+TITLE: ASCII prefixed ohm binding ZEPTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding ZEPTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-098
+STATUS: Active
+TITLE: ASCII prefixed ohm binding YOCTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding YOCTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-099
+STATUS: Active
+TITLE: ASCII prefixed ohm binding RONTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding RONTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-UF-100
+STATUS: Active
+TITLE: ASCII prefixed ohm binding QUECTO
+STATEMENT: The supported CLR unit-format profile shall reconcile ASCII prefixed ohm binding QUECTO against independently executed pinned Indriya, retaining explicit API/identity limitations.
+COMMENT: Implementation: JavaUnitTextFormat.cs and JavaUnitAsciiData.cs. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat. Evidence: conformance/unitformat-gap-review-100.json. No formal TCK closure is implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
