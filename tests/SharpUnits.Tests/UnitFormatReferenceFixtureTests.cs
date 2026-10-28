@@ -10,7 +10,7 @@ public sealed class UnitFormatReferenceFixtureTests
     // @relation(JP-015, scope=file)
     public static IEnumerable<object[]> Cases()
     {
-        foreach(var file in new[]{"unitformat-reference-cases.json","unitformat-supplement-cases.json"})
+        foreach(var file in new[]{"unitformat-reference-cases.json","unitformat-supplement-cases.json","unitformat-affine-cases.json"})
         {
             using var document=JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory,file)));
             foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())

@@ -20,24 +20,28 @@
     {
       "operation": "unitFormat",
       "ascii": false,
-      "disposition": "KNOWN_INCOMPATIBILITY",
+      "disposition": "RESOLVED_BOUNDED_MAPPING",
       "kind": "format",
       "unit": "FAHRENHEIT",
       "id": "UF-LIMIT-FAHRENHEIT-DEFAULT",
       "java": "((K*5)/9)+459.67",
-      "dotnet": "°F",
-      "actions": []
+      "dotnet": "((K*5)/9)+459.67",
+      "actions": [],
+      "previousDotnet": "°F",
+      "evidence": "conformance/affine-format-review.md"
     },
     {
       "operation": "unitFormat",
       "ascii": true,
-      "disposition": "KNOWN_INCOMPATIBILITY",
+      "disposition": "RESOLVED_BOUNDED_MAPPING",
       "kind": "format",
       "unit": "FAHRENHEIT",
       "id": "UF-LIMIT-FAHRENHEIT-ASCII",
       "java": "((K*5)/9)+459.67",
-      "dotnet": "°F",
-      "actions": []
+      "dotnet": "((K*5)/9)+459.67",
+      "actions": [],
+      "previousDotnet": "°F",
+      "evidence": "conformance/affine-format-review.md"
     }
   ]
 }

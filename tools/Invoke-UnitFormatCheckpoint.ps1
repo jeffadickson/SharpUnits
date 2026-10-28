@@ -18,6 +18,8 @@ if($LASTEXITCODE){Get-Content "../unitformat100-test-$Count.log" -Tail 25;throw 
 $expected=1140+$Count
 if(Test-Path conformance/unitformat-supplement-cases.json){$expected+=(Get-Content conformance/unitformat-supplement-cases.json -Raw|ConvertFrom-Json).cases.Count}
 if(Test-Path tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs){$expected+=12}
+if(Test-Path -LiteralPath conformance/unitformat-affine-cases.json){$expected+=(Get-Content -LiteralPath conformance/unitformat-affine-cases.json -Raw|ConvertFrom-Json).cases.Count}
+if(Test-Path -LiteralPath tests/SharpUnits.Tests/AffineUnitFormatTests.cs){$expected+=4}
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected){throw "Incomplete tests: expected $expected"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../unitformat100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}

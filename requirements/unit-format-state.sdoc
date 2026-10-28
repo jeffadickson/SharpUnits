@@ -1070,3 +1070,13 @@ COMMENT: Implementation: JavaUnitTextFormat.OverlayRegistrations. Verification: 
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-013
+
+[REQUIREMENT]
+UID: JP-UF-FAHRENHEIT
+STATUS: Active
+TITLE: Standard Fahrenheit converter expression in Java unit formats
+STATEMENT: The Java default and ASCII format adapters shall render the recognized standard Fahrenheit definition as ((K*5)/9)+459.67 unless an explicit unit label overrides it. Local kelvin relabeling shall not change this expression. Native unit symbols and temperature conversions shall be preserved.
+COMMENT: Bounded adapter mapping, not general transformed-unit reconstruction. Implementation: JavaUnitTextFormat.IsStandardFahrenheit and Format. Tests: UnitFormatReferenceFixtureTests, AffineUnitFormatTests. Independent reference: conformance/unitformat-affine-cases.json; evidence: conformance/affine-format-review.md. Arbitrary transformed graphs, parser round trips and Java object identity remain incomplete.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015

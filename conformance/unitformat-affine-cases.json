@@ -1,0 +1,152 @@
+{
+  "cases": [
+    {
+      "id": "UF-AFFINE-001",
+      "actions": [],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-002",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "degF"
+    },
+    {
+      "id": "UF-AFFINE-003",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "FAHRENHEIT",
+          "name": "degreesF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-004",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "FAHRENHEIT",
+          "name": null
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-005",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "KELVIN",
+          "name": "kelvins"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-006",
+      "actions": [],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-007",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "degF"
+    },
+    {
+      "id": "UF-AFFINE-008",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "FAHRENHEIT",
+          "name": "degreesF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-009",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "FAHRENHEIT",
+          "name": null
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    },
+    {
+      "id": "UF-AFFINE-010",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "KELVIN",
+          "name": "kelvins"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)+459.67"
+    }
+  ]
+}

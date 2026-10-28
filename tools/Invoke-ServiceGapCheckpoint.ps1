@@ -25,6 +25,8 @@ foreach($path in @('conformance/unitformat-reference-cases.json','conformance/un
  if(Test-Path $path){$expected+=(Get-Content $path -Raw|ConvertFrom-Json).cases.Count}
 }
 if(Test-Path tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs){$expected+=12}
+if(Test-Path -LiteralPath conformance/unitformat-affine-cases.json){$expected+=(Get-Content -LiteralPath conformance/unitformat-affine-cases.json -Raw|ConvertFrom-Json).cases.Count}
+if(Test-Path -LiteralPath tests/SharpUnits.Tests/AffineUnitFormatTests.cs){$expected+=4}
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected -or [int]$trx.TestRun.ResultSummary.Counters.failed -ne 0){throw "Incomplete test execution: expected $expected tests"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../services100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}

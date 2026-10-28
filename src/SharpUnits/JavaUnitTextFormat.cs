@@ -15,6 +15,8 @@ public enum JavaUnitFormatFlavor
 /// <summary>Mutable, isolated label/alias maps with bounded Java unit parsing and formatting.</summary>
 /// <remarks>Labels are keyed by CLR unit-record identity. General Java unit normalization,
 /// foreign Java unit identity, affine prefixes and parse cursors remain incomplete.
+/// Standard Fahrenheit renders its pinned converter expression; arbitrary transformed-unit
+/// graphs and affine-expression parsing remain unsupported.
 /// Public ASCII instances fall back to the built-in default formatter as Java does;
 /// services constructed explicitly use their own default formatter as the fallback.</remarks>
 public sealed class JavaUnitTextFormat
@@ -139,6 +141,8 @@ public sealed class JavaUnitTextFormat
                 case "CUBIC_METRE":return M()+"³";
             }
         }
+        // Java uses the parent's global toString, independent of local kelvin labels.
+        if(IsStandardFahrenheit(unit))return "((K*5)/9)+459.67";
         var symbol=QuantityTextFormat.JavaSymbol(unit);
         return symbol.Length==0?"one":symbol;
     }
@@ -187,6 +191,9 @@ public sealed class JavaUnitTextFormat
     }
     private static bool IdentifierStart(char value)=>char.IsLetter(value)||!JavaQuantityTextParser.IsJavaWhitespace(value)&&!char.IsDigit(value)
         &&value is not ('·' or '*' or '/' or '(' or ')' or '[' or ']' or '¹' or '²' or '³' or '^' or '+' or '-');
+    private static bool IsStandardFahrenheit(UnitDefinition unit)=>unit.Symbol=="°F"
+        &&unit.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)
+        &&unit.Converter==UnitConversion.Fahrenheit&&unit.ExactLinearScale is null;
     private void Seed(UnitDefinition unit,string text){names[text]=unit;labels[unit]=text;}
     private static UnitDefinition Prefix(UnitDefinition unit,string symbol,int exponent)
     {
@@ -208,6 +215,7 @@ public sealed class JavaUnitTextFormat
         foreach(var unit in units)
         {
             var field=byUnit.GetValueOrDefault(unit)?.Field;
+            if(IsStandardFahrenheit(unit)){names[unit.Symbol]=unit;continue;}
             // Java parses these product graphs rather than storing a direct name; a
             // later alias of m or s must affect parsing of m/s too.
             if(field is "METRE_PER_SECOND" or "METRE_PER_SQUARE_SECOND")continue;
@@ -244,6 +252,7 @@ public sealed class JavaUnitTextFormat
         // enumeration order. Product graphs still resolve mutable components at parse time.
         foreach(var unit in units)
         {
+            if(IsStandardFahrenheit(unit)){names[unit.Symbol]=unit;continue;}
             if(byUnit.GetValueOrDefault(unit)?.Field is "METRE_PER_SECOND" or "METRE_PER_SQUARE_SECOND")continue;
             var symbol=QuantityTextFormat.JavaSymbol(unit);Seed(unit,symbol.Length==0?"one":symbol);names[unit.Symbol]=unit;
         }

@@ -15,7 +15,8 @@ public sealed class QuantityTextFormat
  public bool IsLocaleSensitive=>false;
  /// <summary>Formats retained display values using the supported pinned Java double/unit text conventions.</summary>
  /// <remarks>Does not retain arbitrary Java Number types or parsed decimal lexical precision.
- /// Scale markers are not emitted. General compound/Fahrenheit unit-label generation is incomplete.</remarks>
+ /// Scale markers are not emitted. Service-created formatters support the recognized standard Fahrenheit
+ /// converter expression; standalone formatters retain registered symbols. General transformed-unit graphs remain incomplete.</remarks>
  public string FormatJavaQuantity(JavaQuantityAdapter quantity)
  {
   ArgumentNullException.ThrowIfNull(quantity);

@@ -316,7 +316,7 @@
       "evidence": "conformance/service-gap-review-100.json",
       "sourceMethod": "UnitFormatTest.testUnitFormatFormat",
       "expectedSemantics": "Public `String format(Unit)` exists",
-      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
+      "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
     },
@@ -352,7 +352,7 @@
       "evidence": "conformance/unitformat-gap-review-100.json",
       "sourceMethod": "UnitFormatTest.testUnitFormatLabel",
       "expectedSemantics": "Every configured Java unit formatter has a public label method.",
-      "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures.",
+      "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
       "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user."
     },

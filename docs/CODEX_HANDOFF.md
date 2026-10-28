@@ -5,6 +5,10 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current continuation (2026-10-27, Fahrenheit formatting)
+
+See [Fahrenheit formatting review](../conformance/affine-format-review.md). The Java unit-format adapter now renders the recognized native Fahrenheit definition with its pinned converter expression, with explicit label precedence. Ten additional executed Java observations and guarded converter regression/property tests cover this bounded mapping. General transformed-unit graphs and affine-expression parsing remain gaps; native temperature conventions are preserved. GitHub CI stays disabled; no formal TCK assertion is closed.
+
 ## Current continuation (2026-10-25, unit-format state)
 
 See [mutable unit-format and ASCII review](../conformance/unitformat-gap-hundred-review.md): 100 scoped items with compilation every ten; final 1,298 passing .NET tests, 872 matching Java/CLR observations and 112 passing pinned Java TCK tests. Thirteen semantic mutants are killed. Coverage is 94.25% lines / 83.72% branches; StrictDoc validates 374 records in seven documents. Ledger: 14 gaps, 50 implemented/unverified, 49 partial mappings, zero verified closures. Both GitHub workflows remain disabled. Remaining work includes general unit normalization/identity, null-unit label differences, full format families/cursors, Number precision and external discovery.
