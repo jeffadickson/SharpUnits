@@ -5,6 +5,16 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current continuation (2026-10-27, work package 1)
+
+The [core reconciliation review](../conformance/work-package-one-review.md) and [verification manifest](../conformance/work-package-one-verification.json) complete the local finite-profile implementation of work package 1. JavaNumber, JavaUnit, JavaNumberQuantity and JavaDimensionAdapter provide exact numeric/structural behavior, including converter order, decimal128 promotion, signed roots, prefix identity and exact factory bridges. Native engineering/temperature policies remain independent. The review documents pinned Java affine-temperature and Number quirks and the intentional CLR rational-hash consistency difference.
+
+Final local results: 3,073 .NET tests; 1,734 matching core Java/.NET cases; 112 passing pinned Java TCK tests; 380 StrictDoc IDs in eight documents; 95.50% line / 86.68% branch managed-library coverage. The example was published as Native AOT and executed. Four FsCheck replays run 1,400 trials. Final focused Stryker: 18 killed and two equivalent survivors among 20 executable mutants. Initial broad survivors and the aborted VSTest rerun remain explicit qualification debt; do not quote an initial score as final-source evidence.
+
+All 66 core TCK occurrences, including 16 quantity occurrences, are source-audited and remain PARTIAL CLR mappings. Ledger: 14 GAP, 99 PARTIAL_BEHAVIORAL_MAPPING, zero IMPLEMENTED_UNVERIFIED, zero VERIFIED. GitHub .NET and Java workflows remain disabled_manually; no CI run was dispatched. Package 2: general graph text/parsing/formats. Package 3: provider/type/reflection adaptation. Package 4: broad mutation requalification, independent review and Windows/Ubuntu qualification. Do not enable CI without a new user instruction.
+
+Reproduce with tools/Invoke-CoreReference.ps1, tools/Invoke-CoreMutations.ps1, the full test/coverage command in the manifest, and the existing pinned Java/StrictDoc toolchains. Paths are relative to this checkout; reuse installed tools in ../tools-runtime and the user's .dotnet SDK before installing. Raw evidence stays outside Git with retained SHA-256 hashes. No formal assertion closure is authorized by this local implementation milestone.
+
 ## Current continuation (2026-10-27, Fahrenheit formatting)
 
 See [Fahrenheit formatting review](../conformance/affine-format-review.md). The Java unit-format adapter now renders the recognized native Fahrenheit definition with its pinned converter expression, with explicit label precedence. Ten additional executed Java observations and guarded converter regression/property tests cover this bounded mapping. General transformed-unit graphs and affine-expression parsing remain gaps; native temperature conventions are preserved. GitHub CI stays disabled; no formal TCK assertion is closed.

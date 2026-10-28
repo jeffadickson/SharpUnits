@@ -62,7 +62,17 @@ public sealed class JavaUnitSystem
 /// <param name="Symbol">Case-sensitive prefix symbol.</param>
 /// <param name="Base">Radix of the prefix factor: 10 for metric, 1024 for pinned binary prefixes.</param>
 /// <param name="Exponent">Power of the radix; no early floating-point evaluation is required.</param>
-public sealed record JavaPrefix(string Symbol,int Base,int Exponent);
+public sealed record JavaPrefix(string Symbol,int Base,int Exponent)
+{
+    private static readonly string[] binaryNames={"KIBI","MEBI","GIBI","TEBI","PEBI","EXBI","ZEBI","YOBI"};
+    /// <summary>Returns the pinned standard enum name, or the explicit symbol for a custom prefix.</summary>
+    public string GetName()=>Base==1024&&Exponent is >=1 and <=8&&Symbol==new[]{"Ki","Mi","Gi","Ti","Pi","Ei","Zi","Yi"}[Exponent-1]?binaryNames[Exponent-1]
+        :Base==10?SiPrefixCatalog.All.FirstOrDefault(prefix=>prefix.Symbol==Symbol&&prefix.Exponent==Exponent)?.GetName()??Symbol:Symbol;
+    /// <summary>Returns the integer radix rather than the powered factor.</summary>
+    public JavaNumber GetValue()=>JavaNumber.Integer(Base);
+    /// <summary>Gets the exact powered factor within the core integer-radix prefix budget.</summary>
+    public JavaNumber ExactValue=>JavaUnitConverterAdapter.ForPrefix(Base,Exponent).AffineCoefficients().Scale;
+}
 
 /// <summary>Built-in system discovery and immutable prefix catalogs.</summary>
 public sealed class JavaSystemOfUnitsService
@@ -142,6 +152,8 @@ public sealed class JavaTypedQuantityFactory
     internal JavaTypedQuantityFactory(string type,UnitDefinition? systemUnit){QuantityType=type;SystemUnit=systemUnit;}
     /// <summary>Creates a retained display quantity without converting it to the system unit.</summary>
     public JavaQuantityAdapter Create(double value,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)=>new(value,unit,scale);
+    /// <summary>Creates a precision-preserving quantity retaining a structural Java unit.</summary>
+    public JavaNumberQuantity Create(JavaNumber value,JavaUnit unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)=>new(value,unit,scale);
 }
 
 /// <summary>Discovers the built-in Java-inspired provider and its supported services.</summary>

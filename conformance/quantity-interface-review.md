@@ -23,6 +23,10 @@ inverse/scalar decimal evaluation, exact standard Fahrenheit coefficients, limit
 unit-identity normalization and direct scalar-division argument probes. Its local
 evidence does not advance formal VERIFIED status.
 
+## Exact-core continuation (2026-10-27)
+
+[Work package 1](work-package-one-review.md) adds JavaNumberQuantity, exact-number factories and compositional units. The historical matrix below remains the legacy double/SI adapter assessment; its numeric and structural limitations must not be attributed to the new exact core. The 16 exact upstream checks are retained in work-package-one-assertion-audit.json; CLR/Java type identity and formal closure gates remain open.
+
 ## Assertion matrix
 
 The xUnit identifiers below are in `QuantityParitySurfaceTests`. The tests now check

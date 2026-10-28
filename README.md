@@ -38,6 +38,8 @@ The [100-review grammar increment](conformance/parser-grammar-hundred-review.md)
 adds superscript/double-star powers, colon roots, integer unit factors and automatic
 SI prefixes. Java-specific default-exponent conventions and remaining limits are explicit.
 
+`JavaNumber`, `JavaUnit` and `JavaNumberQuantity` provide an exact-number and structural-unit core. Use `IExactJavaQuantityFactory` for original integer/decimal inputs; `JavaQuantityAdapter.ToExact()` promotes an existing display double. See the [core reconciliation and migration notes](conformance/work-package-one-review.md) and [runnable example](examples/ExactJavaCore.cs).
+
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.

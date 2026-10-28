@@ -15,8 +15,18 @@ public static class SiPrefixes
   ArgumentNullException.ThrowIfNull(prefix);
   ArgumentNullException.ThrowIfNull(unit);
   if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException("Unknown SI prefix",nameof(prefix));
+  return ApplyExact(prefix,exponent,unit);
+ }
+ // Preserve parser/core exact factors rather than multiplying their early-rounded
+ // double projections. The native offset-unit guard remains unchanged.
+ internal static UnitDefinition ApplyExact(string symbol,int exponent,UnitDefinition unit)
+ {
+  ArgumentNullException.ThrowIfNull(unit);
   if(unit.Converter.Offset!=0)throw new InvalidOperationException("Cannot prefix an affine unit.");
-  return new UnitDefinition(prefix+unit.Symbol,unit.RationalDimension,UnitConversion.Linear(unit.Converter.Scale*Math.Pow(10,exponent)));
+  var power=System.Numerics.BigInteger.Pow(10,Math.Abs(exponent));
+  var factor=exponent>=0?new Rational(power,1):new Rational(1,power);
+  var result=UnitDefinition.FromExactLinear(symbol+unit.Symbol,unit.RationalDimension,JavaDoubleArithmetic.ScaleOf(unit)*factor);
+  return unit.JavaModel is null?result:result with {JavaModel=unit.JavaModel.Transform(JavaUnitConverterAdapter.ForPrefix(10,exponent))};
  }
  /// <summary>Returns a decimal prefix's exponent.</summary>
  public static int Exponent(string prefix)=>Exponents.TryGetValue(prefix,out var exponent)?exponent:throw new ArgumentException("Unknown SI prefix",nameof(prefix));

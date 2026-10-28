@@ -52,6 +52,9 @@ public sealed record UnitDefinition
  // Non-null only when a parsed rational factor differs from its round-trip-decimal
  // double projection. Record equality then distinguishes units with different exact semantics.
  internal Rational? ExactLinearScale { get; init; }
+ // Opt-in Java graph metadata. Existing native definitions keep their original
+ // record equality and affine safety rules; imported graph identities are immutable.
+ internal JavaUnit? JavaModel { get; init; }
  internal static UnitDefinition FromExactLinear(string symbol,RationalDimension dimension,Rational scale)
  {
   var approximation=JavaDoubleArithmetic.ToDouble(scale);

@@ -1,0 +1,52 @@
+[DOCUMENT]
+TITLE: Core Java behavioral reconciliation
+
+[REQUIREMENT]
+UID: JP-WP1-NUMBER
+STATUS: Active
+TITLE: Finite Java numeric families and promotion
+STATEMENT: The compatibility core shall retain finite integer, rational, decimal and binary64 representations; implement pinned numeric promotion and decimal128 rounding; distinguish representation equality from numeric comparison; and reject unsupported numeric inputs and resource exhaustion.
+COMMENT: Implementation: JavaNumber. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. Evidence: conformance/work-package-one-cases.json. Mixed Decimal/BigInteger addition reproduces the pinned signed-long narrowing quirk; AddExact is the mathematical rational alternative. CLR integer widths are not Java runtime number classes. Rational equality follows the pinned decimal128 projection; CLR hashes remain consistent with equality instead of copying Java's conflicting exact-rational hash.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-016
+
+[REQUIREMENT]
+UID: JP-WP1-CONVERTER
+STATUS: Active
+TITLE: Ordered exact converter composition
+STATEMENT: The Java converter adapter shall apply the argument of Concatenate before the receiver, preserve exact affine operations, normalize adjacent reducible operations, expose immutable conversion steps, support inverse/equality, and provide bounded logarithmic/exponential conversion.
+COMMENT: Implementation: JavaUnitConverterAdapter. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. Native ConversionPipeline.Then retains its documented opposite order. Binary projections, nonlinear domain restrictions and Java class/hash identity differences remain explicit.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-010
+
+[REQUIREMENT]
+UID: JP-WP1-UNIT
+STATUS: Active
+TITLE: Compositional Java unit identity
+STATEMENT: The compatibility core shall represent base, alternate, transformed and normalized product units; preserve exact factors and converter order; distinguish structural equality from converter equivalence; and support signed powers and roots without requiring premature converter evaluation.
+COMMENT: Implementation: JavaUnit and JavaUnitAdapter. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. All 44 pinned catalog parent graphs are represented. General text rendering/parsing belongs to work package 2. Structural Java products with unsupported system converters remain representable; accessing those converters reports the limitation rather than fabricating an SI value.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-023
+
+[REQUIREMENT]
+UID: JP-WP1-QUANTITY
+STATUS: Active
+TITLE: Precision-preserving Java quantity core
+STATEMENT: Exact factory APIs shall retain numeric family, compositional unit and absolute/relative scale through conversion, arithmetic, comparison, inverse and dimension-based type checking, following measured pinned Java behavior.
+COMMENT: Implementation: JavaNumberQuantity, QuantityFactory, JavaTypedQuantityFactory and JavaQuantityAdapter.ToExact. Existing double/SI and native semantic temperature APIs remain compatible. Promotion from an already-rounded display double cannot recover original precision. Java Class/generic identity and external discovery belong to work package 3.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-017
+
+[REQUIREMENT]
+UID: JP-WP1-DIMENSION
+STATUS: Active
+TITLE: Java dimension facade
+STATEMENT: The dimension facade shall provide exact equality/hash consistency, multiplication/division, signed powers and nonzero signed roots, and nullable fundamental-dimension decomposition matching the pinned Java map contract.
+COMMENT: Implementation: JavaDimensionAdapter. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. Value retains rational root denominators; the Java integer-map projection reports numerator exponents. Native RationalDimension.Root retains its positive-degree contract.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-001

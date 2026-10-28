@@ -8,7 +8,7 @@ Pinned upstream TCK: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde9
 
 The inventory contains **113 annotation occurrences** in 16 Java classes. Two setup annotations both have upstream ID `Setup` and are internally distinguished as `Setup-1` and `Setup-2`. These are not 113 independently verified .NET assertions.
 
-The closure ledger currently records 14 GAP, 49 PARTIAL_BEHAVIORAL_MAPPING, and 50 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
+The closure ledger currently records 14 GAP, 99 PARTIAL_BEHAVIORAL_MAPPING, and 0 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
 
 The pinned Java TCK run has succeeded (112 Surefire tests); the separate cross-language fixture runner has succeeded. Neither establishes full SharpUnits conformance: normalized differential fixtures are not a one-to-one substitute for the official assertion corpus.
 
@@ -41,3 +41,5 @@ Latest formatting evidence: [100-scenario formatting review](format-hundred-revi
 Latest service/catalog evidence: [100 scoped implementation items](service-gap-hundred-review.md) and [26 assertion dispositions](service-assertion-review.md). No formal closure is claimed.
 
 Latest unit-format evidence: [mutable labels/appendable/ASCII review](unitformat-gap-hundred-review.md). CI remains disabled; there are zero formal closures.
+
+Work package 1 core implementation and assertion reconciliation: [current review](work-package-one-review.md). The legacy quantity table describes the double projection; the new exact core resolves its arbitrary-number and structural-unit limitations within the documented profile. Packages 2–4 retain general text, discovery/type adaptation and independent/platform qualification work.

@@ -6,7 +6,7 @@ public interface IQuantityFactory
  Quantity Create(double value,string unitSymbol);
 }
 /// <summary>Default registry-backed quantity factory.</summary>
-public sealed class QuantityFactory : IQuantityFactory, IJavaQuantityFactory
+public sealed class QuantityFactory : IQuantityFactory, IJavaQuantityFactory, IExactJavaQuantityFactory
 {
  private readonly UnitRegistry registry;
  /// <summary>Creates a factory using an explicit registry.</summary>
@@ -16,6 +16,16 @@ public sealed class QuantityFactory : IQuantityFactory, IJavaQuantityFactory
  /// <inheritdoc/>
  public JavaQuantityAdapter CreateJavaQuantity(double value,string unitSymbol,JavaQuantityScale scale=JavaQuantityScale.Absolute)
   =>new(value,registry.Resolve(unitSymbol),scale);
+ /// <inheritdoc/>
+ public JavaNumberQuantity CreateExactJavaQuantity(JavaNumber value,string unitSymbol,JavaQuantityScale scale=JavaQuantityScale.Absolute)
+  =>new(value,JavaUnit.FromDefinition(registry.Resolve(unitSymbol)),scale);
+}
+
+/// <summary>Additive factory contract for quantities retaining arbitrary finite numeric precision.</summary>
+public interface IExactJavaQuantityFactory
+{
+ /// <summary>Creates an exact-number quantity from a registered unit without forcing coherent double storage.</summary>
+ JavaNumberQuantity CreateExactJavaQuantity(JavaNumber value,string unitSymbol,JavaQuantityScale scale=JavaQuantityScale.Absolute);
 }
 
 /// <summary>Creates adapter quantities retaining a display magnitude, unit and scale.</summary>

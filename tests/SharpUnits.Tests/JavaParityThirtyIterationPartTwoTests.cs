@@ -18,7 +18,7 @@ public sealed class JavaParityThirtyIterationPartTwoTests
  {
   var a=new JavaUnitConverterAdapter(new UnitConversion(2,3));
   var b=new JavaUnitConverterAdapter(new UnitConversion(5,7));
-  Assert.Equal(22,a.Concatenate(b).Convert(0),10);
+  Assert.Equal(17,a.Concatenate(b).Convert(0),10);
  }
  [Fact] public void ConversionStepsRetained()
  {

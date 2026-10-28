@@ -7,12 +7,12 @@ namespace SharpUnits;
 internal static class JavaNumberText
 {
     // @relation(JP-015-JAVA-DOUBLE, scope=file)
-    internal static string Format(double value)
+    internal static string Format(double value,bool narrowInteger=true)
     {
         if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));
         if(value==0)return "0";
         const double longUpper=9223372036854775808d;
-        if(value==Math.Truncate(value)&&value>=long.MinValue&&value<=longUpper)
+        if(narrowInteger&&value==Math.Truncate(value)&&value>=long.MinValue&&value<=longUpper)
         {
             // DefaultNumberSystem narrows through Java's saturating double-to-long cast.
             var integer=value>=longUpper?long.MaxValue:(long)value;

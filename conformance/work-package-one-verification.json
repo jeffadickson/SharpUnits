@@ -1,0 +1,232 @@
+{
+  "workPackage": 1,
+  "result": "LOCAL_PROFILE_IMPLEMENTED_AND_TESTED",
+  "recordedUtc": "2026-10-28T03:26:56.5419277Z",
+  "baselineCommit": "41eb77bf990f0c0e1806aeb25d213d558e02dc89",
+  "testedSource": "Working tree source bytes identified by sourceSha256; committed together with this evidence",
+  "tools": {
+    "coverlet": "6.0.4",
+    "maven": "3.9.9",
+    "strictdoc": "0.30.4",
+    "stryker": "5.0.0",
+    "fscheck": "3.2.0",
+    "java": "OpenJDK 17.0.20.1",
+    "dotnet": "10.0.402",
+    "strykerBuildSdk": "10.0.403 (installed PATH dotnet; primary tests/runner/native example use explicit 10.0.402)",
+    "python": "3.13.2 (existing required Java TCK/comparator/StrictDoc tooling)"
+  },
+  "dotnetTests": {
+    "total": 3073,
+    "executed": 3073,
+    "passed": 3073,
+    "failed": 0,
+    "error": 0,
+    "timeout": 0,
+    "aborted": 0,
+    "inconclusive": 0,
+    "passedButRunAborted": 0,
+    "notRunnable": 0,
+    "notExecuted": 0,
+    "disconnected": 0,
+    "warning": 0,
+    "completed": 0,
+    "inProgress": 0,
+    "pending": 0
+  },
+  "javaTck": {
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0,
+    "passed": 112,
+    "artifactSha256": {
+      "indriya-2.2.5-SNAPSHOT.jar": "9E20E612AC5D2FA677D8A0FFB91E9ADEA3A0DF6682D7857F5880B8EFF79CD5A0",
+      "unit-api-2.2.jar": "667487E1EE57298CDC767885F00B86C899B2FE7E72DC00B6560A6AA64F2BC9C4"
+    },
+    "pins": {
+      "tck": {
+        "repository": "unitsofmeasurement/unit-tck",
+        "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+      },
+      "indriya": {
+        "repository": "unitsofmeasurement/indriya",
+        "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+      },
+      "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+    }
+  },
+  "differential": {
+    "comparison": "Exact normalized families/fractions/graphs except 40 explicitly tolerated transcendental/binary projections; see fixture tolerances",
+    "mismatches": 0,
+    "knownDifferences": 1,
+    "byDomain": [
+      {
+        "Name": "binaryPrefix",
+        "Count": 8
+      },
+      {
+        "Name": "converter",
+        "Count": 215
+      },
+      {
+        "Name": "dimension",
+        "Count": 73
+      },
+      {
+        "Name": "number",
+        "Count": 793
+      },
+      {
+        "Name": "prefix",
+        "Count": 24
+      },
+      {
+        "Name": "quantity",
+        "Count": 205
+      },
+      {
+        "Name": "unit",
+        "Count": 416
+      }
+    ],
+    "cases": 1734
+  },
+  "coverage": {
+    "linesCovered": 2081,
+    "linesValid": 2179,
+    "branchesCovered": 1985,
+    "branchesValid": 2290
+  },
+  "properties": {
+    "limitations": "Bounded generated trials; no exhaustive proof or separate native fuzz-engine campaign",
+    "replays": [
+      "385,701",
+      "385,703",
+      "385,705",
+      "385,707"
+    ],
+    "trials": [
+      300,
+      300,
+      500,
+      300
+    ],
+    "framework": "FsCheck",
+    "minimizedCounterexamples": "None observed in the final run"
+  },
+  "mutations": {
+    "uncovered": 0,
+    "toolScorePercent": 90,
+    "scope": "Primitive double rational construction and prefix factory/PowerStep",
+    "equivalentSurvivors": 2,
+    "timeouts": 0,
+    "killed": 18,
+    "broadCampaign": "Initial historical results and an aborted broader rerun retained separately; no final broad score claimed",
+    "finalExecutable": 20
+  },
+  "nativeExample": {
+    "output": [
+      "9007199254740994",
+      "2/3",
+      "13",
+      "16",
+      "30",
+      "303.15"
+    ],
+    "result": "PASS",
+    "mode": "Native AOT publish and executable execution"
+  },
+  "strictdoc": {
+    "requirements": 380,
+    "documents": 8,
+    "result": "PASS"
+  },
+  "tckAccounting": {
+    "auditedCoreOccurrences": 66,
+    "implementedUnverified": 0,
+    "partial": 99,
+    "verified": 0,
+    "quantityOccurrences": 16,
+    "gaps": 14
+  },
+  "ci": {
+    "java": "disabled_manually",
+    "remoteRunsDispatched": 0,
+    "observed": "gh workflow list --all --json name,state,id",
+    "dotnet": "disabled_manually"
+  },
+  "commands": [
+    "dotnet test tests/SharpUnits.Tests -c Release --no-restore --collect:\"XPlat Code Coverage\" --results-directory ../wp1-final-coverage --logger \"trx;LogFileName=wp1-final.trx\"",
+    "./tools/Invoke-CoreReference.ps1 -OutputDirectory ../wp1-final-reference",
+    "python tools/run_pinned_tck.py -o (pinned JAVA_HOME and Maven bin on PATH)",
+    "python tools/test_compare_java_dotnet.py",
+    "./tools/Export-Requirements.ps1 -StrictDocCommand ../tools-runtime/strictdoc/bin/strictdoc.exe -OutputDirectory ../wp1-strictdoc-final (PYTHONPATH points to installed StrictDoc)",
+    "./tools/Invoke-CoreMutations.ps1 -OutputDirectory ../wp1-stryker-qualified",
+    "dotnet publish examples/ExactJavaCore.cs -c Release -o ../wp1-example-native; execute ExactJavaCore.exe"
+  ],
+  "limitations": [
+    "Windows local evidence only; no new Ubuntu execution or GitHub CI pass.",
+    "No independent human review; no formally verified TCK closures.",
+    "Java binary interfaces/runtime Number classes and hash values are CLR adaptations.",
+    "General graph formatting/parsing and external provider discovery remain packages 2/3.",
+    "Coverage is managed-library scope; Java, helper tools, native code and runner code unmeasured.",
+    "The implementation retains declared finite numeric/graph budgets; nonlinear results use explicit tolerances.",
+    "Existing CS1591 documentation warnings and xUnit1026 unused theory-ID warnings remain; no warning-free clean build is claimed."
+  ],
+  "sourceSha256": {
+    "conformance/java-reference/src/main/java/org/sharpunits/CoreReferenceRunner.java": "3A32A5A77053DA55288F5090EA5563FBA08726F67753B8CCEFC3D9C9F92855C5",
+    "conformance/work-package-one-cases.json": "EF6088F88875F6FE35E31E15B4803C6955DD9783B29350A37DAC863ABA2F46D2",
+    "conformance/work-package-one-known-limits.json": "89302A681BBBCF1839A59CBAA1A72806109FE9DAD1B140435522D5E75F406F3F",
+    "examples/ExactJavaCore.cs": "2B794B084E272AE61B13BE45A26732DF60CFD086730A2E1A9E602CB6D50C02B4",
+    "requirements/capabilities.sdoc": "21531830BFEE80047E9522B8E54F026B878485C646ECEBC7D9A8E2CC8D1D5E3F",
+    "requirements/core-java.sdoc": "494B0F50B3D6D278BCEFB7D06D26C3403075F6C45FD1D1EC1E8C6D7D4D1E91A8",
+    "requirements/tck-assertions.sdoc": "8DEDA6778583271DF3448F71CB11E102488DA9F51F450841378C58D13BDD4CA2",
+    "src/SharpUnits.ConformanceRunner/CoreFixtures.cs": "64639C4F316186E9C1C8A0F02E2322D55827AC98CF4FA6F5928F08829CAA665A",
+    "src/SharpUnits.ConformanceRunner/Program.cs": "794398CDA7C25AC383A112D0D9E52054388551CDF090E54ED2EBF40EC49905CF",
+    "src/SharpUnits/JavaDimensionAdapter.cs": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+    "src/SharpUnits/JavaNumber.cs": "2B55CDB691C2F1A0E18755DC70BE34BBEEA80B425D73A6D8DEA4502779CA4CE5",
+    "src/SharpUnits/JavaNumberQuantity.cs": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+    "src/SharpUnits/JavaNumberText.cs": "CF7855CEC3960DFCCECC9D724887FDC6D33C2A2349B0BEB35413841F1670548D",
+    "src/SharpUnits/JavaQuantityAdapter.cs": "65DFA644082B38BA1B298ADE5BDEB46B2195D5AC2C7F73369389C8E8DE6FF8D1",
+    "src/SharpUnits/JavaServices.cs": "9D0A551EFA211FA3D3F1AFAA0DD7E4E4A92F7AA05A19D5202C051E575D617079",
+    "src/SharpUnits/JavaUnit.cs": "8925A88D95FC3E75935D37A413D9B7A6E5229F9058FE2B54EA3419327517E232",
+    "src/SharpUnits/JavaUnitAdapter.cs": "44808A1BD19E80379DD348D3F64042A38ACA4A90AE11D462C231399587C59459",
+    "src/SharpUnits/JavaUnitConverterAdapter.cs": "190A00AE844A974AC28495980D98AE3E690F7BC4822FA2AF4B01C42E468CFE47",
+    "src/SharpUnits/QuantityFactory.cs": "337FB884CBFCB3157E85B734BAF9810D89999466C0F71CE6C5AF0DDB0F667F3F",
+    "src/SharpUnits/SiPrefix.cs": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+    "src/SharpUnits/SiPrefixes.cs": "92EC53E232A3CE25C9DE8724F72206F6779CC75CC8A551432B635ACE1584843E",
+    "src/SharpUnits/UnitConversion.cs": "272067384DB8DA0D605AA037C86139702E0D233BB97C91E16E79AEC7501DE1DB",
+    "tests/SharpUnits.Tests/CoreReferenceFixtureTests.cs": "744FA964F146BE849E91AA64BE74D7C51F924A467D9A4149948553A2272ABEAF",
+    "tests/SharpUnits.Tests/CoreRobustnessTests.cs": "76EC1B4B57B783A3B8F11FE705B68B5B29EE30BEC89C1352D558516BC23EBEB0",
+    "tests/SharpUnits.Tests/JavaParityThirtyIterationPartThreeTests.cs": "E87731F26CA80609DB0264275E2471A4E089F517EEB1E987EF8E8E341180818F",
+    "tests/SharpUnits.Tests/JavaParityThirtyIterationPartTwoTests.cs": "BC2CEF1A09787F10D66DA8FEE0478676C579D9D09B864DE82D0EEF40AC08F7BF",
+    "tests/SharpUnits.Tests/SharpUnits.Tests.csproj": "6F46A486A76816FDEB06D436BA3045FE92B0135D5B329F7C03A4EE275AB9756C",
+    "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs": "2B874ACF767D202DC99F532C75CF5301C0F975CBC7288986089E475BECCDA497",
+    "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs": "3334C3BF9FB88AA2F8FDA795CD3331950026BC968AB9B5C313D830F83B020012",
+    "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs": "BFE59DF4ABC3E2ED2EBD937DAF5E8DB3E53690403392F7C5C54F56B34037744E",
+    "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs": "B71C77137A485D5A119A6C916132DFF98DE7C2301107922F76CB806089B282DA",
+    "tools/CoreMutationReview.cs": "C9760D8FA3447F2F07A0AF6F1F97827A6E88B76D2D4E32BEED3148A7A9ADD5F0",
+    "tools/CoreReview.cs": "C587FB187A515CB1AFA501ACA371B84735B15602C7C8A6234639F073674F2935",
+    "tools/Invoke-CoreMutations.ps1": "906B580242F33F91CAED3F1415EDD178A10037D4B3A8B87998FCDB4DA1C285AA",
+    "tools/Invoke-CoreReference.ps1": "7FD2E81355F1356EDE25C8634243B45E8CFDBC4E87321B90C634F400320D18E2",
+    "tools/Measure-ParserCoverage.ps1": "DA31CEE0B3CB6A9ACE07CCB8645BDF1A28A4FF14F20BB6D0B7223744897C1002",
+    "tools/stryker-core.json": "A8473F1B4C90C1FF51E2E10FF3CF43AEE068ACEE55C3996E7BD77A3B1CE7D398"
+  },
+  "rawEvidenceSha256": {
+    "../wp1-baseline.log": "0B83E60BB2F0381E733AAF4AC172971576B490E4780DFF37CDC5458720AB0C1D",
+    "../wp1-final-tests.log": "61864325126EA17AF992B5B289B816162759788CEB53ECB042ACAFA4C1690335",
+    "../wp1-final-reference.log": "8FB6DB58DC48E0C79D58118F7F8C949F77E89058A49293DF18F14D5FD94BFA5D",
+    "../wp1-final-tck.log": "69CC06C35FC963F3F6C478D624BD039E7D5DA10E447C1CBABDEF68649D0150C8",
+    "../wp1-comparator.log": "1AA3E9CD3345C3C4F9981A208E62A5E63976979E081F8A91B4DE777FD886174D",
+    "../wp1-strictdoc-final.log": "C7A119249A3D6D4DEF48D20ADE314453013BDCF7929C54B50B5B624B327F194A",
+    "../wp1-stryker-first.log": "AB59FD7A28E93AAFFCE6CD0990EABEACEEF184691CA58FB4C1E7780C96CF5BE1",
+    "../wp1-stryker-reviewed.log": "A3A6EADEBA597F09818EFAC9359844EEFB622F0C0595D8CDF52871156AFA5852",
+    "../wp1-stryker-qualified.log": "DFE34E5D17561F9BFEDF8FFF036F5DD3C228FB65BC0D011F233A25E648CF9B1D",
+    "../wp1-final-native.log": "EB6C8DAEF6FCC9159EA48D27388134A2672EBB925D6001F52E9F2DC6E34E40B1",
+    "../wp1-final-example.log": "D7E5A9D920D26410F9DB81235AB325A1926B51B1DA3B976D2D0399B80A960678",
+    "../wp1-final-reference/java.jsonl": "8CAAA88192DF0E893864872385B09E5D6F418458459DC7091F85CF104002E5FF",
+    "../wp1-final-reference/dotnet.jsonl": "8874B3FE565188B2E34CB27C10775D373BA37C4D20DD1889C0A77E2D9B153132",
+    "../wp1-final-known-java.jsonl": "2DFC6963A289B8F511D54DCF813E59016D7F767AFB4A43FB64C418BC13DE033C",
+    "../wp1-final-known-dotnet.jsonl": "3C59AEE61DB254411F08FE2AB261FF44E2F8CC8B14B1CED1B9FE9683C4A85E9B",
+    "../wp1-final-coverage/wp1-final.trx": "34D8379ACE43C049E6B1041155460D9DE3D9BCABAF9FF1A33ACE9733BAFD736A"
+  }
+}

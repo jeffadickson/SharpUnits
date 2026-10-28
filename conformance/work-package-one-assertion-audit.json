@@ -1,0 +1,861 @@
+{
+  "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+  "occurrences": [
+    {
+      "id": "425-A1",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testEquals",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, boolean.class, \u0022equals\u0022, Object.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A1_EqualsIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A2",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testHashcode",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, int.class, \u0022hashCode\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A2_HashCodeIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A3",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testMultiply",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Dimension.class, \u0022multiply\u0022, Dimension.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A3_MultiplyOperatorIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A4",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testDivide",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Dimension.class, \u0022divide\u0022, Dimension.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A4_DivideOperatorIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A5",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testRoot",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Dimension.class, \u0022root\u0022, int.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A5_RootIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A6",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testPow",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Dimension.class, \u0022pow\u0022, int.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A6_PowIsPublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "425-A7",
+      "suite": "UnitDimensionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+      "sourceSha256": "78F25D6E8C0BB6E51CBBF1628AA82EAFB2BF8DC59B9E90A08079923EA40DBD76",
+      "sourceMethod": "UnitDimensionTest.testGetBaseDimensions",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Map.class, \u0022getBaseDimensions\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckDimensionApiSurfaceTests.Tck425A7_BaseDimensionsArePublic",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A1",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testEnsureGotConverters",
+      "upstreamChecks": [],
+      "assertionNature": "CONFIGURATION_AVAILABILITY",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A1_ProviderAvailable",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A2",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterEquals",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, true, boolean.class,\u0022equals\u0022, Object.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A2_EqualityMethod",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A3",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterHashcode",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, true, int.class,\u0022hashCode\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A3_HashCodeMethod",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A4",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterInvert",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, \u0022inverse\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A4_InverseMethod",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A5",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterIsIdentity",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, \u0022isIdentity\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A5_IdentityProperty",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A6",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterIsLinear",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, \u0022isLinear\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A6_LinearProperty",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A7",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterConvert",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Number.class, \u0022convert\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A7_NumericOverload",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A8",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterConvertWithDouble",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, double.class, \u0022convert\u0022, double.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A8_DoubleOverload",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A9",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterConcatenate",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, UnitConverter.class, \u0022concatenate\u0022, UnitConverter.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A9_Concatenation",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "423-A10",
+      "suite": "UnitConversionTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+      "sourceSha256": "400C0733C788D0033ED341C89E976A754C01377EE6259FAA090FA5349DE5A792",
+      "sourceMethod": "UnitConversionTest.testUnitConverterGetConversionSteps",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, List.class, \u0022getConversionSteps\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckConverterApiSurfaceTests.Tck423A10_ConversionSteps",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A1",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testEquals",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, boolean.class, \u0022equals\u0022, Object.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A1_Equals",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A2",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testHashcode",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, true, int.class,\u0022hashCode\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A2_HashCode",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A3",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testGetName",
+      "upstreamChecks": [
+        "testHasPublicMethod(\u0022Section \u0022 \u002B SECTION, type, \u0022getName\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A3_Name",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A4",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testGetSymbol",
+      "upstreamChecks": [
+        "testHasPublicMethod(\u0022Section \u0022 \u002B SECTION, type, \u0022getSymbol\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A4_Symbol",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A5",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testGetValue",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, Number.class, \u0022getValue\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A5_Value",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "424-A6",
+      "suite": "PrefixInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+      "sourceSha256": "E456CD98530794FE0507E189DD6EF43F41A607DE9684D6CE88D9AABF9015CBED",
+      "sourceMethod": "PrefixInterfaceTest.testGetXponent",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION, type, int.class, \u0022getExponent\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckPrefixApiSurfaceTests.Tck424A6_Exponent",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A1",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testEquals",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, true, boolean.class,\u0022equals\u0022, Object.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A1_Equals",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A2",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testGetDimension",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022getDimension\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A2_Dimension",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A3",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testGetSystemUnit",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022getSystemUnit\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A3_SystemUnit",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A4",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testGetBaseUnits",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022getBaseUnits\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A4_BaseUnits",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A5",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testGetName",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022getName\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A5_Name",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A6",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testGetSymbol",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022getSymbol\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A6_Symbol",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A7",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testHashcode",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, int.class, \u0022hashCode\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A7_HashCode",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A8",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testIsEquivalentTo",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, \u0022isEquivalentTo\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A8_Equivalent",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "421-A9",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testToString",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM1, type, false, String.class, \u0022toString\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck421A9_ToString",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A1",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A1_Alternate",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, \u0022alternate\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A1_Alternate",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A2",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A2_Divide",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022divide\u0022, Unit.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A2_DivideUnit",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A3",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A3_DivideByDouble",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022divide\u0022, double.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A3_DivideDouble",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A4",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A4_DivideByNumber",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022divide\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A4_DivideNumber",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A5",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A5_Multiply",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022multiply\u0022, Unit.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A5_MultiplyUnit",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A6",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A6_MultiplyByDouble",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022multiply\u0022, double.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A6_MultiplyDouble",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A7",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A7_MultiplyByNumber",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022multiply\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A7_MultiplyNumber",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A8",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A8_Prefix",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, false, Unit.class, \u0022prefix\u0022, Prefix.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A8_Prefix",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A9",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A9_ShiftByDouble",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022shift\u0022, double.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A9_ShiftDouble",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42121-A10",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42121A10_ShiftByNumber",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.1\u0022, type, Unit.class, \u0022shift\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42121A10_ShiftNumber",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42122-A1",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42122Pow",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.2\u0022, type, \u0022pow\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42122A1_Pow",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42122-A2",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42122Root",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.2\u0022, type, \u0022root\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42122A2_Root",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42122-A3",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42122Transform",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.2\u0022, type, \u0022transform\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42122A3_Transform",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42123-A1",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit42123Inverse",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.3\u0022, type, \u0022inverse\u0022, false);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42123A1_Inverse",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42124-A1",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit4221IsCompatible",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.4\u0022, type, \u0022isCompatible\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42124A1_Compatible",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42124-A2",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit4222AsType",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.4\u0022, type, \u0022asType\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42124A2_AsType",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42124-A3",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit4223GetConverterTo",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.4\u0022, type, \u0022getConverterTo\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42124A3_ConverterTo",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "42124-A4",
+      "suite": "UnitInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+      "sourceSha256": "CF1499B9A15FE3DC955FE07648674C4F056634B50E9657792D490B3CB0BC6405",
+      "sourceMethod": "UnitInterfaceTest.testUnit4224GetConverterToAny",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.2.1.2.4\u0022, type, \u0022getConverterToAny\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "TckUnitExactSurfaceTests.Tck42124A4_ConverterToAny",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A1",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityCastAsType",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, false, Quantity.class, \u0022asType\u0022, Class.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I01_431A1_AsType",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A2",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityEquals",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, true, boolean.class,\u0022equals\u0022, Object.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I02_431A2_Equals",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A3",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityGetScale",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, \u0022getScale\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I03_431A3_GetScale",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A4",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityGetUnit",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, \u0022getUnit\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I04_431A4_GetUnit",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A5",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityGetValue",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, \u0022getValue\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I05_431A5_GetValue",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A6",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityHashCode",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, int.class, \u0022hashCode\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I06_431A6_HashCode",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A7",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityIsEquivalentTo",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, \u0022isEquivalentTo\u0022, true);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I07_431A7_Equivalent",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A8",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp0Inverse",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, \u0022inverse\u0022);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I08_431A8_Inverse",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4311-A1",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp1Add",
+      "upstreamChecks": [
+        "testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.1\u0022, type, Quantity.class, \u0022add\u0022, Quantity.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I09_4311A1_Add",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4311-A4",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp1MultiplyByNumber",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.1\u0022, type, Quantity.class, \u0022multiply\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4311-A5",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp1DivideByNumber",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.1\u0022, type, Quantity.class, \u0022divide\u0022, Number.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I11_4311A5_DivideNumber",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4311-A6",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp1Subtract",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.1\u0022, type, Quantity.class, \u0022subtract\u0022, Quantity.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I12_4311A6_Subtract",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4312-A1",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp2Divide",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.2\u0022, type, Quantity.class, \u0022divide\u0022, Quantity.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I13_4312A1_DivideQuantity",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "4312-A2",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp2Multiply",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B \u00224.3.1.2\u0022, type, Quantity.class, \u0022multiply\u0022, Quantity.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A9",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityOp0To",
+      "upstreamChecks": [
+        "TestUtils.testHasPublicMethod(SECTION_PREFIX \u002B SECTION_NUM, type, Quantity.class, \u0022to\u0022, Unit.class);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I15_431A9_To",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    },
+    {
+      "id": "431-A10",
+      "suite": "QuantityInterfaceTest",
+      "source": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+      "sourceSha256": "8868670263FFB9BE2392CF1DB89D124CA12152851846AB10D1935CA828D8BDF6",
+      "sourceMethod": "QuantityInterfaceTest.testQuantityIsComparable",
+      "upstreamChecks": [
+        "TestUtils.testComparable(SECTION_PREFIX \u002B SECTION_NUM, type);"
+      ],
+      "assertionNature": "STRUCTURAL_API_CHECK",
+      "dotnetTest": "QuantityParitySurfaceTests.I16_431A10_Comparable",
+      "formalStatus": "PARTIAL_BEHAVIORAL_MAPPING"
+    }
+  ]
+}

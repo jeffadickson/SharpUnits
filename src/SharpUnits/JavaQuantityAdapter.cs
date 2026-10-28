@@ -34,6 +34,11 @@ public sealed class JavaQuantityAdapter : IEquatable<JavaQuantityAdapter>, IComp
  /// <remarks>Scaling and offsets may round or underflow independently of the retained display magnitude.
  /// This property does not retain Java arbitrary Number precision.</remarks>
  public Quantity SiQuantity=>value;
+ /// <summary>Promotes the retained display double to the exact-number and structural-unit core.</summary>
+ /// <remarks>Precision already lost before construction cannot be recovered. Use the exact factory for original decimal/integer inputs.</remarks>
+ public JavaNumberQuantity ToExact()=>new(JavaNumber.FromDouble(Value),JavaUnit.FromDefinition(unit),Scale);
+ /// <summary>Returns Java's structural inverse, including affine inverse units whose converter may be unsupported.</summary>
+ public JavaNumberQuantity InverseExact()=>ToExact().Inverse();
  /// <summary>Creates a quantity with the specified display unit.</summary>
  public JavaQuantityAdapter(double magnitude,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)
  {

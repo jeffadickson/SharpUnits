@@ -12,12 +12,12 @@ public sealed class TckUnitExactSurfaceTests
  private static void Property(string name)=>Assert.NotNull(T.GetProperty(name,BindingFlags.Public|BindingFlags.Instance));
  [Fact] public void Tck421A1_Equals()=>Method("Equals",typeof(object));
  [Fact] public void Tck421A2_Dimension()=>Property("Dimension");
- [Fact] public void Tck421A3_SystemUnit()=>Property("SystemUnit");
- [Fact] public void Tck421A4_BaseUnits()=>Property("BaseUnits");
+ [Fact] public void Tck421A3_SystemUnit(){Property("SystemUnit");Property("CoherentUnit");}
+ [Fact] public void Tck421A4_BaseUnits(){Property("BaseUnits");Method("GetBaseUnits");}
  [Fact] public void Tck421A5_Name()=>Property("Name");
  [Fact] public void Tck421A6_Symbol()=>Property("Symbol");
  [Fact] public void Tck421A7_HashCode()=>Method("GetHashCode");
- [Fact] public void Tck421A8_Equivalent()=>Method("IsCompatible",T);
+ [Fact] public void Tck421A8_Equivalent()=>Method("IsEquivalentTo",T);
  [Fact] public void Tck421A9_ToString()=>Method("ToString");
  [Fact] public void Tck42121A1_Alternate()=>Method("Alternate",typeof(string));
  [Fact] public void Tck42121A2_DivideUnit()=>Method("Divide",T);
