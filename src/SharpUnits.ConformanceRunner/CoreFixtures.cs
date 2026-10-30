@@ -39,6 +39,7 @@ internal static partial class CoreFixtures
     internal static JavaNumber Number(JsonElement node)=>Stage("input",()=>S(node,"kind") switch
     {
         "integer"=>JavaNumber.Integer(BigInteger.Parse(S(node,"value"),CultureInfo.InvariantCulture)),
+        "long"=>JavaNumber.FromNumeric(long.Parse(S(node,"value"),CultureInfo.InvariantCulture)),
         "decimal"=>JavaNumber.Decimal(S(node,"value")),
         "double"=>JavaNumber.FromDouble(double.Parse(S(node,"value"),CultureInfo.InvariantCulture)),
         "rational"=>JavaNumber.Ratio(BigInteger.Parse(S(node,"numerator"),CultureInfo.InvariantCulture),BigInteger.Parse(S(node,"denominator"),CultureInfo.InvariantCulture)),
@@ -143,6 +144,7 @@ internal static partial class CoreFixtures
                 "equal"=>a.Equals(Unit(P(test,"right"))),"equivalent"=>a.IsEquivalentTo(Unit(P(test,"right"))),
                 "hashEqual"=>a.GetHashCode()==Unit(P(test,"right")).GetHashCode(),
                 "convert"=>ObserveNumber(a.GetConverterToAny(Unit(P(test,"right"))).Convert(Number(P(test,"value")))),
+                "convertTyped"=>ObserveNumber(a.GetConverterTo(Unit(P(test,"right"))).Convert(Number(P(test,"value")))),
                 "system"=>ObserveNumber(a.GetConverterToAny(a.SystemUnit).Convert(Number(P(test,"value")))),
                 "systemEqual"=>a.SystemUnit.Equals(Unit(P(test,"right"))),"metadata"=>(a.Symbol??"null")+"|"+(a.Name??"null"),
                 "basecount"=>a.GetBaseUnits()?.Count??-1,"dimensionEqual"=>a.Dimension==Unit(P(test,"right")).Dimension,

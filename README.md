@@ -43,3 +43,5 @@ SI prefixes. Java-specific default-exponent conventions and remaining limits are
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
+
+Current verification and reviewed residuals: [mutation debt reduction](conformance/mutation-debt.md).

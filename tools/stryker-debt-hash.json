@@ -1,0 +1,19 @@
+{
+  "stryker-config": {
+    "project": "SharpUnits.csproj",
+    "test-projects": [
+      "tests/SharpUnits.Tests/SharpUnits.Tests.csproj"
+    ],
+    "mutate": [
+      "**/JavaUnitConverterAdapter.cs{10918..11044}",
+      "**/JavaNumber.cs{16226..16385}"
+    ],
+    "test-case-filter": "WorkPackage=1|FullyQualifiedName~Tck|FullyQualifiedName~JavaUnitAdapter|FullyQualifiedName~JavaParityThirty|FullyQualifiedName~ExactQuantitySurface",
+    "concurrency": 1,
+    "reporters": [
+      "json",
+      "cleartext"
+    ],
+    "disable-mix-mutants": true
+  }
+}

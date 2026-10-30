@@ -5,6 +5,10 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Mutation debt continuation (2026-10-30)
+
+See [mutation debt reduction](../conformance/mutation-debt.md) and its retained source/test/report manifests. New public boundary and metadata witnesses exposed and corrected signed-bit-length integer promotion and normalized negation provenance. Separate pinned Java cases distinguish typed conversion from getConverterToAny, and normalized chains from Calculator accumulators. The checked decimal-scale sum is now a production-used internal primitive with direct overflow/property tests. Converter hash quality has a separately labeled Draft engineering criterion; no exact hash values or universal performance claims are imposed. GitHub CI remains disabled and formal TCK closures remain zero. Historical audit/repair reports stay immutable; combined mutation outcomes are explicitly multi-phase, with equivalent/invariant reasoning and diagnostic variations separate from kills.
+
 ## Verification repair continuation (2026-10-29)
 
 See [verification repairs](../conformance/verification-repair.md) for current behavior, evidence and open gates. The historical audit below remains unchanged as a record of the defects it found. The repaired harness jointly observes quantity value/scale/unit/converter, retains raw Java numeric metadata, uses exact typed comparisons and requires revision-bound CI artifacts for VERIFIED ledger status. Default JavaNumber.Add/Subtract preserve large integer magnitude; named AddPinnedIndriya/SubtractPinnedIndriya opt into the measured Indriya narrowing bug. CI remains disabled; no formal assertion is promoted.

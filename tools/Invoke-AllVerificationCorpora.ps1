@@ -11,9 +11,9 @@ try {
  if(!(Test-Path -LiteralPath $OutputDirectory -PathType Container)){New-Item -ItemType Directory -Path $OutputDirectory|Out-Null}
  $classpath='conformance/java-reference/target/classes;'+(Get-Content -LiteralPath conformance/java-reference/classpath.txt -Raw).Trim()
  $results=@()
- foreach($path in @('conformance/cases.json','conformance/java-reference/cases.json','conformance/service-reference-cases.json','conformance/service-edge-cases.json','conformance/service-filter-cases.json','conformance/unitformat-reference-cases.json','conformance/unitformat-supplement-cases.json','conformance/unitformat-affine-cases.json','conformance/work-package-one-cases.json','conformance/verification-repair-cases.json')){
+ foreach($path in @('conformance/cases.json','conformance/java-reference/cases.json','conformance/service-reference-cases.json','conformance/service-edge-cases.json','conformance/service-filter-cases.json','conformance/unitformat-reference-cases.json','conformance/unitformat-supplement-cases.json','conformance/unitformat-affine-cases.json','conformance/work-package-one-cases.json','conformance/verification-repair-cases.json','conformance/mutation-debt-cases.json')){
   $name=([IO.Path]::GetFileNameWithoutExtension($path));if($path -eq 'conformance/cases.json'){$name='native-cases'}
-  $main=if($name -like 'service-*'){'ServiceReferenceRunner'}elseif($name -like 'unitformat-*'){'UnitFormatReferenceRunner'}elseif($name -like 'work-package-*' -or $name -eq 'verification-repair-cases'){'CoreReferenceRunner'}else{'ReferenceRunner'}
+  $main=if($name -like 'service-*'){'ServiceReferenceRunner'}elseif($name -like 'unitformat-*'){'UnitFormatReferenceRunner'}elseif($name -like 'work-package-*' -or $name -in @('verification-repair-cases','mutation-debt-cases')){'CoreReferenceRunner'}else{'ReferenceRunner'}
   $java=Join-Path $OutputDirectory ($name+'-java.jsonl');$clr=Join-Path $OutputDirectory ($name+'-clr.jsonl');$log=Join-Path $OutputDirectory ($name+'.log')
   & (Join-Path $JavaHome bin/java.exe) '-Dfile.encoding=UTF-8' -cp $classpath ('org.sharpunits.'+$main) $path > $java
   if($LASTEXITCODE){throw ('Java corpus execution failed: '+$path)}

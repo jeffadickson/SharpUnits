@@ -27,6 +27,10 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     // @relation(JP-WP1-NUMBER, scope=file)
     private const int Budget=16384;
     private readonly double binary;
+    // Integer is the public normalized family. Promotion additionally needs the
+    // Java input path: BigInteger.narrow uses signed bit length <63, whereas an
+    // integral Double can narrow directly to Long even at larger magnitudes.
+    private readonly bool integerDecimalContext;
     /// <summary>Exact value of the retained decimal/rational representation.</summary>
     public Rational Fraction { get; }
     /// <summary>Numeric family after integer narrowing.</summary>
@@ -38,11 +42,13 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     /// <summary>Canonical integer one.</summary>
     public static JavaNumber One { get; }=Integer(BigInteger.One);
 
-    private JavaNumber(Rational value,JavaNumberKind kind,int scale=0,double binary=0)
+    private JavaNumber(Rational value,JavaNumberKind kind,int scale=0,double binary=0,bool? integerDecimalContext=null)
     {
         Check(value);
         Fraction=value;Kind=value.Denominator.IsOne?JavaNumberKind.Integer:kind;
         DecimalScale=Kind==JavaNumberKind.Decimal?scale:0;this.binary=binary;
+        this.integerDecimalContext=Kind==JavaNumberKind.Integer&&(integerDecimalContext
+            ??(value.Numerator>=BigInteger.One<<62||value.Numerator<-(BigInteger.One<<62)));
     }
     /// <summary>Creates an exact arbitrary-size integer.</summary>
     public static JavaNumber Integer(BigInteger value)=>new(new Rational(value,1),JavaNumberKind.Integer);
@@ -84,7 +90,7 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
         {
             // Java's narrowing uses a saturating long cast at its double boundary.
             if(value>=long.MinValue&&value<=9223372036854775808d)
-                return Integer(value>=9223372036854775808d?long.MaxValue:(long)value);
+                return new(new Rational(value>=9223372036854775808d?long.MaxValue:(long)value,1),JavaNumberKind.Integer,integerDecimalContext:false);
             return Integer(decimalValue.Fraction.Numerator);
         }
         return new(decimalValue.Fraction,JavaNumberKind.Binary64,binary:value);
@@ -98,12 +104,15 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
         var fraction=Decimal(JavaNumberText.Format(value,narrowInteger:false)).Fraction;return Ratio(fraction.Numerator,fraction.Denominator);
     }
     /// <summary>Accepts built-in numeric values, BigInteger, Rational or an existing JavaNumber.</summary>
+    /// <remarks>A boxed Int64 retains Java Long promotion for decimal multiplication.
+    /// BigInteger inputs use Java's signed-bit-length narrowing rule instead. Public
+    /// Integer equality remains normalized and does not reproduce Java class identity.</remarks>
     /// <exception cref="ArgumentException">The object is not a supported numeric type.</exception>
     public static JavaNumber FromNumeric(object value)=>value switch
     {
         null=>throw new ArgumentNullException(nameof(value)),JavaNumber n=>n,BigInteger n=>Integer(n),Rational r=>Ratio(r.Numerator,r.Denominator),
         sbyte n=>Integer(n),byte n=>Integer(n),short n=>Integer(n),ushort n=>Integer(n),int n=>Integer(n),uint n=>Integer(n),
-        long n=>Integer(n),ulong n=>Integer(n),decimal n=>Decimal(n.ToString(CultureInfo.InvariantCulture)),float n=>FromDouble(n),double n=>FromDouble(n),
+        long n=>new(new Rational(n,1),JavaNumberKind.Integer,integerDecimalContext:false),ulong n=>Integer(n),decimal n=>Decimal(n.ToString(CultureInfo.InvariantCulture)),float n=>FromDouble(n),double n=>FromDouble(n),
         _=>throw new ArgumentException("A supported numeric value is required.",nameof(value))
     };
     /// <summary>Adds values with decimal promotion while preserving arbitrary integer magnitude.</summary>
@@ -128,7 +137,15 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     /// <summary>Returns an exact reciprocal, rejecting zero.</summary>
     public JavaNumber Reciprocal()=>Ratio(Fraction.Denominator,Fraction.Numerator);
     /// <summary>Negates the retained numeric representation.</summary>
-    public JavaNumber Negate()=>new(new Rational(-Fraction.Numerator,Fraction.Denominator),Kind,DecimalScale,-binary);
+    /// <remarks>Each operation normalizes its result. Negated BigInteger values can
+    /// narrow to Long; an existing Long remains Long unless its minimum value widens.
+    /// This models observed public boundaries, not an unobserved Calculator accumulator.</remarks>
+    public JavaNumber Negate()=>new(new Rational(-Fraction.Numerator,Fraction.Denominator),Kind,DecimalScale,-binary,
+        integerDecimalContext?null:Kind==JavaNumberKind.Integer&&Fraction.Numerator==long.MinValue);
+    /// <summary>Combines decimal scale metadata for multiplication.</summary>
+    /// <remarks>Scale can grow across exact arithmetic cycles while the rational
+    /// magnitude stays bounded; its Int32 budget must be checked independently.</remarks>
+    internal static int CombineDecimalScales(int left,int right)=>checked(left+right);
     private JavaNumber Operate(JavaNumber other,bool multiply,bool pinnedQuirks=false)
     {
         ArgumentNullException.ThrowIfNull(other);
@@ -154,14 +171,14 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
         if(pinnedQuirks&&!multiply&&Kind==JavaNumberKind.Decimal&&other.Kind==JavaNumberKind.Integer)b=(SignedLong(other.Fraction),0);
         if(pinnedQuirks&&!multiply&&other.Kind==JavaNumberKind.Decimal&&Kind==JavaNumberKind.Integer)a=(SignedLong(Fraction),0);
         var value=multiply?a.Fraction*b.Fraction:a.Fraction+b.Fraction;
-        var scale=multiply?checked(a.Scale+b.Scale):Math.Max(a.Scale,b.Scale);
+        var scale=multiply?CombineDecimalScales(a.Scale,b.Scale):Math.Max(a.Scale,b.Scale);
         // Java's decimal128 context is applied to decimal/decimal and
         // decimal/binary operations, and decimal * BigInteger. Other mixed
         // operations use exact decimal arithmetic after rational conversion.
         var round=Kind==JavaNumberKind.Decimal&&(other.Kind is JavaNumberKind.Decimal or JavaNumberKind.Binary64
-                ||multiply&&other.Kind==JavaNumberKind.Integer&&BigInteger.Abs(other.Fraction.Numerator)>long.MaxValue)
+                ||multiply&&other.Kind==JavaNumberKind.Integer&&other.integerDecimalContext)
             ||other.Kind==JavaNumberKind.Decimal&&(Kind is JavaNumberKind.Decimal or JavaNumberKind.Binary64
-                ||multiply&&Kind==JavaNumberKind.Integer&&BigInteger.Abs(Fraction.Numerator)>long.MaxValue);
+                ||multiply&&Kind==JavaNumberKind.Integer&&integerDecimalContext);
         if(round)return RoundedDecimal(value,scale);
         return new(value,JavaNumberKind.Decimal,scale);
     }

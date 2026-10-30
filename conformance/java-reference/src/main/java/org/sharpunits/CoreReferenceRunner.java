@@ -16,6 +16,7 @@ public final class CoreReferenceRunner {
     static Number number(JsonNode n) { try {
         return switch(n.path("kind").asText()) {
             case "integer" -> new BigInteger(n.path("value").asText());
+            case "long" -> Long.valueOf(n.path("value").asText());
             case "decimal" -> new BigDecimal(n.path("value").asText());
             case "double" -> Double.valueOf(n.path("value").asText());
             case "rational" -> RationalNumber.of(new BigInteger(n.path("numerator").asText()),new BigInteger(n.path("denominator").asText()));
@@ -143,6 +144,7 @@ public final class CoreReferenceRunner {
                 case "equal" -> a.equals(unit(n.path("right")));case "equivalent" -> ((AbstractUnit)a).isEquivalentTo(unit(n.path("right")));
                 case "hashEqual" -> a.hashCode()==unit(n.path("right")).hashCode();
                 case "convert" -> observeNumber(a.getConverterToAny(unit(n.path("right"))).convert(number(n.path("value"))));
+                case "convertTyped" -> observeNumber(a.getConverterTo(unit(n.path("right"))).convert(number(n.path("value"))));
                 case "system" -> observeNumber(a.getConverterToAny(a.getSystemUnit()).convert(number(n.path("value"))));
                 case "systemEqual" -> a.getSystemUnit().equals(unit(n.path("right")));
                 case "metadata" -> String.valueOf(a.getSymbol())+"|"+String.valueOf(a.getName());

@@ -1,0 +1,908 @@
+{
+  "seed": "385,905",
+  "maxTests": 100,
+  "criterion": "32 distinct converters; at least8 buckets",
+  "qualification": "Bounded engineering criterion; enclosing test exit required; failures may include shrinking attempts",
+  "trials": [
+    {
+      "input": -1,
+      "firstScale": 1024,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 1,
+      "firstScale": 2,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 1,
+      "firstScale": 2,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 3,
+      "firstScale": 4,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 2,
+      "firstScale": 3,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -1,
+      "firstScale": 1024,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -4,
+      "firstScale": 1021,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -5,
+      "firstScale": 1020,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 5,
+      "firstScale": 6,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 1,
+      "firstScale": 2,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -2,
+      "firstScale": 1023,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 11,
+      "firstScale": 12,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -1,
+      "firstScale": 1024,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -14,
+      "firstScale": 1011,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 10,
+      "firstScale": 11,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -5,
+      "firstScale": 1020,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -13,
+      "firstScale": 1012,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 19,
+      "firstScale": 20,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 5,
+      "firstScale": 6,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 7,
+      "firstScale": 8,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 16,
+      "firstScale": 17,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 17,
+      "firstScale": 18,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 10,
+      "firstScale": 11,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -24,
+      "firstScale": 1001,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -13,
+      "firstScale": 1012,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 23,
+      "firstScale": 24,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -18,
+      "firstScale": 1007,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -5,
+      "firstScale": 1020,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -14,
+      "firstScale": 1011,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 1,
+      "firstScale": 2,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -12,
+      "firstScale": 1013,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -18,
+      "firstScale": 1007,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -1,
+      "firstScale": 1024,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 1,
+      "firstScale": 2,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -8,
+      "firstScale": 1017,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -26,
+      "firstScale": 999,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -16,
+      "firstScale": 1009,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -2,
+      "firstScale": 1023,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 36,
+      "firstScale": 37,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 19,
+      "firstScale": 20,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -30,
+      "firstScale": 995,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -18,
+      "firstScale": 1007,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 43,
+      "firstScale": 44,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 20,
+      "firstScale": 21,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -41,
+      "firstScale": 984,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 44,
+      "firstScale": 45,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -23,
+      "firstScale": 1002,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -10,
+      "firstScale": 1015,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 26,
+      "firstScale": 27,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -27,
+      "firstScale": 998,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 20,
+      "firstScale": 21,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -44,
+      "firstScale": 981,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 25,
+      "firstScale": 26,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 30,
+      "firstScale": 31,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -46,
+      "firstScale": 979,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -8,
+      "firstScale": 1017,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -21,
+      "firstScale": 1004,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 50,
+      "firstScale": 51,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 42,
+      "firstScale": 43,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -46,
+      "firstScale": 979,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 29,
+      "firstScale": 30,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 9,
+      "firstScale": 10,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 6,
+      "firstScale": 7,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 3,
+      "firstScale": 4,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 5,
+      "firstScale": 6,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 32,
+      "firstScale": 33,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -11,
+      "firstScale": 1014,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 3,
+      "firstScale": 4,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 11,
+      "firstScale": 12,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -45,
+      "firstScale": 980,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 6,
+      "firstScale": 7,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 15,
+      "firstScale": 16,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 57,
+      "firstScale": 58,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -57,
+      "firstScale": 968,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 14,
+      "firstScale": 15,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -11,
+      "firstScale": 1014,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 43,
+      "firstScale": 44,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -17,
+      "firstScale": 1008,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -27,
+      "firstScale": 998,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -20,
+      "firstScale": 1005,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -27,
+      "firstScale": 998,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -3,
+      "firstScale": 1022,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -26,
+      "firstScale": 999,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 10,
+      "firstScale": 11,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -34,
+      "firstScale": 991,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 49,
+      "firstScale": 50,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -25,
+      "firstScale": 1000,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 44,
+      "firstScale": 45,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 24,
+      "firstScale": 25,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -63,
+      "firstScale": 962,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -70,
+      "firstScale": 955,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 25,
+      "firstScale": 26,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 21,
+      "firstScale": 22,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 93,
+      "firstScale": 94,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -71,
+      "firstScale": 954,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 79,
+      "firstScale": 80,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -94,
+      "firstScale": 931,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 72,
+      "firstScale": 73,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": -70,
+      "firstScale": 955,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    },
+    {
+      "input": 51,
+      "firstScale": 52,
+      "converterCount": 32,
+      "distinct": 32,
+      "hashBuckets": 32,
+      "normalComparisons": 32,
+      "constantComparisons": 1024
+    }
+  ]
+}

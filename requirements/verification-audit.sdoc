@@ -34,7 +34,7 @@ UID: VER-005
 STATUS: Active
 TITLE: Mutation qualification scope and provenance
 STATEMENT: Mutation reports shall identify tested source and test revisions, distinguish historical from final-source campaigns, disposition survivors and uncovered mutants, and demonstrate that critical historical semantic faults are detected without counting ignored or uncompiled mutants as verified behavior.
-COMMENT: Accepted audit repair criterion. Implementation and executable test/evidence mapping: conformance/verification-repair.md and conformance/verification-repair-results.json. Active is a requirements lifecycle state, not formal TCK verification. All actual assertion closures remain gated on attested Windows/Ubuntu/Java execution and review.
+COMMENT: Accepted audit repair criterion. The2026-10-30 debt reduction, targeted public boundaries, promotion correction, Java chain evidence and reviewed survivor dispositions are retained in conformance/mutation-debt.md and its manifests. Raw mutation outcomes are preserved; equivalent or out-of-contract classifications are not kills or formal TCK closure.
 
 [REQUIREMENT]
 UID: VER-006
@@ -42,3 +42,13 @@ STATUS: Active
 TITLE: Independent review and honest qualification verdict
 STATEMENT: A verification audit shall retain an independent reviewer assessment, findings and dispositions, explicitly identify agent versus human review, and qualify completion claims according to unresolved evidence gaps rather than aggregate test counts.
 COMMENT: Accepted audit repair criterion. Implementation and executable test/evidence mapping: conformance/verification-repair.md and conformance/verification-repair-results.json. Active is a requirements lifecycle state, not formal TCK verification. All actual assertion closures remain gated on attested Windows/Ubuntu/Java execution and review.
+
+[REQUIREMENT]
+UID: VER-HASH-QUALITY
+STATUS: Draft
+TITLE: Bounded converter hash-quality robustness criterion
+STATEMENT: A seeded engineering workload of32 structurally distinct converters shall retain at least8 distinct hash buckets across100 recorded FsCheck trials, permitting ordinary collisions and retaining generated inputs and dictionary equality-comparison counts.
+COMMENT: Inferred engineering acceptance choice for catastrophic constant hashing, not a JSR conformance rule, exact hash-value contract, general distribution proof or benchmark claim. Seed385,905. Implementation verification: MutationDebtHashQualityTests; evidence: conformance/mutation-debt-hash-quality.json and mutation-debt.md. Raw mutation survival retains its functional equality/hash-contract distinction.
+RELATIONS:
+- TYPE: Parent
+  VALUE: VER-005

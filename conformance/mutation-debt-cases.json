@@ -1,0 +1,1384 @@
+{
+  "schemaVersion": 2,
+  "cases": [
+    {
+      "id": "DEBT-COMPARE--1-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "compare",
+      "left": {
+        "kind": "rational",
+        "numerator": "49999999999999999999999999999999999999999999999999",
+        "denominator": "100000000000000000000000000000000000000000000000000"
+      },
+      "right": {
+        "kind": "double",
+        "value": "0.5"
+      },
+      "independentExpected": 0,
+      "absoluteTolerance": 0,
+      "expected": 0,
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2D0B7C5C5818DBE3919F09FA0D22D480E0718169668A20863765D98BC05D8D06",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-COMPARE--1-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "compare",
+      "left": {
+        "kind": "double",
+        "value": "0.5"
+      },
+      "right": {
+        "kind": "rational",
+        "numerator": "49999999999999999999999999999999999999999999999999",
+        "denominator": "100000000000000000000000000000000000000000000000000"
+      },
+      "independentExpected": 0,
+      "absoluteTolerance": 0,
+      "expected": 0,
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B9AA13BB38732E9816A4F200957B5E1A2ACF74786E8FA22C761B493C9FB486B3",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-COMPARE-1-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "compare",
+      "left": {
+        "kind": "rational",
+        "numerator": "50000000000000000000000000000000000000000000000001",
+        "denominator": "100000000000000000000000000000000000000000000000000"
+      },
+      "right": {
+        "kind": "double",
+        "value": "0.5"
+      },
+      "independentExpected": 0,
+      "absoluteTolerance": 0,
+      "expected": 0,
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7CAE5E35E6A45E75E2C9A5683E6A9A2EE13EE6C6765333F2E8411CFD35DC739A",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-COMPARE-1-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "compare",
+      "left": {
+        "kind": "double",
+        "value": "0.5"
+      },
+      "right": {
+        "kind": "rational",
+        "numerator": "50000000000000000000000000000000000000000000000001",
+        "denominator": "100000000000000000000000000000000000000000000000000"
+      },
+      "independentExpected": 0,
+      "absoluteTolerance": 0,
+      "expected": 0,
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EE597785982B1DC68FD9E21A8C07373F779E7AB406E4E9F53507C64BBACD8FC1",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387903-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "4611686018427387903"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174534.9386409204938638301562921743372302",
+          "scale": 34,
+          "clrProfile": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6D8AD25673D4908F9F5A0B53E87A38D8E4FE1B9A3716B947B27EE64643E2E178",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387903-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "4611686018427387903"
+      },
+      "independentExpected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174534.9386409204938638301562921743372302",
+          "scale": 34,
+          "clrProfile": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "12418DE47D09C504F390005CAE3FD5110FFE8E75D9462D628FE487C2E564E9B5",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387903-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "4611686018427387903"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174534.9386409204938638301562921743372302",
+          "scale": 34,
+          "clrProfile": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9917C491B578C3E78B9D384FF5EB7C40BB5623235A020C15BD075CA2B881BB54",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387903-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "4611686018427387903"
+      },
+      "independentExpected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174534.9386409204938638301562921743372302",
+          "scale": 34,
+          "clrProfile": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "431653D1CFCD0113CCE0C11E46D4D748D0D9CF4E5E997B7FBB0186CA7BD72635",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095",
+          "scale": 16,
+          "clrProfile": "Decimal|1138687895536349070124195419012419/2000000000000000|16"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "93BF98AD2BC3A2E89A92D57DA8361C804F6FB1980AE327484007FE6A59872FA6",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "4611686018427387904"
+      },
+      "independentExpected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095",
+          "scale": 16,
+          "clrProfile": "Decimal|1138687895536349070124195419012419/2000000000000000|16"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8C854893BF19A73F491D81F1A8B172467548EBC57A90D3BEF9220E79ACD8E856",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-double-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "double",
+        "value": "4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6F019CE777FBEE44D530FAE97F908B53E7A5F4E50581079331B5F300153B1804",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-double-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "double",
+        "value": "4611686018427387904"
+      },
+      "independentExpected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DB4658E6FF802D7650610333B8D4D82A4574D65EC20B5587DC8680EE9AC282A0",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "680F3B9BD7AD3029EF4DD12E6EBDC458E4244F6AF8BC0548F910021BB57270F7",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-4611686018427387904-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "4611686018427387904"
+      },
+      "independentExpected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3BD92F8F8AAF8F599C19D63A17F69F0FE6BB6B5FA17FE266790B1C5BE134F06A",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "9223372036854775807"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|1138687895536349070000738630000073/1000000000000000|15",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1138687895536349070000738630000073/1000000000000000|15",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.000738630000073",
+          "scale": 15,
+          "clrProfile": "Decimal|1138687895536349070000738630000073/1000000000000000|15"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2C5EEAC7EE7B25574756D0FDD65C377C1B3B96370E8050C1BD122F881EECCA07",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "9223372036854775807"
+      },
+      "independentExpected": "Decimal|1138687895536349070000738630000073/1000000000000000|15",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1138687895536349070000738630000073/1000000000000000|15",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.000738630000073",
+          "scale": 15,
+          "clrProfile": "Decimal|1138687895536349070000738630000073/1000000000000000|15"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "ABEB2F03A161B3D64ABD5F8347E8F86C976B17975BAB348478DA79E48F5AED0C",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-double-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "double",
+        "value": "9223372036854775807"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.0007386300000733392138189165645838",
+          "scale": 34,
+          "clrProfile": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0017D658C95155717247A23C1F616391A7A1042CD6F780C8C4BE1A3C48827191",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-double-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "double",
+        "value": "9223372036854775807"
+      },
+      "independentExpected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.0007386300000733392138189165645838",
+          "scale": 34,
+          "clrProfile": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "909F3D90B76682B9CB527B65BC4697F8C5EC1914E51213A5087139498F0EF597",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "9223372036854775807"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.0007386300000733392138189165645838",
+          "scale": 34,
+          "clrProfile": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "202EDEB560F00FEC8DCFD83996617BB658CDD7097B349257E591C41C300022F9",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY-9223372036854775807-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "9223372036854775807"
+      },
+      "independentExpected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1138687895536349070.0007386300000733392138189165645838",
+          "scale": 34,
+          "clrProfile": "Decimal|5693439477681745350003693150000366696069094582822919/5000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7A632B64348B3C4CDC1300DB8450BC5D1275BB1B757AF7CEEF2D6ED6D94394C4",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "-4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0E15A7E60CB0B2597C49B2222C2213E7D5CCB076CB923BE5ACD2E826F2C728D2",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "-4611686018427387904"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3DBAD269E50F1AC53B86751747DA88DE478E59B1D697D9756252DE062BCA604D",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-double-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "double",
+        "value": "-4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2B28FC44C0D60C8162F1BFCD35E92818927B192DF5CA5120BFD4445FA93BBFA4",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-double-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "double",
+        "value": "-4611686018427387904"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "12E68B41B81A34047AE492A1C5B4652BBECC0EDC9405E219E6FFA45A63C7A188",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "-4611686018427387904"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EC3CA8BD84C996F7B41D26F469B892532A9714553FEA8AFF68ED9D5316E8B38B",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387904-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "-4611686018427387904"
+      },
+      "independentExpected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.0620977095062095090575267422273536",
+          "scale": 34,
+          "clrProfile": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DFAEAB4EBF500FC16E77E4C69B3616958E2EDCCEE6E86EE0E3D9D051C518D328",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387905-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "-4611686018427387905"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-355839967355109084490971561574097/625000000000000|16",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-355839967355109084490971561574097/625000000000000|16",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.1855544985185552",
+          "scale": 16,
+          "clrProfile": "Decimal|-355839967355109084490971561574097/625000000000000|16"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "013DFCE5B250658842C31FF4700CB17F298680B224F21F0A457D134BB3E81957",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387905-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "-4611686018427387905"
+      },
+      "independentExpected": "Decimal|-355839967355109084490971561574097/625000000000000|16",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-355839967355109084490971561574097/625000000000000|16",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.1855544985185552",
+          "scale": 16,
+          "clrProfile": "Decimal|-355839967355109084490971561574097/625000000000000|16"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D91963FD3E7701615C10B9B1181CB780FAB33EE0A4FBEC62BE548682C7BA00F9",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387905-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "-4611686018427387905"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.1855544985185551879587613101174770",
+          "scale": 34,
+          "clrProfile": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4B4300060277DFFF6BA1F5F5F5A68F51A382B69E9666791844D2D6C6BBE1FAAB",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--4611686018427387905-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "-4611686018427387905"
+      },
+      "independentExpected": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-569343947768174535.1855544985185551879587613101174770",
+          "scale": 34,
+          "clrProfile": "Decimal|-569343947768174535185554498518555187958761310117477/1000000000000000000000000000000000|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B5A5B6F65648ADC2400D501CCB6FAD35820829D2D456DF8920596E09B30982A7",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-integer-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "integer",
+        "value": "-9223372036854775808"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-1138687895536349070124195419012419/1000000000000000|15",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-1138687895536349070124195419012419/1000000000000000|15",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.124195419012419",
+          "scale": 15,
+          "clrProfile": "Decimal|-1138687895536349070124195419012419/1000000000000000|15"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BC2672F79AFC4AECCA70CC0BC4E067F4F2F82170826D24A527B3854036383F35",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-integer-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "integer",
+        "value": "-9223372036854775808"
+      },
+      "independentExpected": "Decimal|-1138687895536349070124195419012419/1000000000000000|15",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-1138687895536349070124195419012419/1000000000000000|15",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.124195419012419",
+          "scale": 15,
+          "clrProfile": "Decimal|-1138687895536349070124195419012419/1000000000000000|15"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EE19B2B06BD61C0052E6B29C10907CC5AD3C2BE91F82B7A0831F0DF8449D7DAC",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-double-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "double",
+        "value": "-9223372036854775808"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.1241954190124190181150534844547072",
+          "scale": 34,
+          "clrProfile": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "88BCA6C59203485DA1D830836D5534E7695F83A525D7D0314C1817FC18392F84",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-double-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "double",
+        "value": "-9223372036854775808"
+      },
+      "independentExpected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.1241954190124190181150534844547072",
+          "scale": 34,
+          "clrProfile": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "164850270449666501D06273CCF634D13406197FCC98F3FEFCC5422E4D696F5F",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-long-False",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "long",
+        "value": "-9223372036854775808"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "independentExpected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.1241954190124190181150534844547072",
+          "scale": 34,
+          "clrProfile": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EF2FD7AFDB6D3B9D6CA615758330704EC491E6104E19D30431B75EC8AFD75216",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INTEGER-MULTIPLY--9223372036854775808-long-True",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1234567890123456789012345678901234"
+      },
+      "right": {
+        "kind": "long",
+        "value": "-9223372036854775808"
+      },
+      "independentExpected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "-1138687895536349070.1241954190124190181150534844547072",
+          "scale": 34,
+          "clrProfile": "Decimal|-662803589096496038909649603890964655505408/582076609134674072265625|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BF6633C21244D654BF8D1701146F855D7DD9E76E4CB5F267EA61D080C0E9F3F6",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-HIGH-SCALE-EXACT-TENTH",
+      "operation": "core",
+      "domain": "number",
+      "action": "add",
+      "left": {
+        "kind": "decimal",
+        "value": "0.04000000000000000000000000000000000"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.06000000000000000000000000000000000"
+      },
+      "independentExpected": "Decimal|1/10|34",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1/10|34",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "0.1000000000000000000000000000000000",
+          "scale": 34,
+          "clrProfile": "Decimal|1/10|34"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B26937D9D33F27CC50FAA8B2615B5F9B8B4DFFC895D05692381AB60E755AF0CC",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-INCOMPATIBLE-UNIT",
+      "operation": "core",
+      "domain": "unit",
+      "action": "convert",
+      "left": "AMPERE",
+      "right": "SECOND",
+      "value": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "independentExpected": {
+        "error": "INCOMPATIBLE",
+        "stage": "operation"
+      },
+      "absoluteTolerance": 0,
+      "expected": {
+        "error": "INCOMPATIBLE",
+        "stage": "operation"
+      },
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DC0232B1C0DF353B2BC42E7258179A2BB6E881BE5D38AE50FD5CB50DF567A3C6",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      },
+      "javaException": "javax.measure.IncommensurableException",
+      "allowedClrExceptions": [
+        "System.InvalidOperationException"
+      ]
+    },
+    {
+      "id": "DEBT-NEGATIVE-DECADE-SCALE",
+      "operation": "core",
+      "domain": "number",
+      "action": "multiply",
+      "left": {
+        "kind": "decimal",
+        "value": "0.1"
+      },
+      "right": {
+        "kind": "decimal",
+        "value": "0.0000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000"
+      },
+      "independentExpected": "Decimal|1/10000000000000000000000000000000000000000|73",
+      "absoluteTolerance": 0,
+      "expected": "Decimal|1/10000000000000000000000000000000000000000|73",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "1.000000000000000000000000000000000E-40",
+          "scale": 73,
+          "clrProfile": "Decimal|1/10000000000000000000000000000000000000000|73"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0264BB7DD5F88C3A373543CDA3B61F17256A9962A6DFA3324E4566E74DCB58A7",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-UNSUPPORTED-UNIT-SELF-CONVERTER",
+      "operation": "core",
+      "domain": "unit",
+      "action": "convertTyped",
+      "left": {
+        "kind": "root",
+        "left": "AMPERE",
+        "degree": 2
+      },
+      "right": {
+        "kind": "root",
+        "left": "AMPERE",
+        "degree": 2
+      },
+      "value": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "independentExpected": "Integer|1/1|0",
+      "absoluteTolerance": 0,
+      "expected": "Integer|1/1|0",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigInteger",
+          "text": "1",
+          "scale": 0,
+          "clrProfile": "Integer|1/1|0"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AC6C0152652249748DF949E4FA3CE314F7E5C893445B5C92427D228C07A1E2D8",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "id": "DEBT-UNSUPPORTED-UNIT-ANY-SELF-CONVERTER",
+      "operation": "core",
+      "domain": "unit",
+      "action": "convert",
+      "left": {
+        "kind": "root",
+        "left": "AMPERE",
+        "degree": 2
+      },
+      "right": {
+        "kind": "root",
+        "left": "AMPERE",
+        "degree": 2
+      },
+      "value": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "independentExpected": {
+        "error": "UNSUPPORTED",
+        "stage": "operation"
+      },
+      "absoluteTolerance": 0,
+      "expected": {
+        "error": "UNSUPPORTED",
+        "stage": "operation"
+      },
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9857BA93027F18DE44EBAFE20F8E05CA2DCB38E392E109624B1FE2B1955651B3",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      },
+      "javaException": "java.lang.UnsupportedOperationException",
+      "allowedClrExceptions": [
+        "System.NotSupportedException"
+      ]
+    },
+    {
+      "id": "DEBT-INCOMPATIBLE-TYPED-UNIT",
+      "operation": "core",
+      "domain": "unit",
+      "action": "convertTyped",
+      "left": "AMPERE",
+      "right": "SECOND",
+      "value": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "independentExpected": {
+        "error": "INCOMPATIBLE",
+        "stage": "operation"
+      },
+      "absoluteTolerance": 0,
+      "expected": {
+        "error": "INCOMPATIBLE",
+        "stage": "operation"
+      },
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C3F0809D682AD8F3E5B1711ADB7CD74D75F8E74DBA2A9FEB88974EF7EA224E8D",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      },
+      "javaException": "javax.measure.UnconvertibleException",
+      "allowedClrExceptions": [
+        "System.InvalidOperationException"
+      ]
+    }
+  ]
+}
