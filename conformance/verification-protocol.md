@@ -1,6 +1,10 @@
 # TCK verification protocol
 
-## Evidence baseline
+## Current qualification (2026-10-29)
+
+The [verification audit](verification-audit.md) finds the current evidence unqualified for closure. Ledger accounting is 14 GAP, 99 PARTIAL and zero VERIFIED. Its validator checks accounting, not the evidence gate below. GitHub CI is disabled; the historical CI results below are not current platform evidence.
+
+## Historical evidence baseline
 
 The cross-platform .NET 10 run https://github.com/jeffadickson/SharpUnits/actions/runs/38832777901 succeeded. Fourteen dimension/converter assertion mappings have been advanced to `CI_PASS_BEHAVIORAL_REVIEW_PENDING` in the closure ledger.
 

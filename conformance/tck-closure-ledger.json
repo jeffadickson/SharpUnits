@@ -392,7 +392,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, false, Quantity.class, \"asType\", Class.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I01_431A1_AsType plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A2",
@@ -415,7 +423,15 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, true, boolean.class,\"equals\", Object.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I02_431A2_Equals plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A3",
@@ -434,7 +450,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getScale\");",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I03_431A3_GetScale plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A4",
@@ -471,7 +495,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getUnit\");",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I04_431A4_GetUnit plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A5",
@@ -505,7 +537,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getValue\");",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I05_431A5_GetValue plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A6",
@@ -524,7 +564,15 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, int.class, \"hashCode\");",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I06_431A6_HashCode plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A7",
@@ -546,7 +594,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"isEquivalentTo\", true);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I07_431A7_Equivalent plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A8",
@@ -584,7 +640,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"inverse\");",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I08_431A8_Inverse plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4311-A1",
@@ -613,7 +677,15 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"add\", Quantity.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I09_4311A1_Add plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4311-A4",
@@ -666,7 +738,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"multiply\", Number.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4311-A5",
@@ -718,7 +798,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"divide\", Number.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I11_4311A5_DivideNumber plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4311-A6",
@@ -747,7 +835,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"subtract\", Quantity.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I12_4311A6_Subtract plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4312-A1",
@@ -784,7 +880,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.2\", type, Quantity.class, \"divide\", Quantity.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I13_4312A1_DivideQuantity plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "4312-A2",
@@ -818,7 +922,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.2\", type, Quantity.class, \"multiply\", Quantity.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A9",
@@ -881,7 +993,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, Quantity.class, \"to\", Unit.class);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I15_431A9_To plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "431-A10",
@@ -908,7 +1028,15 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testComparable(SECTION_PREFIX + SECTION_NUM, type);",
       "dotnetSemantics": "CLR surface test QuantityParitySurfaceTests.I16_431A10_Comparable plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaNumberQuantity and exact factories retain numeric family, graph unit and scale through arithmetic/conversion/equality/inverse; the existing double/SI adapter retains its documented envelope and exposes ToExact/InverseExact.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08",
+        "VA-02"
+      ]
     },
     {
       "id": "44-A1",
@@ -1294,7 +1422,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, boolean.class, \"equals\", Object.class);",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A1_Equals plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "424-A2",
@@ -1307,7 +1442,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, true, int.class,\"hashCode\");",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A2_HashCode plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "424-A3",
@@ -1320,7 +1462,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(\"Section \" + SECTION, type, \"getName\", true);",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A3_Name plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "424-A4",
@@ -1333,7 +1482,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(\"Section \" + SECTION, type, \"getSymbol\", true);",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A4_Symbol plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "424-A5",
@@ -1346,7 +1502,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, Number.class, \"getValue\");",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A5_Value plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "424-A6",
@@ -1359,7 +1522,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, int.class, \"getExponent\");",
       "dotnetSemantics": "CLR surface test TckPrefixApiSurfaceTests.Tck424A6_Exponent plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. SiPrefix.GetName/GetValue expose Java enum names and radix; ExactValue exposes the powered factor. Native Name/Value properties retain their legacy contracts.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A1",
@@ -1372,7 +1542,14 @@
       "expectedSemantics": "Pinned configuration contains at least one converter instance.",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A1_ProviderAvailable plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A2",
@@ -1385,7 +1562,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, true, boolean.class,\"equals\", Object.class);",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A2_EqualityMethod plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A3",
@@ -1398,7 +1582,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, true, int.class,\"hashCode\");",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A3_HashCodeMethod plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A4",
@@ -1411,7 +1602,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"inverse\");",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A4_InverseMethod plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A5",
@@ -1424,7 +1622,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"isIdentity\");",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A5_IdentityProperty plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A6",
@@ -1437,7 +1642,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"isLinear\");",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A6_LinearProperty plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A7",
@@ -1450,7 +1662,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, Number.class, \"convert\", Number.class);",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A7_NumericOverload plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A8",
@@ -1463,7 +1682,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, double.class, \"convert\", double.class);",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A8_DoubleOverload plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A9",
@@ -1476,7 +1702,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, UnitConverter.class, \"concatenate\", UnitConverter.class);",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A9_Concatenation plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "423-A10",
@@ -1489,7 +1722,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, List.class, \"getConversionSteps\");",
       "dotnetSemantics": "CLR surface test TckConverterApiSurfaceTests.Tck423A10_ConversionSteps plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnitConverterAdapter provides exact Number conversion, Java concatenation order, reducible operations, immutable steps, equality and inverse; Then retains native order.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A1",
@@ -1503,7 +1743,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, boolean.class, \"equals\", Object.class);",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A1_EqualsIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A2",
@@ -1517,7 +1764,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, int.class, \"hashCode\");",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A2_HashCodeIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A3",
@@ -1531,7 +1785,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"multiply\", Dimension.class);",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A3_MultiplyOperatorIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A4",
@@ -1545,7 +1806,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"divide\", Dimension.class);",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A4_DivideOperatorIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A5",
@@ -1559,7 +1827,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"root\", int.class);",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A5_RootIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A6",
@@ -1573,7 +1848,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"pow\", int.class);",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A6_PowIsPublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "425-A7",
@@ -1587,7 +1869,14 @@
       "expectedSemantics": "Pinned structural API check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Map.class, \"getBaseDimensions\");",
       "dotnetSemantics": "CLR surface test TckDimensionApiSurfaceTests.Tck425A7_BaseDimensionsArePublic plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaDimensionAdapter adds signed roots and nullable base decomposition; native dimension APIs retain their original contract.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A1",
@@ -1599,7 +1888,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, true, boolean.class,\"equals\", Object.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A1_Equals plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A2",
@@ -1611,7 +1907,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getDimension\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A2_Dimension plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A3",
@@ -1623,7 +1926,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getSystemUnit\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A3_SystemUnit plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A4",
@@ -1635,7 +1945,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getBaseUnits\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A4_BaseUnits plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A5",
@@ -1647,7 +1964,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getName\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A5_Name plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A6",
@@ -1659,7 +1983,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getSymbol\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A6_Symbol plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A7",
@@ -1671,7 +2002,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, int.class, \"hashCode\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A7_HashCode plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A8",
@@ -1683,7 +2021,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"isEquivalentTo\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A8_Equivalent plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "421-A9",
@@ -1695,7 +2040,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, false, String.class, \"toString\");",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck421A9_ToString plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A1",
@@ -1707,7 +2059,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, \"alternate\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A1_Alternate plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A2",
@@ -1719,7 +2078,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", Unit.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A2_DivideUnit plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A3",
@@ -1731,7 +2097,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", double.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A3_DivideDouble plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A4",
@@ -1743,7 +2116,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", Number.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A4_DivideNumber plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A5",
@@ -1755,7 +2135,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", Unit.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A5_MultiplyUnit plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A6",
@@ -1767,7 +2154,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", double.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A6_MultiplyDouble plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A7",
@@ -1779,7 +2173,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", Number.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A7_MultiplyNumber plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A8",
@@ -1791,7 +2192,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, false, Unit.class, \"prefix\", Prefix.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A8_Prefix plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A9",
@@ -1803,7 +2211,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"shift\", double.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A9_ShiftDouble plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42121-A10",
@@ -1815,7 +2230,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"shift\", Number.class);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42121A10_ShiftNumber plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42122-A1",
@@ -1827,7 +2249,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"pow\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42122A1_Pow plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42122-A2",
@@ -1839,7 +2268,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"root\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42122A2_Root plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42122-A3",
@@ -1851,7 +2287,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"transform\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42122A3_Transform plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42123-A1",
@@ -1863,7 +2306,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.3\", type, \"inverse\", false);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42123A1_Inverse plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42124-A1",
@@ -1875,7 +2325,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"isCompatible\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42124A1_Compatible plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42124-A2",
@@ -1887,7 +2344,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"asType\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42124A2_AsType plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42124-A3",
@@ -1899,7 +2363,14 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"getConverterTo\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42124A3_ConverterTo plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     },
     {
       "id": "42124-A4",
@@ -1911,7 +2382,20 @@
       "expectedSemantics": "Pinned structural API check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"getConverterToAny\", true);",
       "dotnetSemantics": "CLR surface test TckUnitExactSurfaceTests.Tck42124A4_ConverterToAny plus CoreReferenceFixtureTests.MatchesPinnedCoreObservation and CoreRobustnessTests. JavaUnit/JavaUnitAdapter retain base, alternate, transformed and normalized product identity; new Unit-returning operations coexist with legacy expression projections.",
       "remainingGap": "Exact JVM signatures/runtime type identities are CLR adaptations, not binary compatibility. Numeric/graph resource bounds are explicit. General graph text belongs to package 2; provider/Class discovery to package 3; independent review and cross-platform CI qualification to package 4. GitHub CI remains disabled; no VERIFIED closure.",
-      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied."
+      "reviewNote": "Source inspected against the pinned TCK. Behavioral tests supplement structural availability checks; no formal verification is implied.",
+      "auditFindings": [
+        "VA-03",
+        "VA-04",
+        "VA-06",
+        "VA-07",
+        "VA-08"
+      ]
     }
-  ]
+  ],
+  "verificationAudit": {
+    "report": "conformance/verification-audit.md",
+    "note": "Audit records evidence limitations, not formal closure. No assertion status is promoted.",
+    "verdict": "NOT_QUALIFIED_FOR_CLOSURE",
+    "date": "2026-10-29"
+  }
 }

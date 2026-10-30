@@ -1,0 +1,44 @@
+[DOCUMENT]
+TITLE: Verification audit remediation criteria
+
+[REQUIREMENT]
+UID: VER-001
+STATUS: Draft
+TITLE: Independently justified expected behavior
+STATEMENT: Compatibility evidence shall identify whether each expected behavior comes from the specification, an independently checked mathematical contract, a pinned implementation observation, or an intentionally reproduced implementation quirk.
+COMMENT: Inferred remediation criterion from the 2026-10-29 verification audit; proposed, not closed. Audit VA-01 and VA-03. Java observations alone do not settle intended SharpUnits behavior. Evidence: conformance/verification-audit.md.
+
+[REQUIREMENT]
+UID: VER-002
+STATUS: Draft
+TITLE: Complete result observations
+STATEMENT: Quantity differential observations shall jointly retain returned value, numeric representation mapping, scale and unit identity, and distinguish expected failure stage and approved exception mappings. Each component shall have a negative witness demonstrating detection of independent corruption.
+COMMENT: Inferred remediation criterion; proposed, not closed. Audit VA-02 and VA-03. AUD-P10 demonstrates an existing returned-unit observation collision; the current corpus does not satisfy this criterion.
+
+[REQUIREMENT]
+UID: VER-003
+STATUS: Draft
+TITLE: Strict comparison and fixture schemas
+STATEMENT: Verification tools shall reject malformed or contradictory outcomes, duplicate or missing case identifiers, empty qualification inventories and nonfinite or unapproved tolerances; compare exact integers without binary64 loss; and require explicit per-case tolerances for approximate comparisons.
+COMMENT: Inferred remediation criterion; proposed, not closed. Audit VA-04 and VA-05. Executable negative witnesses AUD-P01 through AUD-P09 expose current deficiencies; diagnostic completion does not mean those verifiers are repaired.
+
+[REQUIREMENT]
+UID: VER-004
+STATUS: Draft
+TITLE: Assertion-specific closure evidence
+STATEMENT: A verified assertion shall resolve its pinned source occurrence, corresponding API surface and executable semantic tests, tested revision, Java provenance, required platform CI evidence and reviewer decision; inventory accounting shall be distinguished from evidence qualification.
+COMMENT: Inferred remediation criterion; proposed, not closed. Audit VA-06 and VA-07. AUD-P11 reproduces fabricated evidence accepted by the existing accounting validator. All actual TCK ledger entries retain their prior non-verified states.
+
+[REQUIREMENT]
+UID: VER-005
+STATUS: Draft
+TITLE: Mutation qualification scope and provenance
+STATEMENT: Mutation reports shall identify tested source and test revisions, distinguish historical from final-source campaigns, disposition survivors and uncovered mutants, and demonstrate that critical historical semantic faults are detected without counting ignored or uncompiled mutants as verified behavior.
+COMMENT: Inferred remediation criterion; proposed, not closed. Audit VA-08. Two directed historical ordering faults are separately replayed in an isolated source snapshot; this does not replace the unfinished broad Stryker qualification.
+
+[REQUIREMENT]
+UID: VER-006
+STATUS: Draft
+TITLE: Independent review and honest qualification verdict
+STATEMENT: A verification audit shall retain an independent reviewer assessment, findings and dispositions, explicitly identify agent versus human review, and qualify completion claims according to unresolved evidence gaps rather than aggregate test counts.
+COMMENT: Inferred remediation criterion; proposed, not a full conformance closure. Independent agent findings and concurrence are retained with the audit. External human review and Windows/Ubuntu CI remain outstanding; GitHub CI stays disabled by user instruction.

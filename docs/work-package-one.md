@@ -1,5 +1,7 @@
 # Work package 1: core behavioral reconciliation
 
+**Verification acceptance reopened, 2026-10-29.** The [audit](../conformance/verification-audit.md) found incomplete observations and false-green verification paths. Implementation and historical local runs remain; complete behavioral qualification has not been achieved. The last two acceptance items below are reopened pending the draft VER remediation criteria.
+
 Baseline: 41eb77b. CI remains disabled. Completion means implemented CLR behavioral contracts with pinned Java evidence and explicit Java API identity differences; it does not waive the existing formal verification gate.
 
 ## Acceptance checklist
@@ -9,8 +11,8 @@ Baseline: 41eb77b. CI remains disabled. Completion means implemented CLR behavio
 - [x] Provide finite integer/rational/decimal/binary64 numeric representation, precision-preserving arithmetic, and explicit decimal128 rounding where pinned Java requires it.
 - [x] Provide immutable base/alternate/transformed/product unit representation, normalized product identity, exact factors, roots/powers, converter composition and equivalence distinct from equality.
 - [x] Integrate the core with unit adapters, quantity arithmetic/conversion/inversion, factories and semantic-kind checks without replacing native engineering safety policies.
-- [x] Compare exact and negative cases against actual pinned Java; retain seeded property/fuzz checks and Stryker evidence.
-- [x] Run full .NET regression, Java TCK, coverage and StrictDoc; document limitations and per-assertion dispositions; commit and push coherent increments.
+- [ ] Compare exact and negative cases against actual pinned Java; retain seeded property/fuzz checks and Stryker evidence.
+- [ ] Run full .NET regression, Java TCK, coverage and StrictDoc; document limitations and per-assertion dispositions; commit and push coherent increments.
 
 Package 2 owns textual rendering/parsing of general graphs. Package 3 owns external provider discovery and Java type/reflection adaptation. Package 4 owns cross-platform qualification and independent review. Unsupported behavior in the core cannot be hidden by reclassifying it as a structural API difference.
 

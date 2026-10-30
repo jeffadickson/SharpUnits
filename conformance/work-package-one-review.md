@@ -1,5 +1,7 @@
 # Work package 1: core Java reconciliation
 
+**2026-10-29 audit qualification:** [verification audit](verification-audit.md) reopens verification acceptance. Historical executions below remain evidence of their stated observations; they do not establish complete quantity results, raw Java representation preservation or requirement closure. The separate reviewer concurs only with the audit findings and limits; see its retained decision. No production behavior is changed by that audit.
+
 The new core separates structural units and finite Java numeric representations from the existing double/SI projection. This permits exact-number quantities, normalized unit products and lazy affine inverse units without changing native electrical/symbolic or temperature safety policies.
 
 ## Assertion scope

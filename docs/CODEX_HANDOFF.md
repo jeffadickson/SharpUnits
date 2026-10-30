@@ -5,6 +5,14 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current continuation (2026-10-29, verification audit)
+
+The [verification audit](../conformance/verification-audit.md) supersedes unrestricted completion interpretations of work package 1. Verdict: NOT QUALIFIED FOR REQUIREMENT OR TCK CLOSURE. Existing source and raw-log hashes match; fresh .NET and normalized differential replays pass, but observer and verification-tool blind spots remain. The quantity corpus contains 186 value/scale-only observations, four unit-only observations and 15 predicate/order cases. The separate reviewer corrected an initial count error; the correction and final agent concurrence are retained in the audit review.
+
+Eight findings cover historical oracle mistakes, incomplete quantity/number/error observations, comparator and fixture false greens, weak ledger qualification, legacy-only quantity mappings and narrow mutation scope. The audit changes documentation, draft remediation criteria and reproducible diagnostic tooling; it does not silently repair verifier or arithmetic behavior. The prior implementation/coverage results remain historical scoped evidence. Six new draft VER requirements describe repair acceptance; none is a closed conformance requirement.
+
+Current ordering tests detect deliberately reversed concatenation and transform faults in isolated snapshots. Run tools/VerificationAudit.cs for recorded unsafe acceptances (expected exit 1 while findings remain) and tools/Invoke-VerificationOrderAudit.ps1 for directed historical fault replays. The audit helper is a findings collector, not a universal qualification gate. All actual ledger entries remain non-VERIFIED; GitHub .NET and Java CI remain disabled. Next engineering work is verification repair against the draft criteria before further closure claims. Reviewer concurrence is with the audit's findings/limits, not certification or external human approval.
+
 ## Current continuation (2026-10-27, work package 1)
 
 The [core reconciliation review](../conformance/work-package-one-review.md) and [verification manifest](../conformance/work-package-one-verification.json) complete the local finite-profile implementation of work package 1. JavaNumber, JavaUnit, JavaNumberQuantity and JavaDimensionAdapter provide exact numeric/structural behavior, including converter order, decimal128 promotion, signed roots, prefix identity and exact factory bridges. Native engineering/temperature policies remain independent. The review documents pinned Java affine-temperature and Number quirks and the intentional CLR rational-hash consistency difference.

@@ -1,0 +1,156 @@
+{
+  "auditDate": "2026-10-29",
+  "recordedUtc": "2026-10-30T03:23:36.1670211Z",
+  "auditedRevision": "563a692d0f7b7c78e147eb09965d97d933bc56f6",
+  "verdict": "NOT_QUALIFIED_FOR_REQUIREMENT_OR_TCK_CLOSURE",
+  "scope": "Audit findings and diagnostic tooling only; no production library or verification-tool semantic repairs",
+  "dotnetTests": {
+    "total": 3073,
+    "executed": 3073,
+    "passed": 3073,
+    "failed": 0,
+    "error": 0,
+    "timeout": 0,
+    "aborted": 0,
+    "inconclusive": 0,
+    "passedButRunAborted": 0,
+    "notRunnable": 0,
+    "notExecuted": 0,
+    "disconnected": 0,
+    "warning": 0,
+    "completed": 0,
+    "inProgress": 0,
+    "pending": 0
+  },
+  "differential": {
+    "cases": 1734,
+    "mismatches": 0,
+    "qualification": "Normalized observations only; 186 quantity value/scale cases omit unit, 4 unit-only cases omit value/scale, 15 are predicates/order"
+  },
+  "historicalIntegrity": {
+    "pinnedCoreSourceOccurrences": 66,
+    "sourceFilesMatched": 37,
+    "rawEvidenceFilesMatched": 16,
+    "exactQuantitySurface": "All16 mappings remain legacy adapter references; exact-core mapping qualification open",
+    "executableMappedTestNamesFound": 66
+  },
+  "diagnosticCollector": {
+    "controlsPassed": 3,
+    "exitCode": 1,
+    "meaning": "Expected diagnostic findings, not passing qualification tests",
+    "openWitnesses": 11
+  },
+  "directedFaults": {
+    "reversedTransform": {
+      "failed": 1,
+      "passed": 1
+    },
+    "reversedConcatenation": {
+      "failed": 2,
+      "passed": 0
+    },
+    "isolatedSnapshot": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\verification-order-51a360674bc946309ecaf1bc6d7f8c87",
+    "limitations": "Two directed historical fault replays; no new broad Stryker result",
+    "baselineRevision": "563a692d0f7b7c78e147eb09965d97d933bc56f6",
+    "control": {
+      "failed": 0,
+      "passed": 2
+    }
+  },
+  "coverage": {
+    "linesCovered": 2081,
+    "linesValid": 2179,
+    "branchesCovered": 1985,
+    "branchesValid": 2290
+  },
+  "strictdoc": {
+    "tool": "StrictDoc",
+    "version": "0.30.4",
+    "result": "PASS",
+    "documents": 9,
+    "requirementIds": 386,
+    "sourceSha256": {
+      "capabilities.sdoc": "21531830BFEE80047E9522B8E54F026B878485C646ECEBC7D9A8E2CC8D1D5E3F",
+      "core-java.sdoc": "494B0F50B3D6D278BCEFB7D06D26C3403075F6C45FD1D1EC1E8C6D7D4D1E91A8",
+      "java-services.sdoc": "ECDA341C324FBCC1CDA012809ED42E09BFB1EE502A6C9651DB7CF9E41351557B",
+      "parser-grammar.sdoc": "0936528E9351275C770560F560ED98AE4FFFB208A34DC437C30240161B100889",
+      "quantity-formatting.sdoc": "7F19411D4A714D368C0DF6C10401078FDEF0C61D1B6C3573120BEFE7FEE4307A",
+      "quantity-parsing.sdoc": "D047C8C70E5CA59A1A7647234163A311C0AB8A2D0C963B507993B3323E62B245",
+      "tck-assertions.sdoc": "8DEDA6778583271DF3448F71CB11E102488DA9F51F450841378C58D13BDD4CA2",
+      "unit-format-state.sdoc": "F5C4B3DA46C5956B7C7B6F8585DA1F4DFBFD6D8A4E0037F746F737038A1F29F9",
+      "verification-audit.sdoc": "D1CFF616C259620186E50EF308936CF8C8AC08CAF81268A866014D090DAD928A"
+    },
+    "note": "Parsing, graph validation and HTML export; not implementation verification."
+  },
+  "ci": [
+    {
+      "id": 385988075,
+      "name": ".NET CI",
+      "state": "disabled_manually"
+    },
+    {
+      "id": 386170257,
+      "name": "Java reference TCK",
+      "state": "disabled_manually"
+    }
+  ],
+  "reviewer": {
+    "record": "conformance/verification-audit-review.md",
+    "identity": "Separate verification_reviewer agent; no inherited conversation history",
+    "readiness": "NOT_CONFORMANCE_READINESS",
+    "reviewType": "Source/evidence review with independent isolated probes; no independent rebuild/full campaign",
+    "decision": "CONCUR_WITH_CORRECTED_AUDIT_FINDINGS_AND_VER_001_THROUGH_VER_006"
+  },
+  "tools": {
+    "python": "3.13.2",
+    "strictdoc": "0.30.4",
+    "java": "17.0.20.1",
+    "stryker": "Historical5.0.0 evidence reviewed, not rerun",
+    "maven": "3.9.9",
+    "dotnetPrimary": "10.0.402",
+    "comparatorTests": "12 existing tests pass despite exposed false greens",
+    "coverlet": "6.0.4"
+  },
+  "commands": [
+    "dotnet test tests/SharpUnits.Tests -c Release --no-restore --collect:\"XPlat Code Coverage\" --results-directory ../verification-audit-coverage --logger \"trx;LogFileName=audit-baseline.trx\"",
+    "./tools/Invoke-CoreReference.ps1 -OutputDirectory ../verification-audit-reference",
+    "dotnet run --file tools/VerificationAudit.cs -- ../tools-runtime/python/python.exe (expected exit1 for open findings)",
+    "./tools/Invoke-VerificationOrderAudit.ps1 (expected exit0 once controls and directed-fault assertion checks complete)",
+    "python tools/test_compare_java_dotnet.py",
+    "dotnet test tests/SharpUnits.Tests -c Release --no-build --list-tests",
+    "./tools/Export-Requirements.ps1 -StrictDocCommand ../tools-runtime/strictdoc/bin/strictdoc.exe -OutputDirectory ../verification-audit-strictdoc",
+    "gh workflow list --all --json name,state,id"
+  ],
+  "limitations": [
+    "Verification fixes remain open; audit completion is not verification qualification.",
+    "No current Ubuntu execution or new Java TCK execution; historical112-test Java reference pass remains historical.",
+    "No broad mutation requalification, native audit-helper compilation or helper/tool coverage measurement.",
+    "Existing managed-library documentation/analyzer warnings remain.",
+    "No formal assertion promotions or remote CI dispatch."
+  ],
+  "artifactSha256": {
+    "tools/VerificationAudit.cs": "C0FB43484D0DA30D47075718F183FA99F5C65189F08B3D92FDBE58990FB44CAE",
+    "tools/Invoke-VerificationOrderAudit.ps1": "745A2ECB1F567C21564185BC084E71A9BF3B2C9D1A35F861F16F2A67DFE3E876",
+    "conformance/verification-audit.md": "5D68FB43278F48589891551D3531048B482D3F208B4651D21E53C1FF3D6243BC",
+    "conformance/verification-audit-results.json": "A863BDA6DBE7D0E7F860245A9016FDF329D30322B4825C4B1DBB0399276C1F28",
+    "conformance/verification-audit-review.md": "A34CC10F576598DC7CE8D94F31BB1A36B697F17026482B36F770E58C607D3333",
+    "conformance/verification-audit-coverage.json": "EFC5A7B91374962D2A18EA6138839E17EA3CF435E2FADB1E4C655CAC8B8D216C",
+    "requirements/verification-audit.sdoc": "D1CFF616C259620186E50EF308936CF8C8AC08CAF81268A866014D090DAD928A"
+  },
+  "rawEvidenceSha256": {
+    "../verification-audit-dotnet.log": "FD62F8EC309D0B5854EF1D7B5A247CD96758AC69FFED5CAB4209A7536C957DAF",
+    "../verification-audit-coverage/audit-baseline.trx": "EEE48E1FA0E4D4DAB04489C78B36F20D0FA6249AF11360E5DD371642ED4E5A7E",
+    "../verification-audit-reference.log": "99906ACCA1CF545FD41C6CB91F6B3D65EF410AFB7EF6906FCFA7CB343CB28F3A",
+    "../verification-audit-reference/java.jsonl": "8CAAA88192DF0E893864872385B09E5D6F418458459DC7091F85CF104002E5FF",
+    "../verification-audit-reference/dotnet.jsonl": "8874B3FE565188B2E34CB27C10775D373BA37C4D20DD1889C0A77E2D9B153132",
+    "../verification-audit-probes.log": "F69D98B66234C540D5968FA0336233DB0C4D3C25897E8FEF116876900AF50B93",
+    "../verification-audit-comparator-tests.log": "D8B7AA542796FE8D7D83C26F290F910CF4050057A0EC708E7DCF38778F14CF7E",
+    "../verification-audit-test-inventory.log": "3045770B557832632F5F3D8E00BB80A2E4C984FC19CC7089B138D32ABA220DFC",
+    "../verification-audit-strictdoc.log": "A637DAE1517B65E93F408F6A089E034AD833B6BD2C47F5EC86CBCAB75B783DD6",
+    "../verification-audit-ci-state.json": "0D1762955B017B37D702E313B2A7656F883F9BCD556BEC7F5FC0CF4F299B8123",
+    "../verification-order-replay.log": "FCF3DDCAE3B992A3249C1D54149E18DFFA4AF3CE8C12F05216D5CABB41360D92",
+    "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\verification-order-51a360674bc946309ecaf1bc6d7f8c87\\control.log": "76A71EAAD3C48356A242AB2AB6DB20F9C7B76297E6DE27C39DA5E4823790BFD1",
+    "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\verification-order-51a360674bc946309ecaf1bc6d7f8c87\\concatenate.log": "D9EEF7328BC96D8908FF335B8460B666C9E419F9547ED0CE38809BBAB926332A",
+    "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\verification-order-51a360674bc946309ecaf1bc6d7f8c87\\transform.log": "A2222F01BE10BBA34B4906800C5586063668808FD8EF270E64D200CF3303D871"
+  }
+}
