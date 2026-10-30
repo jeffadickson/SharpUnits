@@ -6,7 +6,7 @@ UID: JP-WP1-NUMBER
 STATUS: Active
 TITLE: Finite Java numeric families and promotion
 STATEMENT: The compatibility core shall retain finite integer, rational, decimal and binary64 representations; implement pinned numeric promotion and decimal128 rounding; distinguish representation equality from numeric comparison; and reject unsupported numeric inputs and resource exhaustion.
-COMMENT: Implementation: JavaNumber. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. Evidence: conformance/work-package-one-cases.json. Mixed Decimal/BigInteger addition reproduces the pinned signed-long narrowing quirk; AddExact is the mathematical rational alternative. CLR integer widths are not Java runtime number classes. Rational equality follows the pinned decimal128 projection; CLR hashes remain consistent with equality instead of copying Java's conflicting exact-rational hash.
+COMMENT: Implementation: JavaNumber. Tests: CoreReferenceFixtureTests and CoreRobustnessTests. Evidence: conformance/work-package-one-cases.json. Default Add/Subtract preserve arbitrary integer magnitude under the declared promotion rules. AddPinnedIndriya/SubtractPinnedIndriya explicitly reproduce the pinned mixed Decimal/BigInteger signed-long narrowing quirk; AddExact additionally bypasses decimal128 rounding. CLR integer widths are not Java runtime number classes. Rational equality follows the pinned decimal128 projection; CLR hashes remain consistent with equality instead of copying Java's conflicting exact-rational hash.
 RELATIONS:
 - TYPE: Parent
   VALUE: JP-016

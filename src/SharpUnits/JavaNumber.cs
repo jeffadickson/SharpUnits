@@ -106,11 +106,14 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
         long n=>Integer(n),ulong n=>Integer(n),decimal n=>Decimal(n.ToString(CultureInfo.InvariantCulture)),float n=>FromDouble(n),double n=>FromDouble(n),
         _=>throw new ArgumentException("A supported numeric value is required.",nameof(value))
     };
-    /// <summary>Adds values with pinned numeric promotion and decimal rounding.</summary>
-    /// <remarks>Pinned Java narrows a mixed Decimal/BigInteger addition through signed
-    /// 64 bits, even when that loses the integer's magnitude. This compatibility quirk
-    /// is deliberate; use AddExact for mathematical rational addition.</remarks>
+    /// <summary>Adds values with decimal promotion while preserving arbitrary integer magnitude.</summary>
     public JavaNumber Add(JavaNumber other)=>Operate(other,false);
+    /// <summary>Explicitly reproduces pinned Indriya addition, including its lossy signed-long quirk.</summary>
+    /// <remarks>Mixed Decimal/BigInteger addition can discard integer magnitude. Use only
+    /// for deliberate reproduction of that implementation; Add is the safe default.</remarks>
+    public JavaNumber AddPinnedIndriya(JavaNumber other)=>Operate(other,false,pinnedQuirks:true);
+    /// <summary>Explicitly reproduces pinned Indriya subtraction, including signed-long narrowing.</summary>
+    public JavaNumber SubtractPinnedIndriya(JavaNumber other){ArgumentNullException.ThrowIfNull(other);return AddPinnedIndriya(other.Negate());}
     /// <summary>Adds exact rational values without Java's decimal promotion or integer-narrowing quirk.</summary>
     public JavaNumber AddExact(JavaNumber other)
     {
@@ -126,7 +129,7 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     public JavaNumber Reciprocal()=>Ratio(Fraction.Denominator,Fraction.Numerator);
     /// <summary>Negates the retained numeric representation.</summary>
     public JavaNumber Negate()=>new(new Rational(-Fraction.Numerator,Fraction.Denominator),Kind,DecimalScale,-binary);
-    private JavaNumber Operate(JavaNumber other,bool multiply)
+    private JavaNumber Operate(JavaNumber other,bool multiply,bool pinnedQuirks=false)
     {
         ArgumentNullException.ThrowIfNull(other);
         if(multiply&&(Fraction.Numerator.IsZero||other.Fraction.Numerator.IsZero))return Zero;
@@ -148,8 +151,8 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
             var bits=(ulong)(value.Numerator&((BigInteger.One<<64)-1));
             return new Rational(unchecked((long)bits),1);
         }
-        if(!multiply&&Kind==JavaNumberKind.Decimal&&other.Kind==JavaNumberKind.Integer)b=(SignedLong(other.Fraction),0);
-        if(!multiply&&other.Kind==JavaNumberKind.Decimal&&Kind==JavaNumberKind.Integer)a=(SignedLong(Fraction),0);
+        if(pinnedQuirks&&!multiply&&Kind==JavaNumberKind.Decimal&&other.Kind==JavaNumberKind.Integer)b=(SignedLong(other.Fraction),0);
+        if(pinnedQuirks&&!multiply&&other.Kind==JavaNumberKind.Decimal&&Kind==JavaNumberKind.Integer)a=(SignedLong(Fraction),0);
         var value=multiply?a.Fraction*b.Fraction:a.Fraction+b.Fraction;
         var scale=multiply?checked(a.Scale+b.Scale):Math.Max(a.Scale,b.Scale);
         // Java's decimal128 context is applied to decimal/decimal and

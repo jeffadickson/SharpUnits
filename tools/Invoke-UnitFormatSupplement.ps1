@@ -8,5 +8,5 @@ $classpath='conformance/java-reference/target/classes;'+(Get-Content conformance
 if($LASTEXITCODE){throw 'Java supplement failed'}
 & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-supplement-cases.json > ../unitformat100-supplement-dotnet.jsonl
 if($LASTEXITCODE){throw 'CLR supplement failed'}
-& $Python tools/compare_java_dotnet.py ../unitformat100-supplement-java.jsonl ../unitformat100-supplement-dotnet.jsonl
+& $Python tools/compare_java_dotnet.py ../unitformat100-supplement-java.jsonl ../unitformat100-supplement-dotnet.jsonl --cases conformance/unitformat-supplement-cases.json
 if($LASTEXITCODE){throw 'Supplemental mismatch'}

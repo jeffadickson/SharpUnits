@@ -24,7 +24,10 @@ foreach(var test in document.RootElement.GetProperty("cases").EnumerateArray())
   var operation=test.GetProperty("operation").GetString();
   if(operation=="core")
   {
-   Console.WriteLine(JsonSerializer.Serialize(new {id,result=CoreFixtures.Evaluate(test)}));
+      var observed=CoreFixtures.Evaluate(test);
+   var row=new Dictionary<string,object?>{{"id",id},{"result",observed}};
+   if(CoreFixtures.LastExceptionType is not null)row["clrException"]=CoreFixtures.LastExceptionType;
+   Console.WriteLine(JsonSerializer.Serialize(row));
    continue;
   }
   if(operation=="unitFormat")

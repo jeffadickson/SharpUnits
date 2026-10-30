@@ -38,7 +38,7 @@ if(args[0]=="audit")
             records.Add(new JsonObject{{"id",id},{"suite",name},{"source",path.Replace('\\','/')},{"sourceSha256",hash},
                 {"sourceMethod",name+"."+match.Groups[2].Value},{"upstreamChecks",JsonSerializer.SerializeToNode(calls)},
                 {"assertionNature",calls.Length>0?"STRUCTURAL_API_CHECK":"CONFIGURATION_AVAILABILITY"},
-                {"dotnetTest",entry["test"]?.DeepClone()},{"formalStatus",entry["status"]!.DeepClone()}});
+                {"dotnetTest",entry["test"]?.DeepClone()},{"exactCoreTest",entry["exactCoreTest"]?.DeepClone()},{"exactCoreBehaviorTests",entry["exactCoreBehaviorTests"]?.DeepClone()},{"exactCoreCases",entry["exactCoreCases"]?.DeepClone()},{"formalStatus",entry["status"]!.DeepClone()}});
         }
     }
     if(records.Count!=66)throw new Exception($"Expected 66 source occurrences, found {records.Count}");

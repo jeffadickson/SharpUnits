@@ -50,6 +50,10 @@ public sealed class JavaUnit : IEquatable<JavaUnit>
     public static IReadOnlyDictionary<string,JavaUnit> CreateCatalog()=>BuildCatalog();
     /// <summary>The structural unit category.</summary>
     public JavaUnitKind Kind { get; }
+    /// <summary>Retained parent for alternate/transformed units; null for base/product units.</summary>
+    public JavaUnit? ParentUnit=>parent;
+    /// <summary>Local converter applied before the parent; null for other unit categories.</summary>
+    public JavaUnitConverterAdapter? TransformConverter=>operation;
     /// <summary>Intrinsic symbol; products and unnamed transforms have none.</summary>
     public string? Symbol { get; }
     /// <summary>Intrinsic name; generated transforms and products have none.</summary>

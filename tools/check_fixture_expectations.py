@@ -1,25 +1,14 @@
 #!/usr/bin/env python3
-"""Validate normalized JSONL against shared fixture expectations."""
-import argparse,json,math
+"""Validate observations using the shared strict, fixture-owned contract."""
+import argparse
+import sys
 from pathlib import Path
-p=argparse.ArgumentParser()
-p.add_argument("cases")
-p.add_argument("actual")
-a=p.parse_args()
-cases=json.loads(Path(a.cases).read_text())["cases"]
-rows=[json.loads(line) for line in Path(a.actual).read_text().splitlines() if line.strip()]
-actual={r["id"]:r for r in rows}
-if len(actual)!=len(rows) or set(actual)!={c["id"] for c in cases}:
- raise SystemExit("Duplicate, missing or unexpected case IDs")
-for case in cases:
- row=actual[case["id"]]
- if "expectedError" in case:
-  if row.get("error")!=case["expectedError"]:
-   raise SystemExit(f"{case['id']}: wrong error")
- else:
-  expected=case["expected"]
-  result=row.get("result")
-  matches=(isinstance(result,(int,float)) and not isinstance(result,bool) and math.isclose(result,expected,rel_tol=case.get("relativeTolerance",0),abs_tol=case.get("absoluteTolerance",1e-10))) if isinstance(expected,(int,float)) and not isinstance(expected,bool) else type(result) is type(expected) and result==expected
-  if "error" in row or not matches:
-   raise SystemExit(f"{case['id']}: wrong value")
-print(f"Validated {len(cases)} shared conformance fixtures")
+# Support the existing isolated/embedded Python runtime without installing helpers.
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from verification_contract import load_cases,load_rows,check
+def main():
+ p=argparse.ArgumentParser();p.add_argument('cases');p.add_argument('actual');p.add_argument('--observer',choices=('java','clr'));a=p.parse_args()
+ cases=load_cases(a.cases);errors=check(load_rows(a.actual),cases,a.observer)
+ if errors: raise SystemExit('\n'.join(errors))
+ print(f'Validated {len(cases)} shared conformance fixtures')
+if __name__=='__main__': main()

@@ -400,6 +400,46 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I01_431A1_AsType",
+      "exactCoreCases": [
+        "CORE-1155",
+        "CORE-1160",
+        "CORE-1165",
+        "CORE-1170",
+        "CORE-1175",
+        "CORE-1180",
+        "CORE-1185",
+        "CORE-1190",
+        "CORE-1195",
+        "CORE-1200",
+        "CORE-1205",
+        "CORE-1210",
+        "CORE-1215",
+        "CORE-1220",
+        "CORE-1225",
+        "CORE-1230",
+        "CORE-1235",
+        "CORE-1240",
+        "CORE-1245",
+        "CORE-1250",
+        "CORE-1255",
+        "CORE-1260",
+        "CORE-1265",
+        "CORE-1270",
+        "CORE-1275",
+        "CORE-1280",
+        "CORE-1285",
+        "CORE-1290",
+        "CORE-1295",
+        "CORE-1300",
+        "CORE-1305",
+        "CORE-1310"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
       ]
     },
     {
@@ -431,6 +471,20 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I02_431A2_Equals",
+      "exactCoreCases": [
+        "CORE-1319",
+        "CORE-1326",
+        "CORE-1333",
+        "CORE-1340",
+        "CORE-1345",
+        "CORE-1553"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
       ]
     },
     {
@@ -458,6 +512,46 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I03_431A3_GetScale",
+      "exactCoreCases": [
+        "CORE-1155",
+        "CORE-1160",
+        "CORE-1165",
+        "CORE-1170",
+        "CORE-1175",
+        "CORE-1180",
+        "CORE-1185",
+        "CORE-1190",
+        "CORE-1195",
+        "CORE-1200",
+        "CORE-1205",
+        "CORE-1210",
+        "CORE-1215",
+        "CORE-1220",
+        "CORE-1225",
+        "CORE-1230",
+        "CORE-1235",
+        "CORE-1240",
+        "CORE-1245",
+        "CORE-1250",
+        "CORE-1255",
+        "CORE-1260",
+        "CORE-1265",
+        "CORE-1270",
+        "CORE-1275",
+        "CORE-1280",
+        "CORE-1285",
+        "CORE-1290",
+        "CORE-1295",
+        "CORE-1300",
+        "CORE-1305",
+        "CORE-1310"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
       ]
     },
     {
@@ -503,6 +597,46 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I04_431A4_GetUnit",
+      "exactCoreCases": [
+        "CORE-1155",
+        "CORE-1160",
+        "CORE-1165",
+        "CORE-1170",
+        "CORE-1175",
+        "CORE-1180",
+        "CORE-1185",
+        "CORE-1190",
+        "CORE-1195",
+        "CORE-1200",
+        "CORE-1205",
+        "CORE-1210",
+        "CORE-1215",
+        "CORE-1220",
+        "CORE-1225",
+        "CORE-1230",
+        "CORE-1235",
+        "CORE-1240",
+        "CORE-1245",
+        "CORE-1250",
+        "CORE-1255",
+        "CORE-1260",
+        "CORE-1265",
+        "CORE-1270",
+        "CORE-1275",
+        "CORE-1280",
+        "CORE-1285",
+        "CORE-1290",
+        "CORE-1295",
+        "CORE-1300",
+        "CORE-1305",
+        "CORE-1310"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
       ]
     },
     {
@@ -545,6 +679,46 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I05_431A5_GetValue",
+      "exactCoreCases": [
+        "CORE-1155",
+        "CORE-1160",
+        "CORE-1165",
+        "CORE-1170",
+        "CORE-1175",
+        "CORE-1180",
+        "CORE-1185",
+        "CORE-1190",
+        "CORE-1195",
+        "CORE-1200",
+        "CORE-1205",
+        "CORE-1210",
+        "CORE-1215",
+        "CORE-1220",
+        "CORE-1225",
+        "CORE-1230",
+        "CORE-1235",
+        "CORE-1240",
+        "CORE-1245",
+        "CORE-1250",
+        "CORE-1255",
+        "CORE-1260",
+        "CORE-1265",
+        "CORE-1270",
+        "CORE-1275",
+        "CORE-1280",
+        "CORE-1285",
+        "CORE-1290",
+        "CORE-1295",
+        "CORE-1300",
+        "CORE-1305",
+        "CORE-1310"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
       ]
     },
     {
@@ -572,6 +746,20 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I06_431A6_HashCode",
+      "exactCoreCases": [
+        "CORE-1319",
+        "CORE-1326",
+        "CORE-1333",
+        "CORE-1340",
+        "CORE-1345",
+        "CORE-1553"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
       ]
     },
     {
@@ -602,6 +790,19 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I07_431A7_Equivalent",
+      "exactCoreCases": [
+        "CORE-1320",
+        "CORE-1327",
+        "CORE-1334",
+        "CORE-1341",
+        "CORE-1346"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
       ]
     },
     {
@@ -648,6 +849,45 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I08_431A8_Inverse",
+      "exactCoreCases": [
+        "CORE-1159",
+        "CORE-1164",
+        "CORE-1169",
+        "CORE-1174",
+        "CORE-1179",
+        "CORE-1184",
+        "CORE-1189",
+        "CORE-1194",
+        "CORE-1199",
+        "CORE-1204",
+        "CORE-1209",
+        "CORE-1214",
+        "CORE-1219",
+        "CORE-1224",
+        "CORE-1229",
+        "CORE-1234",
+        "CORE-1239",
+        "CORE-1244",
+        "CORE-1249",
+        "CORE-1254",
+        "CORE-1259",
+        "CORE-1264",
+        "CORE-1269",
+        "CORE-1274",
+        "CORE-1279",
+        "CORE-1284",
+        "CORE-1289",
+        "CORE-1294",
+        "CORE-1299",
+        "CORE-1304",
+        "CORE-1309",
+        "CORE-1314"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -685,6 +925,19 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I09_4311A1_Add",
+      "exactCoreCases": [
+        "CORE-1315",
+        "CORE-1322",
+        "CORE-1329",
+        "CORE-1336",
+        "CORE-1549",
+        "CORE-1550"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -746,6 +999,45 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I10_4311A4_MultiplyNumber",
+      "exactCoreCases": [
+        "CORE-1157",
+        "CORE-1162",
+        "CORE-1167",
+        "CORE-1172",
+        "CORE-1177",
+        "CORE-1182",
+        "CORE-1187",
+        "CORE-1192",
+        "CORE-1197",
+        "CORE-1202",
+        "CORE-1207",
+        "CORE-1212",
+        "CORE-1217",
+        "CORE-1222",
+        "CORE-1227",
+        "CORE-1232",
+        "CORE-1237",
+        "CORE-1242",
+        "CORE-1247",
+        "CORE-1252",
+        "CORE-1257",
+        "CORE-1262",
+        "CORE-1267",
+        "CORE-1272",
+        "CORE-1277",
+        "CORE-1282",
+        "CORE-1287",
+        "CORE-1292",
+        "CORE-1297",
+        "CORE-1302",
+        "CORE-1307",
+        "CORE-1312"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -806,6 +1098,45 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I11_4311A5_DivideNumber",
+      "exactCoreCases": [
+        "CORE-1158",
+        "CORE-1163",
+        "CORE-1168",
+        "CORE-1173",
+        "CORE-1178",
+        "CORE-1183",
+        "CORE-1188",
+        "CORE-1193",
+        "CORE-1198",
+        "CORE-1203",
+        "CORE-1208",
+        "CORE-1213",
+        "CORE-1218",
+        "CORE-1223",
+        "CORE-1228",
+        "CORE-1233",
+        "CORE-1238",
+        "CORE-1243",
+        "CORE-1248",
+        "CORE-1253",
+        "CORE-1258",
+        "CORE-1263",
+        "CORE-1268",
+        "CORE-1273",
+        "CORE-1278",
+        "CORE-1283",
+        "CORE-1288",
+        "CORE-1293",
+        "CORE-1298",
+        "CORE-1303",
+        "CORE-1308",
+        "CORE-1313"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -843,6 +1174,19 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I12_4311A6_Subtract",
+      "exactCoreCases": [
+        "CORE-1316",
+        "CORE-1323",
+        "CORE-1330",
+        "CORE-1337",
+        "CORE-1551",
+        "CORE-1552"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -888,6 +1232,20 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I13_4312A1_DivideQuantity",
+      "exactCoreCases": [
+        "CORE-1318",
+        "CORE-1325",
+        "CORE-1332",
+        "CORE-1339",
+        "CORE-1344",
+        "CORE-1547",
+        "CORE-1548"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -930,6 +1288,20 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I14_4312A2_MultiplyQuantity",
+      "exactCoreCases": [
+        "CORE-1317",
+        "CORE-1324",
+        "CORE-1331",
+        "CORE-1338",
+        "CORE-1343",
+        "CORE-1545",
+        "CORE-1546"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -1001,6 +1373,49 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I15_431A9_To",
+      "exactCoreCases": [
+        "CORE-1156",
+        "CORE-1161",
+        "CORE-1166",
+        "CORE-1171",
+        "CORE-1176",
+        "CORE-1181",
+        "CORE-1186",
+        "CORE-1191",
+        "CORE-1196",
+        "CORE-1201",
+        "CORE-1206",
+        "CORE-1211",
+        "CORE-1216",
+        "CORE-1221",
+        "CORE-1226",
+        "CORE-1231",
+        "CORE-1236",
+        "CORE-1241",
+        "CORE-1246",
+        "CORE-1251",
+        "CORE-1256",
+        "CORE-1261",
+        "CORE-1266",
+        "CORE-1271",
+        "CORE-1276",
+        "CORE-1281",
+        "CORE-1286",
+        "CORE-1291",
+        "CORE-1296",
+        "CORE-1301",
+        "CORE-1306",
+        "CORE-1311",
+        "CORE-1450",
+        "CORE-1452",
+        "CORE-1454",
+        "CORE-1456"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
       ]
     },
     {
@@ -1036,6 +1451,18 @@
         "VA-07",
         "VA-08",
         "VA-02"
+      ],
+      "exactCoreTest": "ExactQuantitySurfaceTests.I16_431A10_Comparable",
+      "exactCoreCases": [
+        "CORE-1321",
+        "CORE-1328",
+        "CORE-1335",
+        "CORE-1342"
+      ],
+      "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
+      "exactCoreBehaviorTests": [
+        "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
+        "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
       ]
     },
     {

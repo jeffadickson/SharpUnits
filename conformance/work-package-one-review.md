@@ -1,5 +1,7 @@
 # Work package 1: core Java reconciliation
 
+**2026-10-29 repair continuation:** [Verification repairs](verification-repair.md) supersede the old observation and default narrowing behavior described below. Historical execution numbers retain their original scope.
+
 **2026-10-29 audit qualification:** [verification audit](verification-audit.md) reopens verification acceptance. Historical executions below remain evidence of their stated observations; they do not establish complete quantity results, raw Java representation preservation or requirement closure. The separate reviewer concurs only with the audit findings and limits; see its retained decision. No production behavior is changed by that audit.
 
 The new core separates structural units and finite Java numeric representations from the existing double/SI projection. This permits exact-number quantities, normalized unit products and lazy affine inverse units without changing native electrical/symbolic or temperature safety policies.
@@ -36,7 +38,7 @@ See the runnable `examples/ExactJavaCore.cs` and XML source documentation. Migra
 
 Four historical tests were asserting incorrect Java semantics: concatenation order, affine step count, rejection of affine prefixes, and accepting an alternate of a scaled unit. Their expectations were corrected only after independent pinned-Java observations.
 
-A pinned Java arithmetic quirk is deliberately confined to compatibility arithmetic: Decimal/BigInteger addition uses signed 64-bit narrowing. For example, adding `0.1` to `2^64` yields `0.1` in that Java path. `AddExact` performs mathematical rational addition instead. Native arithmetic is not routed through this quirk.
+A pinned Java arithmetic quirk is deliberately confined to the explicit AddPinnedIndriya/SubtractPinnedIndriya APIs: Decimal/BigInteger addition uses signed 64-bit narrowing. Default Add/Subtract preserve the integer magnitude. For example, adding `0.1` to `2^64` yields `0.1` in that Java path. `AddExact` performs mathematical rational addition instead. Native arithmetic is not routed through this quirk.
 
 Pinned RationalNumber equality compares decimal128 projections, while exact comparison can distinguish the underlying fractions. The core matches that equality behavior. CLR hashes remain consistent with CLR equality; Java's conflicting exact-rational hash implementation is intentionally not reproduced. Numeric hash values are not Java interoperability identifiers.
 

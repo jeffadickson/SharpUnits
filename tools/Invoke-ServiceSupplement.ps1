@@ -11,6 +11,6 @@ foreach($kind in @('edge','filter')){
  if($LASTEXITCODE){throw 'Java supplement failed'}
  & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll $cases > "../services100-$kind-dotnet.jsonl"
  if($LASTEXITCODE){throw 'CLR supplement failed'}
- & $Python tools/compare_java_dotnet.py "../services100-$kind-java.jsonl" "../services100-$kind-dotnet.jsonl"
+ & $Python tools/compare_java_dotnet.py "../services100-$kind-java.jsonl" "../services100-$kind-dotnet.jsonl" --cases $cases
  if($LASTEXITCODE){throw 'Supplemental differential mismatch'}
 }

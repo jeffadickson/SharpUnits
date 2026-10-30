@@ -8,6 +8,11 @@ var large=JavaNumber.Integer(BigInteger.Parse("9007199254740993"));
 var exact=new JavaNumberQuantity(large,ampere);
 Console.WriteLine(exact.Add(new JavaNumberQuantity(JavaNumber.One,ampere)).Value); // 9007199254740994
 
+// A measured Indriya data-loss bug requires an explicit opt-in name.
+var huge=JavaNumber.Integer(BigInteger.One<<64);var tenth=JavaNumber.Decimal("0.1");
+Console.WriteLine(huge.Add(tenth)); // 184467440737095516161/10: preserves integer magnitude
+Console.WriteLine(huge.AddPinnedIndriya(tenth)); // 1/10: reproduces the pinned Java bug
+
 var thirdAmpere=ampere.Divide(JavaNumber.Integer(3));
 var q=new JavaNumberQuantity(JavaNumber.Integer(2),thirdAmpere);
 Console.WriteLine(q.To(ampere).Value); // 2/3

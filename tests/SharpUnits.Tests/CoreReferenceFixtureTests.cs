@@ -20,17 +20,40 @@ public sealed class CoreReferenceFixtureTests
         using var document=JsonDocument.Parse(json);var test=document.RootElement;
         var expected=test.GetProperty("expected");var actual=CoreFixtures.Evaluate(test);
         Assert.False(string.IsNullOrWhiteSpace(id));
-        if(expected.ValueKind==JsonValueKind.String)Assert.Equal(expected.GetString(),Assert.IsType<string>(actual));
-        else if(expected.ValueKind==JsonValueKind.Number)
+        AssertObservation(expected,actual,test);
+        if(test.TryGetProperty("allowedClrExceptions",out var types))
+            Assert.Contains(types.EnumerateArray(),item=>item.GetString()==CoreFixtures.LastExceptionType);
+    }
+    internal static void AssertObservation(JsonElement expected,object? actual,JsonElement fixture)
+    {
+        var value=JsonSerializer.SerializeToElement(actual);
+        var absolute=fixture.TryGetProperty("absoluteTolerance",out var a)?a.GetDouble():0;
+        var relative=fixture.TryGetProperty("relativeTolerance",out var r)?r.GetDouble():0;
+        Compare(expected,value,absolute,relative,"result");
+    }
+    private static void Compare(JsonElement expected,JsonElement actual,double absolute,double relative,string path)
+    {
+        Assert.Equal(expected.ValueKind,actual.ValueKind);
+        switch(expected.ValueKind)
         {
-            if(test.TryGetProperty("relativeTolerance",out var tolerance))
-            {
-                var target=expected.GetDouble();var result=Assert.IsType<double>(actual);
-                var absolute=test.GetProperty("absoluteTolerance").GetDouble();
-                Assert.True(Math.Abs(target-result)<=Math.Max(absolute,Math.Abs(target)*tolerance.GetDouble()),id);
-            }
-            else Assert.Equal(expected.GetInt32(),Assert.IsType<int>(actual));
+            case JsonValueKind.Object:
+                Assert.Equal(expected.EnumerateObject().Count(),actual.EnumerateObject().Count());
+                foreach(var property in expected.EnumerateObject())
+                {
+                    Assert.True(actual.TryGetProperty(property.Name,out var member),path+"."+property.Name);
+                    Compare(property.Value,member,absolute,relative,path+"."+property.Name);
+                }
+                break;
+            case JsonValueKind.Array:
+                Assert.Equal(expected.GetArrayLength(),actual.GetArrayLength());
+                for(var i=0;i<expected.GetArrayLength();i++)Compare(expected[i],actual[i],absolute,relative,path+"["+i+"]");
+                break;
+            case JsonValueKind.Number:
+                if(absolute==0&&relative==0)Assert.Equal(expected.GetRawText(),actual.GetRawText());
+                else Assert.True(double.IsFinite(actual.GetDouble())&&Math.Abs(expected.GetDouble()-actual.GetDouble())<=Math.Max(absolute,Math.Abs(expected.GetDouble())*relative),path);
+                break;
+            case JsonValueKind.String:Assert.Equal(expected.GetString(),actual.GetString());break;
+            case JsonValueKind.True:case JsonValueKind.False:Assert.Equal(expected.GetBoolean(),actual.GetBoolean());break;
         }
-        else Assert.Equal(expected.GetBoolean(),Assert.IsType<bool>(actual));
     }
 }

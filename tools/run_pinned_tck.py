@@ -20,6 +20,8 @@ for name, pin in pins.items():
         continue
     source = root / "upstream" / ("unit-tck" if name == "tck" else name)
     actual = subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip()
+    if subprocess.call(["git", "-C", str(source), "diff", "--quiet", "HEAD"]) != 0:
+        raise SystemExit(f"{name}: pinned checkout has tracked edits")
     if actual != pin["commit"]:
         raise SystemExit(f"{name}: expected {pin['commit']}, found {actual}")
 

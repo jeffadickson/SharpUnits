@@ -24,7 +24,7 @@ try {
     if($LASTEXITCODE){throw 'Java observation failed'}
     & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-affine-cases.json > $clrOutput
     if($LASTEXITCODE){throw 'CLR observation failed'}
-    & $Python tools/compare_java_dotnet.py $javaOutput $clrOutput
+    & $Python tools/compare_java_dotnet.py $javaOutput $clrOutput --cases conformance/unitformat-affine-cases.json
     if($LASTEXITCODE){throw 'Affine unit-format difference detected'}
     # Expected fixtures are retained observations, never regenerated from the CLR implementation.
     $expected=@{};(Get-Content -LiteralPath conformance/unitformat-affine-cases.json -Raw|ConvertFrom-Json).cases |

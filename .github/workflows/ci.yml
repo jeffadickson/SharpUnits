@@ -32,9 +32,12 @@ jobs:
       - name: Audit TCK test mappings
         if: matrix.os == 'ubuntu-latest'
         run: python3 tools/audit_tck_test_links.py
+      - name: Install verifier development tools
+        if: matrix.os == 'ubuntu-latest'
+        run: python3 -m pip install -r tools/verification-requirements.txt
       - name: Test differential comparison harness
         if: matrix.os == 'ubuntu-latest'
-        run: python3 -m unittest discover -s tools -p 'test_compare_*.py'
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
       - name: Require complete source tree
         shell: bash
         run: |
@@ -43,7 +46,15 @@ jobs:
       - name: Restore core tests
         run: dotnet restore tests/SharpUnits.Tests/SharpUnits.Tests.csproj
       - name: Test core
-        run: dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release --no-restore
+        run: dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release --no-restore --logger "trx;LogFileName=results.trx" --results-directory qualification-test-results
+      - name: Capture revision-bound test evidence
+        run: dotnet run --file tools/QualificationBundle.cs -- ${{ matrix.os == 'windows-latest' && 'windows' || 'ubuntu' }} qualification qualification-test-results/results.trx
+      - name: Upload qualification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-${{ matrix.os == 'windows-latest' && 'windows' || 'ubuntu' }}
+          path: qualification/
+          if-no-files-found: error
       - name: Execute shared .NET conformance fixtures
         if: matrix.os == 'ubuntu-latest'
         shell: bash

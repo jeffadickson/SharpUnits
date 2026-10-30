@@ -18,6 +18,13 @@
           0
         ],
         "label": "one"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D5B810A1D67C6E0B9E2460202FE20EA6F9E6551EE98464C1B252AA354E6AD76A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -38,6 +45,13 @@
           0
         ],
         "label": "A"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C4D42340755C8D7236F09A5471D4D528A91453873DF2ECE056BEBF217FC3B28B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -58,6 +72,13 @@
           1
         ],
         "label": "cd"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F3F9CF704633C07915789976111011831E4B5EF2101D0A5B186FA84595D9F50A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -78,6 +99,13 @@
           0
         ],
         "label": "K"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E09F5B8E0100731D51AE2387C7399496B81F8A30CBDD846C8DD522E104C1D517",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -98,6 +126,13 @@
           0
         ],
         "label": "kg"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0E11D9E454394558CB141912486D507D8BCAAAFAD9FC55475A94170609DA5C2F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -118,6 +153,13 @@
           0
         ],
         "label": "m"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5764DF5412A4EC73F7B1C693A5970D8E8D093DF5392ACE4D0A8382D08E1A00A0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -138,6 +180,13 @@
           0
         ],
         "label": "mol"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "23B2C80729AD1FEC84BC26EF52424BD4E727A6CCC81A1EE20F5A16F867E61854",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -158,6 +207,13 @@
           0
         ],
         "label": "s"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A49DD12A91A1C19A31C9E42E6B5FB17BDDC7000B98A71627AA566C7283B2A7D9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -178,6 +234,13 @@
           0
         ],
         "label": "g"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3BDE259C12A3B5D59AA4620356CD36C25AA5EC93AAB88FA09CA33CA65C1B4428",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -198,6 +261,13 @@
           0
         ],
         "label": "rad"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "13838B95E178782C803A7376B1CA036266D2B02D720AD93AE05F8AEDF8557190",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -218,6 +288,13 @@
           0
         ],
         "label": "sr"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "24E16DF28ACF3C4DB762BC7E99ED61242FF73EE995561CA076D6EDB1A09AC5F0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -238,6 +315,13 @@
           0
         ],
         "label": "Hz"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1B2D6EE94A8B9DA25E70FB95B179D6C7859A163EB2FCE2F199E6A0FF914B5270",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -258,6 +342,13 @@
           0
         ],
         "label": "N"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4E46F93424FE8D73AC24C96A2B7BE7DB2CE0AAE423764696A8A99935D9A4A977",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -278,6 +369,13 @@
           0
         ],
         "label": "Pa"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F71A0D5A9D4C00183EB42448A897C6DE3A870B506AE4640C90E058673316A2CF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -298,6 +396,13 @@
           0
         ],
         "label": "J"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3F47C4D7B36A2D314C11479CCE1553193C6059C9CA92EFF1DD24B3F032B9C430",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -318,6 +423,13 @@
           0
         ],
         "label": "W"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DA7BCD0B3FAE3C6DAC045F5B7A2AE89E8DE82BC5F8FB82F4400BB106263DF0B9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -338,6 +450,13 @@
           0
         ],
         "label": "C"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "889857B96BAE11A5C81842236D191813A7EDAF2884A03AF96593C2BA9A04A8E3",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -358,6 +477,13 @@
           0
         ],
         "label": "V"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FCBFCDB7B96FB04267438E777CF895AE8E5AEAF01E7E2664D5CE0270A5A665B9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -378,6 +504,13 @@
           0
         ],
         "label": "F"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F9310888F0916DB2BE9C1BDE9EBAEF667F58BE10D89089B68CF739C71F4F2372",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -398,6 +531,13 @@
           0
         ],
         "label": "\u03A9"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7186363BDF4268E9FE07C8FDE8F8E1473729E29C925F29F9C35B4E1FC9E58F5D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -418,6 +558,13 @@
           0
         ],
         "label": "S"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "ECF86AD55AF3E396384656EE670791F2337A83BCDF3FDAFA99F9612C9D2DA938",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -438,6 +585,13 @@
           0
         ],
         "label": "Wb"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6D18003EEC1867B1BBF08B89763DF4CEE8A432BD1F45638CA42CA60A9BDF7C8E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -458,6 +612,13 @@
           0
         ],
         "label": "T"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "06E3376B4EE58300DB7DAFB479BC67D70AE04AE2E4E1EE3912568FA27DC084B7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -478,6 +639,13 @@
           0
         ],
         "label": "H"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C719C9B9E457A3EF4EE1084560299530B6AE339D849C74FEC30CF87E2D59BA5C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -498,6 +666,13 @@
           0
         ],
         "label": "\u2103"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3579FB3064F9D4B72138DD515345FE577336191AF554BD6398FF608F27A3E405",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -518,6 +693,13 @@
           1
         ],
         "label": "lm"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0F42508C2C3C260E6527589AF0FD95FDFB16015E68C5DC46CEB46B19B8D4284F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -538,6 +720,13 @@
           1
         ],
         "label": "lx"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "58465BB4C76D6FA780EBF81A1BC6F9F516F42030B38F5A5E21BA9321C73431B9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -558,6 +747,13 @@
           0
         ],
         "label": "Bq"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "707C4CCC745DDDA308BFC99135D3C75BFBE4D9160ADC40B6BFC2D0C817536FEF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -578,6 +774,13 @@
           0
         ],
         "label": "Gy"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "63BFA432E2D2819CA600DF7C384550DFF86B8139F90041A4B5FBBBD2A3166887",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -598,6 +801,13 @@
           0
         ],
         "label": "Sv"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "96C917FEC56E4BFF3B1A079F2C0EBAC73E14532CC12E672D027A0B62E785F8AF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -618,6 +828,13 @@
           0
         ],
         "label": "kat"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5909E8CBD9DC97B8F1AC3ACF610896EA6CC2F469E570DA187753F99ED5506240",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -638,6 +855,13 @@
           0
         ],
         "label": "m/s"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "70E9A5EF15348BFFB624F69C906420186B63F7477CB6B911B5B568457B932615",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -658,6 +882,13 @@
           0
         ],
         "label": "m/s\u00B2"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "15955CA8B61689145F99E45612D78DB9B5A3840D60685401007D76F5F6C177AD",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -678,6 +909,13 @@
           0
         ],
         "label": "m\u00B2"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "158457A6844FDBFE9B632A4A21E6B061A5EDAA54A74A934B57DA23AFDC3B9154",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -698,6 +936,13 @@
           0
         ],
         "label": "m\u00B3"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B61E45C3966912283B059DD7459C5F64CADAD309150CFD0CBF2E2813EC2366EA",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -718,6 +963,13 @@
           0
         ],
         "label": "km/h"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E25C107C0D8D0A751A991E50F50ADF84781CBFB71E1FE921B8F79A13E2EBEE14",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -738,6 +990,13 @@
           0
         ],
         "label": "%"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8832FA84100BF1660120E281D5ADAE438AA549D032A2C064BF010EB79B610DE9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -758,6 +1017,13 @@
           0
         ],
         "label": "min"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "850A161061FB9FA3B183AB18A668429DE029399F50B560BE533DE9EE9EE7BC9E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -778,6 +1044,13 @@
           0
         ],
         "label": "h"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DC3A8FFDC2580436CD1E2D2314833D37E01A305790E355430095701931932B63",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -798,6 +1071,13 @@
           0
         ],
         "label": "d"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "53A4A66662EE45C88E4977FC414461AF27B3034B3DCDF875F3CFA243647DF9CC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -818,6 +1098,13 @@
           0
         ],
         "label": "wk"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "602C08F33004304BB14A71061976F7B2EAA3FB6813C9BF78E3EA2EF512AD289F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -838,6 +1125,13 @@
           0
         ],
         "label": "yr"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2336919A1B340B80EC802E7EDF0BA860B206A8843CDC30D6EF310F9456FBC125",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -858,6 +1152,13 @@
           0
         ],
         "label": "mo"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D5C919D01F999434A5453A12031C7C41684AB24CD2982DC1F1EC363F3766C143",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -878,6 +1179,13 @@
           0
         ],
         "label": "l"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "763E528DB15B5CB3E80D92730A784AABEDFAB8D742B7EF80F6C7FA5185B37DE2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -887,6 +1195,13 @@
       "expected": {
         "factory": "one",
         "system": "one"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F3D5AF44E9DB73E66124388C9EB48AF569CC3AE2E0505B73A3ED3E25EFE9C3D0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -896,6 +1211,13 @@
       "expected": {
         "factory": "A",
         "system": "A"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9D2FE20A0C047CC90083D87A6940E8EDE1C4B11074656D205DFFBD89D0F0ACB7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -905,6 +1227,13 @@
       "expected": {
         "factory": "cd",
         "system": "cd"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "248EF54BC53BD4CA1F336CF7364DAC7115F8B50091CD5DF33CD974917763709D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -914,6 +1243,13 @@
       "expected": {
         "factory": "K",
         "system": "K"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FEEEEFE8885244BDBE081D68F2A31A2913101397B635000C7C21D451400D497E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -923,6 +1259,13 @@
       "expected": {
         "factory": "kg",
         "system": "kg"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A3C8E68548EA006AB88652412BE1A577565D22DD824F0430DDA2BCF1A90683C9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -932,6 +1275,13 @@
       "expected": {
         "factory": "m",
         "system": "m"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "151F7A0EECB24DE89A6108D7DC6965915099D3721ED1566CBC40DBB403E1F2CF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -941,6 +1291,13 @@
       "expected": {
         "factory": "mol",
         "system": "mol"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A21AE82D1A57A317F85AB66B64324ED42E66B96162E1A57AE6714C7DC6EFDF58",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -950,6 +1307,13 @@
       "expected": {
         "factory": "s",
         "system": "s"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "98FBCFEC20A3F4C73066242384546CE4C8DB3BFAD74B7D0595D8CABF42ABE18B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -959,6 +1323,13 @@
       "expected": {
         "factory": "rad",
         "system": "rad"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B520FFE8B02C09036615D7664EA697F6016DDBCC55E74A10CF83CDCE3C9DB3E1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -968,6 +1339,13 @@
       "expected": {
         "factory": "sr",
         "system": "sr"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "896C54B89CFA73A72EDBAC94E3B9842DBF3BE73BD9B4D5AFD21505E25D9455B4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -977,6 +1355,13 @@
       "expected": {
         "factory": "Hz",
         "system": "Hz"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3BB211BD9F2A54C5924D4641EE1AB731E19B22B81E9BAEBB30CDB770B57D3191",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -986,6 +1371,13 @@
       "expected": {
         "factory": "N",
         "system": "N"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "07CE9012F0F561081B22D56129BA928329E84AEA522ABEA453128D6F8662B3C8",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -995,6 +1387,13 @@
       "expected": {
         "factory": "Pa",
         "system": "Pa"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9CCBBBC75AE56A82B83E12717D17BC7FF01A5C5A844BF950505FFE848B638074",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1004,6 +1403,13 @@
       "expected": {
         "factory": "J",
         "system": "J"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AF02C3A106589157D4F6288F29F33A4FE65B41B3CE7AC1009F915AEB274ADBC1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1013,6 +1419,13 @@
       "expected": {
         "factory": "W",
         "system": "W"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3E84BA31BD3BB265AB86B78D8489F3AEE891D0A413C966A111BE3064CB62C8C3",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1022,6 +1435,13 @@
       "expected": {
         "factory": "C",
         "system": "C"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3CBAC8EE126E142022DBC403289BA7306DD5047A9DCF5EE4F571C7BD370C6167",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1031,6 +1451,13 @@
       "expected": {
         "factory": "V",
         "system": "V"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F0CEC15D2D39AED7F41888E96E7896C052108483F3CE9701AE89362ABEA00441",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1040,6 +1467,13 @@
       "expected": {
         "factory": "F",
         "system": "F"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "21ECA9BC8C024D7C246EF9DB9824145395740C5838FCBF405FE27244F97803FC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1049,6 +1483,13 @@
       "expected": {
         "factory": "\u03A9",
         "system": "\u03A9"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B955BB46787829A1ACC0E83124A390538F3639ABE2B5239B84C7C036114599D0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1058,6 +1499,13 @@
       "expected": {
         "factory": "S",
         "system": "S"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B382DF552C2C505D1AA221B21795D15A835196F2487464AB0FF70052E296D3AF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1067,6 +1515,13 @@
       "expected": {
         "factory": "Wb",
         "system": "Wb"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4CCC52E6699E6103ABCD2B687A7AF2115D3F46C3AC1F1AECD39CB9DEE053AC39",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1076,6 +1531,13 @@
       "expected": {
         "factory": "T",
         "system": "T"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E3C96259317DA451078E580E93F1C218AA02A871AF8A3E55F056D09DEEEEC0E2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1085,6 +1547,13 @@
       "expected": {
         "factory": "H",
         "system": "H"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "31AB448183BDD2887DCE219E60A3F75D4821F144919B4665D421C8D83FACDC26",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1094,6 +1563,13 @@
       "expected": {
         "factory": "lm",
         "system": "lm"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E9B02C236C2C7A09F1DB28A57D83154AE153C03174E667931D7FF25EA12D989A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1103,6 +1579,13 @@
       "expected": {
         "factory": "lx",
         "system": "lx"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BDE9B7A65DA044E6E7B6E795691C1D18CE37B5A0DBF0634227861E29240C2B92",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1112,6 +1595,13 @@
       "expected": {
         "factory": "Bq",
         "system": "Bq"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8011D2D3975D0C7DDE9FB2C4324B1D782D0B99F3CC5E452377E6C39CCCEE507C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1121,6 +1611,13 @@
       "expected": {
         "factory": "Gy",
         "system": "Gy"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1F840859D64E1E5E71CB170B047F7C002C4D353F501F768CDD38CD78A1F21B98",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1130,6 +1627,13 @@
       "expected": {
         "factory": "Sv",
         "system": "Sv"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "ED6BA2C15E95E49DDC4D010369465FA88FE6D0263783225190A56CB73E2A7633",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1139,6 +1643,13 @@
       "expected": {
         "factory": "kat",
         "system": "kat"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "29BBF6F4B8D1B14D8F77186CD2C8912FDAB963F3877F297839CCB3412BDE31E8",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1148,6 +1659,13 @@
       "expected": {
         "factory": "m/s",
         "system": "m/s"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3170F42F534BAE88B739E8A16CE881119D48C9317D4AF90CFCA843C48BD57417",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1157,6 +1675,13 @@
       "expected": {
         "factory": "m/s\u00B2",
         "system": "m/s\u00B2"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6EBA317F954373F4ECA013064C5EC02EA63C9275059B980494C3AF7522107289",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1166,6 +1691,13 @@
       "expected": {
         "factory": "m\u00B2",
         "system": "m\u00B2"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "132CADCF710D4895473D1320151D012C69051ADA34C4AD14FA76EEFD9A5FDBC6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
@@ -1175,145 +1707,313 @@
       "expected": {
         "factory": "m\u00B3",
         "system": "m\u00B3"
+      },
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "142F1FDE8585D0BDB5F569763E8B94765CBF56EDD5C5F2491F1F8677470EF237",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
       }
     },
     {
       "id": "S100-078",
       "operation": "serviceContract",
       "argument": "available",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "206EC2BA0BE229E4F15F6497C936B870A77C804445761DCC4D10ED5EACA227C9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-079",
       "operation": "serviceContract",
       "argument": "current",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "21BBC731695A56C5B6E93D27449DF4383456D4481B02F2E91DB063A5144CBA69",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-080",
       "operation": "serviceContract",
       "argument": "priority",
-      "expected": 10
+      "expected": 10,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D95D4F7138F346FFB6247251F5700426C880C53DB7398DAB4B336E9A97236B1B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-081",
       "operation": "serviceContract",
       "argument": "quantityDefault",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BD6B12553276A4F6022AD9F46B51E6DD3D0C6B81E42503710ED2E1B31CAB7E7A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-082",
       "operation": "serviceContract",
       "argument": "quantityNamed",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7C47CD9F64D8A93A23CDA29EEE2F8843F95D9750C895C2836E87CA8FD69BACF3",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-083",
       "operation": "serviceContract",
       "argument": "quantityNames",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "592F4160B65B1EB7DDBD40B245A7CFE2772753567EFC925C597274A4246398CE",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-084",
       "operation": "serviceContract",
       "argument": "unitDefault",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8D3A1698820EF7E0B7609FB6ED4C9013231836A5D9568D96002A8D47D40BD116",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-085",
       "operation": "serviceContract",
       "argument": "unitNamed",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7ED9860E16C66019A1D2BF6DD65183C1AA1E7F2812E44C61E42BD2BA421B4080",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-086",
       "operation": "serviceContract",
       "argument": "unitNames",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4D7E6B5EE640818C77AD979F9764DF5BED00519EA914DDCC9D4B75F697EC3FBF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-087",
       "operation": "serviceContract",
       "argument": "unitVariant",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1E4C4FFFA241B97D18067C41A772B0AE84B0FEF6636743A23616D34A9716E9EB",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-088",
       "operation": "serviceContract",
       "argument": "systemDefault",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7BBF41302828F8CF27204FCF7FA10A03CE0715C21E42AEFD0C36E9C267018515",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-089",
       "operation": "serviceContract",
       "argument": "systemNamed",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7717D71A421AFF2F057924A10F0F5BD19EC7A1A3C7B15E568463269398859E21",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-090",
       "operation": "serviceContract",
       "argument": "systemsAvailable",
-      "expected": 1
+      "expected": 1,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "35F059963258A132279801078262A4600C1DDCE1101532FD0B8413AE69BFC43F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-091",
       "operation": "serviceContract",
       "argument": "systemName",
-      "expected": "Units"
+      "expected": "Units",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DCCA942AF22ADEB29DC5538464EF62F6B3E33153EE3711E1A4446DB4136863C6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-092",
       "operation": "serviceContract",
       "argument": "systemUnits",
-      "expected": 44
+      "expected": 44,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E927BE2BD45838D2082D5476CEFEEB46DC0C59B782173137F1897B8447F30052",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-093",
       "operation": "serviceContract",
       "argument": "unitByString",
-      "expected": "A"
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "911947CFBCEFD5DFE13107CDD7288D20FFCC87EF98137047090F1F03A559C536",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-094",
       "operation": "serviceContract",
       "argument": "unitsByDimension",
-      "expected": 7
+      "expected": 7,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "080801A61DEA30E1CBE3CC02371EE4B79328497AA9888FD71B334ECDF0182675",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-095",
       "operation": "serviceContract",
       "argument": "unitByType",
-      "expected": "K"
+      "expected": "K",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BA013EA02F66522D9D2B400125C1B19859BD60E4C5DD40E21247137AE3B70BD1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-096",
       "operation": "serviceContract",
       "argument": "typedFactory",
-      "expected": 20.0
+      "expected": 20.0,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3577889E31CD9A855932D0C2C3F173B4D7857489A2D857FCCA3133A6C3554164",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-097",
       "operation": "serviceContract",
       "argument": "metricPrefixes",
-      "expected": 24
+      "expected": 24,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2FA713155A2A9DDCE7037A1FB6DCECDB73FF8379C9307C35780C9BC835C319A4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-098",
       "operation": "serviceContract",
       "argument": "binaryPrefixes",
-      "expected": 8
+      "expected": 8,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "58DA7DF85BD5E6F866E0394D1DD18C5713F894A4047D9B6B6B4C13EFB9888F4C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-099",
       "operation": "serviceContract",
       "argument": "unitFormatFormat",
-      "expected": "\u2103"
+      "expected": "\u2103",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D476B7BAAA8F49E54A82AF8E34DD12EA8DBDC74FAEEABD3BD7B6AEDE71903AB4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "S100-100",
       "operation": "serviceContract",
       "argument": "unitFormatParse",
-      "expected": "\u03BCA"
+      "expected": "\u03BCA",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "870216488B8B3EC477720144014FD179223EAE5DBAD17C2B78B31164247EEBE2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     }
   ]
 }

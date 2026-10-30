@@ -73,6 +73,10 @@ public sealed class JavaUnitConverterAdapter : IEquatable<JavaUnitConverterAdapt
     public bool IsLinear=>steps.All(step=>step.Kind is Operation.Scale or Operation.Power);
     /// <summary>True when every operation is a scale or offset.</summary>
     public bool IsAffine=>steps.All(step=>step.Kind is Operation.Scale or Operation.Power or Operation.Offset);
+    /// <summary>Immutable atomic operation metadata in Java composition order.</summary>
+    /// <remarks>Preserves prefix radix/exponent identity separately from its numeric factor.</remarks>
+    public IReadOnlyList<(string Kind,JavaNumber Parameter,int Radix,int Exponent)> Operations=>Array.AsReadOnly(
+        steps.Select(step=>(step.Kind.ToString(),step.Parameter,step.Radix,step.Exponent)).ToArray());
     /// <summary>Converts a double through pinned numeric promotion.</summary>
     public double Convert(double value)=>IsIdentity?value:Convert(JavaNumber.FromDouble(value)).ToDouble();
     /// <summary>Legacy numeric overload, projecting the exact result to binary64.</summary>

@@ -4,73 +4,157 @@
       "argument": "quantityUnknown",
       "id": "SPI-EDGE-quantityUnknown",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "68476196A89F0ED03B06C2DAC6A8CEED5003A6ACABF05F057D6F31096E30662C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitUnknown",
       "id": "SPI-EDGE-unitUnknown",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9E2EC6D72BCBA62CB74B26AE18E1AE95B592B7EC1223371B5039FCE9513CA730",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitVariantNull",
       "id": "SPI-EDGE-unitVariantNull",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "18BB92F0BF780C32D745E8966BECC46B7F44C331EE11E87AD9769467E024DE00",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitVariantEmpty",
       "id": "SPI-EDGE-unitVariantEmpty",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7E07533E1987888941CE58411FD0B5B976E7F24C31B54C3A11BF196A577356A7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "systemUnknown",
       "id": "SPI-EDGE-systemUnknown",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "84C7E98C61AD971F2CFB27973F51D33A62D6F7B2189F18B16A8CA8C57854F397",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "systemCase",
       "id": "SPI-EDGE-systemCase",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "99FDF1AEC7919D3F4F910CF8AC5330B88BFDFCA2DB2A9A79C727E421EFFD980C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitCase",
       "id": "SPI-EDGE-unitCase",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CA955D02A782A0D425CDA956C1868FB5CB13DBDA06AAC1C14D312C8663B8EADC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitName",
       "id": "SPI-EDGE-unitName",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F1C44312EB706308479F855B536909E671683E3A2BF92B238E74549A57C24B5D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "celsiusAliasLookup",
       "id": "SPI-EDGE-celsiusAliasLookup",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1737330A3C877FE5D87385EB3F764DFF9CEA335129AFBBA5243ACF5BEDEED80E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "factoryIdentity",
       "id": "SPI-EDGE-factoryIdentity",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F748C161AA94121B1B3D4370F56A2A9A59D497B0529E6807FCDC3011BEA1DD8A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "factoryScale",
       "id": "SPI-EDGE-factoryScale",
       "operation": "serviceEdge",
-      "expected": "RELATIVE"
+      "expected": "RELATIVE",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E338624640E40C8AD89049ABEE1D63387B950C352E29BE8EADF7367FA28F3E85",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "factoryRaw",
       "id": "SPI-EDGE-factoryRaw",
       "operation": "serviceEdge",
-      "expected": 2.0
+      "expected": 2.0,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B1CFF3CEFB54A8DB913E70F95B21F28742366C8332E9093BDF203E188F6D711D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "prefixCatalog",
@@ -108,8 +192,15 @@
         "r|10|-27",
         "y|10|-24",
         "z|10|-21",
-        "µ|10|-6"
-      ]
+        "\u00B5|10|-6"
+      ],
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F68D3531F1E984CD0CA706885D8FF41FE2ECC28B0EDFC38721299F3E505421AE",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "dimensionlessUnits",
@@ -120,7 +211,14 @@
         "one",
         "rad",
         "sr"
-      ]
+      ],
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7E4246357EE9E2BE8C0B5E5C7C34A194AF0D5C9D3C7E47694AAB7F7D5B51498C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "frequencyUnits",
@@ -129,67 +227,137 @@
       "expected": [
         "Bq",
         "Hz"
-      ]
+      ],
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C9E3412C2911C3AE8E3662489CD17924CF146A61D45261985375F86C926B3ABD",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "quantityLocale",
       "id": "SPI-EDGE-quantityLocale-en-US",
       "locale": "en-US",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2B2CB8A51E23B3AEA375F2AEA517B05064DE23A7B6B864D16847972BA8363B7A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitLocale",
       "id": "SPI-EDGE-unitLocale-en-US",
       "locale": "en-US",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "60191377FA761FF586665D57AC7C8CBF475163D3398C20F5961DB76483BEA347",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "quantityLocale",
       "id": "SPI-EDGE-quantityLocale-tr-TR",
       "locale": "tr-TR",
       "operation": "serviceEdge",
-      "expected": false
+      "expected": false,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3690F8D10E3EC9C53CD3DFB771827BE5466FBBB6854203FDA131EE602EFC1A26",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitLocale",
       "id": "SPI-EDGE-unitLocale-tr-TR",
       "locale": "tr-TR",
       "operation": "serviceEdge",
-      "expected": false
+      "expected": false,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5D35839CABFB581DB56AF73B528C156A100F7BD8D5B9BFDA28DA56E0E22A782A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "quantityLocale",
       "id": "SPI-EDGE-quantityLocale-de-DE",
       "locale": "de-DE",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DE21D6D33E260E647CBC95D68430F732E579953941A55A8FF53F384CB632CFD4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "argument": "unitLocale",
       "id": "SPI-EDGE-unitLocale-de-DE",
       "locale": "de-DE",
       "operation": "serviceEdge",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C155A196FA73DED31A8C3632B67FA6CFAF4EC07C0FC0B13D13567B3A6E49B74A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "SPI-EDGE-nullQuantityType",
       "operation": "serviceEdge",
       "argument": "nullQuantityType",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2F7CBD7B6AEACCFD880CA64BF34086008F48F47A44F2E9B7E7D66190B2AEB6A5",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "SPI-EDGE-unmappedFactory",
       "operation": "serviceEdge",
       "argument": "unmappedFactory",
-      "expected": true
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3E1833ED64CFFA9C31DCFD82331451EFE69EC5795EF68BD38B42801CE0C367B9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "operation": "serviceEdge",
       "argument": "unitLocaleSensitive",
       "id": "SPI-EDGE-unitLocaleSensitive",
-      "expected": false
+      "expected": false,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CC6E0B1F85DAD5F359E558AF051140155D265268F68D92364FEE741BDD295AE1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     }
   ]
 }

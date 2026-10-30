@@ -4,12 +4,23 @@ using System.Text.Json;
 using SharpUnits;
 
 /// <summary>CLR observations for the independent pinned-Java core corpus.</summary>
-internal static class CoreFixtures
+internal static partial class CoreFixtures
 {
     [ThreadStatic] private static IReadOnlyDictionary<string,JavaUnit>? catalog;
+    [ThreadStatic] private static string? failureStage;
+    [ThreadStatic] internal static string? LastExceptionType;
+    private static T Stage<T>(string name,Func<T> action)
+    {
+        try{return action();}catch{failureStage??=name;throw;}
+    }
+    private static object Failure(string category,Exception error)
+    {
+        LastExceptionType=error.GetType().FullName;
+        return new Dictionary<string,object?>{{"error",category},{"stage",failureStage??"operation"}};
+    }
     internal static object Evaluate(JsonElement test)
     {
-        var previous=catalog;
+        var previous=catalog;failureStage=null;LastExceptionType=null;
         try
         {
             // Build the unit catalog within the observed case. This also prevents
@@ -17,24 +28,24 @@ internal static class CoreFixtures
             if(S(test,"domain") is "unit" or "quantity" or "dimension")catalog=JavaUnit.CreateCatalog();
             return Observe(test);
         }
-        catch(NotSupportedException){return "ERR:UNSUPPORTED";}
-        catch(DivideByZeroException){return "ERR:ARITHMETIC";}
-        catch(InvalidOperationException error) when(error.Message.Contains("Incompatible dimensions",StringComparison.Ordinal)){return "ERR:INCOMPATIBLE";}
-        catch(Exception error) when(error is ArgumentException or FormatException or InvalidOperationException){return "ERR:ARGUMENT";}
+        catch(NotSupportedException error){return Failure("UNSUPPORTED",error);}
+        catch(DivideByZeroException error){return Failure("ARITHMETIC",error);}
+        catch(InvalidOperationException error) when(error.Message.Contains("Incompatible dimensions",StringComparison.Ordinal)){return Failure("INCOMPATIBLE",error);}
+        catch(Exception error) when(error is ArgumentException or FormatException or InvalidOperationException){return Failure("ARGUMENT",error);}
         finally{catalog=previous;}
     }
     private static JsonElement P(JsonElement node,string key)=>node.GetProperty(key);
     private static string S(JsonElement node,string key)=>P(node,key).GetString()!;
-    internal static JavaNumber Number(JsonElement node)=>S(node,"kind") switch
+    internal static JavaNumber Number(JsonElement node)=>Stage("input",()=>S(node,"kind") switch
     {
         "integer"=>JavaNumber.Integer(BigInteger.Parse(S(node,"value"),CultureInfo.InvariantCulture)),
         "decimal"=>JavaNumber.Decimal(S(node,"value")),
         "double"=>JavaNumber.FromDouble(double.Parse(S(node,"value"),CultureInfo.InvariantCulture)),
         "rational"=>JavaNumber.Ratio(BigInteger.Parse(S(node,"numerator"),CultureInfo.InvariantCulture),BigInteger.Parse(S(node,"denominator"),CultureInfo.InvariantCulture)),
         _=>throw new ArgumentException("Unknown numeric fixture")
-    };
+    });
     internal static string ObserveNumber(JavaNumber value)=>$"{value.Kind}|{value.Fraction.Numerator.ToString(CultureInfo.InvariantCulture)}/{value.Fraction.Denominator.ToString(CultureInfo.InvariantCulture)}|{value.DecimalScale}";
-    private static JavaUnitConverterAdapter Converter(JsonElement node)=>S(node,"kind") switch
+    private static JavaUnitConverterAdapter Converter(JsonElement node)=>Stage("construction",()=>S(node,"kind") switch
     {
         "identity"=>JavaUnitConverterAdapter.Identity,
         "nativeAffine"=>new JavaUnitConverterAdapter(new UnitConversion(P(node,"scale").GetDouble(),P(node,"offset").GetDouble())),
@@ -45,8 +56,8 @@ internal static class CoreFixtures
         "inverse"=>Converter(P(node,"value")).Inverse(),
         "concat"=>Converter(P(node,"left")).Concatenate(Converter(P(node,"right"))),
         _=>throw new ArgumentException("Unknown converter fixture")
-    };
-    private static JavaUnit Unit(JsonElement node)
+    });
+    private static JavaUnit Unit(JsonElement node)=>Stage("construction",()=>
     {
         if(node.ValueKind==JsonValueKind.String)return node.GetString()=="FAHRENHEIT"
             ?JavaUnit.FromDefinition(UnitRegistry.CreateStandard().Resolve("°F")):catalog![node.GetString()!];
@@ -64,9 +75,9 @@ internal static class CoreFixtures
             "binaryPrefix"=>new JavaUnitAdapter(left).Prefix(JavaServiceProvider.Current.SystemOfUnitsService.BinaryPrefixes.Single(prefix=>prefix.GetName()==S(node,"symbol"))).Model,
             "transform"=>left.Transform(Converter(P(node,"converter"))),_=>throw new ArgumentException("Unknown unit fixture")
         };
-    }
-    private static JavaNumberQuantity Quantity(JsonElement node)=>new(Number(P(node,"value")),Unit(P(node,"unit")),
-        node.TryGetProperty("relative",out var relative)&&relative.GetBoolean()?JavaQuantityScale.Relative:JavaQuantityScale.Absolute);
+    });
+    private static JavaNumberQuantity Quantity(JsonElement node)=>Stage("construction",()=>new JavaNumberQuantity(Number(P(node,"value")),Unit(P(node,"unit")),
+        node.TryGetProperty("relative",out var relative)&&relative.GetBoolean()?JavaQuantityScale.Relative:JavaQuantityScale.Absolute));
     private static object Observe(JsonElement test)
     {
         var action=S(test,"action");var domain=S(test,"domain");
@@ -101,12 +112,12 @@ internal static class CoreFixtures
         }
         if(domain=="number")
         {
-            var a=Number(P(test,"left"));if(action=="identity")return ObserveNumber(a);
+            var a=Number(P(test,"left"));if(action is "identity" or "rawInput")return ObserveNumber(a);
             if(action=="double")return BitConverter.DoubleToInt64Bits(a.ToDouble()).ToString("X16",CultureInfo.InvariantCulture);
             var b=Number(P(test,"right"));
             return action switch
             {
-                "add"=>ObserveNumber(a.Add(b)),"subtract"=>ObserveNumber(a.Subtract(b)),"multiply"=>ObserveNumber(a.Multiply(b)),
+                "add"=>ObserveNumber(test.TryGetProperty("compatibilityProfile",out var profile)&&profile.GetString()=="PINNED_INDRIYA_QUIRKS"?a.AddPinnedIndriya(b):a.Add(b)),"subtract"=>ObserveNumber(test.TryGetProperty("compatibilityProfile",out var subProfile)&&subProfile.GetString()=="PINNED_INDRIYA_QUIRKS"?a.SubtractPinnedIndriya(b):a.Subtract(b)),"multiply"=>ObserveNumber(a.Multiply(b)),
                 "divide"=>ObserveNumber(a.Divide(b)),"equal"=>a.Equals(b),"hashEqual"=>a.GetHashCode()==b.GetHashCode(),"compare"=>Math.Sign(a.CompareTo(b)),_=>throw new ArgumentException(action)
             };
         }
@@ -150,8 +161,9 @@ internal static class CoreFixtures
             "scalarMultiply"=>q.Multiply(Number(P(test,"scalar"))),"scalarDivide"=>q.Divide(Number(P(test,"scalar"))),
             _=>throw new ArgumentException(action)
         };
-        if(test.TryGetProperty("resultUnit",out var resultUnit))return result.Unit.Equals(Unit(resultUnit));
         if(test.TryGetProperty("normalizeTo",out var target))result=result.To(Unit(target));
-        return ObserveNumber(result.Value)+"|"+result.Scale.ToString().ToUpperInvariant();
+        var observation=QuantityObservation(result);
+        if(test.TryGetProperty("resultUnit",out var resultUnit))observation["matchesRequestedUnit"]=result.Unit.Equals(Unit(resultUnit));
+        return observation;
     }
 }

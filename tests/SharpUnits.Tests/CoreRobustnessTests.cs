@@ -14,6 +14,38 @@ public sealed class CoreRobustnessTests
     private static JavaNumber I(int value)=>JavaNumber.Integer(value);
 
     [Fact]
+    public void NormalizationHappensBeforeQuantityObservation()
+    {
+        using var input=System.Text.Json.JsonDocument.Parse("{\"operation\":\"core\",\"domain\":\"quantity\",\"action\":\"identity\",\"left\":{\"value\":{\"kind\":\"integer\",\"value\":\"1000\"},\"unit\":{\"kind\":\"scale\",\"left\":\"AMPERE\",\"value\":{\"kind\":\"decimal\",\"value\":\"0.001\"}}},\"normalizeTo\":\"AMPERE\"}");
+        var observed=Assert.IsType<Dictionary<string,object?>>(CoreFixtures.Evaluate(input.RootElement));
+        Assert.Equal("Integer|1/1|0",observed["value"]);
+        Assert.Equal(CoreFixtures.UnitIdentity(A),observed["unit"]);
+    }
+    [Theory]
+    [InlineData("value")]
+    [InlineData("scale")]
+    [InlineData("unit")]
+    [InlineData("converter")]
+    public void CompleteQuantityObservationRejectsIndependentFieldCorruption(string field)
+    {
+        using var expected=System.Text.Json.JsonDocument.Parse("{\"value\":\"Integer|1/1|0\",\"scale\":\"ABSOLUTE\",\"unit\":\"B(0041,0/1,0/1,0/1,1/1,0/1,0/1,0/1)\",\"converter\":{\"available\":true,\"operations\":\"I\",\"zero\":\"Integer|0/1|0\",\"one\":\"Integer|1/1|0\"}}");
+        using var fixture=System.Text.Json.JsonDocument.Parse("{}");
+        var observed=CoreFixtures.QuantityObservation(new JavaNumberQuantity(JavaNumber.One,A));
+        CoreReferenceFixtureTests.AssertObservation(expected.RootElement,observed,fixture.RootElement);
+        observed[field]="CORRUPTED";
+        Assert.ThrowsAny<Xunit.Sdk.XunitException>(()=>CoreReferenceFixtureTests.AssertObservation(expected.RootElement,observed,fixture.RootElement));
+    }
+    [Fact]
+    public void QuantityEvidenceChecksValueScaleAndUnitTogether()
+    {
+        using var input=System.Text.Json.JsonDocument.Parse("{\"operation\":\"core\",\"domain\":\"quantity\",\"action\":\"identity\",\"left\":{\"value\":{\"kind\":\"integer\",\"value\":\"1\"},\"unit\":\"AMPERE\"}}");
+        var observation=Assert.IsType<Dictionary<string,object?>>(CoreFixtures.Evaluate(input.RootElement));
+        Assert.Equal("Integer|1/1|0",observation["value"]);
+        Assert.Equal("ABSOLUTE",observation["scale"]);
+        Assert.True(observation.ContainsKey("unit"));
+        Assert.True(observation.ContainsKey("converter"));
+    }
+    [Fact]
     public void PrimitiveDoubleUnitOverloadsAvoidNumberLongNarrowing()
     {
         const double boundary=9223372036854775808d;
@@ -102,7 +134,9 @@ public sealed class CoreRobustnessTests
     public void PinnedDecimalBigIntegerNarrowingIsConfinedToCompatibilityArithmetic()
     {
         var n=JavaNumber.Integer(BigInteger.One<<64);var tenth=JavaNumber.Decimal("0.1");
-        Assert.Equal(tenth,n.Add(tenth)); // Java's longValue() wraps 2^64 to zero.
+        Assert.Equal(new Rational((BigInteger.One<<64)*10+1,10),n.Add(tenth).Fraction); // Default arithmetic must not lose the integer.
+        Assert.Equal(tenth,n.AddPinnedIndriya(tenth));
+        Assert.Equal(tenth,tenth.AddPinnedIndriya(n));
         Assert.Equal(new Rational((BigInteger.One<<64)*10+1,10),n.AddExact(tenth).Fraction);
         Assert.Equal(n.AddExact(tenth),tenth.AddExact(n));
     }

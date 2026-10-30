@@ -12,23 +12,29 @@ import tech.units.indriya.quantity.*;
 /** Independent pinned Java observations for work package one's numeric/unit core. */
 public final class CoreReferenceRunner {
     private static final ObjectMapper JSON=new ObjectMapper();
-    static Number number(JsonNode n) {
+    private static String failureStage;
+    static Number number(JsonNode n) { try {
         return switch(n.path("kind").asText()) {
             case "integer" -> new BigInteger(n.path("value").asText());
             case "decimal" -> new BigDecimal(n.path("value").asText());
             case "double" -> Double.valueOf(n.path("value").asText());
             case "rational" -> RationalNumber.of(new BigInteger(n.path("numerator").asText()),new BigInteger(n.path("denominator").asText()));
             default -> throw new IllegalArgumentException("Unknown number kind");
-        };
+        }; } catch(RuntimeException e) {if(failureStage==null)failureStage="input";throw e;}
     }
+    private static final List<Map<String,Object>> rawNumbers=new ArrayList<>();
     static String observeNumber(Number raw) {
         Number n=Calculus.currentNumberSystem().narrow(raw);
         String kind=n instanceof RationalNumber?"Rational":n instanceof BigDecimal?"Decimal":n instanceof Double||n instanceof Float?"Binary64":"Integer";
         RationalNumber r=n instanceof RationalNumber?(RationalNumber)n:n instanceof BigDecimal?RationalNumber.of((BigDecimal)n)
             :n instanceof Double||n instanceof Float?RationalNumber.of(n.doubleValue()):RationalNumber.ofInteger(new BigInteger(n.toString()));
-        return kind+"|"+r.getDividend()+"/"+r.getDivisor()+"|"+(n instanceof BigDecimal?((BigDecimal)n).scale():0);
+        String normalized=kind+"|"+r.getDividend()+"/"+r.getDivisor()+"|"+(n instanceof BigDecimal?((BigDecimal)n).scale():0);
+        var retained=new LinkedHashMap<String,Object>();retained.put("javaClass",raw.getClass().getName());
+        retained.put("text",raw.toString());retained.put("scale",raw instanceof BigDecimal?((BigDecimal)raw).scale():0);
+        retained.put("clrProfile",normalized);rawNumbers.add(retained);
+        return normalized;
     }
-    static UnitConverter converter(JsonNode n) {
+    static UnitConverter converter(JsonNode n) { try {
         return switch(n.path("kind").asText()) {
             case "identity" -> AbstractConverter.IDENTITY;
             case "nativeAffine" -> new AddConverter(n.path("offset").asDouble()).concatenate(MultiplyConverter.of(n.path("scale").asDouble()));
@@ -42,10 +48,10 @@ public final class CoreReferenceRunner {
             case "inverse" -> converter(n.path("value")).inverse();
             case "concat" -> converter(n.path("left")).concatenate(converter(n.path("right")));
             default -> throw new IllegalArgumentException("Unknown converter kind");
-        };
+        }; } catch(RuntimeException e) {if(failureStage==null)failureStage="construction";throw e;}
     }
     @SuppressWarnings({"rawtypes","unchecked"})
-    static Unit unit(JsonNode n) throws Exception {
+    static Unit unit(JsonNode n) throws Exception { try {
         if(n.isTextual())return n.asText().equals("FAHRENHEIT")?Units.KELVIN.multiply(5).divide(9).shift(459.67):n.asText().equals("ONE")?AbstractUnit.ONE:(Unit)Units.class.getField(n.asText()).get(null);
         Unit left=unit(n.path("left"));
         return switch(n.path("kind").asText()) {
@@ -64,7 +70,7 @@ public final class CoreReferenceRunner {
             case "binaryPrefix" -> left.prefix(BinaryPrefix.valueOf(n.path("symbol").asText()));
             case "transform" -> left.transform(converter(n.path("converter")));
             default -> throw new IllegalArgumentException("Unknown unit kind");
-        };
+        }; } catch(Exception e) {if(failureStage==null)failureStage="construction";throw e;}
     }
     @SuppressWarnings({"rawtypes","unchecked"})
     static ComparableQuantity quantity(JsonNode n) throws Exception {
@@ -103,7 +109,7 @@ public final class CoreReferenceRunner {
             return transformed.equals(b);
         }
         if(domain.equals("number")) {
-            var ns=Calculus.currentNumberSystem();Number a=ns.narrow(number(n.path("left")));
+            var ns=Calculus.currentNumberSystem();if(action.equals("rawInput"))return observeNumber(number(n.path("left")));Number a=ns.narrow(number(n.path("left")));
             if(action.equals("identity"))return observeNumber(a);
             if(action.equals("double"))return String.format(Locale.ROOT,"%016X",Double.doubleToLongBits(a.doubleValue()));
             Number b=ns.narrow(number(n.path("right")));
@@ -157,22 +163,69 @@ public final class CoreReferenceRunner {
             case "scalarDivide" -> a.divide(number(n.path("scalar")));
             default -> throw new IllegalArgumentException(action);
         };
-        if(n.has("resultUnit"))return result.getUnit().equals(unit(n.path("resultUnit")));
         if(n.has("normalizeTo"))result=result.to(unit(n.path("normalizeTo")));
-        return observeNumber(result.getValue())+"|"+result.getScale();
+        var observation=quantityObservation(result);
+        if(n.has("resultUnit"))observation.put("matchesRequestedUnit",result.getUnit().equals(unit(n.path("resultUnit"))));
+        return observation;
+    }
+    static String symbolKey(String symbol) {
+        if(symbol==null)return "null";StringBuilder s=new StringBuilder();
+        for(char c:symbol.toCharArray())s.append(String.format(Locale.ROOT,"%04X",(int)c));return s.toString();
+    }
+    static String dimensionKey(Dimension dimension) {
+        Unit<?>[] bases={Units.METRE,Units.KILOGRAM,Units.SECOND,Units.AMPERE,Units.KELVIN,Units.MOLE,Units.CANDELA};
+        for(int i=0;i<bases.length;i++)if(dimension.equals(bases[i].getDimension())) {
+            var parts=new ArrayList<String>();for(int j=0;j<7;j++)parts.add(i==j?"1/1":"0/1");return String.join(",",parts);
+        }
+        throw new IllegalArgumentException("Unsupported base dimension observation");
+    }
+    static String converterIdentity(UnitConverter converter) {
+        if(converter.isIdentity())return "I";var steps=new ArrayList<String>();
+        for(UnitConverter step:converter.getConversionSteps()) {
+            if(step instanceof PowerOfIntConverter p)steps.add("Power("+p.getBase()+","+p.getExponent()+")");
+            else if(step instanceof AddConverter a)steps.add("Offset("+observeNumber(a.getOffset())+")");
+            else if(step instanceof LogConverter l)steps.add("Log("+observeNumber(l.getBase())+")");
+            else if(step instanceof ExpConverter e)steps.add("Exp("+observeNumber(e.getBase())+")");
+            else if(step instanceof MultiplyConverter m)steps.add("Scale("+observeNumber(m.getValue())+")");
+            else throw new IllegalArgumentException("Unrecognized converter observation: "+step.getClass());
+        }
+        return String.join(";",steps);
+    }
+    static String unitIdentity(Unit<?> unit) {
+        if(unit instanceof BaseUnit<?>)return "B("+symbolKey(unit.getSymbol())+","+dimensionKey(unit.getDimension())+")";
+        if(unit instanceof AlternateUnit<?> a)return "A("+symbolKey(a.getSymbol())+","+unitIdentity(a.getParentUnit())+")";
+        if(unit instanceof TransformedUnit<?> t)return "T("+unitIdentity(t.getParentUnit())+","+converterIdentity(t.getConverter())+")";
+        if(unit instanceof ProductUnit<?> p) {
+            var parts=new ArrayList<String>();for(int i=0;i<p.getUnitCount();i++)parts.add(unitIdentity(p.getUnit(i))+"^"+p.getUnitPow(i)+"/"+p.getUnitRoot(i));
+            Collections.sort(parts);return "P["+String.join(";",parts)+"]";
+        }
+        throw new IllegalArgumentException("Unrecognized unit observation");
+    }
+    static Map<String,Object> quantityObservation(ComparableQuantity<?> q) {
+        var result=new LinkedHashMap<String,Object>();result.put("value",observeNumber(q.getValue()));result.put("scale",q.getScale().toString());
+        result.put("unit",unitIdentity(q.getUnit()));var conversion=new LinkedHashMap<String,Object>();
+        try {
+            UnitConverter c=((AbstractUnit<?>)q.getUnit()).getSystemConverter();conversion.put("available",true);
+            conversion.put("operations",converterIdentity(c));conversion.put("zero",observeNumber(c.convert((Number)Integer.valueOf(0))));
+            conversion.put("one",observeNumber(c.convert((Number)Integer.valueOf(1))));
+        } catch(UnsupportedOperationException error) {conversion.clear();conversion.put("available",false);conversion.put("error","UNSUPPORTED");}
+        result.put("converter",conversion);return result;
     }
     public static void main(String[] args) throws Exception {
         for(JsonNode test:JSON.readTree(new java.io.File(args[0])).path("cases")) {
-            Object result;
+            rawNumbers.clear();failureStage=null;Object result;String exceptionType=null;
             try {result=observe(test);}
             catch(Exception error) {
+                exceptionType=error.getClass().getName();
                 if(error instanceof UnsupportedOperationException)result="ERR:UNSUPPORTED";
                 else if(error instanceof ArithmeticException||error instanceof IllegalArgumentException&&error.getMessage().contains("divisor equal to ZERO"))result="ERR:ARITHMETIC";
                 else if(error instanceof javax.measure.IncommensurableException||error instanceof javax.measure.UnconvertibleException)result="ERR:INCOMPATIBLE";
                 else if(error instanceof IllegalArgumentException||error instanceof ClassCastException)result="ERR:ARGUMENT";
                 else throw error;
+                result=Map.of("error",((String)result).substring(4),"stage",failureStage==null?"operation":failureStage);
             }
-            var output=new LinkedHashMap<String,Object>();output.put("id",test.path("id").asText());output.put("result",result);
+            var output=new LinkedHashMap<String,Object>();output.put("id",test.path("id").asText());output.put("result",result);output.put("javaRepresentations",new ArrayList<>(rawNumbers));
+            if(exceptionType!=null)output.put("javaException",exceptionType);
             if(test.has("relativeTolerance"))output.put("relativeTolerance",test.path("relativeTolerance").asDouble());
             if(test.has("absoluteTolerance"))output.put("absoluteTolerance",test.path("absoluteTolerance").asDouble());
             System.out.println(JSON.writeValueAsString(output));
