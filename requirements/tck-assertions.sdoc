@@ -1,0 +1,796 @@
+[DOCUMENT]
+TITLE: SharpUnits pinned TCK assertion requirements
+
+[REQUIREMENT]
+UID: TCK-41-A1
+STATUS: Active
+TITLE: Pinned assertion 41-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A2
+STATUS: Active
+TITLE: Pinned assertion 41-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A3
+STATUS: Active
+TITLE: Pinned assertion 41-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-41-A4
+STATUS: Active
+TITLE: Pinned assertion 41-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/FundamentalTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-Setup-1
+STATUS: Active
+TITLE: Pinned assertion Setup-1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/TCKSetupTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-Setup-2
+STATUS: Active
+TITLE: Pinned assertion Setup-2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/TCKSetupTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-46-A1
+STATUS: Active
+TITLE: Pinned assertion 46-A1
+STATEMENT: Configured quantity formatter list is nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-46-A2
+STATUS: Active
+TITLE: Pinned assertion 46-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-46-A3
+STATUS: Active
+TITLE: Pinned assertion 46-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-46-A4
+STATUS: Active
+TITLE: Pinned assertion 46-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FormatReferenceFixtureTests.MatchesIndriyaFormattingFixture and FormattingRobustnessTests. Evidence: conformance/format-review-100.json and conformance/format-hundred-review.md. Exact Java reflection signature/service identity and independent closure review remain unresolved. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-46-A5
+STATUS: Active
+TITLE: Pinned assertion 46-A5
+STATEMENT: Every registered Java QuantityFormat implementation exposes a public parse method (structural reflection assertion).
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ParserReferenceFixtureTests.MatchesIndriyaParserFixture. Evidence: conformance/parser-review-50.json. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: TCK-45-A1
+STATUS: Active
+TITLE: Pinned assertion 45-A1
+STATEMENT: Configured unit formatter list is nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-45-A2
+STATUS: Active
+TITLE: Pinned assertion 45-A2
+STATEMENT: Public `String format(Unit)` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-45-A3
+STATUS: Active
+TITLE: Pinned assertion 45-A3
+STATEMENT: Every configured Java unit formatter exposes public Appendable format(Unit, Appendable). CLR adaptation and behavior shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat and UnitFormatRobustnessTests. Evidence: conformance/unitformat-gap-review-100.json and conformance/unitformat-gap-hundred-review.md. Exact Java API/unit identity and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-45-A4
+STATUS: Active
+TITLE: Pinned assertion 45-A4
+STATEMENT: Public `isLocaleSensitive` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-45-A5
+STATUS: Active
+TITLE: Pinned assertion 45-A5
+STATEMENT: Every configured Java unit formatter exposes a public label method. CLR adaptation and mutable-label behavior shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: UnitFormatReferenceFixtureTests.MatchesPinnedUnitFormat and UnitFormatRobustnessTests. Evidence: conformance/unitformat-gap-review-100.json and conformance/unitformat-gap-hundred-review.md. Exact Java API/unit identity and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-45-A6
+STATUS: Active
+TITLE: Pinned assertion 45-A6
+STATEMENT: Public `parse` method exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-431-A1
+STATUS: Active
+TITLE: Pinned assertion 431-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityCastAsType. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I01_431A1_AsType. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A2
+STATUS: Active
+TITLE: Pinned assertion 431-A2
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityEquals. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I02_431A2_Equals. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A3
+STATUS: Active
+TITLE: Pinned assertion 431-A3
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityGetScale. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I03_431A3_GetScale. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A4
+STATUS: Active
+TITLE: Pinned assertion 431-A4
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityGetUnit. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I04_431A4_GetUnit. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A5
+STATUS: Active
+TITLE: Pinned assertion 431-A5
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityGetValue. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I05_431A5_GetValue. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A6
+STATUS: Active
+TITLE: Pinned assertion 431-A6
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityHashCode. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I06_431A6_HashCode. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A7
+STATUS: Active
+TITLE: Pinned assertion 431-A7
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityIsEquivalentTo. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I07_431A7_Equivalent. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A8
+STATUS: Active
+TITLE: Pinned assertion 431-A8
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp0Inverse. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I08_431A8_Inverse. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4311-A1
+STATUS: Active
+TITLE: Pinned assertion 4311-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp1Add. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I09_4311A1_Add. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4311-A4
+STATUS: Active
+TITLE: Pinned assertion 4311-A4
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp1MultiplyByNumber. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I10_4311A4_MultiplyNumber. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4311-A5
+STATUS: Active
+TITLE: Pinned assertion 4311-A5
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp1DivideByNumber. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I11_4311A5_DivideNumber. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4311-A6
+STATUS: Active
+TITLE: Pinned assertion 4311-A6
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp1Subtract. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I12_4311A6_Subtract. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4312-A1
+STATUS: Active
+TITLE: Pinned assertion 4312-A1
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp2Divide. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I13_4312A1_DivideQuantity. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-4312-A2
+STATUS: Active
+TITLE: Pinned assertion 4312-A2
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp2Multiply. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I14_4312A2_MultiplyQuantity. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A9
+STATUS: Active
+TITLE: Pinned assertion 431-A9
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityOp0To. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I15_431A9_To. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-431-A10
+STATUS: Active
+TITLE: Pinned assertion 431-A10
+STATEMENT: See conformance/quantity-interface-review.md#assertion-matrix; structural requirement, not an arithmetic assertion.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: QuantityInterfaceTest.testQuantityIsComparable. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: QuantityParitySurfaceTests.I16_431A10_Comparable. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-44-A1
+STATUS: Active
+TITLE: Pinned assertion 44-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-44-A2
+STATUS: Active
+TITLE: Pinned assertion 44-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A1
+STATUS: Active
+TITLE: Pinned assertion 561-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A2
+STATUS: Active
+TITLE: Pinned assertion 561-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A3
+STATUS: Active
+TITLE: Pinned assertion 561-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-561-A4
+STATUS: Active
+TITLE: Pinned assertion 561-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-551-A1
+STATUS: Active
+TITLE: Pinned assertion 551-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-552-A1
+STATUS: Active
+TITLE: Pinned assertion 552-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: GAP. Verification: No complete translated test mapping yet. Evidence: No closure evidence yet. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-51-A1
+STATUS: Active
+TITLE: Pinned assertion 51-A1
+STATEMENT: Quantity factories exist for configured Java quantity types. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-51-A2
+STATUS: Active
+TITLE: Pinned assertion 51-A2
+STATEMENT: Each available Java provider creates Length quantity 10 in the system unit with ABSOLUTE and RELATIVE scale preserved.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FactoryReferenceFixtureTests.MatchesIndriyaFactoryFixture. Evidence: conformance/factory-review-50.json. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+
+[REQUIREMENT]
+UID: TCK-53-A1
+STATUS: Active
+TITLE: Pinned assertion 53-A1
+STATEMENT: `ServiceProvider.available()` is non-null. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-53-A2
+STATUS: Active
+TITLE: Pinned assertion 53-A2
+STATEMENT: Available providers are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-53-A3
+STATUS: Active
+TITLE: Pinned assertion 53-A3
+STATEMENT: Current provider is non-null. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-53-A4
+STATUS: Active
+TITLE: Pinned assertion 53-A4
+STATEMENT: Current provider priority is an int within int bounds. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A01
+STATUS: Active
+TITLE: Pinned assertion 54-A01
+STATEMENT: Each provider exposes non-null FormatService. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A02
+STATUS: Active
+TITLE: Pinned assertion 54-A02
+STATEMENT: Quantity format names are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A03
+STATUS: Active
+TITLE: Pinned assertion 54-A03
+STATEMENT: Default **unit** format exists and quantity names are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A04
+STATUS: Active
+TITLE: Pinned assertion 54-A04
+STATEMENT: Unit format names are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A05
+STATUS: Active
+TITLE: Pinned assertion 54-A05
+STATEMENT: Default unit format exists and unit names are nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A06
+STATUS: Active
+TITLE: Pinned assertion 54-A06
+STATEMENT: Each provider exposes SystemOfUnitsService. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A07
+STATUS: Active
+TITLE: Pinned assertion 54-A07
+STATEMENT: Default system exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A08
+STATUS: Active
+TITLE: Pinned assertion 54-A08
+STATEMENT: Available systems are non-null/nonempty. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A09
+STATUS: Active
+TITLE: Pinned assertion 54-A09
+STATEMENT: Binary prefixes are non-null/nonempty with pinned count. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-54-A10
+STATUS: Active
+TITLE: Pinned assertion 54-A10
+STATEMENT: Metric prefixes are non-null/nonempty with pinned count. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A1
+STATUS: Active
+TITLE: Pinned assertion 52-A1
+STATEMENT: Each provider has a service with available systems. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A2
+STATUS: Active
+TITLE: Pinned assertion 52-A2
+STATEMENT: Public `getName` method exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A3
+STATUS: Active
+TITLE: Pinned assertion 52-A3
+STATEMENT: Public `getUnit(Class)` returns Unit. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A4
+STATUS: Active
+TITLE: Pinned assertion 52-A4
+STATEMENT: Public `getUnit(String)` returns Unit. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A5
+STATUS: Active
+TITLE: Pinned assertion 52-A5
+STATEMENT: Public `getUnits` exists. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-52-A6
+STATUS: Active
+TITLE: Pinned assertion 52-A6
+STATEMENT: Public `getUnits(Dimension)` returns Set. Java API identity and CLR behavioral disposition shall be reconciled separately.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: ServiceReferenceFixtureTests.MatchesPinnedServiceObservation. Evidence: conformance/service-gap-review-100.json and conformance/service-assertion-review.md. CLR API identity, external discovery, unsupported service formats and independent closure evidence remain incomplete. Canonical record: conformance/tck-closure-ledger.json.
+
+[REQUIREMENT]
+UID: TCK-424-A1
+STATUS: Active
+TITLE: Pinned assertion 424-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testEquals. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A1_Equals. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-424-A2
+STATUS: Active
+TITLE: Pinned assertion 424-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testHashcode. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A2_HashCode. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-424-A3
+STATUS: Active
+TITLE: Pinned assertion 424-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testGetName. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A3_Name. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-424-A4
+STATUS: Active
+TITLE: Pinned assertion 424-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testGetSymbol. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A4_Symbol. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-424-A5
+STATUS: Active
+TITLE: Pinned assertion 424-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testGetValue. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A5_Value. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-424-A6
+STATUS: Active
+TITLE: Pinned assertion 424-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: PrefixInterfaceTest.testGetXponent. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckPrefixApiSurfaceTests.Tck424A6_Exponent. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A1
+STATUS: Active
+TITLE: Pinned assertion 423-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testEnsureGotConverters. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A1_ProviderAvailable. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A2
+STATUS: Active
+TITLE: Pinned assertion 423-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterEquals. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A2_EqualityMethod. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A3
+STATUS: Active
+TITLE: Pinned assertion 423-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterHashcode. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A3_HashCodeMethod. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A4
+STATUS: Active
+TITLE: Pinned assertion 423-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterInvert. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A4_InverseMethod. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A5
+STATUS: Active
+TITLE: Pinned assertion 423-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterIsIdentity. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A5_IdentityProperty. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A6
+STATUS: Active
+TITLE: Pinned assertion 423-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterIsLinear. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A6_LinearProperty. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A7
+STATUS: Active
+TITLE: Pinned assertion 423-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterConvert. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A7_NumericOverload. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A8
+STATUS: Active
+TITLE: Pinned assertion 423-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterConvertWithDouble. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A8_DoubleOverload. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A9
+STATUS: Active
+TITLE: Pinned assertion 423-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterConcatenate. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A9_Concatenation. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-423-A10
+STATUS: Active
+TITLE: Pinned assertion 423-A10
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitConversionTest.testUnitConverterGetConversionSteps. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckConverterApiSurfaceTests.Tck423A10_ConversionSteps. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A1
+STATUS: Active
+TITLE: Pinned assertion 425-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testEquals. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A1_EqualsIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A2
+STATUS: Active
+TITLE: Pinned assertion 425-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testHashcode. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A2_HashCodeIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A3
+STATUS: Active
+TITLE: Pinned assertion 425-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testMultiply. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A3_MultiplyOperatorIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A4
+STATUS: Active
+TITLE: Pinned assertion 425-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testDivide. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A4_DivideOperatorIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A5
+STATUS: Active
+TITLE: Pinned assertion 425-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testRoot. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A5_RootIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A6
+STATUS: Active
+TITLE: Pinned assertion 425-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testPow. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A6_PowIsPublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-425-A7
+STATUS: Active
+TITLE: Pinned assertion 425-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitDimensionTest.testGetBaseDimensions. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckDimensionApiSurfaceTests.Tck425A7_BaseDimensionsArePublic. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A1
+STATUS: Active
+TITLE: Pinned assertion 421-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testEquals. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A1_Equals. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A2
+STATUS: Active
+TITLE: Pinned assertion 421-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testGetDimension. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A2_Dimension. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A3
+STATUS: Active
+TITLE: Pinned assertion 421-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testGetSystemUnit. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A3_SystemUnit. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A4
+STATUS: Active
+TITLE: Pinned assertion 421-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testGetBaseUnits. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A4_BaseUnits. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A5
+STATUS: Active
+TITLE: Pinned assertion 421-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testGetName. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A5_Name. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A6
+STATUS: Active
+TITLE: Pinned assertion 421-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testGetSymbol. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A6_Symbol. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A7
+STATUS: Active
+TITLE: Pinned assertion 421-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testHashcode. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A7_HashCode. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A8
+STATUS: Active
+TITLE: Pinned assertion 421-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testIsEquivalentTo. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A8_Equivalent. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-421-A9
+STATUS: Active
+TITLE: Pinned assertion 421-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testToString. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck421A9_ToString. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A1
+STATUS: Active
+TITLE: Pinned assertion 42121-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A1_Alternate. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A1_Alternate. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A2
+STATUS: Active
+TITLE: Pinned assertion 42121-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A2_Divide. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A2_DivideUnit. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A3
+STATUS: Active
+TITLE: Pinned assertion 42121-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A3_DivideByDouble. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A3_DivideDouble. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A4
+STATUS: Active
+TITLE: Pinned assertion 42121-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A4_DivideByNumber. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A4_DivideNumber. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A5
+STATUS: Active
+TITLE: Pinned assertion 42121-A5
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A5_Multiply. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A5_MultiplyUnit. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A6
+STATUS: Active
+TITLE: Pinned assertion 42121-A6
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A6_MultiplyByDouble. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A6_MultiplyDouble. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A7
+STATUS: Active
+TITLE: Pinned assertion 42121-A7
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A7_MultiplyByNumber. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A7_MultiplyNumber. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A8
+STATUS: Active
+TITLE: Pinned assertion 42121-A8
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A8_Prefix. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A8_Prefix. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A9
+STATUS: Active
+TITLE: Pinned assertion 42121-A9
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A9_ShiftByDouble. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A9_ShiftDouble. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42121-A10
+STATUS: Active
+TITLE: Pinned assertion 42121-A10
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42121A10_ShiftByNumber. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42121A10_ShiftNumber. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42122-A1
+STATUS: Active
+TITLE: Pinned assertion 42122-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42122Pow. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42122A1_Pow. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42122-A2
+STATUS: Active
+TITLE: Pinned assertion 42122-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42122Root. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42122A2_Root. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42122-A3
+STATUS: Active
+TITLE: Pinned assertion 42122-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42122Transform. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42122A3_Transform. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42123-A1
+STATUS: Active
+TITLE: Pinned assertion 42123-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit42123Inverse. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42123A1_Inverse. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42124-A1
+STATUS: Active
+TITLE: Pinned assertion 42124-A1
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit4221IsCompatible. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42124A1_Compatible. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42124-A2
+STATUS: Active
+TITLE: Pinned assertion 42124-A2
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit4222AsType. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42124A2_AsType. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42124-A3
+STATUS: Active
+TITLE: Pinned assertion 42124-A3
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit4223GetConverterTo. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42124A3_ConverterTo. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.
+
+[REQUIREMENT]
+UID: TCK-42124-A4
+STATUS: Active
+TITLE: Pinned assertion 42124-A4
+STATEMENT: Reconcile the exact pinned assertion against src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java with an explicit API and behavioral disposition.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Source: UnitInterfaceTest.testUnit4224GetConverterToAny. Exact upstream checks and source hash: conformance/work-package-one-assertion-audit.json. CLR surface: TckUnitExactSurfaceTests.Tck42124A4_ConverterToAny. Behavioral evidence: CoreReferenceFixtureTests.MatchesPinnedCoreObservation, CoreRobustnessTests and conformance/work-package-one-cases.json. Java runtime API identity, independent review and CI closure remain separate; no VERIFIED claim.

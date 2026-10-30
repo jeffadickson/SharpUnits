@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 2,
+  "cases": [
+    {
+      "operation": "core",
+      "left": {
+        "value": {
+          "value": "1000",
+          "kind": "integer"
+        },
+        "unit": {
+          "value": {
+            "value": "0.001",
+            "kind": "decimal"
+          },
+          "kind": "scale",
+          "left": "AMPERE"
+        }
+      },
+      "id": "REPAIR-NORMALIZE",
+      "normalizeTo": "AMPERE",
+      "domain": "quantity",
+      "independentExpected": {
+        "unit": "B(0041,0/1,0/1,0/1,1/1,0/1,0/1,0/1)",
+        "scale": "ABSOLUTE",
+        "converter": {
+          "zero": "Integer|0/1|0",
+          "available": true,
+          "one": "Integer|1/1|0",
+          "operations": "I"
+        },
+        "value": "Integer|1/1|0"
+      },
+      "action": "identity",
+      "expected": {
+        "value": "Integer|1/1|0",
+        "scale": "ABSOLUTE",
+        "unit": "B(0041,0/1,0/1,0/1,1/1,0/1,0/1,0/1)",
+        "converter": {
+          "available": true,
+          "operations": "I",
+          "zero": "Integer|0/1|0",
+          "one": "Integer|1/1|0"
+        }
+      },
+      "javaRepresentations": [
+        {
+          "javaClass": "java.lang.Integer",
+          "text": "1",
+          "scale": 0,
+          "clrProfile": "Integer|1/1|0"
+        },
+        {
+          "javaClass": "java.lang.Integer",
+          "text": "0",
+          "scale": 0,
+          "clrProfile": "Integer|0/1|0"
+        },
+        {
+          "javaClass": "java.lang.Integer",
+          "text": "1",
+          "scale": 0,
+          "clrProfile": "Integer|1/1|0"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "02E3804F14CF801A2F2B2678027BD7F6A0AF3357E82BF057BBA3499364B9B220",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "operation": "core",
+      "left": {
+        "right": {
+          "offset": 7,
+          "scale": 5,
+          "kind": "nativeAffine"
+        },
+        "kind": "concat",
+        "left": {
+          "offset": 3,
+          "scale": 2,
+          "kind": "nativeAffine"
+        }
+      },
+      "id": "REPAIR-CONCAT",
+      "independentExpected": "Integer|17/1|0",
+      "domain": "converter",
+      "value": {
+        "value": "0",
+        "kind": "integer"
+      },
+      "action": "convert",
+      "expected": "Integer|17/1|0",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.lang.Integer",
+          "text": "17",
+          "scale": 0,
+          "clrProfile": "Integer|17/1|0"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "46EC0F4D1BBB8F86E5242A899E47F77A6B063B63FA104D8DD076A1579947103A",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "operation": "core",
+      "left": {
+        "converter": {
+          "value": {
+            "value": "2",
+            "kind": "integer"
+          },
+          "kind": "scale"
+        },
+        "kind": "transform",
+        "left": {
+          "value": {
+            "value": "3",
+            "kind": "integer"
+          },
+          "kind": "shift",
+          "left": "KELVIN"
+        }
+      },
+      "id": "REPAIR-TRANSFORM",
+      "independentExpected": "Integer|13/1|0",
+      "domain": "unit",
+      "value": {
+        "value": "5",
+        "kind": "integer"
+      },
+      "action": "system",
+      "expected": "Integer|13/1|0",
+      "javaRepresentations": [
+        {
+          "javaClass": "java.lang.Integer",
+          "text": "13",
+          "scale": 0,
+          "clrProfile": "Integer|13/1|0"
+        }
+      ],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A4B124E11751F6C3C3D1C9768E84ECD1885B77B4549051D40102AA0802B2AB60",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      }
+    },
+    {
+      "operation": "core",
+      "left": {
+        "value": "1_x",
+        "kind": "decimal"
+      },
+      "id": "REPAIR-MALFORMED",
+      "domain": "number",
+      "independentExpected": {
+        "stage": "input",
+        "error": "ARGUMENT"
+      },
+      "action": "identity",
+      "expected": {
+        "stage": "input",
+        "error": "ARGUMENT"
+      },
+      "javaRepresentations": [],
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "143514CD177B7B1330BA9F6DDCAEA55FAF48364B3D82296AC6D2E0686B534A0D",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized",
+        "independentCheck": "Literal authored before reference execution; capture rejects disagreement"
+      },
+      "javaException": "java.lang.NumberFormatException",
+      "allowedClrExceptions": [
+        "System.FormatException"
+      ]
+    },
+    {
+      "operation": "core",
+      "right": {
+        "value": {
+          "value": "10",
+          "kind": "integer"
+        },
+        "unit": "CELSIUS"
+      },
+      "left": {
+        "value": {
+          "value": "20",
+          "kind": "integer"
+        },
+        "unit": "CELSIUS"
+      },
+      "compatibilityProfile": "PINNED_INDRIYA_QUIRKS",
+      "action": "add",
+      "domain": "quantity",
+      "id": "REPAIR-CELSIUS-UNIT",
+      "resultUnit": "CELSIUS",
+      "expected": {
+        "value": "Decimal|6063/20|2",
+        "scale": "ABSOLUTE",
+        "unit": "T(B(004B,0/1,0/1,0/1,0/1,1/1,0/1,0/1),Offset(Binary64|5463/20|0))",
+        "converter": {
+          "available": true,
+          "operations": "Offset(Binary64|5463/20|0)",
+          "zero": "Binary64|5463/20|0",
+          "one": "Decimal|5483/20|2"
+        },
+        "matchesRequestedUnit": true
+      },
+      "javaRepresentations": [
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "303.15",
+          "scale": 2,
+          "clrProfile": "Decimal|6063/20|2"
+        },
+        {
+          "javaClass": "java.lang.Double",
+          "text": "273.15",
+          "scale": 0,
+          "clrProfile": "Binary64|5463/20|0"
+        },
+        {
+          "javaClass": "java.lang.Double",
+          "text": "273.15",
+          "scale": 0,
+          "clrProfile": "Binary64|5463/20|0"
+        },
+        {
+          "javaClass": "java.lang.Double",
+          "text": "273.15",
+          "scale": 0,
+          "clrProfile": "Binary64|5463/20|0"
+        },
+        {
+          "javaClass": "java.math.BigDecimal",
+          "text": "274.15",
+          "scale": 2,
+          "clrProfile": "Decimal|5483/20|2"
+        }
+      ],
+      "oracle": {
+        "kind": "EXPLICIT_PINNED_IMPLEMENTATION_QUIRKS",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B65B8CB25F47883E77E572801F89C668121ACB5FD6FAA375ED4B60E256F9F0E6",
+        "scope": "Measured implementation; not specification or mathematical acceptance",
+        "representationMapping": "Raw Java class/text/scale retained separately; CLR finite numeric profile is explicitly normalized"
+      }
+    }
+  ]
+}

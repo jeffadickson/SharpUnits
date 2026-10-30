@@ -1,0 +1,54 @@
+{
+  "baselineCommit": "e982406",
+  "note": "Four original grammar failures now agree with Java; baseline and current observations retained.",
+  "cases": [
+    {
+      "id": "GRAMMAR-POWER",
+      "operation": "parseAccepts",
+      "text": "1 A²",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": true,
+      "status": "RESOLVED_LOCAL_BEHAVIOR"
+    },
+    {
+      "id": "GRAMMAR-ROOT",
+      "operation": "parseAccepts",
+      "text": "1 A^1:2",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": true,
+      "status": "RESOLVED_LOCAL_BEHAVIOR"
+    },
+    {
+      "id": "GRAMMAR-FACTOR",
+      "operation": "parseAccepts",
+      "text": "1 A*2",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": true,
+      "status": "RESOLVED_LOCAL_BEHAVIOR"
+    },
+    {
+      "id": "GRAMMAR-PREFIX",
+      "operation": "parseAccepts",
+      "text": "1 µA",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "javaBefore": true,
+      "dotnetBefore": false,
+      "javaAfter": true,
+      "dotnetAfter": true,
+      "status": "RESOLVED_LOCAL_BEHAVIOR"
+    }
+  ]
+}

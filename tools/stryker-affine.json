@@ -1,0 +1,16 @@
+{
+  "stryker-config": {
+    "project": "SharpUnits.csproj",
+    "test-projects": [
+      "tests/SharpUnits.Tests/SharpUnits.Tests.csproj"
+    ],
+    "mutate": [
+      "**/JavaUnitTextFormat.cs{6974..7037}{9655..9893}{11135..11211}{13415..13491}"
+    ],
+    "concurrency": 2,
+    "reporters": [
+      "json",
+      "cleartext"
+    ]
+  }
+}

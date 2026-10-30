@@ -1,0 +1,254 @@
+[DOCUMENT]
+TITLE: SharpUnits capability requirements
+
+[REQUIREMENT]
+UID: JP-001
+STATUS: Active
+TITLE: Base SI dimensions
+STATEMENT: SharpUnits shall provide Base SI dimensions within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented bounded JavaDimensionAdapter with exact rational dimensions, signed roots and nullable decomposition; native dimensions unchanged. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-002
+STATUS: Active
+TITLE: Product and quotient units
+STATEMENT: SharpUnits shall provide Product and quotient units within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented immutable JavaUnit normalized products and quotients with preserved atom identity; native algebra remains available. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-003
+STATUS: Active
+TITLE: Rational powers/roots
+STATEMENT: SharpUnits shall provide Rational powers/roots within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented signed powers/roots in the Java graph; pinned unsupported fractional-root converter access is explicit. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-004
+STATUS: Active
+TITLE: Dimensional equality and compatibility
+STATEMENT: SharpUnits shall provide Dimensional equality and compatibility within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented separate structural unit equality, converter equivalence and exact dimension checks; CLR API identity is distinct. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-005
+STATUS: Active
+TITLE: Named derived and alternate units
+STATEMENT: SharpUnits shall provide Named derived and alternate units within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented all 44 pinned catalog parent graphs, named alternates and metadata, with independent Java observations. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-006
+STATUS: Active
+TITLE: Prefixes (SI decimal, binary where applicable)
+STATEMENT: SharpUnits shall provide Prefixes (SI decimal, binary where applicable) within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented exact radix/factor metadata and core affine prefix order; native SI prefixes retain exact factors and their affine safety guard. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-007
+STATUS: Active
+TITLE: Arbitrary user-defined units
+STATEMENT: SharpUnits shall provide Arbitrary user-defined units within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented custom base/alternate/transformed/product graphs within documented depth, factor and exponent budgets. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-008
+STATUS: Active
+TITLE: Linear converters
+STATEMENT: SharpUnits shall provide Linear converters within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented exact-number linear conversion, operation reduction, immutable steps and explicit binary projection. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-009
+STATUS: Active
+TITLE: Affine converters
+STATEMENT: SharpUnits shall provide Affine converters within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented ordered affine graphs and exact-number absolute/relative quantity semantics; native temperature policies remain separate. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-010
+STATUS: Active
+TITLE: Converter composition/inverse
+STATEMENT: SharpUnits shall provide Converter composition/inverse within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented Java right-then-left Concatenate, native-order Then, exact inverse and normalized operation equality. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-011
+STATUS: Active
+TITLE: Nonlinear converters
+STATEMENT: SharpUnits shall provide Nonlinear converters within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented bounded finite logarithmic/exponential converter graphs; nonlinear affine projection and unsupported domains are rejected. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-012
+STATUS: Active
+TITLE: Quantity conversion to compatible units
+STATEMENT: SharpUnits shall provide Quantity conversion to compatible units within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented JavaNumberQuantity exact conversion, including relative constant-derivative conversion; legacy finite-double projection remains explicit. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-013
+STATUS: Active
+TITLE: Unit parsing
+STATEMENT: SharpUnits shall provide Unit parsing within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: Java path supports superscripts/double-star/colon roots, integer factors and single SI prefixes with pinned association; legacy parser unchanged; full grammar incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-015
+STATUS: Active
+TITLE: Unit and quantity formatting
+STATEMENT: SharpUnits shall provide Unit and quantity formatting within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: retained-value double text, mutable default labels/aliases, appendable unit output and bounded SIMPLE ASCII catalog/prefix profiles; general normalization, Java unit/API identity, arbitrary Number precision and EBNF/LOCAL remain incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-016
+STATUS: Active
+TITLE: Precision strategies
+STATEMENT: SharpUnits shall provide Precision strategies within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented finite Integer/Rational/Decimal/Binary64 core with decimal128 promotion and documented pinned Java quirks; CLR integer widths are not Java runtime classes. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-017
+STATUS: Active
+TITLE: Quantity arithmetic and comparison
+STATEMENT: SharpUnits shall provide Quantity arithmetic and comparison within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented precision-preserving arithmetic, comparison, equality, scale handling and lazy inverse unit construction in JavaNumberQuantity; legacy double adapter exposes ToExact and InverseExact. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-018
+STATUS: Active
+TITLE: Typed quantity interfaces
+STATEMENT: SharpUnits shall provide Typed quantity interfaces within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial electrical types. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-019
+STATUS: Active
+TITLE: Dimension vs semantic kind
+STATEMENT: SharpUnits shall provide Dimension vs semantic kind within a documented compatibility envelope.
+COMMENT: Inventory disposition: Native semantic-kind equality remains independent of Java dimension-based AsType checks; external Java Class discovery belongs to package 3. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-020
+STATUS: Active
+TITLE: Unit systems and discovery
+STATEMENT: SharpUnits shall provide Unit systems and discovery within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: immutable built-in Java-style system with 44 unit definitions and 33 identifier-based quantity mappings; external discovery and Java type identity remain absent. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-021
+STATUS: Active
+TITLE: SPI/providers/extensibility
+STATEMENT: SharpUnits shall provide SPI/providers/extensibility within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: built-in provider/current/priority, bounded SIMPLE format discovery, system services, cached factory metadata and prefix catalogs; external ServiceLoader and Java API identity remain incomplete. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-022
+STATUS: Active
+TITLE: Annotation and metadata
+STATEMENT: SharpUnits shall provide Annotation and metadata within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-023
+STATUS: Active
+TITLE: Compound unit normalization
+STATEMENT: SharpUnits shall provide Compound unit normalization within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented normalized commutative unit products with structural atom identity and exact factors; general graph text belongs to package 2. Evidence: docs/work-package-one.md, conformance/work-package-one-assertion-audit.json and conformance/work-package-one-cases.json. Source requirements remain active; GitHub CI is disabled and no formal TCK closure is claimed.
+
+[REQUIREMENT]
+UID: JP-024
+STATUS: Active
+TITLE: Unit scale in symbolic algebra
+STATEMENT: SharpUnits shall provide Unit scale in symbolic algebra within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: RationalUnitExpression retains multiplicative scale; general symbolic/API parity unverified. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-025
+STATUS: Active
+TITLE: Offset unit algebra safeguards
+STATEMENT: SharpUnits shall provide Offset unit algebra safeguards within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial: RationalUnitExpression rejects affine products; Java quantity adapter converts affine operands to SI. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-026
+STATUS: Active
+TITLE: Serialization interoperability
+STATEMENT: SharpUnits shall provide Serialization interoperability within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-027
+STATUS: Active
+TITLE: UnitsNet adapters
+STATEMENT: SharpUnits shall provide UnitsNet adapters within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-028
+STATUS: Active
+TITLE: Java reference conformance corpus
+STATEMENT: SharpUnits shall provide Java reference conformance corpus within a documented compatibility envelope.
+COMMENT: Inventory disposition: Implemented, partial coverage: 872 shared observations across quantity/parser/format and service corpora; four grammar baseline probes repaired and six separately executed limits; exact pinned TCK runner. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-029
+STATUS: Active
+TITLE: Documentation and examples
+STATEMENT: SharpUnits shall provide Documentation and examples within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial XML docs. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: JP-030
+STATUS: Active
+TITLE: .NET 10 CI proof
+STATEMENT: SharpUnits shall provide .NET 10 CI proof within a documented compatibility envelope.
+COMMENT: Inventory disposition: GitHub workflows disabled by user; local .NET 10 checks do not provide new Ubuntu/Windows CI proof. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-001
+STATUS: Active
+TITLE: Ohm's law typed operations
+STATEMENT: SharpUnits shall provide Ohm's law typed operations within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-002
+STATUS: Active
+TITLE: Power, charge, capacitance, inductance relationships
+STATEMENT: SharpUnits shall provide Power, charge, capacitance, inductance relationships within a documented compatibility envelope.
+COMMENT: Inventory disposition: Partial power only. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-003
+STATUS: Active
+TITLE: AC complex impedance/admittance
+STATEMENT: SharpUnits shall provide AC complex impedance/admittance within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-004
+STATUS: Active
+TITLE: RMS/peak/phasor semantics
+STATEMENT: SharpUnits shall provide RMS/peak/phasor semantics within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-005
+STATUS: Active
+TITLE: Measurement uncertainty and covariance
+STATEMENT: SharpUnits shall provide Measurement uncertainty and covariance within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-006
+STATUS: Active
+TITLE: Symbolic equation solving with domain constraints
+STATEMENT: SharpUnits shall provide Symbolic equation solving with domain constraints within a documented compatibility envelope.
+COMMENT: Inventory disposition: Historical prototype, not imported. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+
+[REQUIREMENT]
+UID: EE-007
+STATUS: Active
+TITLE: Roslyn compile-time diagnostics
+STATEMENT: SharpUnits shall provide Roslyn compile-time diagnostics within a documented compatibility envelope.
+COMMENT: Inventory disposition: Missing. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.

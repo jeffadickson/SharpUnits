@@ -1,0 +1,68 @@
+{
+  "note": "Three formerly failing probes now agree with Java; one arbitrary-Number incompatibility remains, plus one shared rejection guard. No formal TCK closure.",
+  "cases": [
+    {
+      "id": "P-LIMIT-01",
+      "operation": "parseAccepts",
+      "text": "1 A trailing",
+      "expectedJava": false,
+      "expectedDotnet": false,
+      "reason": "Both reject this unconsumed suffix; this guards against an overly permissive CLR parser.",
+      "javaActual": false,
+      "dotnetActual": false,
+      "baselineDotnetAt9d469b2": false,
+      "status": "SHARED_REJECTION_GUARD"
+    },
+    {
+      "id": "P-LIMIT-02",
+      "operation": "parseAccepts",
+      "text": "1 A/V",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    },
+    {
+      "id": "P-LIMIT-03",
+      "operation": "parseAccepts",
+      "text": "1÷ 2 A",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    },
+    {
+      "id": "P-LIMIT-04",
+      "operation": "parseAccepts",
+      "text": "1 ℃",
+      "expectedJava": true,
+      "expectedDotnet": true,
+      "reason": "Previously rejected input now agrees with pinned Java; see preserved baseline and resolution evidence.",
+      "javaActual": true,
+      "dotnetActual": true,
+      "baselineDotnetAt9d469b2": false,
+      "status": "RESOLVED_LOCAL_BEHAVIOR",
+      "resolutionEvidence": "conformance/parser-gap-review-50.json"
+    },
+    {
+      "id": "P-LIMIT-05",
+      "operation": "parseAccepts",
+      "text": "1e309 A",
+      "expectedJava": true,
+      "expectedDotnet": false,
+      "reason": "Java retains arbitrary finite BigDecimal magnitude; the CLR adapter requires finite doubles.",
+      "javaActual": true,
+      "dotnetActual": false,
+      "baselineDotnetAt9d469b2": false,
+      "status": "OPEN"
+    }
+  ]
+}

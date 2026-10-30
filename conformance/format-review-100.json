@@ -1,0 +1,2618 @@
+{
+  "startingCommit": "e9dcd8e",
+  "ciPolicy": "Disabled by user; local evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "F100-001",
+      "input": {
+        "id": "F100-001",
+        "operation": "formatQuantity",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-001",
+        "result": "0 A"
+      },
+      "dotnet": {
+        "id": "F100-001",
+        "result": "0 A"
+      }
+    },
+    {
+      "iteration": 2,
+      "case": "F100-002",
+      "input": {
+        "id": "F100-002",
+        "operation": "formatQuantity",
+        "value": -0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-0 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-002",
+        "result": "0 A"
+      },
+      "dotnet": {
+        "id": "F100-002",
+        "result": "0 A"
+      }
+    },
+    {
+      "iteration": 3,
+      "case": "F100-003",
+      "input": {
+        "id": "F100-003",
+        "operation": "formatQuantity",
+        "value": 1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-003",
+        "result": "1 A"
+      },
+      "dotnet": {
+        "id": "F100-003",
+        "result": "1 A"
+      }
+    },
+    {
+      "iteration": 4,
+      "case": "F100-004",
+      "input": {
+        "id": "F100-004",
+        "operation": "formatQuantity",
+        "value": -1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-1 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-004",
+        "result": "-1 A"
+      },
+      "dotnet": {
+        "id": "F100-004",
+        "result": "-1 A"
+      }
+    },
+    {
+      "iteration": 5,
+      "case": "F100-005",
+      "input": {
+        "id": "F100-005",
+        "operation": "formatQuantity",
+        "value": 42,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "42 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-005",
+        "result": "42 A"
+      },
+      "dotnet": {
+        "id": "F100-005",
+        "result": "42 A"
+      }
+    },
+    {
+      "iteration": 6,
+      "case": "F100-006",
+      "input": {
+        "id": "F100-006",
+        "operation": "formatQuantity",
+        "value": 250,
+        "from": "mA",
+        "scale": "ABSOLUTE",
+        "expected": "250 mA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-006",
+        "result": "250 mA"
+      },
+      "dotnet": {
+        "id": "F100-006",
+        "result": "250 mA"
+      }
+    },
+    {
+      "iteration": 7,
+      "case": "F100-007",
+      "input": {
+        "id": "F100-007",
+        "operation": "formatQuantity",
+        "value": -250,
+        "from": "mA",
+        "scale": "ABSOLUTE",
+        "expected": "-250 mA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-007",
+        "result": "-250 mA"
+      },
+      "dotnet": {
+        "id": "F100-007",
+        "result": "-250 mA"
+      }
+    },
+    {
+      "iteration": 8,
+      "case": "F100-008",
+      "input": {
+        "id": "F100-008",
+        "operation": "formatQuantity",
+        "value": 2147483647,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "2147483647 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-008",
+        "result": "2147483647 A"
+      },
+      "dotnet": {
+        "id": "F100-008",
+        "result": "2147483647 A"
+      }
+    },
+    {
+      "iteration": 9,
+      "case": "F100-009",
+      "input": {
+        "id": "F100-009",
+        "operation": "formatQuantity",
+        "value": 2147483648,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "2147483648 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-009",
+        "result": "2147483648 A"
+      },
+      "dotnet": {
+        "id": "F100-009",
+        "result": "2147483648 A"
+      }
+    },
+    {
+      "iteration": 10,
+      "case": "F100-010",
+      "input": {
+        "id": "F100-010",
+        "operation": "formatQuantity",
+        "value": -2147483649,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-2147483649 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-010",
+        "result": "-2147483649 A"
+      },
+      "dotnet": {
+        "id": "F100-010",
+        "result": "-2147483649 A"
+      }
+    },
+    {
+      "iteration": 11,
+      "case": "F100-011",
+      "input": {
+        "id": "F100-011",
+        "operation": "formatQuantity",
+        "value": 4294967296,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "4294967296 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-011",
+        "result": "4294967296 A"
+      },
+      "dotnet": {
+        "id": "F100-011",
+        "result": "4294967296 A"
+      }
+    },
+    {
+      "iteration": 12,
+      "case": "F100-012",
+      "input": {
+        "id": "F100-012",
+        "operation": "formatQuantity",
+        "value": 9007199254740991,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "9007199254740991 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-012",
+        "result": "9007199254740991 A"
+      },
+      "dotnet": {
+        "id": "F100-012",
+        "result": "9007199254740991 A"
+      }
+    },
+    {
+      "iteration": 13,
+      "case": "F100-013",
+      "input": {
+        "id": "F100-013",
+        "operation": "formatQuantity",
+        "value": 9007199254740992,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "9007199254740992 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-013",
+        "result": "9007199254740992 A"
+      },
+      "dotnet": {
+        "id": "F100-013",
+        "result": "9007199254740992 A"
+      }
+    },
+    {
+      "iteration": 14,
+      "case": "F100-014",
+      "input": {
+        "id": "F100-014",
+        "operation": "formatQuantity",
+        "value": 9.223372036854775E+18,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "9223372036854774784 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-014",
+        "result": "9223372036854774784 A"
+      },
+      "dotnet": {
+        "id": "F100-014",
+        "result": "9223372036854774784 A"
+      }
+    },
+    {
+      "iteration": 15,
+      "case": "F100-015",
+      "input": {
+        "id": "F100-015",
+        "operation": "formatQuantity",
+        "value": 9.223372036854776E+18,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "9223372036854775807 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-015",
+        "result": "9223372036854775807 A"
+      },
+      "dotnet": {
+        "id": "F100-015",
+        "result": "9223372036854775807 A"
+      }
+    },
+    {
+      "iteration": 16,
+      "case": "F100-016",
+      "input": {
+        "id": "F100-016",
+        "operation": "formatQuantity",
+        "value": -9.223372036854776E+18,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-9223372036854775808 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-016",
+        "result": "-9223372036854775808 A"
+      },
+      "dotnet": {
+        "id": "F100-016",
+        "result": "-9223372036854775808 A"
+      }
+    },
+    {
+      "iteration": 17,
+      "case": "F100-017",
+      "input": {
+        "id": "F100-017",
+        "operation": "formatQuantity",
+        "value": 1E+20,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "100000000000000000000 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-017",
+        "result": "100000000000000000000 A"
+      },
+      "dotnet": {
+        "id": "F100-017",
+        "result": "100000000000000000000 A"
+      }
+    },
+    {
+      "iteration": 18,
+      "case": "F100-018",
+      "input": {
+        "id": "F100-018",
+        "operation": "formatQuantity",
+        "value": 1E+23,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "99999999999999990000000 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-018",
+        "result": "99999999999999990000000 A"
+      },
+      "dotnet": {
+        "id": "F100-018",
+        "result": "99999999999999990000000 A"
+      }
+    },
+    {
+      "iteration": 19,
+      "case": "F100-019",
+      "input": {
+        "id": "F100-019",
+        "operation": "formatQuantity",
+        "value": -1E+23,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-99999999999999990000000 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-019",
+        "result": "-99999999999999990000000 A"
+      },
+      "dotnet": {
+        "id": "F100-019",
+        "result": "-99999999999999990000000 A"
+      }
+    },
+    {
+      "iteration": 20,
+      "case": "F100-020",
+      "input": {
+        "id": "F100-020",
+        "operation": "formatQuantity",
+        "value": 1E+100,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-020",
+        "result": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 A"
+      },
+      "dotnet": {
+        "id": "F100-020",
+        "result": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 A"
+      }
+    },
+    {
+      "iteration": 21,
+      "case": "F100-021",
+      "input": {
+        "id": "F100-021",
+        "operation": "formatQuantity",
+        "value": 0.5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.5 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.5 A",
+        "id": "F100-021"
+      },
+      "dotnet": {
+        "id": "F100-021",
+        "result": "0.5 A"
+      }
+    },
+    {
+      "iteration": 22,
+      "case": "F100-022",
+      "input": {
+        "id": "F100-022",
+        "operation": "formatQuantity",
+        "value": -0.5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-0.5 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.5 A",
+        "id": "F100-022"
+      },
+      "dotnet": {
+        "id": "F100-022",
+        "result": "-0.5 A"
+      }
+    },
+    {
+      "iteration": 23,
+      "case": "F100-023",
+      "input": {
+        "id": "F100-023",
+        "operation": "formatQuantity",
+        "value": 0.125,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.125 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.125 A",
+        "id": "F100-023"
+      },
+      "dotnet": {
+        "id": "F100-023",
+        "result": "0.125 A"
+      }
+    },
+    {
+      "iteration": 24,
+      "case": "F100-024",
+      "input": {
+        "id": "F100-024",
+        "operation": "formatQuantity",
+        "value": -0.125,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-0.125 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.125 A",
+        "id": "F100-024"
+      },
+      "dotnet": {
+        "id": "F100-024",
+        "result": "-0.125 A"
+      }
+    },
+    {
+      "iteration": 25,
+      "case": "F100-025",
+      "input": {
+        "id": "F100-025",
+        "operation": "formatQuantity",
+        "value": 0.1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.1 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.1 A",
+        "id": "F100-025"
+      },
+      "dotnet": {
+        "id": "F100-025",
+        "result": "0.1 A"
+      }
+    },
+    {
+      "iteration": 26,
+      "case": "F100-026",
+      "input": {
+        "id": "F100-026",
+        "operation": "formatQuantity",
+        "value": -0.1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-0.1 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "-0.1 A",
+        "id": "F100-026"
+      },
+      "dotnet": {
+        "id": "F100-026",
+        "result": "-0.1 A"
+      }
+    },
+    {
+      "iteration": 27,
+      "case": "F100-027",
+      "input": {
+        "id": "F100-027",
+        "operation": "formatQuantity",
+        "value": 0.3333333333333333,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.3333333333333333 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.3333333333333333 A",
+        "id": "F100-027"
+      },
+      "dotnet": {
+        "id": "F100-027",
+        "result": "0.3333333333333333 A"
+      }
+    },
+    {
+      "iteration": 28,
+      "case": "F100-028",
+      "input": {
+        "id": "F100-028",
+        "operation": "formatQuantity",
+        "value": 3.141592653589793,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "3.141592653589793 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "3.141592653589793 A",
+        "id": "F100-028"
+      },
+      "dotnet": {
+        "id": "F100-028",
+        "result": "3.141592653589793 A"
+      }
+    },
+    {
+      "iteration": 29,
+      "case": "F100-029",
+      "input": {
+        "id": "F100-029",
+        "operation": "formatQuantity",
+        "value": 0.001,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.001 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.001 A",
+        "id": "F100-029"
+      },
+      "dotnet": {
+        "id": "F100-029",
+        "result": "0.001 A"
+      }
+    },
+    {
+      "iteration": 30,
+      "case": "F100-030",
+      "input": {
+        "id": "F100-030",
+        "operation": "formatQuantity",
+        "value": 0.0001,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.0E-4 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "1.0E-4 A",
+        "id": "F100-030"
+      },
+      "dotnet": {
+        "id": "F100-030",
+        "result": "1.0E-4 A"
+      }
+    },
+    {
+      "iteration": 31,
+      "case": "F100-031",
+      "input": {
+        "id": "F100-031",
+        "operation": "formatQuantity",
+        "value": 1E-05,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.0E-5 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-031",
+        "result": "1.0E-5 A"
+      },
+      "dotnet": {
+        "id": "F100-031",
+        "result": "1.0E-5 A"
+      }
+    },
+    {
+      "iteration": 32,
+      "case": "F100-032",
+      "input": {
+        "id": "F100-032",
+        "operation": "formatQuantity",
+        "value": 1E-20,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.0E-20 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-032",
+        "result": "1.0E-20 A"
+      },
+      "dotnet": {
+        "id": "F100-032",
+        "result": "1.0E-20 A"
+      }
+    },
+    {
+      "iteration": 33,
+      "case": "F100-033",
+      "input": {
+        "id": "F100-033",
+        "operation": "formatQuantity",
+        "value": -1E-20,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-1.0E-20 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-033",
+        "result": "-1.0E-20 A"
+      },
+      "dotnet": {
+        "id": "F100-033",
+        "result": "-1.0E-20 A"
+      }
+    },
+    {
+      "iteration": 34,
+      "case": "F100-034",
+      "input": {
+        "id": "F100-034",
+        "operation": "formatQuantity",
+        "value": 5E-324,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "4.9E-324 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-034",
+        "result": "4.9E-324 A"
+      },
+      "dotnet": {
+        "id": "F100-034",
+        "result": "4.9E-324 A"
+      }
+    },
+    {
+      "iteration": 35,
+      "case": "F100-035",
+      "input": {
+        "id": "F100-035",
+        "operation": "formatQuantity",
+        "value": 1E-323,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.0E-323 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-035",
+        "result": "1.0E-323 A"
+      },
+      "dotnet": {
+        "id": "F100-035",
+        "result": "1.0E-323 A"
+      }
+    },
+    {
+      "iteration": 36,
+      "case": "F100-036",
+      "input": {
+        "id": "F100-036",
+        "operation": "formatQuantity",
+        "value": 1E-322,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.0E-322 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-036",
+        "result": "1.0E-322 A"
+      },
+      "dotnet": {
+        "id": "F100-036",
+        "result": "1.0E-322 A"
+      }
+    },
+    {
+      "iteration": 37,
+      "case": "F100-037",
+      "input": {
+        "id": "F100-037",
+        "operation": "formatQuantity",
+        "value": 2.2250738585072014E-308,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "2.2250738585072014E-308 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-037",
+        "result": "2.2250738585072014E-308 A"
+      },
+      "dotnet": {
+        "id": "F100-037",
+        "result": "2.2250738585072014E-308 A"
+      }
+    },
+    {
+      "iteration": 38,
+      "case": "F100-038",
+      "input": {
+        "id": "F100-038",
+        "operation": "formatQuantity",
+        "value": 10000000.5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "1.00000005E7 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-038",
+        "result": "1.00000005E7 A"
+      },
+      "dotnet": {
+        "id": "F100-038",
+        "result": "1.00000005E7 A"
+      }
+    },
+    {
+      "iteration": 39,
+      "case": "F100-039",
+      "input": {
+        "id": "F100-039",
+        "operation": "formatQuantity",
+        "value": 9999999.5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "9999999.5 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-039",
+        "result": "9999999.5 A"
+      },
+      "dotnet": {
+        "id": "F100-039",
+        "result": "9999999.5 A"
+      }
+    },
+    {
+      "iteration": 40,
+      "case": "F100-040",
+      "input": {
+        "id": "F100-040",
+        "operation": "formatQuantity",
+        "value": -10000000.5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "-1.00000005E7 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-040",
+        "result": "-1.00000005E7 A"
+      },
+      "dotnet": {
+        "id": "F100-040",
+        "result": "-1.00000005E7 A"
+      }
+    },
+    {
+      "iteration": 41,
+      "case": "F100-041",
+      "input": {
+        "id": "F100-041",
+        "operation": "formatQuantity",
+        "value": 20,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "20 ℃",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-041",
+        "result": "20 ℃"
+      },
+      "dotnet": {
+        "id": "F100-041",
+        "result": "20 ℃"
+      }
+    },
+    {
+      "iteration": 42,
+      "case": "F100-042",
+      "input": {
+        "id": "F100-042",
+        "operation": "formatQuantity",
+        "value": -40,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "-40 ℃",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-042",
+        "result": "-40 ℃"
+      },
+      "dotnet": {
+        "id": "F100-042",
+        "result": "-40 ℃"
+      }
+    },
+    {
+      "iteration": 43,
+      "case": "F100-043",
+      "input": {
+        "id": "F100-043",
+        "operation": "formatQuantity",
+        "value": 273.15,
+        "from": "K",
+        "scale": "ABSOLUTE",
+        "expected": "273.15 K",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-043",
+        "result": "273.15 K"
+      },
+      "dotnet": {
+        "id": "F100-043",
+        "result": "273.15 K"
+      }
+    },
+    {
+      "iteration": 44,
+      "case": "F100-044",
+      "input": {
+        "id": "F100-044",
+        "operation": "formatQuantity",
+        "value": 250,
+        "from": "mA",
+        "scale": "ABSOLUTE",
+        "expected": "250 mA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-044",
+        "result": "250 mA"
+      },
+      "dotnet": {
+        "id": "F100-044",
+        "result": "250 mA"
+      }
+    },
+    {
+      "iteration": 45,
+      "case": "F100-045",
+      "input": {
+        "id": "F100-045",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "mV",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 mV",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-045",
+        "result": "1.25 mV"
+      },
+      "dotnet": {
+        "id": "F100-045",
+        "result": "1.25 mV"
+      }
+    },
+    {
+      "iteration": 46,
+      "case": "F100-046",
+      "input": {
+        "id": "F100-046",
+        "operation": "formatQuantity",
+        "value": 0.5,
+        "from": "kΩ",
+        "scale": "ABSOLUTE",
+        "expected": "0.5 kΩ",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-046",
+        "result": "0.5 kΩ"
+      },
+      "dotnet": {
+        "id": "F100-046",
+        "result": "0.5 kΩ"
+      }
+    },
+    {
+      "iteration": 47,
+      "case": "F100-047",
+      "input": {
+        "id": "F100-047",
+        "operation": "formatQuantity",
+        "value": 1,
+        "from": "µA",
+        "scale": "ABSOLUTE",
+        "expected": "1 μA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-047",
+        "result": "1 μA"
+      },
+      "dotnet": {
+        "id": "F100-047",
+        "result": "1 μA"
+      }
+    },
+    {
+      "iteration": 48,
+      "case": "F100-048",
+      "input": {
+        "id": "F100-048",
+        "operation": "formatQuantity",
+        "value": 2,
+        "from": "μA",
+        "scale": "ABSOLUTE",
+        "expected": "2 μA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-048",
+        "result": "2 μA"
+      },
+      "dotnet": {
+        "id": "F100-048",
+        "result": "2 μA"
+      }
+    },
+    {
+      "iteration": 49,
+      "case": "F100-049",
+      "input": {
+        "id": "F100-049",
+        "operation": "formatQuantity",
+        "value": 3,
+        "from": "µV",
+        "scale": "ABSOLUTE",
+        "expected": "3 μV",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-049",
+        "result": "3 μV"
+      },
+      "dotnet": {
+        "id": "F100-049",
+        "result": "3 μV"
+      }
+    },
+    {
+      "iteration": 50,
+      "case": "F100-050",
+      "input": {
+        "id": "F100-050",
+        "operation": "formatQuantity",
+        "value": 4,
+        "from": "µΩ",
+        "scale": "ABSOLUTE",
+        "expected": "4 μΩ",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-050",
+        "result": "4 μΩ"
+      },
+      "dotnet": {
+        "id": "F100-050",
+        "result": "4 μΩ"
+      }
+    },
+    {
+      "iteration": 51,
+      "case": "F100-051",
+      "input": {
+        "id": "F100-051",
+        "operation": "formatQuantity",
+        "value": 5,
+        "from": "µK",
+        "scale": "ABSOLUTE",
+        "expected": "5 μK",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "5 μK",
+        "id": "F100-051"
+      },
+      "dotnet": {
+        "id": "F100-051",
+        "result": "5 μK"
+      }
+    },
+    {
+      "iteration": 52,
+      "case": "F100-052",
+      "input": {
+        "id": "F100-052",
+        "operation": "formatQuantity",
+        "value": 6,
+        "from": "nA",
+        "scale": "ABSOLUTE",
+        "expected": "6 nA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "6 nA",
+        "id": "F100-052"
+      },
+      "dotnet": {
+        "id": "F100-052",
+        "result": "6 nA"
+      }
+    },
+    {
+      "iteration": 53,
+      "case": "F100-053",
+      "input": {
+        "id": "F100-053",
+        "operation": "formatQuantity",
+        "value": 7,
+        "from": "kV",
+        "scale": "ABSOLUTE",
+        "expected": "7 kV",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "7 kV",
+        "id": "F100-053"
+      },
+      "dotnet": {
+        "id": "F100-053",
+        "result": "7 kV"
+      }
+    },
+    {
+      "iteration": 54,
+      "case": "F100-054",
+      "input": {
+        "id": "F100-054",
+        "operation": "formatQuantity",
+        "value": 8,
+        "from": "A²",
+        "scale": "ABSOLUTE",
+        "expected": "8 A²",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "8 A²",
+        "id": "F100-054"
+      },
+      "dotnet": {
+        "id": "F100-054",
+        "result": "8 A²"
+      }
+    },
+    {
+      "iteration": 55,
+      "case": "F100-055",
+      "input": {
+        "id": "F100-055",
+        "operation": "formatQuantity",
+        "value": 9,
+        "from": "V²",
+        "scale": "ABSOLUTE",
+        "expected": "9 V²",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "9 V²",
+        "id": "F100-055"
+      },
+      "dotnet": {
+        "id": "F100-055",
+        "result": "9 V²"
+      }
+    },
+    {
+      "iteration": 56,
+      "case": "F100-056",
+      "input": {
+        "id": "F100-056",
+        "operation": "formatQuantity",
+        "value": 10,
+        "from": "Ω²",
+        "scale": "ABSOLUTE",
+        "expected": "10 Ω²",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "10 Ω²",
+        "id": "F100-056"
+      },
+      "dotnet": {
+        "id": "F100-056",
+        "result": "10 Ω²"
+      }
+    },
+    {
+      "iteration": 57,
+      "case": "F100-057",
+      "input": {
+        "id": "F100-057",
+        "operation": "formatQuantity",
+        "value": 1,
+        "from": "1",
+        "scale": "ABSOLUTE",
+        "expected": "1",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "1",
+        "id": "F100-057"
+      },
+      "dotnet": {
+        "id": "F100-057",
+        "result": "1"
+      }
+    },
+    {
+      "iteration": 58,
+      "case": "F100-058",
+      "input": {
+        "id": "F100-058",
+        "operation": "formatQuantity",
+        "value": 0.5,
+        "from": "1",
+        "scale": "ABSOLUTE",
+        "expected": "0.5",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.5",
+        "id": "F100-058"
+      },
+      "dotnet": {
+        "id": "F100-058",
+        "result": "0.5"
+      }
+    },
+    {
+      "iteration": 59,
+      "case": "F100-059",
+      "input": {
+        "id": "F100-059",
+        "operation": "formatQuantity",
+        "value": 10,
+        "from": "°C",
+        "scale": "RELATIVE",
+        "expected": "10 ℃",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "10 ℃",
+        "id": "F100-059"
+      },
+      "dotnet": {
+        "id": "F100-059",
+        "result": "10 ℃"
+      }
+    },
+    {
+      "iteration": 60,
+      "case": "F100-060",
+      "input": {
+        "id": "F100-060",
+        "operation": "formatQuantity",
+        "value": 0.25,
+        "from": "mA",
+        "scale": "RELATIVE",
+        "expected": "0.25 mA",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "0.25 mA",
+        "id": "F100-060"
+      },
+      "dotnet": {
+        "id": "F100-060",
+        "result": "0.25 mA"
+      }
+    },
+    {
+      "iteration": 61,
+      "case": "F100-061",
+      "input": {
+        "id": "F100-061",
+        "operation": "formatAppendable",
+        "value": 0.25,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "0.25 A",
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "0.25 A",
+        "id": "F100-061",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-061",
+        "result": "0.25 A"
+      }
+    },
+    {
+      "iteration": 62,
+      "case": "F100-062",
+      "input": {
+        "id": "F100-062",
+        "operation": "formatAppendable",
+        "value": 1.25,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "prefix: 1.25 A",
+        "absoluteTolerance": 0,
+        "prefix": "prefix: "
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "prefix: 1.25 A",
+        "id": "F100-062",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-062",
+        "result": "prefix: 1.25 A"
+      }
+    },
+    {
+      "iteration": 63,
+      "case": "F100-063",
+      "input": {
+        "id": "F100-063",
+        "operation": "formatAppendable",
+        "value": 2.25,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "Ω→2.25 A",
+        "absoluteTolerance": 0,
+        "prefix": "Ω→"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "Ω→2.25 A",
+        "id": "F100-063",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-063",
+        "result": "Ω→2.25 A"
+      }
+    },
+    {
+      "iteration": 64,
+      "case": "F100-064",
+      "input": {
+        "id": "F100-064",
+        "operation": "formatAppendable",
+        "value": 3.25,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "line\n3.25 A",
+        "absoluteTolerance": 0,
+        "prefix": "line\n"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "line\n3.25 A",
+        "id": "F100-064",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-064",
+        "result": "line\n3.25 A"
+      }
+    },
+    {
+      "iteration": 65,
+      "case": "F100-065",
+      "input": {
+        "id": "F100-065",
+        "operation": "formatAppendable",
+        "value": 4.25,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": "\t4.25 A",
+        "absoluteTolerance": 0,
+        "prefix": "\t"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": "\t4.25 A",
+        "id": "F100-065",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-065",
+        "result": "\t4.25 A"
+      }
+    },
+    {
+      "iteration": 66,
+      "case": "F100-066",
+      "input": {
+        "id": "F100-066",
+        "operation": "formatAppendable",
+        "value": 1,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-066",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-066",
+        "result": true
+      }
+    },
+    {
+      "iteration": 67,
+      "case": "F100-067",
+      "input": {
+        "id": "F100-067",
+        "operation": "formatAppendable",
+        "value": 2,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "prefix: ",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-067",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-067",
+        "result": true
+      }
+    },
+    {
+      "iteration": 68,
+      "case": "F100-068",
+      "input": {
+        "id": "F100-068",
+        "operation": "formatAppendable",
+        "value": 3,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "Ω→",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-068",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-068",
+        "result": true
+      }
+    },
+    {
+      "iteration": 69,
+      "case": "F100-069",
+      "input": {
+        "id": "F100-069",
+        "operation": "formatAppendable",
+        "value": 4,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "line\n",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-069",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-069",
+        "result": true
+      }
+    },
+    {
+      "iteration": 70,
+      "case": "F100-070",
+      "input": {
+        "id": "F100-070",
+        "operation": "formatAppendable",
+        "value": 5,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "\t",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-070",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-070",
+        "result": true
+      }
+    },
+    {
+      "iteration": 71,
+      "case": "F100-071",
+      "input": {
+        "id": "F100-071",
+        "operation": "formatWriter",
+        "value": 0.5,
+        "from": "mA",
+        "scale": "RELATIVE",
+        "expected": "w0|0.5 mA",
+        "absoluteTolerance": 0,
+        "prefix": "w0|"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w0|0.5 mA",
+        "id": "F100-071"
+      },
+      "dotnet": {
+        "id": "F100-071",
+        "result": "w0|0.5 mA"
+      }
+    },
+    {
+      "iteration": 72,
+      "case": "F100-072",
+      "input": {
+        "id": "F100-072",
+        "operation": "formatWriter",
+        "value": 1.5,
+        "from": "mA",
+        "scale": "ABSOLUTE",
+        "expected": "w1|1.5 mA",
+        "absoluteTolerance": 0,
+        "prefix": "w1|"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w1|1.5 mA",
+        "id": "F100-072"
+      },
+      "dotnet": {
+        "id": "F100-072",
+        "result": "w1|1.5 mA"
+      }
+    },
+    {
+      "iteration": 73,
+      "case": "F100-073",
+      "input": {
+        "id": "F100-073",
+        "operation": "formatWriter",
+        "value": 2.5,
+        "from": "mA",
+        "scale": "RELATIVE",
+        "expected": "w2|2.5 mA",
+        "absoluteTolerance": 0,
+        "prefix": "w2|"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w2|2.5 mA",
+        "id": "F100-073"
+      },
+      "dotnet": {
+        "id": "F100-073",
+        "result": "w2|2.5 mA"
+      }
+    },
+    {
+      "iteration": 74,
+      "case": "F100-074",
+      "input": {
+        "id": "F100-074",
+        "operation": "formatWriter",
+        "value": 3.5,
+        "from": "mA",
+        "scale": "ABSOLUTE",
+        "expected": "w3|3.5 mA",
+        "absoluteTolerance": 0,
+        "prefix": "w3|"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w3|3.5 mA",
+        "id": "F100-074"
+      },
+      "dotnet": {
+        "id": "F100-074",
+        "result": "w3|3.5 mA"
+      }
+    },
+    {
+      "iteration": 75,
+      "case": "F100-075",
+      "input": {
+        "id": "F100-075",
+        "operation": "formatWriter",
+        "value": 4.5,
+        "from": "mA",
+        "scale": "RELATIVE",
+        "expected": "w4|4.5 mA",
+        "absoluteTolerance": 0,
+        "prefix": "w4|"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": "w4|4.5 mA",
+        "id": "F100-075"
+      },
+      "dotnet": {
+        "id": "F100-075",
+        "result": "w4|4.5 mA"
+      }
+    },
+    {
+      "iteration": 76,
+      "case": "F100-076",
+      "input": {
+        "id": "F100-076",
+        "operation": "formatWriter",
+        "value": 1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "p",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-076"
+      },
+      "dotnet": {
+        "id": "F100-076",
+        "result": true
+      }
+    },
+    {
+      "iteration": 77,
+      "case": "F100-077",
+      "input": {
+        "id": "F100-077",
+        "operation": "formatWriter",
+        "value": 2,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "p",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-077"
+      },
+      "dotnet": {
+        "id": "F100-077",
+        "result": true
+      }
+    },
+    {
+      "iteration": 78,
+      "case": "F100-078",
+      "input": {
+        "id": "F100-078",
+        "operation": "formatWriter",
+        "value": 3,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "p",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-078"
+      },
+      "dotnet": {
+        "id": "F100-078",
+        "result": true
+      }
+    },
+    {
+      "iteration": 79,
+      "case": "F100-079",
+      "input": {
+        "id": "F100-079",
+        "operation": "formatWriter",
+        "value": 4,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "p",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-079"
+      },
+      "dotnet": {
+        "id": "F100-079",
+        "result": true
+      }
+    },
+    {
+      "iteration": 80,
+      "case": "F100-080",
+      "input": {
+        "id": "F100-080",
+        "operation": "formatWriter",
+        "value": 5,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0,
+        "prefix": "p",
+        "observe": "identity"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "result": true,
+        "id": "F100-080"
+      },
+      "dotnet": {
+        "id": "F100-080",
+        "result": true
+      }
+    },
+    {
+      "iteration": 81,
+      "case": "F100-081",
+      "input": {
+        "id": "F100-081",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 ℃",
+        "absoluteTolerance": 0,
+        "locale": "de-DE"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-081",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-081",
+        "result": "1.25 ℃"
+      }
+    },
+    {
+      "iteration": 82,
+      "case": "F100-082",
+      "input": {
+        "id": "F100-082",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 ℃",
+        "absoluteTolerance": 0,
+        "locale": "fr-FR"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-082",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-082",
+        "result": "1.25 ℃"
+      }
+    },
+    {
+      "iteration": 83,
+      "case": "F100-083",
+      "input": {
+        "id": "F100-083",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 ℃",
+        "absoluteTolerance": 0,
+        "locale": "tr-TR"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-083",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-083",
+        "result": "1.25 ℃"
+      }
+    },
+    {
+      "iteration": 84,
+      "case": "F100-084",
+      "input": {
+        "id": "F100-084",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 ℃",
+        "absoluteTolerance": 0,
+        "locale": "ar-EG"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-084",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-084",
+        "result": "1.25 ℃"
+      }
+    },
+    {
+      "iteration": 85,
+      "case": "F100-085",
+      "input": {
+        "id": "F100-085",
+        "operation": "formatQuantity",
+        "value": 1.25,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": "1.25 ℃",
+        "absoluteTolerance": 0,
+        "locale": "en-US"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-085",
+        "result": "1.25 ℃"
+      },
+      "dotnet": {
+        "id": "F100-085",
+        "result": "1.25 ℃"
+      }
+    },
+    {
+      "iteration": 86,
+      "case": "F100-086",
+      "input": {
+        "id": "F100-086",
+        "operation": "formatLocale",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "locale": "de-DE"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-086",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-086",
+        "result": false
+      }
+    },
+    {
+      "iteration": 87,
+      "case": "F100-087",
+      "input": {
+        "id": "F100-087",
+        "operation": "formatLocale",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "locale": "fr-FR"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-087",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-087",
+        "result": false
+      }
+    },
+    {
+      "iteration": 88,
+      "case": "F100-088",
+      "input": {
+        "id": "F100-088",
+        "operation": "formatLocale",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "locale": "tr-TR"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-088",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-088",
+        "result": false
+      }
+    },
+    {
+      "iteration": 89,
+      "case": "F100-089",
+      "input": {
+        "id": "F100-089",
+        "operation": "formatLocale",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "locale": "ar-EG"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-089",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-089",
+        "result": false
+      }
+    },
+    {
+      "iteration": 90,
+      "case": "F100-090",
+      "input": {
+        "id": "F100-090",
+        "operation": "formatLocale",
+        "value": 0,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "locale": "en-US"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0,
+        "id": "F100-090",
+        "result": false
+      },
+      "dotnet": {
+        "id": "F100-090",
+        "result": false
+      }
+    },
+    {
+      "iteration": 91,
+      "case": "F100-091",
+      "input": {
+        "id": "F100-091",
+        "operation": "formatRoundTrip",
+        "value": 1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-091",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-091",
+        "result": true
+      }
+    },
+    {
+      "iteration": 92,
+      "case": "F100-092",
+      "input": {
+        "id": "F100-092",
+        "operation": "formatRoundTrip",
+        "value": 0.1,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-092",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-092",
+        "result": true
+      }
+    },
+    {
+      "iteration": 93,
+      "case": "F100-093",
+      "input": {
+        "id": "F100-093",
+        "operation": "formatRoundTrip",
+        "value": 0.0001,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-093",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-093",
+        "result": true
+      }
+    },
+    {
+      "iteration": 94,
+      "case": "F100-094",
+      "input": {
+        "id": "F100-094",
+        "operation": "formatRoundTrip",
+        "value": 5E-324,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-094",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-094",
+        "result": true
+      }
+    },
+    {
+      "iteration": 95,
+      "case": "F100-095",
+      "input": {
+        "id": "F100-095",
+        "operation": "formatRoundTrip",
+        "value": 1E+23,
+        "from": "A",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-095",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-095",
+        "result": true
+      }
+    },
+    {
+      "iteration": 96,
+      "case": "F100-096",
+      "input": {
+        "id": "F100-096",
+        "operation": "formatRoundTrip",
+        "value": 20,
+        "from": "°C",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-096",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-096",
+        "result": true
+      }
+    },
+    {
+      "iteration": 97,
+      "case": "F100-097",
+      "input": {
+        "id": "F100-097",
+        "operation": "formatRoundTrip",
+        "value": 0.25,
+        "from": "µA",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-097",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-097",
+        "result": true
+      }
+    },
+    {
+      "iteration": 98,
+      "case": "F100-098",
+      "input": {
+        "id": "F100-098",
+        "operation": "formatRoundTrip",
+        "value": -0.5,
+        "from": "1",
+        "scale": "ABSOLUTE",
+        "expected": true,
+        "absoluteTolerance": 0
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "F100-098",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-098",
+        "result": true
+      }
+    },
+    {
+      "iteration": 99,
+      "case": "F100-099",
+      "input": {
+        "id": "F100-099",
+        "operation": "formatRoundTrip",
+        "value": 10,
+        "from": "°C",
+        "scale": "RELATIVE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "observe": "scale"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "F100-099",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-099",
+        "result": false
+      }
+    },
+    {
+      "iteration": 100,
+      "case": "F100-100",
+      "input": {
+        "id": "F100-100",
+        "operation": "formatRoundTrip",
+        "value": 1,
+        "from": "A",
+        "scale": "RELATIVE",
+        "expected": false,
+        "absoluteTolerance": 0,
+        "observe": "scale"
+      },
+      "source": "SimpleQuantityFormat.format; DefaultNumberSystem.narrow; Java17 Double.toString",
+      "before": "See format-baseline.json; appendable API was absent at e9dcd8e; no unexecuted per-case baseline output is claimed",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "F100-100",
+        "absoluteTolerance": 0
+      },
+      "dotnet": {
+        "id": "F100-100",
+        "result": false
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 864,
+      "differentialCases": 468,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 874,
+      "differentialCases": 478,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 884,
+      "differentialCases": 488,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 894,
+      "differentialCases": 498,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 904,
+      "differentialCases": 508,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "dotnetTestsPassed": 914,
+      "differentialCases": 518,
+      "mismatches": 0
+    },
+    {
+      "iteration": 70,
+      "build": "PASS",
+      "dotnetTestsPassed": 924,
+      "differentialCases": 528,
+      "mismatches": 0
+    },
+    {
+      "iteration": 80,
+      "build": "PASS",
+      "dotnetTestsPassed": 934,
+      "differentialCases": 538,
+      "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "dotnetTestsPassed": 948,
+      "differentialCases": 548,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "dotnetTestsPassed": 962,
+      "differentialCases": 558,
+      "mismatches": 0
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "tool": "coverlet.collector 6.0.4",
+  "reportSha256": "1C934D1CC685B855E63136B18DF41D5D84ED2C12300A60D27399AC2EB497BC0F",
+  "overall": {
+    "linesCovered": 1628,
+    "linesValid": 1727,
+    "branchesCovered": 1381,
+    "branchesValid": 1646
+  },
+  "affectedClasses": [
+    {
+      "name": "SharpUnits.JavaDoubleArithmetic",
+      "file": "JavaDoubleArithmetic.cs",
+      "linesCovered": 49,
+      "linesValid": 49,
+      "branchesCovered": 55,
+      "branchesValid": 58,
+      "lineRate": 1.0,
+      "branchRate": 0.9481999999999999,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        56
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaNumberText",
+      "file": "JavaNumberText.cs",
+      "linesCovered": 55,
+      "linesValid": 56,
+      "branchesCovered": 77,
+      "branchesValid": 84,
+      "lineRate": 0.9821,
+      "branchRate": 0.9166,
+      "uncoveredLineNumbers": [
+        74
+      ],
+      "partiallyCoveredBranchLines": [
+        12,
+        31,
+        42,
+        45,
+        54,
+        66,
+        71
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaQuantityAdapter",
+      "file": "JavaQuantityAdapter.cs",
+      "linesCovered": 82,
+      "linesValid": 84,
+      "branchesCovered": 105,
+      "branchesValid": 112,
+      "lineRate": 0.9761,
+      "branchRate": 0.9375,
+      "uncoveredLineNumbers": [
+        187,
+        200
+      ],
+      "partiallyCoveredBranchLines": [
+        122,
+        157,
+        180,
+        187,
+        199,
+        41
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaQuantityTextParser",
+      "file": "JavaQuantityTextParser.cs",
+      "linesCovered": 35,
+      "linesValid": 35,
+      "branchesCovered": 58,
+      "branchesValid": 58,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitEntry",
+      "file": "JavaServices.cs",
+      "linesCovered": 1,
+      "linesValid": 1,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitSystem",
+      "file": "JavaServices.cs",
+      "linesCovered": 17,
+      "linesValid": 17,
+      "branchesCovered": 4,
+      "branchesValid": 4,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaPrefix",
+      "file": "JavaServices.cs",
+      "linesCovered": 1,
+      "linesValid": 1,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaSystemOfUnitsService",
+      "file": "JavaServices.cs",
+      "linesCovered": 11,
+      "linesValid": 11,
+      "branchesCovered": 2,
+      "branchesValid": 2,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaFormatService",
+      "file": "JavaServices.cs",
+      "linesCovered": 14,
+      "linesValid": 14,
+      "branchesCovered": 12,
+      "branchesValid": 12,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaTypedQuantityFactory",
+      "file": "JavaServices.cs",
+      "linesCovered": 4,
+      "linesValid": 4,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaServiceProvider",
+      "file": "JavaServices.cs",
+      "linesCovered": 11,
+      "linesValid": 11,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitAsciiData",
+      "file": "JavaUnitAsciiData.cs",
+      "linesCovered": 74,
+      "linesValid": 74,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitCatalogData",
+      "file": "JavaUnitCatalogData.cs",
+      "linesCovered": 83,
+      "linesValid": 83,
+      "branchesCovered": 0,
+      "branchesValid": 0,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextFormat",
+      "file": "JavaUnitTextFormat.cs",
+      "linesCovered": 141,
+      "linesValid": 141,
+      "branchesCovered": 213,
+      "branchesValid": 214,
+      "lineRate": 1.0,
+      "branchRate": 0.9953,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        147
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextFormat/<BinaryOhmAliases>d__29",
+      "file": "JavaUnitTextFormat.cs",
+      "linesCovered": 5,
+      "linesValid": 5,
+      "branchesCovered": 2,
+      "branchesValid": 2,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextParser",
+      "file": "JavaUnitTextParser.cs",
+      "linesCovered": 22,
+      "linesValid": 22,
+      "branchesCovered": 19,
+      "branchesValid": 20,
+      "lineRate": 1.0,
+      "branchRate": 0.95,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        33
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextParser/LinearUnit",
+      "file": "JavaUnitTextParser.cs",
+      "linesCovered": 18,
+      "linesValid": 19,
+      "branchesCovered": 13,
+      "branchesValid": 16,
+      "lineRate": 0.9473,
+      "branchRate": 0.8125,
+      "uncoveredLineNumbers": [
+        59
+      ],
+      "partiallyCoveredBranchLines": [
+        58,
+        81
+      ]
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextParser/ExpressionReader",
+      "file": "JavaUnitTextParser.cs",
+      "linesCovered": 64,
+      "linesValid": 64,
+      "branchesCovered": 127,
+      "branchesValid": 130,
+      "lineRate": 1.0,
+      "branchRate": 0.9769,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        95,
+        142,
+        199
+      ]
+    },
+    {
+      "name": "SharpUnits.QuantityTextFormat",
+      "file": "QuantityTextFormat.cs",
+      "linesCovered": 34,
+      "linesValid": 34,
+      "branchesCovered": 59,
+      "branchesValid": 60,
+      "lineRate": 1.0,
+      "branchRate": 0.9833,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        10
+      ]
+    },
+    {
+      "name": "SharpUnits.SiPrefixes",
+      "file": "SiPrefixes.cs",
+      "linesCovered": 12,
+      "linesValid": 12,
+      "branchesCovered": 5,
+      "branchesValid": 6,
+      "lineRate": 1.0,
+      "branchRate": 0.8332999999999999,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        17
+      ]
+    },
+    {
+      "name": "SharpUnits.UnitConversion",
+      "file": "UnitConversion.cs",
+      "linesCovered": 16,
+      "linesValid": 16,
+      "branchesCovered": 8,
+      "branchesValid": 8,
+      "lineRate": 1.0,
+      "branchRate": 1.0,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": []
+    },
+    {
+      "name": "SharpUnits.UnitDefinition",
+      "file": "UnitConversion.cs",
+      "linesCovered": 20,
+      "linesValid": 20,
+      "branchesCovered": 5,
+      "branchesValid": 6,
+      "lineRate": 1.0,
+      "branchRate": 0.8332999999999999,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        69
+      ]
+    },
+    {
+      "name": "SharpUnits.UnitRegistry",
+      "file": "UnitRegistry.cs",
+      "linesCovered": 26,
+      "linesValid": 26,
+      "branchesCovered": 9,
+      "branchesValid": 10,
+      "lineRate": 1.0,
+      "branchRate": 0.9,
+      "uncoveredLineNumbers": [],
+      "partiallyCoveredBranchLines": [
+        20
+      ]
+    }
+  ],
+  "limitations": "Instrumented managed library only; no Java/tooling coverage or proof of semantic correctness."
+}

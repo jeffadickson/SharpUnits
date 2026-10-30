@@ -1,0 +1,90 @@
+{
+  "implementationCommit": "731d3549106f6e68f10a55df2be285d9a8b30a9e",
+  "branch": "codex/quantity-pinned-evidence",
+  "review": "verification-repair-review.md",
+  "executionManifest": {
+    "path": "verification-repair-evidence.json",
+    "sha256": "6F1E7F703AAFF88BDF9C88E8A7877779BD2024931089FD341AB4FC852F5F1C69"
+  },
+  "postCommitChecks": {
+    "ledgerRegressionTests": 7,
+    "failed": 0,
+    "referenceLock": "PASS",
+    "producerContext": "LOCAL_UNTRUSTED",
+    "liveCIQualification": false,
+    "producerGateExactGitBlobMaps": 339
+  },
+  "newlyKilledPreviouslySurvivingMutants": {
+    "entries": [
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaNumber.cs",
+        "id": "1212",
+        "line": 154
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2026",
+        "line": 70
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2030",
+        "line": 70
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2127",
+        "line": 171
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2128",
+        "line": 171
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2221",
+        "line": 246
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2223",
+        "line": 255
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2224",
+        "line": 255
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2225",
+        "line": 255
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnit.cs",
+        "id": "2227",
+        "line": 255
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\JavaUnitAdapter.cs",
+        "id": "2421",
+        "line": 37
+      },
+      {
+        "file": "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits\\SiPrefixes.cs",
+        "id": "4219",
+        "line": 29
+      }
+    ],
+    "count": 12
+  },
+  "rawEvidenceSha256": {
+    "../repair-committed-ledger-tests.log": "77DB1E47E64CDA9CA1EDE2624224156773FA6A44EAABCEDC57781427F08F0453",
+    "../repair-committed-java-producer.log": "2FC718A794D7E51A54CB3E0663049C47682F195224EE1FC8D4D07D39E813AA77",
+    "../repair-committed-lock.log": "C2A083B9D217BC21E0A468DEA8D4CB737FAEE45EF18729CA27D1574E2B699352",
+    "../repair-committed-interoperability.log": "425D7D3825122B8E7098F05C44A0A2437ED4171D874FB6ED5F18E9608663D180",
+    "../repair-improved-mutations.json": "25647101763DFC66DF0040D5CD518E60C343213CBEFBBCD3EC15B02C2C12BD0C"
+  },
+  "notes": "This evidence-only commit associates frozen tested source and review with the implementation commit. It does not overwrite broad mutation counts or grant formal TCK closure. Seven surviving focused mutations and two uncovered remain; CI remains disabled."
+}

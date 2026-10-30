@@ -8,11 +8,13 @@ Pinned upstream TCK: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde9
 
 The inventory contains **113 annotation occurrences** in 16 Java classes. Two setup annotations both have upstream ID `Setup` and are internally distinguished as `Setup-1` and `Setup-2`. These are not 113 independently verified .NET assertions.
 
-The closure ledger currently records 83 GAP, 11 PARTIAL_BEHAVIORAL_MAPPING, 5 IMPLEMENTED_UNVERIFIED, and 14 CI_PASS_BEHAVIORAL_REVIEW_PENDING; **0 VERIFIED**.
+The closure ledger currently records 14 GAP, 99 PARTIAL_BEHAVIORAL_MAPPING, and 0 IMPLEMENTED_UNVERIFIED; **0 VERIFIED**.
 
 The pinned Java TCK run has succeeded (112 Surefire tests); the separate cross-language fixture runner has succeeded. Neither establishes full SharpUnits conformance: normalized differential fixtures are not a one-to-one substitute for the official assertion corpus.
 
 ## Required next actions, in order
+
+The handoff supersedes the historical order below: QuantityInterfaceTest is first. See [the assertion review](quantity-interface-review.md).
 
 1. **UnitDimensionTest (7 annotations):** Review each pinned Java method and its fixture; record exact behavior, source method and corresponding xUnit test. Execute Java reference and C# equivalent, attach CI run and mark VERIFIED only when all expected behavior matches.
 2. **UnitConversionTest (10):** Repeat with affine conversion, inverse, identity, linearity, concatenation and conversion steps. Do not close `convert(Number)` using only a `double` test.
@@ -29,7 +31,15 @@ A ledger entry can be `VERIFIED` only when it has: exact upstream assertion ID a
 
 - Every inventory occurrence has a disposition and an auditable rationale.
 - No unreviewed gaps are represented as complete.
-- Core supported equivalents pass .NET 10 on Linux/Windows/macOS and match pinned Java reference cases.
+- Core supported equivalents pass .NET 10 on Ubuntu/Windows and match pinned Java reference cases.
 - Remaining intentional incompatibilities are documented as explicit adapter requirements.
 
 See `conformance/tck-closure-ledger.json` and `conformance/verification-protocol.md`.
+
+Latest formatting evidence: [100-scenario formatting review](format-hundred-review.md). GitHub workflows remain disabled at the user’s request; local execution is not current CI evidence.
+
+Latest service/catalog evidence: [100 scoped implementation items](service-gap-hundred-review.md) and [26 assertion dispositions](service-assertion-review.md). No formal closure is claimed.
+
+Latest unit-format evidence: [mutable labels/appendable/ASCII review](unitformat-gap-hundred-review.md). CI remains disabled; there are zero formal closures.
+
+Work package 1 core implementation and assertion reconciliation: [current review](work-package-one-review.md). The legacy quantity table describes the double projection; the new exact core resolves its arbitrary-number and structural-unit limitations within the documented profile. Packages 2–4 retain general text, discovery/type adaptation and independent/platform qualification work.

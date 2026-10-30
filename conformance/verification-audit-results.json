@@ -1,0 +1,422 @@
+{
+  "auditedBaselineCommit": "563a692d0f7b7c78e147eb09965d97d933bc56f6",
+  "verdict": "NOT_QUALIFIED_FOR_CLOSURE",
+  "verifierSourceSha256": {
+    "tools/compare_java_dotnet.py": "9A6CD85D80E8E15EE99631EA7AF7F1F0BE9F1FE64E74A5057A7C19467F2053D0",
+    "tools/check_fixture_expectations.py": "E4A78E25D091341D691CCF84F030AE5E080CBD1C42CFF6F80840EB4568B548FE",
+    "tools/validate_tck_ledger.py": "9623A198A8A6686EDEA506A021B61EBCEDAA14334E97B791459F04FB68CF4825",
+    "tools/VerificationAudit.cs": "C0FB43484D0DA30D47075718F183FA99F5C65189F08B3D92FDBE58990FB44CAE"
+  },
+  "probes": [
+    {
+      "id": "AUD-C01",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": true,
+      "accepted": true,
+      "status": "CONTROL_PASS",
+      "finding": "Matching exact observations must pass.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-C02",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Noncommuting affine composition produces 17 versus 22 at zero; an explicit witness detects reversed order.",
+      "exitCode": 1,
+      "diagnostics": "Differential comparison: 1 mismatch(es)\r\nx: numerical mismatch 17 vs 22\r\n"
+    },
+    {
+      "id": "AUD-C03",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Boolean and numeric observations must remain distinct.",
+      "exitCode": 1,
+      "diagnostics": "Differential comparison: 1 mismatch(es)\r\nx: value mismatch\r\n"
+    },
+    {
+      "id": "AUD-P01",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "Zero-tolerance integers must not collapse through binary64.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P02",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "An empty comparison cannot qualify an expected campaign.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P03",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "Null is not a valid error category.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P04",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "Empty error categories do not establish a matched failure.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P05",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "Nonfinite JSON numbers lie outside the declared finite profile.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P06",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "An invalid self-declared infinite tolerance must not hide a numerical defect.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-P07",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "An omitted tolerance must not silently authorize loss of a tiny value.",
+      "exitCode": 0,
+      "diagnostics": "Validated 1 shared conformance fixtures\r\n"
+    },
+    {
+      "id": "AUD-P08",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "A record cannot be both a result and an expected error.",
+      "exitCode": 0,
+      "diagnostics": "Validated 1 shared conformance fixtures\r\n"
+    },
+    {
+      "id": "AUD-P09",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": true,
+      "status": "ACCEPTED_UNSAFE_INPUT",
+      "finding": "Duplicate fixture IDs must not collapse into one executed case.",
+      "exitCode": 0,
+      "diagnostics": "Validated 2 shared conformance fixtures\r\n"
+    },
+    {
+      "id": "AUD-P10",
+      "status": "OBSERVATION_COLLISION",
+      "correctProjection": "Integer|1/1|0|ABSOLUTE",
+      "wrongUnitProjection": "Integer|1/1|0|ABSOLUTE",
+      "unitEquality": false
+    },
+    {
+      "id": "AUD-P11",
+      "status": "ACCEPTED_FABRICATED_CLOSURE",
+      "exitCode": 0,
+      "diagnostics": "TCK ledger valid: 113 assertions; CI_PASS_BEHAVIORAL_REVIEW_PENDING=0, GAP=13, IMPLEMENTED_UNVERIFIED=0, NOT_APPLICABLE=0, PARTIAL_BEHAVIORAL_MAPPING=99, VERIFIED=1\r\n"
+    }
+  ],
+  "historicalHashChecks": [
+    {
+      "group": "sourceSha256",
+      "path": "conformance/java-reference/src/main/java/org/sharpunits/CoreReferenceRunner.java",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "conformance/work-package-one-cases.json",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "conformance/work-package-one-known-limits.json",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "examples/ExactJavaCore.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "requirements/capabilities.sdoc",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "requirements/core-java.sdoc",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "requirements/tck-assertions.sdoc",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits.ConformanceRunner/CoreFixtures.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits.ConformanceRunner/Program.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaDimensionAdapter.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaNumber.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaNumberQuantity.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaNumberText.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaQuantityAdapter.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaServices.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaUnit.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaUnitAdapter.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/JavaUnitConverterAdapter.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/QuantityFactory.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/SiPrefix.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/SiPrefixes.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "src/SharpUnits/UnitConversion.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/CoreReferenceFixtureTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/CoreRobustnessTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/JavaParityThirtyIterationPartThreeTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/JavaParityThirtyIterationPartTwoTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/SharpUnits.Tests.csproj",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/CoreMutationReview.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/CoreReview.cs",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/Invoke-CoreMutations.ps1",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/Invoke-CoreReference.ps1",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/Measure-ParserCoverage.ps1",
+      "matches": true
+    },
+    {
+      "group": "sourceSha256",
+      "path": "tools/stryker-core.json",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-baseline.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-tests.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-reference.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-tck.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-comparator.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-strictdoc-final.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-stryker-first.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-stryker-reviewed.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-stryker-qualified.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-native.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-example.log",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-reference/java.jsonl",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-reference/dotnet.jsonl",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-known-java.jsonl",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-known-dotnet.jsonl",
+      "matches": true
+    },
+    {
+      "group": "rawEvidenceSha256",
+      "path": "../wp1-final-coverage/wp1-final.trx",
+      "matches": true
+    }
+  ],
+  "corpus": {
+    "cases": 1734,
+    "quantityCases": 205,
+    "unitOnlyQuantityCases": 4,
+    "valueScaleOnlyQuantityCases": 186,
+    "predicateOrOrderQuantityCases": 15,
+    "normalizedQuantityCases": 0,
+    "broadErrorObservations": 21
+  },
+  "limitations": "Findings collector for the stated historical baseline, not a qualification gate. Current verifier hashes identify the executed tools. Control/hash failures invalidate execution; a clean probe set would still require an independent qualification decision. No production/harness repair, formal closure, native compilation, or audit-tool coverage is claimed."
+}

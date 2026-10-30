@@ -1,7 +1,6 @@
 name: Java reference TCK
 on:
-  push:
-  pull_request:
+  # Automatic CI disabled at the user's request. Workflow is also disabled in GitHub.
   workflow_dispatch:
 jobs:
   java-reference:
@@ -21,7 +20,7 @@ jobs:
       - name: Build pinned Indriya reference
         run: mvn -B -f upstream/indriya/pom.xml -DskipTests install
       - name: Run pinned Java TCK against Indriya
-        run: mvn -B -f upstream/unit-tck/pom.xml test
+        run: python3 tools/run_pinned_tck.py
       - name: Build Java fixture runner
         run: mvn -B -f conformance/java-reference/pom.xml -DskipTests package dependency:build-classpath -Dmdep.outputFile=classpath.txt
       - name: Run Indriya fixtures
@@ -37,7 +36,21 @@ jobs:
         run: |
           dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release --nologo >&2
           dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/java-reference/cases.json > dotnet-reference.jsonl
-          python3 tools/compare_java_dotnet.py java-reference.jsonl dotnet-reference.jsonl
+          python3 tools/compare_java_dotnet.py java-reference.jsonl dotnet-reference.jsonl --cases conformance/java-reference/cases.json
+      - name: Compare complete exact-core observations
+        shell: bash
+        run: |
+          java -Dfile.encoding=UTF-8 -cp "conformance/java-reference/target/classes:$(cat conformance/java-reference/classpath.txt)" org.sharpunits.CoreReferenceRunner conformance/work-package-one-cases.json > java-core.jsonl
+          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/work-package-one-cases.json > dotnet-core.jsonl
+          python3 tools/compare_java_dotnet.py java-core.jsonl dotnet-core.jsonl --cases conformance/work-package-one-cases.json
+      - name: Capture revision-bound Java evidence
+        run: dotnet run --file tools/QualificationBundle.cs -- java qualification upstream/unit-tck/target/surefire-reports
+      - name: Upload Java qualification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-java
+          path: qualification/
+          if-no-files-found: error
       - name: Upload differential evidence
         if: always()
         uses: actions/upload-artifact@v4

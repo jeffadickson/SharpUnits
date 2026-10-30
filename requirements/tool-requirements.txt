@@ -1,0 +1,2 @@
+# Development documentation tool only; not a SharpUnits runtime dependency.
+strictdoc==0.30.4

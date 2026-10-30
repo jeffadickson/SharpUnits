@@ -1,0 +1,480 @@
+{
+  "parentImplementation": "168a5fb3815884207071d73b4ea53757ede9eb01",
+  "fixtureSha256": "00d2fdf93086a272fba869de21d7112424baf6107c334a7b4c96e83a5d7ef6d4",
+  "java": [
+    {
+      "id": "JP-008-001",
+      "result": 0.25
+    },
+    {
+      "id": "JP-004-001",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "JP-008-002",
+      "result": 4000.0
+    },
+    {
+      "id": "JP-008-003",
+      "result": 5.0
+    },
+    {
+      "id": "JP-008-004",
+      "result": 0.0
+    },
+    {
+      "id": "JP-008-005",
+      "result": -3000.0
+    },
+    {
+      "id": "JP-008-006",
+      "result": 1.0
+    },
+    {
+      "id": "JP-008-007",
+      "result": 125.0
+    },
+    {
+      "id": "JP-008-008",
+      "result": -2500.0
+    },
+    {
+      "id": "JP-004-002",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "JP-023-001",
+      "result": 2.0
+    },
+    {
+      "id": "JP-023-002",
+      "result": 250.0
+    },
+    {
+      "id": "JP-023-003",
+      "result": 12.0
+    },
+    {
+      "id": "JP-023-004",
+      "result": 12.0
+    },
+    {
+      "id": "JP-023-005",
+      "result": 1.0
+    },
+    {
+      "id": "JP-023-006",
+      "result": 1.0
+    },
+    {
+      "id": "JP-023-007",
+      "result": 1000.0
+    },
+    {
+      "id": "JP-003-001",
+      "result": 1.0
+    },
+    {
+      "id": "JP-003-002",
+      "result": 1.0
+    },
+    {
+      "id": "JP-023-008",
+      "result": 3.0
+    },
+    {
+      "id": "JP-023-009",
+      "result": 4.0
+    },
+    {
+      "id": "JP-003-003",
+      "result": 9.0
+    },
+    {
+      "id": "JP-003-004",
+      "result": 16.0
+    },
+    {
+      "result": 2.5,
+      "id": "JP-017-001",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "result": -995.0,
+      "id": "JP-017-002",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "result": 3.0,
+      "id": "JP-017-003",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "id": "JP-017-004",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "result": 1000.0,
+      "id": "EE-001-001",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "result": 3.0,
+      "id": "EE-001-002",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "result": 4.0,
+      "id": "EE-001-003",
+      "absoluteTolerance": 0.0
+    },
+    {
+      "result": 303.15,
+      "id": "Q-absolute-add",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": -193.15,
+      "id": "Q-absolute-subtract",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "ABSOLUTE",
+      "id": "Q-absolute-subtract-scale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 30.0,
+      "id": "Q-mixed-add",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 30.0,
+      "id": "Q-relative-first-add",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 30.0,
+      "id": "Q-relative-add",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "RELATIVE",
+      "id": "Q-relative-add-scale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 313.15,
+      "id": "Q-absolute-scalar",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": -126.575,
+      "id": "Q-absolute-scalar-divide",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 40.0,
+      "id": "Q-relative-scalar",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 20.0,
+      "id": "Q-relative-to",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 293.15,
+      "id": "Q-absolute-to",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": true,
+      "id": "Q-equivalent-mixed-scales",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": false,
+      "id": "Q-equals-mixed-scales",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 0,
+      "id": "Q-compare-mixed-scales",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": -1,
+      "id": "Q-compare-relative-rhs",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "ABSOLUTE",
+      "id": "Q-product-scale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "ABSOLUTE",
+      "id": "Q-relative-product-scale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 0.004,
+      "id": "Q-inverse-milliampere-absolute-magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 1000.0,
+      "id": "Q-inverse-milliampere-absolute-unitScale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "ABSOLUTE",
+      "id": "Q-inverse-milliampere-absolute-scale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 0.004,
+      "id": "Q-inverse-milliampere-relative-magnitude",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": 1000.0,
+      "id": "Q-inverse-milliampere-relative-unitScale",
+      "absoluteTolerance": 1e-10
+    },
+    {
+      "result": "RELATIVE",
+      "id": "Q-inverse-milliampere-relative-scale",
+      "absoluteTolerance": 1e-10
+    }
+  ],
+  "dotnet": [
+    {
+      "id": "JP-008-001",
+      "result": 0.25
+    },
+    {
+      "id": "JP-004-001",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "JP-008-002",
+      "result": 4000
+    },
+    {
+      "id": "JP-008-003",
+      "result": 5
+    },
+    {
+      "id": "JP-008-004",
+      "result": 0
+    },
+    {
+      "id": "JP-008-005",
+      "result": -3000
+    },
+    {
+      "id": "JP-008-006",
+      "result": 1
+    },
+    {
+      "id": "JP-008-007",
+      "result": 125
+    },
+    {
+      "id": "JP-008-008",
+      "result": -2500
+    },
+    {
+      "id": "JP-004-002",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "JP-023-001",
+      "result": 2
+    },
+    {
+      "id": "JP-023-002",
+      "result": 250
+    },
+    {
+      "id": "JP-023-003",
+      "result": 12
+    },
+    {
+      "id": "JP-023-004",
+      "result": 12
+    },
+    {
+      "id": "JP-023-005",
+      "result": 1
+    },
+    {
+      "id": "JP-023-006",
+      "result": 1
+    },
+    {
+      "id": "JP-023-007",
+      "result": 1000
+    },
+    {
+      "id": "JP-003-001",
+      "result": 1
+    },
+    {
+      "id": "JP-003-002",
+      "result": 1
+    },
+    {
+      "id": "JP-023-008",
+      "result": 3
+    },
+    {
+      "id": "JP-023-009",
+      "result": 4
+    },
+    {
+      "id": "JP-003-003",
+      "result": 9
+    },
+    {
+      "id": "JP-003-004",
+      "result": 16
+    },
+    {
+      "id": "JP-017-001",
+      "result": 2.5
+    },
+    {
+      "id": "JP-017-002",
+      "result": -995
+    },
+    {
+      "id": "JP-017-003",
+      "result": 3
+    },
+    {
+      "id": "JP-017-004",
+      "error": "INCOMPATIBLE_DIMENSION"
+    },
+    {
+      "id": "EE-001-001",
+      "result": 1000
+    },
+    {
+      "id": "EE-001-002",
+      "result": 3
+    },
+    {
+      "id": "EE-001-003",
+      "result": 4
+    },
+    {
+      "id": "Q-absolute-add",
+      "result": 303.15
+    },
+    {
+      "id": "Q-absolute-subtract",
+      "result": -193.14999999999998
+    },
+    {
+      "id": "Q-absolute-subtract-scale",
+      "result": "ABSOLUTE"
+    },
+    {
+      "id": "Q-mixed-add",
+      "result": 30
+    },
+    {
+      "id": "Q-relative-first-add",
+      "result": 30
+    },
+    {
+      "id": "Q-relative-add",
+      "result": 30
+    },
+    {
+      "id": "Q-relative-add-scale",
+      "result": "RELATIVE"
+    },
+    {
+      "id": "Q-absolute-scalar",
+      "result": 313.15
+    },
+    {
+      "id": "Q-absolute-scalar-divide",
+      "result": -126.57499999999999
+    },
+    {
+      "id": "Q-relative-scalar",
+      "result": 40
+    },
+    {
+      "id": "Q-relative-to",
+      "result": 20
+    },
+    {
+      "id": "Q-absolute-to",
+      "result": 293.15
+    },
+    {
+      "id": "Q-equivalent-mixed-scales",
+      "result": true
+    },
+    {
+      "id": "Q-equals-mixed-scales",
+      "result": false
+    },
+    {
+      "id": "Q-compare-mixed-scales",
+      "result": 0
+    },
+    {
+      "id": "Q-compare-relative-rhs",
+      "result": -1
+    },
+    {
+      "id": "Q-product-scale",
+      "result": "ABSOLUTE"
+    },
+    {
+      "id": "Q-relative-product-scale",
+      "result": "ABSOLUTE"
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-magnitude",
+      "result": 0.004
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-unitScale",
+      "result": 1000
+    },
+    {
+      "id": "Q-inverse-milliampere-absolute-scale",
+      "result": "ABSOLUTE"
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-magnitude",
+      "result": 0.004
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-unitScale",
+      "result": 1000
+    },
+    {
+      "id": "Q-inverse-milliampere-relative-scale",
+      "result": "RELATIVE"
+    }
+  ],
+  "dotnetTests": {
+    "passed": 417,
+    "failed": 0,
+    "skipped": 0
+  },
+  "beforeCorrection": {
+    "quantityTests": 31,
+    "failed": 5,
+    "passed": 26
+  }
+}

@@ -1,6 +1,11 @@
 namespace SharpUnits;
 /// <summary>Absolute thermodynamic temperature in kelvin.</summary>
-/// <remarks>Absolute temperatures cannot be added to other absolute temperatures in this model.</remarks>
+/// <remarks>An absolute temperature behaves like a point: subtracting another absolute
+/// yields a <see cref="TemperatureDifference"/>, while adding a difference yields an absolute.
+/// No operator adds two absolute temperatures. For example, 20 degrees Celsius plus
+/// a 10-kelvin difference is 30 degrees Celsius (303.15 kelvin).
+/// This physical arithmetic policy differs from <see cref="JavaQuantityAdapter"/>,
+/// which follows Indriya's permissive absolute arithmetic.</remarks>
 public readonly record struct AbsoluteTemperature
 {
  /// <summary>Temperature in kelvin.</summary>
@@ -21,6 +26,9 @@ public readonly record struct AbsoluteTemperature
  public static AbsoluteTemperature operator -(AbsoluteTemperature a,TemperatureDifference delta)=>new(a.Kelvin-delta.Kelvin);
 }
 /// <summary>Signed temperature difference, expressed in kelvin increments.</summary>
+/// <remarks>Unit offsets do not apply to intervals: a 10-degree Celsius difference
+/// is 10 kelvin or 18 degrees Fahrenheit. Convert differences using scale only,
+/// rather than an absolute Celsius or Fahrenheit converter.</remarks>
 public readonly record struct TemperatureDifference(double Kelvin)
 {
  /// <summary>Adds two temperature differences.</summary>

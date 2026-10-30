@@ -1,0 +1,63 @@
+{
+  "tool": "coverlet.collector 6.0.4",
+  "reportSha256": "1247DF2AF2C979EE7400CFF66D699FE1B5A8CC27594B42A657501572F1E2A2BE",
+  "overall": {
+    "linesCovered": 1117,
+    "linesValid": 1215,
+    "branchesCovered": 911,
+    "branchesValid": 1170
+  },
+  "affectedClasses": [
+    {
+      "name": "SharpUnits.JavaDoubleArithmetic",
+      "file": "JavaDoubleArithmetic.cs",
+      "linesCovered": 46,
+      "linesValid": 46,
+      "branchesCovered": 50,
+      "branchesValid": 54,
+      "lineRate": 1.0,
+      "branchRate": 0.9259000000000001
+    },
+    {
+      "name": "SharpUnits.JavaQuantityTextParser",
+      "file": "JavaQuantityTextParser.cs",
+      "linesCovered": 34,
+      "linesValid": 35,
+      "branchesCovered": 57,
+      "branchesValid": 58,
+      "lineRate": 0.9714,
+      "branchRate": 0.9826999999999999
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextParser",
+      "file": "JavaUnitTextParser.cs",
+      "linesCovered": 13,
+      "linesValid": 13,
+      "branchesCovered": 3,
+      "branchesValid": 4,
+      "lineRate": 1.0,
+      "branchRate": 0.75
+    },
+    {
+      "name": "SharpUnits.JavaUnitTextParser/ExpressionReader",
+      "file": "JavaUnitTextParser.cs",
+      "linesCovered": 37,
+      "linesValid": 37,
+      "branchesCovered": 65,
+      "branchesValid": 70,
+      "lineRate": 1.0,
+      "branchRate": 0.9285
+    },
+    {
+      "name": "SharpUnits.QuantityTextFormat",
+      "file": "QuantityTextFormat.cs",
+      "linesCovered": 14,
+      "linesValid": 14,
+      "branchesCovered": 7,
+      "branchesValid": 8,
+      "lineRate": 1.0,
+      "branchRate": 0.875
+    }
+  ],
+  "limitations": "Instrumented managed library only; no Java/tooling coverage or proof of semantic correctness."
+}

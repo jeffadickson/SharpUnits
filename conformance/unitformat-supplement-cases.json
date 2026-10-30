@@ -1,0 +1,935 @@
+{
+  "cases": [
+    {
+      "id": "UF-EDGE-001",
+      "operation": "unitFormat",
+      "gap": "System text lookup follows shared labels",
+      "kind": "globalLookup",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E2D2C3D3A63B85071B362BEB01EC7476F63870723AB52CCF25C4DFF79D29EE2E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-002",
+      "operation": "unitFormat",
+      "gap": "Default speed follows component labels",
+      "kind": "format",
+      "unit": "METRE_PER_SECOND",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met/s",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E02993DAE0D7B9F1214A3D814B7C24808C36236E2D06FC79995DB87ED4251C27",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-003",
+      "operation": "unitFormat",
+      "gap": "ASCII speed follows component labels",
+      "kind": "format",
+      "unit": "METRE_PER_SECOND",
+      "text": null,
+      "ascii": true,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met*s^-1",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "20D5EA881846F0330617E4DCB6BCB7D24D54E9F113EFA9E5E09D63BAC9635476",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-004",
+      "operation": "unitFormat",
+      "gap": "Default area without label follows component labels",
+      "kind": "format",
+      "unit": "SQUARE_METRE",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeLabel",
+          "name": null,
+          "unit": "SQUARE_METRE"
+        },
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met\u00B2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "57A094A2B9E38D1C64E19DF015BF7EEDEEF1FDF9D9741005CB197A16B790F3D6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-005",
+      "operation": "unitFormat",
+      "gap": "Default volume without label follows component labels",
+      "kind": "format",
+      "unit": "CUBIC_METRE",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeLabel",
+          "name": null,
+          "unit": "CUBIC_METRE"
+        },
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "met\u00B3",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EF5652CBB5CF7F48AC5715DA949AFC10BF11474E5A5271C9551E87B1EAD0E17A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-006",
+      "operation": "unitFormat",
+      "gap": "Default area macro masks ASCII component override",
+      "kind": "format",
+      "unit": "SQUARE_METRE",
+      "text": null,
+      "ascii": true,
+      "actions": [
+        {
+          "op": "label",
+          "name": "met",
+          "unit": "METRE"
+        }
+      ],
+      "expected": "m\u00B2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E6C993449B7A032A82D672BCD6D8B8F78315E5DEB4ACCACB408D7A8B65EEBDD2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-007",
+      "operation": "unitFormat",
+      "gap": "ASCII area after default macro removal",
+      "kind": "defaultAreaRemoval",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "m^2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2E1791B7D4EFAC742D191D8AAD0975834AE0F50109B6A176BE94F034A3A3459A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-008",
+      "operation": "unitFormat",
+      "gap": "ASCII square alias",
+      "kind": "parse",
+      "unit": "SQUARE_METRE",
+      "text": "m2",
+      "ascii": true,
+      "actions": [],
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9E8C56462B05BB0E69E1714375BEB894F34744EB1365135EB0643C18567C3BA1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-009",
+      "operation": "unitFormat",
+      "gap": "ASCII Celsius alias",
+      "kind": "parse",
+      "unit": "CELSIUS",
+      "text": "Cel",
+      "ascii": true,
+      "actions": [],
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "516540D25497FD5DF0F882A7CC0F2859C7038436D0E7EB58B630A9B396E2F57A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-010",
+      "operation": "unitFormat",
+      "gap": "Default micro Ohm alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "\u00B5Ohm",
+      "ascii": false,
+      "actions": [],
+      "expected": "\u03BC\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0DD82A883DD1F2B5A461965AF0C6E166B661AB0597DF2E0442FD6220C3E25905",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-011",
+      "operation": "unitFormat",
+      "gap": "ASCII micro Ohm alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "microOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E165E1EC546F9EDF199FE465CFD6CA41F0DAE95C9914869E71639E409D2BE381",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-012",
+      "operation": "unitFormat",
+      "gap": "Default month alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "month",
+      "ascii": false,
+      "actions": [],
+      "expected": "mo",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "88277B235AE3668FF438402436FBD381E3F427A7A624F849CCA2E5671D74F82D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-013",
+      "operation": "unitFormat",
+      "gap": "Default day alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "day",
+      "ascii": false,
+      "actions": [],
+      "expected": "d",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "192DF853066DE800CD089ACBBC7E67FB613E90F5BDB2C972520F83E4C538E8B0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-014",
+      "operation": "unitFormat",
+      "gap": "ASCII micro ampere alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microA",
+      "ascii": true,
+      "actions": [],
+      "expected": "microA",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B1E5DD250A15F7F6B2BD94D2E94C2FC25A7084308D0DDAEFCAE676839F86CF3E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-015",
+      "operation": "unitFormat",
+      "gap": "ASCII micro gram alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microg",
+      "ascii": true,
+      "actions": [],
+      "expected": "microg",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "736E2B7962C7201F196BE189DBA26482B3CAD850498EF7A5BA0DCF1E71A7EFFB",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-016",
+      "operation": "unitFormat",
+      "gap": "ASCII micro litre alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "microL",
+      "ascii": true,
+      "actions": [],
+      "expected": "microL",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "73A48A5E703A9D9DAC0CB1064E5ED39A3CD67B18FC883AF909DE0FEC7D2742EE",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-017",
+      "operation": "unitFormat",
+      "gap": "ASCII kilogram alias",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "kg",
+      "ascii": true,
+      "actions": [],
+      "expected": "kg",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "135C29FA1281B4D840518F8C1C746D3FCDA076A1FDB63C86102D2610C04F7337",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-018",
+      "operation": "unitFormat",
+      "gap": "Removing null alias is a no-op",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "removeAlias",
+          "name": null,
+          "unit": "A"
+        }
+      ],
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D4868B2E55FA5352A291326DB2195F831020093027D6B0FE5EAB2B7DB6812279",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-019",
+      "operation": "unitFormat",
+      "gap": "NBSP may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "\u00A0label",
+          "unit": "A"
+        }
+      ],
+      "expected": "\u00A0label",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DEF4616057C6EA69FA78BD097610EB7E908D88A6E17B84DB1E8A20C55F309988",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-020",
+      "operation": "unitFormat",
+      "gap": "NEL may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "\u0085label",
+          "unit": "A"
+        }
+      ],
+      "expected": "\u0085label",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2A17FCE1109159E1F1423254DC8FBCFAC67815A79B644E9C270F62B5B59EFCDF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-021",
+      "operation": "unitFormat",
+      "gap": "NUL may start a default label",
+      "kind": "format",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "\u0000label",
+          "unit": "A"
+        }
+      ],
+      "expected": "\u0000label",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "42ECBE2ABEA24BF83745402F00602924AE15A65DA5F1CABF432AED34BC8E7F42",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-022",
+      "operation": "unitFormat",
+      "gap": "Aliases are case sensitive",
+      "kind": "parse",
+      "unit": "A",
+      "text": "foo",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "alias",
+          "name": "Foo",
+          "unit": "A"
+        }
+      ],
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "150C5396C0BFBF579DEDAFA541A87C7E1A577F1BFEB71085980FDCDE2A5AE35F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-023",
+      "operation": "unitFormat",
+      "gap": "Removing current parse name retains no binding",
+      "kind": "parse",
+      "unit": "A",
+      "text": "amps",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "amps",
+          "unit": "A"
+        },
+        {
+          "op": "removeAlias",
+          "name": "amps",
+          "unit": "A"
+        }
+      ],
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A4F9AD09DA9B9D3A88F7E48E20BD23CEE67864907FE2F3E18564E1EBEE86A026",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-024",
+      "operation": "unitFormat",
+      "gap": "Removing aliases preserves another unit\u0027s collision binding",
+      "kind": "parse",
+      "unit": "V",
+      "text": "shared",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "label",
+          "name": "shared",
+          "unit": "A"
+        },
+        {
+          "op": "label",
+          "name": "shared",
+          "unit": "V"
+        },
+        {
+          "op": "removeAliases",
+          "name": null,
+          "unit": "A"
+        }
+      ],
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FB6D4F2E91B7959D6066BD729DB869D7D9D308026C93D9C99B1A8C4EFD74E486",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-025",
+      "operation": "unitFormat",
+      "gap": "ASCII cubic alias",
+      "kind": "parse",
+      "unit": "CUBIC_METRE",
+      "text": "m3",
+      "ascii": true,
+      "actions": [],
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B90FD56F67B9B266A1A4F07584A2884DD0235C5748C411819103DD1E1AFCEFCE",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-026",
+      "operation": "unitFormat",
+      "gap": "Component aliases change product dimensions",
+      "kind": "parseDimension",
+      "unit": "A",
+      "text": "m/s",
+      "ascii": false,
+      "actions": [
+        {
+          "op": "alias",
+          "name": "m",
+          "unit": "A"
+        }
+      ],
+      "expected": "[0, 0, -1, 1, 0, 0, 0]",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4908B06565B8604489C9F72D72D8E067C87E4257482CF68041D538DB18D77ACC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-027",
+      "operation": "unitFormat",
+      "gap": "Default identifier classification across all UTF-16 code units",
+      "kind": "identifierBmp",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "65128:953F49BD8D536E8FD9B70C07D4B90437141ABDCFC165E2B881291B39CE17385D",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AF053DB5D83BA36FE99B579F115BA89791145D2B01C7CB0E7964A1C2A033B506",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-028",
+      "operation": "unitFormat",
+      "gap": "ASCII identifier classification across all UTF-16 code units",
+      "kind": "identifierBmp",
+      "unit": "A",
+      "text": null,
+      "ascii": true,
+      "actions": [],
+      "expected": "99:97475658E781D0D9AA00E64E8F3EE407571632365451E576AC79C542FE9F2731",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D1680B257E86270F0C6CD2190C0F76B2D4566FFC6A817BCEE0827FF36D8013A8",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-029",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ki",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "KiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "KiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7EAB3DF4BC6B9D1B629615EAD07F0A5FC67F300A9FFF098717C201A538626B04",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-030",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ki",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "KiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Ki\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C66DF4D025DD02CEAA8CB8C92844FE659201A1DA2152DBBA8F555C36895B341E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-031",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Mi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "MiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "MiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1AF18A8C4553BD1E385ACC8A9956AAD12FCD7DE2F8FA9F7FD4296B011A392F90",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-032",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Mi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "MiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Mi\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E29BEC961C679DDF17D0142458155256A3AD79A2B8B3B723DABE025AE304E68B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-033",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Gi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "GiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "GiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D1D7ACF1948EE47A3B8F0E2B086AA8455F4853CACDBED3C515019B9E126A853B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-034",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Gi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "GiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Gi\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4BE30331AB0A5A8418E4E508206BE852DDBA2D179E36D0D4BB5A045845A73DD4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-035",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ti",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "TiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "TiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E96154BA3E15271BEDFD1B1E36F4BACA778541945089682E20324DCF7E1C2DA5",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-036",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ti",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "TiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Ti\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5A3114BDFA35462BE3A080627C0C38951A16E4E07AE53526C73E9B308133C94A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-037",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Pi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "PiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "PiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EE0761636F57A562BE562130A3B6AA4B4F7DC9AA1782723E2DBC31E39BABB5CD",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-038",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Pi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "PiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Pi\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "729AA8E18FD7CDC97E5DF11A1577A8A344B2CD3FD3D2326BF5CE9F152234D4E3",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-039",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Ei",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "EiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "EiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D1EC6FBF80A4F0C4C5AC7F23480722CFF75EB2068D4F589059C32C6960A12279",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-040",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Ei",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "EiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Ei\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3CD81998F6EF98A682287245587C9E8607F5ED6FC628804B635A218F1375EAEA",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-041",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Zi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "ZiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "ZiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "EB66CB75CB6E21861D7DC1546499DBB1ADE42F304B257E3C1C34503450C754FB",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-042",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Zi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "ZiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Zi\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B5BAA7118787B5EC5AE1262888A64F1B28D9813E15502DF43A8C11D8B015C418",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-043",
+      "operation": "unitFormat",
+      "gap": "ASCII binary ohm Yi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "YiOhm",
+      "ascii": true,
+      "actions": [],
+      "expected": "YiOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3D47C78E334301F4643F7ABF1B2ECB4DA16392A251530A2BD9AAD12BAF331665",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-044",
+      "operation": "unitFormat",
+      "gap": "Default binary ohm alias Yi",
+      "kind": "parseFormat",
+      "unit": "A",
+      "text": "YiOhm",
+      "ascii": false,
+      "actions": [],
+      "expected": "Yi\u03A9",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F6BC89D972007CBA826117D7FCD57D3454D7AB375BDF92BA7F1191E2D547F3BE",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-045",
+      "operation": "unitFormat",
+      "gap": "ASCII volume after default macro removal",
+      "kind": "defaultVolumeRemoval",
+      "unit": "A",
+      "text": null,
+      "ascii": false,
+      "actions": [],
+      "expected": "m^3",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D00414618B9D0A96D85AAC12FCF24B7E9FD396AC2ECD147B8316610A4087BFE1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-EDGE-046",
+      "operation": "unitFormat",
+      "gap": "ASCII preserves unrelated foreign base symbol",
+      "kind": "format",
+      "unit": "__FOREIGN__",
+      "text": null,
+      "ascii": true,
+      "actions": [],
+      "expected": "private\u03B2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F685F56C93E8A8470AB9A4255B3B8AAF14E68BD51239E0725BB6CC0DCF0F7C50",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    }
+  ]
+}

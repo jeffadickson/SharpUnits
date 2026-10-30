@@ -1,0 +1,1368 @@
+{
+  "historicalReportSha256": "90DC434E5C0A4CFCC3E442B8810F2053E02C39A0359860BAF17BC6BF786BA87F",
+  "currentReportSha256": "BEBC65AB0230518BF67CBDE79A43AA050F255513CAE83E9D74335E48FA31EADC",
+  "counts": {
+    "NoCoverage-\u003EKilled": 11,
+    "NoCoverage-\u003ENoCoverage": 6,
+    "NoCoverage-\u003ESurvived": 5,
+    "Survived-\u003EKilled": 64,
+    "Survived-\u003ESOURCE_REVISED_OR_UNMATCHED": 4,
+    "Survived-\u003ESurvived": 77,
+    "Timeout-\u003ETimeout": 2
+  },
+  "transitions": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "908",
+      "historicalStatus": "Survived",
+      "currentId": "908",
+      "currentStatus": "Killed",
+      "statement": "        if(Components(value).Any(power=\u003Epower.Denominator.Sign\u003C=0))throw new ArgumentException(\u0022Normalized exponents required.\u0022,nameof(value));"
+    },
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "912",
+      "historicalStatus": "Survived",
+      "currentId": "912",
+      "currentStatus": "Survived",
+      "statement": "        if(Components(value).Any(power=\u003Epower.Denominator.Sign\u003C=0))throw new ArgumentException(\u0022Normalized exponents required.\u0022,nameof(value));"
+    },
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "917",
+      "historicalStatus": "Survived",
+      "currentId": "917",
+      "currentStatus": "Killed",
+      "statement": "    public JavaDimensionAdapter Divide(JavaDimensionAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Value-other.Value);}"
+    },
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "921",
+      "historicalStatus": "Survived",
+      "currentId": "921",
+      "currentStatus": "Survived",
+      "statement": "        if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));"
+    },
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "922",
+      "historicalStatus": "Survived",
+      "currentId": "922",
+      "currentStatus": "Survived",
+      "statement": "        if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));"
+    },
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "historicalId": "931",
+      "historicalStatus": "Survived",
+      "currentId": "931",
+      "currentStatus": "Survived",
+      "statement": "            map.Add(new(dimension),checked((int)power.Numerator));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1082",
+      "historicalStatus": "Survived",
+      "currentId": "1095",
+      "currentStatus": "Survived",
+      "statement": "        if(text.Length is 0 or \u003E4096)throw new FormatException(\u0022Decimal token length is outside the supported budget.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1111",
+      "historicalStatus": "Survived",
+      "currentId": "1124",
+      "currentStatus": "Killed",
+      "statement": "            if(c is \u003C\u00270\u0027 or \u003E\u00279\u0027)throw new FormatException(\u0022Invalid decimal digit.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1112",
+      "historicalStatus": "Survived",
+      "currentId": "1125",
+      "currentStatus": "Survived",
+      "statement": "            if(c is \u003C\u00270\u0027 or \u003E\u00279\u0027)throw new FormatException(\u0022Invalid decimal digit.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1119",
+      "historicalStatus": "Survived",
+      "currentId": "1132",
+      "currentStatus": "Survived",
+      "statement": "        if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1120",
+      "historicalStatus": "Survived",
+      "currentId": "1133",
+      "currentStatus": "Survived",
+      "statement": "        if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1128",
+      "historicalStatus": "Survived",
+      "currentId": "1141",
+      "currentStatus": "Survived",
+      "statement": "            throw new FormatException(\u0022Invalid decimal exponent.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1137",
+      "historicalStatus": "Survived",
+      "currentId": "1150",
+      "currentStatus": "Killed",
+      "statement": "        if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1138",
+      "historicalStatus": "Survived",
+      "currentId": "1151",
+      "currentStatus": "Survived",
+      "statement": "        if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1142",
+      "historicalStatus": "Survived",
+      "currentId": "1155",
+      "currentStatus": "Survived",
+      "statement": "        if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1149",
+      "historicalStatus": "Survived",
+      "currentId": "1162",
+      "currentStatus": "Survived",
+      "statement": "            if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1151",
+      "historicalStatus": "Survived",
+      "currentId": "1164",
+      "currentStatus": "Survived",
+      "statement": "            if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1153",
+      "historicalStatus": "Survived",
+      "currentId": null,
+      "currentStatus": "SOURCE_REVISED_OR_UNMATCHED",
+      "statement": "                return Integer(value\u003E=9223372036854775808d?long.MaxValue:(long)value);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1155",
+      "historicalStatus": "Survived",
+      "currentId": null,
+      "currentStatus": "SOURCE_REVISED_OR_UNMATCHED",
+      "statement": "                return Integer(value\u003E=9223372036854775808d?long.MaxValue:(long)value);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1158",
+      "historicalStatus": "Survived",
+      "currentId": "1172",
+      "currentStatus": "Survived",
+      "statement": "        if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1160",
+      "historicalStatus": "Survived",
+      "currentId": "1175",
+      "currentStatus": "Survived",
+      "statement": "        _=\u003Ethrow new ArgumentException(\u0022A supported numeric value is required.\u0022,nameof(value))"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1165",
+      "historicalStatus": "Survived",
+      "currentId": "1180",
+      "currentStatus": "Killed",
+      "statement": "    public JavaNumber SubtractPinnedIndriya(JavaNumber other){ArgumentNullException.ThrowIfNull(other);return AddPinnedIndriya(other.Negate());}"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1180",
+      "historicalStatus": "Survived",
+      "currentId": "1199",
+      "currentStatus": "Survived",
+      "statement": "        if(multiply\u0026\u0026(Fraction.Numerator.IsZero||other.Fraction.Numerator.IsZero))return Zero;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1212",
+      "historicalStatus": "Survived",
+      "currentId": "1231",
+      "currentStatus": "Killed",
+      "statement": "        if(pinnedQuirks\u0026\u0026!multiply\u0026\u0026Kind==JavaNumberKind.Decimal\u0026\u0026other.Kind==JavaNumberKind.Integer)b=(SignedLong(other.Fraction),0);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1229",
+      "historicalStatus": "Survived",
+      "currentId": "1248",
+      "currentStatus": "Survived",
+      "statement": "        var scale=multiply?checked(a.Scale\u002Bb.Scale):Math.Max(a.Scale,b.Scale);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1242",
+      "historicalStatus": "Survived",
+      "currentId": null,
+      "currentStatus": "SOURCE_REVISED_OR_UNMATCHED",
+      "statement": "                ||multiply\u0026\u0026other.Kind==JavaNumberKind.Integer\u0026\u0026BigInteger.Abs(other.Fraction.Numerator)\u003Elong.MaxValue)"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1252",
+      "historicalStatus": "Survived",
+      "currentId": null,
+      "currentStatus": "SOURCE_REVISED_OR_UNMATCHED",
+      "statement": "                ||multiply\u0026\u0026Kind==JavaNumberKind.Integer\u0026\u0026BigInteger.Abs(Fraction.Numerator)\u003Elong.MaxValue);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1267",
+      "historicalStatus": "Survived",
+      "currentId": "1282",
+      "currentStatus": "Survived",
+      "statement": "        if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1269",
+      "historicalStatus": "Survived",
+      "currentId": "1284",
+      "currentStatus": "Survived",
+      "statement": "        if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1272",
+      "historicalStatus": "Survived",
+      "currentId": "1287",
+      "currentStatus": "Survived",
+      "statement": "        if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1281",
+      "historicalStatus": "Survived",
+      "currentId": "1296",
+      "currentStatus": "Survived",
+      "statement": "        var n=scale\u003E=0?numerator*BigInteger.Pow(10,scale):numerator;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1286",
+      "historicalStatus": "Survived",
+      "currentId": "1301",
+      "currentStatus": "Survived",
+      "statement": "        var d=scale\u003E=0?denominator:denominator*BigInteger.Pow(10,-scale);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1300",
+      "historicalStatus": "Timeout",
+      "currentId": "1315",
+      "currentStatus": "Timeout",
+      "statement": "        if(remainder.IsZero)while(scale\u003EpreferredScale\u0026\u0026quotient%10==0){quotient/=10;scale--;}"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1315",
+      "historicalStatus": "Survived",
+      "currentId": "1330",
+      "currentStatus": "Survived",
+      "statement": "        if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1318",
+      "historicalStatus": "Survived",
+      "currentId": "1333",
+      "currentStatus": "Survived",
+      "statement": "        if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1319",
+      "historicalStatus": "NoCoverage",
+      "currentId": "1334",
+      "currentStatus": "NoCoverage",
+      "statement": "        if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1323",
+      "historicalStatus": "Survived",
+      "currentId": "1338",
+      "currentStatus": "Survived",
+      "statement": "        var fraction=scale\u003E=0?new Rational(coefficient,BigInteger.Pow(10,scale)):new Rational(coefficient*BigInteger.Pow(10,-scale),1);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1328",
+      "historicalStatus": "Survived",
+      "currentId": "1343",
+      "currentStatus": "Survived",
+      "statement": "        if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1330",
+      "historicalStatus": "NoCoverage",
+      "currentId": "1345",
+      "currentStatus": "NoCoverage",
+      "statement": "        if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1331",
+      "historicalStatus": "NoCoverage",
+      "currentId": "1346",
+      "currentStatus": "NoCoverage",
+      "statement": "        if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1339",
+      "historicalStatus": "Survived",
+      "currentId": "1354",
+      "currentStatus": "Survived",
+      "statement": "            throw new ArgumentOutOfRangeException(nameof(value),\u0022Numeric bit budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1341",
+      "historicalStatus": "Survived",
+      "currentId": "1356",
+      "currentStatus": "Survived",
+      "statement": "    public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1353",
+      "historicalStatus": "Survived",
+      "currentId": "1368",
+      "currentStatus": "Killed",
+      "statement": "        var a=Kind==JavaNumberKind.Rational\u0026\u0026other.Kind\u003E=JavaNumberKind.Binary64?AsDecimal().Fraction:Fraction;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1359",
+      "historicalStatus": "Survived",
+      "currentId": "1374",
+      "currentStatus": "Killed",
+      "statement": "        var b=other.Kind==JavaNumberKind.Rational\u0026\u0026Kind\u003E=JavaNumberKind.Binary64?other.AsDecimal().Fraction:other.Fraction;"
+    },
+    {
+      "file": "JavaNumber.cs",
+      "historicalId": "1375",
+      "historicalStatus": "Survived",
+      "currentId": "1390",
+      "currentStatus": "Survived",
+      "statement": "    public override int GetHashCode()=\u003EKind==JavaNumberKind.Rational?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1384",
+      "historicalStatus": "Survived",
+      "currentId": "1399",
+      "currentStatus": "Survived",
+      "statement": "        ArgumentNullException.ThrowIfNull(target);if(Unit.Equals(target))return this;"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1391",
+      "historicalStatus": "Survived",
+      "currentId": "1406",
+      "currentStatus": "Survived",
+      "statement": "        if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1392",
+      "historicalStatus": "Survived",
+      "currentId": "1407",
+      "currentStatus": "Survived",
+      "statement": "        if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1396",
+      "historicalStatus": "Survived",
+      "currentId": "1411",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(other);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1408",
+      "historicalStatus": "NoCoverage",
+      "currentId": "1423",
+      "currentStatus": "NoCoverage",
+      "statement": "        else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1412",
+      "historicalStatus": "Survived",
+      "currentId": "1427",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(other);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1422",
+      "historicalStatus": "Survived",
+      "currentId": "1437",
+      "currentStatus": "Survived",
+      "statement": "        ArgumentNullException.ThrowIfNull(scalar);"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1433",
+      "historicalStatus": "Survived",
+      "currentId": "1448",
+      "currentStatus": "Survived",
+      "statement": "        if(Unit.Dimension!=dimension)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;"
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "historicalId": "1435",
+      "historicalStatus": "Survived",
+      "currentId": "1450",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(registry);return AsType(registry.DimensionOf(kind));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2008",
+      "historicalStatus": "Survived",
+      "currentId": "2023",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2009",
+      "historicalStatus": "Survived",
+      "currentId": "2024",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2010",
+      "historicalStatus": "Survived",
+      "currentId": "2025",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2011",
+      "historicalStatus": "Survived",
+      "currentId": "2026",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2012",
+      "historicalStatus": "Survived",
+      "currentId": "2027",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2013",
+      "historicalStatus": "Survived",
+      "currentId": "2028",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2014",
+      "historicalStatus": "Survived",
+      "currentId": "2029",
+      "currentStatus": "Survived",
+      "statement": "    private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2018",
+      "historicalStatus": "Survived",
+      "currentId": "2033",
+      "currentStatus": "Survived",
+      "statement": "        ArgumentNullException.ThrowIfNull(field);return catalog.Value.TryGetValue(field,out var unit)?unit:throw new KeyNotFoundException(field);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2026",
+      "historicalStatus": "Survived",
+      "currentId": "2041",
+      "currentStatus": "Killed",
+      "statement": "        depth=1\u002BMath.Max(parent?.depth??0,this.factors.Count==0?0:this.factors.Keys.Max(unit=\u003Eunit.depth));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2030",
+      "historicalStatus": "Survived",
+      "currentId": "2045",
+      "currentStatus": "Killed",
+      "statement": "        depth=1\u002BMath.Max(parent?.depth??0,this.factors.Count==0?0:this.factors.Keys.Max(unit=\u003Eunit.depth));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2035",
+      "historicalStatus": "Survived",
+      "currentId": "2050",
+      "currentStatus": "Survived",
+      "statement": "        if(depth\u003E64)throw new ArgumentOutOfRangeException(nameof(parent),\u0022Unit graph depth budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2042",
+      "historicalStatus": "Survived",
+      "currentId": "2057",
+      "currentStatus": "Survived",
+      "statement": "        if(!Equals(SystemUnit))throw new InvalidOperationException(\u0022An alternate requires an unscaled system unit.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2051",
+      "historicalStatus": "Survived",
+      "currentId": "2066",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(factor);return factor.CompareTo(JavaNumber.One)==0?this:Transform(JavaUnitConverterAdapter.Multiply(factor));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2056",
+      "historicalStatus": "Survived",
+      "currentId": "2071",
+      "currentStatus": "Killed",
+      "statement": "    public JavaUnit Divide(JavaNumber divisor){ArgumentNullException.ThrowIfNull(divisor);return Multiply(divisor.Reciprocal());}"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2058",
+      "historicalStatus": "Survived",
+      "currentId": "2073",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(offset);return offset.CompareTo(JavaNumber.Zero)==0?this:Transform(JavaUnitConverterAdapter.Add(offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2073",
+      "historicalStatus": "Survived",
+      "currentId": "2088",
+      "currentStatus": "Killed",
+      "statement": "        if(exponent is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(exponent));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2077",
+      "historicalStatus": "Survived",
+      "currentId": "2092",
+      "currentStatus": "Killed",
+      "statement": "        if(exponent is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(exponent));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2081",
+      "historicalStatus": "Survived",
+      "currentId": "2096",
+      "currentStatus": "Survived",
+      "statement": "        if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2082",
+      "historicalStatus": "Survived",
+      "currentId": "2097",
+      "currentStatus": "Survived",
+      "statement": "        if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2086",
+      "historicalStatus": "Survived",
+      "currentId": "2101",
+      "currentStatus": "Killed",
+      "statement": "        if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2089",
+      "historicalStatus": "Survived",
+      "currentId": "2104",
+      "currentStatus": "Killed",
+      "statement": "        if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2090",
+      "historicalStatus": "Survived",
+      "currentId": "2105",
+      "currentStatus": "Killed",
+      "statement": "        if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2102",
+      "historicalStatus": "Survived",
+      "currentId": "2117",
+      "currentStatus": "Survived",
+      "statement": "                if(!pair.Value.Denominator.IsOne)throw new NotSupportedException(\u0022Pinned product converters reject fractional roots.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2105",
+      "historicalStatus": "Survived",
+      "currentId": "2120",
+      "currentStatus": "Survived",
+      "statement": "                if(!next.IsLinear)throw new NotSupportedException(\u0022A non-linear atom has no product converter.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2106",
+      "historicalStatus": "Survived",
+      "currentId": "2121",
+      "currentStatus": "Survived",
+      "statement": "                var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2108",
+      "historicalStatus": "Survived",
+      "currentId": "2123",
+      "currentStatus": "Survived",
+      "statement": "                var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2114",
+      "historicalStatus": "Timeout",
+      "currentId": "2129",
+      "currentStatus": "Timeout",
+      "statement": "                for(var i=0;i\u003Cpower;i\u002B\u002B)converter=converter.Concatenate(next);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2116",
+      "historicalStatus": "Survived",
+      "currentId": "2131",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(target);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2119",
+      "historicalStatus": "Survived",
+      "currentId": "2134",
+      "currentStatus": "Survived",
+      "statement": "        if(Dimension!=target.Dimension)throw new InvalidOperationException(\u0022Incompatible dimensions.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2121",
+      "historicalStatus": "Survived",
+      "currentId": "2136",
+      "currentStatus": "Survived",
+      "statement": "        return Equals(target)?JavaUnitConverterAdapter.Identity:target.SystemConverter.Inverse().Concatenate(SystemConverter);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2123",
+      "historicalStatus": "Survived",
+      "currentId": "2138",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(target);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2127",
+      "historicalStatus": "Survived",
+      "currentId": "2142",
+      "currentStatus": "Killed",
+      "statement": "    public bool IsEquivalentTo(JavaUnit? other)=\u003Eother is not null\u0026\u0026Dimension==other.Dimension\u0026\u0026GetConverterTo(other).IsIdentity;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2128",
+      "historicalStatus": "Survived",
+      "currentId": "2143",
+      "currentStatus": "Killed",
+      "statement": "    public bool IsEquivalentTo(JavaUnit? other)=\u003Eother is not null\u0026\u0026Dimension==other.Dimension\u0026\u0026GetConverterTo(other).IsIdentity;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2132",
+      "historicalStatus": "Survived",
+      "currentId": "2147",
+      "currentStatus": "Survived",
+      "statement": "        _=\u003Enew ReadOnlyDictionary\u003CJavaUnit,int\u003E(factors.ToDictionary(pair=\u003Epair.Key,pair=\u003Echecked((int)pair.Value.Numerator)))"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2135",
+      "historicalStatus": "Survived",
+      "currentId": "2150",
+      "currentStatus": "Survived",
+      "statement": "        if(power.Numerator.IsZero)return;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2154",
+      "historicalStatus": "Survived",
+      "currentId": "2169",
+      "currentStatus": "Survived",
+      "statement": "        if(result.Count\u003E128)throw new ArgumentOutOfRangeException(nameof(result),\u0022Product atom budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2160",
+      "historicalStatus": "Survived",
+      "currentId": "2175",
+      "currentStatus": "Survived",
+      "statement": "        if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2161",
+      "historicalStatus": "Survived",
+      "currentId": "2176",
+      "currentStatus": "Survived",
+      "statement": "        if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2166",
+      "historicalStatus": "Survived",
+      "currentId": "2181",
+      "currentStatus": "Killed",
+      "statement": "            if(System.Numerics.BigInteger.Abs(pair.Value.Numerator)\u003E1024||pair.Value.Denominator\u003E1024)"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2170",
+      "historicalStatus": "Survived",
+      "currentId": "2185",
+      "currentStatus": "Survived",
+      "statement": "                throw new ArgumentOutOfRangeException(nameof(result),\u0022Product exponent budget exceeded.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2183",
+      "historicalStatus": "Survived",
+      "currentId": "2198",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2186",
+      "historicalStatus": "Survived",
+      "currentId": "2201",
+      "currentStatus": "Survived",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2187",
+      "historicalStatus": "Survived",
+      "currentId": "2202",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2188",
+      "historicalStatus": "Survived",
+      "currentId": "2203",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2189",
+      "historicalStatus": "Survived",
+      "currentId": "2204",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2191",
+      "historicalStatus": "Survived",
+      "currentId": "2206",
+      "currentStatus": "Survived",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2192",
+      "historicalStatus": "Survived",
+      "currentId": "2207",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2193",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2208",
+      "currentStatus": "Killed",
+      "statement": "        if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2196",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2211",
+      "currentStatus": "Killed",
+      "statement": "            if(coherent.Symbol==definition.Symbol)return coherent;"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2197",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2212",
+      "currentStatus": "Killed",
+      "statement": "            return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2198",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2213",
+      "currentStatus": "Survived",
+      "statement": "            return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2199",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2214",
+      "currentStatus": "Killed",
+      "statement": "            return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2200",
+      "historicalStatus": "Survived",
+      "currentId": "2215",
+      "currentStatus": "Survived",
+      "statement": "        foreach(var prefix in SiPrefixes.Definitions.OrderByDescending(pair=\u003Epair.Key.Length))"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2201",
+      "historicalStatus": "Survived",
+      "currentId": "2216",
+      "currentStatus": "Killed",
+      "statement": "            if(definition.Symbol.StartsWith(prefix.Key,StringComparison.Ordinal))"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2204",
+      "historicalStatus": "Survived",
+      "currentId": "2219",
+      "currentStatus": "Killed",
+      "statement": "                var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2205",
+      "historicalStatus": "Survived",
+      "currentId": "2220",
+      "currentStatus": "Killed",
+      "statement": "                var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2206",
+      "historicalStatus": "Survived",
+      "currentId": "2221",
+      "currentStatus": "Killed",
+      "statement": "                var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2207",
+      "historicalStatus": "Survived",
+      "currentId": "2222",
+      "currentStatus": "Killed",
+      "statement": "                var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2210",
+      "historicalStatus": "Survived",
+      "currentId": "2225",
+      "currentStatus": "Survived",
+      "statement": "                if(candidate is not null){parent=FromDefinition(candidate.Unit);prefixExponent=prefix.Value;break;}"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2219",
+      "historicalStatus": "Survived",
+      "currentId": "2234",
+      "currentStatus": "Killed",
+      "statement": "            if(prefixConverter.AffineCoefficients().Scale.Fraction==scale)transformed=parent.Transform(prefixConverter);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2221",
+      "historicalStatus": "Survived",
+      "currentId": "2236",
+      "currentStatus": "Killed",
+      "statement": "            transformed=transformed.Shift(JavaNumber.FromNumeric(JavaDoubleArithmetic.Fraction(definition.Converter.Offset)/scale));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2223",
+      "historicalStatus": "Survived",
+      "currentId": "2238",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2224",
+      "historicalStatus": "Survived",
+      "currentId": "2239",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2225",
+      "historicalStatus": "Survived",
+      "currentId": "2240",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2226",
+      "historicalStatus": "Survived",
+      "currentId": "2241",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2227",
+      "historicalStatus": "Survived",
+      "currentId": "2242",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2228",
+      "historicalStatus": "Survived",
+      "currentId": "2243",
+      "currentStatus": "Killed",
+      "statement": "        var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2229",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2244",
+      "currentStatus": "Killed",
+      "statement": "            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2230",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2245",
+      "currentStatus": "Survived",
+      "statement": "            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2231",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2246",
+      "currentStatus": "Killed",
+      "statement": "            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2233",
+      "historicalStatus": "Survived",
+      "currentId": "2248",
+      "currentStatus": "Survived",
+      "statement": "        void Put(string field,JavaUnit unit,string? symbol=null)=\u003Eresult[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2385",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2400",
+      "currentStatus": "NoCoverage",
+      "statement": "        if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);"
+    },
+    {
+      "file": "JavaUnit.cs",
+      "historicalId": "2386",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2401",
+      "currentStatus": "NoCoverage",
+      "statement": "        if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2412",
+      "historicalStatus": "Survived",
+      "currentId": "2427",
+      "currentStatus": "Killed",
+      "statement": "    public string? Symbol=\u003Eoriginal?.Symbol??Model.Symbol;"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2413",
+      "historicalStatus": "Survived",
+      "currentId": "2428",
+      "currentStatus": "Killed",
+      "statement": "    public string? Symbol=\u003Eoriginal?.Symbol??Model.Symbol;"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2416",
+      "historicalStatus": "Survived",
+      "currentId": "2431",
+      "currentStatus": "Survived",
+      "statement": "        ArgumentNullException.ThrowIfNull(definition);original=definition;Model=JavaUnit.FromDefinition(definition);"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2417",
+      "historicalStatus": "Survived",
+      "currentId": "2432",
+      "currentStatus": "Killed",
+      "statement": "    public UnitDefinition Definition=\u003Eoriginal??Model.ToDefinition();"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2421",
+      "historicalStatus": "Survived",
+      "currentId": "2436",
+      "currentStatus": "Killed",
+      "statement": "    public bool IsEquivalentTo(JavaUnitAdapter? other)=\u003Eother is not null\u0026\u0026Model.IsEquivalentTo(other.Model);"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2424",
+      "historicalStatus": "Survived",
+      "currentId": "2439",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(target);return Model.GetConverterTo(target.Model);"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2426",
+      "historicalStatus": "Survived",
+      "currentId": "2441",
+      "currentStatus": "Killed",
+      "statement": "    public RationalUnitExpression Multiply(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return Expression*other.Expression;}"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2429",
+      "historicalStatus": "Survived",
+      "currentId": "2444",
+      "currentStatus": "Killed",
+      "statement": "    public RationalUnitExpression Divide(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return Expression/other.Expression;}"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2431",
+      "historicalStatus": "NoCoverage",
+      "currentId": "2446",
+      "currentStatus": "Killed",
+      "statement": "    public RationalUnitExpression Inverse()=\u003EExpression.Pow(new Rational(-1,1));"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2433",
+      "historicalStatus": "Survived",
+      "currentId": "2448",
+      "currentStatus": "Killed",
+      "statement": "    public JavaUnitAdapter MultiplyUnit(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Model.Multiply(other.Model));}"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2435",
+      "historicalStatus": "Survived",
+      "currentId": "2450",
+      "currentStatus": "Killed",
+      "statement": "    public JavaUnitAdapter DivideUnit(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Model.Divide(other.Model));}"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2445",
+      "historicalStatus": "Survived",
+      "currentId": "2460",
+      "currentStatus": "Survived",
+      "statement": "        if(Dimension!=requested)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2447",
+      "historicalStatus": "Survived",
+      "currentId": "2462",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(target);return Model.GetConverterToAny(target.Model);"
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "historicalId": "2453",
+      "historicalStatus": "Survived",
+      "currentId": "2468",
+      "currentStatus": "Killed",
+      "statement": "    public override string ToString()=\u003ESymbol??\u0022Java-\u0022\u002BModel.Kind.ToString().ToLowerInvariant();"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2872",
+      "historicalStatus": "Survived",
+      "currentId": "2887",
+      "currentStatus": "Survived",
+      "statement": "            throw new ArgumentException(\u0022A valid affine converter is required.\u0022,nameof(converter));"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2879",
+      "historicalStatus": "Survived",
+      "currentId": "2894",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(factor);"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2900",
+      "historicalStatus": "Survived",
+      "currentId": "2915",
+      "currentStatus": "Survived",
+      "statement": "        var factor=exponent\u003E=0?JavaNumber.Integer(value):JavaNumber.Ratio(1,value);"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2902",
+      "historicalStatus": "Survived",
+      "currentId": "2917",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(offset);return new(new[]{new Step(Operation.Offset,offset)});"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2913",
+      "historicalStatus": "Survived",
+      "currentId": "2928",
+      "currentStatus": "Survived",
+      "statement": "        Operation.Power=\u003EPowerStep(step.Radix,checked(-step.Exponent)),"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2924",
+      "historicalStatus": "Survived",
+      "currentId": "2939",
+      "currentStatus": "Killed",
+      "statement": "    public double Convert(double value)=\u003EIsIdentity?value:Convert(JavaNumber.FromDouble(value)).ToDouble();"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2926",
+      "historicalStatus": "Survived",
+      "currentId": "2941",
+      "currentStatus": "Killed",
+      "statement": "        ArgumentNullException.ThrowIfNull(value);var result=value;"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2944",
+      "historicalStatus": "Survived",
+      "currentId": "2959",
+      "currentStatus": "Survived",
+      "statement": "        if(!IsAffine)throw new NotSupportedException(\u0022Nonlinear converter has no affine coefficients.\u0022);"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "2995",
+      "historicalStatus": "Survived",
+      "currentId": "3010",
+      "currentStatus": "Survived",
+      "statement": "                        ?PowerStep(previous.Radix,checked(previous.Exponent\u002Bcurrent.Exponent))"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "3012",
+      "historicalStatus": "Survived",
+      "currentId": "3027",
+      "currentStatus": "Killed",
+      "statement": "                else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "3015",
+      "historicalStatus": "Survived",
+      "currentId": "3030",
+      "currentStatus": "Killed",
+      "statement": "                else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)"
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "historicalId": "3029",
+      "historicalStatus": "Survived",
+      "currentId": "3044",
+      "currentStatus": "Survived",
+      "statement": "    public override int GetHashCode(){var hash=new HashCode();foreach(var step in steps)hash.Add(step);return hash.ToHashCode();}"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4079",
+      "historicalStatus": "Survived",
+      "currentId": "4094",
+      "currentStatus": "Survived",
+      "statement": " public JavaNumber ExactValue=\u003EExponent\u003E=0?JavaNumber.Integer(System.Numerics.BigInteger.Pow(10,Exponent))"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4086",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4101",
+      "currentStatus": "Killed",
+      "statement": "  if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\u0022Name required.\u0022,nameof(name));"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4087",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4102",
+      "currentStatus": "Survived",
+      "statement": "  if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\u0022Name required.\u0022,nameof(name));"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4092",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4107",
+      "currentStatus": "Killed",
+      "statement": "  if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\u0022Symbol required.\u0022,nameof(symbol));"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4093",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4108",
+      "currentStatus": "Survived",
+      "statement": "  if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\u0022Symbol required.\u0022,nameof(symbol));"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4101",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4116",
+      "currentStatus": "Killed",
+      "statement": "  if(exponent is \u003C -30 or \u003E 30)throw new ArgumentOutOfRangeException(nameof(exponent));"
+    },
+    {
+      "file": "SiPrefix.cs",
+      "historicalId": "4163",
+      "historicalStatus": "Survived",
+      "currentId": "4178",
+      "currentStatus": "Killed",
+      "statement": " public static SiPrefix Resolve(string symbol)=\u003EItems.FirstOrDefault(p=\u003Ep.Symbol==symbol)??throw new KeyNotFoundException(symbol);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4203",
+      "historicalStatus": "Survived",
+      "currentId": "4218",
+      "currentStatus": "Survived",
+      "statement": "  ArgumentNullException.ThrowIfNull(prefix);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4204",
+      "historicalStatus": "Survived",
+      "currentId": "4219",
+      "currentStatus": "Survived",
+      "statement": "  ArgumentNullException.ThrowIfNull(unit);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4206",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4221",
+      "currentStatus": "Killed",
+      "statement": "  if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4207",
+      "historicalStatus": "NoCoverage",
+      "currentId": "4222",
+      "currentStatus": "Survived",
+      "statement": "  if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4209",
+      "historicalStatus": "Survived",
+      "currentId": "4224",
+      "currentStatus": "Killed",
+      "statement": "  ArgumentNullException.ThrowIfNull(unit);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4212",
+      "historicalStatus": "Survived",
+      "currentId": "4227",
+      "currentStatus": "Survived",
+      "statement": "  if(unit.Converter.Offset!=0)throw new InvalidOperationException(\u0022Cannot prefix an affine unit.\u0022);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4216",
+      "historicalStatus": "Survived",
+      "currentId": "4231",
+      "currentStatus": "Survived",
+      "statement": "  var factor=exponent\u003E=0?new Rational(power,1):new Rational(1,power);"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4219",
+      "historicalStatus": "Survived",
+      "currentId": "4234",
+      "currentStatus": "Killed",
+      "statement": "  return unit.JavaModel is null?result:result with {JavaModel=unit.JavaModel.Transform(JavaUnitConverterAdapter.ForPrefix(10,exponent))};"
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "historicalId": "4224",
+      "historicalStatus": "Survived",
+      "currentId": "4239",
+      "currentStatus": "Survived",
+      "statement": " public static int Exponent(string prefix)=\u003EExponents.TryGetValue(prefix,out var exponent)?exponent:throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));"
+    }
+  ],
+  "policy": "Only exact statement/mutator/replacement/token-span matches qualify as transitions. Revised source, ignored, compile-error and timeout outcomes are never inferred kills. Reports with different scopes/universes have separate denominators."
+}

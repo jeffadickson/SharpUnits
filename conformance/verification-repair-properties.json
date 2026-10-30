@@ -1,0 +1,15 @@
+{
+  "framework": "Hypothesis6.170.12",
+  "seeds": [
+    385001,
+    385002,
+    385003
+  ],
+  "maxExamplesPerProperty": 1000,
+  "attemptedExamples": {
+    "integerNeighbours": 1000,
+    "unicodeFraming": 1000,
+    "contradictoryOutcomes": 1000
+  },
+  "qualification": "Bounded generated trials; use the enclosing unittest exit status, not these counters, for success"
+}

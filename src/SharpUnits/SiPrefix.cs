@@ -10,6 +10,14 @@ public sealed record SiPrefix
  public int Exponent {get;}
  /// <summary>Prefix numeric factor in double precision.</summary>
  public double Value=>Math.Pow(10,Exponent);
+ /// <summary>Exact prefix factor, without binary64 rounding.</summary>
+ public JavaNumber ExactValue=>Exponent>=0?JavaNumber.Integer(System.Numerics.BigInteger.Pow(10,Exponent))
+  :JavaNumber.Ratio(1,System.Numerics.BigInteger.Pow(10,-Exponent));
+ /// <summary>Returns Java Prefix.getValue's radix, ten; ExactValue is the powered factor.</summary>
+ /// <remarks>The legacy Value property retains its factor contract for backward compatibility.</remarks>
+ public JavaNumber GetValue()=>JavaNumber.Integer(10);
+ /// <summary>Returns the pinned Java enum-style name; Name retains the native human-readable spelling.</summary>
+ public string GetName()=>Name.ToUpperInvariant();
  /// <summary>Constructs a valid SI prefix.</summary>
  public SiPrefix(string name,string symbol,int exponent)
  {
@@ -19,7 +27,7 @@ public sealed record SiPrefix
   Name=name;Symbol=symbol;Exponent=exponent;
  }
  /// <summary>Applies this prefix to a linear unit.</summary>
- public UnitDefinition Apply(UnitDefinition unit)=>SiPrefixes.Apply(Symbol,unit);
+ public UnitDefinition Apply(UnitDefinition unit)=>SiPrefixes.ApplyExact(Symbol,Exponent,unit);
 }
 /// <summary>Canonical SI prefix metadata including the 2022 additions.</summary>
 public static class SiPrefixCatalog

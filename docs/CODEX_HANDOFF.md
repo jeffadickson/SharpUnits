@@ -5,6 +5,48 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 10. Primary development language: C#.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Mutation debt continuation (2026-10-30)
+
+See [mutation debt reduction](../conformance/mutation-debt.md) and its retained source/test/report manifests. New public boundary and metadata witnesses exposed and corrected signed-bit-length integer promotion and normalized negation provenance. Separate pinned Java cases distinguish typed conversion from getConverterToAny, and normalized chains from Calculator accumulators. The checked decimal-scale sum is now a production-used internal primitive with direct overflow/property tests. Converter hash quality has a separately labeled Draft engineering criterion; no exact hash values or universal performance claims are imposed. GitHub CI remains disabled and formal TCK closures remain zero. Historical audit/repair reports stay immutable; combined mutation outcomes are explicitly multi-phase, with equivalent/invariant reasoning and diagnostic variations separate from kills.
+
+## Verification repair continuation (2026-10-29)
+
+See [verification repairs](../conformance/verification-repair.md) for current behavior, evidence and open gates. The historical audit below remains unchanged as a record of the defects it found. The repaired harness jointly observes quantity value/scale/unit/converter, retains raw Java numeric metadata, uses exact typed comparisons and requires revision-bound CI artifacts for VERIFIED ledger status. Default JavaNumber.Add/Subtract preserve large integer magnitude; named AddPinnedIndriya/SubtractPinnedIndriya opt into the measured Indriya narrowing bug. CI remains disabled; no formal assertion is promoted.
+
+## Current continuation (2026-10-29, verification audit)
+
+The [verification audit](../conformance/verification-audit.md) supersedes unrestricted completion interpretations of work package 1. Verdict: NOT QUALIFIED FOR REQUIREMENT OR TCK CLOSURE. Existing source and raw-log hashes match; fresh .NET and normalized differential replays pass, but observer and verification-tool blind spots remain. The quantity corpus contains 186 value/scale-only observations, four unit-only observations and 15 predicate/order cases. The separate reviewer corrected an initial count error; the correction and final agent concurrence are retained in the audit review.
+
+Eight findings cover historical oracle mistakes, incomplete quantity/number/error observations, comparator and fixture false greens, weak ledger qualification, legacy-only quantity mappings and narrow mutation scope. The audit changes documentation, draft remediation criteria and reproducible diagnostic tooling; it does not silently repair verifier or arithmetic behavior. The prior implementation/coverage results remain historical scoped evidence. Six new draft VER requirements describe repair acceptance; none is a closed conformance requirement.
+
+Current ordering tests detect deliberately reversed concatenation and transform faults in isolated snapshots. The historical tools/VerificationAudit.cs targets the pre-repair harness and is retained as source evidence. Use tools/VerificationRepair.cs for current negative witnesses; tools/Invoke-VerificationOrderAudit.ps1 replays directed faults on its explicit historical snapshot. The audit helper is a findings collector, not a universal qualification gate. All actual ledger entries remain non-VERIFIED; GitHub .NET and Java CI remain disabled. Next engineering work is verification repair against the draft criteria before further closure claims. Reviewer concurrence is with the audit's findings/limits, not certification or external human approval.
+
+## Current continuation (2026-10-27, work package 1)
+
+The [core reconciliation review](../conformance/work-package-one-review.md) and [verification manifest](../conformance/work-package-one-verification.json) complete the local finite-profile implementation of work package 1. JavaNumber, JavaUnit, JavaNumberQuantity and JavaDimensionAdapter provide exact numeric/structural behavior, including converter order, decimal128 promotion, signed roots, prefix identity and exact factory bridges. Native engineering/temperature policies remain independent. The review documents pinned Java affine-temperature and Number quirks and the intentional CLR rational-hash consistency difference.
+
+Final local results: 3,073 .NET tests; 1,734 matching core Java/.NET cases; 112 passing pinned Java TCK tests; 380 StrictDoc IDs in eight documents; 95.50% line / 86.68% branch managed-library coverage. The example was published as Native AOT and executed. Four FsCheck replays run 1,400 trials. Final focused Stryker: 18 killed and two equivalent survivors among 20 executable mutants. Initial broad survivors and the aborted VSTest rerun remain explicit qualification debt; do not quote an initial score as final-source evidence.
+
+All 66 core TCK occurrences, including 16 quantity occurrences, are source-audited and remain PARTIAL CLR mappings. Ledger: 14 GAP, 99 PARTIAL_BEHAVIORAL_MAPPING, zero IMPLEMENTED_UNVERIFIED, zero VERIFIED. GitHub .NET and Java workflows remain disabled_manually; no CI run was dispatched. Package 2: general graph text/parsing/formats. Package 3: provider/type/reflection adaptation. Package 4: broad mutation requalification, independent review and Windows/Ubuntu qualification. Do not enable CI without a new user instruction.
+
+Reproduce with tools/Invoke-CoreReference.ps1, tools/Invoke-CoreMutations.ps1, the full test/coverage command in the manifest, and the existing pinned Java/StrictDoc toolchains. Paths are relative to this checkout; reuse installed tools in ../tools-runtime and the user's .dotnet SDK before installing. Raw evidence stays outside Git with retained SHA-256 hashes. No formal assertion closure is authorized by this local implementation milestone.
+
+## Current continuation (2026-10-27, Fahrenheit formatting)
+
+See [Fahrenheit formatting review](../conformance/affine-format-review.md). The Java unit-format adapter now renders the recognized native Fahrenheit definition with its pinned converter expression, with explicit label precedence. Ten additional executed Java observations and guarded converter regression/property tests cover this bounded mapping. General transformed-unit graphs and affine-expression parsing remain gaps; native temperature conventions are preserved. GitHub CI stays disabled; no formal TCK assertion is closed.
+
+## Current continuation (2026-10-25, unit-format state)
+
+See [mutable unit-format and ASCII review](../conformance/unitformat-gap-hundred-review.md): 100 scoped items with compilation every ten; final 1,298 passing .NET tests, 872 matching Java/CLR observations and 112 passing pinned Java TCK tests. Thirteen semantic mutants are killed. Coverage is 94.25% lines / 83.72% branches; StrictDoc validates 374 records in seven documents. Ledger: 14 gaps, 50 implemented/unverified, 49 partial mappings, zero verified closures. Both GitHub workflows remain disabled. Remaining work includes general unit normalization/identity, null-unit label differences, full format families/cursors, Number precision and external discovery.
+
+## Current continuation (2026-10-25)
+
+The [service/catalog review](../conformance/service-gap-hundred-review.md) implements 100 scoped missing obligations: 44 unit definitions, 33 quantity bindings and 23 service contracts. Final verification: 1,140 .NET tests; 726 Java/CLR observations across separate corpora; 112 pinned Java TCK tests; eight new semantic mutants killed. StrictDoc validates 267 records in six documents. Ledger: 16 gaps, 50 implemented/unverified, 47 partial mappings, zero verified closures. GitHub CI stays disabled. Next gaps include full format families, mutable unit labels/appendable unit formatting, external discovery, Java API identity and Number precision.
+
+## Current continuation (2026-10-24)
+
+See [formatting review](../conformance/format-hundred-review.md): 100 numbered formatting scenarios, compile/full tests every ten; final 962 .NET tests, 558 shared cases and 512 seeded binary64 comparisons pass. Pinned Java TCK: 112 passing tests. Ledger: 42 gaps, 50 implemented/unverified, 21 partial mappings, zero verified closures. Both GitHub workflows remain disabled by current user instruction, superseding older CI directions below. Next gaps include arbitrary Number precision, unit-label normalization, formatting registration and provider/service APIs.
+
 ## Objective
 
 Close the JSR 385 / Indriya compatibility gaps in a disciplined, auditable fashion. Do not divert into additional AC circuit, metrology, or symbolic DSL features. The existing optional features must not regress.
