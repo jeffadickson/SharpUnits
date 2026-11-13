@@ -52,3 +52,33 @@ COMMENT: Inferred engineering acceptance choice for catastrophic constant hashin
 RELATIONS:
 - TYPE: Parent
   VALUE: VER-005
+
+[REQUIREMENT]
+UID: VER-RAILWAY-ERRORS
+STATUS: Active
+TITLE: Actionable typed numeric boundary failures
+STATEMENT: Additive numeric parsing and conversion boundaries shall return either a non-null value or a typed expected failure with a stable error code and input parameter, including a character offset when known. Composition shall forward failure without invoking downstream work. Existing throwing APIs shall preserve exception types and parameter names. Unexpected faults and cancellation shall not be converted into expected failures.
+COMMENT: User-approved design 2026-11-12 in docs/typed-error-survivors-design.md. Implementation: src/SharpUnits/NumericResult.cs and JavaNumber.ParseDecimal/ConvertNumeric; verification: TypedNumericResultTests, seeded replays385,1101 and385,1103, and conformance/typed-errors.md. Exact diagnostic wording is separate from stable error identity. Active denotes the accepted requirement lifecycle, not a formal TCK closure. This is a CLR usability requirement, not Java API equivalence.
+RELATIONS:
+- TYPE: Parent
+  VALUE: VER-005
+
+[REQUIREMENT]
+UID: VER-SURVIVOR-REPLAY
+STATUS: Draft
+TITLE: Survivor remediation measured on changed source
+STATEMENT: Survivor remediation shall retain source-bound mutation outcomes, targeted negative witnesses and line and branch coverage for changed code. Revised or removed source statements shall not be counted as killed mutants. Equivalent mutations, observable variations outside the accepted contract, uncovered statements and inconclusive timeouts shall retain separate dispositions.
+COMMENT: User-requested survivor follow-up. Historical outcomes remain in conformance/mutation-debt-reviewed.json. New evidence is retained separately in conformance/typed-errors.md and typed-errors-mutations.json. Error-code mutations challenge actionable typed contracts rather than English wording. No global mutation-score improvement or formal closure is inferred from a changed mutant universe.
+RELATIONS:
+- TYPE: Parent
+  VALUE: VER-005
+
+[REQUIREMENT]
+UID: VER-RUN-BUDGET
+STATUS: Active
+TITLE: Guarded Windows verification admission and commit budgets
+STATEMENT: The Windows verification wrapper shall refuse concurrent same-user guarded workloads, confirm requested process and aggregate job commit limits by native read-back before releasing work, retain limits and observed peaks, and terminate owned descendants on a recorded limit event or fail-fast watermark even when the root has exited successfully.
+COMMENT: User resource-budget policy applied to local verification. Implementation: tools/Invoke-Budgeted.ps1 and Invoke-TypedErrorVerification.ps1. Tests: Test-BudgetWatchdog.ps1, including root-exits-zero, and Test-BudgetAdmission.ps1. An85-percent watermark with250ms peak reconciliation supplements Windows best-effort limit notifications. These are commit limits, not RSS limits or a reservation against other applications; Linux cgroup execution and exhaustive crash/race qualification are outside this Windows helper. See conformance/typed-errors.md for failed initial flag assignment, correction, actual read-back and replay evidence.
+RELATIONS:
+- TYPE: Parent
+  VALUE: VER-005

@@ -40,8 +40,15 @@ SI prefixes. Java-specific default-exponent conventions and remaining limits are
 
 `JavaNumber`, `JavaUnit` and `JavaNumberQuantity` provide an exact-number and structural-unit core. Use `IExactJavaQuantityFactory` for original integer/decimal inputs; `JavaQuantityAdapter.ToExact()` promotes an existing display double. Default `JavaNumber.Add`/`Subtract` preserve large integer magnitude; explicitly named `AddPinnedIndriya`/`SubtractPinnedIndriya` reproduce the measured Java narrowing bug. See the [verification repairs](conformance/verification-repair.md). See the [core reconciliation and migration notes](conformance/work-package-one-review.md) and [runnable example](examples/ExactJavaCore.cs).
 
+For recoverable numeric input failures, use `JavaNumber.ParseDecimal` and
+`JavaNumber.ConvertNumeric`. Their typed results support `Match` and short-circuiting
+`Bind`, with stable error codes and input locations. The existing throwing APIs remain
+available. See [typed numeric errors](docs/typed-numeric-errors.md) and the
+[example](examples/TypedNumericErrors.cs).
+
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
 
-Current verification and reviewed residuals: [mutation debt reduction](conformance/mutation-debt.md).
+Current numeric-boundary work: [typed errors and survivor follow-up](conformance/typed-errors.md).
+Historical core verification and reviewed residuals: [mutation debt reduction](conformance/mutation-debt.md).

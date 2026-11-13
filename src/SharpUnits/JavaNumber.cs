@@ -56,9 +56,19 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     public static JavaNumber Ratio(BigInteger numerator,BigInteger denominator)=>new(new Rational(numerator,denominator),JavaNumberKind.Rational);
     /// <summary>Parses invariant decimal/scientific notation without passing through binary64.</summary>
     public static JavaNumber Decimal(string text)
+        => ParseDecimal(text).Match(value => value, error => throw error.ToException(
+            error.Code == NumericErrorCode.NumericBudget ? "value" : null));
+
+    /// <summary>Parses exact invariant decimal/scientific notation with typed expected failures.</summary>
+    /// <remarks>Offsets are zero-based; invalid exponents identify the start of the
+    /// exponent field. Null, syntax and resource-budget failures are returned without
+    /// exceptions. Unexpected runtime faults propagate. No caller input is retained.</remarks>
+    public static NumericResult<JavaNumber> ParseDecimal(string? text)
     {
-        ArgumentNullException.ThrowIfNull(text);
-        if(text.Length is 0 or >4096)throw new FormatException("Decimal token length is outside the supported budget.");
+        static NumericResult<JavaNumber> Fail(NumericErrorCode code,int? position=null)
+            => NumericResult<JavaNumber>.Failure(new(code,"text",position));
+        if(text is null)return Fail(NumericErrorCode.NullInput);
+        if(text.Length is 0 or >4096)return Fail(NumericErrorCode.TokenLength);
         var span=text.AsSpan();var sign=1;var index=0;
         if(span[0] is '+' or '-') {if(span[0]=='-')sign=-1;index++;}
         var digits=new System.Text.StringBuilder();var fractional=0;var point=false;
@@ -66,17 +76,20 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
         {
             var c=span[index];
             if(c=='.'&&!point){point=true;continue;}
-            if(c is <'0' or >'9')throw new FormatException("Invalid decimal digit.");
+            if(c is <'0' or >'9')return Fail(NumericErrorCode.InvalidDigit,index);
             digits.Append(c);if(point)fractional++;
         }
-        if(digits.Length==0)throw new FormatException("Decimal digits required.");
+        if(digits.Length==0)return Fail(NumericErrorCode.MissingDigits,index);
         var exponent=0;
         if(index<span.Length&&!int.TryParse(span[(index+1)..],NumberStyles.AllowLeadingSign,CultureInfo.InvariantCulture,out exponent))
-            throw new FormatException("Invalid decimal exponent.");
+            return Fail(NumericErrorCode.InvalidExponent,index+1);
         var scale=(long)fractional-exponent;
-        if(scale is < -4096 or >4096)throw new ArgumentOutOfRangeException(nameof(text),"Decimal scale budget exceeded.");
+        if(scale is < -4096 or >4096)return Fail(NumericErrorCode.ScaleBudget);
         var coefficient=sign*BigInteger.Parse(digits.ToString(),CultureInfo.InvariantCulture);
-        return FromDecimal(coefficient,(int)scale);
+        var fraction=scale>=0?new Rational(coefficient,BigInteger.Pow(10,(int)scale))
+            :new Rational(coefficient*BigInteger.Pow(10,(int)-scale),1);
+        if(!WithinBudget(fraction))return Fail(NumericErrorCode.NumericBudget);
+        return NumericResult<JavaNumber>.Success(new(fraction,JavaNumberKind.Decimal,(int)scale));
     }
     /// <summary>Creates and narrows a finite Java Double, including pinned long-boundary saturation.</summary>
     public static JavaNumber FromDouble(double value)
@@ -108,13 +121,29 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     /// BigInteger inputs use Java's signed-bit-length narrowing rule instead. Public
     /// Integer equality remains normalized and does not reproduce Java class identity.</remarks>
     /// <exception cref="ArgumentException">The object is not a supported numeric type.</exception>
-    public static JavaNumber FromNumeric(object value)=>value switch
+    public static JavaNumber FromNumeric(object value)=>ConvertNumeric(value).Match(number=>number,error=>throw error.ToException());
+
+    /// <summary>Converts supported numeric objects with typed, recoverable input failures.</summary>
+    /// <remarks>Preserves JavaNumber identity and boxed Int64 promotion provenance.
+    /// Unsupported objects are neither inspected nor retained. Default Rational has
+    /// a zero denominator and is reported explicitly. Unexpected faults propagate.</remarks>
+    public static NumericResult<JavaNumber> ConvertNumeric(object? value)
     {
-        null=>throw new ArgumentNullException(nameof(value)),JavaNumber n=>n,BigInteger n=>Integer(n),Rational r=>Ratio(r.Numerator,r.Denominator),
-        sbyte n=>Integer(n),byte n=>Integer(n),short n=>Integer(n),ushort n=>Integer(n),int n=>Integer(n),uint n=>Integer(n),
-        long n=>new(new Rational(n,1),JavaNumberKind.Integer,integerDecimalContext:false),ulong n=>Integer(n),decimal n=>Decimal(n.ToString(CultureInfo.InvariantCulture)),float n=>FromDouble(n),double n=>FromDouble(n),
-        _=>throw new ArgumentException("A supported numeric value is required.",nameof(value))
-    };
+        static NumericResult<JavaNumber> Fail(NumericErrorCode code)=>NumericResult<JavaNumber>.Failure(new(code,"value"));
+        if(value is null)return Fail(NumericErrorCode.NullInput);
+        if(value is float f&&!float.IsFinite(f)||value is double d&&!double.IsFinite(d))return Fail(NumericErrorCode.NonFinite);
+        if(value is Rational rational&&rational.Denominator.IsZero)return Fail(NumericErrorCode.ZeroDenominator);
+        if(value is BigInteger integer&&integer.GetBitLength()>Budget||value is Rational ratio&&!WithinBudget(ratio))
+            return Fail(NumericErrorCode.NumericBudget);
+        JavaNumber? number=value switch
+        {
+            JavaNumber n=>n,BigInteger n=>Integer(n),Rational r=>Ratio(r.Numerator,r.Denominator),
+            sbyte n=>Integer(n),byte n=>Integer(n),short n=>Integer(n),ushort n=>Integer(n),int n=>Integer(n),uint n=>Integer(n),
+            long n=>new(new Rational(n,1),JavaNumberKind.Integer,integerDecimalContext:false),ulong n=>Integer(n),
+            decimal n=>Decimal(n.ToString(CultureInfo.InvariantCulture)),float n=>FromDouble(n),double n=>FromDouble(n),_=>null
+        };
+        return number is null?Fail(NumericErrorCode.UnsupportedNumericType):NumericResult<JavaNumber>.Success(number);
+    }
     /// <summary>Adds values with decimal promotion while preserving arbitrary integer magnitude.</summary>
     public JavaNumber Add(JavaNumber other)=>Operate(other,false);
     /// <summary>Explicitly reproduces pinned Indriya addition, including its lossy signed-long quirk.</summary>
@@ -217,9 +246,10 @@ public sealed class JavaNumber : IEquatable<JavaNumber>, IComparable<JavaNumber>
     private static void Check(Rational value)
     {
         if(value.Denominator.Sign<=0)throw new ArgumentException("A normalized rational is required.");
-        if(value.Numerator.GetBitLength()>Budget||value.Denominator.GetBitLength()>Budget)
+        if(!WithinBudget(value))
             throw new ArgumentOutOfRangeException(nameof(value),"Numeric bit budget exceeded.");
     }
+    private static bool WithinBudget(Rational value)=>value.Numerator.GetBitLength()<=Budget&&value.Denominator.GetBitLength()<=Budget;
     /// <summary>Projects to binary64; rational values first use Java's decimal128 projection.</summary>
     public double ToDouble()=>Kind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);
     /// <summary>Compares numeric values, independently of their representation.</summary>
