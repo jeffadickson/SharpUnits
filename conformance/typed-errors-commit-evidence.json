@@ -1,0 +1,16 @@
+{
+  "mutationReviewSha256": "D2E5DE12C6D6204FEE44967B50D4CFE830C646DACAFCE29BD36E0B78AB7B0B8C",
+  "independentReviewSha256": "8085DE04F77847DD8FFAEF975BDD760D2B217AC835AF80A35B666A2E42373FA0",
+  "testsPassed": 3236,
+  "referenceLockSha256": "426FFF7CBAED5188BE5D86A35E54FE8452A6C359304FEA3A13B7E23B316CBD89",
+  "javaPairedCases": 2670,
+  "scope": "Bounded local CLR typed-error behavior and selected mutation profile, not full Java conformance",
+  "committedLockValidationSha256": "C2A083B9D217BC21E0A468DEA8D4CB737FAEE45EF18729CA27D1574E2B699352",
+  "implementationCommit": "1971c5ec81693731d7c087572533e4e432116b7e",
+  "worktreeCleanAtAssociation": true,
+  "formalAssertionsClosed": 0,
+  "ci": "Both workflows disabled_manually; none dispatched",
+  "manifestSha256": "263469D6F1B5D39A07AF779363B6253167DB758931E9D58090A2FD85224C7490",
+  "sourceCanonicalHashesRechecked": true,
+  "javaTckPassed": 112
+}
