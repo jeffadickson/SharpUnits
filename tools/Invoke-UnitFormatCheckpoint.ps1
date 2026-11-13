@@ -1,7 +1,7 @@
 param([Parameter(Mandatory)][ValidateRange(10,100)][int]$Count)
 $ErrorActionPreference='Stop'
 if($Count%10){throw 'Use a multiple of ten'}
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $java='../tools-runtime/jdk/jdk-17.0.20.1+1/bin/java.exe'
 & $dotnet run --file tools/UnitFormatReview.cs -- prepare $Count
 if($LASTEXITCODE){throw 'Preparation failed'}
@@ -23,7 +23,7 @@ if(Test-Path -LiteralPath tests/SharpUnits.Tests/AffineUnitFormatTests.cs){$expe
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected){throw "Incomplete tests: expected $expected"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../unitformat100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}
-& $dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-reference-cases.json > "../unitformat100-dotnet-$Count.jsonl"
+& $dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-reference-cases.json > "../unitformat100-dotnet-$Count.jsonl"
 if($LASTEXITCODE){throw 'CLR execution failed'}
 & $dotnet run --file tools/UnitFormatReview.cs -- record $Count
 if($LASTEXITCODE){throw 'Comparison failed'}

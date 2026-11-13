@@ -22,7 +22,7 @@ jobs:
           echo "Java upstream sources available for test porting"
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x'
+          dotnet-version: '11.0.x'
       - name: Inventory upstream Java tests
         if: matrix.os == 'ubuntu-latest'
         run: python3 tools/inventory_java_tests.py
@@ -60,7 +60,7 @@ jobs:
         shell: bash
         run: |
           dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release --nologo >&2
-          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/cases.json > dotnet-conformance.jsonl
+          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/cases.json > dotnet-conformance.jsonl
           python3 tools/check_fixture_expectations.py conformance/cases.json dotnet-conformance.jsonl
       - name: Upload normalized .NET conformance results
         if: matrix.os == 'ubuntu-latest' && always()
@@ -75,7 +75,7 @@ jobs:
         shell: bash
         run: |
           dotnet build demo/SharpUnits.BodeDemo.csproj -c Release --nologo >&2
-          dotnet demo/bin/Release/net10.0/SharpUnits.BodeDemo.dll > bode-output.csv
+          dotnet demo/bin/Release/net11.0/SharpUnits.BodeDemo.dll > bode-output.csv
           python3 tools/verify_bode_export.py bode-output.csv
       - name: Upload Bode numerical evidence
         if: matrix.os == 'ubuntu-latest' && always()

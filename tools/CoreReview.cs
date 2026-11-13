@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.Numerics;
 
-// Reusable .NET 10 corpus generation/retention and source-level TCK audit.
+// Reusable .NET 11 corpus generation/retention and source-level TCK audit.
 if(!Directory.Exists("conformance")||!Directory.Exists("requirements")||!Directory.Exists("upstream/unit-tck/src/main/java"))
     throw new DirectoryNotFoundException("Run from the existing SharpUnits checkout.");
 var options=new JsonSerializerOptions{WriteIndented=true};

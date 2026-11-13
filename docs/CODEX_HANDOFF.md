@@ -2,8 +2,12 @@
 
 Repository: https://github.com/jeffadickson/SharpUnits
 Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
-Target framework: .NET 10. Primary development language: C#.
+Target framework: .NET 11. Primary development language: C#15.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
+
+## .NET11 continuation (2026-11-13)
+
+The user requested .NET11 migration and five work packages to complete the library. All four projects now target net11.0 with stable SDK11.0.100/no prereleases. Active runner commands resolve installed stable dotnet; workflows retain manual-only triggers and must stay disabled. C#15 comparer arguments and BCL frozen collections protect shared prefix/metric lookup metadata. See docs/net11-migration-and-library-assessment.md, docs/package-completion-five.md and conformance/completion-work-packages.json. The ownership map assigns all113 TCK occurrences exactly once to packages1–4 (60/11/20/22); package5 qualifies all113. Validate with tools/Validate-CompletionPlan.ps1. Historical .NET10 evidence is historical and does not qualify the new runtime. See conformance/net11-migration.md for executed migration evidence, versions and limits; no formal assertion is promoted by retargeting. CI stays off.
 
 ## Typed numeric failure continuation (2026-11-12)
 

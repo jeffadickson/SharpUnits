@@ -1,4 +1,4 @@
-param([string]$Dotnet=(Join-Path $env:USERPROFILE '.dotnet/dotnet.exe'),
+param([string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source,
       [string]$Java='../tools-runtime/jdk/jdk-17.0.20.1+1/bin/java.exe',
       [string]$Python='../tools-runtime/python/python.exe',
       [string]$OutputDirectory='../affine-format-output')
@@ -22,7 +22,7 @@ try {
     $clrOutput=Join-Path $OutputDirectory 'dotnet.jsonl'
     & $Java '-Dfile.encoding=UTF-8' -cp $classpath org.sharpunits.UnitFormatReferenceRunner conformance/unitformat-affine-cases.json > $javaOutput
     if($LASTEXITCODE){throw 'Java observation failed'}
-    & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-affine-cases.json > $clrOutput
+    & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/unitformat-affine-cases.json > $clrOutput
     if($LASTEXITCODE){throw 'CLR observation failed'}
     & $Python tools/compare_java_dotnet.py $javaOutput $clrOutput --cases conformance/unitformat-affine-cases.json
     if($LASTEXITCODE){throw 'Affine unit-format difference detected'}

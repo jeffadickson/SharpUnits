@@ -1,4 +1,4 @@
-param([string]$Dotnet=(Join-Path $env:USERPROFILE '.dotnet/dotnet.exe'),
+param([string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source,
       [string]$JavaHome='../tools-runtime/jdk/jdk-17.0.20.1+1',
       [string]$Maven='../tools-runtime/apache-maven-3.9.9/bin/mvn.cmd',
       [string]$Python='../tools-runtime/python/python.exe',
@@ -29,7 +29,7 @@ try {
     & $Dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo
     if($LASTEXITCODE){throw 'CLR runner compilation failed'}
     $clrOutput=Join-Path $OutputDirectory 'dotnet.jsonl'
-    & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/work-package-one-cases.json > $clrOutput
+    & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/work-package-one-cases.json > $clrOutput
     if($LASTEXITCODE){throw 'CLR observation failed'}
     & $Python tools/compare_java_dotnet.py $javaOutput $clrOutput --cases conformance/work-package-one-cases.json
     if($LASTEXITCODE){throw 'Java/CLR difference detected'}

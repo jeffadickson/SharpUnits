@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $units=(Resolve-Path src/SharpUnits/JavaUnitTextFormat.cs).Path
 $arithmetic=(Resolve-Path src/SharpUnits/UnitRegistry.cs).Path
 $services=(Resolve-Path src/SharpUnits/JavaServices.cs).Path

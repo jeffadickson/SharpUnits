@@ -200,9 +200,9 @@ COMMENT: Inventory disposition: Partial XML docs. Historical scope and evidence:
 [REQUIREMENT]
 UID: JP-030
 STATUS: Active
-TITLE: .NET 10 CI proof
-STATEMENT: SharpUnits shall provide .NET 10 CI proof within a documented compatibility envelope.
-COMMENT: Inventory disposition: GitHub workflows disabled by user; local .NET 10 checks do not provide new Ubuntu/Windows CI proof. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
+TITLE: .NET 11 CI proof
+STATEMENT: SharpUnits shall provide .NET 11 CI proof within a documented compatibility envelope.
+COMMENT: Inventory disposition: GitHub workflows disabled by user; local .NET 11 checks do not provide new Ubuntu/Windows CI proof. Historical scope and evidence: docs/java-parity-gap-analysis.md; assertion-level implementation and verification evidence: conformance/tck-closure-ledger.json. This record is not a closure claim.
 
 [REQUIREMENT]
 UID: EE-001

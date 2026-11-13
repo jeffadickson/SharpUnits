@@ -1,5 +1,6 @@
 using System.Numerics;
 using System.Text;
+using System.Collections.Frozen;
 
 namespace SharpUnits;
 
@@ -29,11 +30,18 @@ public sealed class JavaUnitTextFormat
     private readonly JavaUnitFormatFlavor flavor;
     private static readonly Dictionary<string,JavaUnitEntry> catalog=JavaUnitCatalogData.Entries().ToDictionary(e=>e.Field,StringComparer.Ordinal);
     private static readonly Dictionary<UnitDefinition,JavaUnitEntry> byUnit=catalog.Values.ToDictionary(e=>e.Unit);
-    private static readonly HashSet<string> metricFields=new(StringComparer.Ordinal)
+    private static readonly FrozenSet<string> metricFields=CreateMetricFields();
+
+    // C#15 constructor arguments preserve the explicit ordinal comparer. Freeze
+    // after construction: formatters share membership metadata, not mutable state.
+    private static FrozenSet<string> CreateMetricFields()
     {
+        HashSet<string> fields = [with(StringComparer.Ordinal),
         "AMPERE","BECQUEREL","CANDELA","COULOMB","FARAD","GRAY","HENRY","HERTZ","JOULE","KATAL","KELVIN","LUMEN","LUX",
         "METRE","MOLE","NEWTON","OHM","PASCAL","RADIAN","SECOND","SIEMENS","SIEVERT","STERADIAN","TESLA","VOLT","WATT","WEBER"
-    };
+        ];
+        return fields.ToFrozenSet(StringComparer.Ordinal);
+    }
 
     /// <summary>Creates a fresh formatter using a snapshot of explicitly registered units.</summary>
     public JavaUnitTextFormat(UnitRegistry registry,JavaUnitFormatFlavor flavor=JavaUnitFormatFlavor.Default):this(registry,flavor,null){}

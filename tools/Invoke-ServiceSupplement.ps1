@@ -1,4 +1,4 @@
-param([string]$Dotnet='C:/Users/jeffd/.dotnet/dotnet.exe',
+param([string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source,
       [string]$Java='../tools-runtime/jdk/jdk-17.0.20.1+1/bin/java.exe',
       [string]$Python='../tools-runtime/python/python.exe')
 $ErrorActionPreference='Stop'
@@ -9,7 +9,7 @@ foreach($kind in @('edge','filter')){
  $cases="conformance/service-$kind-cases.json"
  & $Java '-Dfile.encoding=UTF-8' -cp $classpath org.sharpunits.ServiceReferenceRunner $cases > "../services100-$kind-java.jsonl"
  if($LASTEXITCODE){throw 'Java supplement failed'}
- & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll $cases > "../services100-$kind-dotnet.jsonl"
+ & $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll $cases > "../services100-$kind-dotnet.jsonl"
  if($LASTEXITCODE){throw 'CLR supplement failed'}
  & $Python tools/compare_java_dotnet.py "../services100-$kind-java.jsonl" "../services100-$kind-dotnet.jsonl" --cases $cases
  if($LASTEXITCODE){throw 'Supplemental differential mismatch'}

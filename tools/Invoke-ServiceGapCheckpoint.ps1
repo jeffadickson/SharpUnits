@@ -1,7 +1,7 @@
 param([Parameter(Mandatory)][ValidateRange(10,100)][int]$Count)
 $ErrorActionPreference='Stop'
 if($Count%10){throw 'Compile/test checkpoints must be multiples of ten'}
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $java='../tools-runtime/jdk/jdk-17.0.20.1+1/bin/java.exe'
 & $dotnet run --file tools/ServiceGapReview.cs -- prepare $Count
 if($LASTEXITCODE){throw 'Gap preparation failed'}
@@ -30,7 +30,7 @@ if(Test-Path -LiteralPath tests/SharpUnits.Tests/AffineUnitFormatTests.cs){$expe
 if([int]$trx.TestRun.ResultSummary.Counters.executed -ne $expected -or [int]$trx.TestRun.ResultSummary.Counters.failed -ne 0){throw "Incomplete test execution: expected $expected tests"}
 & $dotnet build src/SharpUnits.ConformanceRunner -c Release --no-restore --nologo *> "../services100-runner-$Count.log"
 if($LASTEXITCODE){throw 'Runner build failed'}
-& $dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/service-reference-cases.json > "../services100-dotnet-$Count.jsonl"
+& $dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/service-reference-cases.json > "../services100-dotnet-$Count.jsonl"
 if($LASTEXITCODE){throw 'CLR observation failed'}
 & $dotnet run --file tools/ServiceGapReview.cs -- record $Count
 if($LASTEXITCODE){throw 'Comparison failed'}

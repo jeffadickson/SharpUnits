@@ -8,9 +8,13 @@ GitHub CI is disabled at the user's request. The .NET and Java workflows are dis
 in GitHub and retain only manual dispatch triggers in source. Re-enable them explicitly
 before requesting a manual GitHub run. Local build and test commands remain available.
 
-Alpha .NET 10 library. Java compatibility work is in progress; passing tests do not
+Alpha .NET 11 library. Java compatibility work is in progress; passing tests do not
 imply full JSR 385 conformance. See the [assertion review](conformance/quantity-interface-review.md)
 for executable evidence and remaining differences.
+
+Use stable SDK11.0.100 (C#15); runtime consumers require .NET11. See the
+[migration/reuse assessment](docs/net11-migration-and-library-assessment.md) and
+[five completion work packages](docs/package-completion-five.md).
 
 ## Engineering goals
 
@@ -19,7 +23,7 @@ for executable evidence and remaining differences.
 - Typed Ohm's law and electrical quantity algebra
 - Dimension-checked symbolic solving using optional AngouriMath adapter
 - Traceable requirements, STRIDE assessment, XML API documentation and DocFX
-- Cross-platform .NET 10 build and tests
+- Cross-platform .NET 11 build and tests
 
 See GitHub Issues for work tracking.
 

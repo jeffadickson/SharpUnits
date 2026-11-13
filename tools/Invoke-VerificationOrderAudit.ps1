@@ -1,4 +1,4 @@
-param([string]$Dotnet=(Join-Path $env:USERPROFILE '.dotnet/dotnet.exe'))
+param([string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source)
 $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot
 if(!(Test-Path -LiteralPath $root -PathType Container)){throw 'Missing checkout'}

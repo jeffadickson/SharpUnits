@@ -1,5 +1,5 @@
 param([Parameter(Mandatory)][string]$Runner,[string]$OutputDirectory='../repair-all-corpora',
-      [string]$Dotnet=(Join-Path $env:USERPROFILE '.dotnet/dotnet.exe'),[string]$JavaHome='../tools-runtime/jdk/jdk-17.0.20.1+1',
+      [string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source,[string]$JavaHome='../tools-runtime/jdk/jdk-17.0.20.1+1',
       [string]$Python='../tools-runtime/python/python.exe')
 $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot

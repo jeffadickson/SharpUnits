@@ -1,5 +1,5 @@
 param(
- [Parameter(Mandatory)][ValidateSet('Tests','Mutation','FocusedMutation','Reference','JavaTck','Requirements','Example')][string]$Mode,
+ [Parameter(Mandatory)][ValidateSet('Tests','Mutation','FocusedMutation','Net11Mutation','Reference','JavaTck','Requirements','Example','Demo')][string]$Mode,
  [Parameter(Mandatory)][string]$OutputDirectory,
  [int]$ProcessMiB=512,[int]$AggregateMiB=768,[int]$ReserveMiB=512,
  [ValidateRange(0,2048)][int]$ManagedHeapMiB=0
@@ -21,7 +21,7 @@ if((Get-Content -LiteralPath $probe -Raw).Trim() -ne 'writable'){throw 'Artifact
 $disks=Get-PSDrive C,E|Select-Object Name,Free
 $disks|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $output 'disk-space.json')
 if(($disks|Where-Object Name -eq 'C').Free -lt 256MB){throw 'Insufficient C: headroom for bounded NTFS build intermediates'}
-@{mode=$Mode;repository=$repository;output=$output;artifactRoot=$artifactRoot;dotnet=(Join-Path $env:USERPROFILE '.dotnet/dotnet.exe');managedHeapMiB=$ManagedHeapMiB}|
+@{mode=$Mode;repository=$repository;output=$output;artifactRoot=$artifactRoot;dotnet=(Get-Command dotnet -ErrorAction Stop).Source;managedHeapMiB=$ManagedHeapMiB}|
  ConvertTo-Json|Set-Content -LiteralPath (Join-Path $output 'inputs.json')
 @'
 $ErrorActionPreference='Stop'
@@ -30,7 +30,7 @@ if(!(Test-Path -LiteralPath $inputs.repository -PathType Container)){throw 'Miss
 Set-Location -LiteralPath $inputs.repository
 $env:MSBUILDDISABLENODEREUSE='1'
 $env:VSTEST_CONNECTION_TIMEOUT='180'
-if($inputs.mode -in 'Mutation','FocusedMutation'){
+if($inputs.mode -in 'Mutation','FocusedMutation','Net11Mutation'){
  # One Stryker worker does not bound Roslyn/GC's own machine-sized pools.
  $env:DOTNET_PROCESSOR_COUNT='2';$env:DOTNET_gcServer='0'
 }
@@ -45,17 +45,27 @@ switch($inputs.mode){
   & $inputs.dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release -m:1 -p:UseSharedCompilation=false --collect 'XPlat Code Coverage' --results-directory (Join-Path $inputs.output 'coverage') --logger 'trx;LogFileName=typed-errors.trx'
  }
  'Mutation' {
-  & ../tools-runtime/stryker/dotnet-stryker.exe --config-file tools/stryker-typed-errors.json --skip-version-check --output (Join-Path $inputs.output 'stryker')
+  & $inputs.dotnet tool restore
+  if($LASTEXITCODE){exit $LASTEXITCODE}
+  & $inputs.dotnet tool run dotnet-stryker -- --config-file tools/stryker-typed-errors.json --skip-version-check --output (Join-Path $inputs.output 'stryker')
  }
  'FocusedMutation' {
   & ./tools/Set-TypedErrorMutationScope.ps1
-  & ../tools-runtime/stryker/dotnet-stryker.exe --config-file tools/stryker-typed-errors-focused.json --skip-version-check --output (Join-Path $inputs.output 'stryker')
+  & $inputs.dotnet tool restore
+  if($LASTEXITCODE){exit $LASTEXITCODE}
+  & $inputs.dotnet tool run dotnet-stryker -- --config-file tools/stryker-typed-errors-focused.json --skip-version-check --output (Join-Path $inputs.output 'stryker')
+ }
+ 'Net11Mutation' {
+  & ./tools/Set-Net11MutationScope.ps1
+  & $inputs.dotnet tool restore
+  if($LASTEXITCODE){exit $LASTEXITCODE}
+  & $inputs.dotnet tool run dotnet-stryker -- --config-file tools/stryker-net11.json --skip-version-check --output (Join-Path $inputs.output 'stryker')
  }
  'Reference' {
   & $inputs.dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release -m:1 -p:UseSharedCompilation=false
   if($LASTEXITCODE){exit $LASTEXITCODE}
   $env:JAVA_TOOL_OPTIONS='-Xmx128m -XX:MaxMetaspaceSize=96m'
-  & ./tools/Invoke-AllVerificationCorpora.ps1 -Runner 'src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll' -OutputDirectory (Join-Path $inputs.output 'corpora')
+  & ./tools/Invoke-AllVerificationCorpora.ps1 -Runner 'src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll' -OutputDirectory (Join-Path $inputs.output 'corpora')
  }
  'JavaTck' {
   $runtime=Join-Path (Split-Path -Parent $inputs.repository) 'tools-runtime'
@@ -82,8 +92,19 @@ switch($inputs.mode){
   if($LASTEXITCODE){exit $LASTEXITCODE}
   & $inputs.dotnet run --file examples/TypedNumericErrors.cs -c Release -p:UseSharedCompilation=false
  }
+ 'Demo' {
+  & $inputs.dotnet --info
+  & $inputs.dotnet build demo/SharpUnits.BodeDemo.csproj -c Release -m:1 -p:UseSharedCompilation=false
+  if($LASTEXITCODE){exit $LASTEXITCODE}
+  & $inputs.dotnet demo/bin/Release/net11.0/SharpUnits.BodeDemo.dll > (Join-Path $inputs.output 'bode.csv')
+  if($LASTEXITCODE){exit $LASTEXITCODE}
+  & $inputs.dotnet run --file examples/ExactJavaCore.cs -c Release -p:PublishAot=false -p:UseSharedCompilation=false
+ }
 }
 if($LASTEXITCODE){exit $LASTEXITCODE}
+if($inputs.mode -in 'Mutation','FocusedMutation','Net11Mutation'){
+ & ./tools/Assert-MutationReport.ps1 -Report (Join-Path $inputs.output 'stryker/reports/mutation-report.json')
+}
 '@|Set-Content -LiteralPath (Join-Path $output 'workload.ps1')
 Push-Location -LiteralPath $repository
 try {& (Join-Path $PSScriptRoot 'Invoke-Budgeted.ps1') -Script (Join-Path $output 'workload.ps1') -OutputDirectory $output -ProcessMiB $ProcessMiB -AggregateMiB $AggregateMiB -ReserveMiB $ReserveMiB}

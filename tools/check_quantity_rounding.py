@@ -2,7 +2,7 @@
 """Check linear adapter conversion and addition against Python's exact Fraction rounding.
 
 This validates the CLR round-trip-decimal model, not arbitrary Java Number parity.
-Build the conformance runner first. Pass --dotnet if .NET 10 is not on PATH.
+Build the conformance runner first. Pass --dotnet if .NET 11 is not on PATH.
 """
 import argparse
 from fractions import Fraction
@@ -19,7 +19,7 @@ def main():
     parser.add_argument('--dotnet',default='dotnet')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
-    runner=root/'src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll'
+    runner=root/'src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll'
     scales={'A':1.,'mA':.001,'quarterA':.25,'eighthA':.125,'largeA':1e200,'tinyA':1e-200}
     randomizer=random.Random(385)
     cases=[]

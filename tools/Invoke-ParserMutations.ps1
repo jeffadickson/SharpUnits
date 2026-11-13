@@ -6,7 +6,7 @@ if(Test-Path -LiteralPath $currentCampaign){
     & $currentCampaign
     return
 }
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $source=(Resolve-Path src/SharpUnits/JavaQuantityTextParser.cs).Path
 $original=[IO.File]::ReadAllBytes($source)
 $text=[Text.Encoding]::UTF8.GetString($original)

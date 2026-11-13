@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $units=(Resolve-Path src/SharpUnits/JavaUnitTextParser.cs).Path
 $arithmetic=(Resolve-Path src/SharpUnits/JavaDoubleArithmetic.cs).Path
 $original=@{};foreach($file in @($units,$arithmetic)){$original[$file]=[IO.File]::ReadAllBytes($file)}

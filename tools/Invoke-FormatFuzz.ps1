@@ -1,4 +1,4 @@
-param([string]$Dotnet='C:/Users/jeffd/.dotnet/dotnet.exe',
+param([string]$Dotnet=(Get-Command dotnet -ErrorAction Stop).Source,
       [string]$Java='../tools-runtime/jdk/jdk-17.0.20.1+1/bin/java.exe')
 $ErrorActionPreference='Stop'
 # Compare exact text, including Java's Number narrowing. No string tolerance is applied.
@@ -7,7 +7,7 @@ if($LASTEXITCODE){throw 'Input generation failed'}
 $classpath='conformance/java-reference/target/classes;'+(Get-Content conformance/java-reference/classpath.txt -Raw).Trim()
 & $Java '-Dfile.encoding=UTF-8' -cp $classpath org.sharpunits.ReferenceRunner ../format100-fuzz-input.json > ../format100-fuzz-java.jsonl
 if($LASTEXITCODE){throw 'Java execution failed'}
-& $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll ../format100-fuzz-input.json > ../format100-fuzz-dotnet.jsonl
+& $Dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll ../format100-fuzz-input.json > ../format100-fuzz-dotnet.jsonl
 if($LASTEXITCODE){throw 'CLR execution failed'}
 $javaRows=@(Get-Content ../format100-fuzz-java.jsonl|ForEach-Object {$_|ConvertFrom-Json})
 $dotnetRows=@(Get-Content ../format100-fuzz-dotnet.jsonl|ForEach-Object {$_|ConvertFrom-Json})

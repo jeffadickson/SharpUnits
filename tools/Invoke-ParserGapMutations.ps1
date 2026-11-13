@@ -5,7 +5,7 @@ if(Test-Path -LiteralPath $grammarCampaign){
     & $grammarCampaign
     return
 }
-$dotnet='C:/Users/jeffd/.dotnet/dotnet.exe'
+$dotnet=(Get-Command dotnet -ErrorAction Stop).Source
 $quantity=(Resolve-Path src/SharpUnits/JavaQuantityTextParser.cs).Path
 $units=(Resolve-Path src/SharpUnits/JavaUnitTextParser.cs).Path
 $original=@{};foreach($file in @($quantity,$units)){$original[$file]=[IO.File]::ReadAllBytes($file)}
