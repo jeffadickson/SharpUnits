@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "auditCommit": "c78e71a930f266a59abcd006bc32838868543213",
+  "canonicalTextSha256": {
+    "conformance/release-audit-evidence.json": "8E5A10CC7D0F176FA5AAEF21EA8269D43CCED562BAA49109020CB36E33C41494",
+    "conformance/release-audit-independent-review.md": "7E99EA30EA145B97A62BDC2283DF03C513B732F2D94F0DC2BC4354EC23257645",
+    "conformance/release-compliance-audit.json": "C39055374B7B07B7E2EBDBFB2AF62DF601757CEC131447614052A66223048432",
+    "conformance/verification-reference-lock.json": "157E957B039D32A8317C3DD475E28A281EF42499C7F2DD6CDA0120EDC4FE73C9"
+  },
+  "assertionsAudited": 113,
+  "formalClosures": 0,
+  "testsPassed": 3240,
+  "pairedObservations": 2670,
+  "stockJavaTckTests": 112,
+  "stockJavaSubject": "Indriya reference",
+  "independentAgentReview": "Bounded concurrence with accounting/source/evidence scope; no certification or normative completeness",
+  "finalFormatting": "Trailing blank line removed from review after concurrence; root revalidated all source/raw hashes; no review-content change",
+  "ci": "Disabled; no dispatch"
+}
