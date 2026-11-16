@@ -17,7 +17,8 @@ if(!(Test-Path -LiteralPath $OutputDirectory -PathType Container)){throw 'Missin
 if(Test-Path -LiteralPath (Join-Path $OutputDirectory 'watchdog.json')){throw 'Use a fresh watchdog directory; preserve earlier evidence'}
 if($ProcessMiB -gt $AggregateMiB){throw 'Per-process limit exceeds aggregate budget'}
 $memory=Get-CimInstance Win32_OperatingSystem
-if($memory.FreePhysicalMemory*1024 -lt ($AggregateMiB+$ReserveMiB)*1MB){throw 'Insufficient free RAM for workload budget plus OS/interactive reserve'}
+# Free physical RAM is telemetry only. Paging is managed by Windows; admission
+# and termination depend on explicit process/job commit budgets, never free RAM.
 # The workload process waits on an event until assignment succeeds. The kernel
 # enforces commit limits for every descendant and kills the job on watchdog exit.
 # Independent jobs must not be dispatched concurrently through this serial wrapper.
@@ -47,6 +48,7 @@ $port=[IntPtr]::Zero
 $process=$null
 $outputStream=$null;$errorStream=$null
 $record=[ordered]@{processMiB=$ProcessMiB;aggregateMiB=$AggregateMiB;reserveMiB=$ReserveMiB;freeKiB=$memory.FreePhysicalMemory;peakProcessBytes=0L;peakJobBytes=0L;outcome='not started';script=(Resolve-Path -LiteralPath $Script).Path;enforcement='Windows Job Object commit limits, descendants inherit job; KILL_ON_JOB_CLOSE; one workload at a time'}
+$record.reservePolicy='Compatibility argument only; no free-RAM admission or reservation.'
 $record.processWatermarkBytes=[long]($ProcessMiB*1MB*0.85)
 $record.jobWatermarkBytes=[long]($AggregateMiB*1MB*0.85)
 $record.watermarkPolicy='Terminate at85% of declared hard commit limits, including retained peaks. Kernel allocation-failure notifications are best-effort, so reconcile every250ms and after root exit. Same-user global mutex refuses concurrent wrapper runs.'
@@ -90,7 +92,7 @@ if(!$?){exit 1}
  $stderr=$process.StandardError.BaseStream.CopyToAsync($errorStream)
  if(![SharpUnitsJob]::AssignProcessToJobObject($job,$process.Handle)){throw 'Job assignment failed; workload has not been released'}
  $record.outcome='active';$record|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $OutputDirectory 'watchdog.json')
- Write-Output ('ACTIVE: process={0} MiB, aggregate={1} MiB, reserve={2} MiB; artifacts={3}' -f $ProcessMiB,$AggregateMiB,$ReserveMiB,$OutputDirectory)
+ Write-Output ('ACTIVE: process={0} MiB, aggregate={1} MiB, reserveArgument={2} MiB (informational); artifacts={3}' -f $ProcessMiB,$AggregateMiB,$ReserveMiB,$OutputDirectory)
  $null=$gate.Set()
  # Await kernel job notifications, with bounded reconciliation of process exit.
  # A memory-limit event terminates the entire offending tree immediately.

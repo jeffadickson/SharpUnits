@@ -1,5 +1,7 @@
 # Java JSR 385 / Indriya compatibility gap analysis
 
+> Historical capability table: several statuses below predate the exact core and .NET11 migration. Use the [2026-11-16 assertion audit](../conformance/release-compliance-audit.md) and current StrictDoc records for precise dispositions. Neither this old table nor the113-occurrence audit establishes complete normative coverage.
+
 Baseline: JSR 385 (javax.measure API), Indriya reference implementation, and UnitsNet as an optional .NET interoperability target. Target runtime: .NET 10.
 
 **Assessment scope:** reviewed currently imported SharpUnits GitHub source, not historical local archives. A feature is NOT VERIFIED until its CI tests pass. Java behavioral compatibility does not imply Java binary/API compatibility.

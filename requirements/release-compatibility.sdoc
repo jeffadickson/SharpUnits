@@ -1,0 +1,44 @@
+[DOCUMENT]
+TITLE: Modern .NET JSR semantic compatibility and release audit
+
+[REQUIREMENT]
+UID: REL-COMPAT-001
+STATUS: Draft
+TITLE: Complete semantic contract coverage
+STATEMENT: A release claiming JSR semantic compatibility shall map every targeted specification and public API obligation to an explicit native contract and independent verification evidence, including obligations not exercised by the pinned TCK assertion inventory.
+COMMENT: Inferred acceptance detail for the user-requested full-compliance objective and modern .NET design. The113-occurrence audit is conformance/release-compliance-audit.json; the12-type declared-member inventory is supplementary, not complete normative coverage. No compatibility certification is established.
+
+[REQUIREMENT]
+UID: REL-COMPAT-002
+STATUS: Draft
+TITLE: Separate semantics API adaptation and implementation quirks
+STATEMENT: Compatibility records shall distinguish specification behavior, exact Java API/runtime identity, CLR API adaptations, and pinned Indriya implementation observations. Known lossy or physically unsafe implementation quirks shall not silently become native defaults.
+COMMENT: User-directed modern domain emphasis. Retain exact original TCK statuses and annotate adaptations separately. Native AbsoluteTemperature and TemperatureDifference and explicitly named pinned-Indriya numeric methods are existing examples. New diagnostic evidence is in conformance/release-audit-probes.json and the audit evidence manifest.
+
+[REQUIREMENT]
+UID: REL-COMPAT-003
+STATUS: Draft
+TITLE: Idiomatic native composition
+STATEMENT: Native public contracts shall preserve dimensional and semantic-kind checks, explicit numeric and scale policies, and meaningful equality/conversion behavior using supported .NET conventions. Java class names, reflection signatures and ServiceLoader shall not be prerequisites for native use.
+COMMENT: Proposed design criterion, not an authorization to remove legacy adapters or rewrite the domain. Evaluate narrow generic-math interfaces, span parsing and instance-scoped registration before implementation. Recommendation and reuse rationale: docs/modern-dotnet-compatibility-design.md.
+
+[REQUIREMENT]
+UID: REL-COMPAT-004
+STATUS: Draft
+TITLE: Exact graph text and recoverable parsing
+STATEMENT: Supported unit and quantity text shall round-trip retained value, unit graph, converter and scale according to a documented format contract. Expected parse/conversion/factory failures shall have typed outcomes with usable diagnostics and preserve valid caller/registry state.
+COMMENT: Proposed release acceptance. Existing numeric typed results do not satisfy every parser/factory boundary. Affine-expression and decimal-factor parsing gaps are freshly reproduced by RA-F-02 and RA-F-03. RA-F-04 records a pinned-Java text anomaly, not a mandate to reproduce its apparent narrowing.
+
+[REQUIREMENT]
+UID: REL-COMPAT-005
+STATUS: Draft
+TITLE: Evidence-based release compatibility claim
+STATEMENT: Release claims shall identify exact specification/API and reference versions, covered native contracts, intentional structural adaptations, unresolved deviations and revision-bound execution evidence. Aggregate TCK, regression, coverage or mutation counts shall not imply full semantic or Java binary conformance.
+COMMENT: Source audit, historical evidence and fresh diagnostic runs remain distinct. Existing formal closure gates are unchanged and GitHub CI remains disabled. The first-release plan is revised to retain the compatibility objective rather than replace it with a smaller product scope.
+
+[REQUIREMENT]
+UID: VER-RAM-TELEMETRY
+STATUS: Active
+TITLE: Explicit runaway budgets independent of free RAM
+STATEMENT: Verification process trees shall use explicit process and aggregate runaway limits with descendant termination. System free or available RAM shall be telemetry only and shall neither gate startup nor trigger termination.
+COMMENT: Explicit user development rule2026-11-16. Implementation tools/Invoke-Budgeted.ps1 removes its obsolete free-physical-memory admission gate while retaining queried Windows Job Object commit limits and watermark termination. ReserveMiB remains a backward-compatible informational argument, not an admission or reservation guarantee. Fresh audit workloads retain active native flag read-back8960 and outcomes; low-memory-system simulation and watchdog branch coverage were not executed.

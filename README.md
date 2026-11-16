@@ -16,6 +16,8 @@ Use stable SDK11.0.100 (C#15); runtime consumers require .NET11. See the
 [migration/reuse assessment](docs/net11-migration-and-library-assessment.md) and
 [five completion work packages](docs/package-completion-five.md).
 
+The [current compliance audit](conformance/release-compliance-audit.md) distinguishes exact Java test shape from native domain semantics. Full semantic compatibility remains the release objective; the [modern .NET direction](docs/modern-dotnet-compatibility-design.md) keeps API adaptations and unresolved behavior explicit.
+
 ## Engineering goals
 
 - Java JSR 385/Indriya behavioral compatibility where applicable

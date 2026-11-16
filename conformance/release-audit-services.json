@@ -1,0 +1,886 @@
+[
+  {
+    "id": "41-A1",
+    "suite": "FundamentalTypesTest",
+    "sourceMethod": "testEnsureGotUnit",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+    "javaLine": 67,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Configuration nonnull; registered Unit Class collection nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:15"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Unit implementations exist; no Java TestConfiguration Class registry.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "41-A2",
+    "suite": "FundamentalTypesTest",
+    "sourceMethod": "testEnsureHasDimension",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+    "javaLine": 78,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Configuration nonnull; registered Dimension Class collection nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/Dimension.cs:3"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Dimension value types exist; no Java Class registry.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "41-A3",
+    "suite": "FundamentalTypesTest",
+    "sourceMethod": "testEnsureHasPrefix",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+    "javaLine": 89,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Configuration nonnull; Prefix Class collection nonempty and contains at least two classes, not two prefix instances.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:65"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "SiPrefix and JavaPrefix exist; 24 metric plus 8 binary instances do not establish two registered implementation classes.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "41-A4",
+    "suite": "FundamentalTypesTest",
+    "sourceMethod": "testEnsureHasQuantity",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
+    "javaLine": 102,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Configuration nonnull; registered Quantity Class collection nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/Quantity.cs:4"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Quantity implementations exist; no Java Class registry.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "Setup-1",
+    "suite": "TCKSetupTest",
+    "sourceMethod": "testTestSetup",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+    "javaLine": 66,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "TCKSetup.getConfiguration() is nonnull.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:162"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No Java ServiceLoader TestConfiguration bridge; built-in C# service availability is a different contract.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "Setup-2",
+    "suite": "TCKSetupTest",
+    "sourceMethod": "testQuantityConfiguration",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/TCKSetupTest.java",
+    "javaLine": 77,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Configuration quantity Class collection is nonnull and nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/Quantity.cs:4"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckProviderContractTests.cs:FactoryProducesQuantityFromUnit (domain analogue only; no configuration assertion)",
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:PrefixMetadataIsConsistent (metadata analogue only)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Quantity functionality exists without a Java configuration class collection.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Keep native value types and explicit composition; Java TCK configuration is qualification infrastructure, not missing domain functionality.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "44-A1",
+    "suite": "QuantityTypesTest",
+    "sourceMethod": "testContainsBaseDimensions",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+    "javaLine": 72,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Configured base-dimension collection has exactly seven entries; each occurs as the dimension of at least one configured test unit.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitCatalogData.cs:9",
+      "src/SharpUnits/Dimension.cs:3"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Seven base unit catalog entries exist; no exact configured-set coverage assertion identified.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "44-A2",
+    "suite": "QuantityTypesTest",
+    "sourceMethod": "testContainsQuantities",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
+    "javaLine": 96,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For each configured supported Quantity Class, configuration.getUnit4Type(Class) returns nonnull; empty collection passes vacuously.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitCatalogData.cs:52"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "33 named quantity mappings exist; no CLR quantity identity registry or exact Java configured-type sweep.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "561-A1",
+    "suite": "ObtainingQuantiesTest",
+    "sourceMethod": "testAccessToQuantityFactory",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+    "javaLine": 75,
+    "assertionKind": "MIXED",
+    "expectedSemantics": "For each Quantity subtype discovered under javax.measure, current provider returns nonnull factory.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:181"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Factory available for every nonblank identifier; no discovered subtype-to-factory CLR admission contract.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "561-A2",
+    "suite": "ObtainingQuantiesTest",
+    "sourceMethod": "testAccessToQuantityFactoryCreate",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+    "javaLine": 90,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each discovered Quantity subtype, factory runtime class/superclass has public create(Number,Unit) returning exactly Quantity; no creation invoked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:154"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Double and exact-number overloads exist; no Java Number/Unit/Quantity signatures or CLR subtype enumeration.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "561-A3",
+    "suite": "ObtainingQuantiesTest",
+    "sourceMethod": "testAccessToQuantityFactoryGetSystemUnit",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+    "javaLine": 105,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each discovered Quantity subtype, factory runtime class/superclass has public getSystemUnit() returning exactly Unit; return value not checked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:151"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "SystemUnit property exists and custom type may return null intentionally; this assertion does not forbid null results.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "561-A4",
+    "suite": "ObtainingQuantiesTest",
+    "sourceMethod": "testGetQuantitiesFromString",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
+    "javaLine": 122,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For every available system and unit: unit nonnull; if symbol nonnull parse quantity text 1 plus unit.toString, then unit equals original and numeric double value equals 1 with zero tolerance.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:114"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Parsing implementation exists; exact whole-catalog quantity roundtrip including display forms not identified as a single regression.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "551-A1",
+    "suite": "ObtainingUnitsTest",
+    "sourceMethod": "testGetUnitsFromSystemOfUnits",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+    "javaLine": 67,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For each unit in each available system, assert unit nonnull; no assertion that systems or unit collections are nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:34"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Immutable concrete nonnull catalog entries exist; exact occurrence regression registration absent.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "552-A1",
+    "suite": "ObtainingUnitsTest",
+    "sourceMethod": "testGetUnitsFromUnitString",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
+    "javaLine": 83,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For every available system and unit: unit nonnull; when symbol nonnull parse unit.toString and assert equality with original.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:125"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Unit parser exists; whole-catalog toString roundtrip contract is not established by lookup or individual parser fixtures.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "51-A1",
+    "suite": "QuantityFactoryTest",
+    "sourceMethod": "testQuantityFactoryExists",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+    "javaLine": 72,
+    "assertionKind": "MIXED",
+    "expectedSemantics": "For each available provider assert provider nonnull and factory nonnull for every javax.measure Quantity subtype found by Reflections.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:181"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Built-in provider and identifier cache exist; arbitrary string acceptance is weaker than typed supported-domain registry.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "51-A2",
+    "suite": "QuantityFactoryTest",
+    "sourceMethod": "testQuantityFactoryScale",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java",
+    "javaLine": 90,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For every available provider create Length quantity 10 in current provider default Length unit for every Scale enum value; returned scale equals requested scale.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:154"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts",
+      "tests/SharpUnits.Tests/FactoryReferenceFixtureTests.cs:PreservesLegacyFactoryContract"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Scale retained by factory; fixture relative Temperature and legacy factory tests do not exactly sweep both Length scales across providers.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "53-A1",
+    "suite": "ServiceProviderTest",
+    "sourceMethod": "testAvailable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+    "javaLine": 74,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "ServiceProvider.available() list is nonnull only.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:170"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Singleton immutable built-in list satisfies bounded availability; external provider discovery excluded intentionally.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "53-A2",
+    "suite": "ServiceProviderTest",
+    "sourceMethod": "testAvailableNotEmpty",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+    "javaLine": 84,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Available provider list nonnull and nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:170"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Single built-in provider; no external plugin loading contract.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "53-A3",
+    "suite": "ServiceProviderTest",
+    "sourceMethod": "testCurrent",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+    "javaLine": 97,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Current provider nonnull.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:172"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Current singleton present; replacement and provider-selection policy excluded intentionally.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "53-A4",
+    "suite": "ServiceProviderTest",
+    "sourceMethod": "testPriority",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServiceProviderTest.java",
+    "javaLine": 109,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Current provider priority is between Integer.MIN_VALUE and Integer.MAX_VALUE inclusive; no ordering or selection tested.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:174"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "C# int priority 10 satisfies range by type; priority arbitration is outside this assertion.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A01",
+    "suite": "ServicesTest",
+    "sourceMethod": "testFormatService",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 83,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "For each available provider assert provider and format service nonnull.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:176"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Bounded format service present; additional Indriya formatter families are irrelevant to this nonnull assertion.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A02",
+    "suite": "ServicesTest",
+    "sourceMethod": "testFormatServiceQuantityFormatsAvailable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 99,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and format service nonnull; available QUANTITY_FORMAT names nonnull and nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:123"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "SIMPLE name advertised; full Java format-family coverage not required by executed assertion.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A03",
+    "suite": "ServicesTest",
+    "sourceMethod": "testFormatServiceQuantityFormatsDefault",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 118,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and format service nonnull; getUnitFormat() nonnull and QUANTITY_FORMAT names nonnull/nonempty. Despite method description it does not call getQuantityFormat().",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:125"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Unit format and quantity names exist; add separate real default quantity formatter assertion as native contract rather than misreporting Java check.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A04",
+    "suite": "ServicesTest",
+    "sourceMethod": "testFormatServiceUnitFormatsAvailable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 137,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and format service nonnull; available UNIT_FORMAT names nonnull/nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:140"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Two supported names sufficient; EBNF/LOCAL absence is separate scope decision.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A05",
+    "suite": "ServicesTest",
+    "sourceMethod": "testFormatServiceUnitFormatsDefault",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 155,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and format service nonnull; getUnitFormat() nonnull; UNIT_FORMAT names nonnull/nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:125"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Default unit formatter exists with bounded SIMPLE profiles.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A06",
+    "suite": "ServicesTest",
+    "sourceMethod": "testSystemOfUnitsService",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 174,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each available provider nonnull and system-of-units service nonnull.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:178"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Built-in system service implemented; external service loading outside bounded scope.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A07",
+    "suite": "ServicesTest",
+    "sourceMethod": "testSystemOfUnitsServiceDefaultSystem",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 189,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and system service nonnull; default system nonnull.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:86"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Default Units system implemented.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A08",
+    "suite": "ServicesTest",
+    "sourceMethod": "testSystemOfUnitsServiceAvailableSystems",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 205,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and system service nonnull; available systems collection nonnull/nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:94"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Single immutable system implemented; no requirement here for additional systems.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A09",
+    "suite": "ServicesTest",
+    "sourceMethod": "testSystemOfUnitsServicePrefixBinary",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 225,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and system service nonnull; getPrefixes(BinaryPrefix.class) set nonnull/nonempty and size exactly 8.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:98"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Eight binary values exposed by named property instead of generic Java Class dispatch; set semantics adaptation should be explicit.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "54-A10",
+    "suite": "ServicesTest",
+    "sourceMethod": "testSystemOfUnitsServicePrefixMetric",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/ServicesTest.java",
+    "javaLine": 245,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each provider and system service nonnull; getPrefixes(MetricPrefix.class) set nonnull/nonempty and size exactly 24.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:96"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "24 SI values exposed by named property; Java Class enum dispatch not needed for native API.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A1",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testEnsureGotSystemOfUnits",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 72,
+    "assertionKind": "BEHAVIOR",
+    "expectedSemantics": "Each available provider nonnull; system service nonnull; available systems nonnull/nonempty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:94"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Built-in discovery supplies one immutable system.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Preserve executed domain/service semantics in the bounded built-in profile; do not infer external discovery or full Indriya feature requirements.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A2",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testSystemOfUnitsGetName",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 89,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each current-provider system runtime type exposes public zero-argument getName; return type and returned name are not checked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:30"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Name property is idiomatic C#; exact Java getter method unnecessary.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A3",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testSystemOfUnitsGetUnit",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 104,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each system type checked via superclass-first helper for public getUnit(Class) returning exactly Unit; no lookup invoked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:45"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "String quantity identifier lookup exists; typed CLR domain lookup is separate API decision.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A4",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testSystemOfUnitsGetUnitForString",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 120,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each system type checked via superclass-first helper for public getUnit(String) returning exactly Unit; no lookup invoked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:37"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "GetUnit(string) provides native lookup with nullable absence; Java method casing and exact return type not release goals.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A5",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testSystemOfUnitsGetUnits",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 135,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each system type has at least one public zero-argument getUnits method; no exact return type or collection contents checked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:34"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Units property supplies immutable list snapshot; CLR property is appropriate adaptation.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "52-A6",
+    "suite": "SystemOfUnitsTest",
+    "sourceMethod": "testSystemOfUnitsGetUnitsForDimension",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/spi/SystemOfUnitsTest.java",
+    "javaLine": 149,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each system type checked superclass-first for public getUnits(Dimension) returning exactly Set; no filtering behavior invoked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:50"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:CatalogAndDiscoveryCannotBeMutatedThroughCollectionCasts"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Dimension-filtered immutable list preserves distinct alternate units; add native uniqueness contract if set semantics required.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A1",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testEquals",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 60,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each configured Prefix Class or superclass declares public equals(Object) returning exactly boolean; inherited Object method can qualify, no equality behavior checked.",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:4"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A1_Equals",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Record equality exists; reflection test presence alone does not verify reflexivity or value equality.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A2",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testHashcode",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 72,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Superclass-first helper finds public hashCode() returning exactly int, with Object/Number/Enum exception; no hash behavior checked.",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:4"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A2_HashCode",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Record GetHashCode exists; native equality/hash law testing should supplement API presence.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A3",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testGetName",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 84,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each configured Prefix Class has public getName method of any arity/return type (hasParameters=true omits arity filter).",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:22"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A3_Name",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Name property and GetName supplied; no need to copy weak Java reflection test.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A4",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testGetSymbol",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 96,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each configured Prefix Class has public getSymbol method of any arity/return type (hasParameters=true omits arity filter).",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:9"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A4_Symbol",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Symbol property provides metadata; getter-name reflection adaptation intentional.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A5",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testGetValue",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 108,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each configured Prefix Class/superclass has public zero-argument getValue returning exactly Number; numeric value is not executed.",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:20"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A5_Value",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "GetValue returns JavaNumber radix 10; legacy Value is powered factor intentionally retained, not equivalent to Java radix semantics.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  },
+  {
+    "id": "424-A6",
+    "suite": "PrefixInterfaceTest",
+    "sourceMethod": "testGetXponent",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/PrefixInterfaceTest.java",
+    "javaLine": 120,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Each configured Prefix Class/superclass has public getExponent() returning exactly int; exponent value not executed.",
+    "implementationRefs": [
+      "src/SharpUnits/SiPrefix.cs:11"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs:Tck424A6_Exponent",
+      "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs:PrefixPreservesDimensionAndChangesScale"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Exponent int property is native metadata contract.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Prefer CLR properties, explicit immutable catalogs and native typed domain contracts; preserve meaningful values and failures without copying Java reflection signatures.",
+    "qualificationGap": "Source inspection only; no builds/tests executed. Existing fixture tests compare selected pinned-Indriya observations, not stock Java TCK against SharpUnits. Exact assertion occurrence remains unclosed; configuration/reflection adaptation requires explicit native acceptance and traceable verification."
+  }
+]

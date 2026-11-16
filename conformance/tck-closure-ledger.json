@@ -9,42 +9,48 @@
       "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#41-A1"
     },
     {
       "id": "41-A2",
       "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#41-A2"
     },
     {
       "id": "41-A3",
       "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#41-A3"
     },
     {
       "id": "41-A4",
       "source": "src/main/java/tech/units/tck/tests/FundamentalTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#41-A4"
     },
     {
       "id": "Setup-1",
       "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#Setup-1"
     },
     {
       "id": "Setup-2",
       "source": "src/main/java/tech/units/tck/tests/TCKSetupTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#Setup-2"
     },
     {
       "id": "46-A1",
@@ -56,7 +62,8 @@
       "expectedSemantics": "Configured quantity formatter list is nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A1"
     },
     {
       "id": "46-A2",
@@ -73,7 +80,8 @@
         "FormattingRobustnessTests.NullArgumentsAreRejected",
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A2"
     },
     {
       "id": "46-A3",
@@ -90,7 +98,8 @@
         "FormattingRobustnessTests.NullArgumentsAreRejected",
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A3"
     },
     {
       "id": "46-A4",
@@ -107,7 +116,8 @@
         "FormattingRobustnessTests.NullArgumentsAreRejected",
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A4"
     },
     {
       "id": "46-A5",
@@ -294,7 +304,8 @@
         "H100-098",
         "H100-099",
         "H100-100"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A5"
     },
     {
       "id": "45-A1",
@@ -306,7 +317,8 @@
       "expectedSemantics": "Configured unit formatter list is nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A1"
     },
     {
       "id": "45-A2",
@@ -318,7 +330,8 @@
       "expectedSemantics": "Public `String format(Unit)` exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A2"
     },
     {
       "id": "45-A3",
@@ -330,7 +343,8 @@
       "expectedSemantics": "Every configured Java unit formatter has a public Appendable format(Unit, Appendable) method.",
       "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures.",
       "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
-      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user."
+      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A3"
     },
     {
       "id": "45-A4",
@@ -342,7 +356,8 @@
       "expectedSemantics": "Public `isLocaleSensitive` exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A4"
     },
     {
       "id": "45-A5",
@@ -354,7 +369,8 @@
       "expectedSemantics": "Every configured Java unit formatter has a public label method.",
       "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
-      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user."
+      "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A5"
     },
     {
       "id": "45-A6",
@@ -366,7 +382,8 @@
       "expectedSemantics": "Public `parse` method exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A6"
     },
     {
       "id": "431-A1",
@@ -440,7 +457,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A1"
     },
     {
       "id": "431-A2",
@@ -485,7 +503,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A2"
     },
     {
       "id": "431-A3",
@@ -552,7 +571,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A3"
     },
     {
       "id": "431-A4",
@@ -637,7 +657,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A4"
     },
     {
       "id": "431-A5",
@@ -719,7 +740,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.FactoriesAndLegacyPromotionExposeTheExactCore"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A5"
     },
     {
       "id": "431-A6",
@@ -760,7 +782,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A6"
     },
     {
       "id": "431-A7",
@@ -803,7 +826,8 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A7"
     },
     {
       "id": "431-A8",
@@ -888,7 +912,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A8"
     },
     {
       "id": "4311-A1",
@@ -938,7 +963,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4311-A1"
     },
     {
       "id": "4311-A4",
@@ -1038,7 +1064,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4311-A4"
     },
     {
       "id": "4311-A5",
@@ -1137,7 +1164,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4311-A5"
     },
     {
       "id": "4311-A6",
@@ -1187,7 +1215,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4311-A6"
     },
     {
       "id": "4312-A1",
@@ -1246,7 +1275,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4312-A1"
     },
     {
       "id": "4312-A2",
@@ -1302,7 +1332,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#4312-A2"
     },
     {
       "id": "431-A9",
@@ -1416,7 +1447,8 @@
       "mappingScope": "Separate legacy and exact CLR surfaces; listed cases check behavioral observations. JVM binary identity and formal CI/review closure remain open.",
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A9"
     },
     {
       "id": "431-A10",
@@ -1463,63 +1495,72 @@
       "exactCoreBehaviorTests": [
         "CoreReferenceFixtureTests.MatchesPinnedCoreObservation",
         "CoreRobustnessTests.RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#431-A10"
     },
     {
       "id": "44-A1",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#44-A1"
     },
     {
       "id": "44-A2",
       "source": "src/main/java/tech/units/tck/tests/quantity/QuantityTypesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#44-A2"
     },
     {
       "id": "561-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#561-A1"
     },
     {
       "id": "561-A2",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#561-A2"
     },
     {
       "id": "561-A3",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#561-A3"
     },
     {
       "id": "561-A4",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingQuantiesTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#561-A4"
     },
     {
       "id": "551-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#551-A1"
     },
     {
       "id": "552-A1",
       "source": "src/main/java/tech/units/tck/tests/spi/ObtainingUnitsTest.java",
       "status": "GAP",
       "test": null,
-      "evidence": null
+      "evidence": null,
+      "releaseAuditRef": "conformance/release-compliance-audit.json#552-A1"
     },
     {
       "id": "51-A1",
@@ -1532,7 +1573,8 @@
       "expectedSemantics": "Quantity factories exist for configured Java quantity types",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#51-A1"
     },
     {
       "id": "51-A2",
@@ -1596,7 +1638,8 @@
         "F50-49",
         "F50-50"
       ],
-      "remainingGap": "CLR registry symbols and adapter return type are not Java generic types or ServiceProvider.available discovery. GitHub CI disabled by user; no cross-platform CI or reviewer closure."
+      "remainingGap": "CLR registry symbols and adapter return type are not Java generic types or ServiceProvider.available discovery. GitHub CI disabled by user; no cross-platform CI or reviewer closure.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#51-A2"
     },
     {
       "id": "53-A1",
@@ -1608,7 +1651,8 @@
       "expectedSemantics": "`ServiceProvider.available()` is non-null",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#53-A1"
     },
     {
       "id": "53-A2",
@@ -1620,7 +1664,8 @@
       "expectedSemantics": "Available providers are nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#53-A2"
     },
     {
       "id": "53-A3",
@@ -1632,7 +1677,8 @@
       "expectedSemantics": "Current provider is non-null",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#53-A3"
     },
     {
       "id": "53-A4",
@@ -1644,7 +1690,8 @@
       "expectedSemantics": "Current provider priority is an int within int bounds",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#53-A4"
     },
     {
       "id": "54-A01",
@@ -1656,7 +1703,8 @@
       "expectedSemantics": "Each provider exposes non-null FormatService",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A01"
     },
     {
       "id": "54-A02",
@@ -1668,7 +1716,8 @@
       "expectedSemantics": "Quantity format names are non-null/nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A02"
     },
     {
       "id": "54-A03",
@@ -1680,7 +1729,8 @@
       "expectedSemantics": "Default **unit** format exists and quantity names are nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A03"
     },
     {
       "id": "54-A04",
@@ -1692,7 +1742,8 @@
       "expectedSemantics": "Unit format names are non-null/nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A04"
     },
     {
       "id": "54-A05",
@@ -1704,7 +1755,8 @@
       "expectedSemantics": "Default unit format exists and unit names are nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A05"
     },
     {
       "id": "54-A06",
@@ -1716,7 +1768,8 @@
       "expectedSemantics": "Each provider exposes SystemOfUnitsService",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A06"
     },
     {
       "id": "54-A07",
@@ -1728,7 +1781,8 @@
       "expectedSemantics": "Default system exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A07"
     },
     {
       "id": "54-A08",
@@ -1740,7 +1794,8 @@
       "expectedSemantics": "Available systems are non-null/nonempty",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A08"
     },
     {
       "id": "54-A09",
@@ -1752,7 +1807,8 @@
       "expectedSemantics": "Binary prefixes are non-null/nonempty with pinned count",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A09"
     },
     {
       "id": "54-A10",
@@ -1764,7 +1820,8 @@
       "expectedSemantics": "Metric prefixes are non-null/nonempty with pinned count",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#54-A10"
     },
     {
       "id": "52-A1",
@@ -1776,7 +1833,8 @@
       "expectedSemantics": "Each provider has a service with available systems",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A1"
     },
     {
       "id": "52-A2",
@@ -1788,7 +1846,8 @@
       "expectedSemantics": "Public `getName` method exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A2"
     },
     {
       "id": "52-A3",
@@ -1800,7 +1859,8 @@
       "expectedSemantics": "Public `getUnit(Class)` returns Unit",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A3"
     },
     {
       "id": "52-A4",
@@ -1812,7 +1872,8 @@
       "expectedSemantics": "Public `getUnit(String)` returns Unit",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A4"
     },
     {
       "id": "52-A5",
@@ -1824,7 +1885,8 @@
       "expectedSemantics": "Public `getUnits` exists",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A5"
     },
     {
       "id": "52-A6",
@@ -1836,7 +1898,8 @@
       "expectedSemantics": "Public `getUnits(Dimension)` returns Set",
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
-      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction."
+      "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
+      "releaseAuditRef": "conformance/release-compliance-audit.json#52-A6"
     },
     {
       "id": "424-A1",
@@ -1856,7 +1919,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A1"
     },
     {
       "id": "424-A2",
@@ -1876,7 +1940,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A2"
     },
     {
       "id": "424-A3",
@@ -1896,7 +1961,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A3"
     },
     {
       "id": "424-A4",
@@ -1916,7 +1982,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A4"
     },
     {
       "id": "424-A5",
@@ -1936,7 +2003,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A5"
     },
     {
       "id": "424-A6",
@@ -1956,7 +2024,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#424-A6"
     },
     {
       "id": "423-A1",
@@ -1976,7 +2045,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A1"
     },
     {
       "id": "423-A2",
@@ -1996,7 +2066,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A2"
     },
     {
       "id": "423-A3",
@@ -2016,7 +2087,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A3"
     },
     {
       "id": "423-A4",
@@ -2036,7 +2108,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A4"
     },
     {
       "id": "423-A5",
@@ -2056,7 +2129,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A5"
     },
     {
       "id": "423-A6",
@@ -2076,7 +2150,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A6"
     },
     {
       "id": "423-A7",
@@ -2096,7 +2171,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A7"
     },
     {
       "id": "423-A8",
@@ -2116,7 +2192,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A8"
     },
     {
       "id": "423-A9",
@@ -2136,7 +2213,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A9"
     },
     {
       "id": "423-A10",
@@ -2156,7 +2234,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#423-A10"
     },
     {
       "id": "425-A1",
@@ -2177,7 +2256,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A1"
     },
     {
       "id": "425-A2",
@@ -2198,7 +2278,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A2"
     },
     {
       "id": "425-A3",
@@ -2219,7 +2300,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A3"
     },
     {
       "id": "425-A4",
@@ -2240,7 +2322,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A4"
     },
     {
       "id": "425-A5",
@@ -2261,7 +2344,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A5"
     },
     {
       "id": "425-A6",
@@ -2282,7 +2366,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A6"
     },
     {
       "id": "425-A7",
@@ -2303,7 +2388,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#425-A7"
     },
     {
       "id": "421-A1",
@@ -2322,7 +2408,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A1"
     },
     {
       "id": "421-A2",
@@ -2341,7 +2428,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A2"
     },
     {
       "id": "421-A3",
@@ -2360,7 +2448,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A3"
     },
     {
       "id": "421-A4",
@@ -2379,7 +2468,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A4"
     },
     {
       "id": "421-A5",
@@ -2398,7 +2488,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A5"
     },
     {
       "id": "421-A6",
@@ -2417,7 +2508,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A6"
     },
     {
       "id": "421-A7",
@@ -2436,7 +2528,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A7"
     },
     {
       "id": "421-A8",
@@ -2455,7 +2548,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A8"
     },
     {
       "id": "421-A9",
@@ -2474,7 +2568,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#421-A9"
     },
     {
       "id": "42121-A1",
@@ -2493,7 +2588,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A1"
     },
     {
       "id": "42121-A2",
@@ -2512,7 +2608,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A2"
     },
     {
       "id": "42121-A3",
@@ -2531,7 +2628,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A3"
     },
     {
       "id": "42121-A4",
@@ -2550,7 +2648,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A4"
     },
     {
       "id": "42121-A5",
@@ -2569,7 +2668,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A5"
     },
     {
       "id": "42121-A6",
@@ -2588,7 +2688,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A6"
     },
     {
       "id": "42121-A7",
@@ -2607,7 +2708,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A7"
     },
     {
       "id": "42121-A8",
@@ -2626,7 +2728,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A8"
     },
     {
       "id": "42121-A9",
@@ -2645,7 +2748,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A9"
     },
     {
       "id": "42121-A10",
@@ -2664,7 +2768,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42121-A10"
     },
     {
       "id": "42122-A1",
@@ -2683,7 +2788,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42122-A1"
     },
     {
       "id": "42122-A2",
@@ -2702,7 +2808,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42122-A2"
     },
     {
       "id": "42122-A3",
@@ -2721,7 +2828,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42122-A3"
     },
     {
       "id": "42123-A1",
@@ -2740,7 +2848,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42123-A1"
     },
     {
       "id": "42124-A1",
@@ -2759,7 +2868,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42124-A1"
     },
     {
       "id": "42124-A2",
@@ -2778,7 +2888,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42124-A2"
     },
     {
       "id": "42124-A3",
@@ -2797,7 +2908,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42124-A3"
     },
     {
       "id": "42124-A4",
@@ -2816,7 +2928,8 @@
         "VA-06",
         "VA-07",
         "VA-08"
-      ]
+      ],
+      "releaseAuditRef": "conformance/release-compliance-audit.json#42124-A4"
     }
   ],
   "verificationAudit": {
