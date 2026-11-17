@@ -12,8 +12,8 @@ COMMENT: User request2026-11-13. Implementation: global.json, four project files
 UID: PLAT-FROZEN
 STATUS: Active
 TITLE: Immutable shared lookup metadata
-STATEMENT: Shared SI prefix definitions and fixed metric membership shall use immutable BCL collections while preserving ordinal symbol identity, exact prefix factors and the prior public MetricPrefixes order. C#15 constructor arguments shall preserve the explicit comparer in the metric collection expression.
-COMMENT: User-requested language/library reuse, with inferred bounded immutability criterion. Implementation: SiPrefixes and JavaUnitTextFormat. Verification: Net11ModernizationTests (red mutable-catalog witness, case/Unicode checks and seed385,1113), full existing format/prefix regressions and paired Java corpora. No performance claim is inferred from collection choice.
+STATEMENT: Shared SI prefix definitions and fixed metric membership shall use immutable BCL collections while preserving ordinal symbol identity, exact prefix factors and the prior public MetricPrefixes order. Collection construction shall preserve the explicit comparer using syntax compatible with qualified verification tooling.
+COMMENT: User-requested language/library reuse, with inferred bounded immutability criterion. Implementation: SiPrefixes and JavaUnitTextFormat. The2026-11-16 exact-text increment substitutes an equivalent explicit HashSet constructor to enable Stryker5.1 without changing .NET11/C#15 settings. Verification: Net11ModernizationTests (red mutable-catalog witness, case/Unicode checks and seed385,1113), full existing format/prefix regressions and paired Java corpora. No performance claim is inferred from collection choice.
 
 [REQUIREMENT]
 UID: WP-COMPLETE-1

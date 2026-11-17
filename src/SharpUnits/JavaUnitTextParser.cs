@@ -6,6 +6,18 @@ internal static class JavaUnitTextParser
     // @relation(JP-014-ALIAS, JP-014-COMPOUND, JP-014-POWERS, JP-014-ROOTS, JP-014-INTEGER-FACTOR, JP-014-PREFIXES, scope=file)
     internal static UnitDefinition Resolve(string symbol,UnitRegistry registry)
     {
+        try{return ResolveLegacy(symbol,registry);}
+        catch(Exception error) when(error is FormatException or KeyNotFoundException && HasExactSyntax(symbol))
+        {
+            // Preserve every previously successful Java association/prefix rule. Only
+            // previously unsupported decimal/affine forms use the exact graph reader.
+            return ExactTextFormat.ParseDefinition(symbol,registry);
+        }
+    }
+    private static bool HasExactSyntax(string symbol)=>symbol.IndexOfAny(['.','+'])>=0
+        ||Enumerable.Range(1,Math.Max(0,symbol.Length-1)).Any(i=>symbol[i]=='-'&&(char.IsLetter(symbol[i-1])||symbol[i-1]==')'));
+    private static UnitDefinition ResolveLegacy(string symbol,UnitRegistry registry)
+    {
         try{return ResolveSimple(symbol,registry);}
         catch(KeyNotFoundException) when(symbol.IndexOfAny(['*','/','·','(',')','^','¹','²','³'])>=0)
         {

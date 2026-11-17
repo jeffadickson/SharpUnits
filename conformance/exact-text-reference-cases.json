@@ -1,0 +1,147 @@
+{
+  "scope": "Diagnostic pinned-Java parser/converter observations; no conformance or exact-arithmetic claim. Analytical transforms use y=(x+offset)*scale, for inputs [0,1,2,-3].",
+  "comparison": {
+    "absoluteTolerance": 1E-12,
+    "relativeTolerance": 1E-12,
+    "note": "Double projections only; preserve raw Number metadata. High-precision case needs separate exact rational witnesses in .NET."
+  },
+  "cases": [
+    {
+      "id": "ET-01",
+      "text": "m*0.5",
+      "target": "METRE",
+      "analyticalScale": "1/2",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-02",
+      "text": "((K*5)/9)+459.67",
+      "target": "KELVIN",
+      "analyticalScale": "5/9",
+      "analyticalOffset": "45967/100",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-03",
+      "text": "K+273.15",
+      "target": "KELVIN",
+      "analyticalScale": "1",
+      "analyticalOffset": "27315/100",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-04",
+      "text": "(m*3)/2",
+      "target": "METRE",
+      "analyticalScale": "3/2",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-05",
+      "text": "m*-2",
+      "target": "METRE",
+      "analyticalScale": "-2",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-06",
+      "text": "m/4",
+      "target": "METRE",
+      "analyticalScale": "1/4",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-07",
+      "text": "(A*0.25)",
+      "target": "AMPERE",
+      "analyticalScale": "1/4",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": true,
+      "disposition": "INTENTIONAL_NATIVE_GRAMMAR_DIFFERENCE"
+    },
+    {
+      "id": "ET-08",
+      "text": "m*0.12345678901234567890123456789",
+      "target": "METRE",
+      "analyticalScale": "12345678901234567890123456789/100000000000000000000000000000",
+      "analyticalOffset": "0",
+      "note": "Java may round at parse or converter boundaries; observation is not an exact oracle.",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-09",
+      "text": "(m*2)*3",
+      "target": "METRE",
+      "analyticalScale": "6",
+      "analyticalOffset": "0",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": true
+    },
+    {
+      "id": "ET-10",
+      "text": "K-10",
+      "target": "KELVIN",
+      "analyticalScale": "1",
+      "analyticalOffset": "-10",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": true,
+      "disposition": "INTENTIONAL_NATIVE_GRAMMAR_DIFFERENCE"
+    },
+    {
+      "id": "ET-11",
+      "text": "m*",
+      "target": "METRE",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": false
+    },
+    {
+      "id": "ET-12",
+      "text": "(m*0.5",
+      "target": "METRE",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": false
+    },
+    {
+      "id": "ET-13",
+      "text": "m*0..5",
+      "target": "METRE",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": false
+    },
+    {
+      "id": "ET-14",
+      "text": "K+",
+      "target": "KELVIN",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": false
+    },
+    {
+      "id": "ET-15",
+      "text": "m",
+      "target": "AMPERE",
+      "note": "Valid parse, incompatible converter target; rejection includes the domain error class.",
+      "expectedJavaAccepted": false,
+      "expectedNativeAccepted": false
+    },
+    {
+      "id": "ET-16",
+      "text": "m/",
+      "target": "METRE",
+      "expectedJavaAccepted": true,
+      "expectedNativeAccepted": false,
+      "disposition": "INTENTIONAL_NATIVE_GRAMMAR_DIFFERENCE"
+    }
+  ]
+}

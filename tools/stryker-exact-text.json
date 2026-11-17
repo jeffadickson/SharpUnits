@@ -1,0 +1,18 @@
+{
+  "stryker-config": {
+    "project": "SharpUnits.csproj",
+    "test-projects": [
+      "tests/SharpUnits.Tests/SharpUnits.Tests.csproj"
+    ],
+    "mutate": [
+      "**/TextResult.cs"
+    ],
+    "test-case-filter": "FullyQualifiedName~TypedRailwayPreservesFailureAndPropagatesCancellation|FullyQualifiedName~ResultContractsRejectNullHandlersAndInvalidErrors|FullyQualifiedName~ExpectedFailuresAreTypedAndLocated|FullyQualifiedName~NullBudgetMalformedUtf16AndNestedInputFailWithoutMutatingBindings|FullyQualifiedName~ThrowingFormatWrappersKeepExpectedExceptionCategories",
+    "concurrency": 1,
+    "reporters": [
+      "json",
+      "cleartext"
+    ],
+    "disable-mix-mutants": true
+  }
+}

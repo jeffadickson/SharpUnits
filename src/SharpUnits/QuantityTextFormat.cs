@@ -64,7 +64,8 @@ public sealed class QuantityTextFormat
  /// Nonzero signed 32-bit unit factors and single SI prefixes on registered coherent linear
  /// units are supported. Exact linear factors have a 16384-bit budget and are retained by Java
  /// adapter conversion; native converter APIs expose double projections. Affine/nested prefixes
- /// and fractional numeric unit factors remain outside this grammar subset.
+ /// remain restricted in the legacy grammar. Previously unsupported decimal factors and affine expressions
+ /// use an exact graph fallback; use ExactTextFormat to retain arbitrary display-value precision and scale.
  /// Groups/operators are limited to depth 64. Affine units cannot participate in compound algebra.
  /// Whitespace is permitted after ÷ before the denominator. A missing unit denotes dimensionless.
  /// Unlike <see cref="Parse"/>, this preserves the display magnitude. Input is limited to 4096 characters

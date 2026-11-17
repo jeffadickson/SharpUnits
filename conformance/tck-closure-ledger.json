@@ -63,7 +63,8 @@
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A1"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A1",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "46-A2",
@@ -81,7 +82,8 @@
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
       ],
-      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A2"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A2",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "46-A3",
@@ -99,7 +101,8 @@
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
       ],
-      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A3"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A3",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "46-A4",
@@ -117,7 +120,8 @@
         "FormattingRobustnessTests.WriterOwnershipAndFailuresStayWithCaller",
         "FormattingRobustnessTests.ArbitraryPrefixesArePreserved"
       ],
-      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A4"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A4",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "46-A5",
@@ -305,7 +309,8 @@
         "H100-099",
         "H100-100"
       ],
-      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A5"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#46-A5",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A1",
@@ -318,7 +323,8 @@
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A1"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A1",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A2",
@@ -331,7 +337,8 @@
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A2"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A2",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A3",
@@ -344,7 +351,8 @@
       "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures.",
       "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
       "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A3"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A3",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A4",
@@ -357,7 +365,8 @@
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A4"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A4",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A5",
@@ -370,7 +379,8 @@
       "dotnetSemantics": "StringBuilder/TextWriter append overloads preserve identity/prefixes and propagate writer errors; mutable labels/aliases follow measured collision/removal/validation behavior. CLR UnitDefinition/record identity and methods are not exact Java Unit/Appendable signatures. Standard Fahrenheit default/ASCII converter-expression mapping and explicit label precedence are exercised by UnitFormatReferenceFixtureTests and AffineUnitFormatTests; see conformance/affine-format-review.md.",
       "javaEvidence": "112 pinned Java TCK tests pass; 100 unit-format obligations and 46 supplemental observations match actual Java, including BMP validation fingerprints.",
       "remainingGap": "Exact Java API/unit identity, null-unit label acceptance, general transformed/product normalization, EBNF/LOCAL/Number precision and independent reviewer/CI closure remain incomplete; GitHub CI disabled by user.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A5"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A5",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "45-A6",
@@ -383,7 +393,8 @@
       "dotnetSemantics": "Built-in provider, bounded SIMPLE format services, 44 unit definitions, 33 quantity bindings, factory metadata and prefix catalogs are exercised against pinned Java. CLR identifier/list/property APIs differ from Java Class/Set/reflection signatures.",
       "javaEvidence": "112 pinned TCK tests pass; 100 scoped obligations plus 68 additional edge/filter observations match actual Java; conformance/service-edge-cases.json and service-filter-cases.json.",
       "remainingGap": "External ServiceLoader discovery, all-provider/test-configuration registration, exact Java API identity, unsupported format families and independent review/CI closure remain incomplete. GitHub CI is disabled by user instruction.",
-      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A6"
+      "releaseAuditRef": "conformance/release-compliance-audit.json#45-A6",
+      "exactTextIncrementRef": "conformance/exact-text-review.md"
     },
     {
       "id": "431-A1",

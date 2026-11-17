@@ -17,7 +17,7 @@ public enum JavaUnitFormatFlavor
 /// <remarks>Labels are keyed by CLR unit-record identity. General Java unit normalization,
 /// foreign Java unit identity, affine prefixes and parse cursors remain incomplete.
 /// Standard Fahrenheit renders its pinned converter expression; arbitrary transformed-unit
-/// graphs and affine-expression parsing remain unsupported.
+/// graphs use ExactTextFormat; bounded decimal/affine input now has an exact fallback.
 /// Public ASCII instances fall back to the built-in default formatter as Java does;
 /// services constructed explicitly use their own default formatter as the fallback.</remarks>
 public sealed class JavaUnitTextFormat
@@ -32,14 +32,14 @@ public sealed class JavaUnitTextFormat
     private static readonly Dictionary<UnitDefinition,JavaUnitEntry> byUnit=catalog.Values.ToDictionary(e=>e.Unit);
     private static readonly FrozenSet<string> metricFields=CreateMetricFields();
 
-    // C#15 constructor arguments preserve the explicit ordinal comparer. Freeze
+    // Keep explicit ordinal construction compatible with the mutation compiler. Freeze
     // after construction: formatters share membership metadata, not mutable state.
     private static FrozenSet<string> CreateMetricFields()
     {
-        HashSet<string> fields = [with(StringComparer.Ordinal),
+        HashSet<string> fields = new(StringComparer.Ordinal) {
         "AMPERE","BECQUEREL","CANDELA","COULOMB","FARAD","GRAY","HENRY","HERTZ","JOULE","KATAL","KELVIN","LUMEN","LUX",
         "METRE","MOLE","NEWTON","OHM","PASCAL","RADIAN","SECOND","SIEMENS","SIEVERT","STERADIAN","TESLA","VOLT","WATT","WEBER"
-        ];
+        };
         return fields.ToFrozenSet(StringComparer.Ordinal);
     }
 
@@ -179,6 +179,12 @@ public sealed class JavaUnitTextFormat
         // Java checks the entire input mapping before tokenizing: accepted labels can
         // contain spaces/operators after their initial character.
         if(snapshot.TryGetValue(text,out var unit))return unit;
+        // The legacy formatter already emits this canonical native Fahrenheit form.
+        // Return its registered definition so the legacy record's symbol/metadata
+        // round-trip too; arbitrary exact graphs use ExactTextFormat instead.
+        if(text=="((K*5)/9)+459.67"&&snapshot.TryGetValue("K",out var kelvin)
+            &&kelvin.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)&&kelvin.Converter.IsIdentity)
+            return snapshot.Values.FirstOrDefault(IsStandardFahrenheit)??UnitRegistry.CreateStandard().Resolve("°F");
         return new QuantityTextFormat(UnitRegistry.FromAliases(snapshot)).ParseJavaQuantity("1 "+text).Unit;
     }
 

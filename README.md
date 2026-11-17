@@ -52,6 +52,8 @@ For recoverable numeric input failures, use `JavaNumber.ParseDecimal` and
 available. See [typed numeric errors](docs/typed-numeric-errors.md) and the
 [example](examples/TypedNumericErrors.cs).
 
+For lossless registered unit graphs and retained numeric values, use `ExactTextFormat` with `ParseUnit`/`ParseQuantity` and typed `TextResult` failures. It retains converter order, prefix metadata, decimal scale and absolute/relative scale. See [exact text and typed errors](docs/exact-text-format.md) and the [runnable example](examples/ExactText.cs).
+
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
