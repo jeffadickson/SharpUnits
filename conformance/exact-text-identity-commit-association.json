@@ -1,0 +1,9 @@
+{
+  "implementationCommit": "3aec21b4f4507df9c9097c932bb3aabb5f0ce845",
+  "evidence": "conformance/exact-text-identity-evidence.json",
+  "evidenceSha256": "95554F8F1DA2BF55F92F18CCBF3BB6F21684EC35044FE0454153CBFD5FC65EC0",
+  "review": "conformance/exact-text-identity-review.md",
+  "sourceIdentity": "Canonical source hashes in evidence; implementation commit contains tested source and requirements",
+  "formalAssertionsClosed": 0,
+  "ci": "disabled_manually; not dispatched"
+}
