@@ -5,6 +5,9 @@ param(
  [ValidateRange(0,2048)][int]$ManagedHeapMiB=0
 )
 $ErrorActionPreference='Stop'
+if($ManagedHeapMiB -gt 0 -and $Mode -notin 'Mutation','FocusedMutation','Net11Mutation'){
+ throw 'Managed heap limits are mutation-only'
+}
 $repository=Split-Path -Parent $PSScriptRoot
 if(!(Test-Path -LiteralPath $repository -PathType Container)){throw 'Missing checkout'}
 $artifactRoot=if($env:CODEX_ARTIFACT_ROOT){$env:CODEX_ARTIFACT_ROOT}else{'E:/Artifacts'}
@@ -64,7 +67,7 @@ switch($inputs.mode){
  'Reference' {
   & $inputs.dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release -m:1 -p:UseSharedCompilation=false
   if($LASTEXITCODE){exit $LASTEXITCODE}
-  $env:JAVA_TOOL_OPTIONS='-Xmx128m -XX:MaxMetaspaceSize=96m'
+  $env:JAVA_TOOL_OPTIONS='-XX:ActiveProcessorCount=2'
   & ./tools/Invoke-AllVerificationCorpora.ps1 -Runner 'src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll' -OutputDirectory (Join-Path $inputs.output 'corpora')
  }
  'JavaTck' {
@@ -73,7 +76,7 @@ switch($inputs.mode){
   $maven=Join-Path $runtime 'apache-maven-3.9.9/bin'
   if(!(Test-Path -LiteralPath $maven -PathType Container) -or !(Test-Path -LiteralPath $env:JAVA_HOME -PathType Container)){throw 'Missing pinned Maven/JDK'}
   $env:PATH=$maven+[IO.Path]::PathSeparator+$env:PATH
-  $env:JAVA_TOOL_OPTIONS='-Xms16m -Xmx128m -XX:MaxMetaspaceSize=96m -XX:+UseSerialGC -XX:ReservedCodeCacheSize=32m -XX:ActiveProcessorCount=2'
+  $env:JAVA_TOOL_OPTIONS='-XX:ActiveProcessorCount=2'
   & (Join-Path $maven 'mvn.cmd') --version
   if($LASTEXITCODE){exit $LASTEXITCODE}
   & (Join-Path $runtime 'python/python.exe') tools/run_pinned_tck.py -o
@@ -107,5 +110,13 @@ if($inputs.mode -in 'Mutation','FocusedMutation','Net11Mutation'){
 }
 '@|Set-Content -LiteralPath (Join-Path $output 'workload.ps1')
 Push-Location -LiteralPath $repository
-try {& (Join-Path $PSScriptRoot 'Invoke-Budgeted.ps1') -Script (Join-Path $output 'workload.ps1') -OutputDirectory $output -ProcessMiB $ProcessMiB -AggregateMiB $AggregateMiB -ReserveMiB $ReserveMiB}
+try {
+ if($Mode -in 'Mutation','FocusedMutation','Net11Mutation'){
+  & (Join-Path $PSScriptRoot 'Invoke-Budgeted.ps1') -Script (Join-Path $output 'workload.ps1') -OutputDirectory $output -ProcessMiB $ProcessMiB -AggregateMiB $AggregateMiB -ReserveMiB $ReserveMiB
+ }else{
+  # Ordinary verification uses OS-managed memory; do not attach a limiting job.
+  & (Get-Process -Id $PID).Path -NoProfile -File (Join-Path $output 'workload.ps1') *> (Join-Path $output 'workload.log')
+  if($LASTEXITCODE){throw "Verification failed ($LASTEXITCODE); see $output/workload.log"}
+ }
+}
 finally {Pop-Location}

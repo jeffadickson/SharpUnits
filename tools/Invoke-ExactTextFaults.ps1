@@ -57,7 +57,8 @@ $mutants=@(
  @{id='ZeroDivisorPosition';file=$reader;before='Fail(TextErrorCode.ZeroDivisor,start)';after='Fail(TextErrorCode.ZeroDivisor,start+1)';count=3},
  @{id='RelativeScale';file=$reader;before='"relative"=>JavaQuantityScale.Relative';after='"relative"=>JavaQuantityScale.Absolute';count=1},
  @{id='DimensionlessAliasCapture';file=$writer;before='return "unit()";';after='return "one";';count=1},
- @{id='DepthBudget';file=$reader;before='depth>64';after='depth>128';count=2}
+ @{id='DepthBudget';file=$reader;before='depth>64';after='depth>128';count=2},
+ @{id='IdentityParentMapping';file=$reader;before='converter.IsIdentity?parent:';after='converter.IsIdentity?parent.SystemUnit:';count=1}
 )
 if($ControlIds.Count){$known=@($mutants.id);foreach($id in $ControlIds){if($id -notin $known){throw "Unknown control: $id"}};$mutants=@($mutants|Where-Object {$_.id -in $ControlIds})}
 $original=@{}

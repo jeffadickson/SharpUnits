@@ -152,7 +152,11 @@ public sealed partial class ExactTextFormat
                 // Stored operations are in composition order, not evaluation order.
                 converter=GuardConverter(()=>converter.Concatenate(step),start);
             }while(Take(';'));
-            Need(')');return Guard(()=>Term.U(parent.Transform(converter)),position).Unit!;
+            Need(')');
+            // Native text composes a local map with this exact parent. The Java
+            // compatibility Transform(identity) shortcut selects SystemUnit and
+            // would discard an already scaled or shifted parent's mapping.
+            return converter.IsIdentity?parent:Guard(()=>Term.U(parent.Transform(converter)),position).Unit!;
         }
         private JavaUnitConverterAdapter LogConverter(JavaNumber parameter,bool inverse,int start)
         {

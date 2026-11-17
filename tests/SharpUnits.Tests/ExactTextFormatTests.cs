@@ -10,6 +10,23 @@ public sealed class ExactTextFormatTests
     private static T Value<T>(TextResult<T> result) where T:notnull => result.Match(value=>value,error=>throw new Xunit.Sdk.XunitException($"{error.Code} at {error.Position}"));
     private static TextError Error<T>(TextResult<T> result) where T:notnull => result.Match(_=>throw new Xunit.Sdk.XunitException("Expected a typed failure"),error=>error);
 
+    [Theory]
+    [InlineData("m*2","scale(1)",2,0)]
+    [InlineData("K+3","offset(0)",1,3)]
+    [InlineData("°C","scale(1)",1,273.15)]
+    [InlineData("transform(m*2;scale(1))","offset(0)",2,0)]
+    public void IdentityTextTransformPreservesParentMapping(string parent,string operation,double scale,double offset)
+    {
+        // An identity local map must not erase the parent's scale or origin.
+        var format=new ExactTextFormat();
+        var original=Value(format.ParseUnit(parent));
+        var parsed=Value(format.ParseUnit($"transform({parent};{operation})"));
+        Assert.Equal(original,parsed);
+        foreach(var value in new[]{-3,0,1,7})
+            Assert.Equal(value*scale+offset,parsed.SystemConverter.Convert(value),10);
+        Assert.Equal(parsed,Value(format.ParseUnit(format.FormatUnit(parsed))));
+    }
+
     [Fact]
     public void LegacyDecimalFactorUsesItsExactHalfScale()
     {

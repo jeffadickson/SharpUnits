@@ -5,6 +5,12 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 11. Primary development language: C#15.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## Current memory policy (2026-11-17)
+
+The owner superseded universal memory budgets: ordinary builds, tests, benchmarks and Java/reference/documentation jobs must run without process-tree, aggregate or managed-heap caps. Do not gate or terminate work based on free RAM. The active verification runners now dispatch ordinary workloads directly; only mutation/fault-control modes use the existing runaway guard. ManagedHeapMiB is rejected for ordinary modes. Historical capped-run reports below remain historical evidence, not the current policy. Concurrency and task timeouts remain appropriate. See VER-RAM-TELEMETRY and VER-RUN-BUDGET.
+
+The native text parser now preserves scaled/shifted parents under an explicit identity transform, including nested transforms and Celsius. The Java adapter shortcut remains unchanged. Four regression witnesses fail on the old implementation; an isolated IdentityParentMapping fault control reproduces those four failures. See conformance/exact-text-identity-review.md and its evidence manifest for fresh results and scope. Normative/API completeness, typed conversion/factory boundaries and broad graph mutation qualification remain open. No TCK assertion is promoted.
+
 ## Exact graph text continuation (2026-11-16)
 
 User-requested exact formatting/parsing and typed errors add ExactTextFormat/TextResult/TextError over the immutable exact graph model. See docs/exact-text-format.md, requirements/exact-text.sdoc and conformance/exact-text-review.md/evidence. Native text preserves public numeric fraction/family/decimal scale, display unit, quantity scale and graph/converter/prefix structure; it is not full Java locale/EBNF or hidden number-class provenance persistence. Legacy successful grammar and aliases remain first; decimal/affine gaps have an exact fallback, with canonical native Fahrenheit record roundtrip. New graph format/parse does not force converter evaluation for fractional/nonlinear products. Native point/interval temperature policies remain unchanged.

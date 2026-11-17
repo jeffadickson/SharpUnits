@@ -39,6 +39,6 @@ COMMENT: Source audit, historical evidence and fresh diagnostic runs remain dist
 [REQUIREMENT]
 UID: VER-RAM-TELEMETRY
 STATUS: Active
-TITLE: Explicit runaway budgets independent of free RAM
-STATEMENT: Verification process trees shall use explicit process and aggregate runaway limits with descendant termination. System free or available RAM shall be telemetry only and shall neither gate startup nor trigger termination.
-COMMENT: Explicit user development rule2026-11-16. Implementation tools/Invoke-Budgeted.ps1 removes its obsolete free-physical-memory admission gate while retaining queried Windows Job Object commit limits and watermark termination. ReserveMiB remains a backward-compatible informational argument, not an admission or reservation guarantee. Fresh audit workloads retain active native flag read-back8960 and outcomes; low-memory-system simulation and watchdog branch coverage were not executed.
+TITLE: OS-managed memory for ordinary verification
+STATEMENT: Ordinary builds, tests, benchmarks and reference checks shall run without runner-imposed process-tree, aggregate or managed-heap memory caps. System free or available RAM shall neither gate startup nor trigger termination. Runaway monitoring and intervention shall be restricted to mutation testing, with observations and actions recorded.
+COMMENT: Explicit user correction2026-11-17 supersedes the former universal budget policy. Invoke-TypedErrorVerification.ps1 and Invoke-ExactTextVerification.ps1 dispatch ordinary workloads directly, reserve Invoke-Budgeted.ps1 for mutation work, and omit ordinary Java heap/metaspace caps. Historical capped runs remain historical. Sensible concurrency and task timeouts remain permitted.

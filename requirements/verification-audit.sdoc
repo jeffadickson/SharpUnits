@@ -76,9 +76,9 @@ RELATIONS:
 [REQUIREMENT]
 UID: VER-RUN-BUDGET
 STATUS: Active
-TITLE: Guarded Windows verification admission and commit budgets
-STATEMENT: The Windows verification wrapper shall refuse concurrent same-user guarded workloads, confirm requested process and aggregate job commit limits by native read-back before releasing work, retain limits and observed peaks, and terminate owned descendants on a recorded limit event or fail-fast watermark even when the root has exited successfully.
-COMMENT: User resource-budget policy applied to local verification. Implementation: tools/Invoke-Budgeted.ps1 and Invoke-TypedErrorVerification.ps1. Tests: Test-BudgetWatchdog.ps1, including root-exits-zero, and Test-BudgetAdmission.ps1. An85-percent watermark with250ms peak reconciliation supplements Windows best-effort limit notifications. These are commit limits, not RSS limits or a reservation against other applications; Linux cgroup execution and exhaustive crash/race qualification are outside this Windows helper. See conformance/typed-errors.md for failed initial flag assignment, correction, actual read-back and replay evidence.
+TITLE: Guarded Windows mutation admission and commit budgets
+STATEMENT: The Windows mutation wrapper shall refuse concurrent same-user guarded workloads, confirm requested process and aggregate job commit limits by native read-back before releasing work, retain limits and observed peaks, and terminate owned descendants on a recorded limit event or fail-fast watermark even when the root has exited successfully.
+COMMENT: Mutation-only since the user correction2026-11-17; ordinary verification must bypass this wrapper (VER-RAM-TELEMETRY). Historical resource-budget policy applied to local verification. Implementation: tools/Invoke-Budgeted.ps1 and Invoke-TypedErrorVerification.ps1. Tests: Test-BudgetWatchdog.ps1, including root-exits-zero, and Test-BudgetAdmission.ps1. An85-percent watermark with250ms peak reconciliation supplements Windows best-effort limit notifications. These are commit limits, not RSS limits or a reservation against other applications; Linux cgroup execution and exhaustive crash/race qualification are outside this Windows helper. See conformance/typed-errors.md for failed initial flag assignment, correction, actual read-back and replay evidence.
 RELATIONS:
 - TYPE: Parent
   VALUE: VER-005

@@ -5,7 +5,7 @@ TITLE: Exact unit graph and quantity text
 UID: TXT-EXACT-GRAPH
 STATUS: Active
 TITLE: Lossless supported graph text
-STATEMENT: ExactTextFormat shall round-trip registered unit atoms, normalized products and rational powers, nested scalar/offset transforms, atomic converter order and prefix radix/exponent metadata without reducing graphs to dimensions or evaluating unsupported root/product converters. Unknown unbound atoms shall return typed failures.
+STATEMENT: ExactTextFormat shall round-trip registered unit atoms, normalized products and rational powers, nested scalar/offset transforms, atomic converter order and prefix radix/exponent metadata without reducing graphs to dimensions or evaluating unsupported root/product converters. An identity local transform shall preserve the exact parent including its existing scale and origin. Unknown unbound atoms shall return typed failures.
 COMMENT: User request2026-11-16. Implementation ExactTextFormat and its Reader/Writer partials. Verification ExactTextFormatTests.RoundTripRetainsGraphRatherThanOnlyDimensions, graph metadata checks, noncommuting analytical coefficients, shared-DAG and close-rational-alias witnesses. Evidence conformance/exact-text-review.md; no JSR assertion closure is implied.
 
 [REQUIREMENT]

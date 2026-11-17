@@ -28,7 +28,7 @@ switch($inputs.mode){
   $env:JAVA_HOME=Join-Path $runtime 'jdk/jdk-17.0.20.1+1'
   $maven=Join-Path $runtime 'apache-maven-3.9.9/bin'
   if(!(Test-Path -LiteralPath $maven -PathType Container) -or !(Test-Path -LiteralPath $env:JAVA_HOME -PathType Container)){throw 'Missing existing JDK/Maven'}
-  $env:JAVA_TOOL_OPTIONS='-Xmx128m -XX:MaxMetaspaceSize=96m -XX:+UseSerialGC -XX:ActiveProcessorCount=2'
+  $env:JAVA_TOOL_OPTIONS='-XX:ActiveProcessorCount=2'
   $env:PATH=$maven+[IO.Path]::PathSeparator+$env:PATH
   & (Join-Path $maven 'mvn.cmd') -B -o -f conformance/java-reference/pom.xml compile
   if($LASTEXITCODE){exit $LASTEXITCODE}
@@ -50,4 +50,10 @@ switch($inputs.mode){
 }
 if($LASTEXITCODE){exit $LASTEXITCODE}
 '@|Set-Content -LiteralPath (Join-Path $output 'workload.ps1')
-& (Join-Path $PSScriptRoot 'Invoke-Budgeted.ps1') -Script (Join-Path $output 'workload.ps1') -OutputDirectory $output -ProcessMiB $ProcessMiB -AggregateMiB $AggregateMiB
+if($Mode -in 'Mutation','Faults'){
+ & (Join-Path $PSScriptRoot 'Invoke-Budgeted.ps1') -Script (Join-Path $output 'workload.ps1') -OutputDirectory $output -ProcessMiB $ProcessMiB -AggregateMiB $AggregateMiB
+}else{
+ # Ordinary verification uses OS-managed memory; only mutation work is guarded.
+ & (Get-Process -Id $PID).Path -NoProfile -File (Join-Path $output 'workload.ps1') *> (Join-Path $output 'workload.log')
+ if($LASTEXITCODE){throw "Verification failed ($LASTEXITCODE); see $output/workload.log"}
+}
