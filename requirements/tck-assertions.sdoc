@@ -303,7 +303,7 @@ UID: TCK-51-A2
 STATUS: Active
 TITLE: Pinned assertion 51-A2
 STATEMENT: Each available Java provider creates Length quantity 10 in the system unit with ABSOLUTE and RELATIVE scale preserved.
-COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING. Verification: FactoryReferenceFixtureTests.MatchesIndriyaFactoryFixture. Evidence: conformance/factory-review-50.json. Canonical detailed record: conformance/tck-closure-ledger.json. No formal verification is implied by an active requirement.
+COMMENT: Disposition: PARTIAL_BEHAVIORAL_MAPPING pending reviewed local qualification. Direct assertion witness: TckLocalClosureTests.FactoryScaleMatchesEveryAvailableProvider; supplemental FactoryReferenceFixtureTests.MatchesIndriyaFactoryFixture. Evidence: conformance/factory-review-50.json and the canonical conformance/tck-closure-ledger.json. Java Class identity/provider discovery are explicit CLR adaptations. No formal verification is implied by an active requirement.
 
 [REQUIREMENT]
 UID: TCK-53-A1

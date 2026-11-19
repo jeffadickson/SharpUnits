@@ -39,7 +39,10 @@ def closure(entry,root,sources,pin):
  require(bool(q.get('expectedSemantics')) and bool(q.get('apiMapping')),'Expected semantics and API adaptation decision required')
  review=q.get('review',{});require(review.get('decision')=='APPROVED' and review.get('independent') is True and bool(review.get('reviewer')) and re.fullmatch(r'\d{4}-\d{2}-\d{2}',review.get('date','')),'Independent reviewer/date/decision required')
  artifact(review.get('record'),root)
- attest(q,root,sources,pin,entry)
+ if q.get('provenance')=='LOCAL_REVIEWED':
+  from local_qualification import attest_local
+  attest_local(q,root,sources,pin,entry)
+ else:attest(q,root,sources,pin,entry)
 def validate(root,sources):
  inventory=read(root/'conformance/tck-assertions.json');ledger=read(root/'conformance/tck-closure-ledger.json')
  pin=inventory['upstream']['commit'];require(ledger.get('upstreamCommit')==pin,'Ledger pin mismatch')

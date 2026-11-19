@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "upstreamCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
-  "policy": "Ubuntu and Windows CI are required; macOS is disabled. VERIFIED requires exact assertion review, Java execution, passing .NET CI and reviewer/date. CLR analogues do not establish Java API identity.",
+  "policy": "Windows, Ubuntu and pinned Java execution are required; macOS and GitHub CI stay disabled. VERIFIED requires exact assertion review, revision-bound CI attestation or explicitly reviewed local evidence, and reviewer/date. CLR semantic adaptations do not establish Java API identity or certification.",
   "totalAssertions": 113,
   "entries": [
     {

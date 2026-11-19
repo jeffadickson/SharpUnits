@@ -1,0 +1,9 @@
+[DOCUMENT]
+TITLE: Reviewed local assertion qualification
+
+[REQUIREMENT]
+UID: VER-LOCAL-001
+STATUS: Active
+TITLE: Revision-bound reviewed local evidence
+STATEMENT: A TCK assertion may be marked VERIFIED using explicit LOCAL_REVIEWED provenance when exact assertion semantics and CLR adaptations are documented, Windows and Ubuntu native-runtime tests and pinned Java methods pass on the same clean committed source, complete tracked Git blob hashes and raw execution payloads match, measured OS/runtime and WSL context are retained, and an independent reviewer approves the exact artifact hashes. CI evidence shall retain its separate remote-attestation gate. Local evidence shall not imply remote attestation, Java binary compatibility or certification.
+COMMENT: Owner request2026-11-19 following the local-closure discussion. Implementation tools/QualificationBundle.cs --local-capture and tools/local_qualification.py; gate tools/validate_tck_ledger.py. Tests tools/test_local_qualification.py challenge altered source/revision, wrong platform/runtime/pins, mismatched digests, missing/skipped or namespace-substituted methods, duplicate records and incomplete roles. No external signature or independent machine/operator authenticity is established by local hashes; reviewer provenance and WSL same-machine execution remain explicit. Ordinary execution has no memory caps per VER-RAM-TELEMETRY.
