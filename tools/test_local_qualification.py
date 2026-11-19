@@ -1,13 +1,19 @@
 """Synthetic local contracts, never execution evidence or reviewer approval."""
 import copy,hashlib,io,json,pathlib,tempfile,unittest,zipfile
 from unittest.mock import patch
-from local_qualification import attest_local
+from local_qualification import attest_local,strict_trx
 
 class LocalQualificationTests(unittest.TestCase):
+ def test_theory_rows_share_test_identity_but_not_execution_identity(self):
+  trx=b'<TestRun><UnitTestResult testId="t" executionId="row1" outcome="Passed"/><UnitTestResult testId="t" executionId="row2" outcome="Passed"/><UnitTest id="t"><TestMethod className="SharpUnits.Tests.Theory" name="Rows"/></UnitTest><Counters total="2" executed="2" passed="2" failed="0"/></TestRun>'
+  self.assertEqual({'SharpUnits.Tests.Theory.Rows'},strict_trx(trx))
+  for bad in (trx.replace(b'row2',b'row1'),trx.replace(b'executionId="row2"',b''),trx.replace(b'outcome="Passed"',b'outcome="Failed"',1)):
+   with self.assertRaises(ValueError):strict_trx(bad)
+
  def test_local_capture_and_corruption_witnesses(self):
   proof={'src/test.cs':'A','tests/test.cs':'B'};revision='1'*40;pin='2'*40
   entry={'id':'51-A2','source':'src/main/java/tech/units/tck/tests/spi/QuantityFactoryTest.java','sourceMethod':'QuantityFactoryTest.testQuantityFactoryScale'}
-  trx=b'<TestRun><UnitTestResult testId="t" outcome="Passed"/><UnitTest id="t"><TestMethod className="SharpUnits.Tests.TckLocalClosureTests" name="FactoryScaleMatchesEveryAvailableProvider"/></UnitTest><Counters total="1" executed="1" passed="1" failed="0"/></TestRun>'
+  trx=b'<TestRun><UnitTestResult testId="t" executionId="e" outcome="Passed"/><UnitTest id="t"><TestMethod className="SharpUnits.Tests.TckLocalClosureTests" name="FactoryScaleMatchesEveryAvailableProvider"/></UnitTest><Counters total="1" executed="1" passed="1" failed="0"/></TestRun>'
   raw=b'<testsuite tests="1" failures="0" errors="0" skipped="0"><properties><property name="java.version" value="17.0.20"/><property name="java.vm.name" value="OpenJDK"/><property name="os.name" value="Windows 11"/><property name="os.arch" value="amd64"/></properties><testcase classname="tech.units.tck.tests.spi.QuantityFactoryTest" name="testQuantityFactoryScale"/></testsuite>'
   with tempfile.TemporaryDirectory() as directory:
    root=pathlib.Path(directory)

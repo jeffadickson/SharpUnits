@@ -1,5 +1,5 @@
 """Negative qualification tests use isolated ledger data and real pinned sources."""
-import json,pathlib,subprocess,sys,tempfile,unittest
+import json,pathlib,shutil,subprocess,sys,tempfile,unittest
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent))
 from verification_test_support import run_cli
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -9,11 +9,22 @@ class LedgerRepairTests(unittest.TestCase):
    root=pathlib.Path(directory);(root/'conformance').mkdir()
    inventory=json.loads((ROOT/'conformance/tck-assertions.json').read_text(encoding='utf-8'))
    ledger=json.loads((ROOT/'conformance/tck-closure-ledger.json').read_text(encoding='utf-8'))
+   # Real reviewed closures retain bounded artifacts in the repository. An
+   # isolated ledger must carry those exact inputs too; absence is a failure,
+   # not a reason to bypass qualification once the first closure exists.
+   for item in ledger['entries']:
+    q=item.get('qualification',{})
+    artifacts=[e['artifact'] for e in q.get('localEvidence',[])]
+    if q.get('review',{}).get('record'):artifacts.append(q['review']['record'])
+    for artifact in artifacts:
+     source=(ROOT/artifact['path']).resolve()
+     if not source.is_relative_to(ROOT.resolve()):raise ValueError('Evidence must remain repository-local')
+     target=root/artifact['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
    change(ledger)
    (root/'conformance/tck-assertions.json').write_text(json.dumps(inventory),encoding='utf-8')
    (root/'conformance/tck-closure-ledger.json').write_text(json.dumps(ledger),encoding='utf-8')
    return run_cli(ROOT/'tools/validate_tck_ledger.py',['--root',root,'--sources',ROOT])
- def test_current_unverified_accounting_is_valid(self):
+ def test_current_accounting_and_qualified_evidence_are_valid(self):
   result=self.run_ledger(lambda ledger:None);self.assertEqual(0,result.returncode,result.stderr.decode())
  def test_fabricated_closure_is_rejected(self):
   def change(ledger): ledger['entries'][0].update(status='VERIFIED',test='NoSuchClass.NoSuchTest',evidence='fiction',javaEvidence='fiction')

@@ -17,7 +17,10 @@ def strict_trx(data):
  results=tree.findall('.//{*}UnitTestResult');c=counters[0]
  need(bool(results) and all(r.get('outcome')=='Passed' for r in results),'Every TRX result must pass')
  ids=[r.get('testId') for r in results]
- need(all(ids) and len(set(ids))==len(ids),'Duplicate or missing TRX result identity')
+ executions=[r.get('executionId') for r in results]
+ # VSTest assigns one testId to some xUnit theories, but a distinct executionId
+ # to each row. Reject repeated executions, not legitimate parameterized rows.
+ need(all(ids) and all(executions) and len(set(executions))==len(executions),'Duplicate or missing TRX execution identity')
  need(all(int(c.get(k,'-1'))==len(results) for k in ('total','executed','passed')) and all(int(c.get(k,'0'))==0 for k in ('failed','error','timeout','aborted','notExecuted')),'TRX counters/results disagree')
  definitions=tree.findall('.//{*}UnitTest');names={}
  for item in definitions:
