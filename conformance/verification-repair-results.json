@@ -1,0 +1,145 @@
+{
+  "verdict": "LOCAL_REPAIR_PROBES_PASS",
+  "probes": [
+    {
+      "id": "AUD-C01",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": true,
+      "accepted": true,
+      "status": "CONTROL_PASS",
+      "finding": "Matching exact observations must pass.",
+      "exitCode": 0,
+      "diagnostics": "Differential comparison: 0 mismatch(es)\r\n"
+    },
+    {
+      "id": "AUD-C02",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Noncommuting affine composition produces 17 versus 22 at zero; an explicit witness detects reversed order.",
+      "exitCode": 1,
+      "diagnostics": "Differential comparison: 2 mismatch(es)\r\nx: wrong result\r\nx: value mismatch\r\n"
+    },
+    {
+      "id": "AUD-C03",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Boolean and numeric observations must remain distinct.",
+      "exitCode": 1,
+      "diagnostics": "Differential comparison: 2 mismatch(es)\r\nx: wrong result\r\nx: value mismatch\r\n"
+    },
+    {
+      "id": "AUD-P01",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Zero-tolerance integers must not collapse through binary64.",
+      "exitCode": 1,
+      "diagnostics": "Differential comparison: 2 mismatch(es)\r\nx: wrong result\r\nx: value mismatch\r\n"
+    },
+    {
+      "id": "AUD-P02",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "An empty comparison cannot qualify an expected campaign.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 32, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 28, in main\r\n    a=p.parse_args();errors=compare(load(a.java),load(a.dotnet),load_cases(a.cases))\r\n                                    ~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 49, in load_rows\r\n    if not rows: raise ValueError(\u0027Empty observation inventory\u0027)\r\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Empty observation inventory\r\n"
+    },
+    {
+      "id": "AUD-P03",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Null is not a valid error category.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 32, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 28, in main\r\n    a=p.parse_args();errors=compare(load(a.java),load(a.dotnet),load_cases(a.cases))\r\n                                    ~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 46, in load_rows\r\n    record=parse(line);key=identifier(record);outcome(record)\r\n                                              ~~~~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 39, in outcome\r\n    if \u0027error\u0027 in record and record[\u0027error\u0027] not in ERRORS: raise ValueError(\u0027Unknown or missing error category\u0027)\r\n                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Unknown or missing error category\r\n"
+    },
+    {
+      "id": "AUD-P04",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Empty error categories do not establish a matched failure.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 32, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 28, in main\r\n    a=p.parse_args();errors=compare(load(a.java),load(a.dotnet),load_cases(a.cases))\r\n                                    ~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 46, in load_rows\r\n    record=parse(line);key=identifier(record);outcome(record)\r\n                                              ~~~~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 39, in outcome\r\n    if \u0027error\u0027 in record and record[\u0027error\u0027] not in ERRORS: raise ValueError(\u0027Unknown or missing error category\u0027)\r\n                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Unknown or missing error category\r\n"
+    },
+    {
+      "id": "AUD-P05",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Nonfinite JSON numbers lie outside the declared finite profile.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 32, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 28, in main\r\n    a=p.parse_args();errors=compare(load(a.java),load(a.dotnet),load_cases(a.cases))\r\n                                    ~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 46, in load_rows\r\n    record=parse(line);key=identifier(record);outcome(record)\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 20, in parse\r\n    return json.loads(text,object_pairs_hook=_pairs,parse_constant=invalid)\r\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \u0022json\\__init__.py\u0022, line 359, in loads\r\n  File \u0022json\\decoder.py\u0022, line 345, in decode\r\n  File \u0022json\\decoder.py\u0022, line 361, in raw_decode\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 19, in invalid\r\n    def invalid(value): raise ValueError(f\u0027Nonfinite JSON constant: {value}\u0027)\r\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Nonfinite JSON constant: Infinity\r\n"
+    },
+    {
+      "id": "AUD-P06",
+      "tool": "compare_java_dotnet.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "An invalid self-declared infinite tolerance must not hide a numerical defect.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 32, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\compare_java_dotnet.py\u0022, line 28, in main\r\n    a=p.parse_args();errors=compare(load(a.java),load(a.dotnet),load_cases(a.cases))\r\n                                    ~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 46, in load_rows\r\n    record=parse(line);key=identifier(record);outcome(record)\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 20, in parse\r\n    return json.loads(text,object_pairs_hook=_pairs,parse_constant=invalid)\r\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \u0022json\\__init__.py\u0022, line 359, in loads\r\n  File \u0022json\\decoder.py\u0022, line 345, in decode\r\n  File \u0022json\\decoder.py\u0022, line 361, in raw_decode\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 19, in invalid\r\n    def invalid(value): raise ValueError(f\u0027Nonfinite JSON constant: {value}\u0027)\r\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Nonfinite JSON constant: Infinity\r\n"
+    },
+    {
+      "id": "AUD-P07",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "An omitted tolerance must not silently authorize loss of a tiny value.",
+      "exitCode": 1,
+      "diagnostics": "x: wrong result\r\n"
+    },
+    {
+      "id": "AUD-P08",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "A record cannot be both a result and an expected error.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\check_fixture_expectations.py\u0022, line 14, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\check_fixture_expectations.py\u0022, line 11, in main\r\n    cases=load_cases(a.cases);errors=check(load_rows(a.actual),cases,a.observer)\r\n                                           ~~~~~~~~~^^^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 46, in load_rows\r\n    record=parse(line);key=identifier(record);outcome(record)\r\n                                              ~~~~~~~^^^^^^^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 38, in outcome\r\n    if (\u0027result\u0027 in record)==(\u0027error\u0027 in record): raise ValueError(\u0027Exactly one result or error required\u0027)\r\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Exactly one result or error required\r\n"
+    },
+    {
+      "id": "AUD-P09",
+      "tool": "check_fixture_expectations.py",
+      "shouldAccept": false,
+      "accepted": false,
+      "status": "CONTROL_PASS",
+      "finding": "Duplicate fixture IDs must not collapse into one executed case.",
+      "exitCode": 1,
+      "diagnostics": "Traceback (most recent call last):\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\check_fixture_expectations.py\u0022, line 14, in \u003Cmodule\u003E\r\n    if __name__==\u0027__main__\u0027: main()\r\n                             ~~~~^^\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\check_fixture_expectations.py\u0022, line 11, in main\r\n    cases=load_cases(a.cases);errors=check(load_rows(a.actual),cases,a.observer)\r\n  File \u0022C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\tools\\verification_contract.py\u0022, line 57, in load_cases\r\n    if key in result: raise ValueError(f\u0027Duplicate expected ID: {key}\u0027)\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: Duplicate expected ID: x\r\n"
+    },
+    {
+      "id": "AUD-P10",
+      "status": "CONTROL_PASS",
+      "actualObserverOutput": "{\u0022id\u0022:\u0022a\u0022,\u0022result\u0022:{\u0022value\u0022:\u0022Integer|1/1|0\u0022,\u0022scale\u0022:\u0022ABSOLUTE\u0022,\u0022unit\u0022:\u0022B(0041,0/1,0/1,0/1,1/1,0/1,0/1,0/1)\u0022,\u0022converter\u0022:{\u0022available\u0022:true,\u0022operations\u0022:\u0022I\u0022,\u0022zero\u0022:\u0022Integer|0/1|0\u0022,\u0022one\u0022:\u0022Integer|1/1|0\u0022}}}\r\n{\u0022id\u0022:\u0022b\u0022,\u0022result\u0022:{\u0022value\u0022:\u0022Integer|1/1|0\u0022,\u0022scale\u0022:\u0022ABSOLUTE\u0022,\u0022unit\u0022:\u0022A(00610075006400690074005F0061006D0070006500720065,B(0041,0/1,0/1,0/1,1/1,0/1,0/1,0/1))\u0022,\u0022converter\u0022:{\u0022available\u0022:true,\u0022operations\u0022:\u0022I\u0022,\u0022zero\u0022:\u0022Integer|0/1|0\u0022,\u0022one\u0022:\u0022Integer|1/1|0\u0022}}}\r\n"
+    },
+    {
+      "id": "AUD-P11",
+      "status": "CONTROL_PASS",
+      "diagnostics": "VERIFIED requires structured qualification, not evidence strings\r\n"
+    }
+  ],
+  "sourceAndRunnerSha256": {
+    "tools/VerificationRepair.cs": "F6F844D05D4F70F9824AE485B2ABC0F6E2A1C4A1795903E0BA86AD51030473C0",
+    "tools/verification_contract.py": "D8563DA223A4F1C6FC248E4C8638300319EAA764AFEE287F57683E98B3F4F08C",
+    "tools/compare_java_dotnet.py": "C6F0585EC00C82BD5F717993746F2602A44B890AC50530A051F66CD940569037",
+    "tools/check_fixture_expectations.py": "FD5297C7C201BB2C38CE3A00BF7D0719A70B6953E791DAAC21C022DB4541A869",
+    "tools/validate_tck_ledger.py": "4B4CB857F7120AD935A363BDA1F5EF68988177774573177946B9ED12F1FA1AED",
+    "tools/qualification_evidence.py": "29B2A90C63DCE37EC2F17B9E35E83B12E02BD20665914A7B323875263A7F6C6D",
+    "C:\\Users\\jeffd\\Documents\\Codex\\2026-10-20\\you-are-taking-over-engineering-development\\SharpUnits\\src\\SharpUnits.ConformanceRunner\\bin\\Release\\net10.0\\SharpUnits.ConformanceRunner.dll": "31821C3A5D5792E377C9061824C1EA44527FFBCFCEC5824BE5348B511FF98BEB"
+  },
+  "limitations": "Local negative witnesses only; does not grant formal assertion closure or platform CI qualification. Historical audit artifacts remain unchanged."
+}

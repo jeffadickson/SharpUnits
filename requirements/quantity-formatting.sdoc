@@ -1,0 +1,52 @@
+[DOCUMENT]
+TITLE: SharpUnits Java quantity formatting requirements
+
+[REQUIREMENT]
+UID: JP-015-DISPLAY
+STATUS: Active
+TITLE: Retained display magnitude
+STATEMENT: Java quantity formatting shall emit the adapter's display magnitude and unit, without converting through coherent SI or writing an absolute/relative marker.
+COMMENT: Implementation: QuantityTextFormat.cs. Verification: FormatReferenceFixtureTests and FormattingRobustnessTests. Evidence: conformance/format-review-100.json. The legacy Format(Quantity, symbol) contract remains unchanged.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-015-JAVA-DOUBLE
+STATUS: Active
+TITLE: Pinned double number text
+STATEMENT: The supported finite-double formatter shall reproduce pinned Java Number narrowing and decimal text conventions, including integral narrowing, scientific notation boundaries and signed-zero normalization.
+COMMENT: Implementation: JavaNumberText.cs. Verification: FormatReferenceFixtureTests and FormattingRobustnessTests. Evidence: conformance/format-review-100.json. This is not arbitrary Java Number or parsed lexical precision retention.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-015-UNIT-LABELS
+STATUS: Active
+TITLE: Supported canonical labels
+STATEMENT: Java formatting shall omit the canonical dimensionless unit and emit supported Celsius/micro labels according to the pinned formatter, while preserving unrelated caller-defined symbols.
+COMMENT: Implementation: QuantityTextFormat.cs. Verification: FormatReferenceFixtureTests and FormattingRobustnessTests. General compound-unit normalization and Fahrenheit label generation remain outside this profile.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-015-APPENDABLE
+STATUS: Active
+TITLE: Appendable output contract
+STATEMENT: Java-inspired formatting overloads shall append to an existing StringBuilder or TextWriter, return the original destination, reject null arguments, propagate writer errors, and leave writer lifetime under caller control.
+COMMENT: Verification: FormatReferenceFixtureTests and FormattingRobustnessTests. Evidence: conformance/format-review-100.json. These are CLR adaptations of Java Appendable, not Java API identity.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015
+
+[REQUIREMENT]
+UID: JP-015-LOCALE
+STATUS: Active
+TITLE: Invariant formatting profile
+STATEMENT: The formatter shall report that its supported Java profile is not locale sensitive and produce invariant number text regardless of current culture or destination provider.
+COMMENT: Verification: FormatReferenceFixtureTests and FormattingRobustnessTests. Locale-dependent Java format services remain a separate gap.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-015

@@ -1,0 +1,70 @@
+{
+  "scope": "Diagnostic public unit-format observations; not complete structural conformance",
+  "cases": [
+    {
+      "unit": "FAHRENHEIT",
+      "id": "RA-F-01",
+      "kind": "format",
+      "actions": [],
+      "operation": "unitFormat",
+      "expectedJava": "((K*5)/9)+459.67",
+      "expectedDotnet": "((K*5)/9)+459.67",
+      "disposition": "FORMAT_CONTROL"
+    },
+    {
+      "text": "((K*5)/9)+459.67",
+      "unit": "FAHRENHEIT",
+      "kind": "parse",
+      "id": "RA-F-02",
+      "operation": "unitFormat",
+      "actions": [],
+      "expectedJava": true,
+      "expectedDotnet": "INVALID",
+      "disposition": "AFFINE_PARSE_GAP"
+    },
+    {
+      "text": "m*0.5",
+      "unit": "METRE",
+      "kind": "parseFormat",
+      "id": "RA-F-03",
+      "operation": "unitFormat",
+      "actions": [],
+      "expectedJava": "m/2",
+      "expectedDotnet": "INVALID",
+      "disposition": "DECIMAL_FACTOR_PARSE_GAP"
+    },
+    {
+      "text": "m*2147483648",
+      "unit": "METRE",
+      "kind": "parseFormat",
+      "id": "RA-F-04",
+      "operation": "unitFormat",
+      "actions": [],
+      "expectedJava": "m*-2147483648",
+      "expectedDotnet": "INVALID",
+      "disposition": "PINNED_JAVA_LARGE_FACTOR_TEXT_ANOMALY_DO_NOT_COPY"
+    },
+    {
+      "text": "m*2",
+      "unit": "METRE",
+      "kind": "parseFormat",
+      "id": "RA-F-05",
+      "operation": "unitFormat",
+      "actions": [],
+      "expectedJava": "m*2",
+      "expectedDotnet": "m*2",
+      "disposition": "INTEGER_FACTOR_CONTROL"
+    },
+    {
+      "text": "m",
+      "unit": "METRE",
+      "kind": "parseFormat",
+      "id": "RA-F-06",
+      "operation": "unitFormat",
+      "actions": [],
+      "expectedJava": "m",
+      "expectedDotnet": "m",
+      "disposition": "BASE_UNIT_CONTROL"
+    }
+  ]
+}

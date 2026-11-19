@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "-569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "negate-big-boundary",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "FE679BD766654DCF9838E2A81D679F1EBA130DE27A51DB8DA06FAFD541CBE5F2",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|-1138687895536349070124195419012419/1000000000000000|15",
+      "javaText": "-1138687895536349070.124195419012419",
+      "absoluteTolerance": 0,
+      "id": "negate-minimum-twice",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "E8763F33CBF8607BD1B0286BB63153DC51370E4FDF889B34B9CD40AF7B400273",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaText": "569343947768174534.9386409204938638301562921743372302",
+      "absoluteTolerance": 0,
+      "id": "add-big",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "88B87FC4CFC1F69E75AD7A80CA343C2931C177D861F1F2730870BDAED201F9D3",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaText": "569343947768174534.9386409204938638301562921743372302",
+      "absoluteTolerance": 0,
+      "id": "add-long",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "B277F0A21C72DDE42C88F9316009DC9971E82F05E279AB60E35AFC1517DBB3BB",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|2846719738840872674693204602469319150781460871686151/5000000000000000000000000000000000|34",
+      "javaText": "569343947768174534.9386409204938638301562921743372302",
+      "absoluteTolerance": 0,
+      "id": "add-double",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "7AD8A2A62A5FB9785DCF9FC16967E6C55D0A1BDDFBCE1FC1DE9F0C5EDE2EDDCF",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "multiply",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "5D3F9F0B353A06AA6FA1CBE5C62AD4E802546D0F89DF5FA741F3A4C7130DD4D0",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "divide",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "07D4DFD82445AC0D2A2D0ADF55EF2FB465D9A750440EBE30645659433DBF1C2F",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "reciprocal-twice",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "FC8476DA40D692C10BFB64BBD413407C3C46B53E45FED63B5B1241FD111F9CE5",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "negate-big-twice",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "76A872E0860D2BFDEA0967FB7F22A2CCAE07CC2C17415B0B32ACE183C0E79DD0",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|-331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "-569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "negate-long-boundary",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "C455412A737DB0A24A819B3D6814674C49D6109EF82F75118E52C4DE706D52A8",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "negate-long-twice",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "ABAEEDFFA0EA968F4B4295211E6BCB36306973C5715E0E72891BA56102D7AEB7",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "zero-add-long",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "30283B9F74CB0BAD7E93FF872BBF1C8F12D62305589A4D19FA75B4EFC3DE545B",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "zero-add-big",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "B4DE50DE109C253EEA191C678B727C36E3996C49F4FE8A73AFABEA24A930DC70",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "multiply-one-long",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "9E4A469AD50A6940DCFF70AA35F49026C77763147C5BDC5D67E75F56EA5BFABA",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|1138687895536349070124195419012419/2000000000000000|16",
+      "javaText": "569343947768174535.0620977095062095",
+      "absoluteTolerance": 0,
+      "id": "divide-one-long",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.math.BigInteger",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "74625C8BB9E799FFD61A0EE29538303699347A1313E5A37E39B0457DE75C6422",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    },
+    {
+      "expected": "Decimal|331401794548248019454824801945482327752704/582076609134674072265625|34",
+      "javaText": "569343947768174535.0620977095062095090575267422273536",
+      "absoluteTolerance": 0,
+      "id": "zero-add-double",
+      "javaClass": "java.math.BigDecimal",
+      "intermediateJavaClass": "java.lang.Long",
+      "oracle": {
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "rowSha256": "872A81103D0F289A8661D6E08F8F2AF1735D13A6D35019687D30AD6C381611BC",
+        "contract": "Normalize at each public operation; excludes Calculator accumulator chains"
+      },
+      "operation": "normalized-number-chain"
+    }
+  ]
+}

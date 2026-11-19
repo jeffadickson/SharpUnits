@@ -1,0 +1,4 @@
+# Qualification records and archives are hashed as raw bytes on both platforms.
+conformance/qualification/** -text whitespace=cr-at-eol
+# A consistent checkout newline keeps the ownership snapshot hash portable.
+conformance/tck-closure-ledger.json text eol=lf

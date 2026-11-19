@@ -1,0 +1,51 @@
+[DOCUMENT]
+TITLE: .NET11 foundation and SharpUnits completion work packages
+
+[REQUIREMENT]
+UID: PLAT-NET11
+STATUS: Active
+TITLE: Stable .NET11 foundation
+STATEMENT: The library, conformance runner, tests and demo shall target net11.0 using stable SDK11.0.100 with patch roll-forward and no prerelease selection. Current commands shall resolve the stable SDK and correct target paths while disabled workflows remain manual-only.
+COMMENT: User request2026-11-13. Implementation: global.json, four project files, active PowerShell entry points and workflows. Acceptance/evidence: conformance/net11-migration.md. Historical .NET10 evidence is not retitled as .NET11 qualification.
+
+[REQUIREMENT]
+UID: PLAT-FROZEN
+STATUS: Active
+TITLE: Immutable shared lookup metadata
+STATEMENT: Shared SI prefix definitions and fixed metric membership shall use immutable BCL collections while preserving ordinal symbol identity, exact prefix factors and the prior public MetricPrefixes order. Collection construction shall preserve the explicit comparer using syntax compatible with qualified verification tooling.
+COMMENT: User-requested language/library reuse, with inferred bounded immutability criterion. Implementation: SiPrefixes and JavaUnitTextFormat. The2026-11-16 exact-text increment substitutes an equivalent explicit HashSet constructor to enable Stryker5.1 without changing .NET11/C#15 settings. Verification: Net11ModernizationTests (red mutable-catalog witness, case/Unicode checks and seed385,1113), full existing format/prefix regressions and paired Java corpora. No performance claim is inferred from collection choice.
+
+[REQUIREMENT]
+UID: WP-COMPLETE-1
+STATUS: Draft
+TITLE: Core semantic reconciliation and recoverable operations
+STATEMENT: Close remaining quantity, unit, conversion and dimension behavior within an explicit Java/CLR compatibility envelope, with independent arithmetic/converter oracles and typed expected-failure boundaries where callers can recover.
+COMMENT: Proposed work package owning60 TCK occurrences. Acceptance, dependencies, library candidates and assertion ownership: docs/package-completion-five.md and conformance/completion-work-packages.json. Native electrical/symbolic and temperature policies must remain intact.
+
+[REQUIREMENT]
+UID: WP-COMPLETE-2
+STATUS: Draft
+TITLE: General formatting and parsing
+STATEMENT: Reconcile graph formatting/parsing, format families, labels, aliases, cursors, malformed text and culture behavior against pinned Java observations, preserving converter order and complete value/unit/scale observations.
+COMMENT: Proposed work package owning11 TCK occurrences. Use existing parsers/BCL facilities or qualified libraries before extending a custom grammar. Native JSONL serialization is a candidate, not an already qualified replacement.
+
+[REQUIREMENT]
+UID: WP-COMPLETE-3
+STATUS: Draft
+TITLE: Prefixes catalogs and exact factories
+STATEMENT: Reconcile prefix metadata, systems of units, obtaining units/quantities and quantity factories, including exact numeric-family preservation, catalog identity and mutation isolation.
+COMMENT: Proposed work package owning20 TCK occurrences. Frozen BCL metadata is available; preserve intentionally mutable registry operations. Acceptance and dependencies are in the five-package plan.
+
+[REQUIREMENT]
+UID: WP-COMPLETE-4
+STATUS: Draft
+TITLE: Services providers and structural interoperability
+STATEMENT: Reconcile provider/service selection and structural type assertions using explicit CLR mappings or qualified interoperability adapters; document non-equivalent Java reflection/class behavior without presenting an analogue as Java identity.
+COMMENT: Proposed work package owning22 TCK occurrences. Prefer explicit maintained DI/registration facilities where suitable; external discovery requires isolated, deterministic executable evidence.
+
+[REQUIREMENT]
+UID: WP-COMPLETE-5
+STATUS: Draft
+TITLE: Qualification packaging and release evidence
+STATEMENT: Qualify all113 inventoried assertions with revision-bound evidence and review; complete mutation/fuzz/property and platform qualification, consumer/package examples, XML/API engineering documentation and release reproducibility before claiming product completion.
+COMMENT: Cross-cutting work package; no duplicate primary ownership of TCK occurrences. Windows/Ubuntu/Java CI gates remain blocked while the user keeps CI disabled. Do not enable or dispatch workflows or promote VERIFIED status merely to satisfy this plan.

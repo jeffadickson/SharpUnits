@@ -1,0 +1,886 @@
+{
+  "policy": "Combined measured outcomes, not a single-run mutation score. Later executed outcomes supersede only matching mutations in unchanged source. A changed source file is replaced in full by its later full-file report; ignored/compile errors never become kills.",
+  "reports": [
+    {
+      "phase": 0,
+      "path": "../debt-stryker-broad/reports/mutation-report.json",
+      "sha256": "BEBC65AB0230518BF67CBDE79A43AA050F255513CAE83E9D74335E48FA31EADC"
+    },
+    {
+      "phase": 1,
+      "path": "../debt-stryker-final-v2/reports/mutation-report.json",
+      "sha256": "207E4EA136126A9695AB4E6C8A3B71FB1FDEC31C5C9EF64327BB1EB05B1C144F"
+    },
+    {
+      "phase": 2,
+      "path": "../debt-stryker-typed-full/reports/mutation-report.json",
+      "sha256": "BA33716FAFCEEEF1EEF83FED1289B7C95D0A4637FD3E6F6F5931D6C179B60494"
+    },
+    {
+      "phase": 3,
+      "path": "../debt-stryker-guards/reports/mutation-report.json",
+      "sha256": "9BEBD084E5F6EEF4CBA1A5E330ABE8A8884027A51ED76E37E6D8CF93D3EC560D"
+    },
+    {
+      "phase": 4,
+      "path": "../debt-stryker-hash-full/reports/mutation-report.json",
+      "sha256": "6BA27A51ACD845D7B83F50C3F24BEAD5D6178A96369F507ED9CE84201EF0F99F"
+    },
+    {
+      "phase": 5,
+      "path": "../debt-stryker-number-final/reports/mutation-report.json",
+      "sha256": "5602D80D4545F47CB025DD0593D527DEE026413112F92A0412EFB80970DCE364"
+    }
+  ],
+  "counts": {
+    "CompileError": 76,
+    "Ignored": 96,
+    "Killed": 954,
+    "NoCoverage": 6,
+    "Survived": 66,
+    "Timeout": 2
+  },
+  "files": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "sourceSha256": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 6,
+        "Killed": 19,
+        "Survived": 4
+      },
+      "outstanding": [
+        {
+          "id": "912",
+          "phase": 1,
+          "status": "Survived",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(Components(value).Any(power=\u003Epower.Denominator.Sign\u003C=0))throw new ArgumentException(\u0022Normalized exponents required.\u0022,nameof(value));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "921",
+          "phase": 1,
+          "status": "Survived",
+          "line": 30,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "922",
+          "phase": 1,
+          "status": "Survived",
+          "line": 30,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "931",
+          "phase": 1,
+          "status": "Survived",
+          "line": 42,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)power.Numerator",
+          "statement": "map.Add(new(dimension),checked((int)power.Numerator));",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaNumber.cs",
+      "sourceSha256": "615642E6516435631DCE544537816BA6965447252EC7BC394811FBFB9C30C9F8",
+      "counts": {
+        "CompileError": 12,
+        "Ignored": 21,
+        "Killed": 266,
+        "NoCoverage": 3,
+        "Survived": 23,
+        "Timeout": 1
+      },
+      "outstanding": [
+        {
+          "id": "1095",
+          "phase": 5,
+          "status": "Survived",
+          "line": 61,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(text.Length is 0 or \u003E4096)throw new FormatException(\u0022Decimal token length is outside the supported budget.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1125",
+          "phase": 5,
+          "status": "Survived",
+          "line": 69,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(c is \u003C\u00270\u0027 or \u003E\u00279\u0027)throw new FormatException(\u0022Invalid decimal digit.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1132",
+          "phase": 5,
+          "status": "Survived",
+          "line": 72,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1133",
+          "phase": 5,
+          "status": "Survived",
+          "line": 72,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1141",
+          "phase": 5,
+          "status": "Survived",
+          "line": 75,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "throw new FormatException(\u0022Invalid decimal exponent.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1151",
+          "phase": 5,
+          "status": "Survived",
+          "line": 77,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1155",
+          "phase": 5,
+          "status": "Survived",
+          "line": 84,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1166",
+          "phase": 5,
+          "status": "Survived",
+          "line": 93,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?long.MaxValue:(long)value)",
+          "statement": "return new(new Rational(value\u003E=9223372036854775808d?long.MaxValue:(long)value,1),JavaNumberKind.Integer,integerDecimalContext:false);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1168",
+          "phase": 5,
+          "status": "Survived",
+          "line": 93,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003E9223372036854775808d",
+          "statement": "return new(new Rational(value\u003E=9223372036854775808d?long.MaxValue:(long)value,1),JavaNumberKind.Integer,integerDecimalContext:false);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1172",
+          "phase": 5,
+          "status": "Survived",
+          "line": 103,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1175",
+          "phase": 5,
+          "status": "Survived",
+          "line": 116,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "_=\u003Ethrow new ArgumentException(\u0022A supported numeric value is required.\u0022,nameof(value))",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1202",
+          "phase": 5,
+          "status": "Survived",
+          "line": 152,
+          "mutator": "Logical mutation",
+          "replacement": "Fraction.Numerator.IsZero\u0026\u0026other.Fraction.Numerator.IsZero",
+          "statement": "if(multiply\u0026\u0026(Fraction.Numerator.IsZero||other.Fraction.Numerator.IsZero))return Zero;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1283",
+          "phase": 5,
+          "status": "Survived",
+          "line": 200,
+          "mutator": "Equality mutation",
+          "replacement": "exponent\u003E0",
+          "statement": "if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1285",
+          "phase": 5,
+          "status": "Survived",
+          "line": 200,
+          "mutator": "Equality mutation",
+          "replacement": "numerator\u003C=denominator*BigInteger.Pow(10,exponent)",
+          "statement": "if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1297",
+          "phase": 5,
+          "status": "Survived",
+          "line": 202,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "statement": "var n=scale\u003E=0?numerator*BigInteger.Pow(10,scale):numerator;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1302",
+          "phase": 5,
+          "status": "Survived",
+          "line": 203,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "statement": "var d=scale\u003E=0?denominator:denominator*BigInteger.Pow(10,-scale);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1316",
+          "phase": 5,
+          "status": "Timeout",
+          "line": 208,
+          "mutator": "Logical mutation",
+          "replacement": "scale\u003EpreferredScale||quotient%10==0",
+          "statement": "if(remainder.IsZero)while(scale\u003EpreferredScale\u0026\u0026quotient%10==0){quotient/=10;scale--;}",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1331",
+          "phase": 5,
+          "status": "Survived",
+          "line": 213,
+          "mutator": "Equality mutation",
+          "replacement": "\u003C= -8192",
+          "statement": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1334",
+          "phase": 5,
+          "status": "Survived",
+          "line": 213,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=8192",
+          "statement": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1335",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 213,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1339",
+          "phase": 5,
+          "status": "Survived",
+          "line": 214,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "statement": "var fraction=scale\u003E=0?new Rational(coefficient,BigInteger.Pow(10,scale)):new Rational(coefficient*BigInteger.Pow(10,-scale),1);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1344",
+          "phase": 5,
+          "status": "Survived",
+          "line": 219,
+          "mutator": "Equality mutation",
+          "replacement": "value.Denominator.Sign\u003C0",
+          "statement": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1346",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 219,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1347",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 219,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1355",
+          "phase": 5,
+          "status": "Survived",
+          "line": 221,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "throw new ArgumentOutOfRangeException(nameof(value),\u0022Numeric bit budget exceeded.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1357",
+          "phase": 5,
+          "status": "Survived",
+          "line": 224,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction))",
+          "statement": "public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1391",
+          "phase": 5,
+          "status": "Survived",
+          "line": 242,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale))",
+          "statement": "public override int GetHashCode()=\u003EKind==JavaNumberKind.Rational?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale);",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "sourceSha256": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 8,
+        "Killed": 58,
+        "NoCoverage": 1,
+        "Survived": 4
+      },
+      "outstanding": [
+        {
+          "id": "1399",
+          "phase": 0,
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(target);if(Unit.Equals(target))return this;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1406",
+          "phase": 0,
+          "status": "Survived",
+          "line": 34,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1407",
+          "phase": 0,
+          "status": "Survived",
+          "line": 34,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1423",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 49,
+          "mutator": "LogicalNotExpression to un-LogicalNotExpression mutation",
+          "replacement": "other.Unit.Equals(target)",
+          "statement": "else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "1448",
+          "phase": 0,
+          "status": "Survived",
+          "line": 82,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(Unit.Dimension!=dimension)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnit.cs",
+      "sourceSha256": "3C6E3856D620B95411F6CBA00BF0E0454B55D442C21EE78FA4523487AFA71968",
+      "counts": {
+        "CompileError": 34,
+        "Ignored": 31,
+        "Killed": 325,
+        "NoCoverage": 2,
+        "Survived": 20,
+        "Timeout": 1
+      },
+      "outstanding": [
+        {
+          "id": "2050",
+          "phase": 0,
+          "status": "Survived",
+          "line": 71,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(depth\u003E64)throw new ArgumentOutOfRangeException(nameof(parent),\u0022Unit graph depth budget exceeded.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2057",
+          "phase": 0,
+          "status": "Survived",
+          "line": 87,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!Equals(SystemUnit))throw new InvalidOperationException(\u0022An alternate requires an unscaled system unit.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2096",
+          "phase": 0,
+          "status": "Survived",
+          "line": 125,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2097",
+          "phase": 0,
+          "status": "Survived",
+          "line": 125,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2117",
+          "phase": 0,
+          "status": "Survived",
+          "line": 147,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!pair.Value.Denominator.IsOne)throw new NotSupportedException(\u0022Pinned product converters reject fractional roots.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2120",
+          "phase": 0,
+          "status": "Survived",
+          "line": 149,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!next.IsLinear)throw new NotSupportedException(\u0022A non-linear atom has no product converter.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2121",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "statement": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2123",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Equality mutation",
+          "replacement": "power\u003C=0",
+          "statement": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2129",
+          "phase": 0,
+          "status": "Timeout",
+          "line": 151,
+          "mutator": "PostIncrementExpression to PostDecrementExpression mutation",
+          "replacement": "i--",
+          "statement": "for(var i=0;i\u003Cpower;i\u002B\u002B)converter=converter.Concatenate(next);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2147",
+          "phase": 0,
+          "status": "Survived",
+          "line": 179,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "statement": "_=\u003Enew ReadOnlyDictionary\u003CJavaUnit,int\u003E(factors.ToDictionary(pair=\u003Epair.Key,pair=\u003Echecked((int)pair.Value.Numerator)))",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2150",
+          "phase": 0,
+          "status": "Survived",
+          "line": 183,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(power.Numerator.IsZero)return;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2169",
+          "phase": 0,
+          "status": "Survived",
+          "line": 191,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(result.Count\u003E128)throw new ArgumentOutOfRangeException(nameof(result),\u0022Product atom budget exceeded.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2175",
+          "phase": 0,
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "statement": "if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2176",
+          "phase": 0,
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "statement": "if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2185",
+          "phase": 0,
+          "status": "Survived",
+          "line": 197,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "throw new ArgumentOutOfRangeException(nameof(result),\u0022Product exponent budget exceeded.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2201",
+          "phase": 0,
+          "status": "Survived",
+          "line": 218,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2206",
+          "phase": 0,
+          "status": "Survived",
+          "line": 218,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2213",
+          "phase": 0,
+          "status": "Survived",
+          "line": 223,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension))",
+          "statement": "return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2215",
+          "phase": 0,
+          "status": "Survived",
+          "line": 229,
+          "mutator": "Linq method mutation (OrderByDescending() to OrderBy())",
+          "replacement": "SiPrefixes.Definitions.OrderBy",
+          "statement": "foreach(var prefix in SiPrefixes.Definitions.OrderByDescending(pair=\u003Epair.Key.Length))",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2225",
+          "phase": 0,
+          "status": "Survived",
+          "line": 233,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(candidate is not null){parent=FromDefinition(candidate.Unit);prefixExponent=prefix.Value;break;}",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2248",
+          "phase": 0,
+          "status": "Survived",
+          "line": 265,
+          "mutator": "Null coalescing mutation (left to right)",
+          "replacement": "unit.Symbol??symbol",
+          "statement": "void Put(string field,JavaUnit unit,string? symbol=null)=\u003Eresult[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2400",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 293,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2401",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 293,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "sourceSha256": "44808A1BD19E80379DD348D3F64042A38ACA4A90AE11D462C231399587C59459",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 10,
+        "Killed": 28,
+        "Survived": 2
+      },
+      "outstanding": [
+        {
+          "id": "2431",
+          "phase": 0,
+          "status": "Survived",
+          "line": 26,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(definition);original=definition;Model=JavaUnit.FromDefinition(definition);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2460",
+          "phase": 0,
+          "status": "Survived",
+          "line": 102,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(Dimension!=requested)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "sourceSha256": "4CDA9CFFE431E4335C71AC96A4B62C40222BC64926AB6D6259C40069CFEE3351",
+      "counts": {
+        "CompileError": 18,
+        "Ignored": 17,
+        "Killed": 126,
+        "Survived": 5
+      },
+      "outstanding": [
+        {
+          "id": "2887",
+          "phase": 0,
+          "status": "Survived",
+          "line": 16,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "throw new ArgumentException(\u0022A valid affine converter is required.\u0022,nameof(converter));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2915",
+          "phase": 0,
+          "status": "Survived",
+          "line": 47,
+          "mutator": "Equality mutation",
+          "replacement": "exponent\u003E0",
+          "statement": "var factor=exponent\u003E=0?JavaNumber.Integer(value):JavaNumber.Ratio(1,value);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2928",
+          "phase": 0,
+          "status": "Survived",
+          "line": 67,
+          "mutator": "Remove checked expression",
+          "replacement": "-step.Exponent",
+          "statement": "Operation.Power=\u003EPowerStep(step.Radix,checked(-step.Exponent)),",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "2959",
+          "phase": 0,
+          "status": "Survived",
+          "line": 124,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!IsAffine)throw new NotSupportedException(\u0022Nonlinear converter has no affine coefficients.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "3010",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Remove checked expression",
+          "replacement": "previous.Exponent\u002Bcurrent.Exponent",
+          "statement": "?PowerStep(previous.Radix,checked(previous.Exponent\u002Bcurrent.Exponent))",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "SiPrefix.cs",
+      "sourceSha256": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+      "counts": {
+        "CompileError": 3,
+        "Ignored": 1,
+        "Killed": 82,
+        "Survived": 3
+      },
+      "outstanding": [
+        {
+          "id": "4094",
+          "phase": 0,
+          "status": "Survived",
+          "line": 14,
+          "mutator": "Equality mutation",
+          "replacement": "Exponent\u003E0",
+          "statement": "public JavaNumber ExactValue=\u003EExponent\u003E=0?JavaNumber.Integer(System.Numerics.BigInteger.Pow(10,Exponent))",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4102",
+          "phase": 0,
+          "status": "Survived",
+          "line": 24,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\u0022Name required.\u0022,nameof(name));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4108",
+          "phase": 0,
+          "status": "Survived",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\u0022Symbol required.\u0022,nameof(symbol));",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "sourceSha256": "92EC53E232A3CE25C9DE8724F72206F6779CC75CC8A551432B635ACE1584843E",
+      "counts": {
+        "CompileError": 3,
+        "Ignored": 2,
+        "Killed": 50,
+        "Survived": 5
+      },
+      "outstanding": [
+        {
+          "id": "4220",
+          "phase": 1,
+          "status": "Survived",
+          "line": 16,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(unit);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4223",
+          "phase": 1,
+          "status": "Survived",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4228",
+          "phase": 1,
+          "status": "Survived",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "if(unit.Converter.Offset!=0)throw new InvalidOperationException(\u0022Cannot prefix an affine unit.\u0022);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4232",
+          "phase": 1,
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Equality mutation",
+          "replacement": "exponent\u003E0",
+          "statement": "var factor=exponent\u003E=0?new Rational(power,1):new Rational(1,power);",
+          "disposition": "OPEN_REVIEW"
+        },
+        {
+          "id": "4240",
+          "phase": 1,
+          "status": "Survived",
+          "line": 32,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "statement": "public static int Exponent(string prefix)=\u003EExponents.TryGetValue(prefix,out var exponent)?exponent:throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));",
+          "disposition": "OPEN_REVIEW"
+        }
+      ]
+    }
+  ]
+}

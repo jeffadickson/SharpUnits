@@ -1,0 +1,1138 @@
+{
+  "startingCommit": "630faff",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q50-01",
+      "hypothesis": "Same-unit conversion retains the supplied fractional Celsius magnitude",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-01",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-01",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q50-01",
+        "result": 20.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q50-02",
+      "hypothesis": "Positive Celsius magnitude smaller than offset precision is retained",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-02",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-02",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-02",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q50-03",
+      "hypothesis": "Negative Celsius magnitude smaller than offset precision is retained",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-03",
+        "result": -1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-03",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-03",
+        "result": -1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 4,
+      "case": "Q50-04",
+      "hypothesis": "Fractional prefixed magnitude survives same-unit conversion",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "dotnetAfter": {
+        "id": "Q50-04",
+        "result": 0.1
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 5,
+      "case": "Q50-05",
+      "hypothesis": "Subnormal display magnitude survives coherent underflow",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-05",
+        "result": 1e-320
+      },
+      "dotnetBefore": {
+        "id": "Q50-05",
+        "result": 9.88e-321
+      },
+      "dotnetAfter": {
+        "id": "Q50-05",
+        "result": 1e-320
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 6,
+      "case": "Q50-06",
+      "hypothesis": "Distinct tiny Celsius representations remain unequal",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-06",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-06",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-06",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 7,
+      "case": "Q50-07",
+      "hypothesis": "Tiny Celsius comparison uses stored display magnitude",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-07",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q50-07",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-07",
+        "result": -1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 8,
+      "case": "Q50-08",
+      "hypothesis": "A nonzero tiny Celsius value is unequal to zero",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-08",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-08",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-08",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 9,
+      "case": "Q50-09",
+      "hypothesis": "Tiny Celsius equivalence does not collapse distinct values",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-09",
+        "result": false
+      },
+      "dotnetBefore": {
+        "id": "Q50-09",
+        "result": true
+      },
+      "dotnetAfter": {
+        "id": "Q50-09",
+        "result": false
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q50-10",
+      "hypothesis": "Negative tiny Celsius value sorts below zero",
+      "source": "AbstractQuantity.getValue/equals/compareTo and NumberQuantity.getValue",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-10",
+        "result": -1
+      },
+      "dotnetBefore": {
+        "id": "Q50-10",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-10",
+        "result": -1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 11,
+      "case": "Q50-11",
+      "hypothesis": "Product preserves prefixed operand display magnitude",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-11",
+        "absoluteTolerance": 1e-10,
+        "result": 6.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-11",
+        "result": 0.006
+      },
+      "dotnetAfter": {
+        "id": "Q50-11",
+        "result": 6
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 12,
+      "case": "Q50-12",
+      "hypothesis": "Product retains prefixed operand unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-12",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-12",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-12",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 13,
+      "case": "Q50-13",
+      "hypothesis": "Quotient preserves scaled denominator display magnitude",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-13",
+        "absoluteTolerance": 1e-10,
+        "result": 3.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-13",
+        "result": 0.003
+      },
+      "dotnetAfter": {
+        "id": "Q50-13",
+        "result": 3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 14,
+      "case": "Q50-14",
+      "hypothesis": "Quotient retains reciprocal denominator unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-14",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-14",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-14",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 15,
+      "case": "Q50-15",
+      "hypothesis": "Affine operand becomes Kelvin but linear operand keeps prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-15",
+        "absoluteTolerance": 1e-10,
+        "result": 586.3
+      },
+      "dotnetBefore": {
+        "id": "Q50-15",
+        "result": 0.5862999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-15",
+        "result": 586.3
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 16,
+      "case": "Q50-16",
+      "hypothesis": "Affine product retains the other operand unit factor",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-16",
+        "absoluteTolerance": 1e-10,
+        "result": 0.001
+      },
+      "dotnetBefore": {
+        "id": "Q50-16",
+        "result": 1
+      },
+      "dotnetAfter": {
+        "id": "Q50-16",
+        "result": 0.001
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 17,
+      "case": "Q50-17",
+      "hypothesis": "Relative affine product ignores offset and keeps other prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-17",
+        "absoluteTolerance": 1e-10,
+        "result": 40.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-17",
+        "result": 0.04
+      },
+      "dotnetAfter": {
+        "id": "Q50-17",
+        "result": 40
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 18,
+      "case": "Q50-18",
+      "hypothesis": "Dimensionless quotient retains scaled representation",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-18",
+        "absoluteTolerance": 1e-10,
+        "result": 0.5
+      },
+      "dotnetBefore": {
+        "id": "Q50-18",
+        "result": 0.0005
+      },
+      "dotnetAfter": {
+        "id": "Q50-18",
+        "result": 0.5
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 19,
+      "case": "Q50-19",
+      "hypothesis": "Relative operands yield absolute product while preserving prefix",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-19",
+        "absoluteTolerance": 1e-10,
+        "result": "ABSOLUTE"
+      },
+      "dotnetBefore": {
+        "id": "Q50-19",
+        "result": "ABSOLUTE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-19",
+        "result": "ABSOLUTE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 20,
+      "case": "Q50-20",
+      "hypothesis": "Affine quotient converts only shifted operand to system unit",
+      "source": "ScaleHelper.multiplication/toAbsoluteLinear; NumberQuantity.multiply/divide",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "id": "Q50-20",
+        "absoluteTolerance": 1e-10,
+        "result": 146.575
+      },
+      "dotnetBefore": {
+        "id": "Q50-20",
+        "result": 146575
+      },
+      "dotnetAfter": {
+        "id": "Q50-20",
+        "result": 146.575
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 21,
+      "case": "Q50-21",
+      "hypothesis": "Absolute Fahrenheit freezing converts with offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-21",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-21",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-21",
+        "result": 0
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 22,
+      "case": "Q50-22",
+      "hypothesis": "Absolute Fahrenheit boiling converts with offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-22",
+        "result": 100.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-22",
+        "result": 100
+      },
+      "dotnetAfter": {
+        "id": "Q50-22",
+        "result": 100
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 23,
+      "case": "Q50-23",
+      "hypothesis": "Relative Fahrenheit conversion ignores offset",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-23",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-23",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q50-23",
+        "result": 10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 24,
+      "case": "Q50-24",
+      "hypothesis": "Relative Celsius conversion to Fahrenheit uses scale only",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-24",
+        "result": 18.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-24",
+        "result": 18
+      },
+      "dotnetAfter": {
+        "id": "Q50-24",
+        "result": 18
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 25,
+      "case": "Q50-25",
+      "hypothesis": "Absolute Celsius plus relative Fahrenheit is heating",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-25",
+        "result": 30.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-25",
+        "result": 30
+      },
+      "dotnetAfter": {
+        "id": "Q50-25",
+        "result": 30
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 26,
+      "case": "Q50-26",
+      "hypothesis": "Absolute Fahrenheit plus relative Celsius preserves left unit",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-26",
+        "result": 86.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-26",
+        "result": 85.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-26",
+        "result": 85.99999999999999
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 27,
+      "case": "Q50-27",
+      "hypothesis": "Two absolute Fahrenheit/Celsius operands subtract to absolute zero in left units",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-27",
+        "result": -459.67
+      },
+      "dotnetBefore": {
+        "id": "Q50-27",
+        "result": -459.66999999999996
+      },
+      "dotnetAfter": {
+        "id": "Q50-27",
+        "result": -459.66999999999996
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 28,
+      "case": "Q50-28",
+      "hypothesis": "Relative Fahrenheit plus absolute Celsius yields absolute Fahrenheit",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-28",
+        "result": 86.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-28",
+        "result": 85.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q50-28",
+        "result": 85.99999999999999
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 29,
+      "case": "Q50-29",
+      "hypothesis": "Absolute freezing temperatures add coherent magnitudes",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "dotnetBefore": {
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "dotnetAfter": {
+        "id": "Q50-29",
+        "result": 273.15
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 30,
+      "case": "Q50-30",
+      "hypothesis": "Absolute Fahrenheit scalar multiplication operates in kelvin",
+      "source": "ScaleHelper.convertTo/addition/scalarMultiplication; AbstractUnit.shift",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 1e-10,
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "dotnetBefore": {
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "dotnetAfter": {
+        "id": "Q50-30",
+        "result": 523.67
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 31,
+      "case": "Q50-31",
+      "hypothesis": "Multiplication by one preserves fractional shifted magnitude",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-31",
+        "result": 20.1
+      },
+      "dotnetBefore": {
+        "id": "Q50-31",
+        "result": 20.100000000000023
+      },
+      "dotnetAfter": {
+        "id": "Q50-31",
+        "result": 20.1
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q50-32",
+      "hypothesis": "Division by one preserves a Celsius magnitude below offset precision",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-32",
+        "result": 1e-20
+      },
+      "dotnetBefore": {
+        "id": "Q50-32",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-32",
+        "result": 1e-20
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q50-33",
+      "hypothesis": "Relative prefixed scalar multiplication avoids coherent underflow loss",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-33",
+        "result": 2e-320
+      },
+      "dotnetBefore": {
+        "id": "Q50-33",
+        "result": 1.9763e-320
+      },
+      "dotnetAfter": {
+        "id": "Q50-33",
+        "result": 2e-320
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q50-34",
+      "hypothesis": "Relative prefixed scalar division avoids coherent underflow loss",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-34",
+        "result": 5e-321
+      },
+      "dotnetBefore": {
+        "id": "Q50-34",
+        "result": 4.94e-321
+      },
+      "dotnetAfter": {
+        "id": "Q50-34",
+        "result": 5e-321
+      },
+      "originalMismatch": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q50-35",
+      "hypothesis": "Prefixed linear scalar division retains display unit",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "dotnetBefore": {
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "dotnetAfter": {
+        "id": "Q50-35",
+        "result": 0.5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 36,
+      "case": "Q50-36",
+      "hypothesis": "Relative Celsius scalar multiplication retains interval magnitude",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "dotnetBefore": {
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "dotnetAfter": {
+        "id": "Q50-36",
+        "result": 40.2
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 37,
+      "case": "Q50-37",
+      "hypothesis": "Fractional prefixed inverse uses display magnitude reciprocal",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-37",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-37",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q50-37",
+        "result": 10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 38,
+      "case": "Q50-38",
+      "hypothesis": "Small prefixed inverse does not divide a rounded coherent reciprocal",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "dotnetBefore": {
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "dotnetAfter": {
+        "id": "Q50-38",
+        "result": 1e+305
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 39,
+      "case": "Q50-39",
+      "hypothesis": "Signed prefixed inverse retains sign and representation",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-39",
+        "result": -10.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-39",
+        "result": -10
+      },
+      "dotnetAfter": {
+        "id": "Q50-39",
+        "result": -10
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 40,
+      "case": "Q50-40",
+      "hypothesis": "Zero relative Fahrenheit interval scales without applying offset",
+      "source": "ScaleHelper.scalarMultiplication; NumberQuantity.inverse",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q50-40",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q50-40",
+        "result": 0
+      },
+      "dotnetAfter": {
+        "id": "Q50-40",
+        "result": 0
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 41,
+      "case": "Q50-41",
+      "hypothesis": "ElectricCurrent cast accepts matching dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-41",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-41",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-41",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 42,
+      "case": "Q50-42",
+      "hypothesis": "ElectricPotential cast rejects current dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "INCOMPATIBLE_QUANTITY_TYPE",
+        "id": "Q50-42"
+      },
+      "dotnetBefore": {
+        "id": "Q50-42",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-42",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 43,
+      "case": "Q50-43",
+      "hypothesis": "ElectricPotential cast accepts voltage dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-43",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-43",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-43",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 44,
+      "case": "Q50-44",
+      "hypothesis": "ElectricResistance cast rejects voltage dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "INCOMPATIBLE_QUANTITY_TYPE",
+        "id": "Q50-44"
+      },
+      "dotnetBefore": {
+        "id": "Q50-44",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "dotnetAfter": {
+        "id": "Q50-44",
+        "error": "INCOMPATIBLE_QUANTITY_TYPE"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 45,
+      "case": "Q50-45",
+      "hypothesis": "ElectricResistance cast accepts resistance dimensions",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 5.0,
+        "id": "Q50-45",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-45",
+        "result": 5
+      },
+      "dotnetAfter": {
+        "id": "Q50-45",
+        "result": 5
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 46,
+      "case": "Q50-46",
+      "hypothesis": "Quantity division by a zero linear operand fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-46"
+      },
+      "dotnetBefore": {
+        "id": "Q50-46",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-46",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 47,
+      "case": "Q50-47",
+      "hypothesis": "Scalar division by zero fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-47"
+      },
+      "dotnetBefore": {
+        "id": "Q50-47",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-47",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 48,
+      "case": "Q50-48",
+      "hypothesis": "Inverse of zero fails",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-48"
+      },
+      "dotnetBefore": {
+        "id": "Q50-48",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-48",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 49,
+      "case": "Q50-49",
+      "hypothesis": "Zero relative Celsius divisor has zero coherent magnitude",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "error": "DIVIDE_BY_ZERO",
+        "id": "Q50-49"
+      },
+      "dotnetBefore": {
+        "id": "Q50-49",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "dotnetAfter": {
+        "id": "Q50-49",
+        "error": "DIVIDE_BY_ZERO"
+      },
+      "originalMismatch": false
+    },
+    {
+      "iteration": 50,
+      "case": "Q50-50",
+      "hypothesis": "Zero absolute Celsius divisor is not zero kelvin",
+      "source": "AbstractQuantity.asType; DefaultNumberSystem.divide; ScaleHelper.toAbsoluteLinear",
+      "status": "BEHAVIOR_MATCHED",
+      "java": {
+        "result": 0.03660992128866923,
+        "id": "Q50-50",
+        "absoluteTolerance": 1e-10
+      },
+      "dotnetBefore": {
+        "id": "Q50-50",
+        "result": 0.03660992128866923
+      },
+      "dotnetAfter": {
+        "id": "Q50-50",
+        "result": 0.03660992128866923
+      },
+      "originalMismatch": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "testsPassed": 431,
+      "differentialCases": 68,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "testsPassed": 441,
+      "differentialCases": 78,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "testsPassed": 451,
+      "differentialCases": 88,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "testsPassed": 461,
+      "differentialCases": 98,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "testsPassed": 471,
+      "differentialCases": 108,
+      "mismatches": 0
+    }
+  ],
+  "completedDate": "2026-10-21",
+  "interpretation": "50 numbered source/behavior review iterations, one independently executable scenario per iteration, compiled and tested in five groups of ten. These are not 50 commits or formal TCK closures.",
+  "originalCaseMismatchesCorrected": 22,
+  "fixtureSha256": "2485acc0987a789c0962c70cb14eecf6800fd2a9d5b214c7c7be31a6a1217ed1",
+  "upstreamPins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "notes": [
+    "Checkpoint 20 initially exposed an obsolete display-value expectation in I33_MultiplyElectrical; it now checks display value 1 and converted value 1000 V. Core physical behavior is retained.",
+    "Iterations 41-50 required new fixture cast/error instrumentation but no production correction. Their before/after results use the same production revision with that instrumentation.",
+    "BEHAVIOR_MATCHED describes only the recorded case, not complete API or Number semantics. No TCK assertions are promoted to VERIFIED."
+  ],
+  "tckSummary": {
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "quantityTckMethods": [
+    "testQuantityCastAsType",
+    "testQuantityEquals",
+    "testQuantityGetScale",
+    "testQuantityGetUnit",
+    "testQuantityGetValue",
+    "testQuantityHashCode",
+    "testQuantityIsComparable",
+    "testQuantityIsEquivalentTo",
+    "testQuantityOp0Inverse",
+    "testQuantityOp0To",
+    "testQuantityOp1Add",
+    "testQuantityOp1DivideByNumber",
+    "testQuantityOp1MultiplyByNumber",
+    "testQuantityOp1Subtract",
+    "testQuantityOp2Divide",
+    "testQuantityOp2Multiply"
+  ],
+  "ciEvidence": {
+    "implementationCommit": "ba3f53452906cc1e3fb9ce8753544b16c387872a",
+    "dotnet": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054395",
+    "java": "https://github.com/jeffadickson/SharpUnits/actions/runs/39614054406",
+    "windows": "PASS",
+    "ubuntu": "PASS",
+    "pinnedJavaAndDifferential": "PASS"
+  }
+}

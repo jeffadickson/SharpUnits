@@ -1,0 +1,222 @@
+{
+  "cases": [
+    {
+      "id": "UF-AFFINE-001",
+      "actions": [],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "67DE969615367BA7040A0F5AEBD67C9D12503E7AE77D03C705FAE141606DCAC8",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-002",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "degF",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FCF6AD7B971B4592D21F260D0490B2C49CF4366FB1E6C55095E599CF85C41F24",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-003",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "FAHRENHEIT",
+          "name": "degreesF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "14AABAFC6FC6619984452868FFF28FBBCAC00182D89533DEADCE6EA993B26BA6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-004",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "FAHRENHEIT",
+          "name": null
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D947A67D00B87220895CABB148CE7C951F2E57202D774FAE50D40FE7B59E25FD",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-005",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "KELVIN",
+          "name": "kelvins"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": false,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3F555DB9E7059881CA5701F64B70028D4E519B7A3BE064B494C47BFD9F8A38D9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-006",
+      "actions": [],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CB8CB6AEF560752FF71BA0A36F6953412B4404393F1618428DE1CE610D8CE863",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-007",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "degF",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1245B0DC8545721CF8FA1D586664378D799E485E3A724C99A10F0A4A2C5194C5",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-008",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "FAHRENHEIT",
+          "name": "degreesF"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4C1D451FE181B74DFDC625F897FA12AC505C78F765E95706C566EF16968C512E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-009",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "FAHRENHEIT",
+          "name": "degF"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "FAHRENHEIT",
+          "name": null
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DE53567C54160B37B9295A5B3A16854387E3818791144C327F05B5C5E8A3DF53",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "id": "UF-AFFINE-010",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "KELVIN",
+          "name": "kelvins"
+        }
+      ],
+      "operation": "unitFormat",
+      "ascii": true,
+      "kind": "format",
+      "unit": "FAHRENHEIT",
+      "expected": "((K*5)/9)\u002B459.67",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6021A1AE6542F4F62D2E0D5DC367A6B072A95B063256124F63901D0BFD72FD51",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    }
+  ]
+}

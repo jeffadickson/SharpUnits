@@ -22,3 +22,7 @@ Fifty local iterations produced a Java-inspired `JavaQuantityAdapter`, 16 assert
 - The Java TCK's 16 assertions primarily check method availability through reflection, not these 34 behavioral scenarios.
 
 No official TCK assertion is marked `VERIFIED` by this work. The .NET CI matrix now targets Windows and Ubuntu, not macOS.
+
+## Subsequent pinned review
+
+The [assertion review](quantity-interface-review.md) supersedes the provisional arithmetic assumptions above. Real Indriya quantities exposed 12 mismatches, now corrected and covered by 25 shared quantity cases. The [execution record](evidence/quantity-2026-10-20.md) distinguishes these results from formal assertion closure.

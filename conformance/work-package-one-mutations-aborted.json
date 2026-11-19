@@ -1,0 +1,8 @@
+{
+  "result": "ABORTED_INFRASTRUCTURE_FAILURE",
+  "reason": "Repeated closed-stream retries, an untested mutant, and a 90-second VSTest console connection failure. Owned Stryker process tree was stopped; no completed score is claimed.",
+  "selectedMutants": 945,
+  "uncoveredAtDiscovery": 22,
+  "logSha256": "A3A6EADEBA597F09818EFAC9359844EEFB622F0C0595D8CDF52871156AFA5852",
+  "completedScore": null
+}

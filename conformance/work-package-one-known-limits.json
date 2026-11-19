@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "action": "hashEqual",
+      "left": {
+        "denominator": "3",
+        "kind": "rational",
+        "numerator": "1"
+      },
+      "right": {
+        "denominator": "30000000000000000000000000000000000000000",
+        "kind": "rational",
+        "numerator": "10000000000000000000000000000000000000001"
+      },
+      "id": "CORE-LIMIT-RATIONAL-HASH",
+      "operation": "core",
+      "domain": "number",
+      "java": false,
+      "dotnet": true,
+      "disposition": "INTENTIONAL_CLR_HASH_CONSISTENCY",
+      "rationale": "Pinned Java RationalNumber equality uses decimal128 projections while its hash uses exact numerator/denominator. CLR equality follows the pinned equality projection and CLR hashes remain consistent with that equality. Hash values are not Java interoperability identifiers."
+    }
+  ]
+}

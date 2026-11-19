@@ -1,0 +1,409 @@
+{
+  "date": "2026-10-27",
+  "baselineRevision": "85b1db74b62dd57e5ee4185a224013187f8e04d1",
+  "testedSourceSha256": {
+    "src/SharpUnits/JavaUnitTextFormat.cs": "7CB852C53D08B9AA224789916DCBCDEA76A2F16653ADF3FCDF6780C889011B79",
+    "src/SharpUnits/QuantityTextFormat.cs": "4D0528C9D67BCFBAF99F1B0798B040657AD4F2FB78903B053949544E15EBB263",
+    "tests/SharpUnits.Tests/AffineUnitFormatTests.cs": "60876B8F0170E8C473F77168314AD59A8800BCE3C24D62FC2F112660D76E0C43",
+    "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs": "A982A0A60FCCC4AB838B6D5C04382FBCC67C637EA6592897E8B9AC8FA75A344A",
+    "requirements/unit-format-state.sdoc": "F5C4B3DA46C5956B7C7B6F8585DA1F4DFBFD6D8A4E0037F746F737038A1F29F9",
+    "conformance/unitformat-affine-cases.json": "C117968D7F374C7DE88E9AF32D9EBB87F753537AFDF55B7425DEDE3638C975C0",
+    "tools/Invoke-AffineFormatReference.ps1": "0908D8443F4D99AB4415C5477C196B625CE8EA28B31C62C83A709DAB43C6143D",
+    "tools/Invoke-AffineFormatMutations.ps1": "65E82AB1D60D6DDDA63D37044584F41090A359EDD6F0A15F2705A417C228AEB1",
+    "tools/stryker-affine.json": "06C425C3535E6D5B1E18DD582163C2E7DF378E849D1A724C894D35B2488950F9"
+  },
+  "environment": {
+    "dotnetSdk": "10.0.402",
+    "os": "Windows",
+    "java": "Microsoft OpenJDK 17.0.20.1+1",
+    "stryker": "5.0.0"
+  },
+  "requirement": "JP-UF-FAHRENHEIT",
+  "dotnetCounters": {
+    "total": 1312,
+    "executed": 1312,
+    "passed": 1312,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "newJavaObservations": 10,
+  "newDifferentialMismatches": 0,
+  "beforeFixFailingFixtures": 8,
+  "pinnedJavaTck": {
+    "tests": 112,
+    "skipped": 0,
+    "errors": 0,
+    "tckCommit": "96da910db2a9aca61580a14125dde94b5f1c0285",
+    "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+    "failures": 0
+  },
+  "property": {
+    "framework": "FsCheck.Xunit 3.2.0",
+    "fuzzLimitation": "No new general parser fuzz campaign; existing corpus and robustness tests run in full suite",
+    "cases": 300,
+    "domain": "bounded nearby Fahrenheit scales/offsets",
+    "malformed": "symbol/dimension/converter spoof and removed alias",
+    "replay": "385,617"
+  },
+  "mutation": {
+    "reportSha256": "00D6B6C819BEACA917D3566D9832A9AE7677CD9B1EE363D0C32D2BADAA447B78",
+    "tool": "Stryker.NET 5.0.0",
+    "mutants": [
+      {
+        "id": "2085",
+        "mutatorName": "Negate expression",
+        "replacement": "!(IsStandardFahrenheit(unit))",
+        "location": {
+          "start": {
+            "line": 145,
+            "column": 12
+          },
+          "end": {
+            "line": 145,
+            "column": 38
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "92e35f3d-aeca-a536-84f6-43a7e724a60d",
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7",
+          "a764da74-ad20-51b6-7917-bfde927e339d",
+          "288d2a0c-d7d8-4233-9cc4-779ba9c46aeb",
+          "37ab73c7-bb51-b623-20eb-505994deaf46",
+          "a4645926-c838-6303-7646-3bfa5c2e8a8d"
+        ]
+      },
+      {
+        "id": "2086",
+        "mutatorName": "String mutation",
+        "replacement": "\"\"",
+        "location": {
+          "start": {
+            "line": 145,
+            "column": 46
+          },
+          "end": {
+            "line": 145,
+            "column": 64
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7",
+          "37ab73c7-bb51-b623-20eb-505994deaf46",
+          "d614fb19-5571-3ae2-c979-928781993b9a",
+          "f8cd79bc-7fdd-b1d0-3728-86785b442856",
+          "14dff5e3-6594-a815-0c92-2302e5b6d195",
+          "c02231b7-399c-513e-f2dd-a6ff33a61be9",
+          "1ed88a28-1689-be7b-0189-bd25ed6d474a",
+          "909e7b54-2282-852b-da29-8d0480c5744d",
+          "0fb7979f-4298-ac3b-e998-cbf2dd833458"
+        ]
+      },
+      {
+        "id": "2136",
+        "mutatorName": "Logical mutation",
+        "replacement": "unit.Symbol==\"°F\"\n        &&unit.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)\n        &&unit.Converter==UnitConversion.Fahrenheit||unit.ExactLinearScale is null",
+        "location": {
+          "start": {
+            "line": 194,
+            "column": 68
+          },
+          "end": {
+            "line": 196,
+            "column": 83
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "92e35f3d-aeca-a536-84f6-43a7e724a60d",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f"
+        ]
+      },
+      {
+        "id": "2137",
+        "mutatorName": "Logical mutation",
+        "replacement": "unit.Symbol==\"°F\"\n        &&unit.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)\n        ||unit.Converter==UnitConversion.Fahrenheit",
+        "location": {
+          "start": {
+            "line": 194,
+            "column": 68
+          },
+          "end": {
+            "line": 196,
+            "column": 52
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "92e35f3d-aeca-a536-84f6-43a7e724a60d",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f"
+        ]
+      },
+      {
+        "id": "2138",
+        "mutatorName": "Logical mutation",
+        "replacement": "unit.Symbol==\"°F\"\n        ||unit.RationalDimension==new RationalDimension(0,0,0,0,1,0,0)",
+        "location": {
+          "start": {
+            "line": 194,
+            "column": 68
+          },
+          "end": {
+            "line": 195,
+            "column": 71
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "7b9497f0-f400-48da-40e4-5bb392ac020f"
+        ]
+      },
+      {
+        "id": "2139",
+        "mutatorName": "Equality mutation",
+        "replacement": "unit.Symbol!=\"°F\"",
+        "location": {
+          "start": {
+            "line": 194,
+            "column": 68
+          },
+          "end": {
+            "line": 194,
+            "column": 85
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7"
+        ]
+      },
+      {
+        "id": "2140",
+        "mutatorName": "String mutation",
+        "replacement": "\"\"",
+        "location": {
+          "start": {
+            "line": 194,
+            "column": 81
+          },
+          "end": {
+            "line": 194,
+            "column": 85
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7"
+        ]
+      },
+      {
+        "id": "2141",
+        "mutatorName": "Equality mutation",
+        "replacement": "unit.RationalDimension!=new RationalDimension(0,0,0,0,1,0,0)",
+        "location": {
+          "start": {
+            "line": 195,
+            "column": 11
+          },
+          "end": {
+            "line": 195,
+            "column": 71
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7",
+          "37ab73c7-bb51-b623-20eb-505994deaf46",
+          "d614fb19-5571-3ae2-c979-928781993b9a",
+          "f8cd79bc-7fdd-b1d0-3728-86785b442856",
+          "14dff5e3-6594-a815-0c92-2302e5b6d195",
+          "c02231b7-399c-513e-f2dd-a6ff33a61be9",
+          "1ed88a28-1689-be7b-0189-bd25ed6d474a",
+          "909e7b54-2282-852b-da29-8d0480c5744d",
+          "0fb7979f-4298-ac3b-e998-cbf2dd833458"
+        ]
+      },
+      {
+        "id": "2142",
+        "mutatorName": "Equality mutation",
+        "replacement": "unit.Converter!=UnitConversion.Fahrenheit",
+        "location": {
+          "start": {
+            "line": 196,
+            "column": 11
+          },
+          "end": {
+            "line": 196,
+            "column": 52
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "92e35f3d-aeca-a536-84f6-43a7e724a60d",
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "7b9497f0-f400-48da-40e4-5bb392ac020f"
+        ]
+      },
+      {
+        "id": "2143",
+        "mutatorName": "Equality mutation",
+        "replacement": "unit.ExactLinearScale is not null",
+        "location": {
+          "start": {
+            "line": 196,
+            "column": 54
+          },
+          "end": {
+            "line": 196,
+            "column": 83
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765",
+          "bbb5d428-20ac-2469-e47d-502f92773dc7",
+          "37ab73c7-bb51-b623-20eb-505994deaf46",
+          "d614fb19-5571-3ae2-c979-928781993b9a",
+          "f8cd79bc-7fdd-b1d0-3728-86785b442856",
+          "14dff5e3-6594-a815-0c92-2302e5b6d195",
+          "c02231b7-399c-513e-f2dd-a6ff33a61be9",
+          "1ed88a28-1689-be7b-0189-bd25ed6d474a",
+          "909e7b54-2282-852b-da29-8d0480c5744d",
+          "0fb7979f-4298-ac3b-e998-cbf2dd833458"
+        ]
+      },
+      {
+        "id": "2171",
+        "mutatorName": "Negate expression",
+        "replacement": "!(IsStandardFahrenheit(unit))",
+        "location": {
+          "start": {
+            "line": 218,
+            "column": 16
+          },
+          "end": {
+            "line": 218,
+            "column": 42
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765"
+        ]
+      },
+      {
+        "id": "2173",
+        "mutatorName": "Statement mutation",
+        "replacement": ";",
+        "location": {
+          "start": {
+            "line": 218,
+            "column": 68
+          },
+          "end": {
+            "line": 218,
+            "column": 77
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765"
+        ]
+      },
+      {
+        "id": "2260",
+        "mutatorName": "Negate expression",
+        "replacement": "!(IsStandardFahrenheit(unit))",
+        "location": {
+          "start": {
+            "line": 255,
+            "column": 16
+          },
+          "end": {
+            "line": 255,
+            "column": 42
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765"
+        ]
+      },
+      {
+        "id": "2262",
+        "mutatorName": "Statement mutation",
+        "replacement": ";",
+        "location": {
+          "start": {
+            "line": 255,
+            "column": 68
+          },
+          "end": {
+            "line": 255,
+            "column": 77
+          }
+        },
+        "status": "Killed",
+        "killedBy": [
+          "3f74bbb6-96b5-2706-d6f4-6ee8fa02a765"
+        ]
+      }
+    ],
+    "scope": "four changed Fahrenheit implementation spans",
+    "survived": 0,
+    "limitation": "Full library mutants outside selected spans are ignored or compile errors and excluded from this score. Initial line-index configuration selected none and is not counted.",
+    "timeout": 0,
+    "killed": 14,
+    "noCoverage": 0
+  },
+  "coverage": {
+    "linesCovered": 1628,
+    "linesValid": 1727,
+    "branchesCovered": 1381,
+    "branchesValid": 1646
+  },
+  "strictdoc": {
+    "records": 375,
+    "documents": 7,
+    "result": "PASS"
+  },
+  "formalClosures": 0,
+  "ledger": {
+    "verified": 0,
+    "gap": 14,
+    "partial": 49,
+    "implementedUnverified": 50
+  },
+  "ci": {
+    "remoteRunsDispatched": 0,
+    "dotnet": "disabled_manually",
+    "java": "disabled_manually"
+  },
+  "commands": [
+    "dotnet test tests/SharpUnits.Tests -c Release --no-restore --collect:\"XPlat Code Coverage\" --logger \"trx;LogFileName=affine-final.trx\" --results-directory ../affine-format-final-source-coverage",
+    "./tools/Invoke-AffineFormatReference.ps1",
+    "../tools-runtime/stryker/dotnet-stryker.exe -f tools/stryker-affine.json --skip-version-check -O ../affine-stryker-output-final",
+    "../tools-runtime/python/python.exe -X utf8 tools/run_pinned_tck.py -t ../toolchains.xml -s ../maven-settings.xml",
+    "./tools/Export-Requirements.ps1 -StrictDocCommand ../tools-runtime/strictdoc/bin/strictdoc.exe -OutputDirectory ../affine-format-strictdoc",
+    "../tools-runtime/python/python.exe -m unittest discover -s tools -p test_compare_java_dotnet.py"
+  ],
+  "logSha256": {
+    "../affine-format-before.log": "561FA9B22BEAC9F4308DA33E25AA1DD498C1FD22167848006F81D47D5E77C625",
+    "../affine-format-final-source.log": "C0AD9C880299E5CE40422D7845781AF6CCC4609FC3B0114A219B77867E527100",
+    "../affine-format-reference.log": "6FE8DDCF51FA0B75600140CFA4556D1E1A26F09F10B1F1FD482EFF6F790D4D08",
+    "../affine-format-tck.log": "CCE84BC57101C3AF353E136A180D3CDEE77FE97E6ED4C050865A2E80B26A8A27",
+    "../affine-stryker-final.log": "F4E9B0D271766E0976569D09326B53832E8751323E8AF0F65592363D173F25FE",
+    "../affine-format-comparator.log": "B57868ED0F7D72A858D59D4A283CBB6A37FBDC9CE1FFB6C01BC6FE67374DE457",
+    "../affine-format-output/java.jsonl": "2A60C2162C95BF9996C931FED913C43470FC95CDC23897E75DCEF0FCC8C9A0A7",
+    "../affine-format-output/dotnet.jsonl": "FBEE20510E0EA355563DE0F60FA4990DD58B1E4E22E69667D9AFED9FAC6EF9B0"
+  }
+}

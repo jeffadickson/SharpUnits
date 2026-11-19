@@ -1,0 +1,11 @@
+[run]
+branch = true
+patch = subprocess
+include =
+    */tools/verification_contract.py
+    */tools/compare_java_dotnet.py
+    */tools/check_fixture_expectations.py
+    */tools/validate_tck_ledger.py
+    */tools/qualification_evidence.py
+[report]
+show_missing = true

@@ -4,6 +4,15 @@ namespace SharpUnits;
 public sealed class UnitRegistry
 {
  private readonly ConcurrentDictionary<string,UnitDefinition> units=new(StringComparer.Ordinal);
+ // Internal formatter snapshots retain the original unit object under each alias;
+ // alias replacement must not rename a unit or change public collision semantics.
+ internal KeyValuePair<string,UnitDefinition>[] Snapshot()=>units.ToArray();
+ internal static UnitRegistry FromAliases(IEnumerable<KeyValuePair<string,UnitDefinition>> aliases)
+ {
+  var result=new UnitRegistry();
+  foreach(var pair in aliases)result.units[pair.Key]=pair.Value;
+  return result;
+ }
  /// <summary>Registers a symbol; rejects collisions.</summary>
  public bool Register(UnitDefinition unit)
  {

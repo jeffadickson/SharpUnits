@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "implementationCommit": "94e12b42b431e0457a3e5807e6425d3b94c692e8",
+  "canonicalTextSha256": {
+    "conformance/net11-migration-evidence.json": "CB2D5DCCAD9591EAB43A8B0AE3CEEB2385FD5258E25569AF1F05EB02884E2225",
+    "conformance/net11-review.md": "CA958E159D597F8AF56555FA304A740859B22DFBD29F5873A51B682E48B195D7",
+    "conformance/verification-reference-lock.json": "126B6918577707830D34A2AA661275871149E2BE77CFB1A66D8AC620C836F844",
+    "conformance/completion-work-packages.json": "508A98A54DC389AE0D6B68FD3716C56E3B1CB7E9CB27E30151666C39222B41E0"
+  },
+  "testsPassed": 3240,
+  "differentialCases": 2670,
+  "formalTckClosures": 0,
+  "mutation": "BLOCKED_COMPILER; zero qualified outcomes",
+  "ci": "Both workflows disabled_manually; no dispatch"
+}

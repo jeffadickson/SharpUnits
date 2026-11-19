@@ -1,0 +1,186 @@
+using System.Collections.Concurrent;
+using System.Collections.ObjectModel;
+
+namespace SharpUnits;
+
+/// <summary>A named entry in the supported pinned-Indriya system catalog.</summary>
+/// <param name="Field">Upstream Units constant identifier.</param>
+/// <param name="Name">Case-sensitive upstream human-readable name.</param>
+/// <param name="Unit">Immutable unit definition, including its display label.</param>
+public sealed record JavaUnitEntry(string Field,string Name,UnitDefinition Unit);
+
+/// <summary>Immutable built-in system of units with separate text and quantity-type lookups.</summary>
+/// <remarks>Quantity identifiers are Java simple type names, not CLR type identities.
+/// The native standard registry is deliberately independent of this catalog.</remarks>
+public sealed class JavaUnitSystem
+{
+    // @relation(JP-020, scope=file)
+    internal static JavaUnitSystem Default { get; }=new();
+    private readonly ReadOnlyCollection<JavaUnitEntry> entries;
+    private readonly IReadOnlyDictionary<string,UnitDefinition> types;
+
+    private JavaUnitSystem()
+    {
+        entries=Array.AsReadOnly(JavaUnitCatalogData.Entries());
+        var labels=entries.ToDictionary(entry=>entry.Unit.Symbol,entry=>entry.Unit,StringComparer.Ordinal);
+        types=JavaUnitCatalogData.Types().ToDictionary(pair=>pair.Key,pair=>labels[pair.Value],StringComparer.Ordinal);
+    }
+
+    /// <summary>Gets the exact upstream system name, used for case-sensitive discovery.</summary>
+    public string Name=>"Units";
+    /// <summary>Gets immutable named unit entries; caller mutation cannot affect services.</summary>
+    public IReadOnlyList<JavaUnitEntry> Entries=>entries;
+    /// <summary>Gets an immutable snapshot of all units in this system.</summary>
+    public IReadOnlyList<UnitDefinition> Units=>Array.AsReadOnly(entries.Select(entry=>entry.Unit).ToArray());
+    /// <summary>Looks up current shared-default formatted text, returning null when absent.</summary>
+    /// <remarks>Catalog metadata remains immutable, but label changes affect text lookup as in pinned Java.</remarks>
+    public UnitDefinition? GetUnit(string text)
+    {
+        ArgumentNullException.ThrowIfNull(text);
+        var format=JavaServiceProvider.Current.FormatService.GetUnitFormat();
+        return entries.Select(entry=>entry.Unit).FirstOrDefault(unit=>string.Equals(format.Format(unit),text,StringComparison.Ordinal));
+    }
+    /// <summary>Looks up a Java quantity-type identifier; null and unknown types return null.</summary>
+    /// <remarks>Matches the pinned system's HashMap lookup, unlike its null-rejecting text lookup.</remarks>
+    public UnitDefinition? GetUnitForQuantity(string? quantityType)
+    {
+        return quantityType is null?null:types.GetValueOrDefault(quantityType);
+    }
+    /// <summary>Returns a snapshot filtered by dimension, preserving distinct alternate units.</summary>
+    public IReadOnlyList<UnitDefinition> GetUnits(RationalDimension dimension)=>
+        Array.AsReadOnly(entries.Where(entry=>entry.Unit.RationalDimension==dimension).Select(entry=>entry.Unit).ToArray());
+    /// <summary>Builds an isolated parser/factory registry from this system's definitions.</summary>
+    public UnitRegistry CreateRegistry()
+    {
+        var registry=new UnitRegistry();
+        foreach(var entry in entries)registry.Register(entry.Unit);
+        return registry;
+    }
+}
+
+/// <summary>Metadata for one exact decimal or binary prefix.</summary>
+/// <param name="Symbol">Case-sensitive prefix symbol.</param>
+/// <param name="Base">Radix of the prefix factor: 10 for metric, 1024 for pinned binary prefixes.</param>
+/// <param name="Exponent">Power of the radix; no early floating-point evaluation is required.</param>
+public sealed record JavaPrefix(string Symbol,int Base,int Exponent)
+{
+    private static readonly string[] binaryNames={"KIBI","MEBI","GIBI","TEBI","PEBI","EXBI","ZEBI","YOBI"};
+    /// <summary>Returns the pinned standard enum name, or the explicit symbol for a custom prefix.</summary>
+    public string GetName()=>Base==1024&&Exponent is >=1 and <=8&&Symbol==new[]{"Ki","Mi","Gi","Ti","Pi","Ei","Zi","Yi"}[Exponent-1]?binaryNames[Exponent-1]
+        :Base==10?SiPrefixCatalog.All.FirstOrDefault(prefix=>prefix.Symbol==Symbol&&prefix.Exponent==Exponent)?.GetName()??Symbol:Symbol;
+    /// <summary>Returns the integer radix rather than the powered factor.</summary>
+    public JavaNumber GetValue()=>JavaNumber.Integer(Base);
+    /// <summary>Gets the exact powered factor within the core integer-radix prefix budget.</summary>
+    public JavaNumber ExactValue=>JavaUnitConverterAdapter.ForPrefix(Base,Exponent).AffineCoefficients().Scale;
+}
+
+/// <summary>Built-in system discovery and immutable prefix catalogs.</summary>
+public sealed class JavaSystemOfUnitsService
+{
+    private static readonly IReadOnlyList<JavaUnitSystem> systems=Array.AsReadOnly(new[]{JavaUnitSystem.Default});
+    private static readonly IReadOnlyList<JavaPrefix> metric=Array.AsReadOnly(SiPrefixes.Definitions
+        .Select(pair=>new JavaPrefix(pair.Key,10,pair.Value)).ToArray());
+    private static readonly IReadOnlyList<JavaPrefix> binary=Array.AsReadOnly(new[]{"Ki","Mi","Gi","Ti","Pi","Ei","Zi","Yi"}
+        .Select((symbol,index)=>new JavaPrefix(symbol,1024,index+1)).ToArray());
+    /// <summary>Gets the built-in default system.</summary>
+    public JavaUnitSystem GetSystemOfUnits()=>JavaUnitSystem.Default;
+    /// <summary>Looks up an exact system name; unknown names return null.</summary>
+    public JavaUnitSystem? GetSystemOfUnits(string name)
+    {
+        ArgumentNullException.ThrowIfNull(name);
+        return name==JavaUnitSystem.Default.Name?JavaUnitSystem.Default:null;
+    }
+    /// <summary>Gets an immutable snapshot of built-in systems.</summary>
+    public IReadOnlyList<JavaUnitSystem> AvailableSystems=>systems;
+    /// <summary>Gets the supported SI metric prefixes.</summary>
+    public IReadOnlyList<JavaPrefix> MetricPrefixes=>metric;
+    /// <summary>Gets the eight binary prefixes in the pinned Java API.</summary>
+    public IReadOnlyList<JavaPrefix> BinaryPrefixes=>binary;
+}
+
+/// <summary>Discovers bounded SIMPLE default and ASCII unit-format profiles.</summary>
+/// <remarks>Indriya also registers EBNF, LOCAL and NUMBERDELIMITER formats.
+/// Unsupported names return null and are not advertised as implemented.</remarks>
+public sealed class JavaFormatService
+{
+    private readonly QuantityTextFormat quantities;
+    private readonly JavaUnitTextFormat units;
+    private readonly JavaUnitTextFormat asciiUnits;
+    private static readonly IReadOnlyList<string> quantityNames=Array.AsReadOnly(new[]{"SIMPLE"});
+    private static readonly IReadOnlyList<string> unitNames=Array.AsReadOnly(new[]{"SIMPLE_DEFAULT","SIMPLE_ASCII"});
+    /// <summary>Creates isolated services with a shared default label database.</summary>
+    public JavaFormatService(UnitRegistry registry){units=new(registry);asciiUnits=new(registry,JavaUnitFormatFlavor.Ascii,units);quantities=new(registry,units);}
+    /// <summary>Gets the supported default quantity formatter.</summary>
+    public QuantityTextFormat GetQuantityFormat()=>quantities;
+    /// <summary>Looks up a supported quantity format name using Java's current-locale case folding.</summary>
+    /// <remarks>As in pinned Indriya, lowercase simple is not recognized under Turkish casing.</remarks>
+    public QuantityTextFormat? GetQuantityFormat(string name)
+    {
+        ArgumentNullException.ThrowIfNull(name);
+        return name.ToUpper(System.Globalization.CultureInfo.CurrentCulture)=="SIMPLE"?quantities:null;
+    }
+    /// <summary>Gets implemented quantity format names, excluding unsupported Java families.</summary>
+    public IReadOnlyList<string> QuantityFormatNames=>quantityNames;
+    /// <summary>Gets the supported default unit formatter.</summary>
+    public JavaUnitTextFormat GetUnitFormat()=>units;
+    /// <summary>Looks up SIMPLE_DEFAULT/SIMPLE_ASCII or their DEFAULT/ASCII aliases.</summary>
+    public JavaUnitTextFormat? GetUnitFormat(string name)
+    {
+        ArgumentNullException.ThrowIfNull(name);
+        var key=name.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
+        return key switch {"SIMPLE_DEFAULT" or "DEFAULT"=>units,"SIMPLE_ASCII" or "ASCII"=>asciiUnits,_=>null};
+    }
+    /// <summary>Looks up a name and optional variant using Java's underscore convention.</summary>
+    public JavaUnitTextFormat? GetUnitFormat(string name,string? variant)
+    {
+        ArgumentNullException.ThrowIfNull(name);
+        return GetUnitFormat(string.IsNullOrEmpty(variant)?name:name+"_"+variant);
+    }
+    /// <summary>Gets implemented unit format names.</summary>
+    public IReadOnlyList<string> UnitFormatNames=>unitNames;
+}
+
+/// <summary>Double-valued quantity factory with separate Java type metadata.</summary>
+/// <remarks>Java enforces generic type admission at compile time. This CLR identifier-based
+/// adaptation does not add a runtime dimension guard that Java's raw factory does not have.</remarks>
+public sealed class JavaTypedQuantityFactory
+{
+    /// <summary>Gets the case-sensitive Java quantity-type identifier.</summary>
+    public string QuantityType { get; }
+    /// <summary>Gets the mapped coherent unit, or null for an unmapped/custom type.</summary>
+    public UnitDefinition? SystemUnit { get; }
+    internal JavaTypedQuantityFactory(string type,UnitDefinition? systemUnit){QuantityType=type;SystemUnit=systemUnit;}
+    /// <summary>Creates a retained display quantity without converting it to the system unit.</summary>
+    public JavaQuantityAdapter Create(double value,UnitDefinition unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)=>new(value,unit,scale);
+    /// <summary>Creates a precision-preserving quantity retaining a structural Java unit.</summary>
+    public JavaNumberQuantity Create(JavaNumber value,JavaUnit unit,JavaQuantityScale scale=JavaQuantityScale.Absolute)=>new(value,unit,scale);
+}
+
+/// <summary>Discovers the built-in Java-inspired provider and its supported services.</summary>
+/// <remarks>This supplies built-in discovery only. Java ServiceLoader, external assemblies,
+/// provider replacement and Java Class/generic identity remain outside this profile.</remarks>
+public sealed class JavaServiceProvider
+{
+    // @relation(JP-021, scope=file)
+    private static readonly JavaServiceProvider current=new();
+    private static readonly IReadOnlyList<JavaServiceProvider> available=Array.AsReadOnly(new[]{current});
+    private readonly ConcurrentDictionary<string,JavaTypedQuantityFactory> factories=new(StringComparer.Ordinal);
+    private JavaServiceProvider(){SystemOfUnitsService=new();FormatService=new(SystemOfUnitsService.GetSystemOfUnits().CreateRegistry());}
+    /// <summary>Gets the immutable built-in provider list.</summary>
+    public static IReadOnlyList<JavaServiceProvider> Available=>available;
+    /// <summary>Gets the built-in current provider.</summary>
+    public static JavaServiceProvider Current=>current;
+    /// <summary>Gets the priority of the pinned default provider.</summary>
+    public int Priority=>10;
+    /// <summary>Gets the supported format service.</summary>
+    public JavaFormatService FormatService { get; }
+    /// <summary>Gets the supported system-of-units service.</summary>
+    public JavaSystemOfUnitsService SystemOfUnitsService { get; }
+    /// <summary>Gets a cached factory for a Java simple quantity-type identifier.</summary>
+    /// <remarks>Unknown nonempty identifiers represent custom/unmapped types and have no system unit.</remarks>
+    public JavaTypedQuantityFactory GetQuantityFactory(string quantityType)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(quantityType);
+        return factories.GetOrAdd(quantityType,type=>new(type,SystemOfUnitsService.GetSystemOfUnits().GetUnitForQuantity(type)));
+    }
+}

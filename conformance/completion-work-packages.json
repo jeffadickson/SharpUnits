@@ -1,0 +1,918 @@
+{
+  "scope": "Planning ownership, not assertion closure",
+  "ledgerSha256": "5028CA886F330017C23BA89D3CB8B3075398ED75E7FE99CA901F69B166586D41",
+  "date": "2026-11-13",
+  "entries": [
+    {
+      "qualificationOwner": 5,
+      "assertionId": "41-A1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-41-A1",
+      "suite": "FundamentalTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "41-A2",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-41-A2",
+      "suite": "FundamentalTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "41-A3",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-41-A3",
+      "suite": "FundamentalTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "41-A4",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-41-A4",
+      "suite": "FundamentalTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "Setup-1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-Setup-1",
+      "suite": "TCKSetupTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "Setup-2",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-Setup-2",
+      "suite": "TCKSetupTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "46-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-46-A1",
+      "suite": "QuantityFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "46-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-46-A2",
+      "suite": "QuantityFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "46-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-46-A3",
+      "suite": "QuantityFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "46-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-46-A4",
+      "suite": "QuantityFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "46-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-46-A5",
+      "suite": "QuantityFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A1",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A2",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A3",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A4",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A5",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "45-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-45-A6",
+      "suite": "UnitFormatTest",
+      "owner": 2
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A1",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A2",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A3",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A4",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A5",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A6",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A7",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A7",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A8",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A8",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4311-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4311-A1",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4311-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4311-A4",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4311-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4311-A5",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4311-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4311-A6",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4312-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4312-A1",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "4312-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-4312-A2",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A9",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A9",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "431-A10",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-431-A10",
+      "suite": "QuantityInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "44-A1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-44-A1",
+      "suite": "QuantityTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "44-A2",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-44-A2",
+      "suite": "QuantityTypesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "561-A1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-561-A1",
+      "suite": "ObtainingQuantiesTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "561-A2",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-561-A2",
+      "suite": "ObtainingQuantiesTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "561-A3",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-561-A3",
+      "suite": "ObtainingQuantiesTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "561-A4",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-561-A4",
+      "suite": "ObtainingQuantiesTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "551-A1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-551-A1",
+      "suite": "ObtainingUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "552-A1",
+      "currentStatus": "GAP",
+      "requirementId": "TCK-552-A1",
+      "suite": "ObtainingUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "51-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-51-A1",
+      "suite": "QuantityFactoryTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "51-A2",
+      "currentStatus": "VERIFIED",
+      "requirementId": "TCK-51-A2",
+      "suite": "QuantityFactoryTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "53-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-53-A1",
+      "suite": "ServiceProviderTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "53-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-53-A2",
+      "suite": "ServiceProviderTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "53-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-53-A3",
+      "suite": "ServiceProviderTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "53-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-53-A4",
+      "suite": "ServiceProviderTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A01",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A01",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A02",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A02",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A03",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A03",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A04",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A04",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A05",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A05",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A06",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A06",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A07",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A07",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A08",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A08",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A09",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A09",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "54-A10",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-54-A10",
+      "suite": "ServicesTest",
+      "owner": 4
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A1",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A2",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A3",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A4",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A5",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "52-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-52-A6",
+      "suite": "SystemOfUnitsTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A1",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A2",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A3",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A4",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A5",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "424-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-424-A6",
+      "suite": "PrefixInterfaceTest",
+      "owner": 3
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A1",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A2",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A3",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A4",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A5",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A6",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A7",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A7",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A8",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A8",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A9",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A9",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "423-A10",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-423-A10",
+      "suite": "UnitConversionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A1",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A2",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A3",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A4",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A5",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A6",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "425-A7",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-425-A7",
+      "suite": "UnitDimensionTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A1",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A2",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A3",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A4",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A5",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A6",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A7",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A7",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A8",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A8",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "421-A9",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-421-A9",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A1",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A2",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A3",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A4",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A5",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A5",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A6",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A6",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A7",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A7",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A8",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A8",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A9",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A9",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42121-A10",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42121-A10",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42122-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42122-A1",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42122-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42122-A2",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42122-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42122-A3",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42123-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42123-A1",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42124-A1",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42124-A1",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42124-A2",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42124-A2",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42124-A3",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42124-A3",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    },
+    {
+      "qualificationOwner": 5,
+      "assertionId": "42124-A4",
+      "currentStatus": "PARTIAL_BEHAVIORAL_MAPPING",
+      "requirementId": "TCK-42124-A4",
+      "suite": "UnitInterfaceTest",
+      "owner": 1
+    }
+  ],
+  "primaryCounts": {
+    "WP3": 20,
+    "WP1": 60,
+    "WP5": "cross-cutting113",
+    "WP4": 22,
+    "WP2": 11
+  }
+}

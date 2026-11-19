@@ -1,0 +1,159 @@
+{
+  "tool": "Stryker.NET 5.0.0",
+  "reportSha256": "723297B927A073F13F1760040D8B53BB694160FD5B5C9E729CF6DE65072B8B26",
+  "scope": "Eight core library files; excludes Java, tests, automation and factory/projection bridge lines in other files.",
+  "counts": {
+    "Ignored": 1123,
+    "CompileError": 76,
+    "Killed": 1
+  },
+  "files": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "sourceTextSha256": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+      "counts": {
+        "Ignored": 29,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaNumber.cs",
+      "sourceTextSha256": "973CDE45C8FDFCA5DC6A7CE2CAEC32FC3A9E53F47C07B8B41444F12C49FFD015",
+      "counts": {
+        "Ignored": 314,
+        "CompileError": 12
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "sourceTextSha256": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+      "counts": {
+        "Ignored": 71,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnit.cs",
+      "sourceTextSha256": "3C6E3856D620B95411F6CBA00BF0E0454B55D442C21EE78FA4523487AFA71968",
+      "counts": {
+        "CompileError": 34,
+        "Ignored": 379
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "sourceTextSha256": "44808A1BD19E80379DD348D3F64042A38ACA4A90AE11D462C231399587C59459",
+      "counts": {
+        "Ignored": 40,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "sourceTextSha256": "4CDA9CFFE431E4335C71AC96A4B62C40222BC64926AB6D6259C40069CFEE3351",
+      "counts": {
+        "Ignored": 147,
+        "CompileError": 18,
+        "Killed": 1
+      },
+      "outstanding": []
+    },
+    {
+      "file": "SiPrefix.cs",
+      "sourceTextSha256": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+      "counts": {
+        "Ignored": 86,
+        "CompileError": 3
+      },
+      "outstanding": []
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "sourceTextSha256": "92EC53E232A3CE25C9DE8724F72206F6779CC75CC8A551432B635ACE1584843E",
+      "counts": {
+        "Ignored": 57,
+        "CompileError": 3
+      },
+      "outstanding": []
+    }
+  ],
+  "limitations": "Timeouts are reported separately, not counted as demonstrated kills. Surviving/uncovered mutants require review; compile errors/ignored mutants are not execution evidence. Source hashes refer to report UTF-8 source text.",
+  "canonicalTestSourceSha256": {
+    "tests/SharpUnits.Tests/AffineUnitFormatTests.cs": "EE3C3A65C3A5F73DF881BF52A2B8E417ADF42D5C7EECB9998E7D237CC1F4FF1D",
+    "tests/SharpUnits.Tests/BodeFrequencyResponseTests.cs": "4E98C39F5CD8C43DD58060672ECB74385C9C7C88A6F1FF9A3EFC9C71B387D5CB",
+    "tests/SharpUnits.Tests/CalibrationDecisionTests.cs": "730DE7163089C24DAE9FD5ACAC92DA9D60823A3E9CBEDE865C1A899B917BF4BB",
+    "tests/SharpUnits.Tests/ConversionPipelineTests.cs": "3EA010352F4ABC5DC266294DD192B610094EC8649C82BD036B3BD86437EDBDFE",
+    "tests/SharpUnits.Tests/ConversionTests.cs": "96C01B9DA2F6EC88EA90AAE3063972CEBD91143F4E4484831823605A71FAAF10",
+    "tests/SharpUnits.Tests/ConverterCompositionTests.cs": "31EE648FBD9D3B91EFBFE0CA1D8B5776A46CA94EEF15EB3C2445708F4053409B",
+    "tests/SharpUnits.Tests/CoreReferenceFixtureTests.cs": "C4621AB046CA3B22BD01E8263E85ED22CC623BD883883770347D9126AA73E3E8",
+    "tests/SharpUnits.Tests/CoreRobustnessTests.cs": "129D6028E8E9871E2F992B0E930DA6B0EBD3F991469EDD2F4DAA5455AFF120F6",
+    "tests/SharpUnits.Tests/DimensionInferenceTests.cs": "C7E44457B91A2FCE64908CEF1777C8FFEE86D4ACCC483A4B506CDBAA8C0F2610",
+    "tests/SharpUnits.Tests/ElectricalDerivedQuantitiesTests.cs": "421CCC9E897DDE6FBA98A044D875034FF70F9D79644ABF890FC9C83413E363FF",
+    "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs": "355C9E749BB4C478B5BAB830D989A90990F971BFDC03F46ABDB45FA506B660B4",
+    "tests/SharpUnits.Tests/FactoryReferenceFixtureTests.cs": "AD7AEE14E912959333B5E410C3E86D2876B8C26994182EEF5D084B1C6376203D",
+    "tests/SharpUnits.Tests/FormatReferenceFixtureTests.cs": "22AF80FD86A93E6CC670D8F04C6F07EDF96F404B0D239E7FCAF2747B7E16682B",
+    "tests/SharpUnits.Tests/FormattingRobustnessTests.cs": "F9340458F4EE29D2F44B71ABE29E32F41BB2F8ABCC5053B5BB57CEE366642E1A",
+    "tests/SharpUnits.Tests/FormulaKindRulesTests.cs": "B2476E92F2D15AD796F98A667B25F053C148A8AA4E62BEC5D6BC1FEDDEACFA93",
+    "tests/SharpUnits.Tests/FormulaParserTests.cs": "AE9F9892FF0524086CD23794018EE94BA1835289FBAF82A971978EE5CC8295D2",
+    "tests/SharpUnits.Tests/FormulaTypeCheckerTests.cs": "B7D0351DBCE4AC47C105B2E656C0681B8931AAA8D01EE0F950312623DEA4F5C4",
+    "tests/SharpUnits.Tests/FrequencyPhasorTests.cs": "87ED84E87354BA92DA017B1557A44F4F7EDB8189EC14265D5709AD41EE039BC9",
+    "tests/SharpUnits.Tests/InstrumentMeasurementTests.cs": "8FBADCD05075B99A559F9F180AAFDD51630ED8216BE088AA68814F6962F2DCBF",
+    "tests/SharpUnits.Tests/JavaConformanceExpandedTests.cs": "8E2A8C511E352180CC3DB0F059ED4880C602EA6704D9816B132C5644DDCFA542",
+    "tests/SharpUnits.Tests/JavaParityPortTests.cs": "4AB388AFE894486596C60CA54406D77CB288A42768B66B3AED9943E87EC3FDA9",
+    "tests/SharpUnits.Tests/JavaParityThirtyIterationPartOneTests.cs": "187441B5391CD0D9A9E613C822A3827DD974C55F1F063C38BA3AC0D910A9E58F",
+    "tests/SharpUnits.Tests/JavaParityThirtyIterationPartThreeTests.cs": "70A5391C483B26B9C476C607B04C14C973C76A70D0A9ABF77572D05D15277BB2",
+    "tests/SharpUnits.Tests/JavaParityThirtyIterationPartTwoTests.cs": "8A99C97EB7C0964A3FB90B3D8CAB493E7A0F9CB05E97B423C939B2050A604548",
+    "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs": "F32C41339C83BB5ACBBB216D8B3ED129CB68657EA8F248A30A1DD2BDD524A87F",
+    "tests/SharpUnits.Tests/JavaUnitAdapterOverloadTests.cs": "9F8B5F40A939EE615E38FCD5551680B74DFF9B54D465D2633E468C5AD97BAD11",
+    "tests/SharpUnits.Tests/JavaUnitAdapterTests.cs": "096C8BFA7501065DB4E47D7C331854747AC13DB0048E4CF5DEAA16D395826FF4",
+    "tests/SharpUnits.Tests/MutationDebtBoundaryTests.cs": "DFACF5DD234C5AC540E62F0080AC3488A7CBF9B8A2E94F666540B3261A1FA875",
+    "tests/SharpUnits.Tests/MutationDebtChainTests.cs": "CBC1492C5D93DE573DF24DB0FE0DC01EACF200990F5AB9C56E5A07A396AFFD78",
+    "tests/SharpUnits.Tests/MutationDebtHashQualityTests.cs": "AD6A233BCC78171FFEC30A600FF640AB85ECC2416F43A7A05EE4A50120C3A2A3",
+    "tests/SharpUnits.Tests/MutationDebtReferenceTests.cs": "4AFB2D3910596F6DC8EC8A9086452D3E9B84F343644898890E3321C5A47EA9BB",
+    "tests/SharpUnits.Tests/MutationQualificationTests.cs": "CD554CD7F1695F07724F70F76C6CDEE4524C9F4605754683FACEE9C7C262ED60",
+    "tests/SharpUnits.Tests/ParserGapTests.cs": "081FC27086D71A3E5CE2E2B20B428B408B59489D4998A95758D52F9062DB074D",
+    "tests/SharpUnits.Tests/ParserGrammarTests.cs": "585F3AE549BA79E1D26D8FB9B22CEC2CD5E74F08906DFEC9D0E68C01EE159EC9",
+    "tests/SharpUnits.Tests/ParserReferenceFixtureTests.cs": "56878E0ADA65DCD4D05F65672352F37EBBAADAA909314997C583B8AACC49A628",
+    "tests/SharpUnits.Tests/ParserRobustnessTests.cs": "1F8B84086A2305DACE1BDEAB25354480E7D8211BF07F4A9DCA3B344C175608E3",
+    "tests/SharpUnits.Tests/ProcedureValidatorTests.cs": "24C5BC6F6418E9FC9AD758A793FC9A1A39C43F581E3AF1C2286F45C09B314148",
+    "tests/SharpUnits.Tests/ProviderFactoryTests.cs": "952030FF6F62A1EBE6E68CD214716ADBDC4FB96DA1220B63A629A071C0FF20BD",
+    "tests/SharpUnits.Tests/QuantityParityBehaviorTests.cs": "966490CC42D409957BBB44AAB393C1257B59F3A3F76284AD53E039F977BA729C",
+    "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs": "1971F46D99C43169FADFE3F103AA6F99BFB6738CBCD1521B53059D75D57BCEE1",
+    "tests/SharpUnits.Tests/QuantityReferenceFixtureTests.cs": "6CD959805FE9B4950D3C4AF4A5FA0C75ADEC87A5C91BE7541AC6C1167183A0CD",
+    "tests/SharpUnits.Tests/QuantityTextFormatTests.cs": "A2A73EF13E3FD1841A8A523F89D74DED3E394FA3622E1872D90DD9D29C071E02",
+    "tests/SharpUnits.Tests/RationalDimensionTests.cs": "BE8910B7E11AB5F066FB29D03BAD18BC15E91D60D7ECB4EE99A73EE63566D509",
+    "tests/SharpUnits.Tests/RationalIntegrationTests.cs": "E392FE6F6CF991E15B2A06E2C6AD5D10A95E2C99C43B52F8B569BABA317E82D5",
+    "tests/SharpUnits.Tests/RationalQuantityMigrationTests.cs": "978CE7A089C2E22AFC7F4B930EFB4966E35A30C66D1D134E4F9DC626B60A27C3",
+    "tests/SharpUnits.Tests/RationalUnitExpressionTests.cs": "C66CE11D1A6A61158955D1606D06269F2ED04194B15097D1A9B5807D0AD727B1",
+    "tests/SharpUnits.Tests/RegistryTests.cs": "120941F2469E4D1E0860DA07C9BE6836DE4C80A8582E05CAFD8195764B402C73",
+    "tests/SharpUnits.Tests/SemanticQuantityJsonTests.cs": "5E86DE68C157035A0282B30B4870DC59B8DC9ACD2B43BD04DBE398D34E60ADDA",
+    "tests/SharpUnits.Tests/SemanticQuantityTests.cs": "4160CEAD1210D856836C6C1ABCB4F6FD5259124EAE8B7383C80B86823EF38A17",
+    "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs": "59E23FA749CFA197914FA48332CE91010D9ABFB5B06F7D95E6378F2D411BF23E",
+    "tests/SharpUnits.Tests/SharpUnits.Tests.csproj": "B7E1D3176B712912B7BBEF00C424E428973F1251CE640192D8ED934B97BCD639",
+    "tests/SharpUnits.Tests/TckAdditionalBehaviorTests.cs": "EAE613C2B709E6C7C4BC6C3478F96F707C8040D1E9307CA2AA2A18C7C4010324",
+    "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs": "D8B740000EB6B56AD3F71C53B7D753B9F95C2C4C947BCDC74D658B3CD546669A",
+    "tests/SharpUnits.Tests/TckCoreBehaviorTests.cs": "C9A65FF0EAE8C0D0915571D64FDA9963BA44A214B39415BBE5E19CE5A9772EBE",
+    "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs": "823BFDE22271B5D9C2E680A2A702BEF785F81C25262A9AEA12A9704029CA4C95",
+    "tests/SharpUnits.Tests/TckDimensionTests.cs": "E033F06D284478DAC3651EB7407AAA04284388F26931BE65F58A332EF5F5B009",
+    "tests/SharpUnits.Tests/TckPrefixApiSurfaceTests.cs": "1C61A76B27283A882D42236AAC34D09805C0E490B2CE421506C68C8A5B6F68C4",
+    "tests/SharpUnits.Tests/TckPrefixBehaviorTests.cs": "2CB32870BCE63E09EF77036EAEA6FBBCB9FF8E4D30CFA31089C6C97778A67AC1",
+    "tests/SharpUnits.Tests/TckProviderContractTests.cs": "CEA54734465A0A55856846D0E546D9171836E51DFABF14289156287F6405D8FD",
+    "tests/SharpUnits.Tests/TckUnitApiSurfaceTests.cs": "B901519EB4FDC011AA637FCDE77265B5F8B69CADEEE2EAA121778B1AD724AB6C",
+    "tests/SharpUnits.Tests/TckUnitConversionTests.cs": "3DF3968F5675F6F15799C9705CBF6D1C243852274A66B6FCE82F176C0A354DFF",
+    "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs": "111F548BC49E2C4DD7AD7B622EDB2D61C9C5D4BA1923593E09235AA050E89392",
+    "tests/SharpUnits.Tests/TemperatureMeasurementTests.cs": "BB45CE0AB3652F750D725B9ACAF3D4A048A3310EAFBB92EE597831ED88661707",
+    "tests/SharpUnits.Tests/TemperatureQuantityBridgeTests.cs": "DA84BFCD88D5B36D9F7B6FF9AF81AF357222B9953307A4755D6402F4E7482B1C",
+    "tests/SharpUnits.Tests/TemperatureQuantityTests.cs": "4F82DB0E02A787E4B9810B1BBCC11B86DF6E2A0C9EAB420BBD6EDEC933CDFB08",
+    "tests/SharpUnits.Tests/UncertaintyBudgetTests.cs": "3EC1FFB08079F7CD02BB5F5B736A7F6E44AA8913BE10F5F7EC197DCDF689DD5A",
+    "tests/SharpUnits.Tests/UnitExpressionParserTests.cs": "F9FC6687EED8A667E7C61EB2C9366F258F5427DEE5E1A70D915F4492F1846468",
+    "tests/SharpUnits.Tests/UnitExpressionTests.cs": "D7B6A74E98B7CA77602595748133B36D45C8F540DD33ED4A241AF1140B685026",
+    "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs": "A982A0A60FCCC4AB838B6D5C04382FBCC67C637EA6592897E8B9AC8FA75A344A",
+    "tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs": "9AC07A6E1C523733C727F34F7D3A28CF1D92D6D8E79AEAAC4D08B7D42B36355A"
+  },
+  "testSnapshotPolicy": "Hashes identify the actual frozen test-source snapshot; later strengthening requires its own scoped replay. Metadata-only fixture annotations do not change outcomes."
+}

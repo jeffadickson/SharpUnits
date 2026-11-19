@@ -1,0 +1,1988 @@
+{
+  "baselineCommit": "8cbdf09",
+  "policy": "100 scoped obligations, not 100 TCK assertions or formal closures",
+  "reviews": [
+    {
+      "iteration": 1,
+      "requirement": "JP-UF-001",
+      "input": {
+        "gap": "StringBuilder append text",
+        "kind": "builder",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": "start|",
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-001",
+        "requirement": "JP-UF-001",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "start|A",
+      "dotnet": "start|A"
+    },
+    {
+      "iteration": 2,
+      "requirement": "JP-UF-002",
+      "input": {
+        "gap": "StringBuilder destination identity",
+        "kind": "builder",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": true,
+        "ascii": false,
+        "id": "UF100-002",
+        "requirement": "JP-UF-002",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 3,
+      "requirement": "JP-UF-003",
+      "input": {
+        "gap": "TextWriter append text",
+        "kind": "writer",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": "start|",
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-003",
+        "requirement": "JP-UF-003",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "start|A",
+      "dotnet": "start|A"
+    },
+    {
+      "iteration": 4,
+      "requirement": "JP-UF-004",
+      "input": {
+        "gap": "TextWriter destination identity",
+        "kind": "writer",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": true,
+        "ascii": false,
+        "id": "UF100-004",
+        "requirement": "JP-UF-004",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 5,
+      "requirement": "JP-UF-005",
+      "input": {
+        "gap": "Builder observes mutable label",
+        "kind": "builder",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "ampx"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": "\u03A9\u2192",
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-005",
+        "requirement": "JP-UF-005",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "\u03A9\u2192ampx",
+      "dotnet": "\u03A9\u2192ampx"
+    },
+    {
+      "iteration": 6,
+      "requirement": "JP-UF-006",
+      "input": {
+        "gap": "Writer observes mutable label",
+        "kind": "writer",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "ampx"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": "\u03A9\u2192",
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-006",
+        "requirement": "JP-UF-006",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "\u03A9\u2192ampx",
+      "dotnet": "\u03A9\u2192ampx"
+    },
+    {
+      "iteration": 7,
+      "requirement": "JP-UF-007",
+      "input": {
+        "gap": "Label changes formatting",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "ampx"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-007",
+        "requirement": "JP-UF-007",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "ampx",
+      "dotnet": "ampx"
+    },
+    {
+      "iteration": 8,
+      "requirement": "JP-UF-008",
+      "input": {
+        "gap": "Label changes parsing",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "ampx"
+          }
+        ],
+        "unit": "A",
+        "text": "ampx",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-008",
+        "requirement": "JP-UF-008",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 9,
+      "requirement": "JP-UF-009",
+      "input": {
+        "gap": "Relabel changes current display",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "old"
+          },
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "new"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-009",
+        "requirement": "JP-UF-009",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "new",
+      "dotnet": "new"
+    },
+    {
+      "iteration": 10,
+      "requirement": "JP-UF-010",
+      "input": {
+        "gap": "Relabel retains old parse alias",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "old"
+          },
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "new"
+          }
+        ],
+        "unit": "A",
+        "text": "old",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-010",
+        "requirement": "JP-UF-010",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 11,
+      "requirement": "JP-UF-011",
+      "input": {
+        "gap": "Alias admits parse name",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "alias",
+            "unit": "A",
+            "name": "amps"
+          }
+        ],
+        "unit": "A",
+        "text": "amps",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-011",
+        "requirement": "JP-UF-011",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 12,
+      "requirement": "JP-UF-012",
+      "input": {
+        "gap": "Alias does not rename display",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "alias",
+            "unit": "A",
+            "name": "amps"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-012",
+        "requirement": "JP-UF-012",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "iteration": 13,
+      "requirement": "JP-UF-013",
+      "input": {
+        "gap": "Alias rebinding replaces parser owner",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "alias",
+            "unit": "A",
+            "name": "shared"
+          },
+          {
+            "op": "alias",
+            "unit": "V",
+            "name": "shared"
+          }
+        ],
+        "unit": "V",
+        "text": "shared",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-013",
+        "requirement": "JP-UF-013",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 14,
+      "requirement": "JP-UF-014",
+      "input": {
+        "gap": "Label collision replaces parser owner",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "shared"
+          },
+          {
+            "op": "label",
+            "unit": "V",
+            "name": "shared"
+          }
+        ],
+        "unit": "V",
+        "text": "shared",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-014",
+        "requirement": "JP-UF-014",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 15,
+      "requirement": "JP-UF-015",
+      "input": {
+        "gap": "Label collision preserves old owner\u0027s display",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "shared"
+          },
+          {
+            "op": "label",
+            "unit": "V",
+            "name": "shared"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-015",
+        "requirement": "JP-UF-015",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "shared",
+      "dotnet": "shared"
+    },
+    {
+      "iteration": 16,
+      "requirement": "JP-UF-016",
+      "input": {
+        "gap": "Remove label restores intrinsic display",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "amps"
+          },
+          {
+            "op": "removeLabel",
+            "unit": "A",
+            "name": null
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-016",
+        "requirement": "JP-UF-016",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "iteration": 17,
+      "requirement": "JP-UF-017",
+      "input": {
+        "gap": "Remove label removes aliases",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "amps"
+          },
+          {
+            "op": "alias",
+            "unit": "A",
+            "name": "other"
+          },
+          {
+            "op": "removeLabel",
+            "unit": "A",
+            "name": null
+          }
+        ],
+        "unit": "A",
+        "text": "other",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-017",
+        "requirement": "JP-UF-017",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 18,
+      "requirement": "JP-UF-018",
+      "input": {
+        "gap": "Remove aliases preserves current label",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "old"
+          },
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "new"
+          },
+          {
+            "op": "removeAliases",
+            "unit": "A",
+            "name": null
+          }
+        ],
+        "unit": "A",
+        "text": "new",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-018",
+        "requirement": "JP-UF-018",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 19,
+      "requirement": "JP-UF-019",
+      "input": {
+        "gap": "Remove aliases removes old labels",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "old"
+          },
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "new"
+          },
+          {
+            "op": "removeAliases",
+            "unit": "A",
+            "name": null
+          }
+        ],
+        "unit": "A",
+        "text": "old",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-019",
+        "requirement": "JP-UF-019",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 20,
+      "requirement": "JP-UF-020",
+      "input": {
+        "gap": "Remove alias ignores unit argument",
+        "kind": "parse",
+        "actions": [
+          {
+            "op": "alias",
+            "unit": "A",
+            "name": "shared"
+          },
+          {
+            "op": "removeAlias",
+            "unit": "V",
+            "name": "shared"
+          }
+        ],
+        "unit": "A",
+        "text": "shared",
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-020",
+        "requirement": "JP-UF-020",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 21,
+      "requirement": "JP-UF-021",
+      "input": {
+        "gap": "Remove alias retains display label",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "amps"
+          },
+          {
+            "op": "removeAlias",
+            "unit": "A",
+            "name": "amps"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-021",
+        "requirement": "JP-UF-021",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "amps",
+      "dotnet": "amps"
+    },
+    {
+      "iteration": 22,
+      "requirement": "JP-UF-022",
+      "input": {
+        "gap": "Reject leading digit",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "2amps"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-022",
+        "requirement": "JP-UF-022",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 23,
+      "requirement": "JP-UF-023",
+      "input": {
+        "gap": "Reject leading mathematical operator",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "\u002Bamps"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-023",
+        "requirement": "JP-UF-023",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 24,
+      "requirement": "JP-UF-024",
+      "input": {
+        "gap": "Reject empty label",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": ""
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-024",
+        "requirement": "JP-UF-024",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 25,
+      "requirement": "JP-UF-025",
+      "input": {
+        "gap": "Reject null label",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": null
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-025",
+        "requirement": "JP-UF-025",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 26,
+      "requirement": "JP-UF-026",
+      "input": {
+        "gap": "Default admits Unicode label",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "\u03B1\u03BC\u03C0"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-026",
+        "requirement": "JP-UF-026",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "\u03B1\u03BC\u03C0",
+      "dotnet": "\u03B1\u03BC\u03C0"
+    },
+    {
+      "iteration": 27,
+      "requirement": "JP-UF-027",
+      "input": {
+        "gap": "Default validates only initial character",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "name/with space"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-027",
+        "requirement": "JP-UF-027",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "name/with space",
+      "dotnet": "name/with space"
+    },
+    {
+      "iteration": 28,
+      "requirement": "JP-UF-028",
+      "input": {
+        "gap": "ASCII rejects non-ASCII label",
+        "kind": "format",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "\u03B1\u03BC\u03C0"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": true,
+        "id": "UF100-028",
+        "requirement": "JP-UF-028",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "INVALID",
+      "dotnet": "INVALID"
+    },
+    {
+      "iteration": 29,
+      "requirement": "JP-UF-029",
+      "input": {
+        "gap": "Fresh formatter label state is isolated",
+        "kind": "isolated",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "local"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-029",
+        "requirement": "JP-UF-029",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "iteration": 30,
+      "requirement": "JP-UF-030",
+      "input": {
+        "gap": "Default and ASCII state are distinct",
+        "kind": "otherFlavor",
+        "actions": [
+          {
+            "op": "label",
+            "unit": "A",
+            "name": "local"
+          }
+        ],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-030",
+        "requirement": "JP-UF-030",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "iteration": 31,
+      "requirement": "JP-UF-031",
+      "input": {
+        "gap": "Quantity formatting observes shared unit labels",
+        "kind": "quantityFormat",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-031",
+        "requirement": "JP-UF-031",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "2 amps",
+      "dotnet": "2 amps"
+    },
+    {
+      "iteration": 32,
+      "requirement": "JP-UF-032",
+      "input": {
+        "gap": "Quantity parsing observes shared unit aliases",
+        "kind": "quantityParse",
+        "actions": [],
+        "unit": "A",
+        "text": null,
+        "prefix": null,
+        "identity": false,
+        "ascii": false,
+        "id": "UF100-032",
+        "requirement": "JP-UF-032",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "iteration": 33,
+      "requirement": "JP-UF-033",
+      "input": {
+        "gap": "ASCII catalog binding ONE",
+        "kind": "asciiUnit",
+        "field": "ONE",
+        "id": "UF100-033",
+        "requirement": "JP-UF-033",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "one",
+      "dotnet": "one"
+    },
+    {
+      "iteration": 34,
+      "requirement": "JP-UF-034",
+      "input": {
+        "gap": "ASCII catalog binding AMPERE",
+        "kind": "asciiUnit",
+        "field": "AMPERE",
+        "id": "UF100-034",
+        "requirement": "JP-UF-034",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "iteration": 35,
+      "requirement": "JP-UF-035",
+      "input": {
+        "gap": "ASCII catalog binding CANDELA",
+        "kind": "asciiUnit",
+        "field": "CANDELA",
+        "id": "UF100-035",
+        "requirement": "JP-UF-035",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "cd",
+      "dotnet": "cd"
+    },
+    {
+      "iteration": 36,
+      "requirement": "JP-UF-036",
+      "input": {
+        "gap": "ASCII catalog binding KELVIN",
+        "kind": "asciiUnit",
+        "field": "KELVIN",
+        "id": "UF100-036",
+        "requirement": "JP-UF-036",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "K",
+      "dotnet": "K"
+    },
+    {
+      "iteration": 37,
+      "requirement": "JP-UF-037",
+      "input": {
+        "gap": "ASCII catalog binding KILOGRAM",
+        "kind": "asciiUnit",
+        "field": "KILOGRAM",
+        "id": "UF100-037",
+        "requirement": "JP-UF-037",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kg",
+      "dotnet": "kg"
+    },
+    {
+      "iteration": 38,
+      "requirement": "JP-UF-038",
+      "input": {
+        "gap": "ASCII catalog binding METRE",
+        "kind": "asciiUnit",
+        "field": "METRE",
+        "id": "UF100-038",
+        "requirement": "JP-UF-038",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m",
+      "dotnet": "m"
+    },
+    {
+      "iteration": 39,
+      "requirement": "JP-UF-039",
+      "input": {
+        "gap": "ASCII catalog binding MOLE",
+        "kind": "asciiUnit",
+        "field": "MOLE",
+        "id": "UF100-039",
+        "requirement": "JP-UF-039",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mol",
+      "dotnet": "mol"
+    },
+    {
+      "iteration": 40,
+      "requirement": "JP-UF-040",
+      "input": {
+        "gap": "ASCII catalog binding SECOND",
+        "kind": "asciiUnit",
+        "field": "SECOND",
+        "id": "UF100-040",
+        "requirement": "JP-UF-040",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "s",
+      "dotnet": "s"
+    },
+    {
+      "iteration": 41,
+      "requirement": "JP-UF-041",
+      "input": {
+        "gap": "ASCII catalog binding GRAM",
+        "kind": "asciiUnit",
+        "field": "GRAM",
+        "id": "UF100-041",
+        "requirement": "JP-UF-041",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "g",
+      "dotnet": "g"
+    },
+    {
+      "iteration": 42,
+      "requirement": "JP-UF-042",
+      "input": {
+        "gap": "ASCII catalog binding RADIAN",
+        "kind": "asciiUnit",
+        "field": "RADIAN",
+        "id": "UF100-042",
+        "requirement": "JP-UF-042",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "rad",
+      "dotnet": "rad"
+    },
+    {
+      "iteration": 43,
+      "requirement": "JP-UF-043",
+      "input": {
+        "gap": "ASCII catalog binding STERADIAN",
+        "kind": "asciiUnit",
+        "field": "STERADIAN",
+        "id": "UF100-043",
+        "requirement": "JP-UF-043",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "sr",
+      "dotnet": "sr"
+    },
+    {
+      "iteration": 44,
+      "requirement": "JP-UF-044",
+      "input": {
+        "gap": "ASCII catalog binding HERTZ",
+        "kind": "asciiUnit",
+        "field": "HERTZ",
+        "id": "UF100-044",
+        "requirement": "JP-UF-044",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Hz",
+      "dotnet": "Hz"
+    },
+    {
+      "iteration": 45,
+      "requirement": "JP-UF-045",
+      "input": {
+        "gap": "ASCII catalog binding NEWTON",
+        "kind": "asciiUnit",
+        "field": "NEWTON",
+        "id": "UF100-045",
+        "requirement": "JP-UF-045",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "N",
+      "dotnet": "N"
+    },
+    {
+      "iteration": 46,
+      "requirement": "JP-UF-046",
+      "input": {
+        "gap": "ASCII catalog binding PASCAL",
+        "kind": "asciiUnit",
+        "field": "PASCAL",
+        "id": "UF100-046",
+        "requirement": "JP-UF-046",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Pa",
+      "dotnet": "Pa"
+    },
+    {
+      "iteration": 47,
+      "requirement": "JP-UF-047",
+      "input": {
+        "gap": "ASCII catalog binding JOULE",
+        "kind": "asciiUnit",
+        "field": "JOULE",
+        "id": "UF100-047",
+        "requirement": "JP-UF-047",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "J",
+      "dotnet": "J"
+    },
+    {
+      "iteration": 48,
+      "requirement": "JP-UF-048",
+      "input": {
+        "gap": "ASCII catalog binding WATT",
+        "kind": "asciiUnit",
+        "field": "WATT",
+        "id": "UF100-048",
+        "requirement": "JP-UF-048",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "W",
+      "dotnet": "W"
+    },
+    {
+      "iteration": 49,
+      "requirement": "JP-UF-049",
+      "input": {
+        "gap": "ASCII catalog binding COULOMB",
+        "kind": "asciiUnit",
+        "field": "COULOMB",
+        "id": "UF100-049",
+        "requirement": "JP-UF-049",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "C",
+      "dotnet": "C"
+    },
+    {
+      "iteration": 50,
+      "requirement": "JP-UF-050",
+      "input": {
+        "gap": "ASCII catalog binding VOLT",
+        "kind": "asciiUnit",
+        "field": "VOLT",
+        "id": "UF100-050",
+        "requirement": "JP-UF-050",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "V",
+      "dotnet": "V"
+    },
+    {
+      "iteration": 51,
+      "requirement": "JP-UF-051",
+      "input": {
+        "gap": "ASCII catalog binding FARAD",
+        "kind": "asciiUnit",
+        "field": "FARAD",
+        "id": "UF100-051",
+        "requirement": "JP-UF-051",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "F",
+      "dotnet": "F"
+    },
+    {
+      "iteration": 52,
+      "requirement": "JP-UF-052",
+      "input": {
+        "gap": "ASCII catalog binding OHM",
+        "kind": "asciiUnit",
+        "field": "OHM",
+        "id": "UF100-052",
+        "requirement": "JP-UF-052",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Ohm",
+      "dotnet": "Ohm"
+    },
+    {
+      "iteration": 53,
+      "requirement": "JP-UF-053",
+      "input": {
+        "gap": "ASCII catalog binding SIEMENS",
+        "kind": "asciiUnit",
+        "field": "SIEMENS",
+        "id": "UF100-053",
+        "requirement": "JP-UF-053",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "S",
+      "dotnet": "S"
+    },
+    {
+      "iteration": 54,
+      "requirement": "JP-UF-054",
+      "input": {
+        "gap": "ASCII catalog binding WEBER",
+        "kind": "asciiUnit",
+        "field": "WEBER",
+        "id": "UF100-054",
+        "requirement": "JP-UF-054",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Wb",
+      "dotnet": "Wb"
+    },
+    {
+      "iteration": 55,
+      "requirement": "JP-UF-055",
+      "input": {
+        "gap": "ASCII catalog binding TESLA",
+        "kind": "asciiUnit",
+        "field": "TESLA",
+        "id": "UF100-055",
+        "requirement": "JP-UF-055",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "T",
+      "dotnet": "T"
+    },
+    {
+      "iteration": 56,
+      "requirement": "JP-UF-056",
+      "input": {
+        "gap": "ASCII catalog binding HENRY",
+        "kind": "asciiUnit",
+        "field": "HENRY",
+        "id": "UF100-056",
+        "requirement": "JP-UF-056",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "H",
+      "dotnet": "H"
+    },
+    {
+      "iteration": 57,
+      "requirement": "JP-UF-057",
+      "input": {
+        "gap": "ASCII catalog binding CELSIUS",
+        "kind": "asciiUnit",
+        "field": "CELSIUS",
+        "id": "UF100-057",
+        "requirement": "JP-UF-057",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Celsius",
+      "dotnet": "Celsius"
+    },
+    {
+      "iteration": 58,
+      "requirement": "JP-UF-058",
+      "input": {
+        "gap": "ASCII catalog binding LUMEN",
+        "kind": "asciiUnit",
+        "field": "LUMEN",
+        "id": "UF100-058",
+        "requirement": "JP-UF-058",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "lm",
+      "dotnet": "lm"
+    },
+    {
+      "iteration": 59,
+      "requirement": "JP-UF-059",
+      "input": {
+        "gap": "ASCII catalog binding LUX",
+        "kind": "asciiUnit",
+        "field": "LUX",
+        "id": "UF100-059",
+        "requirement": "JP-UF-059",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "lx",
+      "dotnet": "lx"
+    },
+    {
+      "iteration": 60,
+      "requirement": "JP-UF-060",
+      "input": {
+        "gap": "ASCII catalog binding BECQUEREL",
+        "kind": "asciiUnit",
+        "field": "BECQUEREL",
+        "id": "UF100-060",
+        "requirement": "JP-UF-060",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Bq",
+      "dotnet": "Bq"
+    },
+    {
+      "iteration": 61,
+      "requirement": "JP-UF-061",
+      "input": {
+        "gap": "ASCII catalog binding GRAY",
+        "kind": "asciiUnit",
+        "field": "GRAY",
+        "id": "UF100-061",
+        "requirement": "JP-UF-061",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Gy",
+      "dotnet": "Gy"
+    },
+    {
+      "iteration": 62,
+      "requirement": "JP-UF-062",
+      "input": {
+        "gap": "ASCII catalog binding SIEVERT",
+        "kind": "asciiUnit",
+        "field": "SIEVERT",
+        "id": "UF100-062",
+        "requirement": "JP-UF-062",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "Sv",
+      "dotnet": "Sv"
+    },
+    {
+      "iteration": 63,
+      "requirement": "JP-UF-063",
+      "input": {
+        "gap": "ASCII catalog binding KATAL",
+        "kind": "asciiUnit",
+        "field": "KATAL",
+        "id": "UF100-063",
+        "requirement": "JP-UF-063",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kat",
+      "dotnet": "kat"
+    },
+    {
+      "iteration": 64,
+      "requirement": "JP-UF-064",
+      "input": {
+        "gap": "ASCII catalog binding METRE_PER_SECOND",
+        "kind": "asciiUnit",
+        "field": "METRE_PER_SECOND",
+        "id": "UF100-064",
+        "requirement": "JP-UF-064",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m*s^-1",
+      "dotnet": "m*s^-1"
+    },
+    {
+      "iteration": 65,
+      "requirement": "JP-UF-065",
+      "input": {
+        "gap": "ASCII catalog binding METRE_PER_SQUARE_SECOND",
+        "kind": "asciiUnit",
+        "field": "METRE_PER_SQUARE_SECOND",
+        "id": "UF100-065",
+        "requirement": "JP-UF-065",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m*s^-2",
+      "dotnet": "m*s^-2"
+    },
+    {
+      "iteration": 66,
+      "requirement": "JP-UF-066",
+      "input": {
+        "gap": "ASCII catalog binding SQUARE_METRE",
+        "kind": "asciiUnit",
+        "field": "SQUARE_METRE",
+        "id": "UF100-066",
+        "requirement": "JP-UF-066",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m\u00B2",
+      "dotnet": "m\u00B2"
+    },
+    {
+      "iteration": 67,
+      "requirement": "JP-UF-067",
+      "input": {
+        "gap": "ASCII catalog binding CUBIC_METRE",
+        "kind": "asciiUnit",
+        "field": "CUBIC_METRE",
+        "id": "UF100-067",
+        "requirement": "JP-UF-067",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "m\u00B3",
+      "dotnet": "m\u00B3"
+    },
+    {
+      "iteration": 68,
+      "requirement": "JP-UF-068",
+      "input": {
+        "gap": "ASCII catalog binding KILOMETRE_PER_HOUR",
+        "kind": "asciiUnit",
+        "field": "KILOMETRE_PER_HOUR",
+        "id": "UF100-068",
+        "requirement": "JP-UF-068",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "km/h",
+      "dotnet": "km/h"
+    },
+    {
+      "iteration": 69,
+      "requirement": "JP-UF-069",
+      "input": {
+        "gap": "ASCII catalog binding PERCENT",
+        "kind": "asciiUnit",
+        "field": "PERCENT",
+        "id": "UF100-069",
+        "requirement": "JP-UF-069",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "%",
+      "dotnet": "%"
+    },
+    {
+      "iteration": 70,
+      "requirement": "JP-UF-070",
+      "input": {
+        "gap": "ASCII catalog binding MINUTE",
+        "kind": "asciiUnit",
+        "field": "MINUTE",
+        "id": "UF100-070",
+        "requirement": "JP-UF-070",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "min",
+      "dotnet": "min"
+    },
+    {
+      "iteration": 71,
+      "requirement": "JP-UF-071",
+      "input": {
+        "gap": "ASCII catalog binding HOUR",
+        "kind": "asciiUnit",
+        "field": "HOUR",
+        "id": "UF100-071",
+        "requirement": "JP-UF-071",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "h",
+      "dotnet": "h"
+    },
+    {
+      "iteration": 72,
+      "requirement": "JP-UF-072",
+      "input": {
+        "gap": "ASCII catalog binding DAY",
+        "kind": "asciiUnit",
+        "field": "DAY",
+        "id": "UF100-072",
+        "requirement": "JP-UF-072",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "d",
+      "dotnet": "d"
+    },
+    {
+      "iteration": 73,
+      "requirement": "JP-UF-073",
+      "input": {
+        "gap": "ASCII catalog binding WEEK",
+        "kind": "asciiUnit",
+        "field": "WEEK",
+        "id": "UF100-073",
+        "requirement": "JP-UF-073",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "wk",
+      "dotnet": "wk"
+    },
+    {
+      "iteration": 74,
+      "requirement": "JP-UF-074",
+      "input": {
+        "gap": "ASCII catalog binding YEAR",
+        "kind": "asciiUnit",
+        "field": "YEAR",
+        "id": "UF100-074",
+        "requirement": "JP-UF-074",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "yr",
+      "dotnet": "yr"
+    },
+    {
+      "iteration": 75,
+      "requirement": "JP-UF-075",
+      "input": {
+        "gap": "ASCII catalog binding MONTH",
+        "kind": "asciiUnit",
+        "field": "MONTH",
+        "id": "UF100-075",
+        "requirement": "JP-UF-075",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mo",
+      "dotnet": "mo"
+    },
+    {
+      "iteration": 76,
+      "requirement": "JP-UF-076",
+      "input": {
+        "gap": "ASCII catalog binding LITRE",
+        "kind": "asciiUnit",
+        "field": "LITRE",
+        "id": "UF100-076",
+        "requirement": "JP-UF-076",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "l",
+      "dotnet": "l"
+    },
+    {
+      "iteration": 77,
+      "requirement": "JP-UF-077",
+      "input": {
+        "gap": "ASCII prefixed ohm binding QUETTA",
+        "kind": "asciiPrefix",
+        "prefixName": "QUETTA",
+        "prefixSymbol": "Q",
+        "id": "UF100-077",
+        "requirement": "JP-UF-077",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "QOhm",
+      "dotnet": "QOhm"
+    },
+    {
+      "iteration": 78,
+      "requirement": "JP-UF-078",
+      "input": {
+        "gap": "ASCII prefixed ohm binding RONNA",
+        "kind": "asciiPrefix",
+        "prefixName": "RONNA",
+        "prefixSymbol": "R",
+        "id": "UF100-078",
+        "requirement": "JP-UF-078",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "ROhm",
+      "dotnet": "ROhm"
+    },
+    {
+      "iteration": 79,
+      "requirement": "JP-UF-079",
+      "input": {
+        "gap": "ASCII prefixed ohm binding YOTTA",
+        "kind": "asciiPrefix",
+        "prefixName": "YOTTA",
+        "prefixSymbol": "Y",
+        "id": "UF100-079",
+        "requirement": "JP-UF-079",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "YOhm",
+      "dotnet": "YOhm"
+    },
+    {
+      "iteration": 80,
+      "requirement": "JP-UF-080",
+      "input": {
+        "gap": "ASCII prefixed ohm binding ZETTA",
+        "kind": "asciiPrefix",
+        "prefixName": "ZETTA",
+        "prefixSymbol": "Z",
+        "id": "UF100-080",
+        "requirement": "JP-UF-080",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "ZOhm",
+      "dotnet": "ZOhm"
+    },
+    {
+      "iteration": 81,
+      "requirement": "JP-UF-081",
+      "input": {
+        "gap": "ASCII prefixed ohm binding EXA",
+        "kind": "asciiPrefix",
+        "prefixName": "EXA",
+        "prefixSymbol": "E",
+        "id": "UF100-081",
+        "requirement": "JP-UF-081",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "EOhm",
+      "dotnet": "EOhm"
+    },
+    {
+      "iteration": 82,
+      "requirement": "JP-UF-082",
+      "input": {
+        "gap": "ASCII prefixed ohm binding PETA",
+        "kind": "asciiPrefix",
+        "prefixName": "PETA",
+        "prefixSymbol": "P",
+        "id": "UF100-082",
+        "requirement": "JP-UF-082",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "POhm",
+      "dotnet": "POhm"
+    },
+    {
+      "iteration": 83,
+      "requirement": "JP-UF-083",
+      "input": {
+        "gap": "ASCII prefixed ohm binding TERA",
+        "kind": "asciiPrefix",
+        "prefixName": "TERA",
+        "prefixSymbol": "T",
+        "id": "UF100-083",
+        "requirement": "JP-UF-083",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "TOhm",
+      "dotnet": "TOhm"
+    },
+    {
+      "iteration": 84,
+      "requirement": "JP-UF-084",
+      "input": {
+        "gap": "ASCII prefixed ohm binding GIGA",
+        "kind": "asciiPrefix",
+        "prefixName": "GIGA",
+        "prefixSymbol": "G",
+        "id": "UF100-084",
+        "requirement": "JP-UF-084",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "GOhm",
+      "dotnet": "GOhm"
+    },
+    {
+      "iteration": 85,
+      "requirement": "JP-UF-085",
+      "input": {
+        "gap": "ASCII prefixed ohm binding MEGA",
+        "kind": "asciiPrefix",
+        "prefixName": "MEGA",
+        "prefixSymbol": "M",
+        "id": "UF100-085",
+        "requirement": "JP-UF-085",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "MOhm",
+      "dotnet": "MOhm"
+    },
+    {
+      "iteration": 86,
+      "requirement": "JP-UF-086",
+      "input": {
+        "gap": "ASCII prefixed ohm binding KILO",
+        "kind": "asciiPrefix",
+        "prefixName": "KILO",
+        "prefixSymbol": "k",
+        "id": "UF100-086",
+        "requirement": "JP-UF-086",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "kOhm",
+      "dotnet": "kOhm"
+    },
+    {
+      "iteration": 87,
+      "requirement": "JP-UF-087",
+      "input": {
+        "gap": "ASCII prefixed ohm binding HECTO",
+        "kind": "asciiPrefix",
+        "prefixName": "HECTO",
+        "prefixSymbol": "h",
+        "id": "UF100-087",
+        "requirement": "JP-UF-087",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "hOhm",
+      "dotnet": "hOhm"
+    },
+    {
+      "iteration": 88,
+      "requirement": "JP-UF-088",
+      "input": {
+        "gap": "ASCII prefixed ohm binding DECA",
+        "kind": "asciiPrefix",
+        "prefixName": "DECA",
+        "prefixSymbol": "da",
+        "id": "UF100-088",
+        "requirement": "JP-UF-088",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "daOhm",
+      "dotnet": "daOhm"
+    },
+    {
+      "iteration": 89,
+      "requirement": "JP-UF-089",
+      "input": {
+        "gap": "ASCII prefixed ohm binding DECI",
+        "kind": "asciiPrefix",
+        "prefixName": "DECI",
+        "prefixSymbol": "d",
+        "id": "UF100-089",
+        "requirement": "JP-UF-089",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "dOhm",
+      "dotnet": "dOhm"
+    },
+    {
+      "iteration": 90,
+      "requirement": "JP-UF-090",
+      "input": {
+        "gap": "ASCII prefixed ohm binding CENTI",
+        "kind": "asciiPrefix",
+        "prefixName": "CENTI",
+        "prefixSymbol": "c",
+        "id": "UF100-090",
+        "requirement": "JP-UF-090",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "cOhm",
+      "dotnet": "cOhm"
+    },
+    {
+      "iteration": 91,
+      "requirement": "JP-UF-091",
+      "input": {
+        "gap": "ASCII prefixed ohm binding MILLI",
+        "kind": "asciiPrefix",
+        "prefixName": "MILLI",
+        "prefixSymbol": "m",
+        "id": "UF100-091",
+        "requirement": "JP-UF-091",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "mOhm",
+      "dotnet": "mOhm"
+    },
+    {
+      "iteration": 92,
+      "requirement": "JP-UF-092",
+      "input": {
+        "gap": "ASCII prefixed ohm binding MICRO",
+        "kind": "asciiPrefix",
+        "prefixName": "MICRO",
+        "prefixSymbol": "\u00B5",
+        "id": "UF100-092",
+        "requirement": "JP-UF-092",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "microOhm",
+      "dotnet": "microOhm"
+    },
+    {
+      "iteration": 93,
+      "requirement": "JP-UF-093",
+      "input": {
+        "gap": "ASCII prefixed ohm binding NANO",
+        "kind": "asciiPrefix",
+        "prefixName": "NANO",
+        "prefixSymbol": "n",
+        "id": "UF100-093",
+        "requirement": "JP-UF-093",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "nOhm",
+      "dotnet": "nOhm"
+    },
+    {
+      "iteration": 94,
+      "requirement": "JP-UF-094",
+      "input": {
+        "gap": "ASCII prefixed ohm binding PICO",
+        "kind": "asciiPrefix",
+        "prefixName": "PICO",
+        "prefixSymbol": "p",
+        "id": "UF100-094",
+        "requirement": "JP-UF-094",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "pOhm",
+      "dotnet": "pOhm"
+    },
+    {
+      "iteration": 95,
+      "requirement": "JP-UF-095",
+      "input": {
+        "gap": "ASCII prefixed ohm binding FEMTO",
+        "kind": "asciiPrefix",
+        "prefixName": "FEMTO",
+        "prefixSymbol": "f",
+        "id": "UF100-095",
+        "requirement": "JP-UF-095",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "fOhm",
+      "dotnet": "fOhm"
+    },
+    {
+      "iteration": 96,
+      "requirement": "JP-UF-096",
+      "input": {
+        "gap": "ASCII prefixed ohm binding ATTO",
+        "kind": "asciiPrefix",
+        "prefixName": "ATTO",
+        "prefixSymbol": "a",
+        "id": "UF100-096",
+        "requirement": "JP-UF-096",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "aOhm",
+      "dotnet": "aOhm"
+    },
+    {
+      "iteration": 97,
+      "requirement": "JP-UF-097",
+      "input": {
+        "gap": "ASCII prefixed ohm binding ZEPTO",
+        "kind": "asciiPrefix",
+        "prefixName": "ZEPTO",
+        "prefixSymbol": "z",
+        "id": "UF100-097",
+        "requirement": "JP-UF-097",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "zOhm",
+      "dotnet": "zOhm"
+    },
+    {
+      "iteration": 98,
+      "requirement": "JP-UF-098",
+      "input": {
+        "gap": "ASCII prefixed ohm binding YOCTO",
+        "kind": "asciiPrefix",
+        "prefixName": "YOCTO",
+        "prefixSymbol": "y",
+        "id": "UF100-098",
+        "requirement": "JP-UF-098",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "yOhm",
+      "dotnet": "yOhm"
+    },
+    {
+      "iteration": 99,
+      "requirement": "JP-UF-099",
+      "input": {
+        "gap": "ASCII prefixed ohm binding RONTO",
+        "kind": "asciiPrefix",
+        "prefixName": "RONTO",
+        "prefixSymbol": "r",
+        "id": "UF100-099",
+        "requirement": "JP-UF-099",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "rOhm",
+      "dotnet": "rOhm"
+    },
+    {
+      "iteration": 100,
+      "requirement": "JP-UF-100",
+      "input": {
+        "gap": "ASCII prefixed ohm binding QUECTO",
+        "kind": "asciiPrefix",
+        "prefixName": "QUECTO",
+        "prefixSymbol": "q",
+        "id": "UF100-100",
+        "requirement": "JP-UF-100",
+        "operation": "unitFormat"
+      },
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "java": "qOhm",
+      "dotnet": "qOhm"
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "testsPassed": 1150,
+      "matched": 10,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "testsPassed": 1160,
+      "matched": 20,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "testsPassed": 1170,
+      "matched": 30,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "testsPassed": 1180,
+      "matched": 40,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "testsPassed": 1190,
+      "matched": 50,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "testsPassed": 1200,
+      "matched": 60,
+      "mismatches": 0
+    },
+    {
+      "iteration": 70,
+      "build": "PASS",
+      "testsPassed": 1210,
+      "matched": 70,
+      "mismatches": 0
+    },
+    {
+      "iteration": 80,
+      "build": "PASS",
+      "testsPassed": 1220,
+      "matched": 80,
+      "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "testsPassed": 1230,
+      "matched": 90,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "testsPassed": 1298,
+      "matched": 100,
+      "mismatches": 0
+    }
+  ]
+}

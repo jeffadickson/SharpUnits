@@ -22,12 +22,12 @@ public sealed class JavaParityThirtyIterationPartThreeTests
   var unit=U("A").Prefix(SiPrefixCatalog.Resolve("m"));
   Assert.Equal(.001,unit.ToSystemConverter().Convert(1),10);
  }
- [Fact] public void RejectAffinePrefix()=>Assert.Throws<InvalidOperationException>(()=>U("°C").Prefix(SiPrefixCatalog.Resolve("m")));
+ [Fact] public void AffinePrefixRetainsParentOffset()=>Assert.Equal(273.151,U("°C").Prefix(SiPrefixCatalog.Resolve("m")).ToSystemConverter().Convert(1),10);
  [Fact] public void AlternateUnitSymbol()
  {
-  var alternate=U("mV").Alternate("custom-millivolt");
-  Assert.Equal("custom-millivolt",alternate.Symbol);
-  Assert.Equal(.025,alternate.GetConverterTo(U("V")).Convert(25),10);
+  var alternate=U("V").Alternate("custom-volt");
+  Assert.Equal("custom-volt",alternate.Symbol);
+  Assert.Equal(25,alternate.GetConverterTo(U("V")).Convert(25),10);
  }
  [Fact] public void ShiftedKelvin()
  {

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "implementationCommit": "f1700f0097fed1513b9ff70fa5c919dc201df97a",
+  "canonicalTextSha256": {
+    "conformance/exact-text-evidence.json": "399E2D33AA3BED26988526DC196A4E60C23B37520F9FEFA04999551723901B11",
+    "conformance/exact-text-review.md": "7FEE6F762BB1F6EC767D9FA5A75F477FF887357C5829E5B26961A96B442B08DD",
+    "conformance/exact-text-independent-review.md": "559419E5183C174F971A7A7142C8FC14DA32570541C61920BD58BF1777FE2FAF",
+    "conformance/verification-reference-lock.json": "DE4A513070979176BC112FB2128960CEA10EA3975C1B3412008211135EDCFABF"
+  },
+  "testsPassed": 3294,
+  "existingPairedObservations": 2670,
+  "exactContracts": 16,
+  "exactNumericChecks": 32,
+  "intentionalGrammarDifferences": 3,
+  "stockJavaReferenceTests": 112,
+  "requirements": {
+    "ids": 409,
+    "documents": 12
+  },
+  "selectedStryker": {
+    "scope": "TextResult.cs",
+    "survivorDisposition": "English diagnostic wording only; not counted as kills",
+    "Killed": 20,
+    "Ignored": 5,
+    "tool": "5.1.0",
+    "Survived": 3
+  },
+  "independentEvidenceReview": {
+    "rawHashes": 375,
+    "kind": "Separate agent, bounded static and raw/source hash checks",
+    "canonicalHashes": 290,
+    "verdict": "CONCUR_BOUNDED"
+  },
+  "formalTckClosures": 0,
+  "ci": "Off; no dispatch",
+  "remaining": "Broad Reader/Writer Stryker qualification, Linux/NativeAOT, full normative coverage and existing formal closure gates remain open"
+}

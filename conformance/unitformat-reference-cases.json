@@ -1,0 +1,2014 @@
+{
+  "cases": [
+    {
+      "gap": "StringBuilder append text",
+      "kind": "builder",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": "start|",
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-001",
+      "requirement": "JP-UF-001",
+      "operation": "unitFormat",
+      "expected": "start|A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D2C5BC26F38B39FE6847E9CC8329C030212E199CE7DCD446365986A66D5A09B6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "StringBuilder destination identity",
+      "kind": "builder",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": true,
+      "ascii": false,
+      "id": "UF100-002",
+      "requirement": "JP-UF-002",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "469351E09CFDBBCD055603C8416FFDC47A77B2138A96F7D0FBF4919B9706DFAB",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "TextWriter append text",
+      "kind": "writer",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": "start|",
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-003",
+      "requirement": "JP-UF-003",
+      "operation": "unitFormat",
+      "expected": "start|A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DD0959DEC0AE73EBC56912C52AA295EFE758BC977C8A84C4A07475CDE8FDE310",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "TextWriter destination identity",
+      "kind": "writer",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": true,
+      "ascii": false,
+      "id": "UF100-004",
+      "requirement": "JP-UF-004",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BC631FB66CF1FD08E3D9C8FC80B79CEC4D6382AA1F2266FFEB556B581EB0ACE4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Builder observes mutable label",
+      "kind": "builder",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "ampx"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": "\u03A9\u2192",
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-005",
+      "requirement": "JP-UF-005",
+      "operation": "unitFormat",
+      "expected": "\u03A9\u2192ampx",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "36BFF1733B43ADE992D9C88A8B9858B778B27AAC4362CC8DCEE9B6BA9F3BC85E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Writer observes mutable label",
+      "kind": "writer",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "ampx"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": "\u03A9\u2192",
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-006",
+      "requirement": "JP-UF-006",
+      "operation": "unitFormat",
+      "expected": "\u03A9\u2192ampx",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AF10AEC23084FEB4231DD86A9AFBF4267C19DF09952A87569F533FF733064C5C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Label changes formatting",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "ampx"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-007",
+      "requirement": "JP-UF-007",
+      "operation": "unitFormat",
+      "expected": "ampx",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "54ED6562DA017AAE39AE3AED092D0580BD0FC7CF4DBCD7BFAAB8BA50C2DBB154",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Label changes parsing",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "ampx"
+        }
+      ],
+      "unit": "A",
+      "text": "ampx",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-008",
+      "requirement": "JP-UF-008",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "549E1F96513DB5B431E7446874A40AD19F3C7057569E0589ABFBCA3437FB9A8F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Relabel changes current display",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "old"
+        },
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "new"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-009",
+      "requirement": "JP-UF-009",
+      "operation": "unitFormat",
+      "expected": "new",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7806794FA4A10525CE5C13B1FE31075B0741CEE3579CA7EC86E7444763CC7C2C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Relabel retains old parse alias",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "old"
+        },
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "new"
+        }
+      ],
+      "unit": "A",
+      "text": "old",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-010",
+      "requirement": "JP-UF-010",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "10B7F10F3CDD803AD29B2849CC735955163E45D2410110333DD9AC1D9C8AFB65",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Alias admits parse name",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "A",
+          "name": "amps"
+        }
+      ],
+      "unit": "A",
+      "text": "amps",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-011",
+      "requirement": "JP-UF-011",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "545E99645EEA8E58BECEB733E77D619AF24839ECA48BA6E98B2758FCC87F3AC4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Alias does not rename display",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "A",
+          "name": "amps"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-012",
+      "requirement": "JP-UF-012",
+      "operation": "unitFormat",
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6C20826922D63F25C38EB59C0BD6B77D2934A68B8E01EAC96817D35A6A6EDE09",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Alias rebinding replaces parser owner",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "A",
+          "name": "shared"
+        },
+        {
+          "op": "alias",
+          "unit": "V",
+          "name": "shared"
+        }
+      ],
+      "unit": "V",
+      "text": "shared",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-013",
+      "requirement": "JP-UF-013",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2B6EAF7AA7C1F0B1EC919B4229E2BFB651E22DB34D39F085300E9B8854A0B1F8",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Label collision replaces parser owner",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "shared"
+        },
+        {
+          "op": "label",
+          "unit": "V",
+          "name": "shared"
+        }
+      ],
+      "unit": "V",
+      "text": "shared",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-014",
+      "requirement": "JP-UF-014",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "821E11999D203590C8D0420A17B6FC2B0F7DA2261D831C271BEC6274AFDD500F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Label collision preserves old owner\u0027s display",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "shared"
+        },
+        {
+          "op": "label",
+          "unit": "V",
+          "name": "shared"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-015",
+      "requirement": "JP-UF-015",
+      "operation": "unitFormat",
+      "expected": "shared",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CFCE6CF832A00C1C128519EC70308D6AF16E70A70FE3B31A909A1E39C385A787",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove label restores intrinsic display",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "amps"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "A",
+          "name": null
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-016",
+      "requirement": "JP-UF-016",
+      "operation": "unitFormat",
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9E8F31A169597E1334A1DBF458CDD300FBF2A2228A2A07F895730836A18312B2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove label removes aliases",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "amps"
+        },
+        {
+          "op": "alias",
+          "unit": "A",
+          "name": "other"
+        },
+        {
+          "op": "removeLabel",
+          "unit": "A",
+          "name": null
+        }
+      ],
+      "unit": "A",
+      "text": "other",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-017",
+      "requirement": "JP-UF-017",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C2765E8A48AC2773A16D403A2672867C8CB7F54C1BD828EA4BCCB0CA7DDB7EE7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove aliases preserves current label",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "old"
+        },
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "new"
+        },
+        {
+          "op": "removeAliases",
+          "unit": "A",
+          "name": null
+        }
+      ],
+      "unit": "A",
+      "text": "new",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-018",
+      "requirement": "JP-UF-018",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AC4232DDA9428EB5895DF16695252F65C6B534A047895DD0E90FA194CFA5AF31",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove aliases removes old labels",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "old"
+        },
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "new"
+        },
+        {
+          "op": "removeAliases",
+          "unit": "A",
+          "name": null
+        }
+      ],
+      "unit": "A",
+      "text": "old",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-019",
+      "requirement": "JP-UF-019",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "705489C62AC888054CEBEEA8A7408EFA79C994B6825555C74E739E183BABF226",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove alias ignores unit argument",
+      "kind": "parse",
+      "actions": [
+        {
+          "op": "alias",
+          "unit": "A",
+          "name": "shared"
+        },
+        {
+          "op": "removeAlias",
+          "unit": "V",
+          "name": "shared"
+        }
+      ],
+      "unit": "A",
+      "text": "shared",
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-020",
+      "requirement": "JP-UF-020",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C9D2F7B90B6D17EC0CABB5629E5A152C14011D099E0658EC6B67CE8CB116100B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Remove alias retains display label",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "amps"
+        },
+        {
+          "op": "removeAlias",
+          "unit": "A",
+          "name": "amps"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-021",
+      "requirement": "JP-UF-021",
+      "operation": "unitFormat",
+      "expected": "amps",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "859D194BB9C7A08B66CA3C6CB34366C80029C25CED666F8678DC0DA4CA398627",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Reject leading digit",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "2amps"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-022",
+      "requirement": "JP-UF-022",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9F0CB267B4F2E938C0DEFA11FBA8C6BA8AB645B13648CC6C6586810CAA4C0F67",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Reject leading mathematical operator",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "\u002Bamps"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-023",
+      "requirement": "JP-UF-023",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D850D33DB65246F6C5017E3D67A3810899786101DD8C128F4E7B5E45F6ACFDCF",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Reject empty label",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": ""
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-024",
+      "requirement": "JP-UF-024",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "805C161AC7F159BCE5BD8E98D22105F4FC00A22DBA5616103304082041087E8B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Reject null label",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": null
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-025",
+      "requirement": "JP-UF-025",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2E13F81366ACDAD89B467B792B559D17E2263F4FE650A64EB5746F9899714119",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Default admits Unicode label",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "\u03B1\u03BC\u03C0"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-026",
+      "requirement": "JP-UF-026",
+      "operation": "unitFormat",
+      "expected": "\u03B1\u03BC\u03C0",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FA013AAABBC45580D2AE5BBABB4091DEA0790D6D004EF4ADE61A7D50C55B497A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Default validates only initial character",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "name/with space"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-027",
+      "requirement": "JP-UF-027",
+      "operation": "unitFormat",
+      "expected": "name/with space",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FC2EB6A78753ED75EC635CECAF9B068BAAD79226066EC204581ACDAE1BFBCB54",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII rejects non-ASCII label",
+      "kind": "format",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "\u03B1\u03BC\u03C0"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": true,
+      "id": "UF100-028",
+      "requirement": "JP-UF-028",
+      "operation": "unitFormat",
+      "expected": "INVALID",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6D71A4F19FA12BF71D1A72525D53C3232772FA9D79D616817C9A32FBAA5C1DA7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Fresh formatter label state is isolated",
+      "kind": "isolated",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "local"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-029",
+      "requirement": "JP-UF-029",
+      "operation": "unitFormat",
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "702C1C13201ADFA3BF6899313FB0A9E4E1D93516E58C9136C146C8DCF6110B07",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Default and ASCII state are distinct",
+      "kind": "otherFlavor",
+      "actions": [
+        {
+          "op": "label",
+          "unit": "A",
+          "name": "local"
+        }
+      ],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-030",
+      "requirement": "JP-UF-030",
+      "operation": "unitFormat",
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "71A358B0D6FC42D50A6B5E9B113DE912C43B60C659B0C2B2F5A5DD06163EF7C9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Quantity formatting observes shared unit labels",
+      "kind": "quantityFormat",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-031",
+      "requirement": "JP-UF-031",
+      "operation": "unitFormat",
+      "expected": "2 amps",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A78AE02E45B38ABD55A1571661C8D988988A67E05C307B7EFD2BFCBDAB0BBEEB",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "Quantity parsing observes shared unit aliases",
+      "kind": "quantityParse",
+      "actions": [],
+      "unit": "A",
+      "text": null,
+      "prefix": null,
+      "identity": false,
+      "ascii": false,
+      "id": "UF100-032",
+      "requirement": "JP-UF-032",
+      "operation": "unitFormat",
+      "expected": true,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5AEAC0C660CE3736D587E94E677CE380DD9BF97B565911F84115930AEA5188BD",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding ONE",
+      "kind": "asciiUnit",
+      "field": "ONE",
+      "id": "UF100-033",
+      "requirement": "JP-UF-033",
+      "operation": "unitFormat",
+      "expected": "one",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F6B7591B0E18D2040CF620B3C99A153734FDF1FB26F6288CD223CF315B580346",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding AMPERE",
+      "kind": "asciiUnit",
+      "field": "AMPERE",
+      "id": "UF100-034",
+      "requirement": "JP-UF-034",
+      "operation": "unitFormat",
+      "expected": "A",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6E93838DC9C13B70A5DCD99DD4AF56957B78E0DA288AD06B17829DD40BBEB27B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding CANDELA",
+      "kind": "asciiUnit",
+      "field": "CANDELA",
+      "id": "UF100-035",
+      "requirement": "JP-UF-035",
+      "operation": "unitFormat",
+      "expected": "cd",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A398E92E9D7BDF060A2714907D4056CFAD377DE9C657D2B49C3FA086CCF9339B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding KELVIN",
+      "kind": "asciiUnit",
+      "field": "KELVIN",
+      "id": "UF100-036",
+      "requirement": "JP-UF-036",
+      "operation": "unitFormat",
+      "expected": "K",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E493214F6D9600F36372486DF26D721BB942F0ED988838E265B63700B6B370B1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding KILOGRAM",
+      "kind": "asciiUnit",
+      "field": "KILOGRAM",
+      "id": "UF100-037",
+      "requirement": "JP-UF-037",
+      "operation": "unitFormat",
+      "expected": "kg",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "5847E7095DCB2F9BCB3976AB706D554E7EA82E4DAEAD9D7F92FFF6FD1F892CEC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding METRE",
+      "kind": "asciiUnit",
+      "field": "METRE",
+      "id": "UF100-038",
+      "requirement": "JP-UF-038",
+      "operation": "unitFormat",
+      "expected": "m",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FD0457E16A360D2DE2E200CCB250DC347D3363B27A04250664897C81966E3622",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding MOLE",
+      "kind": "asciiUnit",
+      "field": "MOLE",
+      "id": "UF100-039",
+      "requirement": "JP-UF-039",
+      "operation": "unitFormat",
+      "expected": "mol",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C854E098E31CEA7ADAFD64C6070700064CE277278438D183DCE1A0F02EAEBB3A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding SECOND",
+      "kind": "asciiUnit",
+      "field": "SECOND",
+      "id": "UF100-040",
+      "requirement": "JP-UF-040",
+      "operation": "unitFormat",
+      "expected": "s",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3715E9A568E5886ED6839CB7B80BE0DF31C3FE534B39A3AC3108CC15F6F08F5B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding GRAM",
+      "kind": "asciiUnit",
+      "field": "GRAM",
+      "id": "UF100-041",
+      "requirement": "JP-UF-041",
+      "operation": "unitFormat",
+      "expected": "g",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "67A57DAEE1E656E15890A330C0F067E63325E2DF7D75F5C79E04997B28D0681E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding RADIAN",
+      "kind": "asciiUnit",
+      "field": "RADIAN",
+      "id": "UF100-042",
+      "requirement": "JP-UF-042",
+      "operation": "unitFormat",
+      "expected": "rad",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4338F600A2548E5D61A09D3041635B8E6FAD9C6B103D928ABF691B783F86DF1A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding STERADIAN",
+      "kind": "asciiUnit",
+      "field": "STERADIAN",
+      "id": "UF100-043",
+      "requirement": "JP-UF-043",
+      "operation": "unitFormat",
+      "expected": "sr",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "9A5A704005574ACD8C4B3F0F07142E4EED32F12638E64CB52A1B6B86C9227DF7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding HERTZ",
+      "kind": "asciiUnit",
+      "field": "HERTZ",
+      "id": "UF100-044",
+      "requirement": "JP-UF-044",
+      "operation": "unitFormat",
+      "expected": "Hz",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B5BFBA0C4BB2DCB661ABB5E00B817C714DB9A938FB0C0AF8BC3DC62A73110FC6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding NEWTON",
+      "kind": "asciiUnit",
+      "field": "NEWTON",
+      "id": "UF100-045",
+      "requirement": "JP-UF-045",
+      "operation": "unitFormat",
+      "expected": "N",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4F4B4608323299677ED1EC0725472D4662DEA98441947E692E2A125CE3B04982",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding PASCAL",
+      "kind": "asciiUnit",
+      "field": "PASCAL",
+      "id": "UF100-046",
+      "requirement": "JP-UF-046",
+      "operation": "unitFormat",
+      "expected": "Pa",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1A217F3F95C70E2AE4636EF2BE243F91FA503B07859A8360B86D101AF40AE1C4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding JOULE",
+      "kind": "asciiUnit",
+      "field": "JOULE",
+      "id": "UF100-047",
+      "requirement": "JP-UF-047",
+      "operation": "unitFormat",
+      "expected": "J",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0E20DED62E099128074D8060DD6DE39921A74234B1688714A57997E15B90B741",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding WATT",
+      "kind": "asciiUnit",
+      "field": "WATT",
+      "id": "UF100-048",
+      "requirement": "JP-UF-048",
+      "operation": "unitFormat",
+      "expected": "W",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "DF7B76F9E10A51E44C65445B95983A962AE971880EA4AE539B8354688853E5D9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding COULOMB",
+      "kind": "asciiUnit",
+      "field": "COULOMB",
+      "id": "UF100-049",
+      "requirement": "JP-UF-049",
+      "operation": "unitFormat",
+      "expected": "C",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "21562E5E298931F2ACD6D1606D17621B0963B0D85CA0CB4B4FDAA799386F315D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding VOLT",
+      "kind": "asciiUnit",
+      "field": "VOLT",
+      "id": "UF100-050",
+      "requirement": "JP-UF-050",
+      "operation": "unitFormat",
+      "expected": "V",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D68F51081DB6B93CC31DE77661721CB5CBC40570931CB1572C7B9B1BE7CA930B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding FARAD",
+      "kind": "asciiUnit",
+      "field": "FARAD",
+      "id": "UF100-051",
+      "requirement": "JP-UF-051",
+      "operation": "unitFormat",
+      "expected": "F",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "92B39CB194BC1398EF6CFE402DD44E6D25CC829FC679FC10404E186290934F01",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding OHM",
+      "kind": "asciiUnit",
+      "field": "OHM",
+      "id": "UF100-052",
+      "requirement": "JP-UF-052",
+      "operation": "unitFormat",
+      "expected": "Ohm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CE7351710D789F63C6C01A51C50A3AE4D7DF0FF64FF473C6A2102F4299E22F7B",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding SIEMENS",
+      "kind": "asciiUnit",
+      "field": "SIEMENS",
+      "id": "UF100-053",
+      "requirement": "JP-UF-053",
+      "operation": "unitFormat",
+      "expected": "S",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F3504E7218909047FC25C7475E8813604C5FB61F605BE1F8790FC35E5DBF7173",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding WEBER",
+      "kind": "asciiUnit",
+      "field": "WEBER",
+      "id": "UF100-054",
+      "requirement": "JP-UF-054",
+      "operation": "unitFormat",
+      "expected": "Wb",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BE7417A3A34EC357090856F22B53BFA5763439DBF083AAFABEF60EE577DA0D5A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding TESLA",
+      "kind": "asciiUnit",
+      "field": "TESLA",
+      "id": "UF100-055",
+      "requirement": "JP-UF-055",
+      "operation": "unitFormat",
+      "expected": "T",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8A792E41009AB215FE6D74F2EA0303F4CF3FEFF989FCE0C08366FBB5D1A71A77",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding HENRY",
+      "kind": "asciiUnit",
+      "field": "HENRY",
+      "id": "UF100-056",
+      "requirement": "JP-UF-056",
+      "operation": "unitFormat",
+      "expected": "H",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D800B7B8B4515A235F9CFB122B3C1E365B1A67B1568A4873DC97836E9A77FF06",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding CELSIUS",
+      "kind": "asciiUnit",
+      "field": "CELSIUS",
+      "id": "UF100-057",
+      "requirement": "JP-UF-057",
+      "operation": "unitFormat",
+      "expected": "Celsius",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "160140B99613B066FC404539A69069EFEFAEAEA83BA150B59A249461DCF76731",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding LUMEN",
+      "kind": "asciiUnit",
+      "field": "LUMEN",
+      "id": "UF100-058",
+      "requirement": "JP-UF-058",
+      "operation": "unitFormat",
+      "expected": "lm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "24654A24F62CE11D9AAF336EEF87E64ED391A469CD718F0A418B7B68C57C2645",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding LUX",
+      "kind": "asciiUnit",
+      "field": "LUX",
+      "id": "UF100-059",
+      "requirement": "JP-UF-059",
+      "operation": "unitFormat",
+      "expected": "lx",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0ECD17E8A0C90FA7069CA7ECF258CCFBA171C6226C33824C54CBEF4860E84D11",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding BECQUEREL",
+      "kind": "asciiUnit",
+      "field": "BECQUEREL",
+      "id": "UF100-060",
+      "requirement": "JP-UF-060",
+      "operation": "unitFormat",
+      "expected": "Bq",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "12EE48EBBB130BC5A8BE0B155B1FD40AC5E8F7A699A4934980D89D02661B2337",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding GRAY",
+      "kind": "asciiUnit",
+      "field": "GRAY",
+      "id": "UF100-061",
+      "requirement": "JP-UF-061",
+      "operation": "unitFormat",
+      "expected": "Gy",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "11945B0B6AC1BCCF90638B09B2BD5567B0CB230EA92093F6FFA2046BD58CAC23",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding SIEVERT",
+      "kind": "asciiUnit",
+      "field": "SIEVERT",
+      "id": "UF100-062",
+      "requirement": "JP-UF-062",
+      "operation": "unitFormat",
+      "expected": "Sv",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "348CD008C242DB8661469A5F19404AC24748ED7E35410D2355F028D1AD50482A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding KATAL",
+      "kind": "asciiUnit",
+      "field": "KATAL",
+      "id": "UF100-063",
+      "requirement": "JP-UF-063",
+      "operation": "unitFormat",
+      "expected": "kat",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "52F86B7F0830EFAEFC9803C51AAB3259213B3366C0A3B440AFE20ACA6C135D85",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding METRE_PER_SECOND",
+      "kind": "asciiUnit",
+      "field": "METRE_PER_SECOND",
+      "id": "UF100-064",
+      "requirement": "JP-UF-064",
+      "operation": "unitFormat",
+      "expected": "m*s^-1",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0549F15A514B291E45ABCDB6BAAC9B8FFEB3D30875770AAED3DAC827F87A94A1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding METRE_PER_SQUARE_SECOND",
+      "kind": "asciiUnit",
+      "field": "METRE_PER_SQUARE_SECOND",
+      "id": "UF100-065",
+      "requirement": "JP-UF-065",
+      "operation": "unitFormat",
+      "expected": "m*s^-2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "56DF436EB0D6A6C598FA934E52787086CE2221E75269B06AE67573E1F174137F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding SQUARE_METRE",
+      "kind": "asciiUnit",
+      "field": "SQUARE_METRE",
+      "id": "UF100-066",
+      "requirement": "JP-UF-066",
+      "operation": "unitFormat",
+      "expected": "m\u00B2",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "47C1E567B5B2E387950251C28491D2C536AFE67013961BF0381E6DE9C089C1F1",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding CUBIC_METRE",
+      "kind": "asciiUnit",
+      "field": "CUBIC_METRE",
+      "id": "UF100-067",
+      "requirement": "JP-UF-067",
+      "operation": "unitFormat",
+      "expected": "m\u00B3",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F7F76D80239E7FDA75F1400D166AB1EC9328F30AEC972586C91AEC501DC71860",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding KILOMETRE_PER_HOUR",
+      "kind": "asciiUnit",
+      "field": "KILOMETRE_PER_HOUR",
+      "id": "UF100-068",
+      "requirement": "JP-UF-068",
+      "operation": "unitFormat",
+      "expected": "km/h",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "64A34E851AB013178EBE277CF898D8DFD777904BBA2F67B890A007F7D67D6185",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding PERCENT",
+      "kind": "asciiUnit",
+      "field": "PERCENT",
+      "id": "UF100-069",
+      "requirement": "JP-UF-069",
+      "operation": "unitFormat",
+      "expected": "%",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "3CCA168CDF3996A3D8F1CF4C1C228FFA8DCC939EEFB3D972FFBB02526DF40A58",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding MINUTE",
+      "kind": "asciiUnit",
+      "field": "MINUTE",
+      "id": "UF100-070",
+      "requirement": "JP-UF-070",
+      "operation": "unitFormat",
+      "expected": "min",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "40FC3A8B2AE3A02F8D107269BDD4571D3081B3E6DAB8A6E864122D4636BE8483",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding HOUR",
+      "kind": "asciiUnit",
+      "field": "HOUR",
+      "id": "UF100-071",
+      "requirement": "JP-UF-071",
+      "operation": "unitFormat",
+      "expected": "h",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7CAE1495A813343539E94C1B7D417500738B5BA97E9A71A99203FC25F5766B1C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding DAY",
+      "kind": "asciiUnit",
+      "field": "DAY",
+      "id": "UF100-072",
+      "requirement": "JP-UF-072",
+      "operation": "unitFormat",
+      "expected": "d",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "686265929E12172A2A836F30CA9B622639D39EA0CA69E1BFD2EFBCE7EE23FD02",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding WEEK",
+      "kind": "asciiUnit",
+      "field": "WEEK",
+      "id": "UF100-073",
+      "requirement": "JP-UF-073",
+      "operation": "unitFormat",
+      "expected": "wk",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "FA8666C7EF39DA939010A568A83F659051CF2B7ED7C25D9EFD520D1B3B7A8C8C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding YEAR",
+      "kind": "asciiUnit",
+      "field": "YEAR",
+      "id": "UF100-074",
+      "requirement": "JP-UF-074",
+      "operation": "unitFormat",
+      "expected": "yr",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "1B870BC18E3919AB0DBD23BEDA7E79BE66AF6404057E8434A9D27C37D64EA700",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding MONTH",
+      "kind": "asciiUnit",
+      "field": "MONTH",
+      "id": "UF100-075",
+      "requirement": "JP-UF-075",
+      "operation": "unitFormat",
+      "expected": "mo",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "AE748589366F17B236A4A0D5CC5C3E0C19BAE0F7C25B8B324F5F36571705E44F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII catalog binding LITRE",
+      "kind": "asciiUnit",
+      "field": "LITRE",
+      "id": "UF100-076",
+      "requirement": "JP-UF-076",
+      "operation": "unitFormat",
+      "expected": "l",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7F386B66751846CACEF3F8198E0F3570768FC39B4E3445471E2AC559CF3E664F",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding QUETTA",
+      "kind": "asciiPrefix",
+      "prefixName": "QUETTA",
+      "prefixSymbol": "Q",
+      "id": "UF100-077",
+      "requirement": "JP-UF-077",
+      "operation": "unitFormat",
+      "expected": "QOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "B9A843BF0812F11C598988783441823F61A8D106B8CAB3E1C4E25C0CB6DAAE7A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding RONNA",
+      "kind": "asciiPrefix",
+      "prefixName": "RONNA",
+      "prefixSymbol": "R",
+      "id": "UF100-078",
+      "requirement": "JP-UF-078",
+      "operation": "unitFormat",
+      "expected": "ROhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "0A96458B63196A1F9811D10CCAC0E34CBA0FFF4A11F36E1E83B17967AE1744D9",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding YOTTA",
+      "kind": "asciiPrefix",
+      "prefixName": "YOTTA",
+      "prefixSymbol": "Y",
+      "id": "UF100-079",
+      "requirement": "JP-UF-079",
+      "operation": "unitFormat",
+      "expected": "YOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CAD7C0D0E2DEB6122B69B10E709AEBA025558A085498845ED074FDB2CA1CDDAC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ZETTA",
+      "kind": "asciiPrefix",
+      "prefixName": "ZETTA",
+      "prefixSymbol": "Z",
+      "id": "UF100-080",
+      "requirement": "JP-UF-080",
+      "operation": "unitFormat",
+      "expected": "ZOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2BA0FB280E5403BECA577CAB01B29853FB4893078962BB8D8EE32AE89BD8B020",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding EXA",
+      "kind": "asciiPrefix",
+      "prefixName": "EXA",
+      "prefixSymbol": "E",
+      "id": "UF100-081",
+      "requirement": "JP-UF-081",
+      "operation": "unitFormat",
+      "expected": "EOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6BD86EBC3D9A9A5D227267E63E3FAE38E4AE51CFD3161D07E8B80EA547E38DFA",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding PETA",
+      "kind": "asciiPrefix",
+      "prefixName": "PETA",
+      "prefixSymbol": "P",
+      "id": "UF100-082",
+      "requirement": "JP-UF-082",
+      "operation": "unitFormat",
+      "expected": "POhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8907F68C92FB716E0F2BACD13580263BD2F1D6DA2CC26777230020125086FEA7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding TERA",
+      "kind": "asciiPrefix",
+      "prefixName": "TERA",
+      "prefixSymbol": "T",
+      "id": "UF100-083",
+      "requirement": "JP-UF-083",
+      "operation": "unitFormat",
+      "expected": "TOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C99865B1F4A0ECEA1B22393B6892EE55DB5F2D90DA6D4AA157ECF8D91DFD72D6",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding GIGA",
+      "kind": "asciiPrefix",
+      "prefixName": "GIGA",
+      "prefixSymbol": "G",
+      "id": "UF100-084",
+      "requirement": "JP-UF-084",
+      "operation": "unitFormat",
+      "expected": "GOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "22A36B396A6832AFC6AD9C4A2A1313B10AFEC81272E0BE5BB74A220D99F35AEA",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MEGA",
+      "kind": "asciiPrefix",
+      "prefixName": "MEGA",
+      "prefixSymbol": "M",
+      "id": "UF100-085",
+      "requirement": "JP-UF-085",
+      "operation": "unitFormat",
+      "expected": "MOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "8ABA56862F5F28FFE35AED28175C8D0C1AEBB339A15025C90D412119ABFE5DED",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding KILO",
+      "kind": "asciiPrefix",
+      "prefixName": "KILO",
+      "prefixSymbol": "k",
+      "id": "UF100-086",
+      "requirement": "JP-UF-086",
+      "operation": "unitFormat",
+      "expected": "kOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "F1D1D741C525D36A0D19714FB8EE612B100CBD82110434CEF0A4750C66529CA7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding HECTO",
+      "kind": "asciiPrefix",
+      "prefixName": "HECTO",
+      "prefixSymbol": "h",
+      "id": "UF100-087",
+      "requirement": "JP-UF-087",
+      "operation": "unitFormat",
+      "expected": "hOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "C70B2F4813062A23464ED72DD7AB2E71144EC11DBEE65633F874D0E979D78BF0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding DECA",
+      "kind": "asciiPrefix",
+      "prefixName": "DECA",
+      "prefixSymbol": "da",
+      "id": "UF100-088",
+      "requirement": "JP-UF-088",
+      "operation": "unitFormat",
+      "expected": "daOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "7F8A0827C5E1EFE0FD775A9F271C7E8CF2DBC3170EBB23CC35A287AD529AC77E",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding DECI",
+      "kind": "asciiPrefix",
+      "prefixName": "DECI",
+      "prefixSymbol": "d",
+      "id": "UF100-089",
+      "requirement": "JP-UF-089",
+      "operation": "unitFormat",
+      "expected": "dOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "CEA64425880D7BAA5C08ED620A857D94DAD368DD44AC3EE0FE4FE5B89BE264EC",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding CENTI",
+      "kind": "asciiPrefix",
+      "prefixName": "CENTI",
+      "prefixSymbol": "c",
+      "id": "UF100-090",
+      "requirement": "JP-UF-090",
+      "operation": "unitFormat",
+      "expected": "cOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6D3F643F4FE4159B86B97000E770A441ECB5C603F1CD0C962685CAF52F342F7C",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MILLI",
+      "kind": "asciiPrefix",
+      "prefixName": "MILLI",
+      "prefixSymbol": "m",
+      "id": "UF100-091",
+      "requirement": "JP-UF-091",
+      "operation": "unitFormat",
+      "expected": "mOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "2B69CF1BDE8AF214594A240AF16B0BA4E23EB078002C4E460649D6B786AFCE30",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding MICRO",
+      "kind": "asciiPrefix",
+      "prefixName": "MICRO",
+      "prefixSymbol": "\u00B5",
+      "id": "UF100-092",
+      "requirement": "JP-UF-092",
+      "operation": "unitFormat",
+      "expected": "microOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E33EDEEEE20CCDBBF6A22A5C7A04F6EBC0FEFBC01900B6AA9F175A4CA097B7F4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding NANO",
+      "kind": "asciiPrefix",
+      "prefixName": "NANO",
+      "prefixSymbol": "n",
+      "id": "UF100-093",
+      "requirement": "JP-UF-093",
+      "operation": "unitFormat",
+      "expected": "nOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "04C9598AC6C273EEFF7C21D6CC07B6201E47A9D7B7AF1E3C6C07FE9F3477AA56",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding PICO",
+      "kind": "asciiPrefix",
+      "prefixName": "PICO",
+      "prefixSymbol": "p",
+      "id": "UF100-094",
+      "requirement": "JP-UF-094",
+      "operation": "unitFormat",
+      "expected": "pOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "D5E8FBBDCB8B0813FA50C1D1603767238EDF9431FD85A1A49A661F61A57BE919",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding FEMTO",
+      "kind": "asciiPrefix",
+      "prefixName": "FEMTO",
+      "prefixSymbol": "f",
+      "id": "UF100-095",
+      "requirement": "JP-UF-095",
+      "operation": "unitFormat",
+      "expected": "fOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6A4A715510FC7E6FCA84F737D77B617C7F989A8EC9B5E8762F0DABBC1B4E2A2A",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ATTO",
+      "kind": "asciiPrefix",
+      "prefixName": "ATTO",
+      "prefixSymbol": "a",
+      "id": "UF100-096",
+      "requirement": "JP-UF-096",
+      "operation": "unitFormat",
+      "expected": "aOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BA02A58DF9A749134C3713B8932DB206A2DD53B13818E0A8D57B5D3D32D82796",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding ZEPTO",
+      "kind": "asciiPrefix",
+      "prefixName": "ZEPTO",
+      "prefixSymbol": "z",
+      "id": "UF100-097",
+      "requirement": "JP-UF-097",
+      "operation": "unitFormat",
+      "expected": "zOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6E965FC103B682F5AB67D58C4FF82FF109442AFC0B6AAF8357543CEF5C02A579",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding YOCTO",
+      "kind": "asciiPrefix",
+      "prefixName": "YOCTO",
+      "prefixSymbol": "y",
+      "id": "UF100-098",
+      "requirement": "JP-UF-098",
+      "operation": "unitFormat",
+      "expected": "yOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "4880ACC24D85F52022BD16DAD9E5E3EAE48324F4348106DDD07121C7309E3B9D",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding RONTO",
+      "kind": "asciiPrefix",
+      "prefixName": "RONTO",
+      "prefixSymbol": "r",
+      "id": "UF100-099",
+      "requirement": "JP-UF-099",
+      "operation": "unitFormat",
+      "expected": "rOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6BF2EBC1E4A51282C1917827455CCA6F3D8C810AF189AE7433710BC4E85994E0",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    },
+    {
+      "gap": "ASCII prefixed ohm binding QUECTO",
+      "kind": "asciiPrefix",
+      "prefixName": "QUECTO",
+      "prefixSymbol": "q",
+      "id": "UF100-100",
+      "requirement": "JP-UF-100",
+      "operation": "unitFormat",
+      "expected": "qOhm",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "BB1D7DD24119BF878A34E2161E5810E7D4801BE44F1A685529E67E76312B44A2",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
+    }
+  ]
+}

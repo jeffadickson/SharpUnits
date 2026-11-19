@@ -1,0 +1,44 @@
+[DOCUMENT]
+TITLE: Exact unit graph and quantity text
+
+[REQUIREMENT]
+UID: TXT-EXACT-GRAPH
+STATUS: Active
+TITLE: Lossless supported graph text
+STATEMENT: ExactTextFormat shall round-trip registered unit atoms, normalized products and rational powers, nested scalar/offset transforms, atomic converter order and prefix radix/exponent metadata without reducing graphs to dimensions or evaluating unsupported root/product converters. An identity local transform shall preserve the exact parent including its existing scale and origin. Unknown unbound atoms shall return typed failures.
+COMMENT: User request2026-11-16. Implementation ExactTextFormat and its Reader/Writer partials. Verification ExactTextFormatTests.RoundTripRetainsGraphRatherThanOnlyDimensions, graph metadata checks, noncommuting analytical coefficients, shared-DAG and close-rational-alias witnesses. Evidence conformance/exact-text-review.md; no JSR assertion closure is implied.
+
+[REQUIREMENT]
+UID: TXT-EXACT-NUMBER
+STATUS: Active
+TITLE: Retain quantity magnitude family display unit and scale
+STATEMENT: Supported exact quantity text shall retain the public numeric fraction, family and decimal scale, display unit graph and absolute/relative quantity scale. Formatting and parsing shall not route exact values through binary64. Floating log/exp bases must retain the existing backend parameter representation or be rejected explicitly.
+COMMENT: Value-family/scale codec, not persistence of hidden Java runtime number-class or input-promotion provenance. Tests quantity family/scale roundtrips,39-digit decimal factor, large integer and binary/rational values. Existing JavaNumber arithmetic promotion policies remain unchanged.
+
+[REQUIREMENT]
+UID: TXT-EXACT-ERROR
+STATUS: Active
+TITLE: Typed expected text failures
+STATEMENT: Expected parse and format failures shall use stable TextErrorCode, public parameter and zero-based UTF16 position where meaningful. TextResult Match and Bind shall preserve failure identity and short-circuit later work; faults and cancellation shall propagate. Failed parsing shall not mutate bindings or registered units.
+COMMENT: Tests malformed tokens, zero divisor positions, undefined errors, null handlers, failed continuation, cancellation and subsequent valid parse. Legacy throwing APIs remain available; arithmetic/conversion/factory boundaries outside this codec are not silently reclassified.
+
+[REQUIREMENT]
+UID: TXT-EXACT-BOUNDS
+STATUS: Active
+TITLE: Bounded input output and graph matching
+STATEMENT: Exact text shall be bounded to8192 UTF16 characters,64 nested expression levels and existing core graph/numeric limits. Successful formatting shall produce parseable text within these limits. Graph matching shall use reference-pair memoization and a65536-comparison work cap; rendering shall have an8192-node visit cap. Malformed Unicode names shall not produce successful lossy text.
+COMMENT: Existing core16384-bit numbers,4096 decimal token/scale limits,128 product atoms and exponent magnitude1024 apply. Tests nested inputs/output limits, shared-DAG alias, malformed name, FsCheck seeds385,1611 and385,1613 and65536 UTF16 escape sweep. Finite execution and source inspection, not a formal complexity proof. Dafny trial not performed.
+
+[REQUIREMENT]
+UID: TXT-EXACT-BRIDGE
+STATUS: Active
+TITLE: Preserve legacy behavior while closing decimal and affine parser gaps
+STATEMENT: Legacy parsers shall preserve exact registrations and previously successful grammar/association rules, while accepting the demonstrated decimal-factor and emitted Fahrenheit expression forms through bounded exact interpretation or the existing canonical definition. Legacy quantities remain explicit double projections; callers needing full retained values shall use ExactTextFormat.
+COMMENT: Regression witnesses LegacyDecimalFactorUsesItsExactHalfScale and LegacyEmittedFahrenheitExpressionCanBeParsed, existing parser regression suite and all pinned corpora. Existing signed32-bit legacy integer-factor and malformed-power limits remain intact; the native exact codec supports larger bounded integers safely.
+
+[REQUIREMENT]
+UID: TXT-EXACT-GRAMMAR
+STATUS: Active
+TITLE: Explicit native exact grammar and reference differences
+STATEMENT: Native exact syntax shall have documented conventional operator association, complete input consumption, explicit numeric-family and quantity-scale spellings, quoted bindings and an alias-independent dimensionless unit atom. Reference observations shall retain accepted syntax, raw numeric metadata and intentional Java/native grammar differences rather than forcing false parity.
+COMMENT: Native rational powers are parenthesized; unit() is dimensionless and unit(JSON-string) names an explicit binding. transform stores converter composition order. Tests aliases, power/division precedence, culture independence and relative markers;16 Java/native declared contracts with3 intentional acceptance differences and32 paired numeric observations. See docs/exact-text-format.md.

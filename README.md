@@ -4,7 +4,23 @@ C# dimensional analysis, electrical quantities, and symbolic engineering equatio
 
 ## Status
 
-Alpha prototype. Source baseline currently exists in the local project archive; the full source import to GitHub is pending. Do not treat CI as passing until the complete source is uploaded and workflows execute.
+GitHub CI is disabled at the user's request. The .NET and Java workflows are disabled
+in GitHub and retain only manual dispatch triggers in source. Re-enable them explicitly
+before requesting a manual GitHub run. Local build and test commands remain available.
+
+Alpha .NET 11 library. Java compatibility work is in progress; passing tests do not
+imply full JSR 385 conformance. See the [assertion review](conformance/quantity-interface-review.md)
+for executable evidence and remaining differences.
+
+The first [reviewed local behavioral closure](conformance/local-closure-51-A2.md)
+covers factory scale assertion51-A2, with Windows, Ubuntu/WSL and pinned Java
+evidence. Ledger:1 VERIFIED,98 PARTIAL,14 GAP; this is not full certification.
+
+Use stable SDK11.0.100 (C#15); runtime consumers require .NET11. See the
+[migration/reuse assessment](docs/net11-migration-and-library-assessment.md) and
+[five completion work packages](docs/package-completion-five.md).
+
+The [current compliance audit](conformance/release-compliance-audit.md) distinguishes exact Java test shape from native domain semantics. Full semantic compatibility remains the release objective; the [modern .NET direction](docs/modern-dotnet-compatibility-design.md) keeps API adaptations and unresolved behavior explicit.
 
 ## Engineering goals
 
@@ -13,10 +29,38 @@ Alpha prototype. Source baseline currently exists in the local project archive; 
 - Typed Ohm's law and electrical quantity algebra
 - Dimension-checked symbolic solving using optional AngouriMath adapter
 - Traceable requirements, STRIDE assessment, XML API documentation and DocFX
-- Cross-platform .NET 8 build and tests
+- Cross-platform .NET 11 build and tests
 
 See GitHub Issues for work tracking.
+
+For temperatures, see [absolute values, intervals, and shifted units](docs/temperature-semantic-envelope.md).
+The dedicated temperature types enforce physical arithmetic rules; `JavaQuantityAdapter`
+follows Indriya's compatibility conventions.
+
+`IJavaQuantityFactory.CreateJavaQuantity` creates quantities retaining their display
+unit and absolute/relative scale. See the [factory review and examples](conformance/factory-fifty-review.md).
+
+`QuantityTextFormat.ParseJavaQuantity` retains display values and units for a
+documented subset of Java decimal/rational and linear compound-unit syntax. It also
+accepts whitespace after `÷` and the `℃` alias. See the
+[parser gap implementations and evidence](conformance/parser-gap-fifty-review.md).
+The [100-review grammar increment](conformance/parser-grammar-hundred-review.md)
+adds superscript/double-star powers, colon roots, integer unit factors and automatic
+SI prefixes. Java-specific default-exponent conventions and remaining limits are explicit.
+
+`JavaNumber`, `JavaUnit` and `JavaNumberQuantity` provide an exact-number and structural-unit core. Use `IExactJavaQuantityFactory` for original integer/decimal inputs; `JavaQuantityAdapter.ToExact()` promotes an existing display double. Default `JavaNumber.Add`/`Subtract` preserve large integer magnitude; explicitly named `AddPinnedIndriya`/`SubtractPinnedIndriya` reproduce the measured Java narrowing bug. See the [verification repairs](conformance/verification-repair.md). See the [core reconciliation and migration notes](conformance/work-package-one-review.md) and [runnable example](examples/ExactJavaCore.cs).
+
+For recoverable numeric input failures, use `JavaNumber.ParseDecimal` and
+`JavaNumber.ConvertNumeric`. Their typed results support `Match` and short-circuiting
+`Bind`, with stable error codes and input locations. The existing throwing APIs remain
+available. See [typed numeric errors](docs/typed-numeric-errors.md) and the
+[example](examples/TypedNumericErrors.cs).
+
+For lossless registered unit graphs and retained numeric values, use `ExactTextFormat` with `ParseUnit`/`ParseQuantity` and typed `TextResult` failures. It retains converter order, prefix metadata, decimal scale and absolute/relative scale. See [exact text and typed errors](docs/exact-text-format.md) and the [runnable example](examples/ExactText.cs).
 
 ## Requirements closure
 
 The [Java gap inventory](docs/java-parity-gap-analysis.md) and [closure policy](docs/requirements-closure.md) track each JP/EE requirement independently. GitHub issue closure does not imply verified feature parity.
+
+Current numeric-boundary work: [typed errors and survivor follow-up](conformance/typed-errors.md).
+Historical core verification and reviewed residuals: [mutation debt reduction](conformance/mutation-debt.md).

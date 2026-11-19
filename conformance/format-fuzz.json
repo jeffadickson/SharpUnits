@@ -1,0 +1,10 @@
+{
+  "seed": 385415,
+  "cases": 512,
+  "mismatches": 0,
+  "counterexamples": [],
+  "inputSha256": "6FFD62C1FFF6B2A98BAA77742AD071F0DE298E086D89270018EDE3E42AA4B7C9",
+  "javaOutputSha256": "1AF4F77A642CE8B0628257F13C743270363BED3455597B90BF5BA8B394255AAD",
+  "dotnetOutputSha256": "DA59549E328F7000B70D32F209DD092879A80CDEF7299EBD186C71450CBB5DD8",
+  "limitations": "Seeded sampling, not exhaustive binary64 verification; arbitrary Java Number types excluded."
+}

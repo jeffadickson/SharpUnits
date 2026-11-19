@@ -1,7 +1,6 @@
 name: .NET CI
 on:
-  push:
-  pull_request:
+  # Automatic CI disabled at the user's request. Workflow is also disabled in GitHub.
   workflow_dispatch:
 jobs:
   test:
@@ -23,7 +22,7 @@ jobs:
           echo "Java upstream sources available for test porting"
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x'
+          dotnet-version: '11.0.x'
       - name: Inventory upstream Java tests
         if: matrix.os == 'ubuntu-latest'
         run: python3 tools/inventory_java_tests.py
@@ -33,9 +32,12 @@ jobs:
       - name: Audit TCK test mappings
         if: matrix.os == 'ubuntu-latest'
         run: python3 tools/audit_tck_test_links.py
+      - name: Install verifier development tools
+        if: matrix.os == 'ubuntu-latest'
+        run: python3 -m pip install -r tools/verification-requirements.txt
       - name: Test differential comparison harness
         if: matrix.os == 'ubuntu-latest'
-        run: python3 -m unittest discover -s tools -p 'test_compare_*.py'
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
       - name: Require complete source tree
         shell: bash
         run: |
@@ -44,13 +46,21 @@ jobs:
       - name: Restore core tests
         run: dotnet restore tests/SharpUnits.Tests/SharpUnits.Tests.csproj
       - name: Test core
-        run: dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release --no-restore
+        run: dotnet test tests/SharpUnits.Tests/SharpUnits.Tests.csproj -c Release --no-restore --logger "trx;LogFileName=results.trx" --results-directory qualification-test-results
+      - name: Capture revision-bound test evidence
+        run: dotnet run --file tools/QualificationBundle.cs -- ${{ matrix.os == 'windows-latest' && 'windows' || 'ubuntu' }} qualification qualification-test-results/results.trx
+      - name: Upload qualification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-${{ matrix.os == 'windows-latest' && 'windows' || 'ubuntu' }}
+          path: qualification/
+          if-no-files-found: error
       - name: Execute shared .NET conformance fixtures
         if: matrix.os == 'ubuntu-latest'
         shell: bash
         run: |
           dotnet build src/SharpUnits.ConformanceRunner/SharpUnits.ConformanceRunner.csproj -c Release --nologo >&2
-          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net10.0/SharpUnits.ConformanceRunner.dll conformance/cases.json > dotnet-conformance.jsonl
+          dotnet src/SharpUnits.ConformanceRunner/bin/Release/net11.0/SharpUnits.ConformanceRunner.dll conformance/cases.json > dotnet-conformance.jsonl
           python3 tools/check_fixture_expectations.py conformance/cases.json dotnet-conformance.jsonl
       - name: Upload normalized .NET conformance results
         if: matrix.os == 'ubuntu-latest' && always()
@@ -65,7 +75,7 @@ jobs:
         shell: bash
         run: |
           dotnet build demo/SharpUnits.BodeDemo.csproj -c Release --nologo >&2
-          dotnet demo/bin/Release/net10.0/SharpUnits.BodeDemo.dll > bode-output.csv
+          dotnet demo/bin/Release/net11.0/SharpUnits.BodeDemo.dll > bode-output.csv
           python3 tools/verify_bode_export.py bode-output.csv
       - name: Upload Bode numerical evidence
         if: matrix.os == 'ubuntu-latest' && always()

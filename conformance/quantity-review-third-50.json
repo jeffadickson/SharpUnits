@@ -1,0 +1,1395 @@
+{
+  "startingCommit": "9065fe8",
+  "ciPolicy": "GitHub CI remains disabled; local .NET 10 and pinned Java evidence only",
+  "reviews": [
+    {
+      "iteration": 1,
+      "case": "Q150-01",
+      "hypothesis": "Inverse preserves decimal reciprocal of .123 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-01",
+        "result": 8.130081300813009
+      },
+      "dotnetBefore": {
+        "id": "Q150-01",
+        "result": 8.130081300813007
+      },
+      "dotnetAfter": {
+        "id": "Q150-01",
+        "result": 8.130081300813009
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-01",
+        "result": 8.130081300813009
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 2,
+      "case": "Q150-02",
+      "hypothesis": "Inverse preserves decimal reciprocal of .29 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-02",
+        "result": 3.4482758620689653
+      },
+      "dotnetBefore": {
+        "id": "Q150-02",
+        "result": 3.4482758620689657
+      },
+      "dotnetAfter": {
+        "id": "Q150-02",
+        "result": 3.4482758620689653
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-02",
+        "result": 3.4482758620689653
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 3,
+      "case": "Q150-03",
+      "hypothesis": "Inverse preserves decimal reciprocal of .7 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "dotnetBefore": {
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "dotnetAfter": {
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-03",
+        "result": 1.4285714285714286
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 4,
+      "case": "Q150-04",
+      "hypothesis": "Inverse preserves decimal reciprocal of .3 A (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "dotnetBefore": {
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "dotnetAfter": {
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-04",
+        "result": 3.3333333333333335
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 5,
+      "case": "Q150-05",
+      "hypothesis": "Inverse preserves decimal reciprocal of -.123 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-05",
+        "result": -8.130081300813009
+      },
+      "dotnetBefore": {
+        "id": "Q150-05",
+        "result": -8.130081300813007
+      },
+      "dotnetAfter": {
+        "id": "Q150-05",
+        "result": -8.130081300813009
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-05",
+        "result": -8.130081300813009
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 6,
+      "case": "Q150-06",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e-300 mA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-06",
+        "result": 1e+300
+      },
+      "dotnetBefore": {
+        "id": "Q150-06",
+        "result": 9.999999999999999e+299
+      },
+      "dotnetAfter": {
+        "id": "Q150-06",
+        "result": 1e+300
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-06",
+        "result": 1e+300
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 7,
+      "case": "Q150-07",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e-200 mA (relative) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "dotnetBefore": {
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "dotnetAfter": {
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-07",
+        "result": 1e+200
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 8,
+      "case": "Q150-08",
+      "hypothesis": "Inverse preserves decimal reciprocal of 1e200 k\u03a9 (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "dotnetBefore": {
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "dotnetAfter": {
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-08",
+        "result": 1e-200
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 9,
+      "case": "Q150-09",
+      "hypothesis": "Inverse preserves decimal reciprocal of .17 k\u03a9 (relative) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-09",
+        "result": 5.882352941176471
+      },
+      "dotnetBefore": {
+        "id": "Q150-09",
+        "result": 5.88235294117647
+      },
+      "dotnetAfter": {
+        "id": "Q150-09",
+        "result": 5.882352941176471
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-09",
+        "result": 5.882352941176471
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 10,
+      "case": "Q150-10",
+      "hypothesis": "Inverse preserves decimal reciprocal of .11 quarterA (absolute) without rounded SI intermediate",
+      "source": "NumberQuantity.inverse; DefaultNumberSystem.reciprocal; RationalNumber.doubleValue",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "dotnetBefore": {
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "dotnetAfter": {
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-10",
+        "result": 9.090909090909092
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 11,
+      "case": "Q150-11",
+      "hypothesis": "Scalar division of .7 A by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-11"
+      },
+      "dotnetBefore": {
+        "id": "Q150-11",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-11",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-11",
+        "result": 0.23333333333333334
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 12,
+      "case": "Q150-12",
+      "hypothesis": "Scalar division of -.7 A by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-12"
+      },
+      "dotnetBefore": {
+        "id": "Q150-12",
+        "result": -0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-12",
+        "result": -0.23333333333333334
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-12",
+        "result": -0.23333333333333334
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 13,
+      "case": "Q150-13",
+      "hypothesis": "Scalar division of .1 mA by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.03333333333333333,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-13"
+      },
+      "dotnetBefore": {
+        "id": "Q150-13",
+        "result": 0.03333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-13",
+        "result": 0.03333333333333333
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-13",
+        "result": 0.03333333333333333
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 14,
+      "case": "Q150-14",
+      "hypothesis": "Scalar division of .3 mA by 7 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.04285714285714286,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-14"
+      },
+      "dotnetBefore": {
+        "id": "Q150-14",
+        "result": 0.04285714285714286
+      },
+      "dotnetAfter": {
+        "id": "Q150-14",
+        "result": 0.04285714285714286
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-14",
+        "result": 0.04285714285714286
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 15,
+      "case": "Q150-15",
+      "hypothesis": "Scalar division of 20.1 \u00b0C by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -175.4,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-15"
+      },
+      "dotnetBefore": {
+        "id": "Q150-15",
+        "result": -175.39999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q150-15",
+        "result": -175.4
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-15",
+        "result": -175.4
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 16,
+      "case": "Q150-16",
+      "hypothesis": "Scalar division of -20.1 \u00b0C by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -188.8,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-16"
+      },
+      "dotnetBefore": {
+        "id": "Q150-16",
+        "result": -188.79999999999998
+      },
+      "dotnetAfter": {
+        "id": "Q150-16",
+        "result": -188.8
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-16",
+        "result": -188.8
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 17,
+      "case": "Q150-17",
+      "hypothesis": "Scalar division of 20.1 \u00b0C by 3 preserves decimal promotion and relative semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 6.7,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-17"
+      },
+      "dotnetBefore": {
+        "id": "Q150-17",
+        "result": 6.7
+      },
+      "dotnetAfter": {
+        "id": "Q150-17",
+        "result": 6.7
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-17",
+        "result": 6.7
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 18,
+      "case": "Q150-18",
+      "hypothesis": "Scalar division of .1 \u00b0C by 10 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": -245.825,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-18"
+      },
+      "dotnetBefore": {
+        "id": "Q150-18",
+        "result": -245.825
+      },
+      "dotnetAfter": {
+        "id": "Q150-18",
+        "result": -245.825
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-18",
+        "result": -245.825
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 19,
+      "case": "Q150-19",
+      "hypothesis": "Scalar division of .7 \u00b0C by 3 preserves decimal promotion and relative semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-19"
+      },
+      "dotnetBefore": {
+        "id": "Q150-19",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-19",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-19",
+        "result": 0.23333333333333334
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 20,
+      "case": "Q150-20",
+      "hypothesis": "Scalar division of .7 quarterA by 3 preserves decimal promotion and absolute semantics",
+      "source": "NumberQuantity.divide(Number); ScaleHelper.scalarMultiplication; DefaultNumberSystem.divide",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": 0.23333333333333334,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-20"
+      },
+      "dotnetBefore": {
+        "id": "Q150-20",
+        "result": 0.2333333333333333
+      },
+      "dotnetAfter": {
+        "id": "Q150-20",
+        "result": 0.23333333333333334
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-20",
+        "result": 0.23333333333333334
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 21,
+      "case": "Q150-21",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-21",
+        "result": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-21",
+        "result": -2.08e-14
+      },
+      "dotnetAfter": {
+        "id": "Q150-21",
+        "result": 0
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-21",
+        "result": 0
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 22,
+      "case": "Q150-22",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-22",
+        "result": 20.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-22",
+        "result": 19.999999999999982
+      },
+      "dotnetAfter": {
+        "id": "Q150-22",
+        "result": 20
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-22",
+        "result": 20
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 23,
+      "case": "Q150-23",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-23",
+        "result": 100.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-23",
+        "result": 99.99999999999999
+      },
+      "dotnetAfter": {
+        "id": "Q150-23",
+        "result": 100
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-23",
+        "result": 100
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 24,
+      "case": "Q150-24",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-24",
+        "result": 32.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-24",
+        "result": 32.000000000000036
+      },
+      "dotnetAfter": {
+        "id": "Q150-24",
+        "result": 32
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-24",
+        "result": 32
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 25,
+      "case": "Q150-25",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-25",
+        "result": 68.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-25",
+        "result": 68.00000000000003
+      },
+      "dotnetAfter": {
+        "id": "Q150-25",
+        "result": 68
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-25",
+        "result": 68
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 26,
+      "case": "Q150-26",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-26",
+        "result": 212.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-26",
+        "result": 212.00000000000003
+      },
+      "dotnetAfter": {
+        "id": "Q150-26",
+        "result": 212
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-26",
+        "result": 212
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 27,
+      "case": "Q150-27",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-27",
+        "result": 10.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-27",
+        "result": 10
+      },
+      "dotnetAfter": {
+        "id": "Q150-27",
+        "result": 10
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-27",
+        "result": 10
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 28,
+      "case": "Q150-28",
+      "hypothesis": "Canonical Fahrenheit To uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-28",
+        "result": 18.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-28",
+        "result": 18
+      },
+      "dotnetAfter": {
+        "id": "Q150-28",
+        "result": 18
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-28",
+        "result": 18
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 29,
+      "case": "Q150-29",
+      "hypothesis": "Canonical Fahrenheit Subtract uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-29",
+        "result": -459.67
+      },
+      "dotnetBefore": {
+        "id": "Q150-29",
+        "result": -459.66999999999996
+      },
+      "dotnetAfter": {
+        "id": "Q150-29",
+        "result": -459.67
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-29",
+        "result": -459.67
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 30,
+      "case": "Q150-30",
+      "hypothesis": "Canonical Fahrenheit ScalarMultiply uses exact 5/9 scale and 459.67 degree shift at zero tolerance",
+      "source": "ReferenceRunner Fahrenheit unit definition; AbstractUnit.multiply/divide/shift; ScaleHelper",
+      "status": "CASE_MATCHED",
+      "java": {
+        "absoluteTolerance": 0.0,
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "dotnetBefore": {
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "dotnetAfter": {
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-30",
+        "result": 523.67
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 31,
+      "case": "Q150-31",
+      "hypothesis": "A Divide A result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-31",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-31",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-31",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-31",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 32,
+      "case": "Q150-32",
+      "hypothesis": "V Divide V result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-32",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-32",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-32",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-32",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 33,
+      "case": "Q150-33",
+      "hypothesis": "\u03a9 Divide \u03a9 result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-33",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-33",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-33",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-33",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 34,
+      "case": "Q150-34",
+      "hypothesis": "K Divide K result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-34",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-34",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-34",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-34",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 35,
+      "case": "Q150-35",
+      "hypothesis": "mA Divide mA result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-35",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-35",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-35",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-35",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 36,
+      "case": "Q150-36",
+      "hypothesis": "k\u03a9 Divide k\u03a9 result unit equality against 1, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-36",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-36",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-36",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-36",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 37,
+      "case": "Q150-37",
+      "hypothesis": "A Multiply A result unit equality against A\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-37",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-37",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-37",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-37",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 38,
+      "case": "Q150-38",
+      "hypothesis": "V Multiply V result unit equality against V\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-38",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-38",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-38",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-38",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 39,
+      "case": "Q150-39",
+      "hypothesis": "\u03a9 Multiply \u03a9 result unit equality against \u03a9\u00b2, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": true,
+        "id": "Q150-39",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-39",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-39",
+        "result": true
+      },
+      "originalMismatch": true,
+      "finalDotnet": {
+        "id": "Q150-39",
+        "result": true
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 40,
+      "case": "Q150-40",
+      "hypothesis": "A Multiply \u03a9 result unit equality against V, without inferring identity from dimension",
+      "source": "ProductUnit/AbstractUnit multiply/divide/equals",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "id": "Q150-40",
+        "absoluteTolerance": 0.0
+      },
+      "dotnetBefore": {
+        "id": "Q150-40",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-40",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-40",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 41,
+      "case": "Q150-41",
+      "hypothesis": "Division rejects non-Number bool argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-41"
+      },
+      "dotnetBefore": {
+        "id": "Q150-41",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-41",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-41",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 42,
+      "case": "Q150-42",
+      "hypothesis": "Division rejects non-Number bool argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-42"
+      },
+      "dotnetBefore": {
+        "id": "Q150-42",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-42",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-42",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 43,
+      "case": "Q150-43",
+      "hypothesis": "Division rejects non-Number string argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-43"
+      },
+      "dotnetBefore": {
+        "id": "Q150-43",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-43",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-43",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 44,
+      "case": "Q150-44",
+      "hypothesis": "Division rejects non-Number string argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-44"
+      },
+      "dotnetBefore": {
+        "id": "Q150-44",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-44",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-44",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 45,
+      "case": "Q150-45",
+      "hypothesis": "Division rejects non-Number char argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-45"
+      },
+      "dotnetBefore": {
+        "id": "Q150-45",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-45",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-45",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 46,
+      "case": "Q150-46",
+      "hypothesis": "Division rejects non-Number datetime argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-46"
+      },
+      "dotnetBefore": {
+        "id": "Q150-46",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-46",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-46",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 47,
+      "case": "Q150-47",
+      "hypothesis": "Division rejects non-Number enum argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-47"
+      },
+      "dotnetBefore": {
+        "id": "Q150-47",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-47",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-47",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 48,
+      "case": "Q150-48",
+      "hypothesis": "Division rejects non-Number dbnull argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-48"
+      },
+      "dotnetBefore": {
+        "id": "Q150-48",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-48",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-48",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 49,
+      "case": "Q150-49",
+      "hypothesis": "Division rejects non-Number string argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-49"
+      },
+      "dotnetBefore": {
+        "id": "Q150-49",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-49",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-49",
+        "result": false
+      },
+      "exactFinalOutput": true
+    },
+    {
+      "iteration": 50,
+      "case": "Q150-50",
+      "hypothesis": "Division rejects non-Number string argument before coercion or zero-division handling",
+      "source": "Quantity.divide(Number); JavaQuantityAdapter.Divide(IConvertible)/NumericScalar",
+      "scope": "Java Number parameter admissibility versus direct CLR scalar division, not invalid Java arithmetic",
+      "status": "CASE_MATCHED",
+      "java": {
+        "result": false,
+        "absoluteTolerance": 0.0,
+        "id": "Q150-50"
+      },
+      "dotnetBefore": {
+        "id": "Q150-50",
+        "result": false
+      },
+      "dotnetAfter": {
+        "id": "Q150-50",
+        "result": false
+      },
+      "originalMismatch": false,
+      "finalDotnet": {
+        "id": "Q150-50",
+        "result": false
+      },
+      "exactFinalOutput": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "dotnetTestsPassed": 531,
+      "differentialCases": 168,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "dotnetTestsPassed": 541,
+      "differentialCases": 178,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "dotnetTestsPassed": 551,
+      "differentialCases": 188,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "dotnetTestsPassed": 561,
+      "differentialCases": 198,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "dotnetTestsPassed": 571,
+      "differentialCases": 208,
+      "mismatches": 0
+    }
+  ],
+  "completedDate": "2026-10-22",
+  "reviewStartCommit": "7fdd759",
+  "interpretation": "50 source/behavior scenarios compiled/tested in five groups of ten, not 50 commits or formally verified TCK assertions. Last ten are Number parameter admissibility probes with direct CLR Divide calls.",
+  "failingCaseOutcomesCorrected": 27,
+  "exactFinalCases": 50,
+  "finalVerification": {
+    "dotnetTestsPassed": 571,
+    "differentialCases": 208,
+    "mismatchesOutsideDeclaredTolerances": 0,
+    "pythonHarnessTestsPassed": 10,
+    "independentFractionChecks": 200,
+    "ci": "DISABLED_BY_USER; local evidence only"
+  },
+  "pins": {
+    "tck": {
+      "repository": "unitsofmeasurement/unit-tck",
+      "commit": "96da910db2a9aca61580a14125dde94b5f1c0285"
+    },
+    "indriya": {
+      "repository": "unitsofmeasurement/indriya",
+      "commit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a"
+    },
+    "note": "Pinned reference commit identifiers for test inventory and future differential runner."
+  },
+  "tckSummary": {
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "notes": [
+    "All fifty new fixtures use zero absolute tolerance. Earlier Q100-35 and Q100-36 still retain documented bounded agreement.",
+    "Fahrenheit strict fixtures deliberately strengthen earlier loose-tolerance checks; canonical factory coefficients are recognized by converter equality and interpreted from the defined scale/shift.",
+    "Unit equality is checked directly against Java: A multiplied by ohm is not the named volt unit despite dimension compatibility.",
+    "Final division admission cases require new fixture instrumentation but no production input-guard correction. Baselines use unchanged production code after instrumentation.",
+    "General arbitrary Number precision, type identity, compound expression identity, affine inverses and extreme finite coherent storage limits remain open."
+  ],
+  "normalizedSourceSha256": {
+    "src\\SharpUnits\\JavaQuantityAdapter.cs": "53b432f57e804c6743a6b671775a34e61633bdfd6c385dc58bbe125ded645d4c",
+    "src\\SharpUnits\\JavaDoubleArithmetic.cs": "b8fa090e045ff35d69a99d49bf5b6aa9c5b0aab228045e07e1f5a44d3eb34f96",
+    "conformance\\java-reference\\cases.json": "2fd9f4e467e23a9cd71818a63a062323fb13e5b6b5be6e42e20c708aa5a5484c"
+  }
+}

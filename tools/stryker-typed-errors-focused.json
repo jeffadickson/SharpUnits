@@ -1,0 +1,22 @@
+{
+  "stryker-config": {
+    "project": "SharpUnits.csproj",
+    "test-projects": [
+      "tests/SharpUnits.Tests/SharpUnits.Tests.csproj"
+    ],
+    "mutate": [
+      "**/NumericResult.cs",
+      "**/JavaNumber.cs{3212..5580}",
+      "**/JavaNumber.cs{7697..9544}",
+      "**/JavaNumber.cs{16864..17292}"
+    ],
+    "test-case-filter": "WorkPackage=1|FullyQualifiedName~Tck|FullyQualifiedName~JavaUnitAdapter|FullyQualifiedName~JavaParityThirty|FullyQualifiedName~ExactQuantitySurface",
+    "concurrency": 1,
+    "reporters": [
+      "json",
+      "cleartext"
+    ],
+    "disable-mix-mutants": true,
+    "mutation-level": "Standard"
+  }
+}

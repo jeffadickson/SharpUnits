@@ -1,0 +1,23 @@
+{
+  "implementationCommit": "5f7d1d3d933ad03781cf71a333a9506f7b8b78f4",
+  "branch": "codex/quantity-pinned-evidence",
+  "executionManifest": {
+    "path": "mutation-debt-evidence.json",
+    "sha256": "5AA03A2CAF75BCCA1924EAE9B1D194403E12327D3D7A3416B1687BDF76635480"
+  },
+  "independentAgentReview": {
+    "mergedFileHashesMatched": 8,
+    "externalHumanReview": false,
+    "path": "mutation-debt-review.md",
+    "sourceHashesMatched": 218,
+    "rawEvidenceHashesMatched": 31
+  },
+  "postCommitReferenceLock": {
+    "logSha256": "C2A083B9D217BC21E0A468DEA8D4CB737FAEE45EF18729CA27D1574E2B699352",
+    "result": "PASS"
+  },
+  "ciStateEvidenceSha256": "10180D8B8B4615899D0BA10B54489037E408232F67FBA30C2C21648B0BFCC198",
+  "ci": "Both workflows disabled_manually; no dispatch",
+  "qualification": "Bounded local verification; no exhaustive proof or formal TCK closure",
+  "formalVerifiedAssertions": 0
+}

@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "operation": "formatQuantity",
+      "id": "FORMAT-LIMIT-DECIMAL",
+      "from": "A",
+      "java": "1.2300 A",
+      "dotnet": "1.23 A",
+      "disposition": "KNOWN_INCOMPATIBILITY",
+      "text": "1.2300 A"
+    },
+    {
+      "operation": "formatQuantity",
+      "id": "FORMAT-LIMIT-RATIONAL",
+      "from": "A",
+      "java": "0.3333333333333333333333333333333333 A",
+      "dotnet": "0.3333333333333333 A",
+      "disposition": "KNOWN_INCOMPATIBILITY",
+      "text": "1÷3 A"
+    },
+    {
+      "operation": "formatQuantity",
+      "value": 20,
+      "id": "FORMAT-LIMIT-FAHRENHEIT",
+      "from": "°F",
+      "java": "20 ((K*5)/9)+459.67",
+      "disposition": "KNOWN_INCOMPATIBILITY",
+      "dotnet": "20 °F"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Development verification only; no production-library Python dependency.
+coverage==7.17.0
+hypothesis==6.170.12
+sortedcontainers==2.4.0

@@ -8,16 +8,30 @@
       "value": 250,
       "from": "mA",
       "to": "A",
-      "expected": 0.25
+      "expected": 0.25,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "6F7360C1EFFFBD10B17435D638C3C3B2191FC3F7CAF63F36591AB8F6B12991FA",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "JP-009-001",
       "requirement": "JP-009",
       "operation": "convert",
       "value": 212,
-      "from": "°F",
-      "to": "°C",
-      "expected": 100
+      "from": "\u00B0F",
+      "to": "\u00B0C",
+      "expected": 100,
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "E94142E3344797026A2C52E1BC5B99B9BB89E0239ED68F7613FBEF9F89BB86F7",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     },
     {
       "id": "JP-004-001",
@@ -26,7 +40,14 @@
       "value": 1,
       "from": "V",
       "to": "A",
-      "expectedError": "INCOMPATIBLE_DIMENSION"
+      "expectedError": "INCOMPATIBLE_DIMENSION",
+      "absoluteTolerance": 0,
+      "oracle": {
+        "kind": "PINNED_IMPLEMENTATION_OBSERVATION",
+        "indriyaCommit": "07a9aac9a46695ea0a4acf95b74ab7d92766f49a",
+        "observationSha256": "A3B4D3EF0C28CC339ABD93998AA5EE98B70149D840A857FE69DEE461D29BC0A4",
+        "scope": "Legacy normalized projection; raw Java representation/full structural identity not observed. Passing projection is not full behavioral conformance."
+      }
     }
   ]
 }

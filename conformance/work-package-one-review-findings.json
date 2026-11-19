@@ -1,0 +1,53 @@
+{
+  "review": "Work package 1 source review; not independent human review",
+  "findings": [
+    {
+      "id": "WP1-R1",
+      "finding": "Java shift(double) promotes its offset to RationalNumber, whereas shift(Number) retains the numeric family.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "action": "Preserve the double overload's rational offset and test native standard Fahrenheit import independently of an explicit BigDecimal shift.",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    },
+    {
+      "id": "WP1-R2",
+      "finding": "ExpConverter multiplies its argument by log(base) through Calculator before taking the exponential.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "action": "Match numeric promotion before binary projection; add explicit-tolerance nonlinear differential cases.",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    },
+    {
+      "id": "WP1-R3",
+      "finding": "Immutable DAG unit hashes are recomputed recursively.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "action": "Cache structural hashes on immutable graph construction and exercise shared subgraphs without making an unmeasured timing claim.",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    },
+    {
+      "id": "WP1-R4",
+      "finding": "Pinned RationalNumber equality can equate distinct fractions whose decimal128 projections match, while Java's rational hash still uses exact components.",
+      "status": "IMPLEMENTED_INTENTIONAL_CLR_DIFFERENCE",
+      "action": "Match rational equality but keep CLR equality/hash consistency; retain an actual dual-runtime hash-law observation."
+    },
+    {
+      "id": "WP1-R5",
+      "action": "Validate public JavaUnit.Base/Coherent dimension inputs and add explicit malformed-state tests.",
+      "finding": "Default RationalDimension contains unnormalized default Rational values and must not be silently imported as dimensionless.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    },
+    {
+      "action": "Introduce an explicit double-to-decimal-rational path for primitive unit overloads and affine scale coefficients; compare 2^63 boundary inputs against Java.",
+      "id": "WP1-R6",
+      "finding": "Primitive unit double overloads use RationalNumber.of(double) before numeric narrowing; the Number path saturates at the signed-long boundary.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    },
+    {
+      "action": "Represent integer-power prefix operations, normalize mixed scale/power composition, retain prefix identity on imports and verify decimal/binary prefix equality against Java.",
+      "status": "CORRECTED_AND_LOCALLY_VERIFIED",
+      "finding": "Pinned prefix converters retain PowerOfInt base/exponent identity and differ structurally from an equal rational multiplier, except the exponent-one construction shortcut.",
+      "id": "WP1-R7",
+      "evidence": "work-package-one-verification.json; 3073 tests and 1734 differential cases. Local evidence only; not a formal TCK closure."
+    }
+  ]
+}

@@ -1,0 +1,2608 @@
+{
+  "checkpoints": [
+    {
+      "iteration": 10,
+      "build": "PASS",
+      "testsPassed": 972,
+      "matchedObligations": 10,
+      "mismatches": 0
+    },
+    {
+      "iteration": 20,
+      "build": "PASS",
+      "testsPassed": 982,
+      "matchedObligations": 20,
+      "mismatches": 0
+    },
+    {
+      "iteration": 30,
+      "build": "PASS",
+      "testsPassed": 992,
+      "matchedObligations": 30,
+      "mismatches": 0
+    },
+    {
+      "iteration": 40,
+      "build": "PASS",
+      "testsPassed": 1002,
+      "matchedObligations": 40,
+      "mismatches": 0
+    },
+    {
+      "iteration": 50,
+      "build": "PASS",
+      "testsPassed": 1012,
+      "matchedObligations": 50,
+      "mismatches": 0
+    },
+    {
+      "iteration": 60,
+      "build": "PASS",
+      "testsPassed": 1022,
+      "matchedObligations": 60,
+      "mismatches": 0
+    },
+    {
+      "iteration": 70,
+      "build": "PASS",
+      "testsPassed": 1032,
+      "matchedObligations": 70,
+      "mismatches": 0
+    },
+    {
+      "iteration": 80,
+      "build": "PASS",
+      "testsPassed": 1042,
+      "matchedObligations": 80,
+      "mismatches": 0
+    },
+    {
+      "iteration": 90,
+      "build": "PASS",
+      "testsPassed": 1130,
+      "matchedObligations": 90,
+      "mismatches": 0
+    },
+    {
+      "iteration": 100,
+      "build": "PASS",
+      "testsPassed": 1140,
+      "matchedObligations": 100,
+      "mismatches": 0
+    }
+  ],
+  "startingCommit": "2cc3f49",
+  "reviews": [
+    {
+      "argument": "ONE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-001",
+      "requirement": "JP-SPI-001",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 1,
+      "java": {
+        "zero": 0.0,
+        "name": "One",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "one"
+      },
+      "dotnet": {
+        "label": "one",
+        "name": "One",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "AMPERE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-002",
+      "requirement": "JP-SPI-002",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 2,
+      "java": {
+        "zero": 0.0,
+        "name": "Ampere",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "label": "A"
+      },
+      "dotnet": {
+        "label": "A",
+        "name": "Ampere",
+        "dimension": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "CANDELA",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-003",
+      "requirement": "JP-SPI-003",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 3,
+      "java": {
+        "zero": 0.0,
+        "name": "Candela",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "label": "cd"
+      },
+      "dotnet": {
+        "label": "cd",
+        "name": "Candela",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "KELVIN",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-004",
+      "requirement": "JP-SPI-004",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 4,
+      "java": {
+        "zero": 0.0,
+        "name": "Kelvin",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "label": "K"
+      },
+      "dotnet": {
+        "label": "K",
+        "name": "Kelvin",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "KILOGRAM",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-005",
+      "requirement": "JP-SPI-005",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 5,
+      "java": {
+        "zero": 0.0,
+        "name": "Kilogram",
+        "one": 1.0,
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "kg"
+      },
+      "dotnet": {
+        "label": "kg",
+        "name": "Kilogram",
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "METRE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-006",
+      "requirement": "JP-SPI-006",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 6,
+      "java": {
+        "zero": 0.0,
+        "name": "Metre",
+        "one": 1.0,
+        "dimension": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "m"
+      },
+      "dotnet": {
+        "label": "m",
+        "name": "Metre",
+        "dimension": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "MOLE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-007",
+      "requirement": "JP-SPI-007",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 7,
+      "java": {
+        "zero": 0.0,
+        "name": "Mole",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "label": "mol"
+      },
+      "dotnet": {
+        "label": "mol",
+        "name": "Mole",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "SECOND",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-008",
+      "requirement": "JP-SPI-008",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 8,
+      "java": {
+        "zero": 0.0,
+        "name": "Second",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "s"
+      },
+      "dotnet": {
+        "label": "s",
+        "name": "Second",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "GRAM",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-009",
+      "requirement": "JP-SPI-009",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 9,
+      "java": {
+        "zero": 0.0,
+        "name": "Gram",
+        "one": 0.001,
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "g"
+      },
+      "dotnet": {
+        "label": "g",
+        "name": "Gram",
+        "dimension": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 0.001
+      }
+    },
+    {
+      "argument": "RADIAN",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-010",
+      "requirement": "JP-SPI-010",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 10,
+      "java": {
+        "zero": 0.0,
+        "name": "Radian",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "rad"
+      },
+      "dotnet": {
+        "label": "rad",
+        "name": "Radian",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "STERADIAN",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-011",
+      "requirement": "JP-SPI-011",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 11,
+      "java": {
+        "zero": 0.0,
+        "name": "Steradian",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "sr"
+      },
+      "dotnet": {
+        "label": "sr",
+        "name": "Steradian",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "HERTZ",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-012",
+      "requirement": "JP-SPI-012",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 12,
+      "java": {
+        "zero": 0.0,
+        "name": "Hertz",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "Hz"
+      },
+      "dotnet": {
+        "label": "Hz",
+        "name": "Hertz",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "NEWTON",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-013",
+      "requirement": "JP-SPI-013",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 13,
+      "java": {
+        "zero": 0.0,
+        "name": "Newton",
+        "one": 1.0,
+        "dimension": [
+          1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "N"
+      },
+      "dotnet": {
+        "label": "N",
+        "name": "Newton",
+        "dimension": [
+          1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "PASCAL",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-014",
+      "requirement": "JP-SPI-014",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 14,
+      "java": {
+        "zero": 0.0,
+        "name": "Pascal",
+        "one": 1.0,
+        "dimension": [
+          -1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "Pa"
+      },
+      "dotnet": {
+        "label": "Pa",
+        "name": "Pascal",
+        "dimension": [
+          -1,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "JOULE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-015",
+      "requirement": "JP-SPI-015",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 15,
+      "java": {
+        "zero": 0.0,
+        "name": "Joule",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "J"
+      },
+      "dotnet": {
+        "label": "J",
+        "name": "Joule",
+        "dimension": [
+          2,
+          1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "WATT",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-016",
+      "requirement": "JP-SPI-016",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 16,
+      "java": {
+        "zero": 0.0,
+        "name": "Watt",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "W"
+      },
+      "dotnet": {
+        "label": "W",
+        "name": "Watt",
+        "dimension": [
+          2,
+          1,
+          -3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "COULOMB",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-017",
+      "requirement": "JP-SPI-017",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 17,
+      "java": {
+        "zero": 0.0,
+        "name": "Coulomb",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "label": "C"
+      },
+      "dotnet": {
+        "label": "C",
+        "name": "Coulomb",
+        "dimension": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "VOLT",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-018",
+      "requirement": "JP-SPI-018",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 18,
+      "java": {
+        "zero": 0.0,
+        "name": "Volt",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -3,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "label": "V"
+      },
+      "dotnet": {
+        "label": "V",
+        "name": "Volt",
+        "dimension": [
+          2,
+          1,
+          -3,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "FARAD",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-019",
+      "requirement": "JP-SPI-019",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 19,
+      "java": {
+        "zero": 0.0,
+        "name": "Farad",
+        "one": 1.0,
+        "dimension": [
+          -2,
+          -1,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "label": "F"
+      },
+      "dotnet": {
+        "label": "F",
+        "name": "Farad",
+        "dimension": [
+          -2,
+          -1,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "OHM",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-020",
+      "requirement": "JP-SPI-020",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 20,
+      "java": {
+        "zero": 0.0,
+        "name": "Ohm",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -3,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "label": "\u03A9"
+      },
+      "dotnet": {
+        "label": "\u03A9",
+        "name": "Ohm",
+        "dimension": [
+          2,
+          1,
+          -3,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "SIEMENS",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-021",
+      "requirement": "JP-SPI-021",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 21,
+      "java": {
+        "zero": 0.0,
+        "name": "Siemens",
+        "one": 1.0,
+        "dimension": [
+          -2,
+          -1,
+          3,
+          2,
+          0,
+          0,
+          0
+        ],
+        "label": "S"
+      },
+      "dotnet": {
+        "label": "S",
+        "name": "Siemens",
+        "dimension": [
+          -2,
+          -1,
+          3,
+          2,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "WEBER",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-022",
+      "requirement": "JP-SPI-022",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 22,
+      "java": {
+        "zero": 0.0,
+        "name": "Weber",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "label": "Wb"
+      },
+      "dotnet": {
+        "label": "Wb",
+        "name": "Weber",
+        "dimension": [
+          2,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "TESLA",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-023",
+      "requirement": "JP-SPI-023",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 23,
+      "java": {
+        "zero": 0.0,
+        "name": "Tesla",
+        "one": 1.0,
+        "dimension": [
+          0,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "label": "T"
+      },
+      "dotnet": {
+        "label": "T",
+        "name": "Tesla",
+        "dimension": [
+          0,
+          1,
+          -2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "HENRY",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-024",
+      "requirement": "JP-SPI-024",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 24,
+      "java": {
+        "zero": 0.0,
+        "name": "Henry",
+        "one": 1.0,
+        "dimension": [
+          2,
+          1,
+          -2,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "label": "H"
+      },
+      "dotnet": {
+        "label": "H",
+        "name": "Henry",
+        "dimension": [
+          2,
+          1,
+          -2,
+          -2,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "CELSIUS",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-025",
+      "requirement": "JP-SPI-025",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 25,
+      "java": {
+        "zero": 273.15,
+        "name": "Celsius",
+        "one": 274.15,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "label": "\u2103"
+      },
+      "dotnet": {
+        "label": "\u2103",
+        "name": "Celsius",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "zero": 273.15,
+        "one": 274.15
+      }
+    },
+    {
+      "argument": "LUMEN",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-026",
+      "requirement": "JP-SPI-026",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 26,
+      "java": {
+        "zero": 0.0,
+        "name": "Lumen",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "label": "lm"
+      },
+      "dotnet": {
+        "label": "lm",
+        "name": "Lumen",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "LUX",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-027",
+      "requirement": "JP-SPI-027",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 27,
+      "java": {
+        "zero": 0.0,
+        "name": "Lux",
+        "one": 1.0,
+        "dimension": [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "label": "lx"
+      },
+      "dotnet": {
+        "label": "lx",
+        "name": "Lux",
+        "dimension": [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "BECQUEREL",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-028",
+      "requirement": "JP-SPI-028",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 28,
+      "java": {
+        "zero": 0.0,
+        "name": "Becquerel",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "Bq"
+      },
+      "dotnet": {
+        "label": "Bq",
+        "name": "Becquerel",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "GRAY",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-029",
+      "requirement": "JP-SPI-029",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 29,
+      "java": {
+        "zero": 0.0,
+        "name": "Gray",
+        "one": 1.0,
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "Gy"
+      },
+      "dotnet": {
+        "label": "Gy",
+        "name": "Gray",
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "SIEVERT",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-030",
+      "requirement": "JP-SPI-030",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 30,
+      "java": {
+        "zero": 0.0,
+        "name": "Sievert",
+        "one": 1.0,
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "Sv"
+      },
+      "dotnet": {
+        "label": "Sv",
+        "name": "Sievert",
+        "dimension": [
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "KATAL",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-031",
+      "requirement": "JP-SPI-031",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 31,
+      "java": {
+        "zero": 0.0,
+        "name": "Katal",
+        "one": 1.0,
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "label": "kat"
+      },
+      "dotnet": {
+        "label": "kat",
+        "name": "Katal",
+        "dimension": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "METRE_PER_SECOND",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-032",
+      "requirement": "JP-SPI-032",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 32,
+      "java": {
+        "zero": 0.0,
+        "name": "Metre per Second",
+        "one": 1.0,
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "m/s"
+      },
+      "dotnet": {
+        "label": "m/s",
+        "name": "Metre per Second",
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "METRE_PER_SQUARE_SECOND",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-033",
+      "requirement": "JP-SPI-033",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 33,
+      "java": {
+        "zero": 0.0,
+        "name": "Metre per square second",
+        "one": 1.0,
+        "dimension": [
+          1,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "m/s\u00B2"
+      },
+      "dotnet": {
+        "label": "m/s\u00B2",
+        "name": "Metre per square second",
+        "dimension": [
+          1,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "SQUARE_METRE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-034",
+      "requirement": "JP-SPI-034",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 34,
+      "java": {
+        "zero": 0.0,
+        "name": "Square metre",
+        "one": 1.0,
+        "dimension": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "m\u00B2"
+      },
+      "dotnet": {
+        "label": "m\u00B2",
+        "name": "Square metre",
+        "dimension": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "CUBIC_METRE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-035",
+      "requirement": "JP-SPI-035",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 35,
+      "java": {
+        "zero": 0.0,
+        "name": "Cubic metre",
+        "one": 1.0,
+        "dimension": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "m\u00B3"
+      },
+      "dotnet": {
+        "label": "m\u00B3",
+        "name": "Cubic metre",
+        "dimension": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 1
+      }
+    },
+    {
+      "argument": "KILOMETRE_PER_HOUR",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-036",
+      "requirement": "JP-SPI-036",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 36,
+      "java": {
+        "zero": 0.0,
+        "name": "Kilometre per hour",
+        "one": 0.2777777777777778,
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "km/h"
+      },
+      "dotnet": {
+        "label": "km/h",
+        "name": "Kilometre per hour",
+        "dimension": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 0.2777777777777778
+      }
+    },
+    {
+      "argument": "PERCENT",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-037",
+      "requirement": "JP-SPI-037",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 37,
+      "java": {
+        "zero": 0.0,
+        "name": "Percent",
+        "one": 0.01,
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "%"
+      },
+      "dotnet": {
+        "label": "%",
+        "name": "Percent",
+        "dimension": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 0.01
+      }
+    },
+    {
+      "argument": "MINUTE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-038",
+      "requirement": "JP-SPI-038",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 38,
+      "java": {
+        "zero": 0.0,
+        "name": "Minute",
+        "one": 60.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "min"
+      },
+      "dotnet": {
+        "label": "min",
+        "name": "Minute",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 60
+      }
+    },
+    {
+      "argument": "HOUR",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-039",
+      "requirement": "JP-SPI-039",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 39,
+      "java": {
+        "zero": 0.0,
+        "name": "Hour",
+        "one": 3600.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "h"
+      },
+      "dotnet": {
+        "label": "h",
+        "name": "Hour",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 3600
+      }
+    },
+    {
+      "argument": "DAY",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-040",
+      "requirement": "JP-SPI-040",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 40,
+      "java": {
+        "zero": 0.0,
+        "name": "Day",
+        "one": 86400.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "d"
+      },
+      "dotnet": {
+        "label": "d",
+        "name": "Day",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 86400
+      }
+    },
+    {
+      "argument": "WEEK",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-041",
+      "requirement": "JP-SPI-041",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 41,
+      "java": {
+        "zero": 0.0,
+        "name": "Week",
+        "one": 604800.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "wk"
+      },
+      "dotnet": {
+        "label": "wk",
+        "name": "Week",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 604800
+      }
+    },
+    {
+      "argument": "YEAR",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-042",
+      "requirement": "JP-SPI-042",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 42,
+      "java": {
+        "zero": 0.0,
+        "name": "Year",
+        "one": 3.1556952E7,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "yr"
+      },
+      "dotnet": {
+        "label": "yr",
+        "name": "Year",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 31556952
+      }
+    },
+    {
+      "argument": "MONTH",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-043",
+      "requirement": "JP-SPI-043",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 43,
+      "java": {
+        "zero": 0.0,
+        "name": "Month",
+        "one": 2629746.0,
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "mo"
+      },
+      "dotnet": {
+        "label": "mo",
+        "name": "Month",
+        "dimension": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 2629746
+      }
+    },
+    {
+      "argument": "LITRE",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-044",
+      "requirement": "JP-SPI-044",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceUnit",
+      "iteration": 44,
+      "java": {
+        "zero": 0.0,
+        "name": "Litre",
+        "one": 0.001,
+        "dimension": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "l"
+      },
+      "dotnet": {
+        "label": "l",
+        "name": "Litre",
+        "dimension": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero": 0,
+        "one": 0.001
+      }
+    },
+    {
+      "argument": "Dimensionless",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-045",
+      "requirement": "JP-SPI-045",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 45,
+      "java": {
+        "factory": "one",
+        "system": "one"
+      },
+      "dotnet": {
+        "system": "one",
+        "factory": "one"
+      }
+    },
+    {
+      "argument": "ElectricCurrent",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-046",
+      "requirement": "JP-SPI-046",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 46,
+      "java": {
+        "factory": "A",
+        "system": "A"
+      },
+      "dotnet": {
+        "system": "A",
+        "factory": "A"
+      }
+    },
+    {
+      "argument": "LuminousIntensity",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-047",
+      "requirement": "JP-SPI-047",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 47,
+      "java": {
+        "factory": "cd",
+        "system": "cd"
+      },
+      "dotnet": {
+        "system": "cd",
+        "factory": "cd"
+      }
+    },
+    {
+      "argument": "Temperature",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-048",
+      "requirement": "JP-SPI-048",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 48,
+      "java": {
+        "factory": "K",
+        "system": "K"
+      },
+      "dotnet": {
+        "system": "K",
+        "factory": "K"
+      }
+    },
+    {
+      "argument": "Mass",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-049",
+      "requirement": "JP-SPI-049",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 49,
+      "java": {
+        "factory": "kg",
+        "system": "kg"
+      },
+      "dotnet": {
+        "system": "kg",
+        "factory": "kg"
+      }
+    },
+    {
+      "argument": "Length",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-050",
+      "requirement": "JP-SPI-050",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 50,
+      "java": {
+        "factory": "m",
+        "system": "m"
+      },
+      "dotnet": {
+        "system": "m",
+        "factory": "m"
+      }
+    },
+    {
+      "argument": "AmountOfSubstance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-051",
+      "requirement": "JP-SPI-051",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 51,
+      "java": {
+        "factory": "mol",
+        "system": "mol"
+      },
+      "dotnet": {
+        "system": "mol",
+        "factory": "mol"
+      }
+    },
+    {
+      "argument": "Time",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-052",
+      "requirement": "JP-SPI-052",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 52,
+      "java": {
+        "factory": "s",
+        "system": "s"
+      },
+      "dotnet": {
+        "system": "s",
+        "factory": "s"
+      }
+    },
+    {
+      "argument": "Angle",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-053",
+      "requirement": "JP-SPI-053",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 53,
+      "java": {
+        "factory": "rad",
+        "system": "rad"
+      },
+      "dotnet": {
+        "system": "rad",
+        "factory": "rad"
+      }
+    },
+    {
+      "argument": "SolidAngle",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-054",
+      "requirement": "JP-SPI-054",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 54,
+      "java": {
+        "factory": "sr",
+        "system": "sr"
+      },
+      "dotnet": {
+        "system": "sr",
+        "factory": "sr"
+      }
+    },
+    {
+      "argument": "Frequency",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-055",
+      "requirement": "JP-SPI-055",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 55,
+      "java": {
+        "factory": "Hz",
+        "system": "Hz"
+      },
+      "dotnet": {
+        "system": "Hz",
+        "factory": "Hz"
+      }
+    },
+    {
+      "argument": "Force",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-056",
+      "requirement": "JP-SPI-056",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 56,
+      "java": {
+        "factory": "N",
+        "system": "N"
+      },
+      "dotnet": {
+        "system": "N",
+        "factory": "N"
+      }
+    },
+    {
+      "argument": "Pressure",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-057",
+      "requirement": "JP-SPI-057",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 57,
+      "java": {
+        "factory": "Pa",
+        "system": "Pa"
+      },
+      "dotnet": {
+        "system": "Pa",
+        "factory": "Pa"
+      }
+    },
+    {
+      "argument": "Energy",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-058",
+      "requirement": "JP-SPI-058",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 58,
+      "java": {
+        "factory": "J",
+        "system": "J"
+      },
+      "dotnet": {
+        "system": "J",
+        "factory": "J"
+      }
+    },
+    {
+      "argument": "Power",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-059",
+      "requirement": "JP-SPI-059",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 59,
+      "java": {
+        "factory": "W",
+        "system": "W"
+      },
+      "dotnet": {
+        "system": "W",
+        "factory": "W"
+      }
+    },
+    {
+      "argument": "ElectricCharge",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-060",
+      "requirement": "JP-SPI-060",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 60,
+      "java": {
+        "factory": "C",
+        "system": "C"
+      },
+      "dotnet": {
+        "system": "C",
+        "factory": "C"
+      }
+    },
+    {
+      "argument": "ElectricPotential",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-061",
+      "requirement": "JP-SPI-061",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 61,
+      "java": {
+        "factory": "V",
+        "system": "V"
+      },
+      "dotnet": {
+        "system": "V",
+        "factory": "V"
+      }
+    },
+    {
+      "argument": "ElectricCapacitance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-062",
+      "requirement": "JP-SPI-062",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 62,
+      "java": {
+        "factory": "F",
+        "system": "F"
+      },
+      "dotnet": {
+        "system": "F",
+        "factory": "F"
+      }
+    },
+    {
+      "argument": "ElectricResistance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-063",
+      "requirement": "JP-SPI-063",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 63,
+      "java": {
+        "factory": "\u03A9",
+        "system": "\u03A9"
+      },
+      "dotnet": {
+        "system": "\u03A9",
+        "factory": "\u03A9"
+      }
+    },
+    {
+      "argument": "ElectricConductance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-064",
+      "requirement": "JP-SPI-064",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 64,
+      "java": {
+        "factory": "S",
+        "system": "S"
+      },
+      "dotnet": {
+        "system": "S",
+        "factory": "S"
+      }
+    },
+    {
+      "argument": "MagneticFlux",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-065",
+      "requirement": "JP-SPI-065",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 65,
+      "java": {
+        "factory": "Wb",
+        "system": "Wb"
+      },
+      "dotnet": {
+        "system": "Wb",
+        "factory": "Wb"
+      }
+    },
+    {
+      "argument": "MagneticFluxDensity",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-066",
+      "requirement": "JP-SPI-066",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 66,
+      "java": {
+        "factory": "T",
+        "system": "T"
+      },
+      "dotnet": {
+        "system": "T",
+        "factory": "T"
+      }
+    },
+    {
+      "argument": "ElectricInductance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-067",
+      "requirement": "JP-SPI-067",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 67,
+      "java": {
+        "factory": "H",
+        "system": "H"
+      },
+      "dotnet": {
+        "system": "H",
+        "factory": "H"
+      }
+    },
+    {
+      "argument": "LuminousFlux",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-068",
+      "requirement": "JP-SPI-068",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 68,
+      "java": {
+        "factory": "lm",
+        "system": "lm"
+      },
+      "dotnet": {
+        "system": "lm",
+        "factory": "lm"
+      }
+    },
+    {
+      "argument": "Illuminance",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-069",
+      "requirement": "JP-SPI-069",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 69,
+      "java": {
+        "factory": "lx",
+        "system": "lx"
+      },
+      "dotnet": {
+        "system": "lx",
+        "factory": "lx"
+      }
+    },
+    {
+      "argument": "Radioactivity",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-070",
+      "requirement": "JP-SPI-070",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 70,
+      "java": {
+        "factory": "Bq",
+        "system": "Bq"
+      },
+      "dotnet": {
+        "system": "Bq",
+        "factory": "Bq"
+      }
+    },
+    {
+      "argument": "RadiationDoseAbsorbed",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-071",
+      "requirement": "JP-SPI-071",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 71,
+      "java": {
+        "factory": "Gy",
+        "system": "Gy"
+      },
+      "dotnet": {
+        "system": "Gy",
+        "factory": "Gy"
+      }
+    },
+    {
+      "argument": "RadiationDoseEffective",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-072",
+      "requirement": "JP-SPI-072",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 72,
+      "java": {
+        "factory": "Sv",
+        "system": "Sv"
+      },
+      "dotnet": {
+        "system": "Sv",
+        "factory": "Sv"
+      }
+    },
+    {
+      "argument": "CatalyticActivity",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-073",
+      "requirement": "JP-SPI-073",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 73,
+      "java": {
+        "factory": "kat",
+        "system": "kat"
+      },
+      "dotnet": {
+        "system": "kat",
+        "factory": "kat"
+      }
+    },
+    {
+      "argument": "Speed",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-074",
+      "requirement": "JP-SPI-074",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 74,
+      "java": {
+        "factory": "m/s",
+        "system": "m/s"
+      },
+      "dotnet": {
+        "system": "m/s",
+        "factory": "m/s"
+      }
+    },
+    {
+      "argument": "Acceleration",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-075",
+      "requirement": "JP-SPI-075",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 75,
+      "java": {
+        "factory": "m/s\u00B2",
+        "system": "m/s\u00B2"
+      },
+      "dotnet": {
+        "system": "m/s\u00B2",
+        "factory": "m/s\u00B2"
+      }
+    },
+    {
+      "argument": "Area",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-076",
+      "requirement": "JP-SPI-076",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 76,
+      "java": {
+        "factory": "m\u00B2",
+        "system": "m\u00B2"
+      },
+      "dotnet": {
+        "system": "m\u00B2",
+        "factory": "m\u00B2"
+      }
+    },
+    {
+      "argument": "Volume",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-077",
+      "requirement": "JP-SPI-077",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceType",
+      "iteration": 77,
+      "java": {
+        "factory": "m\u00B3",
+        "system": "m\u00B3"
+      },
+      "dotnet": {
+        "system": "m\u00B3",
+        "factory": "m\u00B3"
+      }
+    },
+    {
+      "argument": "available",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-078",
+      "requirement": "JP-SPI-078",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 78,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "current",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-079",
+      "requirement": "JP-SPI-079",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 79,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "priority",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-080",
+      "requirement": "JP-SPI-080",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 80,
+      "java": 10,
+      "dotnet": 10
+    },
+    {
+      "argument": "quantityDefault",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-081",
+      "requirement": "JP-SPI-081",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 81,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "quantityNamed",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-082",
+      "requirement": "JP-SPI-082",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 82,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "quantityNames",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-083",
+      "requirement": "JP-SPI-083",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 83,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "unitDefault",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-084",
+      "requirement": "JP-SPI-084",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 84,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "unitNamed",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-085",
+      "requirement": "JP-SPI-085",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 85,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "unitNames",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-086",
+      "requirement": "JP-SPI-086",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 86,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "unitVariant",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-087",
+      "requirement": "JP-SPI-087",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 87,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "systemDefault",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-088",
+      "requirement": "JP-SPI-088",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 88,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "systemNamed",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-089",
+      "requirement": "JP-SPI-089",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 89,
+      "java": true,
+      "dotnet": true
+    },
+    {
+      "argument": "systemsAvailable",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-090",
+      "requirement": "JP-SPI-090",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 90,
+      "java": 1,
+      "dotnet": 1
+    },
+    {
+      "argument": "systemName",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-091",
+      "requirement": "JP-SPI-091",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 91,
+      "java": "Units",
+      "dotnet": "Units"
+    },
+    {
+      "argument": "systemUnits",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-092",
+      "requirement": "JP-SPI-092",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 92,
+      "java": 44,
+      "dotnet": 44
+    },
+    {
+      "argument": "unitByString",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-093",
+      "requirement": "JP-SPI-093",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 93,
+      "java": "A",
+      "dotnet": "A"
+    },
+    {
+      "argument": "unitsByDimension",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-094",
+      "requirement": "JP-SPI-094",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 94,
+      "java": 7,
+      "dotnet": 7
+    },
+    {
+      "argument": "unitByType",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-095",
+      "requirement": "JP-SPI-095",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 95,
+      "java": "K",
+      "dotnet": "K"
+    },
+    {
+      "argument": "typedFactory",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-096",
+      "requirement": "JP-SPI-096",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 96,
+      "java": 20.0,
+      "dotnet": 20
+    },
+    {
+      "argument": "metricPrefixes",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-097",
+      "requirement": "JP-SPI-097",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 97,
+      "java": 24,
+      "dotnet": 24
+    },
+    {
+      "argument": "binaryPrefixes",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-098",
+      "requirement": "JP-SPI-098",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 98,
+      "java": 8,
+      "dotnet": 8
+    },
+    {
+      "argument": "unitFormatFormat",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-099",
+      "requirement": "JP-SPI-099",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 99,
+      "java": "\u2103",
+      "dotnet": "\u2103"
+    },
+    {
+      "argument": "unitFormatParse",
+      "gap": "No Java-style service/system catalog implementation or executable mapping at 2cc3f49",
+      "id": "S100-100",
+      "requirement": "JP-SPI-100",
+      "status": "IMPLEMENTED_PROFILE_MATCH",
+      "operation": "serviceContract",
+      "iteration": 100,
+      "java": "\u03BCA",
+      "dotnet": "\u03BCA"
+    }
+  ],
+  "policy": "One inventoried implementation obligation per numbered iteration; 44 unit definitions, 33 type bindings and 23 service contracts. Not 100 TCK assertions or closures."
+}

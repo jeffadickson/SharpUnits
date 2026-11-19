@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "431-A1",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityCastAsType",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 65,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, false, Quantity.class, \"asType\", Class.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:80"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I01_431A1_AsType",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I01_431A1_AsType",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A2",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityEquals",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 75,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, true, boolean.class,\"equals\", Object.class); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:96"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I02_431A2_Equals",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I02_431A2_Equals",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A3",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityGetScale",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 86,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getScale\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:16"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I03_431A3_GetScale",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I03_431A3_GetScale",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A4",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityGetUnit",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 98,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getUnit\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:14"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I04_431A4_GetUnit",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I04_431A4_GetUnit",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A5",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityGetValue",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 109,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, \"getValue\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:12"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I05_431A5_GetValue",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I05_431A5_GetValue",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A6",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityHashCode",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 120,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM, type, int.class, \"hashCode\"); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:98"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I06_431A6_HashCode",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I06_431A6_HashCode",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A7",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityIsEquivalentTo",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 131,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX +  SECTION_NUM, type, \"isEquivalentTo\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:92"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I07_431A7_Equivalent",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I07_431A7_Equivalent",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A8",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp0Inverse",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 142,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX +  SECTION_NUM, type, \"inverse\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:76",
+      "src/SharpUnits/JavaQuantityAdapter.cs:173"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I08_431A8_Inverse",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I08_431A8_Inverse",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Exact JavaNumberQuantity.Inverse retains affine inverse graphs; legacy JavaQuantityAdapter.Inverse rejects absolute affine input. Preserve this native safety boundary and qualify converter support independently.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4311-A1",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp1Add",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 153,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"add\", Quantity.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:38"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I09_4311A1_Add",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I09_4311A1_Add",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4311-A4",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp1MultiplyByNumber",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 164,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"multiply\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:64"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I10_4311A4_MultiplyNumber",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I10_4311A4_MultiplyNumber",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Exact JavaNumber scalar input retains precision; legacy IConvertible overload projects to double. Precision already lost before promotion cannot be recovered.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4311-A5",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp1DivideByNumber",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 175,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"divide\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:66"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I11_4311A5_DivideNumber",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I11_4311A5_DivideNumber",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:RepresentationEqualityAndDimensionCastingStayDistinctFromSemanticKinds"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Exact scalar overload avoids binary64 projection; legacy IConvertible overload does not. Qualify zero divisor and resource budgets separately.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4311-A6",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp1Subtract",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 186,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.1\", type, Quantity.class, \"subtract\", Quantity.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:40"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I12_4311A6_Subtract",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I12_4311A6_Subtract",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4312-A1",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp2Divide",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 197,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.2\", type, Quantity.class, \"divide\", Quantity.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:55"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I13_4312A1_DivideQuantity",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I13_4312A1_DivideQuantity",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "4312-A2",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp2Multiply",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 208,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + \"4.3.1.2\", type, Quantity.class, \"multiply\", Quantity.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:53"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I14_4312A2_MultiplyQuantity",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I14_4312A2_MultiplyQuantity",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A9",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityOp0To",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 219,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX +  SECTION_NUM, type, Quantity.class, \"to\", Unit.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:25"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I15_431A9_To",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I15_431A9_To",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "431-A10",
+    "suite": "QuantityInterfaceTest",
+    "sourceMethod": "testQuantityIsComparable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/quantity/QuantityInterfaceTest.java",
+    "javaLine": 230,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured quantity class, java.lang.Comparable.class.isAssignableFrom(type) must be true. No ordering law tested.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaNumberQuantity.cs:8"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/QuantityParitySurfaceTests.cs:I16_431A10_Comparable",
+      "tests/SharpUnits.Tests/ExactQuantitySurfaceTests.cs:I16_431A10_Comparable",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A1",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testEnsureGotConverters",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 69,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "TCKSetup configuration must be non-null and its configured converter collection non-empty.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:27"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A1_ProviderAvailable",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Local Tck423A1_ProviderAvailable constructs one adapter; it does not establish non-empty configured converter discovery. Add native inventory qualification only if discovery is a release requirement.",
+    "recommendation": "DEFER_JAVA_MECHANISM",
+    "modernDotnetDecision": "Use typed construction/dependency injection; do not clone JVM harness registration for native .NET.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A2",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterEquals",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 79,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, true, boolean.class,\"equals\", Object.class); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:165"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A2_EqualityMethod",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A3",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterHashcode",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 91,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, true, int.class,\"hashCode\"); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:167"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A3_HashCodeMethod",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A4",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterInvert",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 103,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"inverse\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:62"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A4_InverseMethod",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A5",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterIsIdentity",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 115,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"isIdentity\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:71"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A5_IdentityProperty",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A6",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterIsLinear",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 127,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, \"isLinear\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:73"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A6_LinearProperty",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A7",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterConvert",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 139,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, Number.class, \"convert\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:85"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A7_NumericOverload",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Convert(JavaNumber) returns typed exact numeric result; legacy Convert(IConvertible) returns double and is the target of the existing numeric surface test. Qualify exact-overload return/failure contracts separately.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A8",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterConvertWithDouble",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 151,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, double.class, \"convert\", double.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:81"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A8_DoubleOverload",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A9",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterConcatenate",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 163,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, UnitConverter.class, \"concatenate\", UnitConverter.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:102"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A9_Concatenation",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "423-A10",
+    "suite": "UnitConversionTest",
+    "sourceMethod": "testUnitConverterGetConversionSteps",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitConversionTest.java",
+    "javaLine": 175,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION, type, List.class, \"getConversionSteps\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitConverterAdapter.cs:113"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckConverterApiSurfaceTests.cs:Tck423A10_ConversionSteps",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:ConverterStepsAreImmutableAndInCompositionOrder"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "ConversionSteps retains nonlinear operations; legacy GetConversionSteps projects affine steps and throws for nonlinear converters. Expose and qualify typed operation metadata for native use.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A1",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testEquals",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 64,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, boolean.class, \"equals\", Object.class); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:49"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A1_EqualsIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A2",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testHashcode",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 76,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, int.class, \"hashCode\"); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:51"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A2_HashCodeIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A3",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testMultiply",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 88,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"multiply\", Dimension.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:22"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A3_MultiplyOperatorIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A4",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testDivide",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 100,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"divide\", Dimension.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:24"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A4_DivideOperatorIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A5",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testRoot",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 112,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"root\", int.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:28"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A5_RootIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A6",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testPow",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 124,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Dimension.class, \"pow\", int.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:26"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A6_PowIsPublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "425-A7",
+    "suite": "UnitDimensionTest",
+    "sourceMethod": "testGetBaseDimensions",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitDimensionTest.java",
+    "javaLine": 136,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: TestUtils.testHasPublicMethod(SECTION_PREFIX + SECTION, type, Map.class, \"getBaseDimensions\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaDimensionAdapter.cs:33"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckDimensionApiSurfaceTests.cs:Tck425A7_BaseDimensionsArePublic",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:DimensionFacadeRetainsRootsWhileProvidingJavaNullableMaps"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "JavaDimensionAdapter integer base map exposes only fractional-power numerators; Value retains exact denominators. Prefer RationalDimension for native consumers.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A1",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testEquals",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 65,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, true, boolean.class,\"equals\", Object.class); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:120"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A1_Equals",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A2",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testGetDimension",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 77,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getDimension\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:18"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A2_Dimension",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A3",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testGetSystemUnit",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 89,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getSystemUnit\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:130",
+      "src/SharpUnits/JavaUnitAdapter.cs:20",
+      "src/SharpUnits/JavaUnitAdapter.cs:22"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A3_SystemUnit",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "JavaUnit.SystemUnit and adapter.CoherentUnit preserve alternate identity; legacy adapter.SystemUnit is a dimensional projection. Broad missing-system-unit claims are stale.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A4",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testGetBaseUnits",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 101,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getBaseUnits\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:175",
+      "src/SharpUnits/JavaUnitAdapter.cs:107",
+      "src/SharpUnits/JavaUnitAdapter.cs:109"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A4_BaseUnits",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "JavaUnit.GetBaseUnits preserves nullable graph-key decomposition; adapter.BaseUnits projects dimensions. Select the structural API when graph identity matters.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A5",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testGetName",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 114,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getName\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:60"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A5_Name",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A6",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testGetSymbol",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 126,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"getSymbol\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:58"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A6_Symbol",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A7",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testHashcode",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 137,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"hashCode\"); No operation result evaluated. Signature lookup can find inherited declarations; does not establish equality/hash laws.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:122"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A7_HashCode",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A8",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testIsEquivalentTo",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 150,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"isEquivalentTo\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:171"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A8_Equivalent",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "421-A9",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testToString",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 162,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + SECTION_NUM1, type, \"toString\"); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:124"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck421A9_ToString",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Adapter.ToString returns symbol or diagnostic Java-kind label. The exact assertion checks String method availability, not Java text compatibility; general graph rendering needs separate format qualification.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A1",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A1_Alternate",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 175,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, \"alternate\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:84"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A1_Alternate",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A2",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A2_Divide",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 187,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", Unit.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:115",
+      "src/SharpUnits/JavaUnitAdapter.cs:46",
+      "src/SharpUnits/JavaUnitAdapter.cs:56"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A2_DivideUnit",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "JavaUnit.Divide and adapter.DivideUnit preserve graphs; legacy Divide returns RationalUnitExpression and rejects affine projection. Same-name surface presence is insufficient to qualify return semantics.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A3",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A3_DivideByDouble",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 199,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", double.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:77"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A3_DivideDouble",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A4",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A4_DivideByNumber",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 211,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"divide\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:88"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A4_DivideNumber",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A5",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A5_Multiply",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 223,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", Unit.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:109",
+      "src/SharpUnits/JavaUnitAdapter.cs:44",
+      "src/SharpUnits/JavaUnitAdapter.cs:54"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A5_MultiplyUnit",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "JavaUnit.Multiply and adapter.MultiplyUnit preserve graphs; legacy Multiply returns RationalUnitExpression and rejects affine projection. Preserve the native affine safety boundary.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A6",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A6_MultiplyByDouble",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 235,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", double.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:75"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A6_MultiplyDouble",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A7",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A7_MultiplyByNumber",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 247,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"multiply\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:86"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A7_MultiplyNumber",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A8",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A8_Prefix",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 260,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, false, Unit.class, \"prefix\", Prefix.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:70"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A8_Prefix",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A9",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A9_ShiftByDouble",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 272,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"shift\", double.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:79"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A9_ShiftDouble",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42121-A10",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42121A10_ShiftByNumber",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 284,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.1\", type, Unit.class, \"shift\", Number.class); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:90"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42121A10_ShiftNumber",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42122-A1",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42122Pow",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 296,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"pow\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:117",
+      "src/SharpUnits/JavaUnitAdapter.cs:48",
+      "src/SharpUnits/JavaUnitAdapter.cs:58"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42122A1_Pow",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "JavaUnit.Pow and adapter.PowerUnit retain structural graph; legacy Pow returns a linear expression. Qualify the selected entry point.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42122-A2",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42122Root",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 308,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"root\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:123",
+      "src/SharpUnits/JavaUnitAdapter.cs:50",
+      "src/SharpUnits/JavaUnitAdapter.cs:60"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42122A2_Root",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "JavaUnit.Root and adapter.RootUnit support negative degree, rejecting zero. Native expression Root deliberately requires positive degree; this is not absent exact-core signed-root support.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42122-A3",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42122Transform",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 320,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.2\", type, \"transform\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:91"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42122A3_Transform",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42123-A1",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit42123Inverse",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 332,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.3\", type, \"inverse\", false); No operation result evaluated.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:62",
+      "src/SharpUnits/JavaUnitAdapter.cs:52"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42123A1_Inverse",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)",
+      "tests/SharpUnits.Tests/CoreRobustnessTests.cs:PublicUnitFacadesPreserveGraphsAndNativeProjectionRules"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "Adapter.InverseUnit retains structural inverse graphs; legacy Inverse requires linear expressions. Lazy graph construction does not promise a supported system converter.",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42124-A1",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit4221IsCompatible",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 344,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"isCompatible\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:35"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42124A1_Compatible",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42124-A2",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit4222AsType",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 356,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"asType\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitAdapter.cs:100"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42124A2_AsType",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use CLR properties, typed exact numeric/structural models, dimension checks and generic comparison rather than reproduce Java Class/Number/Map mechanics. Preserve precision, representation and safety contracts.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42124-A3",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit4223GetConverterTo",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 368,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"getConverterTo\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:157"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42124A3_ConverterTo",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  },
+  {
+    "id": "42124-A4",
+    "suite": "UnitInterfaceTest",
+    "sourceMethod": "testUnit4224GetConverterToAny",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/unit/UnitInterfaceTest.java",
+    "javaLine": 380,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured type/instance, perform only structural check: testHasPublicMethod(SECTION_PREFIX + \"4.2.1.2.4\", type, \"getConverterToAny\", true); No operation result evaluated. hasParameters=true checks public method name only; no arity/parameter/return constraint (TestUtils.java:317).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnit.cs:164"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/TckUnitExactSurfaceTests.cs:Tck42124A4_ConverterToAny",
+      "conformance/work-package-one-verification.json (historical 2026-10-28 evidence, not rerun)"
+    ],
+    "implementationAssessment": "MAPPED_BOUNDED",
+    "residualBehavior": "No additional defect established by source audit; runtime qualification required",
+    "recommendation": "PRESERVE_SEMANTICS",
+    "modernDotnetDecision": "Retain domain operation with idiomatic CLR names/types; Java reflection availability is not evidence of numerical laws or .NET execution.",
+    "qualificationGap": "Read-only source audit; no builds/tests executed. Stock Java TCK exercises Indriya, not C#. Historical pass/coverage/mutation evidence is not current-source release qualification; independent review and relevant runtime/platform checks remain open. No VERIFIED closure."
+  }
+]

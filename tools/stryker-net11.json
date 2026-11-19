@@ -1,0 +1,19 @@
+{
+  "stryker-config": {
+    "project": "SharpUnits.csproj",
+    "test-projects": [
+      "tests/SharpUnits.Tests/SharpUnits.Tests.csproj"
+    ],
+    "mutate": [
+      "**/SiPrefixes.cs",
+      "**/JavaUnitTextFormat.cs{1920..2372}"
+    ],
+    "test-case-filter": "FullyQualifiedName~Net11ModernizationTests|FullyQualifiedName~Prefix|FullyQualifiedName~UnitFormat",
+    "concurrency": 1,
+    "reporters": [
+      "json",
+      "cleartext"
+    ],
+    "disable-mix-mutants": true
+  }
+}

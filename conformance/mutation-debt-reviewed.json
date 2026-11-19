@@ -1,0 +1,1065 @@
+{
+  "policy": "Combined measured outcomes, not a single-run mutation score. Later executed outcomes supersede only matching mutations in unchanged source. A changed source file is replaced in full by its later full-file report; ignored/compile errors never become kills.",
+  "reports": [
+    {
+      "phase": 0,
+      "path": "../debt-stryker-broad/reports/mutation-report.json",
+      "sha256": "BEBC65AB0230518BF67CBDE79A43AA050F255513CAE83E9D74335E48FA31EADC"
+    },
+    {
+      "phase": 1,
+      "path": "../debt-stryker-final-v2/reports/mutation-report.json",
+      "sha256": "207E4EA136126A9695AB4E6C8A3B71FB1FDEC31C5C9EF64327BB1EB05B1C144F"
+    },
+    {
+      "phase": 2,
+      "path": "../debt-stryker-typed-full/reports/mutation-report.json",
+      "sha256": "BA33716FAFCEEEF1EEF83FED1289B7C95D0A4637FD3E6F6F5931D6C179B60494"
+    },
+    {
+      "phase": 3,
+      "path": "../debt-stryker-guards/reports/mutation-report.json",
+      "sha256": "9BEBD084E5F6EEF4CBA1A5E330ABE8A8884027A51ED76E37E6D8CF93D3EC560D"
+    },
+    {
+      "phase": 4,
+      "path": "../debt-stryker-hash-full/reports/mutation-report.json",
+      "sha256": "6BA27A51ACD845D7B83F50C3F24BEAD5D6178A96369F507ED9CE84201EF0F99F"
+    },
+    {
+      "phase": 5,
+      "path": "../debt-stryker-number-final/reports/mutation-report.json",
+      "sha256": "5602D80D4545F47CB025DD0593D527DEE026413112F92A0412EFB80970DCE364"
+    }
+  ],
+  "counts": {
+    "CompileError": 76,
+    "Ignored": 96,
+    "Killed": 954,
+    "NoCoverage": 6,
+    "Survived": 66,
+    "Timeout": 2
+  },
+  "files": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "sourceSha256": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 6,
+        "Killed": 19,
+        "Survived": 4
+      },
+      "outstanding": [
+        {
+          "id": "912",
+          "phase": 1,
+          "status": "Survived",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(Components(value).Any(power=>power.Denominator.Sign<=0))throw new ArgumentException(\"Normalized exponents required.\",nameof(value));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "921",
+          "phase": 1,
+          "status": "Survived",
+          "line": 30,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(degree==0)throw new DivideByZeroException(\"Root degree must not be zero.\");return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_ZERO_DENOMINATOR_REJECTION",
+          "rationale": "Rational(1,0) independently throws DivideByZeroException. The guard protects a clearer message; diagnostic text/stack location is not identical."
+        },
+        {
+          "id": "922",
+          "phase": 1,
+          "status": "Survived",
+          "line": 30,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(degree==0)throw new DivideByZeroException(\"Root degree must not be zero.\");return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "931",
+          "phase": 1,
+          "status": "Survived",
+          "line": 42,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)power.Numerator",
+          "statement": "map.Add(new(dimension),checked((int)power.Numerator));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "BIGINTEGER_CAST_EQUIVALENCE",
+          "rationale": "BigInteger-to-Int32 explicit conversion itself checks range, even outside a checked expression. Product exponents are additionally bounded1024; dimension-map overflow is directly tested."
+        }
+      ]
+    },
+    {
+      "file": "JavaNumber.cs",
+      "sourceSha256": "615642E6516435631DCE544537816BA6965447252EC7BC394811FBFB9C30C9F8",
+      "counts": {
+        "CompileError": 12,
+        "Ignored": 21,
+        "Killed": 266,
+        "NoCoverage": 3,
+        "Survived": 23,
+        "Timeout": 1
+      },
+      "outstanding": [
+        {
+          "id": "1095",
+          "phase": 5,
+          "status": "Survived",
+          "line": 61,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(text.Length is 0 or >4096)throw new FormatException(\"Decimal token length is outside the supported budget.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1125",
+          "phase": 5,
+          "status": "Survived",
+          "line": 69,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(c is <'0' or >'9')throw new FormatException(\"Invalid decimal digit.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1132",
+          "phase": 5,
+          "status": "Survived",
+          "line": 72,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(digits.Length==0)throw new FormatException(\"Decimal digits required.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_FORMAT_REJECTION",
+          "rationale": "If no coefficient digits exist, BigInteger.Parse(empty) still throws FormatException. Valid inputs and exception category are unchanged; diagnostic wording differs."
+        },
+        {
+          "id": "1133",
+          "phase": 5,
+          "status": "Survived",
+          "line": 72,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(digits.Length==0)throw new FormatException(\"Decimal digits required.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1141",
+          "phase": 5,
+          "status": "Survived",
+          "line": 75,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "throw new FormatException(\"Invalid decimal exponent.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1151",
+          "phase": 5,
+          "status": "Survived",
+          "line": 77,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(scale is < -4096 or >4096)throw new ArgumentOutOfRangeException(nameof(text),\"Decimal scale budget exceeded.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1155",
+          "phase": 5,
+          "status": "Survived",
+          "line": 84,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NONFINITE_REJECTION",
+          "rationale": "JavaNumberText.Format independently rejects nonfinite values with ArgumentOutOfRangeException. Public value parameter and finite-input behavior remain the same."
+        },
+        {
+          "id": "1166",
+          "phase": 5,
+          "status": "Survived",
+          "line": 93,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?long.MaxValue:(long)value)",
+          "statement": "return new(new Rational(value>=9223372036854775808d?long.MaxValue:(long)value,1),JavaNumberKind.Integer,integerDecimalContext:false);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NET10_SATURATING_CAST_EQUIVALENCE",
+          "rationale": "Only the2^63 boundary changes branch; .NET9+ CoreCLR floating-to-Int64 casts saturate to long.MaxValue. Supported-runtime bound, not a claim for older/alternate runtimes or executed Ubuntu qualification. Primary reference: https://learn.microsoft.com/en-us/dotnet/core/compatibility/jit/9.0/fp-to-integer"
+        },
+        {
+          "id": "1168",
+          "phase": 5,
+          "status": "Survived",
+          "line": 93,
+          "mutator": "Equality mutation",
+          "replacement": "value>9223372036854775808d",
+          "statement": "return new(new Rational(value>=9223372036854775808d?long.MaxValue:(long)value,1),JavaNumberKind.Integer,integerDecimalContext:false);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NET10_SATURATING_CAST_EQUIVALENCE",
+          "rationale": "Only the2^63 boundary changes branch; .NET9+ CoreCLR floating-to-Int64 casts saturate to long.MaxValue. Supported-runtime bound, not a claim for older/alternate runtimes or executed Ubuntu qualification. Primary reference: https://learn.microsoft.com/en-us/dotnet/core/compatibility/jit/9.0/fp-to-integer"
+        },
+        {
+          "id": "1172",
+          "phase": 5,
+          "status": "Survived",
+          "line": 103,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NONFINITE_REJECTION",
+          "rationale": "JavaNumberText.Format independently rejects nonfinite values with ArgumentOutOfRangeException. Public value parameter and finite-input behavior remain the same."
+        },
+        {
+          "id": "1175",
+          "phase": 5,
+          "status": "Survived",
+          "line": 116,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "_=>throw new ArgumentException(\"A supported numeric value is required.\",nameof(value))",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1202",
+          "phase": 5,
+          "status": "Survived",
+          "line": 152,
+          "mutator": "Logical mutation",
+          "replacement": "Fraction.Numerator.IsZero&&other.Fraction.Numerator.IsZero",
+          "statement": "if(multiply&&(Fraction.Numerator.IsZero||other.Fraction.Numerator.IsZero))return Zero;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NORMALIZED_ZERO_VALUE_EQUIVALENCE",
+          "rationale": "The ordinary arithmetic path still narrows numeric zero to Integer0 with scale0 and identical promotion. Allocation/reference identity can change; universal zero interning is not promised (Integer(0) already allocates)."
+        },
+        {
+          "id": "1283",
+          "phase": 5,
+          "status": "Survived",
+          "line": 200,
+          "mutator": "Equality mutation",
+          "replacement": "exponent>0",
+          "statement": "if(exponent>=0?numerator<denominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)<denominator)exponent--;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "1285",
+          "phase": 5,
+          "status": "Survived",
+          "line": 200,
+          "mutator": "Equality mutation",
+          "replacement": "numerator<=denominator*BigInteger.Pow(10,exponent)",
+          "statement": "if(exponent>=0?numerator<denominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)<denominator)exponent--;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "POSITIVE_DECADE_INTEGER_NORMALIZATION",
+          "rationale": "Equality can change requested precision only for an exact nonnegative decade10^k. The numeric result is unchanged and narrows to Integer, discarding decimal scale. Negative fractional decades are separately challenged by the pinned scale73 witness."
+        },
+        {
+          "id": "1297",
+          "phase": 5,
+          "status": "Survived",
+          "line": 202,
+          "mutator": "Equality mutation",
+          "replacement": "scale>0",
+          "statement": "var n=scale>=0?numerator*BigInteger.Pow(10,scale):numerator;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "1302",
+          "phase": 5,
+          "status": "Survived",
+          "line": 203,
+          "mutator": "Equality mutation",
+          "replacement": "scale>0",
+          "statement": "var d=scale>=0?denominator:denominator*BigInteger.Pow(10,-scale);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "1316",
+          "phase": 5,
+          "status": "Timeout",
+          "line": 208,
+          "mutator": "Logical mutation",
+          "replacement": "scale>preferredScale||quotient%10==0",
+          "statement": "if(remainder.IsZero)while(scale>preferredScale&&quotient%10==0){quotient/=10;scale--;}",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "INCONCLUSIVE_TIMEOUT",
+          "rationale": "Mutation can make the loop nonterminating. Watchdog expiry is inconclusive and is never counted as a demonstrated assertion kill."
+        },
+        {
+          "id": "1331",
+          "phase": 5,
+          "status": "Survived",
+          "line": 213,
+          "mutator": "Equality mutation",
+          "replacement": "<= -8192",
+          "statement": "if(scale is < -8192 or >8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "REDUNDANT_PROFILE_REJECTION",
+          "rationale": "FromDecimal is called by the parser (scale bounded4096) or decimal128 rounding (nonzero coefficient at most35digits; zero returns scale0). At absolute scale8192 or greater, nonzero results already violate the16384-bit numerator/denominator budget and are rejected by Check. Private parameter/message differences are not identical diagnostics."
+        },
+        {
+          "id": "1334",
+          "phase": 5,
+          "status": "Survived",
+          "line": 213,
+          "mutator": "Equality mutation",
+          "replacement": ">=8192",
+          "statement": "if(scale is < -8192 or >8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "REDUNDANT_PROFILE_REJECTION",
+          "rationale": "FromDecimal is called by the parser (scale bounded4096) or decimal128 rounding (nonzero coefficient at most35digits; zero returns scale0). At absolute scale8192 or greater, nonzero results already violate the16384-bit numerator/denominator budget and are rejected by Check. Private parameter/message differences are not identical diagnostics."
+        },
+        {
+          "id": "1335",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 213,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(scale is < -8192 or >8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "REDUNDANT_PROFILE_REJECTION",
+          "rationale": "FromDecimal is called by the parser (scale bounded4096) or decimal128 rounding (nonzero coefficient at most35digits; zero returns scale0). At absolute scale8192 or greater, nonzero results already violate the16384-bit numerator/denominator budget and are rejected by Check. Private parameter/message differences are not identical diagnostics."
+        },
+        {
+          "id": "1339",
+          "phase": 5,
+          "status": "Survived",
+          "line": 214,
+          "mutator": "Equality mutation",
+          "replacement": "scale>0",
+          "statement": "var fraction=scale>=0?new Rational(coefficient,BigInteger.Pow(10,scale)):new Rational(coefficient*BigInteger.Pow(10,-scale),1);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "1344",
+          "phase": 5,
+          "status": "Survived",
+          "line": 219,
+          "mutator": "Equality mutation",
+          "replacement": "value.Denominator.Sign<0",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "UNREACHABLE_NORMALIZATION_GUARD",
+          "rationale": "All private constructor call paths first construct a normalized Rational; an invalid denominator is rejected earlier. Excludes reflection/unsafe state fabrication."
+        },
+        {
+          "id": "1346",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 219,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "UNREACHABLE_NORMALIZATION_GUARD",
+          "rationale": "All private constructor call paths first construct a normalized Rational; an invalid denominator is rejected earlier. Excludes reflection/unsafe state fabrication."
+        },
+        {
+          "id": "1347",
+          "phase": 5,
+          "status": "NoCoverage",
+          "line": 219,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "UNREACHABLE_NORMALIZATION_GUARD",
+          "rationale": "Private Check receives normalized Rational values. FromNumeric(default(Rational)) rejects at Ratio(0,0) before Check; no reflection/unsafe injection is claimed."
+        },
+        {
+          "id": "1355",
+          "phase": 5,
+          "status": "Survived",
+          "line": 221,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "throw new ArgumentOutOfRangeException(nameof(value),\"Numeric bit budget exceeded.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1357",
+          "phase": 5,
+          "status": "Survived",
+          "line": 224,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction))",
+          "statement": "public double ToDouble()=>Kind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ROUNDTRIP_INVARIANT_EQUIVALENCE",
+          "rationale": "A Binary64 member retains its Java shortest round-trip decimal fraction. Exact rational-to-double rounding reconstructs the same finite bits. Conditional on those formatter/rounding contracts; retained differential/property campaigns are not a formal proof over all64-bit patterns."
+        },
+        {
+          "id": "1391",
+          "phase": 5,
+          "status": "Survived",
+          "line": 242,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale))",
+          "statement": "public override int GetHashCode()=>Kind==JavaNumberKind.Rational?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "HASH_ALGORITHM_VARIATION",
+          "rationale": "Exact hash values are unspecified. This alternative remains equal-object hash consistent; full-scope tests and the bounded converter hash-quality property were replayed. No universal distribution or performance equivalence claim."
+        }
+      ]
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "sourceSha256": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 8,
+        "Killed": 58,
+        "NoCoverage": 1,
+        "Survived": 4
+      },
+      "outstanding": [
+        {
+          "id": "1399",
+          "phase": 0,
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(target);if(Unit.Equals(target))return this;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NULL_TARGET_REJECTION",
+          "rationale": "Without the outer guard, Equals(null) is false and Unit.GetConverterTo(null) throws the same ArgumentNullException naming target."
+        },
+        {
+          "id": "1406",
+          "phase": 0,
+          "status": "Survived",
+          "line": 34,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(!converter.IsAffine)throw new NotSupportedException(\"Relative conversion requires a constant derivative.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NONLINEAR_REJECTION",
+          "rationale": "AffineCoefficients independently rejects nonlinear converters with NotSupportedException. Relative affine success and nonlinear rejection are both tested; message/stack differences remain observable."
+        },
+        {
+          "id": "1407",
+          "phase": 0,
+          "status": "Survived",
+          "line": 34,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!converter.IsAffine)throw new NotSupportedException(\"Relative conversion requires a constant derivative.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "1423",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 49,
+          "mutator": "LogicalNotExpression to un-LogicalNotExpression mutation",
+          "replacement": "other.Unit.Equals(target)",
+          "statement": "else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "IDENTITY_BRANCH_EQUIVALENCE",
+          "rationale": "If the left unit differs, the first OR term dominates unchanged. If it equals its system unit, its converter/inverse is identity, so the changed right term only applies or skips an identity conversion."
+        },
+        {
+          "id": "1448",
+          "phase": 0,
+          "status": "Survived",
+          "line": 82,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(Unit.Dimension!=dimension)throw new InvalidOperationException(\"Requested quantity type is incompatible.\");return this;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        }
+      ]
+    },
+    {
+      "file": "JavaUnit.cs",
+      "sourceSha256": "3C6E3856D620B95411F6CBA00BF0E0454B55D442C21EE78FA4523487AFA71968",
+      "counts": {
+        "CompileError": 34,
+        "Ignored": 31,
+        "Killed": 325,
+        "NoCoverage": 2,
+        "Survived": 20,
+        "Timeout": 1
+      },
+      "outstanding": [
+        {
+          "id": "2050",
+          "phase": 0,
+          "status": "Survived",
+          "line": 71,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(depth>64)throw new ArgumentOutOfRangeException(nameof(parent),\"Unit graph depth budget exceeded.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2057",
+          "phase": 0,
+          "status": "Survived",
+          "line": 87,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!Equals(SystemUnit))throw new InvalidOperationException(\"An alternate requires an unscaled system unit.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2096",
+          "phase": 0,
+          "status": "Survived",
+          "line": 125,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(degree==0)throw new DivideByZeroException(\"Root degree must not be zero.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_ZERO_DENOMINATOR_REJECTION",
+          "rationale": "Rational(1,0) independently throws DivideByZeroException. The guard protects a clearer message; diagnostic text/stack location is not identical."
+        },
+        {
+          "id": "2097",
+          "phase": 0,
+          "status": "Survived",
+          "line": 125,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(degree==0)throw new DivideByZeroException(\"Root degree must not be zero.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2117",
+          "phase": 0,
+          "status": "Survived",
+          "line": 147,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!pair.Value.Denominator.IsOne)throw new NotSupportedException(\"Pinned product converters reject fractional roots.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2120",
+          "phase": 0,
+          "status": "Survived",
+          "line": 149,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!next.IsLinear)throw new NotSupportedException(\"A non-linear atom has no product converter.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2121",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "statement": "var power=checked((int)pair.Value.Numerator);if(power<0){next=next.Inverse();power=-power;}",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "BIGINTEGER_CAST_EQUIVALENCE",
+          "rationale": "BigInteger-to-Int32 explicit conversion itself checks range, even outside a checked expression. Product exponents are additionally bounded1024; dimension-map overflow is directly tested."
+        },
+        {
+          "id": "2123",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Equality mutation",
+          "replacement": "power<=0",
+          "statement": "var power=checked((int)pair.Value.Numerator);if(power<0){next=next.Inverse();power=-power;}",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NONZERO_FACTOR_INVARIANT",
+          "rationale": "Product normalization removes zero exponents before converter evaluation. Even an identity zero power would not execute the conversion loop."
+        },
+        {
+          "id": "2129",
+          "phase": 0,
+          "status": "Timeout",
+          "line": 151,
+          "mutator": "PostIncrementExpression to PostDecrementExpression mutation",
+          "replacement": "i--",
+          "statement": "for(var i=0;i<power;i++)converter=converter.Concatenate(next);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "INCONCLUSIVE_TIMEOUT",
+          "rationale": "Mutation can make the loop nonterminating. Watchdog expiry is inconclusive and is never counted as a demonstrated assertion kill."
+        },
+        {
+          "id": "2147",
+          "phase": 0,
+          "status": "Survived",
+          "line": 179,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "statement": "_=>new ReadOnlyDictionary<JavaUnit,int>(factors.ToDictionary(pair=>pair.Key,pair=>checked((int)pair.Value.Numerator)))",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "BIGINTEGER_CAST_EQUIVALENCE",
+          "rationale": "BigInteger-to-Int32 explicit conversion itself checks range, even outside a checked expression. Product exponents are additionally bounded1024; dimension-map overflow is directly tested."
+        },
+        {
+          "id": "2150",
+          "phase": 0,
+          "status": "Survived",
+          "line": 183,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(power.Numerator.IsZero)return;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "EMPTY_POWER_ACCUMULATION_EQUIVALENCE",
+          "rationale": "Zero power is introduced by Pow(0) into a fresh result map. Recursing product factors merely removes absent zero terms; no observable product remains. Bounded work/allocation can differ."
+        },
+        {
+          "id": "2169",
+          "phase": 0,
+          "status": "Survived",
+          "line": 191,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(result.Count>128)throw new ArgumentOutOfRangeException(nameof(result),\"Product atom budget exceeded.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2175",
+          "phase": 0,
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "statement": "if(result.Count==1&&result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NONEMPTY_COLLECTION_EQUIVALENCE",
+          "rationale": "The Count==1 guard ensures First and FirstOrDefault return the same existing pair."
+        },
+        {
+          "id": "2176",
+          "phase": 0,
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "statement": "if(result.Count==1&&result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "NONEMPTY_COLLECTION_EQUIVALENCE",
+          "rationale": "The Count==1 guard ensures First and FirstOrDefault return the same existing pair."
+        },
+        {
+          "id": "2185",
+          "phase": 0,
+          "status": "Survived",
+          "line": 197,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "throw new ArgumentOutOfRangeException(nameof(result),\"Product exponent budget exceeded.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2201",
+          "phase": 0,
+          "status": "Survived",
+          "line": 218,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(entry?.Field==\"ONE\"||definition.Symbol is \"one\" or \"1\"&&definition.RationalDimension==none&&definition.Converter.IsIdentity)return One;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "CLOSED_CATALOG_ALIAS_EQUIVALENCE",
+          "rationale": "Nonnull entries return before this branch; the ONE field comparison is dead. The lowercase one alias with an identity dimensionless definition already matches the fixed catalog. The independently tested1 alias is retained. Bound to current catalog/source hashes."
+        },
+        {
+          "id": "2206",
+          "phase": 0,
+          "status": "Survived",
+          "line": 218,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(entry?.Field==\"ONE\"||definition.Symbol is \"one\" or \"1\"&&definition.RationalDimension==none&&definition.Converter.IsIdentity)return One;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "CLOSED_CATALOG_ALIAS_EQUIVALENCE",
+          "rationale": "Nonnull entries return before this branch; the ONE field comparison is dead. The lowercase one alias with an identity dimensionless definition already matches the fixed catalog. The independently tested1 alias is retained. Bound to current catalog/source hashes."
+        },
+        {
+          "id": "2213",
+          "phase": 0,
+          "status": "Survived",
+          "line": 223,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension))",
+          "statement": "return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "EARLIER_RETURN_INVARIANT",
+          "rationale": "A nonnull entry already returned FromCatalog earlier. The current branch can only choose Base; changing it to false is equivalent for current public inputs."
+        },
+        {
+          "id": "2215",
+          "phase": 0,
+          "status": "Survived",
+          "line": 229,
+          "mutator": "Linq method mutation (OrderByDescending() to OrderBy())",
+          "replacement": "SiPrefixes.Definitions.OrderBy",
+          "statement": "foreach(var prefix in SiPrefixes.Definitions.OrderByDescending(pair=>pair.Key.Length))",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "CLOSED_PREFIX_CATALOG_EQUIVALENCE",
+          "rationale": "Only decimal d/da prefixes overlap, and the fixed coherent unit symbols have no matching a-prefixed suffix that yields a second candidate. Ordering/break cannot replace an already matched parent. Not a general extensible-catalog claim."
+        },
+        {
+          "id": "2225",
+          "phase": 0,
+          "status": "Survived",
+          "line": 233,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(candidate is not null){parent=FromDefinition(candidate.Unit);prefixExponent=prefix.Value;break;}",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "CLOSED_PREFIX_CATALOG_EQUIVALENCE",
+          "rationale": "Only decimal d/da prefixes overlap, and the fixed coherent unit symbols have no matching a-prefixed suffix that yields a second candidate. Ordering/break cannot replace an already matched parent. Not a general extensible-catalog claim."
+        },
+        {
+          "id": "2248",
+          "phase": 0,
+          "status": "Survived",
+          "line": 265,
+          "mutator": "Null coalescing mutation (left to right)",
+          "replacement": "unit.Symbol??symbol",
+          "statement": "void Put(string field,JavaUnit unit,string? symbol=null)=>result[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "CLOSED_CATALOG_OVERRIDE_INVARIANT",
+          "rationale": "Every current explicit symbol override is on a transformed unit whose intrinsic Symbol is null; all remaining calls pass no override. Swapping coalescing order cannot change these fixed catalog calls."
+        },
+        {
+          "id": "2400",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 293,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(result.Count!=entries.Count)throw new InvalidOperationException(\"Incomplete pinned unit graph catalog.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "FIXED_CATALOG_UNREACHABLE",
+          "rationale": "The exact immutable44-entry constructor adds every fixed catalog key. The guard is a future-maintenance tripwire, not reachable by a current public input."
+        },
+        {
+          "id": "2401",
+          "phase": 0,
+          "status": "NoCoverage",
+          "line": 293,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(result.Count!=entries.Count)throw new InvalidOperationException(\"Incomplete pinned unit graph catalog.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "FIXED_CATALOG_UNREACHABLE",
+          "rationale": "The exact immutable44-entry catalog constructor supplies every fixed key. This future-maintenance tripwire has no failing current public input; decision is bound to retained source hashes."
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "sourceSha256": "44808A1BD19E80379DD348D3F64042A38ACA4A90AE11D462C231399587C59459",
+      "counts": {
+        "CompileError": 2,
+        "Ignored": 10,
+        "Killed": 28,
+        "Survived": 2
+      },
+      "outstanding": [
+        {
+          "id": "2431",
+          "phase": 0,
+          "status": "Survived",
+          "line": 26,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(definition);original=definition;Model=JavaUnit.FromDefinition(definition);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NULL_DEFINITION_REJECTION",
+          "rationale": "JavaUnit.FromDefinition independently throws ArgumentNullException naming definition before any native data is accessed."
+        },
+        {
+          "id": "2460",
+          "phase": 0,
+          "status": "Survived",
+          "line": 102,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(Dimension!=requested)throw new InvalidOperationException(\"Requested quantity type is incompatible.\");return this;",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "sourceSha256": "4CDA9CFFE431E4335C71AC96A4B62C40222BC64926AB6D6259C40069CFEE3351",
+      "counts": {
+        "CompileError": 18,
+        "Ignored": 17,
+        "Killed": 126,
+        "Survived": 5
+      },
+      "outstanding": [
+        {
+          "id": "2887",
+          "phase": 0,
+          "status": "Survived",
+          "line": 16,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "throw new ArgumentException(\"A valid affine converter is required.\",nameof(converter));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "2915",
+          "phase": 0,
+          "status": "Survived",
+          "line": 47,
+          "mutator": "Equality mutation",
+          "replacement": "exponent>0",
+          "statement": "var factor=exponent>=0?JavaNumber.Integer(value):JavaNumber.Ratio(1,value);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "2928",
+          "phase": 0,
+          "status": "Survived",
+          "line": 67,
+          "mutator": "Remove checked expression",
+          "replacement": "-step.Exponent",
+          "statement": "Operation.Power=>PowerStep(step.Radix,checked(-step.Exponent)),",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "BOUNDED_EXPONENT_EQUIVALENCE",
+          "rationale": "Stored Power factors have radix>=2 and a16384-bit value budget. Exponent magnitude is at most16384; negation and an intermediate sum at most32768 cannot overflow Int32. Excludes reflection/unsafe state injection."
+        },
+        {
+          "id": "2959",
+          "phase": 0,
+          "status": "Survived",
+          "line": 124,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!IsAffine)throw new NotSupportedException(\"Nonlinear converter has no affine coefficients.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "3010",
+          "phase": 0,
+          "status": "Survived",
+          "line": 150,
+          "mutator": "Remove checked expression",
+          "replacement": "previous.Exponent+current.Exponent",
+          "statement": "?PowerStep(previous.Radix,checked(previous.Exponent+current.Exponent))",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "BOUNDED_EXPONENT_EQUIVALENCE",
+          "rationale": "Stored Power factors have radix>=2 and a16384-bit value budget. Exponent magnitude is at most16384; negation and an intermediate sum at most32768 cannot overflow Int32. Excludes reflection/unsafe state injection."
+        }
+      ]
+    },
+    {
+      "file": "SiPrefix.cs",
+      "sourceSha256": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+      "counts": {
+        "CompileError": 3,
+        "Ignored": 1,
+        "Killed": 82,
+        "Survived": 3
+      },
+      "outstanding": [
+        {
+          "id": "4094",
+          "phase": 0,
+          "status": "Survived",
+          "line": 14,
+          "mutator": "Equality mutation",
+          "replacement": "Exponent>0",
+          "statement": "public JavaNumber ExactValue=>Exponent>=0?JavaNumber.Integer(System.Numerics.BigInteger.Pow(10,Exponent))",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "4102",
+          "phase": 0,
+          "status": "Survived",
+          "line": 24,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\"Name required.\",nameof(name));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "4108",
+          "phase": 0,
+          "status": "Survived",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\"Symbol required.\",nameof(symbol));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        }
+      ]
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "sourceSha256": "92EC53E232A3CE25C9DE8724F72206F6779CC75CC8A551432B635ACE1584843E",
+      "counts": {
+        "CompileError": 3,
+        "Ignored": 2,
+        "Killed": 50,
+        "Survived": 5
+      },
+      "outstanding": [
+        {
+          "id": "4220",
+          "phase": 1,
+          "status": "Survived",
+          "line": 16,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "ArgumentNullException.ThrowIfNull(unit);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DELEGATED_NULL_UNIT_REJECTION",
+          "rationale": "The surviving outer Apply guard delegates to ApplyExact, which independently rejects null with ArgumentNullException naming unit. The direct ApplyExact path is tested."
+        },
+        {
+          "id": "4223",
+          "phase": 1,
+          "status": "Survived",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\"Unknown SI prefix\",nameof(prefix));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "4228",
+          "phase": 1,
+          "status": "Survived",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(unit.Converter.Offset!=0)throw new InvalidOperationException(\"Cannot prefix an affine unit.\");",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        },
+        {
+          "id": "4232",
+          "phase": 1,
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Equality mutation",
+          "replacement": "exponent>0",
+          "statement": "var factor=exponent>=0?new Rational(power,1):new Rational(1,power);",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "ZERO_POWER_EQUIVALENCE",
+          "rationale": "Branches differ only at exponent/scale zero. Multiplication or division by10^0 is identity; Integer1 and Ratio(1,1) normalize identically. Prefix identity normalization also drops the unit factor."
+        },
+        {
+          "id": "4240",
+          "phase": 1,
+          "status": "Survived",
+          "line": 32,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "public static int Exponent(string prefix)=>Exponents.TryGetValue(prefix,out var exponent)?exponent:throw new ArgumentException(\"Unknown SI prefix\",nameof(prefix));",
+          "disposition": "OPEN_REVIEW",
+          "reviewedDisposition": "DIAGNOSTIC_TEXT_VARIATION",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill."
+        }
+      ]
+    }
+  ],
+  "reviewedDispositionCounts": {
+    "DIAGNOSTIC_TEXT_VARIATION": 26,
+    "DELEGATED_ZERO_DENOMINATOR_REJECTION": 2,
+    "BIGINTEGER_CAST_EQUIVALENCE": 3,
+    "DELEGATED_FORMAT_REJECTION": 1,
+    "DELEGATED_NONFINITE_REJECTION": 2,
+    "NET10_SATURATING_CAST_EQUIVALENCE": 2,
+    "NORMALIZED_ZERO_VALUE_EQUIVALENCE": 1,
+    "ZERO_POWER_EQUIVALENCE": 7,
+    "POSITIVE_DECADE_INTEGER_NORMALIZATION": 1,
+    "INCONCLUSIVE_TIMEOUT": 2,
+    "REDUNDANT_PROFILE_REJECTION": 3,
+    "UNREACHABLE_NORMALIZATION_GUARD": 3,
+    "ROUNDTRIP_INVARIANT_EQUIVALENCE": 1,
+    "HASH_ALGORITHM_VARIATION": 1,
+    "DELEGATED_NULL_TARGET_REJECTION": 1,
+    "DELEGATED_NONLINEAR_REJECTION": 1,
+    "IDENTITY_BRANCH_EQUIVALENCE": 1,
+    "NONZERO_FACTOR_INVARIANT": 1,
+    "EMPTY_POWER_ACCUMULATION_EQUIVALENCE": 1,
+    "NONEMPTY_COLLECTION_EQUIVALENCE": 2,
+    "CLOSED_CATALOG_ALIAS_EQUIVALENCE": 2,
+    "EARLIER_RETURN_INVARIANT": 1,
+    "CLOSED_PREFIX_CATALOG_EQUIVALENCE": 2,
+    "CLOSED_CATALOG_OVERRIDE_INVARIANT": 1,
+    "FIXED_CATALOG_UNREACHABLE": 2,
+    "DELEGATED_NULL_DEFINITION_REJECTION": 1,
+    "BOUNDED_EXPONENT_EQUIVALENCE": 2,
+    "DELEGATED_NULL_UNIT_REJECTION": 1
+  },
+  "reviewPolicy": "Source-inspection dispositions are conditional engineering judgments, not formal proof or raw mutation kills. Diagnostic and hash variations remain explicitly observable. Independent agent review is retained separately."
+}

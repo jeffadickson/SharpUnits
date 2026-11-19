@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "baselineCommit": "75a9b11e2fb3fc843ee59d3bb1ef83e1f303c1d2",
+  "testedSource": "Working tree bound by canonicalSourceSha256 and captured reference lock; commit association retained separately",
+  "canonicalHash": "SHA256 UTF8 text with CRLF normalized to LF",
+  "artifactRoot": "E:\\Artifacts\\SharpUnits\\uncapped-verification-5e5c6de75a484ba99edb83a25d35f9ea",
+  "sourceSha256": {
+    "src/SharpUnits/ExactTextFormat.Reader.cs": "D20BD5B0DFC742FA20D921BB3E86113EE652CC493CB2E4C287B6B269D5120D5F",
+    "tests/SharpUnits.Tests/ExactTextFormatTests.cs": "B03C85D318914B399A79401D14A48050ACCF868B5FE0FE24545BFB1E14B70823",
+    "tools/Invoke-TypedErrorVerification.ps1": "29D811FE3391B726205E710B578B505CAF0A594BE78C911CA378B430646C4625",
+    "tools/Invoke-ExactTextVerification.ps1": "62C21A7D26E8AE21B42B2927F6029D973D933BC61203C20385EDACF6C17D53B3",
+    "tools/Invoke-ExactTextFaults.ps1": "27DABD91F5D30C95984889A09D240ABB69EE8A6D64EA86BD27510C814FC04D3D",
+    "tools/Test-OrdinaryVerificationMemory.ps1": "89B1586877AA3A8660CB3A81AB11584E888FF82A6B0A8571CA24C61238434EAB",
+    "requirements/exact-text.sdoc": "49A51514467899F6620E28B62B123A20996CC9657AC683FAA0CB4C9A6FA097D7",
+    "requirements/release-compatibility.sdoc": "948D16D828AA62A01C38351C15997AA3F1E72D78680E04FB6E42F49B18AE8BBF",
+    "requirements/verification-audit.sdoc": "ABFE40AD73E9BCDAAF5EAEEE740A65672FB10529A616F5B34633181477A9B6B1",
+    "conformance/verification-reference-lock.json": "AF9503773B3523163DB3B582FCB00DA15B97F653A626E2838A5AD6CEA8B8C793",
+    "docs/exact-text-format.md": "054BE1A762EFD5086F1F6409803C5688BEB413A676DE8E5424019552BE8EBA43",
+    "docs/CODEX_HANDOFF.md": "A1F990F915936A6C9B00050594F8AF8F99E03CB682D1BB9476F69E86371924F4",
+    "conformance/exact-text-identity-review.md": "2E1F4AC8422DE13161C5A2C67C816CDBD414F0D025D8AC9AFAAB6BBCA9E4E04B"
+  },
+  "artifactSha256": {
+    "environment.json": "0CE974461BAF78CE8930AA64B63579AD54DB7DA1D4A74AA8B77C30FFC54C6CDD",
+    "ci-state.json": "AE8A8831DBE29FEE24A4BFCAA81F2CA6E426E23FE1DDE7539312FDE25B76FA7A",
+    "identity-red.log": "EDCD513AC0E00FB0F558686535272CA4E52DF7B80E08B8B53FFE2F6A90DFA2BE",
+    "identity-red.trx": "FEB6A90F66B3EE82A8F2327EFE739B60018470F4FD12E3A7B64853DD9F921B39",
+    "tests/workload.log": "0F6439015BF3B733C0F3A62EADDA29675B54B462C51A49FB670BDFE42B39F312",
+    "final-tests/workload.log": "343CDEAA5063D94AB4AE01155B875AC8EF1270FCF8321D0F0D8F181C65808F3B",
+    "final-tests/coverage/typed-errors.trx": "7D61D60B5F36B52DCCB3DCE2A61A9D6950CCE23CBCB2DBDDA86B64A349CC5D83",
+    "final-launcher-tests/result.json": "8B7A18CB90B215F2EF1F706D80E4D38144A77A5D18F451510D90385655C64561",
+    "final-launcher-tests/TypedError/workload.log": "5BA485F7F71E6311F2D2EBC3D5CD4009430C4C66BAF56C0CC13D13A52A8E1D77",
+    "final-launcher-tests/ExactText/workload.log": "138CF3C19EE3F0C3BC4C94B9261268FAE19A7349AEBC1C4F04DC8EE9516E0AE3",
+    "final-requirements/strictdoc-evidence.json": "90C36D487254C1131E890BBE800FACA968524F4C3B4DB83887950695F163FBA4",
+    "final-requirements/workload.log": "C3F0E12DB454F37EFE34DA57B7BB3AEF6BF7979CB2663F881A2BF5AFC82B9BCE",
+    "exact-reference/comparison.json": "EFEF57AA03A534AA74BB40BD457B5E88B54A65FDFB0675E2CE1638AD0B8C5913",
+    "exact-reference/java.jsonl": "8375D436EB07D115BD3290D6DCD1C54BB1D1373763398CD523194CA296E29875",
+    "exact-reference/workload.log": "EADB04E3C0B9823067BABC8E110091F91748F0F54B5CF4C5686827794597975E",
+    "reference/corpora/summary.json": "25093D865370E0DC89485F0A0E007AA3BC4A1B973AC0066111344FEA6E61A7A5",
+    "reference/workload.log": "1F1B6B1FE401B943650079D0F290EB9BBE57B1935A5EEDD5CC569EFD15932F77",
+    "identity-control/fault-controls.json": "4EC29B47DF0BC52CB526703B90C5E77F49772259A21413B915E33F2EA899EE7D",
+    "identity-control/snapshot-inputs.json": "37AD0C06716F84C903695A4541766000015F47A8A5CC794A824645358D578737",
+    "identity-control/baseline/build.log": "5A1BB307C89F7B3D0583E98F9B4104333EF556DD0B94CA5F37CE5CAE8F6C22D9",
+    "identity-control/baseline/test.log": "4A518F72788434118FF573B9D3AAEEB674D69359F0C15AF2ED093971FD14F656",
+    "identity-control/baseline/results/tests.trx": "3A1B7E145639C0436158A98DD559BFA37078CF928DC7E1B35F88BBE65F777CEE",
+    "identity-control/IdentityParentMapping/build.log": "C070C5467901A277237882CD3EB86D5FA1FDC317FB9A0AD77C27FFEA2074FE35",
+    "identity-control/IdentityParentMapping/test.log": "FF0DC788C9972820220B9920D9C5531512CD670052F9A35C5C34BB33E76F2333",
+    "identity-control/IdentityParentMapping/results/tests.trx": "F9A0AA632305AF517954DA6075875BCF08309764487E8D3DC559B7ABEBC18752",
+    "identity-guard/watchdog.json": "2499DDB8C8795F46E5DAC5CA14CB44C8EDA1FF30F7952B6FE93D053D207E6610",
+    "final-tests/coverage/85cf48d9-dab4-44ab-b00b-e3a678464a58/coverage.cobertura.xml": "E115DADC4CB47800702B498CA4F602C4092E6B99207E97C9313697EC8AD321E1"
+  },
+  "results": {
+    "mutation": {
+      "method": "One curated compiled semantic fault; not Stryker",
+      "baselinePassed": 58,
+      "mutantPassed": 54,
+      "status": "KILLED",
+      "mutantFailed": 4
+    },
+    "tests": {
+      "skipped": 0,
+      "failed": 0,
+      "passed": 3298
+    },
+    "javaText": {
+      "intentionalAcceptanceDifferences": 3,
+      "numericPairs": 32,
+      "contracts": 16,
+      "unexpectedFailures": 0
+    },
+    "strictdoc": {
+      "version": "0.30.4",
+      "documents": 12,
+      "ids": 409
+    },
+    "formalAssertionsClosed": 0,
+    "ci": "Both workflows disabled_manually; no dispatch",
+    "coverage": {
+      "coveredLines": 2432,
+      "coveredBranches": 2462,
+      "validLines": 2544,
+      "validBranches": 2796,
+      "scope": "SharpUnits library only; PowerShell coverage unmeasured"
+    },
+    "red": {
+      "passed": 0,
+      "failed": 4
+    },
+    "reference": {
+      "cases": 2670,
+      "failed": 0,
+      "corpora": 11
+    },
+    "launcher": {
+      "invalidHeapRejected": true,
+      "ordinaryRunnersPassed": 2
+    }
+  },
+  "limitations": [
+    "Windows local execution only; no Ubuntu or NativeAOT run",
+    "Existing finite property/malformed input/UTF16 checks; no coverage-guided fuzz campaign",
+    "No new full Stryker run or broad graph mutation qualification",
+    "Normative/API completeness and typed conversion/factory boundaries remain open",
+    "113-occurrence ledger unchanged:14 GAP,99 PARTIAL,0 VERIFIED"
+  ]
+}

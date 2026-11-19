@@ -8,7 +8,11 @@ public sealed class TckPrefixApiSurfaceTests
  [Fact] public void Tck424A2_HashCode()=>Assert.NotNull(typeof(SiPrefix).GetMethod("GetHashCode",Type.EmptyTypes));
  [Fact] public void Tck424A3_Name()=>Assert.NotNull(typeof(SiPrefix).GetProperty("Name"));
  [Fact] public void Tck424A4_Symbol()=>Assert.NotNull(typeof(SiPrefix).GetProperty("Symbol"));
- [Fact] public void Tck424A5_Value()=>Assert.NotNull(typeof(SiPrefix).GetProperty("Value"));
+ [Fact] public void Tck424A5_Value()
+ {
+  Assert.NotNull(typeof(SiPrefix).GetProperty("Value"));
+  Assert.Equal(typeof(JavaNumber),typeof(SiPrefix).GetMethod("GetValue")!.ReturnType);
+ }
  [Fact] public void Tck424A6_Exponent()=>Assert.NotNull(typeof(SiPrefix).GetProperty("Exponent"));
  [Fact] public void PrefixMetadataIsConsistent()
  {

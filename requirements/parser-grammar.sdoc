@@ -1,0 +1,42 @@
+[DOCUMENT]
+TITLE: SharpUnits remaining Java unit grammar requirements
+
+[REQUIREMENT]
+UID: JP-014-POWERS
+STATUS: Active
+TITLE: Java textual power forms
+STATEMENT: The Java quantity parser shall support bounded ASCII, double-star and superscript 1/2/3 power notation using pinned SimpleUnitFormat semantics, including zero or missing-digit default-one sentinels, without changing native unit power APIs.
+COMMENT: Implementation: JavaUnitTextParser.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. Exponent magnitude remains bounded by 1024.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-ROOTS
+STATUS: Active
+TITLE: Rational textual powers and roots
+STATEMENT: The Java quantity parser shall preserve rational dimensions for bounded colon-root exponents, with Java power-then-root scale evaluation and documented floating-point limits.
+COMMENT: Implementation: JavaUnitTextParser.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. Affine algebra and nonfinite numeric factors remain rejected.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-INTEGER-FACTOR
+STATUS: Active
+TITLE: Integer factors in unit expressions
+STATEMENT: The Java quantity parser shall support nonzero signed 32-bit integer factors after multiplication/division, preserving pinned operator association and scale.
+COMMENT: Implementation: JavaUnitTextParser.cs, UnitDefinition and JavaDoubleArithmetic. Verification: ParserGrammarTests and shared H100 scenarios, including conversion through nonterminating factors 1/3 and 1/7. Exact internal linear factors use a 16384-bit allocation budget. Evidence: conformance/parser-grammar-review-100.json. Fractional numeric factors and Java integer-overflow quirks outside this range remain explicit gaps.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014
+
+[REQUIREMENT]
+UID: JP-014-PREFIXES
+STATUS: Active
+TITLE: Automatic decimal-prefix resolution
+STATEMENT: The Java quantity parser shall resolve supported single decimal prefixes on registered coherent linear units without registry mutation, with exact registrations taking precedence.
+COMMENT: Implementation: JavaUnitTextParser.cs and SiPrefixes.cs. Verification: ParserGrammarTests and shared H100 scenarios. Evidence: conformance/parser-grammar-review-100.json. The Greek micro alias is normalized. Nested/affine prefixes and general Java unit discovery are not implied.
+RELATIONS:
+- TYPE: Parent
+  VALUE: JP-014

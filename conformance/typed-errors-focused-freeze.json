@@ -1,0 +1,6 @@
+{
+  "configSha256": "2FBB8F4AD0FDB0436C523516D803C7C09F4FE4DBC1764F53D0337DBF9BD20101",
+  "scope": "Standard mutation level; full NumericResult and JavaNumber Decimal/ParseDecimal, FromNumeric/ConvertNumeric, Check/WithinBudget spans; other methods excluded; offsets regenerated for current line endings",
+  "numericResultSourceSha256": "E85F9644B15A9EDF7E6F31B7D75F6F63B566D8B4E5AC462C85B1C216E63D02C7",
+  "javaNumberSourceSha256": "D114E4BB9284C5DAED672432768C5BED8997F5583FCE546F9250AEDB15B33E6C"
+}

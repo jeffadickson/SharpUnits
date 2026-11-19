@@ -1,0 +1,128 @@
+{
+  "tool": "Stryker.NET 5.0.0",
+  "reportSha256": "0059637CC7DB80E24AC4CE8131C749938DDC45F181C1DD228E1149EAB9523B18",
+  "scope": "Eight core library files; excludes Java, tests, automation and factory/projection bridge lines in other files.",
+  "counts": {
+    "Ignored": 1082,
+    "CompileError": 76,
+    "Killed": 16,
+    "Survived": 4
+  },
+  "files": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "sourceTextSha256": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+      "counts": {
+        "Ignored": 29,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaNumber.cs",
+      "sourceTextSha256": "2B55CDB691C2F1A0E18755DC70BE34BBEEA80B425D73A6D8DEA4502779CA4CE5",
+      "counts": {
+        "Ignored": 289,
+        "CompileError": 12,
+        "Killed": 2,
+        "Survived": 1
+      },
+      "outstanding": [
+        {
+          "id": "1158",
+          "status": "Survived",
+          "line": 97,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "EQUIVALENT_FOR_PUBLIC_BEHAVIOR: JavaNumberText.Format independently rejects nonfinite input; removing the outer guard retains the same exception type."
+        }
+      ]
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "sourceTextSha256": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+      "counts": {
+        "Ignored": 71,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnit.cs",
+      "sourceTextSha256": "8925A88D95FC3E75935D37A413D9B7A6E5229F9058FE2B54EA3419327517E232",
+      "counts": {
+        "CompileError": 34,
+        "Ignored": 379
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "sourceTextSha256": "44808A1BD19E80379DD348D3F64042A38ACA4A90AE11D462C231399587C59459",
+      "counts": {
+        "Ignored": 40,
+        "CompileError": 2
+      },
+      "outstanding": []
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "sourceTextSha256": "190A00AE844A974AC28495980D98AE3E690F7BC4822FA2AF4B01C42E468CFE47",
+      "counts": {
+        "Ignored": 131,
+        "Killed": 14,
+        "CompileError": 18,
+        "Survived": 3
+      },
+      "outstanding": [
+        {
+          "id": "2882",
+          "status": "Survived",
+          "line": 41,
+          "mutator": "Equality mutation",
+          "replacement": "<= -1024",
+          "sourceExcerpt": "if(exponent is < -1024 or >1024)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "TEST_GAP_FIXED_PENDING_RERUN: added accepted exponent -1024 witness."
+        },
+        {
+          "id": "2885",
+          "status": "Survived",
+          "line": 41,
+          "mutator": "Equality mutation",
+          "replacement": ">=1024",
+          "sourceExcerpt": "if(exponent is < -1024 or >1024)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "TEST_GAP_FIXED_PENDING_RERUN: added accepted exponent +1024 witness."
+        },
+        {
+          "id": "2894",
+          "status": "Survived",
+          "line": 47,
+          "mutator": "Equality mutation",
+          "replacement": "exponent>0",
+          "sourceExcerpt": "var factor=exponent>=0?JavaNumber.Integer(value):JavaNumber.Ratio(1,value);",
+          "disposition": "EQUIVALENT: exponent zero makes value=1; Integer(1) and Ratio(1,1) both narrow to the same canonical integer."
+        }
+      ]
+    },
+    {
+      "file": "SiPrefix.cs",
+      "sourceTextSha256": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+      "counts": {
+        "Ignored": 86,
+        "CompileError": 3
+      },
+      "outstanding": []
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "sourceTextSha256": "92EC53E232A3CE25C9DE8724F72206F6779CC75CC8A551432B635ACE1584843E",
+      "counts": {
+        "Ignored": 57,
+        "CompileError": 3
+      },
+      "outstanding": []
+    }
+  ],
+  "limitations": "Timeouts are reported separately, not counted as demonstrated kills. Surviving/uncovered mutants require review; compile errors/ignored mutants are not execution evidence. Source hashes refer to report UTF-8 source text."
+}

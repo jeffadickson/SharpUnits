@@ -1,0 +1,3037 @@
+{
+  "tool": "Stryker.NET 5.0.0",
+  "reportSha256": "2D46C079A52E525774B1374928C5EEE65F234C1339CF82B9FDCC3DE18732F25D",
+  "scope": "Eight core library files; excludes Java, tests, automation and factory/projection bridge lines in other files.",
+  "counts": {
+    "Ignored": 91,
+    "Killed": 646,
+    "Survived": 292,
+    "CompileError": 68,
+    "Timeout": 5,
+    "NoCoverage": 27
+  },
+  "files": [
+    {
+      "file": "JavaDimensionAdapter.cs",
+      "sourceTextSha256": "6C9E9F2342F1424E1B71178B174F0B7AB830B24E4FB87EE54D1E18CD794EDF8D",
+      "counts": {
+        "Ignored": 6,
+        "Killed": 17,
+        "Survived": 6,
+        "CompileError": 2
+      },
+      "outstanding": [
+        {
+          "id": "908",
+          "status": "Survived",
+          "line": 17,
+          "mutator": "Linq method mutation (Any() to All())",
+          "replacement": "Components(value).All",
+          "sourceExcerpt": "if(Components(value).Any(power=\u003Epower.Denominator.Sign\u003C=0))throw new ArgumentException(\u0022Normalized exponents required.\u0022,nameof(value));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "912",
+          "status": "Survived",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(Components(value).Any(power=\u003Epower.Denominator.Sign\u003C=0))throw new ArgumentException(\u0022Normalized exponents required.\u0022,nameof(value));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "917",
+          "status": "Survived",
+          "line": 24,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public JavaDimensionAdapter Divide(JavaDimensionAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Value-other.Value);}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "921",
+          "status": "Survived",
+          "line": 30,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "922",
+          "status": "Survived",
+          "line": 30,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);return new(Value.Pow(new Rational(1,degree)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "931",
+          "status": "Survived",
+          "line": 42,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)power.Numerator",
+          "sourceExcerpt": "map.Add(new(dimension),checked((int)power.Numerator));",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaNumber.cs",
+      "sourceTextSha256": "66372A308AACA426BB4374C8BC2F81EEC19979A8F1045745AAD8F67E444170A6",
+      "counts": {
+        "Ignored": 19,
+        "Timeout": 4,
+        "Killed": 211,
+        "Survived": 51,
+        "CompileError": 12,
+        "NoCoverage": 3
+      },
+      "outstanding": [
+        {
+          "id": "1069",
+          "status": "Timeout",
+          "line": 43,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Check(value);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1071",
+          "status": "Timeout",
+          "line": 44,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?JavaNumberKind.Integer:kind)",
+          "sourceExcerpt": "Fraction=value;Kind=value.Denominator.IsOne?JavaNumberKind.Integer:kind;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1072",
+          "status": "Timeout",
+          "line": 45,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?scale:0)",
+          "sourceExcerpt": "DecimalScale=Kind==JavaNumberKind.Decimal?scale:0;this.binary=binary;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1076",
+          "status": "Survived",
+          "line": 54,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(text);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1080",
+          "status": "Survived",
+          "line": 55,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=4096",
+          "sourceExcerpt": "if(text.Length is 0 or \u003E4096)throw new FormatException(\u0022Decimal token length is outside the supported budget.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1082",
+          "status": "Survived",
+          "line": 55,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(text.Length is 0 or \u003E4096)throw new FormatException(\u0022Decimal token length is outside the supported budget.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1111",
+          "status": "Survived",
+          "line": 63,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(c is \u003C\u00270\u0027 or \u003E\u00279\u0027)throw new FormatException(\u0022Invalid decimal digit.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1112",
+          "status": "Survived",
+          "line": 63,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(c is \u003C\u00270\u0027 or \u003E\u00279\u0027)throw new FormatException(\u0022Invalid decimal digit.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1119",
+          "status": "Survived",
+          "line": 66,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1120",
+          "status": "Survived",
+          "line": 66,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(digits.Length==0)throw new FormatException(\u0022Decimal digits required.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1128",
+          "status": "Survived",
+          "line": 69,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "throw new FormatException(\u0022Invalid decimal exponent.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1129",
+          "status": "Survived",
+          "line": 70,
+          "mutator": "Arithmetic mutation",
+          "replacement": "(long)fractional\u002Bexponent",
+          "sourceExcerpt": "var scale=(long)fractional-exponent;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1133",
+          "status": "Survived",
+          "line": 71,
+          "mutator": "Equality mutation",
+          "replacement": "\u003C= -4096",
+          "sourceExcerpt": "if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1136",
+          "status": "Survived",
+          "line": 71,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=4096",
+          "sourceExcerpt": "if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1137",
+          "status": "Survived",
+          "line": 71,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1138",
+          "status": "Survived",
+          "line": 71,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(scale is \u003C -4096 or \u003E4096)throw new ArgumentOutOfRangeException(nameof(text),\u0022Decimal scale budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1142",
+          "status": "Survived",
+          "line": 78,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(!double.IsFinite(value))throw new ArgumentOutOfRangeException(nameof(value));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1146",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Logical mutation",
+          "replacement": "value\u003E=long.MinValue||value\u003C=9223372036854775808d",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1147",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Negate expression",
+          "replacement": "!(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1148",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003Clong.MinValue",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1149",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003Elong.MinValue",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1150",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003E9223372036854775808d",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1151",
+          "status": "Survived",
+          "line": 86,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003C9223372036854775808d",
+          "sourceExcerpt": "if(value\u003E=long.MinValue\u0026\u0026value\u003C=9223372036854775808d)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1153",
+          "status": "Survived",
+          "line": 87,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?long.MaxValue:(long)value)",
+          "sourceExcerpt": "return Integer(value\u003E=9223372036854775808d?long.MaxValue:(long)value);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1155",
+          "status": "Survived",
+          "line": 87,
+          "mutator": "Equality mutation",
+          "replacement": "value\u003E9223372036854775808d",
+          "sourceExcerpt": "return Integer(value\u003E=9223372036854775808d?long.MaxValue:(long)value);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1156",
+          "status": "Survived",
+          "line": 99,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "_=\u003Ethrow new ArgumentException(\u0022A supported numeric value is required.\u0022,nameof(value))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1172",
+          "status": "Survived",
+          "line": 124,
+          "mutator": "Logical mutation",
+          "replacement": "Fraction.Numerator.IsZero\u0026\u0026other.Fraction.Numerator.IsZero",
+          "sourceExcerpt": "if(multiply\u0026\u0026(Fraction.Numerator.IsZero||other.Fraction.Numerator.IsZero))return Zero;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1219",
+          "status": "Survived",
+          "line": 146,
+          "mutator": "Remove checked expression",
+          "replacement": "a.Scale\u002Bb.Scale",
+          "sourceExcerpt": "var scale=multiply?checked(a.Scale\u002Bb.Scale):Math.Max(a.Scale,b.Scale);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1232",
+          "status": "Survived",
+          "line": 151,
+          "mutator": "Equality mutation",
+          "replacement": "BigInteger.Abs(other.Fraction.Numerator)\u003E=long.MaxValue",
+          "sourceExcerpt": "||multiply\u0026\u0026other.Kind==JavaNumberKind.Integer\u0026\u0026BigInteger.Abs(other.Fraction.Numerator)\u003Elong.MaxValue)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1242",
+          "status": "Survived",
+          "line": 153,
+          "mutator": "Equality mutation",
+          "replacement": "BigInteger.Abs(Fraction.Numerator)\u003E=long.MaxValue",
+          "sourceExcerpt": "||multiply\u0026\u0026Kind==JavaNumberKind.Integer\u0026\u0026BigInteger.Abs(Fraction.Numerator)\u003Elong.MaxValue);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1257",
+          "status": "Survived",
+          "line": 172,
+          "mutator": "Equality mutation",
+          "replacement": "exponent\u003E0",
+          "sourceExcerpt": "if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1259",
+          "status": "Survived",
+          "line": 172,
+          "mutator": "Equality mutation",
+          "replacement": "numerator\u003C=denominator*BigInteger.Pow(10,exponent)",
+          "sourceExcerpt": "if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1262",
+          "status": "Survived",
+          "line": 172,
+          "mutator": "Equality mutation",
+          "replacement": "numerator*BigInteger.Pow(10,-exponent)\u003C=denominator",
+          "sourceExcerpt": "if(exponent\u003E=0?numerator\u003Cdenominator*BigInteger.Pow(10,exponent):numerator*BigInteger.Pow(10,-exponent)\u003Cdenominator)exponent--;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1271",
+          "status": "Survived",
+          "line": 174,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "sourceExcerpt": "var n=scale\u003E=0?numerator*BigInteger.Pow(10,scale):numerator;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1276",
+          "status": "Survived",
+          "line": 175,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "sourceExcerpt": "var d=scale\u003E=0?denominator:denominator*BigInteger.Pow(10,-scale);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1291",
+          "status": "Timeout",
+          "line": 180,
+          "mutator": "Negate expression",
+          "replacement": "!(scale\u003EpreferredScale\u0026\u0026quotient%10==0)",
+          "sourceExcerpt": "if(remainder.IsZero)while(scale\u003EpreferredScale\u0026\u0026quotient%10==0){quotient/=10;scale--;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1305",
+          "status": "Survived",
+          "line": 185,
+          "mutator": "Equality mutation",
+          "replacement": "\u003C= -8192",
+          "sourceExcerpt": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1308",
+          "status": "Survived",
+          "line": 185,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=8192",
+          "sourceExcerpt": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1309",
+          "status": "NoCoverage",
+          "line": 185,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(scale is \u003C -8192 or \u003E8192)throw new ArgumentOutOfRangeException(nameof(scale));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1313",
+          "status": "Survived",
+          "line": 186,
+          "mutator": "Equality mutation",
+          "replacement": "scale\u003E0",
+          "sourceExcerpt": "var fraction=scale\u003E=0?new Rational(coefficient,BigInteger.Pow(10,scale)):new Rational(coefficient*BigInteger.Pow(10,-scale),1);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1318",
+          "status": "Survived",
+          "line": 191,
+          "mutator": "Equality mutation",
+          "replacement": "value.Denominator.Sign\u003C0",
+          "sourceExcerpt": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1320",
+          "status": "NoCoverage",
+          "line": 191,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1321",
+          "status": "NoCoverage",
+          "line": 191,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(value.Denominator.Sign\u003C=0)throw new ArgumentException(\u0022A normalized rational is required.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1325",
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Equality mutation",
+          "replacement": "value.Numerator.GetBitLength()\u003E=Budget",
+          "sourceExcerpt": "if(value.Numerator.GetBitLength()\u003EBudget||value.Denominator.GetBitLength()\u003EBudget)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1327",
+          "status": "Survived",
+          "line": 192,
+          "mutator": "Equality mutation",
+          "replacement": "value.Denominator.GetBitLength()\u003E=Budget",
+          "sourceExcerpt": "if(value.Numerator.GetBitLength()\u003EBudget||value.Denominator.GetBitLength()\u003EBudget)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1329",
+          "status": "Survived",
+          "line": 193,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "throw new ArgumentOutOfRangeException(nameof(value),\u0022Numeric bit budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1331",
+          "status": "Survived",
+          "line": 196,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction))",
+          "sourceExcerpt": "public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1333",
+          "status": "Survived",
+          "line": 196,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?RoundedDecimal(Fraction).Fraction:Fraction)",
+          "sourceExcerpt": "public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1334",
+          "status": "Survived",
+          "line": 196,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?RoundedDecimal(Fraction).Fraction:Fraction)",
+          "sourceExcerpt": "public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1335",
+          "status": "Survived",
+          "line": 196,
+          "mutator": "Equality mutation",
+          "replacement": "Kind!=JavaNumberKind.Rational",
+          "sourceExcerpt": "public double ToDouble()=\u003EKind==JavaNumberKind.Binary64?binary:JavaDoubleArithmetic.ToDouble(Kind==JavaNumberKind.Rational?RoundedDecimal(Fraction).Fraction:Fraction);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1339",
+          "status": "Survived",
+          "line": 201,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?AsDecimal().Fraction:Fraction)",
+          "sourceExcerpt": "var a=Kind==JavaNumberKind.Rational\u0026\u0026other.Kind\u003E=JavaNumberKind.Binary64?AsDecimal().Fraction:Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1341",
+          "status": "Survived",
+          "line": 201,
+          "mutator": "Equality mutation",
+          "replacement": "Kind!=JavaNumberKind.Rational",
+          "sourceExcerpt": "var a=Kind==JavaNumberKind.Rational\u0026\u0026other.Kind\u003E=JavaNumberKind.Binary64?AsDecimal().Fraction:Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1343",
+          "status": "Survived",
+          "line": 201,
+          "mutator": "Equality mutation",
+          "replacement": "other.Kind\u003EJavaNumberKind.Binary64",
+          "sourceExcerpt": "var a=Kind==JavaNumberKind.Rational\u0026\u0026other.Kind\u003E=JavaNumberKind.Binary64?AsDecimal().Fraction:Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1345",
+          "status": "Survived",
+          "line": 202,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?other.AsDecimal().Fraction:other.Fraction)",
+          "sourceExcerpt": "var b=other.Kind==JavaNumberKind.Rational\u0026\u0026Kind\u003E=JavaNumberKind.Binary64?other.AsDecimal().Fraction:other.Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1347",
+          "status": "Survived",
+          "line": 202,
+          "mutator": "Equality mutation",
+          "replacement": "other.Kind!=JavaNumberKind.Rational",
+          "sourceExcerpt": "var b=other.Kind==JavaNumberKind.Rational\u0026\u0026Kind\u003E=JavaNumberKind.Binary64?other.AsDecimal().Fraction:other.Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1349",
+          "status": "Survived",
+          "line": 202,
+          "mutator": "Equality mutation",
+          "replacement": "Kind\u003EJavaNumberKind.Binary64",
+          "sourceExcerpt": "var b=other.Kind==JavaNumberKind.Rational\u0026\u0026Kind\u003E=JavaNumberKind.Binary64?other.AsDecimal().Fraction:other.Fraction;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1353",
+          "status": "Survived",
+          "line": 209,
+          "mutator": "Logical mutation",
+          "replacement": "other is not null||Kind==other.Kind",
+          "sourceExcerpt": "public bool Equals(JavaNumber? other)=\u003Eother is not null\u0026\u0026Kind==other.Kind\u0026\u0026(Kind==JavaNumberKind.Rational",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1365",
+          "status": "Survived",
+          "line": 214,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale))",
+          "sourceExcerpt": "public override int GetHashCode()=\u003EKind==JavaNumberKind.Rational?HashCode.Combine(Kind,Decimal128Parts(Fraction)):HashCode.Combine(Kind,Fraction,DecimalScale);",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaNumberQuantity.cs",
+      "sourceTextSha256": "F9E56F03E8EDCF8F0D94D33766D26CC1F201ECD6266D37697F54CE17E68DED3E",
+      "counts": {
+        "Ignored": 8,
+        "Killed": 49,
+        "Survived": 12,
+        "NoCoverage": 2,
+        "CompileError": 2
+      },
+      "outstanding": [
+        {
+          "id": "1374",
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(target);if(Unit.Equals(target))return this;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1381",
+          "status": "Survived",
+          "line": 34,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1382",
+          "status": "Survived",
+          "line": 34,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!converter.IsAffine)throw new NotSupportedException(\u0022Relative conversion requires a constant derivative.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1386",
+          "status": "Survived",
+          "line": 43,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(other);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1395",
+          "status": "Survived",
+          "line": 49,
+          "mutator": "Logical mutation",
+          "replacement": "!Unit.Equals(target)\u0026\u0026!other.Unit.Equals(target)",
+          "sourceExcerpt": "else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1397",
+          "status": "Survived",
+          "line": 49,
+          "mutator": "LogicalNotExpression to un-LogicalNotExpression mutation",
+          "replacement": "Unit.Equals(target)",
+          "sourceExcerpt": "else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1398",
+          "status": "NoCoverage",
+          "line": 49,
+          "mutator": "LogicalNotExpression to un-LogicalNotExpression mutation",
+          "replacement": "other.Unit.Equals(target)",
+          "sourceExcerpt": "else if(!Unit.Equals(target)||!other.Unit.Equals(target))result=Unit.SystemConverter.Inverse().Convert(result);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1402",
+          "status": "Survived",
+          "line": 58,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(other);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1404",
+          "status": "Survived",
+          "line": 59,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?q:q.To(q.Unit.SystemUnit))",
+          "sourceExcerpt": "JavaNumberQuantity Linear(JavaNumberQuantity q)=\u003Eq.Unit.SystemConverter.IsLinear?q:q.To(q.Unit.SystemUnit);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1412",
+          "status": "Survived",
+          "line": 69,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(scalar);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1423",
+          "status": "Survived",
+          "line": 82,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(Unit.Dimension!=dimension)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1425",
+          "status": "Survived",
+          "line": 87,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(registry);return AsType(registry.DimensionOf(kind));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1437",
+          "status": "Survived",
+          "line": 94,
+          "mutator": "Equality mutation",
+          "replacement": "other is null",
+          "sourceExcerpt": "public bool Equals(JavaNumberQuantity? other)=\u003Eother is not null\u0026\u0026Value.Equals(other.Value)\u0026\u0026Unit.Equals(other.Unit)\u0026\u0026Scale==other.Scale;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1438",
+          "status": "NoCoverage",
+          "line": 94,
+          "mutator": "Equality mutation",
+          "replacement": "Scale!=other.Scale",
+          "sourceExcerpt": "public bool Equals(JavaNumberQuantity? other)=\u003Eother is not null\u0026\u0026Value.Equals(other.Value)\u0026\u0026Unit.Equals(other.Unit)\u0026\u0026Scale==other.Scale;",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnit.cs",
+      "sourceTextSha256": "356EE21A34F5F1A5812A12316A51AC0239D0720B6B7B23CC800292F6AC13082E",
+      "counts": {
+        "CompileError": 34,
+        "Killed": 147,
+        "Survived": 184,
+        "Ignored": 30,
+        "Timeout": 1,
+        "NoCoverage": 13
+      },
+      "outstanding": [
+        {
+          "id": "1957",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1958",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1959",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1960",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1961",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1962",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1963",
+          "status": "Survived",
+          "line": 33,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "private static readonly string[] baseNames={\u0022Metre\u0022,\u0022Kilogram\u0022,\u0022Second\u0022,\u0022Ampere\u0022,\u0022Kelvin\u0022,\u0022Mole\u0022,\u0022Candela\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1967",
+          "status": "Survived",
+          "line": 45,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(field);return catalog.Value.TryGetValue(field,out var unit)?unit:throw new KeyNotFoundException(field);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1975",
+          "status": "Survived",
+          "line": 62,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?0:this.factors.Keys.Max(unit=\u003Eunit.depth))",
+          "sourceExcerpt": "depth=1\u002BMath.Max(parent?.depth??0,this.factors.Count==0?0:this.factors.Keys.Max(unit=\u003Eunit.depth));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1979",
+          "status": "Survived",
+          "line": 62,
+          "mutator": "Linq method mutation (Max() to Min())",
+          "replacement": "this.factors.Keys.Min",
+          "sourceExcerpt": "depth=1\u002BMath.Max(parent?.depth??0,this.factors.Count==0?0:this.factors.Keys.Max(unit=\u003Eunit.depth));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1984",
+          "status": "Survived",
+          "line": 63,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(depth\u003E64)throw new ArgumentOutOfRangeException(nameof(parent),\u0022Unit graph depth budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "1991",
+          "status": "Survived",
+          "line": 75,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!Equals(SystemUnit))throw new InvalidOperationException(\u0022An alternate requires an unscaled system unit.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2000",
+          "status": "Survived",
+          "line": 87,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(factor);return factor.CompareTo(JavaNumber.One)==0?this:Transform(JavaUnitConverterAdapter.Multiply(factor));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2005",
+          "status": "Survived",
+          "line": 90,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public JavaUnit Divide(JavaNumber divisor){ArgumentNullException.ThrowIfNull(divisor);return Multiply(divisor.Reciprocal());}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2007",
+          "status": "Survived",
+          "line": 94,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(offset);return offset.CompareTo(JavaNumber.Zero)==0?this:Transform(JavaUnitConverterAdapter.Add(offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2022",
+          "status": "Survived",
+          "line": 107,
+          "mutator": "Equality mutation",
+          "replacement": "\u003C= -1024",
+          "sourceExcerpt": "if(exponent is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2025",
+          "status": "Survived",
+          "line": 107,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=1024",
+          "sourceExcerpt": "if(exponent is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2026",
+          "status": "Survived",
+          "line": 107,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(exponent is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2030",
+          "status": "Survived",
+          "line": 113,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2031",
+          "status": "Survived",
+          "line": 113,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(degree==0)throw new DivideByZeroException(\u0022Root degree must not be zero.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2035",
+          "status": "Survived",
+          "line": 114,
+          "mutator": "Equality mutation",
+          "replacement": "\u003C= -1024",
+          "sourceExcerpt": "if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2038",
+          "status": "Survived",
+          "line": 114,
+          "mutator": "Equality mutation",
+          "replacement": "\u003E=1024",
+          "sourceExcerpt": "if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2039",
+          "status": "Survived",
+          "line": 114,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(degree is \u003C -1024 or \u003E1024)throw new ArgumentOutOfRangeException(nameof(degree));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2051",
+          "status": "Survived",
+          "line": 135,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!pair.Value.Denominator.IsOne)throw new NotSupportedException(\u0022Pinned product converters reject fractional roots.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2054",
+          "status": "Survived",
+          "line": 137,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!next.IsLinear)throw new NotSupportedException(\u0022A non-linear atom has no product converter.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2055",
+          "status": "Survived",
+          "line": 138,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "sourceExcerpt": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2056",
+          "status": "Survived",
+          "line": 138,
+          "mutator": "Equality mutation",
+          "replacement": "power\u003E0",
+          "sourceExcerpt": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2057",
+          "status": "Survived",
+          "line": 138,
+          "mutator": "Equality mutation",
+          "replacement": "power\u003C=0",
+          "sourceExcerpt": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2058",
+          "status": "Survived",
+          "line": 138,
+          "mutator": "Negate expression",
+          "replacement": "!(power\u003C0)",
+          "sourceExcerpt": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2060",
+          "status": "Survived",
+          "line": 138,
+          "mutator": "UnaryMinusExpression to UnaryPlusExpression mutation",
+          "replacement": "\u002Bpower",
+          "sourceExcerpt": "var power=checked((int)pair.Value.Numerator);if(power\u003C0){next=next.Inverse();power=-power;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2061",
+          "status": "Survived",
+          "line": 139,
+          "mutator": "Equality mutation",
+          "replacement": "i\u003Epower",
+          "sourceExcerpt": "for(var i=0;i\u003Cpower;i\u002B\u002B)converter=converter.Concatenate(next);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2062",
+          "status": "Survived",
+          "line": 139,
+          "mutator": "Equality mutation",
+          "replacement": "i\u003C=power",
+          "sourceExcerpt": "for(var i=0;i\u003Cpower;i\u002B\u002B)converter=converter.Concatenate(next);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2063",
+          "status": "Timeout",
+          "line": 139,
+          "mutator": "PostIncrementExpression to PostDecrementExpression mutation",
+          "replacement": "i--",
+          "sourceExcerpt": "for(var i=0;i\u003Cpower;i\u002B\u002B)converter=converter.Concatenate(next);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2065",
+          "status": "Survived",
+          "line": 147,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(target);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2068",
+          "status": "Survived",
+          "line": 148,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(Dimension!=target.Dimension)throw new InvalidOperationException(\u0022Incompatible dimensions.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2070",
+          "status": "Survived",
+          "line": 149,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?JavaUnitConverterAdapter.Identity:target.SystemConverter.Inverse().Concatenate(SystemConverter))",
+          "sourceExcerpt": "return Equals(target)?JavaUnitConverterAdapter.Identity:target.SystemConverter.Inverse().Concatenate(SystemConverter);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2072",
+          "status": "Survived",
+          "line": 154,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(target);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2076",
+          "status": "Survived",
+          "line": 159,
+          "mutator": "Logical mutation",
+          "replacement": "other is not null\u0026\u0026Dimension==other.Dimension||GetConverterTo(other).IsIdentity",
+          "sourceExcerpt": "public bool IsEquivalentTo(JavaUnit? other)=\u003Eother is not null\u0026\u0026Dimension==other.Dimension\u0026\u0026GetConverterTo(other).IsIdentity;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2077",
+          "status": "Survived",
+          "line": 159,
+          "mutator": "Logical mutation",
+          "replacement": "other is not null||Dimension==other.Dimension",
+          "sourceExcerpt": "public bool IsEquivalentTo(JavaUnit? other)=\u003Eother is not null\u0026\u0026Dimension==other.Dimension\u0026\u0026GetConverterTo(other).IsIdentity;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2081",
+          "status": "Survived",
+          "line": 167,
+          "mutator": "Remove checked expression",
+          "replacement": "(int)pair.Value.Numerator",
+          "sourceExcerpt": "_=\u003Enew ReadOnlyDictionary\u003CJavaUnit,int\u003E(factors.ToDictionary(pair=\u003Epair.Key,pair=\u003Echecked((int)pair.Value.Numerator)))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2084",
+          "status": "Survived",
+          "line": 171,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(power.Numerator.IsZero)return;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2099",
+          "status": "Survived",
+          "line": 179,
+          "mutator": "Equality mutation",
+          "replacement": "result.Count\u003E=128",
+          "sourceExcerpt": "if(result.Count\u003E128)throw new ArgumentOutOfRangeException(nameof(result),\u0022Product atom budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2102",
+          "status": "NoCoverage",
+          "line": 179,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(result.Count\u003E128)throw new ArgumentOutOfRangeException(nameof(result),\u0022Product atom budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2103",
+          "status": "NoCoverage",
+          "line": 179,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(result.Count\u003E128)throw new ArgumentOutOfRangeException(nameof(result),\u0022Product atom budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2109",
+          "status": "Survived",
+          "line": 180,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "sourceExcerpt": "if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2110",
+          "status": "Survived",
+          "line": 180,
+          "mutator": "Linq method mutation (First() to FirstOrDefault())",
+          "replacement": "result.FirstOrDefault",
+          "sourceExcerpt": "if(result.Count==1\u0026\u0026result.First().Value==new Rational(1,1))return result.First().Key;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2115",
+          "status": "Survived",
+          "line": 184,
+          "mutator": "Equality mutation",
+          "replacement": "System.Numerics.BigInteger.Abs(pair.Value.Numerator)\u003E=1024",
+          "sourceExcerpt": "if(System.Numerics.BigInteger.Abs(pair.Value.Numerator)\u003E1024||pair.Value.Denominator\u003E1024)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2117",
+          "status": "Survived",
+          "line": 184,
+          "mutator": "Equality mutation",
+          "replacement": "pair.Value.Denominator\u003E=1024",
+          "sourceExcerpt": "if(System.Numerics.BigInteger.Abs(pair.Value.Numerator)\u003E1024||pair.Value.Denominator\u003E1024)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2119",
+          "status": "Survived",
+          "line": 185,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "throw new ArgumentOutOfRangeException(nameof(result),\u0022Product exponent budget exceeded.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2132",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "Logical mutation",
+          "replacement": "entry?.Field==\u0022ONE\u0022\u0026\u0026definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2135",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2136",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "Logical mutation",
+          "replacement": "definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none||definition.Converter.IsIdentity",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2137",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "Logical mutation",
+          "replacement": "definition.Symbol is \u0022one\u0022 or \u00221\u0022||definition.RationalDimension==none",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2138",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "Equality mutation",
+          "replacement": "definition.Symbol is not \u0022one\u0022 or \u00221\u0022",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2140",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2141",
+          "status": "Survived",
+          "line": 204,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2142",
+          "status": "NoCoverage",
+          "line": 204,
+          "mutator": "Equality mutation",
+          "replacement": "definition.RationalDimension!=none",
+          "sourceExcerpt": "if(entry?.Field==\u0022ONE\u0022||definition.Symbol is \u0022one\u0022 or \u00221\u0022\u0026\u0026definition.RationalDimension==none\u0026\u0026definition.Converter.IsIdentity)return One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2145",
+          "status": "NoCoverage",
+          "line": 208,
+          "mutator": "Equality mutation",
+          "replacement": "coherent.Symbol!=definition.Symbol",
+          "sourceExcerpt": "if(coherent.Symbol==definition.Symbol)return coherent;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2146",
+          "status": "NoCoverage",
+          "line": 209,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension))",
+          "sourceExcerpt": "return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2147",
+          "status": "NoCoverage",
+          "line": 209,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension))",
+          "sourceExcerpt": "return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2148",
+          "status": "NoCoverage",
+          "line": 209,
+          "mutator": "Equality mutation",
+          "replacement": "entry is null",
+          "sourceExcerpt": "return entry is not null?coherent.Alternate(definition.Symbol,entry.Name):Base(definition.Symbol,definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2149",
+          "status": "Survived",
+          "line": 214,
+          "mutator": "Linq method mutation (OrderByDescending() to OrderBy())",
+          "replacement": "SiPrefixes.Definitions.OrderBy",
+          "sourceExcerpt": "foreach(var prefix in SiPrefixes.Definitions.OrderByDescending(pair=\u003Epair.Key.Length))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2150",
+          "status": "Survived",
+          "line": 215,
+          "mutator": "Negate expression",
+          "replacement": "!(definition.Symbol.StartsWith(prefix.Key,StringComparison.Ordinal))",
+          "sourceExcerpt": "if(definition.Symbol.StartsWith(prefix.Key,StringComparison.Ordinal))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2153",
+          "status": "Survived",
+          "line": 217,
+          "mutator": "Logical mutation",
+          "replacement": "item.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity||item.Unit.RationalDimension==definition.RationalDimension",
+          "sourceExcerpt": "var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2154",
+          "status": "Survived",
+          "line": 217,
+          "mutator": "Logical mutation",
+          "replacement": "item.Unit.Symbol==definition.Symbol[prefix.Key.Length..]||item.Unit.Converter.IsIdentity",
+          "sourceExcerpt": "var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2155",
+          "status": "Survived",
+          "line": 217,
+          "mutator": "Equality mutation",
+          "replacement": "item.Unit.Symbol!=definition.Symbol[prefix.Key.Length..]",
+          "sourceExcerpt": "var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2156",
+          "status": "Survived",
+          "line": 217,
+          "mutator": "Equality mutation",
+          "replacement": "item.Unit.RationalDimension!=definition.RationalDimension",
+          "sourceExcerpt": "var candidate=entries.FirstOrDefault(item=\u003Eitem.Unit.Symbol==definition.Symbol[prefix.Key.Length..]\u0026\u0026item.Unit.Converter.IsIdentity\u0026\u0026item.Unit.RationalDimension==definition.RationalDimension);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2159",
+          "status": "Survived",
+          "line": 218,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(candidate is not null){parent=FromDefinition(candidate.Unit);break;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2163",
+          "status": "Survived",
+          "line": 220,
+          "mutator": "Equality mutation",
+          "replacement": "definition.RationalDimension!=bases[4].Dimension",
+          "sourceExcerpt": "if(definition.Converter==UnitConversion.Fahrenheit\u0026\u0026definition.RationalDimension==bases[4].Dimension)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2166",
+          "status": "Survived",
+          "line": 226,
+          "mutator": "Arithmetic mutation",
+          "replacement": "JavaDoubleArithmetic.Fraction(definition.Converter.Offset)*scale",
+          "sourceExcerpt": "transformed=transformed.Shift(JavaNumber.FromNumeric(JavaDoubleArithmetic.Fraction(definition.Converter.Offset)/scale));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2168",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n:new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset)))",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2169",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n:new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset)))",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)\n            :new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2170",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "Equality mutation",
+          "replacement": "offset!=0",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2171",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Symbol??\u0022Java-derived\u0022",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2172",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "\u0022Java-derived\u0022",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2173",
+          "status": "Survived",
+          "line": 235,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var result=offset==0?UnitDefinition.FromExactLinear(symbol??Symbol??\u0022Java-derived\u0022,Dimension,c.Scale.Fraction)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2174",
+          "status": "NoCoverage",
+          "line": 236,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Symbol??\u0022Java-derived\u0022",
+          "sourceExcerpt": ":new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2175",
+          "status": "NoCoverage",
+          "line": 236,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "\u0022Java-derived\u0022",
+          "sourceExcerpt": ":new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2176",
+          "status": "NoCoverage",
+          "line": 236,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": ":new UnitDefinition(symbol??Symbol??\u0022Java-derived\u0022,Dimension,new UnitConversion(projected,offset));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2178",
+          "status": "Survived",
+          "line": 245,
+          "mutator": "Null coalescing mutation (left to right)",
+          "replacement": "unit.Symbol??symbol",
+          "sourceExcerpt": "void Put(string field,JavaUnit unit,string? symbol=null)=\u003Eresult[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2179",
+          "status": "Survived",
+          "line": 245,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "unit.Symbol",
+          "sourceExcerpt": "void Put(string field,JavaUnit unit,string? symbol=null)=\u003Eresult[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2180",
+          "status": "Survived",
+          "line": 245,
+          "mutator": "Null coalescing mutation (remove right)",
+          "replacement": "symbol",
+          "sourceExcerpt": "void Put(string field,JavaUnit unit,string? symbol=null)=\u003Eresult[field]=new(unit.Kind,symbol??unit.Symbol,entries[field].Name,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2181",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2182",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2183",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2184",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2185",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2186",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2187",
+          "status": "Survived",
+          "line": 247,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "var fields=new[]{\u0022METRE\u0022,\u0022KILOGRAM\u0022,\u0022SECOND\u0022,\u0022AMPERE\u0022,\u0022KELVIN\u0022,\u0022MOLE\u0022,\u0022CANDELA\u0022};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2188",
+          "status": "Survived",
+          "line": 248,
+          "mutator": "Equality mutation",
+          "replacement": "i\u003E7",
+          "sourceExcerpt": "for(var i=0;i\u003C7;i\u002B\u002B)Put(fields[i],bases[i]);result[\u0022ONE\u0022]=One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2189",
+          "status": "Survived",
+          "line": 248,
+          "mutator": "Equality mutation",
+          "replacement": "i\u003C=7",
+          "sourceExcerpt": "for(var i=0;i\u003C7;i\u002B\u002B)Put(fields[i],bases[i]);result[\u0022ONE\u0022]=One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2190",
+          "status": "Survived",
+          "line": 248,
+          "mutator": "PostIncrementExpression to PostDecrementExpression mutation",
+          "replacement": "i--",
+          "sourceExcerpt": "for(var i=0;i\u003C7;i\u002B\u002B)Put(fields[i],bases[i]);result[\u0022ONE\u0022]=One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2191",
+          "status": "Survived",
+          "line": 248,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "for(var i=0;i\u003C7;i\u002B\u002B)Put(fields[i],bases[i]);result[\u0022ONE\u0022]=One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2192",
+          "status": "Survived",
+          "line": 248,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "for(var i=0;i\u003C7;i\u002B\u002B)Put(fields[i],bases[i]);result[\u0022ONE\u0022]=One;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2193",
+          "status": "Survived",
+          "line": 251,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Put(\u0022GRAM\u0022,U(\u0022KILOGRAM\u0022).Divide(N(1000)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2194",
+          "status": "Survived",
+          "line": 251,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022GRAM\u0022,U(\u0022KILOGRAM\u0022).Divide(N(1000)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2195",
+          "status": "Survived",
+          "line": 251,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022GRAM\u0022,U(\u0022KILOGRAM\u0022).Divide(N(1000)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2196",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2197",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2198",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2199",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2200",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2201",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2202",
+          "status": "Survived",
+          "line": 252,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022RADIAN\u0022,One);Alt(\u0022STERADIAN\u0022,One);Alt(\u0022HERTZ\u0022,One.Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2203",
+          "status": "Survived",
+          "line": 253,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022NEWTON\u0022,U(\u0022METRE\u0022).Multiply(U(\u0022KILOGRAM\u0022)).Divide(U(\u0022SECOND\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2204",
+          "status": "Survived",
+          "line": 253,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022NEWTON\u0022,U(\u0022METRE\u0022).Multiply(U(\u0022KILOGRAM\u0022)).Divide(U(\u0022SECOND\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2205",
+          "status": "Survived",
+          "line": 253,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022NEWTON\u0022,U(\u0022METRE\u0022).Multiply(U(\u0022KILOGRAM\u0022)).Divide(U(\u0022SECOND\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2206",
+          "status": "Survived",
+          "line": 253,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022NEWTON\u0022,U(\u0022METRE\u0022).Multiply(U(\u0022KILOGRAM\u0022)).Divide(U(\u0022SECOND\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2207",
+          "status": "Survived",
+          "line": 253,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022NEWTON\u0022,U(\u0022METRE\u0022).Multiply(U(\u0022KILOGRAM\u0022)).Divide(U(\u0022SECOND\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2208",
+          "status": "Survived",
+          "line": 254,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022PASCAL\u0022,U(\u0022NEWTON\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2209",
+          "status": "Survived",
+          "line": 254,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022PASCAL\u0022,U(\u0022NEWTON\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2210",
+          "status": "Survived",
+          "line": 254,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022PASCAL\u0022,U(\u0022NEWTON\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2211",
+          "status": "Survived",
+          "line": 254,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022PASCAL\u0022,U(\u0022NEWTON\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2212",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2213",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2214",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2215",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2216",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2217",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2218",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2219",
+          "status": "Survived",
+          "line": 255,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022JOULE\u0022,U(\u0022NEWTON\u0022).Multiply(U(\u0022METRE\u0022)));Alt(\u0022WATT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2220",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2221",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2222",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2223",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2224",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2225",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2226",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2227",
+          "status": "Survived",
+          "line": 256,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022COULOMB\u0022,U(\u0022SECOND\u0022).Multiply(U(\u0022AMPERE\u0022)));Alt(\u0022VOLT\u0022,U(\u0022WATT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2228",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2229",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2230",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2231",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2232",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2233",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2234",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2235",
+          "status": "Survived",
+          "line": 257,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022FARAD\u0022,U(\u0022COULOMB\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022OHM\u0022,U(\u0022VOLT\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2236",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2237",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2238",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2239",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2240",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2241",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2242",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2243",
+          "status": "Survived",
+          "line": 258,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEMENS\u0022,U(\u0022AMPERE\u0022).Divide(U(\u0022VOLT\u0022)));Alt(\u0022WEBER\u0022,U(\u0022VOLT\u0022).Multiply(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2244",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2245",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2246",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2247",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2248",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2249",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2250",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2251",
+          "status": "Survived",
+          "line": 259,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022TESLA\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));Alt(\u0022HENRY\u0022,U(\u0022WEBER\u0022).Divide(U(\u0022AMPERE\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2252",
+          "status": "Survived",
+          "line": 260,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Put(\u0022CELSIUS\u0022,U(\u0022KELVIN\u0022).Shift(JavaNumber.FromDouble(273.15)),\u0022\u2103\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2253",
+          "status": "Survived",
+          "line": 260,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022CELSIUS\u0022,U(\u0022KELVIN\u0022).Shift(JavaNumber.FromDouble(273.15)),\u0022\u2103\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2254",
+          "status": "Survived",
+          "line": 260,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022CELSIUS\u0022,U(\u0022KELVIN\u0022).Shift(JavaNumber.FromDouble(273.15)),\u0022\u2103\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2255",
+          "status": "Survived",
+          "line": 260,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022CELSIUS\u0022,U(\u0022KELVIN\u0022).Shift(JavaNumber.FromDouble(273.15)),\u0022\u2103\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2256",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2257",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2258",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2259",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2260",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2261",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2262",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2263",
+          "status": "Survived",
+          "line": 261,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022LUMEN\u0022,U(\u0022CANDELA\u0022).Multiply(U(\u0022STERADIAN\u0022)));Alt(\u0022LUX\u0022,U(\u0022LUMEN\u0022).Divide(U(\u0022METRE\u0022).Pow(2)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2264",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2265",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2266",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2267",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2268",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2269",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2270",
+          "status": "Survived",
+          "line": 262,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022BECQUEREL\u0022,One.Divide(U(\u0022SECOND\u0022)));Alt(\u0022GRAY\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2271",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2272",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2273",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2274",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2275",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2276",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2277",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2278",
+          "status": "Survived",
+          "line": 263,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Alt(\u0022SIEVERT\u0022,U(\u0022JOULE\u0022).Divide(U(\u0022KILOGRAM\u0022)));Alt(\u0022KATAL\u0022,U(\u0022MOLE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2279",
+          "status": "Survived",
+          "line": 264,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "Put(\u0022METRE_PER_SECOND\u0022,U(\u0022METRE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2280",
+          "status": "Survived",
+          "line": 264,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022METRE_PER_SECOND\u0022,U(\u0022METRE\u0022).Divide(U(\u0022SECOND\u0022)));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2298",
+          "status": "Survived",
+          "line": 268,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022PERCENT\u0022,One.Multiply(JavaNumber.Ratio(1,100)),\u0022%\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2302",
+          "status": "Survived",
+          "line": 269,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022MINUTE\u0022,U(\u0022SECOND\u0022).Multiply(N(60)),\u0022min\u0022);Put(\u0022HOUR\u0022,U(\u0022SECOND\u0022).Multiply(N(3600)),\u0022h\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2306",
+          "status": "Survived",
+          "line": 269,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022MINUTE\u0022,U(\u0022SECOND\u0022).Multiply(N(60)),\u0022min\u0022);Put(\u0022HOUR\u0022,U(\u0022SECOND\u0022).Multiply(N(3600)),\u0022h\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2310",
+          "status": "Survived",
+          "line": 270,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022DAY\u0022,U(\u0022SECOND\u0022).Multiply(N(86400)),\u0022d\u0022);Put(\u0022WEEK\u0022,U(\u0022DAY\u0022).Multiply(N(7)),\u0022wk\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2314",
+          "status": "Survived",
+          "line": 270,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022DAY\u0022,U(\u0022SECOND\u0022).Multiply(N(86400)),\u0022d\u0022);Put(\u0022WEEK\u0022,U(\u0022DAY\u0022).Multiply(N(7)),\u0022wk\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2318",
+          "status": "Survived",
+          "line": 271,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022YEAR\u0022,U(\u0022DAY\u0022).Multiply(JavaNumber.Ratio(3652425,10000)),\u0022yr\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2322",
+          "status": "Survived",
+          "line": 272,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022MONTH\u0022,U(\u0022YEAR\u0022).Divide(N(12)),\u0022mo\u0022);Put(\u0022LITRE\u0022,U(\u0022CUBIC_METRE\u0022).Divide(N(1000)),\u0022l\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2326",
+          "status": "Survived",
+          "line": 272,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "Put(\u0022MONTH\u0022,U(\u0022YEAR\u0022).Divide(N(12)),\u0022mo\u0022);Put(\u0022LITRE\u0022,U(\u0022CUBIC_METRE\u0022).Divide(N(1000)),\u0022l\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2330",
+          "status": "NoCoverage",
+          "line": 273,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2331",
+          "status": "NoCoverage",
+          "line": 273,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(result.Count!=entries.Count)throw new InvalidOperationException(\u0022Incomplete pinned unit graph catalog.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2340",
+          "status": "Survived",
+          "line": 283,
+          "mutator": "Logical mutation",
+          "replacement": "Symbol==other.Symbol||Dimension==other.Dimension",
+          "sourceExcerpt": "JavaUnitKind.Base=\u003ESymbol==other.Symbol\u0026\u0026Dimension==other.Dimension,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2341",
+          "status": "Survived",
+          "line": 283,
+          "mutator": "Equality mutation",
+          "replacement": "Symbol!=other.Symbol",
+          "sourceExcerpt": "JavaUnitKind.Base=\u003ESymbol==other.Symbol\u0026\u0026Dimension==other.Dimension,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2342",
+          "status": "NoCoverage",
+          "line": 283,
+          "mutator": "Equality mutation",
+          "replacement": "Dimension!=other.Dimension",
+          "sourceExcerpt": "JavaUnitKind.Base=\u003ESymbol==other.Symbol\u0026\u0026Dimension==other.Dimension,",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2345",
+          "status": "Survived",
+          "line": 285,
+          "mutator": "Logical mutation",
+          "replacement": "Equals(parent,other.parent)||Equals(operation,other.operation)",
+          "sourceExcerpt": "JavaUnitKind.Transformed=\u003EEquals(parent,other.parent)\u0026\u0026Equals(operation,other.operation),",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2346",
+          "status": "Survived",
+          "line": 286,
+          "mutator": "Logical mutation",
+          "replacement": "factors.Count==other.factors.Count||factors.All(pair=\u003Eother.factors.TryGetValue(pair.Key,out var power)\u0026\u0026pair.Value==power)",
+          "sourceExcerpt": "_=\u003Efactors.Count==other.factors.Count\u0026\u0026factors.All(pair=\u003Eother.factors.TryGetValue(pair.Key,out var power)\u0026\u0026pair.Value==power)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2350",
+          "status": "Survived",
+          "line": 286,
+          "mutator": "Linq method mutation (All() to Any())",
+          "replacement": "factors.Any",
+          "sourceExcerpt": "_=\u003Efactors.Count==other.factors.Count\u0026\u0026factors.All(pair=\u003Eother.factors.TryGetValue(pair.Key,out var power)\u0026\u0026pair.Value==power)",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitAdapter.cs",
+      "sourceTextSha256": "2D5FB49CFCB35096A3CA7DD7C9B1D9DB1A3D00DAABE2442DF128D2B6E10236B9",
+      "counts": {
+        "Survived": 16,
+        "Killed": 15,
+        "Ignored": 9,
+        "NoCoverage": 1,
+        "CompileError": 2
+      },
+      "outstanding": [
+        {
+          "id": "2357",
+          "status": "Survived",
+          "line": 14,
+          "mutator": "Null coalescing mutation (left to right)",
+          "replacement": "Model.Symbol??original?.Symbol",
+          "sourceExcerpt": "public string? Symbol=\u003Eoriginal?.Symbol??Model.Symbol;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2358",
+          "status": "Survived",
+          "line": 14,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Model.Symbol",
+          "sourceExcerpt": "public string? Symbol=\u003Eoriginal?.Symbol??Model.Symbol;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2361",
+          "status": "Survived",
+          "line": 26,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(definition);original=definition;Model=JavaUnit.FromDefinition(definition);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2362",
+          "status": "Survived",
+          "line": 31,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Model.ToDefinition()",
+          "sourceExcerpt": "public UnitDefinition Definition=\u003Eoriginal??Model.ToDefinition();",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2366",
+          "status": "Survived",
+          "line": 37,
+          "mutator": "Logical mutation",
+          "replacement": "other is not null||Model.IsEquivalentTo(other.Model)",
+          "sourceExcerpt": "public bool IsEquivalentTo(JavaUnitAdapter? other)=\u003Eother is not null\u0026\u0026Model.IsEquivalentTo(other.Model);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2369",
+          "status": "Survived",
+          "line": 41,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(target);return Model.GetConverterTo(target.Model);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2371",
+          "status": "Survived",
+          "line": 44,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public RationalUnitExpression Multiply(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return Expression*other.Expression;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2374",
+          "status": "Survived",
+          "line": 46,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public RationalUnitExpression Divide(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return Expression/other.Expression;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2376",
+          "status": "NoCoverage",
+          "line": 52,
+          "mutator": "UnaryMinusExpression to UnaryPlusExpression mutation",
+          "replacement": "\u002B1",
+          "sourceExcerpt": "public RationalUnitExpression Inverse()=\u003EExpression.Pow(new Rational(-1,1));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2378",
+          "status": "Survived",
+          "line": 54,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public JavaUnitAdapter MultiplyUnit(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Model.Multiply(other.Model));}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2380",
+          "status": "Survived",
+          "line": 56,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public JavaUnitAdapter DivideUnit(JavaUnitAdapter other){ArgumentNullException.ThrowIfNull(other);return new(Model.Divide(other.Model));}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2383",
+          "status": "Survived",
+          "line": 66,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(prefix);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2385",
+          "status": "Survived",
+          "line": 68,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?JavaNumber.Integer(power):JavaNumber.Ratio(1,power))",
+          "sourceExcerpt": "return Multiply(prefix.Exponent\u003E=0?JavaNumber.Integer(power):JavaNumber.Ratio(1,power));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2387",
+          "status": "Survived",
+          "line": 68,
+          "mutator": "Equality mutation",
+          "replacement": "prefix.Exponent\u003E0",
+          "sourceExcerpt": "return Multiply(prefix.Exponent\u003E=0?JavaNumber.Integer(power):JavaNumber.Ratio(1,power));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2391",
+          "status": "Survived",
+          "line": 93,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(Dimension!=requested)throw new InvalidOperationException(\u0022Requested quantity type is incompatible.\u0022);return this;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2393",
+          "status": "Survived",
+          "line": 104,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(target);return Model.GetConverterToAny(target.Model);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2399",
+          "status": "Survived",
+          "line": 115,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "public override string ToString()=\u003ESymbol??\u0022Java-\u0022\u002BModel.Kind.ToString().ToLowerInvariant();",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "JavaUnitConverterAdapter.cs",
+      "sourceTextSha256": "2A2EA1BCDA90AFE8A36A176F7FD0D4092BAC9DB01A7B9610F5853B2848EC3E0D",
+      "counts": {
+        "Ignored": 16,
+        "Killed": 83,
+        "Survived": 14,
+        "CompileError": 10,
+        "NoCoverage": 1
+      },
+      "outstanding": [
+        {
+          "id": "2818",
+          "status": "Survived",
+          "line": 16,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "throw new ArgumentException(\u0022A valid affine converter is required.\u0022,nameof(converter));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2825",
+          "status": "Survived",
+          "line": 32,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(factor);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2827",
+          "status": "Survived",
+          "line": 38,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(offset);return new(new[]{new Step(Operation.Offset,offset)});",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2845",
+          "status": "Survived",
+          "line": 61,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?value:Convert(JavaNumber.FromDouble(value)).ToDouble())",
+          "sourceExcerpt": "public double Convert(double value)=\u003EIsIdentity?value:Convert(JavaNumber.FromDouble(value)).ToDouble();",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2847",
+          "status": "Survived",
+          "line": 67,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(value);var result=value;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2854",
+          "status": "Survived",
+          "line": 76,
+          "mutator": "Conditional (false) mutation",
+          "replacement": "(false?result.ToDouble():result.ToDouble()*Math.Log(step.Parameter.ToDouble()))",
+          "sourceExcerpt": "_=\u003EJavaNumber.FromDouble(Math.Exp(step.Parameter.ToDouble()==Math.E?result.ToDouble():result.ToDouble()*Math.Log(step.Parameter.ToDouble())))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2868",
+          "status": "Survived",
+          "line": 104,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!IsAffine)throw new NotSupportedException(\u0022Nonlinear converter has no affine coefficients.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2878",
+          "status": "Survived",
+          "line": 119,
+          "mutator": "Logical mutation",
+          "replacement": "current.Kind==Operation.Scale\u0026\u0026current.Parameter.CompareTo(JavaNumber.One)==0\r\n                \u0026\u0026current.Kind==Operation.Offset\u0026\u0026current.Parameter.CompareTo(JavaNumber.Zero)==0",
+          "sourceExcerpt": "if(current.Kind==Operation.Scale\u0026\u0026current.Parameter.CompareTo(JavaNumber.One)==0\r\n                ||current.Kind==Operation.Offset\u0026\u0026current.Parameter.CompareTo(JavaNumber.Zero)==0)continue;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2886",
+          "status": "Survived",
+          "line": 120,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "||current.Kind==Operation.Offset\u0026\u0026current.Parameter.CompareTo(JavaNumber.Zero)==0)continue;",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2913",
+          "status": "Survived",
+          "line": 131,
+          "mutator": "Logical mutation",
+          "replacement": "(previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)\r\n                    ||previous.Parameter.Equals(current.Parameter)",
+          "sourceExcerpt": "else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)\r\n                    \u0026\u0026previous.Parameter.Equals(current.Parameter)){result.RemoveAt(result.Count-1);continue;}",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2916",
+          "status": "Survived",
+          "line": 131,
+          "mutator": "Logical mutation",
+          "replacement": "previous.Kind==Operation.Log||current.Kind==Operation.Exp",
+          "sourceExcerpt": "else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2919",
+          "status": "Survived",
+          "line": 131,
+          "mutator": "Logical mutation",
+          "replacement": "previous.Kind==Operation.Exp||current.Kind==Operation.Log",
+          "sourceExcerpt": "else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2920",
+          "status": "Survived",
+          "line": 131,
+          "mutator": "Equality mutation",
+          "replacement": "previous.Kind!=Operation.Exp",
+          "sourceExcerpt": "else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2921",
+          "status": "NoCoverage",
+          "line": 131,
+          "mutator": "Equality mutation",
+          "replacement": "current.Kind!=Operation.Log",
+          "sourceExcerpt": "else if((previous.Kind==Operation.Log\u0026\u0026current.Kind==Operation.Exp||previous.Kind==Operation.Exp\u0026\u0026current.Kind==Operation.Log)",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "2933",
+          "status": "Survived",
+          "line": 143,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "public override int GetHashCode(){var hash=new HashCode();foreach(var step in steps)hash.Add(step);return hash.ToHashCode();}",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "SiPrefix.cs",
+      "sourceTextSha256": "E8EAC0CFD66092FF0AE991D012B6B86C5035DF39BAAFFDEC6F16750B88B97E1A",
+      "counts": {
+        "Killed": 78,
+        "Survived": 2,
+        "Ignored": 1,
+        "NoCoverage": 5,
+        "CompileError": 3
+      },
+      "outstanding": [
+        {
+          "id": "3983",
+          "status": "Survived",
+          "line": 14,
+          "mutator": "Equality mutation",
+          "replacement": "Exponent\u003E0",
+          "sourceExcerpt": "public JavaNumber ExactValue=\u003EExponent\u003E=0?JavaNumber.Integer(System.Numerics.BigInteger.Pow(10,Exponent))",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "3990",
+          "status": "NoCoverage",
+          "line": 24,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\u0022Name required.\u0022,nameof(name));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "3991",
+          "status": "NoCoverage",
+          "line": 24,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(string.IsNullOrWhiteSpace(name))throw new ArgumentException(\u0022Name required.\u0022,nameof(name));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "3996",
+          "status": "NoCoverage",
+          "line": 25,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\u0022Symbol required.\u0022,nameof(symbol));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "3997",
+          "status": "NoCoverage",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(string.IsNullOrWhiteSpace(symbol))throw new ArgumentException(\u0022Symbol required.\u0022,nameof(symbol));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4005",
+          "status": "NoCoverage",
+          "line": 26,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(exponent is \u003C -30 or \u003E 30)throw new ArgumentOutOfRangeException(nameof(exponent));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4067",
+          "status": "Survived",
+          "line": 47,
+          "mutator": "Linq method mutation (FirstOrDefault() to First())",
+          "replacement": "Items.First",
+          "sourceExcerpt": "public static SiPrefix Resolve(string symbol)=\u003EItems.FirstOrDefault(p=\u003Ep.Symbol==symbol)??throw new KeyNotFoundException(symbol);",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    },
+    {
+      "file": "SiPrefixes.cs",
+      "sourceTextSha256": "7205308C3938C6DE1CB36E449A69F54E61455BE3DC2F28EA711EEA5E56342C4C",
+      "counts": {
+        "Killed": 46,
+        "Ignored": 2,
+        "Survived": 7,
+        "NoCoverage": 2,
+        "CompileError": 3
+      },
+      "outstanding": [
+        {
+          "id": "4107",
+          "status": "Survived",
+          "line": 15,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(prefix);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4108",
+          "status": "Survived",
+          "line": 16,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(unit);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4110",
+          "status": "NoCoverage",
+          "line": 17,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4111",
+          "status": "NoCoverage",
+          "line": 17,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(!Exponents.TryGetValue(prefix,out int exponent))throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4113",
+          "status": "Survived",
+          "line": 24,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "sourceExcerpt": "ArgumentNullException.ThrowIfNull(unit);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4116",
+          "status": "Survived",
+          "line": 25,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "if(unit.Converter.Offset!=0)throw new InvalidOperationException(\u0022Cannot prefix an affine unit.\u0022);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4120",
+          "status": "Survived",
+          "line": 27,
+          "mutator": "Equality mutation",
+          "replacement": "exponent\u003E0",
+          "sourceExcerpt": "var factor=exponent\u003E=0?new Rational(power,1):new Rational(1,power);",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4123",
+          "status": "Survived",
+          "line": 29,
+          "mutator": "Conditional (true) mutation",
+          "replacement": "(true?result:result with {JavaModel=unit.JavaModel.Multiply(JavaNumber.FromNumeric(factor))})",
+          "sourceExcerpt": "return unit.JavaModel is null?result:result with {JavaModel=unit.JavaModel.Multiply(JavaNumber.FromNumeric(factor))};",
+          "disposition": "REQUIRES_REVIEW"
+        },
+        {
+          "id": "4128",
+          "status": "Survived",
+          "line": 32,
+          "mutator": "String mutation",
+          "replacement": "\u0022\u0022",
+          "sourceExcerpt": "public static int Exponent(string prefix)=\u003EExponents.TryGetValue(prefix,out var exponent)?exponent:throw new ArgumentException(\u0022Unknown SI prefix\u0022,nameof(prefix));",
+          "disposition": "REQUIRES_REVIEW"
+        }
+      ]
+    }
+  ],
+  "limitations": "Timeouts are reported separately, not counted as demonstrated kills. Surviving/uncovered mutants require review; compile errors/ignored mutants are not execution evidence. Source hashes refer to report UTF-8 source text."
+}

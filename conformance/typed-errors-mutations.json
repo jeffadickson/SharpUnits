@@ -1,0 +1,211 @@
+{
+  "policy": "Raw outcomes retained. Conditional invariants and diagnostic variations are reviewed dispositions, never kills. Scope: full NumericResult and selected JavaNumber boundary/budget spans; Standard level. Other JavaNumber methods remain excluded and unqualified by this profile.",
+  "reportSha256": "380E5BC18E18F9545F73CB358775CA74AAA35FEE231D2C144BE4997E8A28B48A",
+  "files": [
+    {
+      "file": "JavaNumber.cs",
+      "canonicalSourceSha256": "D114E4BB9284C5DAED672432768C5BED8997F5583FCE546F9250AEDB15B33E6C",
+      "counts": {
+        "CompileError": 22,
+        "Ignored": 245,
+        "Killed": 82,
+        "NoCoverage": 2,
+        "Survived": 3
+      },
+      "outstanding": [
+        {
+          "line": 89,
+          "mutator": "Equality mutation",
+          "replacement": "scale>0",
+          "statement": "var fraction=scale>=0?new Rational(coefficient,BigInteger.Pow(10,(int)scale))",
+          "rationale": "Only scale zero changes branch; 10^0=1 makes both rational constructions identical.",
+          "status": "Survived",
+          "id": "1152",
+          "disposition": "ZERO_POWER_EQUIVALENCE"
+        },
+        {
+          "line": 248,
+          "mutator": "Equality mutation",
+          "replacement": "value.Denominator.Sign<0",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "rationale": "All private constructor call paths first construct a normalized Rational; an invalid denominator is rejected earlier. Excludes reflection/unsafe state fabrication.",
+          "status": "Survived",
+          "id": "1372",
+          "disposition": "UNREACHABLE_NORMALIZATION_GUARD"
+        },
+        {
+          "line": 248,
+          "mutator": "Statement mutation",
+          "replacement": ";",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "rationale": "All private constructor call paths first construct a normalized Rational; an invalid denominator is rejected earlier. Excludes reflection/unsafe state fabrication.",
+          "status": "NoCoverage",
+          "id": "1374",
+          "disposition": "UNREACHABLE_NORMALIZATION_GUARD"
+        },
+        {
+          "line": 248,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "if(value.Denominator.Sign<=0)throw new ArgumentException(\"A normalized rational is required.\");",
+          "rationale": "Private Check receives normalized Rational values. FromNumeric(default(Rational)) rejects at Ratio(0,0) before Check; no reflection/unsafe injection is claimed.",
+          "status": "NoCoverage",
+          "id": "1375",
+          "disposition": "UNREACHABLE_NORMALIZATION_GUARD"
+        },
+        {
+          "line": 250,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "throw new ArgumentOutOfRangeException(nameof(value),\"Numeric bit budget exceeded.\");",
+          "rationale": "Observable wording changes, not identical behavior. The declared profile checks result, failure stage, exception type/category and specifically tested public argument names; exact English wording/stack traces are outside that contract. Not a kill.",
+          "status": "Survived",
+          "id": "1378",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        }
+      ]
+    },
+    {
+      "file": "NumericResult.cs",
+      "canonicalSourceSha256": "E85F9644B15A9EDF7E6F31B7D75F6F63B566D8B4E5AC462C85B1C216E63D02C7",
+      "counts": {
+        "Ignored": 5,
+        "Killed": 21,
+        "NoCoverage": 1,
+        "Survived": 12
+      },
+      "outstanding": [
+        {
+          "line": 54,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Parameter",
+          "statement": "NumericErrorCode.NullInput => new ArgumentNullException(legacyParameter ?? Parameter),",
+          "rationale": "The only callers are Decimal and FromNumeric. Decimal supplies an override only for NumericBudget, and FromNumeric supplies none. Removing the override for NullInput/ScaleBudget/NonFinite/UnsupportedNumericType is equivalent under this closed internal caller set. Not a kill.",
+          "status": "Survived",
+          "id": "3710",
+          "disposition": "UNUSED_OVERRIDE_INVARIANT"
+        },
+        {
+          "line": 55,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.TokenLength => new FormatException(\"Decimal token length is outside the supported budget.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3711",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 56,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.InvalidDigit => new FormatException(\"Invalid decimal digit.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3712",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 57,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.MissingDigits => new FormatException(\"Decimal digits required.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3713",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 58,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.InvalidExponent => new FormatException(\"Invalid decimal exponent.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3714",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 59,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Parameter",
+          "statement": "NumericErrorCode.ScaleBudget => new ArgumentOutOfRangeException(legacyParameter ?? Parameter, \"Decimal scale budget exceeded.\"),",
+          "rationale": "The only callers are Decimal and FromNumeric. Decimal supplies an override only for NumericBudget, and FromNumeric supplies none. Removing the override for NullInput/ScaleBudget/NonFinite/UnsupportedNumericType is equivalent under this closed internal caller set. Not a kill.",
+          "status": "Survived",
+          "id": "3715",
+          "disposition": "UNUSED_OVERRIDE_INVARIANT"
+        },
+        {
+          "line": 59,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.ScaleBudget => new ArgumentOutOfRangeException(legacyParameter ?? Parameter, \"Decimal scale budget exceeded.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3716",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 60,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.NumericBudget => new ArgumentOutOfRangeException(legacyParameter ?? Parameter, \"Numeric bit budget exceeded.\"),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3718",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 61,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Parameter",
+          "statement": "NumericErrorCode.NonFinite => new ArgumentOutOfRangeException(legacyParameter ?? Parameter),",
+          "rationale": "The only callers are Decimal and FromNumeric. Decimal supplies an override only for NumericBudget, and FromNumeric supplies none. Removing the override for NullInput/ScaleBudget/NonFinite/UnsupportedNumericType is equivalent under this closed internal caller set. Not a kill.",
+          "status": "Survived",
+          "id": "3719",
+          "disposition": "UNUSED_OVERRIDE_INVARIANT"
+        },
+        {
+          "line": 62,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "NumericErrorCode.UnsupportedNumericType => new ArgumentException(\"A supported numeric value is required.\", legacyParameter ?? Parameter),",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3720",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        },
+        {
+          "line": 62,
+          "mutator": "Null coalescing mutation (remove left)",
+          "replacement": "Parameter",
+          "statement": "NumericErrorCode.UnsupportedNumericType => new ArgumentException(\"A supported numeric value is required.\", legacyParameter ?? Parameter),",
+          "rationale": "The only callers are Decimal and FromNumeric. Decimal supplies an override only for NumericBudget, and FromNumeric supplies none. Removing the override for NullInput/ScaleBudget/NonFinite/UnsupportedNumericType is equivalent under this closed internal caller set. Not a kill.",
+          "status": "Survived",
+          "id": "3721",
+          "disposition": "UNUSED_OVERRIDE_INVARIANT"
+        },
+        {
+          "line": 64,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": "_ => throw new InvalidOperationException(\"Undefined numeric error code.\")",
+          "rationale": "The sealed error validates Enum.IsDefined and exposes get-only properties; every defined enum case is mapped before the default arm. No reflection-corrupted object is fabricated to exercise this defensive arm.",
+          "status": "NoCoverage",
+          "id": "3722",
+          "disposition": "UNREACHABLE_VALIDATED_ERROR_CODE"
+        },
+        {
+          "line": 109,
+          "mutator": "String mutation",
+          "replacement": "\"\"",
+          "statement": ": next(value!) ?? throw new InvalidOperationException(\"A continuation must return a result.\");",
+          "rationale": "Observable English message variation. The recovery contract is the typed code, parameter, position and short-circuit behavior; legacy exception types/parameter names remain tested. Exact display wording is outside this contract. Not identical behavior or a kill.",
+          "status": "Survived",
+          "id": "3740",
+          "disposition": "DIAGNOSTIC_TEXT_VARIATION"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "tool": "coverlet.collector 6.0.4",
+  "reportSha256": "E32F35724AB023457DCED5805BEC39A46F3D6AB1132478ED4F4F3362104674A5",
+  "overall": {
+    "linesCovered": 1063,
+    "linesValid": 1160,
+    "branchesCovered": 838,
+    "branchesValid": 1090
+  },
+  "affectedClasses": [
+    {
+      "name": "SharpUnits.JavaDoubleArithmetic",
+      "file": "JavaDoubleArithmetic.cs",
+      "linesCovered": 46,
+      "linesValid": 46,
+      "branchesCovered": 50,
+      "branchesValid": 54,
+      "lineRate": 1.0,
+      "branchRate": 0.9259000000000001
+    },
+    {
+      "name": "SharpUnits.JavaQuantityTextParser",
+      "file": "JavaQuantityTextParser.cs",
+      "linesCovered": 30,
+      "linesValid": 30,
+      "branchesCovered": 52,
+      "branchesValid": 52,
+      "lineRate": 1.0,
+      "branchRate": 1.0
+    },
+    {
+      "name": "SharpUnits.QuantityTextFormat",
+      "file": "QuantityTextFormat.cs",
+      "linesCovered": 14,
+      "linesValid": 14,
+      "branchesCovered": 7,
+      "branchesValid": 8,
+      "lineRate": 1.0,
+      "branchRate": 0.875
+    }
+  ],
+  "limitations": "Instrumented managed library only; no Java/tooling coverage or proof of semantic correctness."
+}

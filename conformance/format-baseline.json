@@ -1,0 +1,46 @@
+{
+  "baselineCommit": "e9dcd8e",
+  "note": "Existing native formatter versus desired Java output. Native behavior is preserved; the new API provides the Java profile.",
+  "cases": [
+    {
+      "id": "FORMAT-DECIMAL",
+      "operation": "formatLegacy",
+      "from": "A",
+      "value": 0.0001,
+      "expectedJava": "1.0E-4 A",
+      "expectedDotnet": "0.0001 A",
+      "java": "1.0E-4 A",
+      "nativeDotnet": "0.0001 A"
+    },
+    {
+      "id": "FORMAT-CELSIUS",
+      "operation": "formatLegacy",
+      "from": "°C",
+      "value": 20,
+      "expectedJava": "20 ℃",
+      "expectedDotnet": "20 °C",
+      "java": "20 ℃",
+      "nativeDotnet": "20 °C"
+    },
+    {
+      "id": "FORMAT-ONE",
+      "operation": "formatLegacy",
+      "from": "1",
+      "value": 1,
+      "expectedJava": "1",
+      "expectedDotnet": "1 1",
+      "java": "1",
+      "nativeDotnet": "1 1"
+    },
+    {
+      "id": "FORMAT-BOUNDARY",
+      "operation": "formatLegacy",
+      "from": "A",
+      "value": 1E+23,
+      "expectedJava": "99999999999999990000000 A",
+      "expectedDotnet": "1E+23 A",
+      "java": "99999999999999990000000 A",
+      "nativeDotnet": "1E+23 A"
+    }
+  ]
+}

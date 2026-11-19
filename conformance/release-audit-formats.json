@@ -1,0 +1,254 @@
+[
+  {
+    "id": "46-A1",
+    "suite": "QuantityFormatTest",
+    "sourceMethod": "testEnsureGotQuantityFormat",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+    "javaLine": 69,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Asserts nonnull TCK configuration and a nonempty configured formatter collection; does not invoke formatting or require every Indriya format family.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:104",
+      "src/SharpUnits/JavaServices.cs:114",
+      "src/SharpUnits/JavaServices.cs:125"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:UnsupportedJavaFormatFamiliesAreNotAdvertised"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "CLR built-in service discovery exists; Java TCK configuration/ServiceLoader identity is not implemented. EBNF, LOCAL and NUMBERDELIMITER are intentionally unadvertised, rather than inferred failures of this nonempty-list assertion.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Retain CLR service discovery and explicit supported-name lists. Java test registration is harness adaptation; additional format families require separate product acceptance criteria.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A1",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testEnsureGotUnitFormat",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 69,
+    "assertionKind": "CONFIGURATION",
+    "expectedSemantics": "Asserts nonnull TCK configuration and a nonempty configured formatter collection; does not invoke formatting or require every Indriya format family.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaServices.cs:104",
+      "src/SharpUnits/JavaServices.cs:114",
+      "src/SharpUnits/JavaServices.cs:125"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ServiceReferenceFixtureTests.cs:MatchesPinnedServiceObservation",
+      "tests/SharpUnits.Tests/JavaServiceRobustnessTests.cs:UnsupportedJavaFormatFamiliesAreNotAdvertised"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "CLR built-in service discovery exists; Java TCK configuration/ServiceLoader identity is not implemented. EBNF, LOCAL and NUMBERDELIMITER are intentionally unadvertised, rather than inferred failures of this nonempty-list assertion.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Retain CLR service discovery and explicit supported-name lists. Java test registration is harness adaptation; additional format families require separate product acceptance criteria.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "46-A2",
+    "suite": "QuantityFormatTest",
+    "sourceMethod": "testQuantityFormatFormat",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+    "javaLine": 79,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured formatter, reflection requires public Appendable format(Quantity, Appendable), including superclass lookup. A2 and A3 are identical checks. No destination, output or exception behavior is executed.",
+    "implementationRefs": [
+      "src/SharpUnits/QuantityTextFormat.cs:20",
+      "src/SharpUnits/QuantityTextFormat.cs:28",
+      "src/SharpUnits/QuantityTextFormat.cs:35"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/FormatReferenceFixtureTests.cs:MatchesIndriyaFormattingFixture",
+      "tests/SharpUnits.Tests/FormattingRobustnessTests.cs:WriterOwnershipAndFailuresStayWithCaller",
+      "conformance/format-review-100.json (historical)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Finite double display values only; arbitrary Java Number identity/decimal lexical precision is not preserved. Scale markers are not emitted; general transformed-unit graph formatting remains incomplete. Standard Fahrenheit service formatting is implemented.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Preserve append behavior and destination identity through StringBuilder/TextWriter; do not introduce Java Appendable merely to match reflection. Add a separately qualified exact-number formatting path if required.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "46-A3",
+    "suite": "QuantityFormatTest",
+    "sourceMethod": "testQuantityFormatFormatAppendable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+    "javaLine": 91,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured formatter, reflection requires public Appendable format(Quantity, Appendable), including superclass lookup. A2 and A3 are identical checks. No destination, output or exception behavior is executed.",
+    "implementationRefs": [
+      "src/SharpUnits/QuantityTextFormat.cs:20",
+      "src/SharpUnits/QuantityTextFormat.cs:28",
+      "src/SharpUnits/QuantityTextFormat.cs:35"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/FormatReferenceFixtureTests.cs:MatchesIndriyaFormattingFixture",
+      "tests/SharpUnits.Tests/FormattingRobustnessTests.cs:WriterOwnershipAndFailuresStayWithCaller",
+      "conformance/format-review-100.json (historical)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Finite double display values only; arbitrary Java Number identity/decimal lexical precision is not preserved. Scale markers are not emitted; general transformed-unit graph formatting remains incomplete. Standard Fahrenheit service formatting is implemented.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Preserve append behavior and destination identity through StringBuilder/TextWriter; do not introduce Java Appendable merely to match reflection. Add a separately qualified exact-number formatting path if required.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "46-A4",
+    "suite": "QuantityFormatTest",
+    "sourceMethod": "testQuantityFormatFormatIsLocalSensitive",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+    "javaLine": 103,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Requires at least one public zero-parameter method named isLocaleSensitive. Helper TestUtils.java:317-327 does not check return type or invoke it; it does not assert false or any locale behavior.",
+    "implementationRefs": [
+      "src/SharpUnits/QuantityTextFormat.cs:15"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/FormatReferenceFixtureTests.cs:MatchesIndriyaFormattingFixture"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Invariant SIMPLE profiles expose IsLocaleSensitive=false. Culture-sensitive formatting families are unavailable; that is separate from this structural assertion.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use an idiomatic bool property and explicit IFormatProvider/culture contracts for future localized profiles; no Java-named getter is needed.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A4",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testUnitFormatFormatIsLocalSensitive",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 103,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Requires at least one public zero-parameter method named isLocaleSensitive. Helper TestUtils.java:317-327 does not check return type or invoke it; it does not assert false or any locale behavior.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitTextFormat.cs:63"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs:MatchesPinnedUnitFormat"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Invariant SIMPLE profiles expose IsLocaleSensitive=false. Culture-sensitive formatting families are unavailable; that is separate from this structural assertion.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Use an idiomatic bool property and explicit IFormatProvider/culture contracts for future localized profiles; no Java-named getter is needed.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "46-A5",
+    "suite": "QuantityFormatTest",
+    "sourceMethod": "testQuantityFormatParse",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/QuantityFormatTest.java",
+    "javaLine": 115,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Requires a public method named parse. With hasParameters=true, TestUtils.java:317-327 filters only public modifier/name; it does not check parameter count/types, return type, parse text, cursor progress or exceptions.",
+    "implementationRefs": [
+      "src/SharpUnits/QuantityTextFormat.cs:76",
+      "src/SharpUnits/JavaQuantityTextParser.cs:20",
+      "src/SharpUnits/JavaUnitTextParser.cs:7"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/ParserReferenceFixtureTests.cs:MatchesIndriyaParserFixture",
+      "tests/SharpUnits.Tests/ParserGrammarTests.cs:ExactUnitFactorsSurviveConversionAndArithmetic",
+      "tests/SharpUnits.Tests/ParserGapTests.cs:CompoundResourceAndAffineGuardsRemainExplicit",
+      "conformance/parser-grammar-review-100.json (historical)"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Bounded grammar excludes decimal unit factors (e.g. A*1.5), additive affine expressions (e.g. K+273.15), general transformed-unit graphs, and cursor parsing; integers limited to signed Int32 versus Java long; exponent/root magnitude 1024, expression depth 64, quantity length 4096 and numeric length 1024. Java SimpleUnitFormat.java:725-775 handles long/double factors and PLUS. Existing roots, integer factors, single coherent SI prefixes and standard Fahrenheit rendering are implemented and must not be described as wholly absent. Parsed quantities retain only double display values and absolute scale; exact Number lexical/type identity remains unavailable. Legacy Parse is a distinct narrower SI-valued API.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Keep ParseJavaQuantity explicit and bounded. Implement useful decimal-factor/affine grammar and exact-number entry points as separately specified functionality; consider TryParse/span and structured cursor results instead of Java ParsePosition. Reflection presence does not qualify grammar.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A2",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testUnitFormatFormat",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 79,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured formatter, reflection requires public String format(Unit), including superclass lookup. No formatting is invoked.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitTextFormat.cs:117"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs:MatchesPinnedUnitFormat",
+      "tests/SharpUnits.Tests/AffineUnitFormatTests.cs:StandardRegistryDoesNotImplicitlyLabelJavaFahrenheit"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "General Java unit normalization/transformed-unit graphs and foreign-unit identity remain incomplete. Standard Fahrenheit converter-expression output and ASCII/default catalog rendering exist; emitted affine expression is not accepted by the bounded parser.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Keep string Format(UnitDefinition); preserve label precedence and useful graph rendering, rather than copying Java unit interfaces.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A3",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testUnitFormatFormatAppendable",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 91,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "For each configured formatter, reflection requires public Appendable format(Unit, Appendable), including superclass lookup. It does not execute append behavior.",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitTextFormat.cs:159",
+      "src/SharpUnits/JavaUnitTextFormat.cs:167"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs:MatchesPinnedUnitFormat",
+      "tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs:WriterOwnershipAndIoErrorsRemainWithCaller"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "StringBuilder/TextWriter paths exist with destination identity and propagated IO errors; formatter normalization limitations are shared with string Format.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Retain StringBuilder/TextWriter overloads and caller ownership. Java Appendable identity is an API adaptation, not missing useful functionality.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A5",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testUnitFormatLabel",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 115,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Requires a public method named label; hasParameters=true does not validate its signature or invoke it (TestUtils.java:317-327).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitTextFormat.cs:69",
+      "src/SharpUnits/JavaUnitTextFormat.cs:77",
+      "src/SharpUnits/JavaUnitTextFormat.cs:85",
+      "src/SharpUnits/JavaUnitTextFormat.cs:98",
+      "src/SharpUnits/JavaUnitTextFormat.cs:106"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs:MatchesPinnedUnitFormat",
+      "tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs:ConcurrentRelabelingPreservesEveryFormerAlias",
+      "tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs:AsciiValidationCoversTheWholeLabelWhileDefaultOnlyChecksItsStart"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Mutable label/alias maps are implemented with replacement, removal, isolation and flavor validation. CLR unit-record identity differs from arbitrary foreign Java Unit identity. Not a missing label implementation.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Preserve useful mutable label semantics and explicit isolated services. Native method casing and UnitDefinition parameters are appropriate.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  },
+  {
+    "id": "45-A6",
+    "suite": "UnitFormatTest",
+    "sourceMethod": "testUnitFormatParse",
+    "javaSource": "upstream/unit-tck/src/main/java/tech/units/tck/tests/format/UnitFormatTest.java",
+    "javaLine": 127,
+    "assertionKind": "API_SHAPE",
+    "expectedSemantics": "Requires a public method named parse; hasParameters=true does not validate parameter count/types or return type and does not parse text (TestUtils.java:317-327).",
+    "implementationRefs": [
+      "src/SharpUnits/JavaUnitTextFormat.cs:175",
+      "src/SharpUnits/JavaUnitTextParser.cs:7",
+      "src/SharpUnits/JavaUnitTextParser.cs:87"
+    ],
+    "testRefs": [
+      "tests/SharpUnits.Tests/UnitFormatReferenceFixtureTests.cs:MatchesPinnedUnitFormat",
+      "tests/SharpUnits.Tests/ParserGrammarTests.cs:RootBoundsAndMalformedExponentsAreRejected",
+      "tests/SharpUnits.Tests/UnitFormatRobustnessTests.cs:AliasingAComponentChangesProductDimensions"
+    ],
+    "implementationAssessment": "API_ADAPTATION",
+    "residualBehavior": "Bounded grammar excludes decimal unit factors (e.g. A*1.5), additive affine expressions (e.g. K+273.15), general transformed-unit graphs, and cursor parsing; integers limited to signed Int32 versus Java long; exponent/root magnitude 1024, expression depth 64, quantity length 4096 and numeric length 1024. Java SimpleUnitFormat.java:725-775 handles long/double factors and PLUS. Existing roots, integer factors, single coherent SI prefixes and standard Fahrenheit rendering are implemented and must not be described as wholly absent.",
+    "recommendation": "ADAPT_DOTNET",
+    "modernDotnetDecision": "Keep exact alias lookup and bounded parser. Useful missing affine/decimal factors should be specified and implemented independently of Java reflection. Introduce idiomatic TryParse/span or explicit consumed-length result only if needed.",
+    "qualificationGap": "Source inspection only; no fresh execution, coverage, mutation or fuzz run. Stock pinned Java TCK runs against Indriya, not SharpUnits. Historical fixture reports are bounded evidence, not current verification or assertion closure."
+  }
+]

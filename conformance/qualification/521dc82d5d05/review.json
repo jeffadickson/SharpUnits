@@ -1,0 +1,40 @@
+{
+  "testedCommit": "521dc82d5d0597ff2af9d20398f7baa766485700",
+  "artifactRoot": "E:\\Artifacts\\SharpUnits\\local-closures-22177b10fe4a4931bd763b7061906b1a\\corrected\\qualification-zips",
+  "artifactSha256": {
+    "windows": "90F1A48C0CBA1E0746376223D7F258E877CDC6C761074F8501926A2EF82FD6B8",
+    "ubuntu": "1F87667443C472B2A3952AA0B3FB097E3B1B559CBF6D95521E15DBBF86150477",
+    "java": "582DE30F0137214B1630F9714D44C1AB512721ED742F0C12C97B3585AAA31CB1"
+  },
+  "decision": "APPROVED",
+  "independent": true,
+  "reviewer": "Independent AI agent /root/closure_assertion_review",
+  "date": "2026-11-19",
+  "assertions": [
+    {
+      "id": "51-A2",
+      "sourceMethod": "QuantityFactoryTest.testQuantityFactoryScale",
+      "expectedSemantics": "For every available provider, obtain its Length factory and the current provider default system Length unit; create 10d with every Scale enum value and require the returned scale to equal the requested scale. The C# witness also rejects vacuous discovery and checks retained magnitude and unit.",
+      "apiMapping": "Java Class<Length> maps to the Length type identifier; ServiceProvider.available/current map to the built-in immutable CLR provider list/current provider. Closure covers this behavioral scale assertion for the built-in profile, not Java API identity, external provider discovery or JSR certification.",
+      "behaviorTests": [
+        "TckLocalClosureTests.FactoryScaleMatchesEveryAvailableProvider"
+      ]
+    }
+  ],
+  "context": "Windows and Ubuntu24.04 WSL2 are local on the same physical machine; reviewed capture, not remote attestation or independent operator authentication.",
+  "findings": [
+    "All three ZIP digests match; complete 471 tracked Git blob hashes match tested commit521dc82d5d0597ff2af9d20398f7baa766485700.",
+    "Windows and Ubuntu raw TRX each contain3301 passed executions,543 full method identities, and the exact assertion witness. Counter, execution identity, and definition consistency checks pass.",
+    "Pinned Java raw Surefire contains112 passed methods, including exact QuantityFactoryTest.testQuantityFactoryScale; JVM17.0.20.1 properties agree with capture."
+  ],
+  "dispositions": [
+    "Scope approved for51-A2 only;552-A1 and561-A4 remain unapproved pending Java text bridge.",
+    "Earlier7996298 bundles remain unqualified: corrected TRX execution-identity gate and new revision-bound captures resolve the review blocker."
+  ],
+  "limits": [
+    "Independent AI-agent review; no human or external expert review implied.",
+    "Reviewed local capture on one physical machine; Ubuntu24.04 executes natively under WSL. Host/operator authenticity is not cryptographically attested.",
+    "No GitHub attestation, Java API/binary equivalence, external-provider discovery qualification, formal proof, or JSR certification.",
+    "Fault-control outcomes are recorded separately; this approval rests on source and raw execution evidence."
+  ]
+}
