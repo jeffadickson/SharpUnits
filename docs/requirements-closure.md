@@ -17,9 +17,11 @@ factor metadata is not a claim of arbitrary Java Number storage or precision.
 - Stable requirement ID and acceptance criteria
 - Implementation path and commit SHA
 - xUnit test identifiers, including positive, negative, and boundary/round-trip tests where applicable
-- CI workflow URL showing tests passing on Ubuntu and Windows
+- Revision-bound Windows/Ubuntu execution and pinned Java evidence: either CI
+  attestation or explicit reviewed local provenance under VER-LOCAL-001
 - XML API documentation and DocFX documentation link
-- Explicit reviewer approval and status CLOSED
+- Explicit reviewer approval and qualified disposition; StrictDoc lifecycle
+  states remain separate from assertion verification
 
 ## Status vocabulary
 NOT_STARTED, IN_PROGRESS, IMPLEMENTED_UNVERIFIED, VERIFIED, BLOCKED. Never mark VERIFIED from source inspection or tests merely authored.

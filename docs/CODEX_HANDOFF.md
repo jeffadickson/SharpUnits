@@ -5,6 +5,12 @@ Baseline before handoff: `dde0daa1acd250498f7f4376e2a1d48068e70573`
 Target framework: .NET 11. Primary development language: C#15.
 Upstream Java TCK pin: `unitsofmeasurement/unit-tck@96da910db2a9aca61580a14125dde94b5f1c0285`.
 
+## First reviewed local closure (2026-11-19)
+
+VER-LOCAL-001 permits explicitly reviewed local evidence alongside the unchanged CI-attestation path. CI stays disabled. Assertion51-A2 is VERIFIED for the documented built-in CLR semantic adaptation at commit521dc82d5d0597ff2af9d20398f7baa766485700: Windows and native Ubuntu24.04/WSL2 each3301 passed; pinned Java112 passed; independent AI-agent review approves exact archives,471 Git blobs, methods, semantics and runtime/pins. Artifacts and structured approval are retained in conformance/qualification/521dc82d5d05; see conformance/local-closure-51-A2.md. Current ledger14 GAP,98 PARTIAL,1 VERIFIED supersedes historical zero-closure summaries below. This does not claim Java API/binary identity, external provider discovery, remote attestation or certification.
+
+The first candidate7996298 was not qualified because the validator rejected legitimate theory rows sharing testId. The corrected gate validates unique executionId, with positive/negative regressions, and all captures were rerun at521dc82. Three curated semantic controls are killed; broad Stryker and coverage-guided fuzzing were not rerun. Assertions552-A1/561-A4 remain gaps pending actual Java toString/symbol-eligibility catalog bridge; their new tests are preparatory only. Continue with narrowly reviewed assertions and preserve full raw artifacts, platform/WSL provenance and structured review-digest binding. Ordinary jobs remain uncapped; mutation guards only.
+
 ## Current memory policy (2026-11-17)
 
 The owner superseded universal memory budgets: ordinary builds, tests, benchmarks and Java/reference/documentation jobs must run without process-tree, aggregate or managed-heap caps. Do not gate or terminate work based on free RAM. The active verification runners now dispatch ordinary workloads directly; only mutation/fault-control modes use the existing runaway guard. ManagedHeapMiB is rejected for ordinary modes. Historical capped-run reports below remain historical evidence, not the current policy. Concurrency and task timeouts remain appropriate. See VER-RAM-TELEMETRY and VER-RUN-BUDGET.

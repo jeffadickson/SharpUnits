@@ -9,7 +9,7 @@ The release critical path is now:
 1. Pin the target semantic contract and complete normative/API coverage beyond TCK annotation counts. Map Java mechanisms to explicit native .NET contracts without weakening value/unit/scale/converter requirements.
 2. Repair the exact graph/format/parser seam and extend typed recoverable boundaries. Preserve native temperature safety, numeric magnitude, semantic kinds, backward compatibility and existing electrical/symbolic behavior.
 3. Qualify catalog/type/provider coverage and the actual native public entry points, including negative/property/fuzz/mutation evidence and independent review.
-4. Produce fresh Windows/Ubuntu/Java and package-consumer evidence, license/metadata/docs and source-bound artifacts. CI stays disabled; existing CI-dependent formal closure gates remain unresolved unless the owner changes policy.
+4. Produce fresh Windows/Ubuntu/Java and package-consumer evidence, license/metadata/docs and source-bound artifacts. CI stays disabled; the owner-requested reviewed local qualification path (VER-LOCAL-001,2026-11-19) can close individual assertions without remote CI attestation. Full release and package-consumer qualification remain separate.
 5. Approve the exact release package and its compatibility statement, then publish only with explicit authorization. A preview may collect feedback if requested, but is not a replacement for this compliance-led1.0 objective.
 
 No reliable completion date or percentage follows from current aggregate counts. Estimate after the normative coverage and graph/text assessments establish a finite implementation backlog. See the audit's prioritized work table and StrictDoc REL-COMPAT-001 through005 for proposed acceptance detail.

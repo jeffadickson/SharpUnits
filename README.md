@@ -12,6 +12,10 @@ Alpha .NET 11 library. Java compatibility work is in progress; passing tests do 
 imply full JSR 385 conformance. See the [assertion review](conformance/quantity-interface-review.md)
 for executable evidence and remaining differences.
 
+The first [reviewed local behavioral closure](conformance/local-closure-51-A2.md)
+covers factory scale assertion51-A2, with Windows, Ubuntu/WSL and pinned Java
+evidence. Ledger:1 VERIFIED,98 PARTIAL,14 GAP; this is not full certification.
+
 Use stable SDK11.0.100 (C#15); runtime consumers require .NET11. See the
 [migration/reuse assessment](docs/net11-migration-and-library-assessment.md) and
 [five completion work packages](docs/package-completion-five.md).
