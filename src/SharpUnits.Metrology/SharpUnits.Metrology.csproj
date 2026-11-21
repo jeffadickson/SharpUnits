@@ -5,8 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits.Metrology</PackageId>
+    <Description>Instrument measurements, uncorrelated and correlated GUM uncertainty budgets (Cholesky PSD validation), calibration provenance, guard-banded conformity decisions, and strict versioned JSON persistence built on SharpUnits.</Description>
+    <PackageTags>units;metrology;uncertainty;gum;calibration;guard-band;instruments;testing;csharp</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../SharpUnits/SharpUnits.csproj" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

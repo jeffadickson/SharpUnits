@@ -5,8 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits.Formulas</PackageId>
+    <Description>Textual engineering formula parsing, static dimensional and ISQ semantic-kind type checking, exact rational dimensional inference, and engineering procedure validation built on SharpUnits.</Description>
+    <PackageTags>units;formulas;dimensional-analysis;inference;validation;engineering;csharp</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../SharpUnits/SharpUnits.csproj" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

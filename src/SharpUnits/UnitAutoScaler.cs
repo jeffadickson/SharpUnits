@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace SharpUnits;
 
 /// <summary>Result of selecting a shared engineering display unit for a plot axis or data series.</summary>
@@ -8,13 +10,22 @@ public readonly record struct AxisUnitSelection(UnitDefinition Unit, double Scal
     /// <summary>Converts a single coherent SI value into the selected display unit.</summary>
     public double FromSi(double siValue) => siValue * ScaleFromSi;
 
-    /// <summary>Converts a span of coherent SI values into display values in place or into a target buffer.</summary>
+    /// <summary>Converts a span of coherent SI values into display values using hardware SIMD when available.</summary>
     public void ConvertFromSi(ReadOnlySpan<double> siValues, Span<double> destination)
     {
         if (destination.Length < siValues.Length)
             throw new ArgumentException("Destination span is shorter than source span.", nameof(destination));
         double factor = ScaleFromSi;
-        for (int i = 0; i < siValues.Length; i++)
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && siValues.Length >= Vector<double>.Count)
+        {
+            int step = Vector<double>.Count;
+            int limit = siValues.Length - step;
+            var fVec = new Vector<double>(factor);
+            for (; i <= limit; i += step)
+                (new Vector<double>(siValues.Slice(i)) * fVec).CopyTo(destination.Slice(i));
+        }
+        for (; i < siValues.Length; i++)
             destination[i] = siValues[i] * factor;
     }
 }

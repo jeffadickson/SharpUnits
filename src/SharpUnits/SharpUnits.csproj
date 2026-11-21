@@ -5,5 +5,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits</PackageId>
+    <Description>Fast, dependency-free .NET 10 units and exact rational dimensional analysis inspired by C++ mp-units (ISO 80000 ISQ, symbolic units, affine quantity points), INumber&lt;T&gt; generic math, SIMD-accelerated QuantitySeries&lt;T&gt;, plot axis scaling, and deterministic scripting host interop.</Description>
+    <PackageTags>units;si;isq;mp-units;dimensional-analysis;plotting;metrology;generic-math;simd;csharp</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharpUnits.Analyzers\SharpUnits.Analyzers.csproj" ReferenceOutputAssembly="false" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\SharpUnits.Analyzers\bin\$(Configuration)\netstandard2.0\SharpUnits.Analyzers.dll" Pack="true" PackagePath="analyzers\dotnet\cs" Visible="false" />
+  </ItemGroup>
 </Project>

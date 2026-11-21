@@ -12,6 +12,7 @@ Zero external runtime dependencies.
 | `SharpUnits.Electrical` | Strongly-typed electrical quantities (`Voltage`, `Current`, `Resistance`, `ElectricPower`, `Capacitance`, `Inductance`, `ElectricCharge`, `Conductance`, `FluxLinkage`), logarithmic RF/audio levels (`Decibels`, `PowerLevelDbm`, `VoltageLevelDbv`), complex AC impedance & phasors, `SeriesRlcCircuit`, and `BodeFrequencyResponse`. |
 | `SharpUnits.Metrology` | Uncorrelated uncertainty propagation (`Measurement`), provenance-tagged `InstrumentMeasurement` + strict versioned JSON persistence, correlated GUM `UncertaintyBudget` (Cholesky PSD validation), `CalibrationRecord`, and guard-banded `MeasurementDecisionRule`. |
 | `SharpUnits.Formulas` | Textual engineering formula parser (`FormulaParser`), static dimensional & semantic-kind checker (`FormulaTypeChecker`), exact rational dimensional inference (`DimensionInference`), and multi-step `ProcedureValidator`. |
+| `SharpUnits.Analyzers` | Roslyn compile-time analyzer (bundled automatically in the `SharpUnits` NuGet package) validating unit/quantity string literals (`SU0001`, `SU0002`), incompatible conversions (`SU0003`), affine compound expressions (`SU0004`), and absolute affine additions (`SU0005`). |
 
 ## Highlights & Examples
 

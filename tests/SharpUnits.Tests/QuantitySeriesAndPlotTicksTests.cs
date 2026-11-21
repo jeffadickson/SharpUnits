@@ -87,4 +87,62 @@ public sealed class QuantitySeriesAndPlotTicksTests
             bodeFreq.MajorTicks.Select(t => t.Label).ToArray());
         Assert.Equal(40, bodeFreq.MinorSiValues.Count); // 5 decades * 8 minor ticks (2..9)
     }
+
+    [Theory]
+    [InlineData(1)]
+    [InlineData(3)]
+    [InlineData(7)]
+    [InlineData(8)]
+    [InlineData(15)]
+    [InlineData(16)]
+    [InlineData(17)]
+    [InlineData(1025)]
+    public void SimdAcceleratedSeriesMatchesScalarAcrossUnalignedLengths(int length)
+    {
+        var aRaw = new double[length];
+        var bRaw = new double[length];
+        for (int i = 0; i < length; i++)
+        {
+            aRaw[i] = (i - length / 2.0) * 0.001;
+            bRaw[i] = (i + 1) * 0.0005;
+        }
+
+        var a = QuantitySeries<double>.FromValues(aRaw, Units.Volt);
+        var b = QuantitySeries<double>.FromValues(bRaw, Units.Volt);
+
+        var scaled = a.In(Units.Millivolt);
+        var sum = a + b;
+        var diff = a - b;
+        var prod = a * b;
+        var quot = a / b;
+        var doubled = a * 2.0;
+
+        for (int i = 0; i < length; i++)
+        {
+            Assert.Equal(aRaw[i] * 1000.0, scaled.Values[i], 9);
+            Assert.Equal(aRaw[i] + bRaw[i], sum.Values[i], 12);
+            Assert.Equal(aRaw[i] - bRaw[i], diff.Values[i], 12);
+            Assert.Equal(aRaw[i] * bRaw[i], prod.Values[i], 12);
+            Assert.Equal(aRaw[i] / bRaw[i], quot.Values[i], 9);
+            Assert.Equal(aRaw[i] * 2.0, doubled.Values[i], 12);
+        }
+
+        var (min, max) = a.MinMax();
+        Assert.Equal(aRaw.Min(), min.Value, 12);
+        Assert.Equal(aRaw.Max(), max.Value, 12);
+        Assert.Equal(aRaw.Average(), a.Mean().Value, 10);
+        Assert.Equal(Math.Sqrt(aRaw.Average(x => x * x)), a.Rms().Value, 10);
+
+        // Also verify SIMD float path and non-SIMD decimal path + integral SIMD path
+        var fSeries = a.As<float>().In(Units.Millivolt);
+        Assert.Equal(aRaw[^1] * 1000.0, fSeries.Values[^1], 3);
+
+        var intVolts = QuantitySeries<int>.FromValues(Enumerable.Range(1, length).ToArray(), Units.Volt);
+        var intMv = intVolts.In(Units.Millivolt);
+        Assert.Equal(length * 1000, intMv.Values[^1]);
+
+        var decVolts = QuantitySeries<decimal>.FromValues(Enumerable.Range(1, length).Select(x => x * 0.1m).ToArray(), Units.Volt);
+        var decMv = decVolts.In(Units.Millivolt);
+        Assert.Equal(length * 100m, decMv.Values[^1]);
+    }
 }

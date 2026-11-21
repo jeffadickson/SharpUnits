@@ -24,6 +24,14 @@ jobs:
         run: dotnet build SharpUnits.sln -c Release --no-restore --nologo
       - name: Test solution
         run: dotnet test SharpUnits.sln -c Release --no-build --nologo
+      - name: Verify NuGet packaging
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          dotnet pack src/SharpUnits.Analyzers/SharpUnits.Analyzers.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits/SharpUnits.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits.Electrical/SharpUnits.Electrical.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits.Metrology/SharpUnits.Metrology.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits.Formulas/SharpUnits.Formulas.csproj -c Release --no-build -o ./nupkgs --nologo
       - name: Verify Bode frequency-response export
         if: matrix.os == 'ubuntu-latest'
         shell: bash

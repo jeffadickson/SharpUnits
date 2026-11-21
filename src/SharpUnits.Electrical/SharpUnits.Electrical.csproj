@@ -5,8 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits.Electrical</PackageId>
+    <Description>Strongly-typed electrical and RF quantities (Voltage, Current, Resistance, Capacitance, Inductance, Decibels, dBm, dBV), AC phasors, complex impedance, RLC networks, and Bode frequency response built on SharpUnits.</Description>
+    <PackageTags>units;electrical;rf;decibels;dbm;bode;phasors;impedance;circuits;csharp</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../SharpUnits/SharpUnits.csproj" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

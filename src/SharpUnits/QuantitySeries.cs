@@ -1,4 +1,6 @@
 using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace SharpUnits;
 
@@ -9,7 +11,8 @@ namespace SharpUnits;
 /// <typeparam name="T">Numeric representation type (for example <see cref="float"/> for GPU plotting, <see cref="double"/> for scientific sweeps, <see cref="decimal"/> for metrology logs).</typeparam>
 /// <remarks>
 /// Eliminates per-sample unit metadata overhead while preserving full dimensional, ISQ, and affine safety across waveforms,
-/// frequency sweeps, and instrument data channels.
+/// frequency sweeps, and instrument data channels. Automatically accelerates bulk conversions, element-wise algebra, and
+/// reductions using hardware SIMD (<see cref="Vector{T}"/>) when supported by <typeparamref name="T"/>.
 /// </remarks>
 public sealed class QuantitySeries<T> where T : INumber<T>
 {
@@ -35,6 +38,9 @@ public sealed class QuantitySeries<T> where T : INumber<T>
 
     /// <summary>Canonical exact rational dimension of all samples.</summary>
     public RationalDimension Dimension => Unit.Dimension;
+
+    /// <summary>True when bulk operations on <typeparamref name="T"/> execute on hardware SIMD registers.</summary>
+    public static bool IsSimdAccelerated => Vector.IsHardwareAccelerated && Vector<T>.IsSupported;
 
     /// <summary>Returns the sample at <paramref name="index"/> as a <see cref="Quantity{T}"/>.</summary>
     public Quantity<T> this[int index] => new(data[index], Unit, Spec);
@@ -81,7 +87,7 @@ public sealed class QuantitySeries<T> where T : INumber<T>
     public static QuantitySeries<T> FromGaugePressure(ReadOnlySpan<T> samples, SymbolicUnit pressureUnit) =>
         FromValues(samples, pressureUnit, Isq.Pressure, PointOrigins.StandardAtmosphere);
 
-    /// <summary>Converts all samples to a compatible target unit in a single tight pass.</summary>
+    /// <summary>Converts all samples to a compatible target unit in a single SIMD-accelerated pass.</summary>
     public QuantitySeries<T> In(SymbolicUnit target)
     {
         ArgumentNullException.ThrowIfNull(target);
@@ -116,7 +122,7 @@ public sealed class QuantitySeries<T> where T : INumber<T>
             allowTruncation: false);
 
         var output = new T[data.Length];
-        for (int i = 0; i < data.Length; i++) output[i] = data[i] + shift;
+        AddScalarSpan(data, shift, output);
         return new(output, Unit, newOrigin.Spec ?? Spec, newOrigin);
     }
 
@@ -128,13 +134,8 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         var baseUnit = ResolvePrefixableBase();
         if (baseUnit is null) return this;
 
-        double peakSi = 0d;
-        double scaleToSi = Unit.ScaleToSi;
-        for (int i = 0; i < data.Length; i++)
-        {
-            double v = Math.Abs(double.CreateChecked(data[i]) * scaleToSi);
-            if (double.IsFinite(v) && v > peakSi) peakSi = v;
-        }
+        double peak = ComputePeakAbs(data);
+        double peakSi = peak * Unit.ScaleToSi;
         var selection = UnitAutoScaler.SelectForSiMagnitude(peakSi, baseUnit);
         return In(SymbolicUnit.From(selection.Unit));
     }
@@ -147,16 +148,11 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         return QuantitySeries<TOther>.FromValues(output, Unit, Spec, Origin);
     }
 
-    /// <summary>Returns minimum and maximum sample values as unit-safe <see cref="Quantity{T}"/>.</summary>
+    /// <summary>Returns minimum and maximum sample values as unit-safe <see cref="Quantity{T}"/> using SIMD reduction when available.</summary>
     public (Quantity<T> Min, Quantity<T> Max) MinMax()
     {
         if (data.Length == 0) throw new InvalidOperationException("Series is empty.");
-        T min = data[0], max = data[0];
-        for (int i = 1; i < data.Length; i++)
-        {
-            if (data[i] < min) min = data[i];
-            if (data[i] > max) max = data[i];
-        }
+        var (min, max) = ComputeMinMax(data);
         return (new(min, Unit, Spec), new(max, Unit, Spec));
     }
 
@@ -167,38 +163,32 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         return new(max.Value - min.Value, Unit, Spec);
     }
 
-    /// <summary>Returns the arithmetic mean of the series.</summary>
+    /// <summary>Returns the arithmetic mean of the series using SIMD sum reduction when available.</summary>
     public Quantity<T> Mean()
     {
         if (data.Length == 0) throw new InvalidOperationException("Series is empty.");
-        T sum = T.Zero;
-        for (int i = 0; i < data.Length; i++) sum += data[i];
+        T sum = ComputeSum(data);
         return new(sum / T.CreateChecked(data.Length), Unit, Spec);
     }
 
-    /// <summary>Returns the root-mean-square (RMS) magnitude in double precision (for AC waveforms and noise measurements).</summary>
+    /// <summary>Returns the root-mean-square (RMS) magnitude in double precision using SIMD sum-of-squares when available.</summary>
     public Quantity<double> Rms()
     {
         if (data.Length == 0) throw new InvalidOperationException("Series is empty.");
         if (Origin is not null && Origin.OffsetFromBaseSi != 0d)
             throw new InvalidOperationException("RMS is undefined for offset-origin affine point series.");
-        double sumSq = 0d;
-        for (int i = 0; i < data.Length; i++)
-        {
-            double v = double.CreateChecked(data[i]);
-            sumSq += v * v;
-        }
+        double sumSq = ComputeSumOfSquares(data);
         return new(Math.Sqrt(sumSq / data.Length), Unit, Spec);
     }
 
-    /// <summary>Element-wise addition of compatible linear series.</summary>
+    /// <summary>Element-wise addition of compatible linear series using hardware SIMD when available.</summary>
     public static QuantitySeries<T> operator +(QuantitySeries<T> a, QuantitySeries<T> b)
     {
         var (commonUnit, commonSpec) = PrepareBinaryAdditive(a, b, isSubtraction: false, out var resultOrigin);
         var aAligned = a.Unit.Equals(commonUnit) ? a.data : a.In(commonUnit).data;
         var bAligned = b.Unit.Equals(commonUnit) ? b.data : b.In(commonUnit).data;
         var output = new T[a.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = aAligned[i] + bAligned[i];
+        AddSpans(aAligned, bAligned, output);
         return new(output, commonUnit, commonSpec, resultOrigin);
     }
 
@@ -212,7 +202,7 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         var aAligned = a.Unit.Equals(commonUnit) ? a.data : a.In(commonUnit).data;
         var bAligned = bReanchored.Unit.Equals(commonUnit) ? bReanchored.data : bReanchored.In(commonUnit).data;
         var output = new T[a.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = aAligned[i] - bAligned[i];
+        SubtractSpans(aAligned, bAligned, output);
         return new(output, commonUnit, commonSpec, resultOrigin);
     }
 
@@ -223,7 +213,7 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         RequireLinearSeries(b);
         RequireSameLength(a, b);
         var output = new T[a.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = a.data[i] * b.data[i];
+        MultiplySpans(a.data, b.data, output);
         return new(output, a.Unit * b.Unit, null, null);
     }
 
@@ -234,28 +224,28 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         RequireLinearSeries(b);
         RequireSameLength(a, b);
         var output = new T[a.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = a.data[i] / b.data[i];
+        DivideSpans(a.data, b.data, output);
         return new(output, a.Unit / b.Unit, null, null);
     }
 
-    /// <summary>Scales a linear series by a scalar factor.</summary>
+    /// <summary>Scales a linear series by a scalar factor using hardware SIMD when available.</summary>
     public static QuantitySeries<T> operator *(QuantitySeries<T> series, T scalar)
     {
         RequireLinearSeries(series);
         var output = new T[series.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = series.data[i] * scalar;
+        MultiplyScalarSpan(series.data, scalar, output);
         return new(output, series.Unit, series.Spec, null);
     }
 
-    /// <summary>Scales a linear series by a scalar factor.</summary>
+    /// <summary>Scales a linear series by a scalar factor using hardware SIMD when available.</summary>
     public static QuantitySeries<T> operator *(T scalar, QuantitySeries<T> series) => series * scalar;
 
-    /// <summary>Divides a linear series by a scalar divisor.</summary>
+    /// <summary>Divides a linear series by a scalar divisor using hardware SIMD when available.</summary>
     public static QuantitySeries<T> operator /(QuantitySeries<T> series, T divisor)
     {
         RequireLinearSeries(series);
         var output = new T[series.Count];
-        for (int i = 0; i < output.Length; i++) output[i] = series.data[i] / divisor;
+        DivideScalarSpan(series.data, divisor, output);
         return new(output, series.Unit, series.Spec, null);
     }
 
@@ -301,7 +291,7 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         }
         else
         {
-            if (a.Origin is not null && b.Origin is not null) resultOrigin = null; // point - point = displacement
+            if (a.Origin is not null && b.Origin is not null) resultOrigin = null;
             else if (a.Origin is not null && b.Origin is null) resultOrigin = a.Origin;
             else if (a.Origin is null && b.Origin is not null)
                 throw new InvalidOperationException("Cannot subtract an affine point series from a displacement series.");
@@ -324,31 +314,312 @@ public sealed class QuantitySeries<T> where T : INumber<T>
             throw new ArgumentException($"Series length mismatch: {a.Count} vs {b.Count}.");
     }
 
+    // --- SIMD-accelerated span kernels ---
+
+    private static void AddSpans(ReadOnlySpan<T> a, ReadOnlySpan<T> b, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = a.Length - step;
+            for (; i <= limit; i += step)
+                (new Vector<T>(a.Slice(i)) + new Vector<T>(b.Slice(i))).CopyTo(dst.Slice(i));
+        }
+        for (; i < a.Length; i++) dst[i] = a[i] + b[i];
+    }
+
+    private static void SubtractSpans(ReadOnlySpan<T> a, ReadOnlySpan<T> b, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = a.Length - step;
+            for (; i <= limit; i += step)
+                (new Vector<T>(a.Slice(i)) - new Vector<T>(b.Slice(i))).CopyTo(dst.Slice(i));
+        }
+        for (; i < a.Length; i++) dst[i] = a[i] - b[i];
+    }
+
+    private static void MultiplySpans(ReadOnlySpan<T> a, ReadOnlySpan<T> b, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = a.Length - step;
+            for (; i <= limit; i += step)
+                (new Vector<T>(a.Slice(i)) * new Vector<T>(b.Slice(i))).CopyTo(dst.Slice(i));
+        }
+        for (; i < a.Length; i++) dst[i] = a[i] * b[i];
+    }
+
+    private static void DivideSpans(ReadOnlySpan<T> a, ReadOnlySpan<T> b, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported && (typeof(T) == typeof(double) || typeof(T) == typeof(float)))
+        {
+            int step = Vector<T>.Count;
+            int limit = a.Length - step;
+            for (; i <= limit; i += step)
+                (new Vector<T>(a.Slice(i)) / new Vector<T>(b.Slice(i))).CopyTo(dst.Slice(i));
+        }
+        for (; i < a.Length; i++) dst[i] = a[i] / b[i];
+    }
+
+    private static void AddScalarSpan(ReadOnlySpan<T> src, T scalar, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = src.Length - step;
+            var sVec = new Vector<T>(scalar);
+            for (; i <= limit; i += step)
+                (new Vector<T>(src.Slice(i)) + sVec).CopyTo(dst.Slice(i));
+        }
+        for (; i < src.Length; i++) dst[i] = src[i] + scalar;
+    }
+
+    private static void MultiplyScalarSpan(ReadOnlySpan<T> src, T scalar, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = src.Length - step;
+            var sVec = new Vector<T>(scalar);
+            for (; i <= limit; i += step)
+                (new Vector<T>(src.Slice(i)) * sVec).CopyTo(dst.Slice(i));
+        }
+        for (; i < src.Length; i++) dst[i] = src[i] * scalar;
+    }
+
+    private static void DivideScalarSpan(ReadOnlySpan<T> src, T divisor, Span<T> dst)
+    {
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported && (typeof(T) == typeof(double) || typeof(T) == typeof(float)))
+        {
+            int step = Vector<T>.Count;
+            int limit = src.Length - step;
+            var dVec = new Vector<T>(divisor);
+            for (; i <= limit; i += step)
+                (new Vector<T>(src.Slice(i)) / dVec).CopyTo(dst.Slice(i));
+        }
+        for (; i < src.Length; i++) dst[i] = src[i] / divisor;
+    }
+
     private static void ConvertSpan(ReadOnlySpan<T> src, Span<T> dst, double srcScale, double dstScale)
     {
         if (typeof(T) == typeof(double))
         {
-            double ratio = srcScale / dstScale;
-            for (int i = 0; i < src.Length; i++)
-                dst[i] = (T)(object)((double)(object)src[i] * ratio);
+            var ratio = srcScale / dstScale;
+            MultiplyScalarSpan(src, Unsafe.As<double, T>(ref ratio), dst);
             return;
         }
         if (typeof(T) == typeof(float))
         {
-            double ratio = srcScale / dstScale;
-            for (int i = 0; i < src.Length; i++)
-                dst[i] = (T)(object)(float)((float)(object)src[i] * ratio);
+            var ratio = (float)(srcScale / dstScale);
+            MultiplyScalarSpan(src, Unsafe.As<float, T>(ref ratio), dst);
             return;
         }
         if (typeof(T) == typeof(decimal))
         {
             decimal dSrc = decimal.CreateChecked(srcScale);
             decimal dDst = decimal.CreateChecked(dstScale);
-            for (int i = 0; i < src.Length; i++)
-                dst[i] = (T)(object)(((decimal)(object)src[i] * dSrc) / dDst);
+            var srcDec = ReinterpretReadOnly<decimal>(src);
+            var dstDec = Reinterpret<decimal>(dst);
+            for (int i = 0; i < srcDec.Length; i++)
+                dstDec[i] = (srcDec[i] * dSrc) / dDst;
             return;
         }
+
+        // Integral fast SIMD path when ratio is an exact positive integer (e.g. V -> mV, s -> ms).
+        double exactRatio = srcScale / dstScale;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported &&
+            exactRatio >= 1d && Math.Abs(exactRatio - Math.Round(exactRatio)) <= 1e-12 * exactRatio)
+        {
+            T factor = T.CreateChecked(Math.Round(exactRatio));
+            MultiplyScalarSpan(src, factor, dst);
+            return;
+        }
+
         for (int i = 0; i < src.Length; i++)
             dst[i] = Quantity<T>.ConvertScale(src[i], srcScale, dstScale, allowTruncation: false);
     }
+
+    private static T ComputeSum(ReadOnlySpan<T> src)
+    {
+        T sum = T.Zero;
+        int i = 0;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported)
+        {
+            int step = Vector<T>.Count;
+            int limit = src.Length - step;
+            var acc = Vector<T>.Zero;
+            for (; i <= limit; i += step)
+                acc += new Vector<T>(src.Slice(i));
+            sum = Vector.Sum(acc);
+        }
+        for (; i < src.Length; i++) sum += src[i];
+        return sum;
+    }
+
+    private static (T Min, T Max) ComputeMinMax(ReadOnlySpan<T> src)
+    {
+        T min = src[0];
+        T max = src[0];
+        int i = 1;
+        if (Vector.IsHardwareAccelerated && Vector<T>.IsSupported && src.Length >= Vector<T>.Count)
+        {
+            int step = Vector<T>.Count;
+            var minVec = new Vector<T>(src);
+            var maxVec = minVec;
+            i = step;
+            int limit = src.Length - step;
+            for (; i <= limit; i += step)
+            {
+                var v = new Vector<T>(src.Slice(i));
+                minVec = Vector.Min(minVec, v);
+                maxVec = Vector.Max(maxVec, v);
+            }
+            min = minVec[0];
+            max = maxVec[0];
+            for (int lane = 1; lane < step; lane++)
+            {
+                if (minVec[lane] < min) min = minVec[lane];
+                if (maxVec[lane] > max) max = maxVec[lane];
+            }
+        }
+        for (; i < src.Length; i++)
+        {
+            if (src[i] < min) min = src[i];
+            if (src[i] > max) max = src[i];
+        }
+        return (min, max);
+    }
+
+    private static double ComputePeakAbs(ReadOnlySpan<T> src)
+    {
+        if (src.IsEmpty) return 0d;
+        if (typeof(T) == typeof(double))
+        {
+            var span = ReinterpretReadOnly<double>(src);
+            double peak = 0d;
+            int i = 0;
+            if (Vector.IsHardwareAccelerated && span.Length >= Vector<double>.Count)
+            {
+                int step = Vector<double>.Count;
+                int limit = span.Length - step;
+                var acc = Vector<double>.Zero;
+                for (; i <= limit; i += step)
+                {
+                    var abs = Vector.Abs(new Vector<double>(span.Slice(i)));
+                    acc = Vector.Max(acc, abs);
+                }
+                for (int lane = 0; lane < step; lane++)
+                    if (double.IsFinite(acc[lane]) && acc[lane] > peak) peak = acc[lane];
+            }
+            for (; i < span.Length; i++)
+            {
+                double v = Math.Abs(span[i]);
+                if (double.IsFinite(v) && v > peak) peak = v;
+            }
+            return peak;
+        }
+        if (typeof(T) == typeof(float))
+        {
+            var span = ReinterpretReadOnly<float>(src);
+            float peak = 0f;
+            int i = 0;
+            if (Vector.IsHardwareAccelerated && span.Length >= Vector<float>.Count)
+            {
+                int step = Vector<float>.Count;
+                int limit = span.Length - step;
+                var acc = Vector<float>.Zero;
+                for (; i <= limit; i += step)
+                {
+                    var abs = Vector.Abs(new Vector<float>(span.Slice(i)));
+                    acc = Vector.Max(acc, abs);
+                }
+                for (int lane = 0; lane < step; lane++)
+                    if (float.IsFinite(acc[lane]) && acc[lane] > peak) peak = acc[lane];
+            }
+            for (; i < span.Length; i++)
+            {
+                float v = MathF.Abs(span[i]);
+                if (float.IsFinite(v) && v > peak) peak = v;
+            }
+            return peak;
+        }
+
+        double maxAbs = 0d;
+        for (int i = 0; i < src.Length; i++)
+        {
+            double v = Math.Abs(double.CreateChecked(src[i]));
+            if (double.IsFinite(v) && v > maxAbs) maxAbs = v;
+        }
+        return maxAbs;
+    }
+
+    private static double ComputeSumOfSquares(ReadOnlySpan<T> src)
+    {
+        if (typeof(T) == typeof(double))
+        {
+            var span = ReinterpretReadOnly<double>(src);
+            double sumSq = 0d;
+            int i = 0;
+            if (Vector.IsHardwareAccelerated && span.Length >= Vector<double>.Count)
+            {
+                int step = Vector<double>.Count;
+                int limit = span.Length - step;
+                var acc = Vector<double>.Zero;
+                for (; i <= limit; i += step)
+                {
+                    var v = new Vector<double>(span.Slice(i));
+                    acc += v * v;
+                }
+                sumSq = Vector.Sum(acc);
+            }
+            for (; i < span.Length; i++) sumSq += span[i] * span[i];
+            return sumSq;
+        }
+        if (typeof(T) == typeof(float))
+        {
+            var span = ReinterpretReadOnly<float>(src);
+            double sumSq = 0d;
+            int i = 0;
+            if (Vector.IsHardwareAccelerated && span.Length >= Vector<float>.Count)
+            {
+                int step = Vector<float>.Count;
+                int limit = span.Length - step;
+                var acc = Vector<float>.Zero;
+                for (; i <= limit; i += step)
+                {
+                    var v = new Vector<float>(span.Slice(i));
+                    acc += v * v;
+                }
+                sumSq = Vector.Sum(acc);
+            }
+            for (; i < span.Length; i++) sumSq += (double)span[i] * span[i];
+            return sumSq;
+        }
+
+        double total = 0d;
+        for (int i = 0; i < src.Length; i++)
+        {
+            double v = double.CreateChecked(src[i]);
+            total += v * v;
+        }
+        return total;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private static ReadOnlySpan<TTo> ReinterpretReadOnly<TTo>(ReadOnlySpan<T> span) =>
+        MemoryMarshal.CreateReadOnlySpan(ref Unsafe.As<T, TTo>(ref MemoryMarshal.GetReference(span)), span.Length);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private static Span<TTo> Reinterpret<TTo>(Span<T> span) =>
+        MemoryMarshal.CreateSpan(ref Unsafe.As<T, TTo>(ref MemoryMarshal.GetReference(span)), span.Length);
 }
