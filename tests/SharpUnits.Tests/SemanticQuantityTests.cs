@@ -15,13 +15,13 @@ public sealed class SemanticQuantityTests
  [Fact] public void CurrentTimesResistanceProducesVoltage()
  {
   var k=QuantityKindRegistry.CreateStandard();
-  var i=new SemanticQuantity(Electrical.Amperes(.25),QuantityKind.Current,k);
-  var r=new SemanticQuantity(Electrical.Ohms(4000),QuantityKind.Resistance,k);
+  var i=new SemanticQuantity(SiQuantities.Amperes(.25),QuantityKind.Current,k);
+  var r=new SemanticQuantity(SiQuantities.Ohms(4000),QuantityKind.Resistance,k);
   Assert.Equal(1000,i.MultiplyAs(r,QuantityKind.Voltage,k).Value.SiValue,10);
  }
  [Fact] public void IncorrectKindDimensionRejected()
  {
   var k=QuantityKindRegistry.CreateStandard();
-  Assert.Throws<InvalidOperationException>(()=>new SemanticQuantity(Electrical.Volts(1),QuantityKind.Current,k));
+  Assert.Throws<InvalidOperationException>(()=>new SemanticQuantity(SiQuantities.Volts(1),QuantityKind.Current,k));
  }
 }

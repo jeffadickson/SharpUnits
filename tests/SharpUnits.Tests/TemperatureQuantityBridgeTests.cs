@@ -16,6 +16,6 @@ public sealed class TemperatureQuantityBridgeTests
  }
  [Fact] public void WrongDimensionsRejected()
  {
-  Assert.Throws<InvalidOperationException>(()=>Electrical.Volts(5).AsAbsoluteTemperature());
+  Assert.Throws<InvalidOperationException>(()=>SiQuantities.Volts(5).AsAbsoluteTemperature());
  }
 }

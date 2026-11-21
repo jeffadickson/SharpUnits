@@ -16,7 +16,7 @@ public sealed class QuantityTextFormatTests
  [Fact] public void FormatThenParseRoundTrip()
  {
   var formatter=new QuantityTextFormat(UnitRegistry.CreateStandard());
-  var quantity=Electrical.Volts(5.125);
+  var quantity=SiQuantities.Volts(5.125);
   var text=formatter.Format(quantity,"mV");
   var restored=formatter.Parse(text);
   Assert.Equal(quantity.RationalDimension,restored.RationalDimension);
