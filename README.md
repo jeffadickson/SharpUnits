@@ -89,3 +89,8 @@ var abs   = env.ConvertPoint(gauge, "bar", "vacuum"); // 3.01325 bar
 ```bash
 dotnet test SharpUnits.sln -c Release
 ```
+
+## Integration Guides
+
+- [Supporting Units in StarLark-cs, Teal, and Cameo](docs/ecosystem-integration.md) — host value design (`IThreadSafeHostValue`), Teal `.d.tl` typed metamethods, and Cameo SysML QUDV / FMI interchange.
+
