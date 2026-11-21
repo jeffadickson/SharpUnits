@@ -165,4 +165,85 @@ public sealed class SharpUnitsLiteralAnalyzerTests
             Assert.Equal(DiagnosticSeverity.Warning, d.Severity);
         });
     }
+
+    [Fact]
+    public async Task TracksLocalVariablesForIncompatibleConversionsAndAffineAdditions()
+    {
+        const string code = """
+            using SharpUnits;
+            public static class LocalFlow
+            {
+                public static void Run()
+                {
+                    var v = Quantity.Of(5, "V");
+                    _ = v.In("kg");
+
+                    var t1 = Quantity.Of(20, Units.Celsius);
+                    var t2 = Quantity.Of(25, Units.Celsius);
+                    _ = t1 + t2;
+                }
+            }
+            """;
+
+        var diagnostics = await AnalyzeAsync(code);
+        Assert.Contains(diagnostics, d => d.Id == "SU0003");
+        Assert.Contains(diagnostics, d => d.Id == "SU0005");
+    }
+
+    [Fact]
+    public async Task SuggestsClosestUnitOnTypoAndCodeFixProviderRewritesBothSU0001AndSU0005()
+    {
+        const string code = """
+            using SharpUnits;
+            public static class FixMe
+            {
+                public static void Run()
+                {
+                    _ = Quantity.Of(10, "kOhn");
+                    _ = Quantity.Of(20, Units.Celsius) + Quantity.Of(5, Units.Celsius);
+                }
+            }
+            """;
+
+        using var workspace = new Microsoft.CodeAnalysis.AdhocWorkspace();
+        var refs = new List<MetadataReference>();
+        var tpa = ((string?)AppContext.GetData("TRUSTED_PLATFORM_ASSEMBLIES"))?.Split(Path.PathSeparator) ?? [];
+        foreach (string path in tpa)
+            if (File.Exists(path)) refs.Add(MetadataReference.CreateFromFile(path));
+        refs.Add(MetadataReference.CreateFromFile(typeof(Quantity).Assembly.Location));
+
+        var project = workspace.AddProject("FixProject", LanguageNames.CSharp)
+            .WithMetadataReferences(refs)
+            .WithCompilationOptions(new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+        var doc = project.AddDocument("FixMe.cs", Microsoft.CodeAnalysis.Text.SourceText.From(code));
+
+        var compilation = await doc.Project.GetCompilationAsync();
+        var withAnalyzers = compilation!.WithAnalyzers(ImmutableArray.Create<DiagnosticAnalyzer>(new SharpUnitsLiteralAnalyzer()));
+        var diagnostics = await withAnalyzers.GetAnalyzerDiagnosticsAsync();
+
+        var typoDiag = Assert.Single(diagnostics, d => d.Id == "SU0001");
+        Assert.Equal("kOhm", typoDiag.Properties["SuggestedUnit"]);
+        Assert.Contains("Did you mean 'kOhm'?", typoDiag.GetMessage());
+
+        var affineDiag = Assert.Single(diagnostics, d => d.Id == "SU0005");
+
+        var fixer = new SharpUnitsCodeFixProvider();
+        var actions1 = new List<Microsoft.CodeAnalysis.CodeActions.CodeAction>();
+        await fixer.RegisterCodeFixesAsync(new Microsoft.CodeAnalysis.CodeFixes.CodeFixContext(
+            doc, typoDiag, (a, _) => actions1.Add(a), CancellationToken.None));
+        Assert.Single(actions1);
+        var ops1 = await actions1[0].GetOperationsAsync(CancellationToken.None);
+        var changedDoc1 = ((Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation)ops1.Single()).ChangedSolution.GetDocument(doc.Id)!;
+        string fixedText1 = (await changedDoc1.GetTextAsync()).ToString();
+        Assert.Contains("\"kOhm\"", fixedText1);
+
+        var actions2 = new List<Microsoft.CodeAnalysis.CodeActions.CodeAction>();
+        await fixer.RegisterCodeFixesAsync(new Microsoft.CodeAnalysis.CodeFixes.CodeFixContext(
+            doc, affineDiag, (a, _) => actions2.Add(a), CancellationToken.None));
+        Assert.Single(actions2);
+        var ops2 = await actions2[0].GetOperationsAsync(CancellationToken.None);
+        var changedDoc2 = ((Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation)ops2.Single()).ChangedSolution.GetDocument(doc.Id)!;
+        string fixedText2 = (await changedDoc2.GetTextAsync()).ToString();
+        Assert.Contains("Quantity.Delta(5, Units.Celsius)", fixedText2);
+    }
 }

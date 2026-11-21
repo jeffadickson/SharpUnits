@@ -17,6 +17,7 @@ public enum QuantityScale
 public readonly record struct Quantity :
     IComparable<Quantity>,
     IFormattable,
+    ISpanFormattable,
     IParsable<Quantity>,
     IComparisonOperators<Quantity, Quantity, bool>,
     IAdditionOperators<Quantity, Quantity, Quantity>,
@@ -272,6 +273,60 @@ public readonly record struct Quantity :
         if (format.StartsWith("eng:", StringComparison.OrdinalIgnoreCase))
             return FormatEngineering(format[4..], formatProvider ?? CultureInfo.InvariantCulture);
         return Format(format, formatProvider ?? CultureInfo.InvariantCulture);
+    }
+
+    /// <summary>Formats this quantity directly into <paramref name="destination"/> without allocating an intermediate string when possible.</summary>
+    public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format, IFormatProvider? provider)
+    {
+        var q = this;
+        ReadOnlySpan<char> numFmt = format.IsEmpty ? "G" : format;
+        bool ascii = false;
+
+        if (format.Equals("eng", StringComparison.OrdinalIgnoreCase))
+        {
+            q = ToEngineeringUnit();
+            numFmt = "G4";
+        }
+        else if (format.Equals("ascii", StringComparison.OrdinalIgnoreCase))
+        {
+            ascii = true;
+            numFmt = "G";
+        }
+        else if (format.Equals("eng:ascii", StringComparison.OrdinalIgnoreCase))
+        {
+            q = ToEngineeringUnit();
+            ascii = true;
+            numFmt = "G4";
+        }
+        else if (format.StartsWith("eng:", StringComparison.OrdinalIgnoreCase))
+        {
+            q = ToEngineeringUnit();
+            numFmt = format[4..];
+        }
+
+        if (!q.Value.TryFormat(destination, out int numLen, numFmt, provider ?? CultureInfo.InvariantCulture))
+        {
+            charsWritten = 0;
+            return false;
+        }
+
+        string sym = ascii ? ToAsciiSymbol(q.UnitSymbol) : q.UnitSymbol;
+        if (string.IsNullOrEmpty(sym) || sym == "1")
+        {
+            charsWritten = numLen;
+            return true;
+        }
+
+        int total = numLen + 1 + sym.Length;
+        if (destination.Length < total)
+        {
+            charsWritten = 0;
+            return false;
+        }
+        destination[numLen] = ' ';
+        sym.AsSpan().CopyTo(destination[(numLen + 1)..]);
+        charsWritten = total;
+        return true;
     }
 
     /// <summary>Returns an invariant-culture string combining magnitude and display unit.</summary>

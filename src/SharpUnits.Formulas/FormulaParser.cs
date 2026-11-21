@@ -7,8 +7,15 @@ namespace SharpUnits.Formulas;
 /// binary <c>+ - * / ^</c>, and one-argument functions. Power binds tighter than unary minus.</remarks>
 public sealed class FormulaParser
 {
+    /// <summary>Maximum allowed formula source length.</summary>
+    public const int MaxInputLength = 8192;
+
+    /// <summary>Maximum allowed recursion/nesting depth.</summary>
+    public const int MaxNestingDepth = 64;
+
     private readonly string source;
     private int position;
+    private int depth;
 
     private FormulaParser(string source) => this.source = source;
 
@@ -16,6 +23,8 @@ public sealed class FormulaParser
     public static FormulaNode Parse(string source)
     {
         ArgumentNullException.ThrowIfNull(source);
+        if (source.Length > MaxInputLength)
+            throw new FormatException($"Formula exceeds maximum length of {MaxInputLength} characters.");
         var parser = new FormulaParser(source);
         var expression = parser.Additive();
         parser.Skip();
@@ -50,8 +59,8 @@ public sealed class FormulaParser
     private FormulaNode Unary()
     {
         Skip();
-        if (Take('+')) return Unary();
-        if (Take('-')) return new FormulaBinary(FormulaOperator.Subtract, new FormulaConstant(0), Unary());
+        if (Take('+')) return EnterDepth(Unary);
+        if (Take('-')) return new FormulaBinary(FormulaOperator.Subtract, new FormulaConstant(0), EnterDepth(Unary));
         return Power();
     }
 
@@ -59,7 +68,7 @@ public sealed class FormulaParser
     {
         var left = Primary();
         Skip();
-        if (Take('^')) return new FormulaBinary(FormulaOperator.Power, left, Unary());
+        if (Take('^')) return new FormulaBinary(FormulaOperator.Power, left, EnterDepth(Unary));
         return left;
     }
 
@@ -68,7 +77,7 @@ public sealed class FormulaParser
         Skip();
         if (Take('('))
         {
-            var expression = Additive();
+            var expression = EnterDepth(Additive);
             Skip();
             if (!Take(')')) throw Error("Missing closing parenthesis");
             return expression;
@@ -100,12 +109,26 @@ public sealed class FormulaParser
             string name = source[start..position];
             Skip();
             if (!Take('(')) return new FormulaVariable(name);
-            var argument = Additive();
+            var argument = EnterDepth(Additive);
             Skip();
             if (!Take(')')) throw Error("Missing function closing parenthesis");
             return new FormulaFunction(name, argument);
         }
         throw Error("Expected number, variable or parenthesized expression");
+    }
+
+    private FormulaNode EnterDepth(Func<FormulaNode> parse)
+    {
+        if (++depth > MaxNestingDepth)
+            throw Error($"Formula exceeds maximum nesting depth of {MaxNestingDepth}");
+        try
+        {
+            return parse();
+        }
+        finally
+        {
+            depth--;
+        }
     }
 
     private bool Take(char character)

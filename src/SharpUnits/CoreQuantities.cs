@@ -63,6 +63,12 @@ public readonly record struct Length(double Meters) : IComparable<Length>
     /// <summary>Dimensionless ratio of two lengths.</summary>
     public static double operator /(Length a, Length b) => a.Meters / b.Meters;
 
+    /// <summary>Length times length yields area.</summary>
+    public static Area operator *(Length a, Length b) => new(a.Meters * b.Meters);
+
+    /// <summary>Length divided by duration yields velocity.</summary>
+    public static Velocity operator /(Length distance, Duration duration) => new(distance.Meters / duration.Seconds);
+
     /// <summary>Compares lengths.</summary>
     public int CompareTo(Length other) => Meters.CompareTo(other.Meters);
 
@@ -132,6 +138,12 @@ public readonly record struct Mass(double Kilograms) : IComparable<Mass>
 
     /// <summary>Dimensionless ratio of two masses.</summary>
     public static double operator /(Mass a, Mass b) => a.Kilograms / b.Kilograms;
+
+    /// <summary>Newton's second law: <c>m × a = F</c>.</summary>
+    public static Force operator *(Mass m, Acceleration a) => new(m.Kilograms * a.MetersPerSecondSquared);
+
+    /// <summary>Mass divided by volume yields density.</summary>
+    public static Density operator /(Mass m, Volume v) => new(m.Kilograms / v.CubicMeters);
 
     /// <summary>Compares masses.</summary>
     public int CompareTo(Mass other) => Kilograms.CompareTo(other.Kilograms);
@@ -358,6 +370,12 @@ public readonly record struct Force(double Newtons) : IComparable<Force>
     /// <summary>Dimensionless ratio of two forces.</summary>
     public static double operator /(Force a, Force b) => a.Newtons / b.Newtons;
 
+    /// <summary>Force divided by area yields pressure.</summary>
+    public static Pressure operator /(Force f, Area a) => new(f.Newtons / a.SquareMeters);
+
+    /// <summary>Force divided by mass yields acceleration.</summary>
+    public static Acceleration operator /(Force f, Mass m) => new(f.Newtons / m.Kilograms);
+
     /// <summary>Compares forces.</summary>
     public int CompareTo(Force other) => Newtons.CompareTo(other.Newtons);
 
@@ -436,6 +454,9 @@ public readonly record struct Pressure(double Pascals) : IComparable<Pressure>
 
     /// <summary>Dimensionless ratio of two pressures.</summary>
     public static double operator /(Pressure a, Pressure b) => a.Pascals / b.Pascals;
+
+    /// <summary>Pressure times area yields force.</summary>
+    public static Force operator *(Pressure p, Area a) => new(p.Pascals * a.SquareMeters);
 
     /// <summary>Compares pressures.</summary>
     public int CompareTo(Pressure other) => Pascals.CompareTo(other.Pascals);

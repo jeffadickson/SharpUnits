@@ -228,6 +228,63 @@ namespace SharpUnits.Analyzers
             ["NewtonMeter"] = "N·m", ["VoltAmpere"] = "VA", ["Var"] = "var", ["Horsepower"] = "hp"
         };
 
+        private static readonly string[] CommonUnitSuggestions =
+        {
+            "m", "mm", "cm", "km", "in", "ft", "mi", "mil",
+            "kg", "g", "mg", "lb", "oz",
+            "s", "ms", "µs", "us", "ns", "min", "h", "hr",
+            "A", "mA", "µA", "uA", "nA",
+            "V", "mV", "µV", "uV", "kV", "MV",
+            "Ω", "kΩ", "MΩ", "Ohm", "kOhm", "MOhm",
+            "F", "µF", "uF", "nF", "pF",
+            "H", "mH", "µH", "uH", "nH",
+            "Hz", "kHz", "MHz", "GHz",
+            "W", "mW", "kW", "MW", "hp",
+            "J", "kJ", "MJ", "Wh", "kWh", "eV",
+            "N", "kN", "lbf", "N·m", "Nm",
+            "Pa", "kPa", "MPa", "GPa", "bar", "mbar", "atm", "psi", "Torr",
+            "K", "°C", "degC", "°F", "degF", "°R",
+            "rad", "deg", "°", "rev", "%", "ppm", "ppb", "L", "mL", "VA", "var"
+        };
+
+        public static string? SuggestClosestUnit(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input) || input.Length > 16) return null;
+            string trimmed = input.Trim();
+            string? best = null;
+            int bestDist = 3; // Only suggest within edit distance <= 2
+            foreach (string candidate in CommonUnitSuggestions)
+            {
+                int d = Levenshtein(trimmed, candidate);
+                if (d < bestDist && d > 0)
+                {
+                    bestDist = d;
+                    best = candidate;
+                }
+            }
+            return best;
+        }
+
+        private static int Levenshtein(string a, string b)
+        {
+            int n = a.Length, m = b.Length;
+            if (Math.Abs(n - m) > 2) return 3;
+            var prev = new int[m + 1];
+            var curr = new int[m + 1];
+            for (int j = 0; j <= m; j++) prev[j] = j;
+            for (int i = 1; i <= n; i++)
+            {
+                curr[0] = i;
+                for (int j = 1; j <= m; j++)
+                {
+                    int cost = a[i - 1] == b[j - 1] ? 0 : 1;
+                    curr[j] = Math.Min(Math.Min(curr[j - 1] + 1, prev[j] + 1), prev[j - 1] + cost);
+                }
+                var tmp = prev; prev = curr; curr = tmp;
+            }
+            return prev[m];
+        }
+
         public static bool TryResolveUnitsProperty(string propertyName, out UnitInfo info)
         {
             if (UnitsPropertyMap.TryGetValue(propertyName, out string? symbol))

@@ -103,6 +103,29 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         return new(output, target, Spec, Origin);
     }
 
+    /// <summary>
+    /// Converts all samples into a caller-provided <paramref name="destination"/> span in a single zero-allocation SIMD pass,
+    /// ideal for writing directly into reusable plotting or GPU staging buffers.
+    /// </summary>
+    public void CopyConvertedTo(SymbolicUnit target, Span<T> destination)
+    {
+        ArgumentNullException.ThrowIfNull(target);
+        if (target.IsAffine)
+            throw new InvalidOperationException("Target unit must be linear.");
+        if (!Unit.IsCompatibleWith(target))
+            throw new InvalidOperationException($"Incompatible dimensions: '{Unit.Symbol}' vs '{target.Symbol}'.");
+        if (destination.Length < data.Length)
+            throw new ArgumentException($"Destination span length ({destination.Length}) must be at least {data.Length}.", nameof(destination));
+
+        var slice = destination[..data.Length];
+        if (Unit.Equals(target) || Unit.ScaleToSi == target.ScaleToSi)
+        {
+            data.AsSpan().CopyTo(slice);
+            return;
+        }
+        ConvertSpan(data, slice, Unit.ScaleToSi, target.ScaleToSi);
+    }
+
     /// <summary>Re-anchors an affine series to a different compatible <see cref="PointOrigin"/> (for example gauge to absolute pressure, or °C to K).</summary>
     public QuantitySeries<T> RelativeTo(PointOrigin newOrigin)
     {

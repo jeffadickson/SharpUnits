@@ -12,10 +12,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SharpUnits.Analyzers\SharpUnits.Analyzers.csproj" ReferenceOutputAssembly="false" PrivateAssets="all" />
+    <ProjectReference Include="..\SharpUnits.CodeFixes\SharpUnits.CodeFixes.csproj" ReferenceOutputAssembly="false" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\SharpUnits.Analyzers\bin\$(Configuration)\netstandard2.0\SharpUnits.Analyzers.dll" Pack="true" PackagePath="analyzers\dotnet\cs" Visible="false" />
+    <None Include="..\SharpUnits.CodeFixes\bin\$(Configuration)\netstandard2.0\SharpUnits.CodeFixes.dll" Pack="true" PackagePath="analyzers\dotnet\cs" Visible="false" />
   </ItemGroup>
 </Project>

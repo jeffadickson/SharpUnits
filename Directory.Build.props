@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>0.2.0</VersionPrefix>
-    <VersionSuffix>preview.1</VersionSuffix>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>rc.1</VersionSuffix>
     <Authors>Jeff Dickson</Authors>
     <Company>SharpUnits</Company>
     <Product>SharpUnits</Product>
@@ -15,5 +15,11 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- NativeAOT & trimming verification for all modern .NET runtime libraries -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0' And '$(IsTestProject)' != 'true' And '$(OutputType)' != 'Exe'">
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>
 </Project>

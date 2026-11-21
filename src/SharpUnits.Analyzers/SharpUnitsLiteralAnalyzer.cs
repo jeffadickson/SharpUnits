@@ -121,13 +121,13 @@ namespace SharpUnits.Analyzers
                 {
                     fromValid = CompileTimeUnitValidator.TryValidateUnitExpression(fromLit!, allowCompound: false, out fromInfo, out string? err, out _);
                     if (!fromValid)
-                        context.ReportDiagnostic(Diagnostic.Create(UnknownOrInvalidUnit, fromLoc, fromLit!, err ?? "unknown unit"));
+                        context.ReportDiagnostic(CreateUnknownUnitDiagnostic(fromLoc, fromLit!, err));
                 }
                 if (hasTo)
                 {
                     toValid = CompileTimeUnitValidator.TryValidateUnitExpression(toLit!, allowCompound: false, out toInfo, out string? err, out _);
                     if (!toValid)
-                        context.ReportDiagnostic(Diagnostic.Create(UnknownOrInvalidUnit, toLoc, toLit!, err ?? "unknown unit"));
+                        context.ReportDiagnostic(CreateUnknownUnitDiagnostic(toLoc, toLit!, err));
                 }
                 if (fromValid && toValid && fromInfo.Dimension != toInfo.Dimension)
                 {
@@ -145,10 +145,9 @@ namespace SharpUnits.Analyzers
                     bool allowSingleAffine = typeName == "SharpUnits.UnitEnvironment";
                     if (!CompileTimeUnitValidator.TryValidateUnitExpression(literal, allowCompound: true, out var parsed, out string? err, out bool affineErr))
                     {
-                        var descriptor = affineErr ? AffineUnitInExpression : UnknownOrInvalidUnit;
                         context.ReportDiagnostic(affineErr
-                            ? Diagnostic.Create(descriptor, argLoc, literal)
-                            : Diagnostic.Create(descriptor, argLoc, literal, err ?? "invalid unit expression"));
+                            ? Diagnostic.Create(AffineUnitInExpression, argLoc, literal)
+                            : CreateUnknownUnitDiagnostic(argLoc, literal, err));
                     }
                     else if (!allowSingleAffine && parsed.IsAffine)
                     {
@@ -164,7 +163,7 @@ namespace SharpUnits.Analyzers
                 if (TryGetStringArg(invocation, 0, out string? literal, out var argLoc) && literal is not null)
                 {
                     if (!CompileTimeUnitValidator.TryValidateUnitExpression(literal, allowCompound: false, out _, out string? err, out _))
-                        context.ReportDiagnostic(Diagnostic.Create(UnknownOrInvalidUnit, argLoc, literal, err ?? "unknown unit"));
+                        context.ReportDiagnostic(CreateUnknownUnitDiagnostic(argLoc, literal, err));
                 }
                 return;
             }
@@ -179,10 +178,9 @@ namespace SharpUnits.Analyzers
                 {
                     if (!CompileTimeUnitValidator.TryValidateUnitExpression(literal, allowCompound, out _, out string? err, out bool affineErr))
                     {
-                        var descriptor = affineErr ? AffineUnitInExpression : UnknownOrInvalidUnit;
                         context.ReportDiagnostic(affineErr
-                            ? Diagnostic.Create(descriptor, argLoc, literal)
-                            : Diagnostic.Create(descriptor, argLoc, literal, err ?? "unknown unit"));
+                            ? Diagnostic.Create(AffineUnitInExpression, argLoc, literal)
+                            : CreateUnknownUnitDiagnostic(argLoc, literal, err));
                     }
                 }
                 return;
@@ -206,10 +204,9 @@ namespace SharpUnits.Analyzers
                 {
                     if (!CompileTimeUnitValidator.TryValidateUnitExpression(targetLit, allowCompound: isEnvConvert, out targetInfo, out string? err, out bool affineErr))
                     {
-                        var descriptor = affineErr ? AffineUnitInExpression : UnknownOrInvalidUnit;
                         context.ReportDiagnostic(affineErr
-                            ? Diagnostic.Create(descriptor, targetLoc, targetLit)
-                            : Diagnostic.Create(descriptor, targetLoc, targetLit, err ?? "unknown unit"));
+                            ? Diagnostic.Create(AffineUnitInExpression, targetLoc, targetLit)
+                            : CreateUnknownUnitDiagnostic(targetLoc, targetLit, err));
                         return;
                     }
                     targetLabel = targetLit;
@@ -255,11 +252,35 @@ namespace SharpUnits.Analyzers
             }
         }
 
-        private static bool TryInferQuantityUnit(IOperation? op, out UnitInfo info, out bool isRelative)
+        private static Diagnostic CreateUnknownUnitDiagnostic(Location location, string literal, string? err)
+        {
+            string? suggestion = CompileTimeUnitValidator.SuggestClosestUnit(literal);
+            string message = suggestion is not null
+                ? $"{err ?? "Unknown unit symbol."} Did you mean '{suggestion}'?"
+                : (err ?? "Unknown unit symbol.");
+            if (suggestion is not null)
+            {
+                var props = ImmutableDictionary<string, string?>.Empty.Add("SuggestedUnit", suggestion);
+                return Diagnostic.Create(UnknownOrInvalidUnit, location, props, literal, message);
+            }
+            return Diagnostic.Create(UnknownOrInvalidUnit, location, literal, message);
+        }
+
+        private static bool TryInferQuantityUnit(IOperation? op, out UnitInfo info, out bool isRelative, int depth = 0)
         {
             info = default;
             isRelative = false;
+            if (depth > 4) return false;
             op = UnwrapConversion(op);
+
+            // Track local variable declarations: var v = Quantity.Of(5, "V"); v.In("kg");
+            if (op is ILocalReferenceOperation localRef)
+            {
+                if (TryFindLocalInitializer(localRef, out var initOp))
+                    return TryInferQuantityUnit(initOp, out info, out isRelative, depth + 1);
+                return false;
+            }
+
             if (op is not IInvocationOperation inv) return false;
 
             var method = inv.TargetMethod;
@@ -303,6 +324,38 @@ namespace SharpUnits.Analyzers
                 };
             }
 
+            return false;
+        }
+
+        private static bool TryFindLocalInitializer(ILocalReferenceOperation localRef, out IOperation? initializer)
+        {
+            initializer = null;
+            var target = localRef.Local;
+            IOperation? current = localRef.Parent;
+            while (current is not null)
+            {
+                if (current is IBlockOperation block)
+                {
+                    foreach (var stmt in block.Operations)
+                    {
+                        if (stmt is IVariableDeclarationGroupOperation group)
+                        {
+                            foreach (var decl in group.Declarations)
+                            {
+                                foreach (var declarator in decl.Declarators)
+                                {
+                                    if (SymbolEqualityComparer.Default.Equals(declarator.Symbol, target))
+                                    {
+                                        initializer = declarator.Initializer?.Value;
+                                        return initializer is not null;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                current = current.Parent;
+            }
             return false;
         }
 

@@ -6,6 +6,12 @@ namespace SharpUnits;
 /// <remarks>Examples: <c>mA*kΩ</c>, <c>m/s^2</c>, <c>m·s⁻²</c>, <c>V/Hz^(1/2)</c>, <c>(A·Ω)</c>. Affine units are rejected.</remarks>
 public sealed class UnitExpressionParser
 {
+    /// <summary>Maximum allowed unit expression string length (protects against untrusted input amplification).</summary>
+    public const int MaxInputLength = 4096;
+
+    /// <summary>Maximum allowed parenthesis nesting depth (protects against stack exhaustion).</summary>
+    public const int MaxNestingDepth = 64;
+
     private readonly UnitRegistry registry;
 
     /// <summary>Constructs a parser against an explicit registry (defaults to <see cref="UnitRegistry.Standard"/>).</summary>
@@ -23,6 +29,8 @@ public sealed class UnitExpressionParser
     public SymbolicUnit ParseSymbolic(string text)
     {
         ArgumentNullException.ThrowIfNull(text);
+        if (text.Length > MaxInputLength)
+            throw new FormatException($"Unit expression exceeds maximum length of {MaxInputLength} characters.");
         var state = new ParserState(registry, text);
         var result = state.ParseProduct();
         state.SkipSpace();
@@ -35,12 +43,14 @@ public sealed class UnitExpressionParser
     {
         private readonly UnitRegistry registry;
         private readonly string input;
+        private int depth;
         public int Position;
 
         public ParserState(UnitRegistry registry, string input)
         {
             this.registry = registry;
             this.input = input;
+            depth = 0;
             Position = 0;
         }
 
@@ -65,12 +75,15 @@ public sealed class UnitExpressionParser
             SymbolicUnit value;
             if (Position < input.Length && input[Position] == '(')
             {
+                if (++depth > MaxNestingDepth)
+                    throw new FormatException($"Unit expression exceeds maximum parenthesis nesting depth of {MaxNestingDepth}.");
                 Position++;
                 value = ParseProduct();
                 SkipSpace();
                 if (Position >= input.Length || input[Position] != ')')
                     throw new FormatException("Missing closing parenthesis.");
                 Position++;
+                depth--;
             }
             else
             {

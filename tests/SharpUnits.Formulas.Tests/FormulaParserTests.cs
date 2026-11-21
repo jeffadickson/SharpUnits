@@ -63,4 +63,17 @@ public sealed class FormulaParserTests
   var result=FormulaAnalyzer.Analyze("-voltage",Symbols);
   Assert.Equal(RationalDimension.From(Dimension.Voltage),result.Result!.Dimension);
  }
+
+ [Fact] public void SecurityLimitsRejectDeepNestingAndHugeInputs()
+ {
+  string deep=new string('(',FormulaParser.MaxNestingDepth+5)+"voltage"+new string(')',FormulaParser.MaxNestingDepth+5);
+  var deepResult=FormulaAnalyzer.Analyze(deep,Symbols);
+  Assert.Contains(deepResult.Diagnostics,d=>d.Code=="SU-FORM-015");
+  Assert.Throws<FormatException>(()=>FormulaParser.Parse(deep));
+
+  string huge=new string('x',FormulaParser.MaxInputLength+1);
+  var hugeResult=FormulaAnalyzer.Analyze(huge,Symbols);
+  Assert.Contains(hugeResult.Diagnostics,d=>d.Code=="SU-FORM-015");
+  Assert.Throws<FormatException>(()=>FormulaParser.Parse(huge));
+ }
 }

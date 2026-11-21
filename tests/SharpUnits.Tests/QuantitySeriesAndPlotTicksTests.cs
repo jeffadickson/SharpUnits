@@ -111,6 +111,8 @@ public sealed class QuantitySeriesAndPlotTicksTests
         var b = QuantitySeries<double>.FromValues(bRaw, Units.Volt);
 
         var scaled = a.In(Units.Millivolt);
+        var copied = new double[length];
+        a.CopyConvertedTo(Units.Millivolt, copied);
         var sum = a + b;
         var diff = a - b;
         var prod = a * b;
@@ -120,12 +122,16 @@ public sealed class QuantitySeriesAndPlotTicksTests
         for (int i = 0; i < length; i++)
         {
             Assert.Equal(aRaw[i] * 1000.0, scaled.Values[i], 9);
+            Assert.Equal(scaled.Values[i], copied[i], 12);
             Assert.Equal(aRaw[i] + bRaw[i], sum.Values[i], 12);
             Assert.Equal(aRaw[i] - bRaw[i], diff.Values[i], 12);
             Assert.Equal(aRaw[i] * bRaw[i], prod.Values[i], 12);
             Assert.Equal(aRaw[i] / bRaw[i], quot.Values[i], 9);
             Assert.Equal(aRaw[i] * 2.0, doubled.Values[i], 12);
         }
+
+        if (length > 1)
+            Assert.Throws<ArgumentException>(() => a.CopyConvertedTo(Units.Millivolt, copied.AsSpan(0, length - 1)));
 
         var (min, max) = a.MinMax();
         Assert.Equal(aRaw.Min(), min.Value, 12);

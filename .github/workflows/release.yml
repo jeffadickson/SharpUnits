@@ -1,0 +1,51 @@
+name: Release NuGet Packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  pack-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore, build, and test
+        run: |
+          dotnet restore SharpUnits.sln
+          dotnet build SharpUnits.sln -c Release --no-restore --nologo
+          dotnet test SharpUnits.sln -c Release --no-build --nologo
+      - name: Pack all NuGet packages
+        run: |
+          mkdir -p ./nupkgs
+          for proj in \
+            src/SharpUnits.Analyzers/SharpUnits.Analyzers.csproj \
+            src/SharpUnits/SharpUnits.csproj \
+            src/SharpUnits.Electrical/SharpUnits.Electrical.csproj \
+            src/SharpUnits.Metrology/SharpUnits.Metrology.csproj \
+            src/SharpUnits.Formulas/SharpUnits.Formulas.csproj \
+            src/SharpUnits.SysMl/SharpUnits.SysMl.csproj \
+            src/SharpUnits.Interop/SharpUnits.Interop.csproj; do
+            dotnet pack "$proj" -c Release --no-build -o ./nupkgs --nologo
+          done
+      - name: Upload NuGet artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sharpunits-nupkgs
+          path: ./nupkgs/*.nupkg
+      - name: Publish to NuGet.org (when NUGET_API_KEY secret is configured)
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          if [ -z "$NUGET_API_KEY" ]; then
+            echo "NUGET_API_KEY secret is not configured; skipping NuGet.org push."
+            exit 0
+          fi
+          dotnet nuget push "./nupkgs/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
