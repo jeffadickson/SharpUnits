@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits.Interop</PackageId>
+    <Description>Deterministic scripting and FFI bridges for embedding SharpUnits into StarLark-cs (IThreadSafeHostValue), Teal/Lua (typed metamethods + 1-based series), and NativeAOT C ABI hosts.</Description>
+    <PackageTags>units;starlark;teal;lua;ffi;nativeaot;scripting;interop;csharp</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SharpUnits/SharpUnits.csproj" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\bindings\teal\sharpunits.d.tl" Pack="true" PackagePath="contentFiles\any\any\teal\sharpunits.d.tl" />
+  </ItemGroup>
+</Project>

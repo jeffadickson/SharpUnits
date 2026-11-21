@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>SharpUnits.SysMl</PackageId>
+    <Description>Cameo Systems Modeler / MagicDraw SysML QUDV interchange, FMI 2.0/3.0 UnitDefinitions XML export/import, parametric constraint validation, and requirement verification built on SharpUnits.</Description>
+    <PackageTags>units;sysml;qudv;cameo;magicdraw;fmi;fmu;mbse;metrology;csharp</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SharpUnits/SharpUnits.csproj" />
+    <ProjectReference Include="../SharpUnits.Formulas/SharpUnits.Formulas.csproj" />
+    <ProjectReference Include="../SharpUnits.Metrology/SharpUnits.Metrology.csproj" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

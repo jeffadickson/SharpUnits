@@ -32,6 +32,8 @@ jobs:
           dotnet pack src/SharpUnits.Electrical/SharpUnits.Electrical.csproj -c Release --no-build -o ./nupkgs --nologo
           dotnet pack src/SharpUnits.Metrology/SharpUnits.Metrology.csproj -c Release --no-build -o ./nupkgs --nologo
           dotnet pack src/SharpUnits.Formulas/SharpUnits.Formulas.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits.SysMl/SharpUnits.SysMl.csproj -c Release --no-build -o ./nupkgs --nologo
+          dotnet pack src/SharpUnits.Interop/SharpUnits.Interop.csproj -c Release --no-build -o ./nupkgs --nologo
       - name: Verify Bode frequency-response export
         if: matrix.os == 'ubuntu-latest'
         shell: bash
