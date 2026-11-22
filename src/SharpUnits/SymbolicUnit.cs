@@ -1,3 +1,5 @@
+using System.ComponentModel;
+using System.Globalization;
 using System.Text;
 
 namespace SharpUnits;
@@ -10,7 +12,13 @@ public readonly record struct UnitFactor(UnitDefinition Unit, Rational Exponent)
 /// Supports unit products, quotients, integer/rational powers, and roots (for example <c>m/s²</c>, <c>N·m</c>,
 /// <c>kW·h</c>, <c>nV/Hz^(1/2)</c>) without collapsing display unit identity.
 /// </remarks>
-public sealed class SymbolicUnit : IEquatable<SymbolicUnit>
+[TypeConverter(typeof(SymbolicUnitTypeConverter))]
+public sealed class SymbolicUnit :
+    IEquatable<SymbolicUnit>,
+    IParsable<SymbolicUnit>,
+    ISpanParsable<SymbolicUnit>,
+    IUtf8SpanFormattable,
+    IUtf8SpanParsable<SymbolicUnit>
 {
     private readonly UnitFactor[] factors;
 
@@ -225,6 +233,52 @@ public sealed class SymbolicUnit : IEquatable<SymbolicUnit>
     {
         if (u.IsAffine)
             throw new InvalidOperationException("Affine units cannot participate in symbolic unit algebra.");
+    }
+
+    /// <summary>Parses a symbolic unit expression using <see cref="UnitEnvironment.Standard"/>.</summary>
+    public static SymbolicUnit Parse(string s, IFormatProvider? provider) =>
+        UnitEnvironment.Standard.ResolveUnit(s);
+
+    /// <summary>Attempts to parse a symbolic unit expression without throwing.</summary>
+    public static bool TryParse(string? s, IFormatProvider? provider, out SymbolicUnit result)
+    {
+        if (UnitEnvironment.Standard.TryResolveUnit(s, out var parsed) && parsed is not null)
+        {
+            result = parsed;
+            return true;
+        }
+        result = One;
+        return false;
+    }
+
+    /// <summary>Parses a character span containing a symbolic unit expression.</summary>
+    public static SymbolicUnit Parse(ReadOnlySpan<char> s, IFormatProvider? provider) =>
+        UnitEnvironment.Standard.ResolveUnit(s.ToString());
+
+    /// <summary>Attempts to parse a character span containing a symbolic unit expression without throwing.</summary>
+    public static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out SymbolicUnit result) =>
+        TryParse(s.IsEmpty ? null : s.ToString(), provider, out result);
+
+    /// <summary>Parses a UTF-8 byte span containing a symbolic unit expression.</summary>
+    public static SymbolicUnit Parse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider) =>
+        UnitEnvironment.Standard.ResolveUnit(Encoding.UTF8.GetString(utf8Text));
+
+    /// <summary>Attempts to parse a UTF-8 byte span containing a symbolic unit expression without throwing.</summary>
+    public static bool TryParse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider, out SymbolicUnit result) =>
+        TryParse(utf8Text.IsEmpty ? null : Encoding.UTF8.GetString(utf8Text), provider, out result);
+
+    /// <summary>Formats this symbolic unit directly into a UTF-8 byte span (<c>"ascii"</c> for ASCII symbols, default Unicode).</summary>
+    public bool TryFormat(Span<byte> utf8Destination, out int bytesWritten, ReadOnlySpan<char> format, IFormatProvider? provider)
+    {
+        string text = format.Equals("ascii", StringComparison.OrdinalIgnoreCase) ? AsciiSymbol : Symbol;
+        int needed = Encoding.UTF8.GetByteCount(text);
+        if (utf8Destination.Length < needed)
+        {
+            bytesWritten = 0;
+            return false;
+        }
+        bytesWritten = Encoding.UTF8.GetBytes(text, utf8Destination);
+        return true;
     }
 
     private static string FormatFactors(UnitFactor[] factors, bool asciiOnly)

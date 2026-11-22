@@ -1,5 +1,7 @@
+using System.ComponentModel;
 using System.Globalization;
 using System.Numerics;
+using System.Text;
 
 namespace SharpUnits;
 
@@ -14,11 +16,15 @@ public enum QuantityScale
 }
 
 /// <summary>Unified physical quantity value type preserving coherent SI magnitude, exact rational dimension, optional display unit, scale, and ISQ kind/specification.</summary>
+[TypeConverter(typeof(QuantityTypeConverter))]
 public readonly record struct Quantity :
     IComparable<Quantity>,
     IFormattable,
     ISpanFormattable,
+    IUtf8SpanFormattable,
     IParsable<Quantity>,
+    ISpanParsable<Quantity>,
+    IUtf8SpanParsable<Quantity>,
     IComparisonOperators<Quantity, Quantity, bool>,
     IAdditionOperators<Quantity, Quantity, Quantity>,
     ISubtractionOperators<Quantity, Quantity, Quantity>,
@@ -180,6 +186,64 @@ public readonly record struct Quantity :
     public double AsValueIn(string unitSymbol, UnitRegistry? registry = null) =>
         AsValueIn((registry ?? UnitRegistry.Standard).Resolve(unitSymbol));
 
+    /// <summary>Drops this quantity to a raw <see cref="double"/> expressed explicitly in <paramref name="target"/>.</summary>
+    public double ValueIn(UnitDefinition target) => AsValueIn(target);
+
+    /// <summary>Drops this quantity to a raw <see cref="double"/> expressed explicitly in <paramref name="unitSymbol"/>.</summary>
+    public double ValueIn(string unitSymbol, UnitRegistry? registry = null) => AsValueIn(unitSymbol, registry);
+
+    /// <summary>Reconstructs a <see cref="Quantity"/> from a raw value expressed in <paramref name="unit"/>.</summary>
+    public static Quantity FromValueIn(double value, UnitDefinition unit) => Of(value, unit);
+
+    /// <summary>Reconstructs a <see cref="Quantity"/> from a raw value expressed in <paramref name="unitSymbol"/>.</summary>
+    public static Quantity FromValueIn(double value, string unitSymbol, UnitRegistry? registry = null) =>
+        Of(value, unitSymbol, registry);
+
+    /// <summary>Reconstructs a <see cref="Quantity"/> from a coherent SI scalar paired with its display <paramref name="unit"/>.</summary>
+    public static Quantity FromSiValue(double siValue, UnitDefinition unit, QuantityScale scale = QuantityScale.Absolute, QuantitySpec? spec = null)
+    {
+        ArgumentNullException.ThrowIfNull(unit);
+        var resolvedKind = spec?.ToKind() ?? unit.DefaultKind;
+        var resolvedSpec = spec ?? (resolvedKind.HasValue && Isq.TryFromKind(resolvedKind.Value, out var kSpec) ? kSpec : unit.DefaultSpec);
+        return new(siValue, unit.RationalDimension, unit, scale, resolvedKind, resolvedSpec);
+    }
+
+    /// <summary>Deconstructs this quantity into its display numeric value and unit symbol.</summary>
+    public void Deconstruct(out double value, out string unitSymbol)
+    {
+        value = Value;
+        unitSymbol = UnitSymbol;
+    }
+
+    /// <summary>Deconstructs this quantity into its display numeric value, optional <see cref="UnitDefinition"/>, and optional <see cref="QuantitySpec"/>.</summary>
+    public void Deconstruct(out double value, out UnitDefinition? unit, out QuantitySpec? spec)
+    {
+        value = Value;
+        unit = Unit;
+        spec = Spec;
+    }
+
+    /// <summary>Converts this quantity to a serializer-agnostic primitive <see cref="QuantityData"/> wire record.</summary>
+    public QuantityData ToData(bool asciiSymbol = false)
+    {
+        string rawUnit = Unit is not null ? Unit.Symbol : UnitSymbol;
+        string sym = asciiSymbol ? ToAsciiSymbol(rawUnit) : rawUnit;
+        return new(Value, sym, Spec?.Id, Scale);
+    }
+
+    /// <summary>Reconstructs a validated <see cref="Quantity"/> from a serializer-agnostic <see cref="QuantityData"/> record.</summary>
+    public static Quantity FromData(QuantityData data, UnitEnvironment? environment = null)
+    {
+        if (!double.IsFinite(data.Value))
+            throw new FormatException("QuantityData value must be finite.");
+        var env = environment ?? UnitEnvironment.Standard;
+        var unit = env.ResolveUnit(data.Unit).ToUnitDefinition();
+        QuantitySpec? spec = null;
+        if (!string.IsNullOrWhiteSpace(data.Spec) && !Isq.TryGetById(data.Spec, out spec))
+            spec = new QuantitySpec(data.Spec, data.Spec, unit.RationalDimension);
+        return Of(data.Value, unit, data.Scale, spec?.ToKind(), spec);
+    }
+
     /// <summary>Converts this linear quantity to a generic <see cref="Quantity{T}"/> for generic math workflows.</summary>
     public Quantity<T> AsGeneric<T>() where T : INumber<T> => Quantity<T>.FromQuantity(this);
 
@@ -223,6 +287,22 @@ public readonly record struct Quantity :
     /// <summary>Attempts to parse a quantity string without throwing.</summary>
     public static bool TryParse(string? s, IFormatProvider? provider, out Quantity result) =>
         TryParse(s, (UnitRegistry?)null, out result);
+
+    /// <summary>Parses a character span containing a quantity literal using <see cref="UnitRegistry.Standard"/>.</summary>
+    public static Quantity Parse(ReadOnlySpan<char> s, IFormatProvider? provider) =>
+        Parse(s.ToString(), (UnitRegistry?)null);
+
+    /// <summary>Attempts to parse a character span containing a quantity literal without throwing.</summary>
+    public static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out Quantity result) =>
+        TryParse(s.IsEmpty ? null : s.ToString(), (UnitRegistry?)null, out result);
+
+    /// <summary>Parses a UTF-8 byte span containing a quantity literal using <see cref="UnitRegistry.Standard"/>.</summary>
+    public static Quantity Parse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider) =>
+        Parse(Encoding.UTF8.GetString(utf8Text), (UnitRegistry?)null);
+
+    /// <summary>Attempts to parse a UTF-8 byte span containing a quantity literal without throwing.</summary>
+    public static bool TryParse(ReadOnlySpan<byte> utf8Text, IFormatProvider? provider, out Quantity result) =>
+        TryParse(utf8Text.IsEmpty ? null : Encoding.UTF8.GetString(utf8Text), (UnitRegistry?)null, out result);
 
     /// <summary>Attempts to parse a quantity string against an optional registry without throwing.</summary>
     public static bool TryParse(string? s, UnitRegistry? registry, out Quantity result)
@@ -326,6 +406,25 @@ public readonly record struct Quantity :
         destination[numLen] = ' ';
         sym.AsSpan().CopyTo(destination[(numLen + 1)..]);
         charsWritten = total;
+        return true;
+    }
+
+    /// <summary>Formats this quantity directly into a UTF-8 byte span without allocating an intermediate string.</summary>
+    public bool TryFormat(Span<byte> utf8Destination, out int bytesWritten, ReadOnlySpan<char> format, IFormatProvider? provider)
+    {
+        Span<char> chars = stackalloc char[128];
+        if (!TryFormat(chars, out int charLen, format, provider))
+        {
+            bytesWritten = 0;
+            return false;
+        }
+        int needed = Encoding.UTF8.GetByteCount(chars[..charLen]);
+        if (utf8Destination.Length < needed)
+        {
+            bytesWritten = 0;
+            return false;
+        }
+        bytesWritten = Encoding.UTF8.GetBytes(chars[..charLen], utf8Destination);
         return true;
     }
 

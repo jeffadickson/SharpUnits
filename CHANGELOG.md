@@ -15,14 +15,16 @@ All notable changes to SharpUnits are documented in this file.
   - Complete engineering structs (`Length`, `Mass`, `Duration`, `Frequency`, `Force`, `Pressure`, `Energy`, `Power`, `Area`, `Volume`, `Velocity`, `Acceleration`, `Angle`, `Torque`, `Density`, `MagneticFluxDensity`, `DataSize`, `BitRate`) with dimensional cross-operators.
   - Hardware SIMD (`Vector<T>`) Structure-of-Arrays `QuantitySeries<T>` buffers and unit-aware `PlotAxisScaler` (linear & logarithmic Bode ticks).
   - NativeAOT-safe `System.Text.Json` converters (`options.AddSharpUnits()`, `options.AddSharpUnitsElectrical()`) supporting both structured JSON objects and compact string literals.
+  - Universal serialization & frictionless value drop-down: `ValueIn` / `FromValueIn` / `FromSiValue` / `Deconstruct`, serializer-agnostic primitive DTOs (`QuantityData`, `QuantityData<T>`, `QuantityPointData<T>`, `QuantitySeriesData<T>`) for MessagePack/MemoryPack/Protobuf/YAML/XML/SQL, zero-allocation compact binary framing (`SharpUnitsBinary`), and `.NET` platform contracts (`ISpanParsable`, `IUtf8SpanFormattable`, `IUtf8SpanParsable`, `TypeConverter`).
   - Parser security hardening (`MaxInputLength` and `MaxNestingDepth`) in `UnitExpressionParser` and `FormulaParser`.
 - **Layered companion packages**:
+  - `SharpUnits.Tensors`: N-dimensional unit-safe `QuantityTensor<T>`, zero-copy `Tensor<T>` / `ReadOnlyTensorSpan<T>` interop, and `TensorPrimitives` SIMD kernels (`Dot`, `Norm`, `SumOfSquares`, `Distance`, `CosineSimilarity`, `MultiplyAdd`, `Clamp`, vectorized `Log10` dB/dBm/dBV).
   - `SharpUnits.Electrical`: typed electrical/RF algebra (`Voltage`, `Current`, `Resistance`, `Capacitance`, `Inductance`, `Decibels`, `PowerLevelDbm`, `VoltageLevelDbv`, AC phasors, RLC, Bode).
   - `SharpUnits.Metrology`: uncorrelated `Measurement` propagation, correlated GUM `UncertaintyBudget`, `CalibrationRecord`, and guard-banded `MeasurementDecisionRule`.
   - `SharpUnits.Formulas`: textual formula parsing, static dimensional/kind checking, exact rational dimensional inference, and `ProcedureValidator`.
   - `SharpUnits.SysMl`: Cameo / SysML QUDV JSON interchange (`QudvBridge`), FMI 2.0/3.0 `<UnitDefinitions>` XML (`FmiUnitXml`), and `CameoModelValidator`.
   - `SharpUnits.Interop`: deterministic `StarLark-cs` host values (`IThreadSafeHostValue` adapter), Teal/Lua bindings (`sharpunits.d.tl` + `LuaUnitsBridge`), and NativeAOT C-ABI `NativeUnitHandleTable`.
-  - `SharpUnits.Analyzers`: Roslyn compile-time analyzer (`SU0001`–`SU0005`) with local-variable flow tracking, typo suggestions, and IDE `CodeFixProvider`s (bundled automatically in `SharpUnits.nupkg`).
+  - `SharpUnits.Analyzers` & `SharpUnits.CodeFixes`: Roslyn compile-time analyzer (`SU0001`–`SU0005`) with local-variable flow tracking, typo suggestions, and IDE `CodeFixProvider`s (both bundled automatically in `SharpUnits.nupkg`).
 
 ### Removed
 - Removed legacy JSR-385 / Java TCK submodules, Java API adapters, reflection surface tests, and Java CI workflow.

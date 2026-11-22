@@ -8,7 +8,8 @@ Zero external runtime dependencies.
 
 | Project | Purpose |
 | --- | --- |
-| `SharpUnits` | Core engine (`IsAotCompatible` + `IsTrimmable`): allocation-free `Rational` & `RationalDimension`, ISO 80000 `Isq` / `QuantitySpec` hierarchy, algebraic `SymbolicUnit`, affine `PointOrigin` / `QuantityPoint<T>`, `.NET INumber<T>` generic `Quantity<T>` + unified `Quantity` (`IFormattable`, `ISpanFormattable`, `IParsable<T>`), full SI/engineering/imperial `Units` catalog + dynamic SI prefix `UnitRegistry`, SIMD-accelerated Structure-of-Arrays `QuantitySeries<T>`, `UnitAutoScaler` + `PlotAxisScaler` (linear & log decade ticks), security-hardened `UnitExpressionParser`, NativeAOT-safe `System.Text.Json` converters (`AddSharpUnits`), and strongly-typed engineering structs (`Length`, `Mass`, `Duration`, `Frequency`, `Force`, `Pressure`, `Energy`, `Power`, `Area`, `Volume`, `Velocity`, `Acceleration`, `Angle`, `Torque`, `Density`, `MagneticFluxDensity`, `DataSize`, `BitRate`). |
+| `SharpUnits` | Core engine (`IsAotCompatible` + `IsTrimmable`, 0 external deps): allocation-free `Rational` & `RationalDimension`, ISO 80000 `Isq` / `QuantitySpec` hierarchy, algebraic `SymbolicUnit`, affine `PointOrigin` / `QuantityPoint<T>`, `.NET INumber<T>` generic `Quantity<T>` + unified `Quantity` (`IFormattable`, `ISpanFormattable`, `IUtf8SpanFormattable`, `ISpanParsable<T>`, `IUtf8SpanParsable<T>`, `TypeConverter`), full SI/engineering/imperial `Units` catalog + dynamic SI prefix `UnitRegistry`, SIMD-accelerated Structure-of-Arrays `QuantitySeries<T>`, `UnitAutoScaler` + `PlotAxisScaler`, security-hardened `UnitExpressionParser`, NativeAOT-safe `System.Text.Json` converters (`AddSharpUnits`), serializer-agnostic primitive DTOs (`QuantityData<T>`, `QuantitySeriesData<T>`), compact binary framing (`SharpUnitsBinary`), frictionless value drop-down (`ValueIn` / `Deconstruct`), and 18 strongly-typed engineering structs. |
+| `SharpUnits.Tensors` | N-dimensional unit-safe `QuantityTensor<T>`, zero-copy `Tensor<T>` / `ReadOnlyTensorSpan<T>` interop, and `TensorPrimitives` SIMD kernels (`Dot` with unit multiplication `V·A → W`, `Norm`, `SumOfSquares`, `Distance`, `CosineSimilarity`, unit-checked FMA `MultiplyAdd`, `Clamp`, vectorized `Log10` dB/dBm/dBV). |
 | `SharpUnits.Electrical` | Strongly-typed electrical quantities (`Voltage`, `Current`, `Resistance`, `ElectricPower`, `Capacitance`, `Inductance`, `ElectricCharge`, `Conductance`, `FluxLinkage`), logarithmic RF/audio levels (`Decibels`, `PowerLevelDbm`, `VoltageLevelDbv`), complex AC impedance & phasors, `SeriesRlcCircuit`, `BodeFrequencyResponse`, and NativeAOT-safe JSON converters (`AddSharpUnitsElectrical`). |
 | `SharpUnits.Metrology` | Uncorrelated uncertainty propagation (`Measurement`), provenance-tagged `InstrumentMeasurement` + strict versioned JSON persistence, correlated GUM `UncertaintyBudget` (Cholesky PSD validation), `CalibrationRecord`, and guard-banded `MeasurementDecisionRule`. |
 | `SharpUnits.Formulas` | Security-hardened textual engineering formula parser (`FormulaParser`), static dimensional & semantic-kind checker (`FormulaTypeChecker`), exact rational dimensional inference (`DimensionInference`), and multi-step `ProcedureValidator`. |
@@ -72,33 +73,50 @@ var yAxis = PlotAxisScaler.CreateLinearAxis(-0.048, 0.242, Units.Volt);     // m
 var fAxis = PlotAxisScaler.CreateLogarithmicAxis(10, 1_000_000, Units.Hertz); // 10 Hz .. 1 MHz + minor ticks
 ```
 
-### 4. NativeAOT-Safe `System.Text.Json` Serialization
+### 4. Universal Serialization, Binary Framing & Frictionless Value Drop-Down
 
 ```csharp
 using System.Text.Json;
 using SharpUnits;
 using SharpUnits.Electrical;
 
-// Zero reflection, zero IL2026/IL3050 trim/AOT warnings
-var options = new JsonSerializerOptions()
-    .AddSharpUnits()
-    .AddSharpUnitsElectrical();
+// 1) Frictionless drop to raw primitives & back (explicit unit — never ambiguous!)
+var q = Quantity<double>.Of(12.5, Units.Millivolt);
+double rawVolts = q.ValueIn(Units.Volt);                 // 0.0125
+var (mag, unit) = q;                                     // (12.5, "mV")
+var restored    = Quantity<double>.FromValueIn(rawVolts, Units.Volt).In(Units.Millivolt);
 
-// Structured JSON by default (reads both structured objects AND compact strings like "12.5 mV")
-string qJson = JsonSerializer.Serialize(Quantity.Of(12.5, Units.Millivolt), options);
-// -> {"value":12.5,"unit":"mV"}
+// 2) Serializer-agnostic primitive DTOs (MessagePack, MemoryPack, Protobuf, YAML, XML, SQL)
+QuantityData<double> dto = q.ToData();                   // { Value: 12.5, Unit: "mV", Spec: "isq.voltage" }
+var fromDto = Quantity<double>.FromData(dto);
 
-string ptJson = JsonSerializer.Serialize(QuantityPoint<double>.FromGaugePressure(2.0, Units.Bar), options);
-// -> {"value":2,"unit":"bar","origin":"StandardAtmosphere","spec":"ISQ.Pressure"}
+// 3) Compact binary framing over IBufferWriter<byte> (~14-byte header for 1M-sample waveforms!)
+byte[] frame = SharpUnitsBinary.ToBytes(vTrace);
+var traceBack = SharpUnitsBinary.ReadQuantitySeries<double>(frame, out _);
 
-// Compact mode for config files / REST APIs
-var compact = new JsonSerializerOptions()
-    .AddSharpUnits(new SharpUnitsJsonOptions { Format = SharpUnitsJsonFormat.CompactString });
-string cJson = JsonSerializer.Serialize(Quantity.Of(12.5, Units.Millivolt), compact);
-// -> "12.5 mV"
+// 4) NativeAOT-safe System.Text.Json (Structured or CompactString) + TypeConverter / UTF-8 Span
+var options = new JsonSerializerOptions().AddSharpUnits().AddSharpUnitsElectrical();
+string qJson = JsonSerializer.Serialize(Quantity.Of(12.5, Units.Millivolt), options); // {"value":12.5,"unit":"mV"}
 ```
 
-### 5. Idiomatic C# Fluent Extensions, Cross-Operators & Scripting Host Runtime
+### 5. N-Dimensional Tensors & `TensorPrimitives` (`SharpUnits.Tensors`)
+
+```csharp
+using System.Numerics.Tensors;
+using SharpUnits;
+using SharpUnits.Tensors;
+
+// Wrap 4-channel oscilloscope capture [4, 1_000_000] or thermal camera frame [480, 640]
+var scope = QuantityTensor<double>.FromValues(rawSamples, [4, 1_000_000], Units.Volt);
+var ch0Mv = scope.SliceLeadingAxis(0).In(Units.Millivolt);  // SIMD unit conversion
+ReadOnlyTensorSpan<double> zeroCopy = scope.AsReadOnlyTensorSpan(); // Direct to ONNX / ML.NET / GPU
+
+// TensorPrimitives SIMD engineering kernels with full dimensional safety
+var power = QuantityTensorMath.Dot(vSeries, iSeries);       // V · A => Watts!
+var dbm   = QuantityTensorMath.ConvertToDbm(wattsSeries);   // Vectorized 10 * log10(W / 1 mW)
+```
+
+### 6. Idiomatic C# Fluent Extensions, Cross-Operators & Scripting Host Runtime
 
 ```csharp
 using SharpUnits;

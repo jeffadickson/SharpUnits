@@ -155,14 +155,31 @@ public sealed class UnitEnvironment
     {
         origins["absolute_zero"] = PointOrigins.AbsoluteZero;
         origins["kelvin"] = PointOrigins.AbsoluteZero;
+        origins["AbsoluteZero"] = PointOrigins.AbsoluteZero;
+        origins[PointOrigins.AbsoluteZero.Id] = PointOrigins.AbsoluteZero;
+
         origins["ice"] = PointOrigins.IcePoint;
         origins["celsius"] = PointOrigins.IcePoint;
+        origins["IcePoint"] = PointOrigins.IcePoint;
+        origins[PointOrigins.IcePoint.Id] = PointOrigins.IcePoint;
+
         origins["fahrenheit"] = PointOrigins.FahrenheitZero;
+        origins["FahrenheitZero"] = PointOrigins.FahrenheitZero;
+        origins[PointOrigins.FahrenheitZero.Id] = PointOrigins.FahrenheitZero;
+
         origins["vacuum"] = PointOrigins.Vacuum;
         origins["absolute"] = PointOrigins.Vacuum;
+        origins["Vacuum"] = PointOrigins.Vacuum;
+        origins[PointOrigins.Vacuum.Id] = PointOrigins.Vacuum;
+
         origins["gauge"] = PointOrigins.StandardAtmosphere;
         origins["atm"] = PointOrigins.StandardAtmosphere;
+        origins["StandardAtmosphere"] = PointOrigins.StandardAtmosphere;
+        origins[PointOrigins.StandardAtmosphere.Id] = PointOrigins.StandardAtmosphere;
+
         origins["sea_level"] = PointOrigins.SeaLevel;
+        origins["SeaLevel"] = PointOrigins.SeaLevel;
+        origins[PointOrigins.SeaLevel.Id] = PointOrigins.SeaLevel;
     }
 }
 

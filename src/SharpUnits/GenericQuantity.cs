@@ -100,6 +100,49 @@ public readonly record struct Quantity<T> :
     /// <summary>Converts this quantity to its canonical coherent SI unit.</summary>
     public Quantity<T> ToCoherentSi() => In(Unit.ToCoherentSi());
 
+    /// <summary>Drops this quantity to a raw <typeparamref name="T"/> scalar expressed explicitly in <paramref name="target"/>.</summary>
+    public T ValueIn(SymbolicUnit target) => In(target).Value;
+
+    /// <summary>Drops this quantity to a raw <typeparamref name="T"/> scalar expressed explicitly in <paramref name="unitSymbol"/>.</summary>
+    public T ValueIn(string unitSymbol, UnitRegistry? registry = null) => In(unitSymbol, registry).Value;
+
+    /// <summary>Reconstructs a <see cref="Quantity{T}"/> from a raw scalar expressed in <paramref name="unit"/>.</summary>
+    public static Quantity<T> FromValueIn(T value, SymbolicUnit unit, QuantitySpec? spec = null) => Of(value, unit, spec);
+
+    /// <summary>Reconstructs a <see cref="Quantity{T}"/> from a raw scalar expressed in <paramref name="unitSymbol"/>.</summary>
+    public static Quantity<T> FromValueIn(T value, string unitSymbol, UnitRegistry? registry = null, QuantitySpec? spec = null) =>
+        Of(value, unitSymbol, registry, spec);
+
+    /// <summary>Deconstructs this quantity into its value and <see cref="SymbolicUnit"/>.</summary>
+    public void Deconstruct(out T value, out SymbolicUnit unit)
+    {
+        value = Value;
+        unit = Unit;
+    }
+
+    /// <summary>Deconstructs this quantity into its value, <see cref="SymbolicUnit"/>, and optional <see cref="QuantitySpec"/>.</summary>
+    public void Deconstruct(out T value, out SymbolicUnit unit, out QuantitySpec? spec)
+    {
+        value = Value;
+        unit = Unit;
+        spec = Spec;
+    }
+
+    /// <summary>Converts this quantity to a serializer-agnostic primitive <see cref="QuantityData{T}"/> wire record.</summary>
+    public QuantityData<T> ToData(bool asciiSymbol = false) =>
+        new(Value, asciiSymbol ? Unit.AsciiSymbol : Unit.Symbol, Spec?.Id);
+
+    /// <summary>Reconstructs a validated <see cref="Quantity{T}"/> from a serializer-agnostic <see cref="QuantityData{T}"/> record.</summary>
+    public static Quantity<T> FromData(QuantityData<T> data, UnitEnvironment? environment = null)
+    {
+        var env = environment ?? UnitEnvironment.Standard;
+        var unit = env.ResolveUnit(data.Unit);
+        QuantitySpec? spec = null;
+        if (!string.IsNullOrWhiteSpace(data.Spec) && !Isq.TryGetById(data.Spec, out spec))
+            spec = new QuantitySpec(data.Spec, data.Spec, unit.Dimension);
+        return Of(data.Value, unit, spec);
+    }
+
     /// <summary>Explicitly casts this quantity to a compatible ISQ specification within the same kind tree (for example <see cref="Isq.Length"/> to <see cref="Isq.Width"/>).</summary>
     public Quantity<T> AsSpec(QuantitySpec target)
     {
@@ -393,6 +436,40 @@ public readonly record struct QuantityPoint<T> :
     /// <summary>Converts the underlying numeric representation.</summary>
     public QuantityPoint<TOther> As<TOther>() where TOther : INumber<TOther> =>
         new(Displacement.As<TOther>(), Origin);
+
+    /// <summary>Drops this affine point to a raw <typeparamref name="T"/> scalar in <paramref name="targetLinearUnit"/> (optionally re-anchored to <paramref name="relativeTo"/>).</summary>
+    public T ValueIn(SymbolicUnit targetLinearUnit, PointOrigin? relativeTo = null)
+    {
+        var p = relativeTo is not null ? RelativeTo(relativeTo) : this;
+        return p.In(targetLinearUnit).Value;
+    }
+
+    /// <summary>Deconstructs this affine point into its numeric value, unit, and origin.</summary>
+    public void Deconstruct(out T value, out SymbolicUnit unit, out PointOrigin origin)
+    {
+        value = Value;
+        unit = Unit;
+        origin = Origin;
+    }
+
+    /// <summary>Converts this affine point to a serializer-agnostic primitive <see cref="QuantityPointData{T}"/> wire record.</summary>
+    public QuantityPointData<T> ToData(bool asciiSymbol = false) =>
+        new(Value, asciiSymbol ? Unit.AsciiSymbol : Unit.Symbol, Origin.Id, Displacement.Spec?.Id);
+
+    /// <summary>Reconstructs a validated <see cref="QuantityPoint{T}"/> from a serializer-agnostic <see cref="QuantityPointData{T}"/> record.</summary>
+    public static QuantityPoint<T> FromData(QuantityPointData<T> data, UnitEnvironment? environment = null)
+    {
+        var env = environment ?? UnitEnvironment.Standard;
+        var unit = env.ResolveUnit(data.Unit);
+        var origin = env.ResolveOrigin(data.Origin);
+        QuantitySpec? spec = origin.Spec;
+        if (!string.IsNullOrWhiteSpace(data.Spec))
+        {
+            if (!Isq.TryGetById(data.Spec, out spec))
+                spec = new QuantitySpec(data.Spec, data.Spec, unit.Dimension);
+        }
+        return new(Quantity<T>.Of(data.Value, unit, spec), origin);
+    }
 
     /// <summary>Affine midpoint <c>a + (b - a) / 2</c>.</summary>
     public static QuantityPoint<T> Midpoint(QuantityPoint<T> a, QuantityPoint<T> b)

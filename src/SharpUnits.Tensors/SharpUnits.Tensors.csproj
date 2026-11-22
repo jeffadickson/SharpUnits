@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);SYSLIB5001</NoWarn>
+    <PackageId>SharpUnits.Tensors</PackageId>
+    <Description>N-dimensional unit-safe QuantityTensor&lt;T&gt;, zero-copy Tensor&lt;T&gt;/ReadOnlyTensorSpan&lt;T&gt; interop, and TensorPrimitives SIMD engineering kernels (dot products, dB/Log10, FMA, norms) for SharpUnits.</Description>
+    <PackageTags>units;tensors;simd;tensorprimitives;scientific-computing;dsp;plotting;dotnet;csharp</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharpUnits\SharpUnits.csproj" />
+    <PackageReference Include="System.Numerics.Tensors" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

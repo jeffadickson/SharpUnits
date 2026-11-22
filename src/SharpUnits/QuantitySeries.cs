@@ -126,6 +126,36 @@ public sealed class QuantitySeries<T> where T : INumber<T>
         ConvertSpan(data, slice, Unit.ScaleToSi, target.ScaleToSi);
     }
 
+    /// <summary>Drops this series to a newly allocated raw <typeparamref name="T"/> array expressed in <paramref name="target"/>.</summary>
+    public T[] ToArrayIn(SymbolicUnit target)
+    {
+        var output = new T[data.Length];
+        CopyConvertedTo(target, output);
+        return output;
+    }
+
+    /// <summary>Drops this series to a raw <typeparamref name="T"/> array expressed in <paramref name="unitSymbol"/>.</summary>
+    public T[] ToArrayIn(string unitSymbol, UnitRegistry? registry = null) =>
+        ToArrayIn(SymbolicUnit.From((registry ?? UnitRegistry.Standard).Resolve(unitSymbol)));
+
+    /// <summary>Converts this series to a serializer-agnostic primitive <see cref="QuantitySeriesData{T}"/> wire record.</summary>
+    public QuantitySeriesData<T> ToData(bool asciiSymbol = false) =>
+        new(data.ToArray(), asciiSymbol ? Unit.AsciiSymbol : Unit.Symbol, Spec?.Id, Origin?.Id);
+
+    /// <summary>Reconstructs a validated <see cref="QuantitySeries{T}"/> from a serializer-agnostic <see cref="QuantitySeriesData{T}"/> record.</summary>
+    public static QuantitySeries<T> FromData(QuantitySeriesData<T> data, UnitEnvironment? environment = null)
+    {
+        var env = environment ?? UnitEnvironment.Standard;
+        var unit = env.ResolveUnit(data.Unit);
+        QuantitySpec? spec = null;
+        if (!string.IsNullOrWhiteSpace(data.Spec) && !Isq.TryGetById(data.Spec, out spec))
+            spec = new QuantitySpec(data.Spec, data.Spec, unit.Dimension);
+        PointOrigin? origin = !string.IsNullOrWhiteSpace(data.Origin)
+            ? env.ResolveOrigin(data.Origin)
+            : null;
+        return FromValues(data.Values ?? [], unit, spec, origin);
+    }
+
     /// <summary>Re-anchors an affine series to a different compatible <see cref="PointOrigin"/> (for example gauge to absolute pressure, or °C to K).</summary>
     public QuantitySeries<T> RelativeTo(PointOrigin newOrigin)
     {

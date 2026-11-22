@@ -31,7 +31,8 @@ jobs:
             src/SharpUnits.Metrology/SharpUnits.Metrology.csproj \
             src/SharpUnits.Formulas/SharpUnits.Formulas.csproj \
             src/SharpUnits.SysMl/SharpUnits.SysMl.csproj \
-            src/SharpUnits.Interop/SharpUnits.Interop.csproj; do
+            src/SharpUnits.Interop/SharpUnits.Interop.csproj \
+            src/SharpUnits.Tensors/SharpUnits.Tensors.csproj; do
             dotnet pack "$proj" -c Release --no-build -o ./nupkgs --nologo
           done
       - name: Upload NuGet artifacts
