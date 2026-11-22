@@ -72,7 +72,7 @@ public sealed class UnitRegistry
         var r = new UnitRegistry();
         foreach (var unit in Units.AllStandard) r.Register(unit);
 
-        // Common ASCII and engineering aliases (prefixes also compose with prefixable aliases like Ohm).
+        // Common ASCII, engineering, and scientific aliases (prefixes also compose with prefixable aliases like Ohm and G).
         r.RegisterAlias("Ohm", Units.Ohm);
         r.RegisterAlias("ohm", Units.Ohm);
         r.RegisterAlias("degC", Units.Celsius);
@@ -82,21 +82,56 @@ public sealed class UnitRegistry
         r.RegisterAlias("hr", Units.Hour);
         r.RegisterAlias("sec", Units.Second);
         r.RegisterAlias("l", Units.Liter);
+        r.RegisterAlias("cc", Units.Milliliter);
         r.RegisterAlias("mmHg", Units.Torr);
         r.RegisterAlias("Nm", Units.NewtonMeter);
+        r.RegisterAlias("ftlbf", Units.FootPoundTorque);
+        r.RegisterAlias("inlbf", Units.InchPoundTorque);
+        r.RegisterAlias("thou", Units.Mil);
+        r.RegisterAlias("micron", Units.Micrometer);
+        r.RegisterAlias("NM", Units.NauticalMile);
+        r.RegisterAlias("kt", Units.Knot);
+        r.RegisterAlias("kmh", Units.KilometersPerHour);
+        r.RegisterAlias("gn", Units.StandardGravity);
+        r.RegisterAlias("gon", Units.Gradian);
+        r.RegisterAlias("turn", Units.Revolution);
+        r.RegisterAlias("′", Units.Arcminute);
+        r.RegisterAlias("″", Units.Arcsecond);
+        r.RegisterAlias("amu", Units.Dalton);
+        r.RegisterAlias("kp", Units.KilogramForce);
+        r.RegisterAlias("Btu", Units.Btu);
+        r.RegisterAlias("gauss", Units.Gauss);
+        r.RegisterAlias("CV", Units.MetricHorsepower);
+        r.RegisterAlias("permille", Units.Permille);
+        r.RegisterAlias("o", Units.Byte);
         return r;
     }
 
     private bool TryResolvePrefixed(string symbol, out UnitDefinition? result)
     {
-        // Check two-character prefix "da" first, then single-character prefixes (including ASCII "u" and Greek "μ").
-        if (symbol.Length > 2 && symbol.StartsWith("da", StringComparison.Ordinal))
+        // Check 2-character IEC binary prefixes (Ki, Mi, Gi, Ti, Pi, Ei, Zi, Yi) first for binary-prefixable units.
+        if (symbol.Length > 2)
         {
-            string baseSymbol = symbol[2..];
-            if (TryGetPrefixableBase(baseSymbol, out var baseUnit) && baseUnit is not null)
+            string twoChar = symbol[..2];
+            if (BinaryPrefixCatalog.TryResolve(twoChar, out var binPrefix) && binPrefix is not null)
             {
-                result = SiPrefixes.Apply("da", baseUnit);
-                return true;
+                string baseSymbol = symbol[2..];
+                if (TryGetBinaryPrefixableBase(baseSymbol, out var binBase) && binBase is not null)
+                {
+                    result = BinaryPrefixes.Apply(binPrefix.Symbol, binBase);
+                    return true;
+                }
+            }
+
+            // Check two-character SI prefix "da" before single-char prefixes like "d".
+            if (twoChar == "da")
+            {
+                string baseSymbol = symbol[2..];
+                if (TryGetPrefixableBase(baseSymbol, out var baseUnit) && baseUnit is not null)
+                {
+                    result = SiPrefixes.Apply("da", baseUnit);
+                    return true;
+                }
             }
         }
         if (symbol.Length > 1)
@@ -118,6 +153,14 @@ public sealed class UnitRegistry
     {
         if (units.TryGetValue(baseSymbol, out baseUnit) && baseUnit.AllowPrefixes) return true;
         if (aliases.TryGetValue(baseSymbol, out baseUnit) && baseUnit.AllowPrefixes) return true;
+        baseUnit = null;
+        return false;
+    }
+
+    private bool TryGetBinaryPrefixableBase(string baseSymbol, out UnitDefinition? baseUnit)
+    {
+        if (units.TryGetValue(baseSymbol, out baseUnit) && baseUnit.AllowBinaryPrefixes) return true;
+        if (aliases.TryGetValue(baseSymbol, out baseUnit) && baseUnit.AllowBinaryPrefixes) return true;
         baseUnit = null;
         return false;
     }

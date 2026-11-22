@@ -96,6 +96,45 @@ public readonly record struct Dimension(
     /// <summary>Catalytic activity (T⁻¹·N).</summary>
     public static Dimension CatalyticActivity => new(0, 0, -1, 0, 0, 1, 0);
 
+    /// <summary>Mass density (L⁻³·M).</summary>
+    public static Dimension Density => new(-3, 1, 0, 0, 0, 0, 0);
+
+    /// <summary>Dynamic viscosity (L⁻¹·M·T⁻¹, Pa·s).</summary>
+    public static Dimension DynamicViscosity => new(-1, 1, -1, 0, 0, 0, 0);
+
+    /// <summary>Kinematic viscosity (L²·T⁻¹, m²/s).</summary>
+    public static Dimension KinematicViscosity => new(2, 0, -1, 0, 0, 0, 0);
+
+    /// <summary>Magnetic field strength (L⁻¹·I, A/m).</summary>
+    public static Dimension MagneticFieldStrength => new(-1, 0, 0, 1, 0, 0, 0);
+
+    /// <summary>Electric field strength (L·M·T⁻³·I⁻¹, V/m).</summary>
+    public static Dimension ElectricFieldStrength => new(1, 1, -3, -1, 0, 0, 0);
+
+    /// <summary>Molar concentration (L⁻³·N, mol/m³).</summary>
+    public static Dimension MolarConcentration => new(-3, 0, 0, 0, 0, 1, 0);
+
+    /// <summary>Radiation exposure (M⁻¹·T·I, C/kg).</summary>
+    public static Dimension RadiationExposure => new(0, -1, 1, 1, 0, 0, 0);
+
+    /// <summary>Volumetric flow rate (L³·T⁻¹, m³/s).</summary>
+    public static Dimension VolumetricFlowRate => new(3, 0, -1, 0, 0, 0, 0);
+
+    /// <summary>Mass flow rate (M·T⁻¹, kg/s).</summary>
+    public static Dimension MassFlowRate => new(0, 1, -1, 0, 0, 0, 0);
+
+    /// <summary>Linear momentum (L·M·T⁻¹, kg·m/s).</summary>
+    public static Dimension Momentum => new(1, 1, -1, 0, 0, 0, 0);
+
+    /// <summary>Moment of inertia (L²·M, kg·m²).</summary>
+    public static Dimension MomentOfInertia => new(2, 1, 0, 0, 0, 0, 0);
+
+    /// <summary>Thermal conductivity (L·M·T⁻³·Θ⁻¹, W/(m·K)).</summary>
+    public static Dimension ThermalConductivity => new(1, 1, -3, 0, -1, 0, 0);
+
+    /// <summary>Specific heat capacity (L²·T⁻²·Θ⁻¹, J/(kg·K)).</summary>
+    public static Dimension SpecificHeatCapacity => new(2, 0, -2, 0, -1, 0, 0);
+
     /// <summary>Raises each base-dimension exponent to an integer power.</summary>
     public Dimension Pow(int power) => new(
         checked(Length * power),

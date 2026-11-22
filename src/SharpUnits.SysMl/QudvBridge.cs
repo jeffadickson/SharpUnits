@@ -160,7 +160,9 @@ public static class QudvBridge
                 if (string.IsNullOrWhiteSpace(u.PrefixSymbol) || string.IsNullOrWhiteSpace(u.BaseUnitSymbol))
                     throw new InvalidOperationException($"Prefixed QUDV unit '{u.Symbol}' requires PrefixSymbol and BaseUnitSymbol.");
                 var baseUnit = env.Registry.Resolve(u.BaseUnitSymbol);
-                var prefixed = SiPrefixes.Apply(u.PrefixSymbol, baseUnit);
+                var prefixed = BinaryPrefixCatalog.TryResolve(u.PrefixSymbol, out _)
+                    ? BinaryPrefixes.Apply(u.PrefixSymbol, baseUnit)
+                    : SiPrefixes.Apply(u.PrefixSymbol, baseUnit);
                 return new UnitDefinition(u.Symbol, prefixed.RationalDimension, prefixed.Converter, name, allowPrefixes: false, qk, spec ?? prefixed.DefaultSpec);
             }
             case QudvUnitKind.Derived:

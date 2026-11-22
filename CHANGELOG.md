@@ -11,7 +11,7 @@ All notable changes to SharpUnits are documented in this file.
   - Algebraic `SymbolicUnit` preserving exact unit factors, superscripts, and rational exponents (`m/s²`, `nV/Hz^(1/2)`).
   - Compile-time affine `PointOrigin` and `QuantityPoint<T>` separating points (`°C`, `°F`, gauge vs. vacuum pressure) from displacements.
   - Generic `Quantity<T>` (`INumber<T>`) supporting `double`, `float`, `decimal`, `int`, `long`, plus unified `Quantity` with `IFormattable`, `ISpanFormattable`, and `IParsable<T>`.
-  - Full SI + engineering + imperial `Units` catalog with dynamic SI prefix `UnitRegistry` and fluent C# extensions.
+  - Complete 130+ unit SI, IEC 80000-13 (bits/bytes/bps + binary prefixes `Ki`–`Yi`), aerospace/kinematics (`g0`, `rpm`, `kn`, `nmi`), pressure/vacuum (`inHg`, `inH2O`, `ksi`), fluid viscosity (`cP`, `cSt`), thermal (`cal`, `BTU`, `hp_m`, `ton_ref`), CGS magnetism (`G`, `Oe`, `Mx`), astronomy (`au`, `ly`, `pc`), chemistry (`M`, `Da`), radiation (`Ci`, `rem`, `R`), and imperial/USC `Units` catalog with dynamic SI + IEC prefix `UnitRegistry`, fluent C# extensions, and [docs/adding-units.md](docs/adding-units.md).
   - Complete engineering structs (`Length`, `Mass`, `Duration`, `Frequency`, `Force`, `Pressure`, `Energy`, `Power`, `Area`, `Volume`, `Velocity`, `Acceleration`, `Angle`, `Torque`, `Density`, `MagneticFluxDensity`, `DataSize`, `BitRate`) with dimensional cross-operators.
   - Hardware SIMD (`Vector<T>`) Structure-of-Arrays `QuantitySeries<T>` buffers and unit-aware `PlotAxisScaler` (linear & logarithmic Bode ticks).
   - NativeAOT-safe `System.Text.Json` converters (`options.AddSharpUnits()`, `options.AddSharpUnitsElectrical()`) supporting both structured JSON objects and compact string literals.

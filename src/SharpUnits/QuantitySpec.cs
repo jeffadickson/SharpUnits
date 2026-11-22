@@ -295,6 +295,45 @@ public static class Isq
     /// <summary>Luminous intensity.</summary>
     public static QuantitySpec LuminousIntensity { get; } = Define("isq.luminous_intensity", "luminous intensity", RationalDimension.LuminousIntensity, isKind: true);
 
+    /// <summary>Luminous flux in lumens (distinct kind from <see cref="LuminousIntensity"/>).</summary>
+    public static QuantitySpec LuminousFlux { get; } = Define("isq.luminous_flux", "luminous flux", RationalDimension.LuminousIntensity, isKind: true);
+
+    /// <summary>Illuminance in lux.</summary>
+    public static QuantitySpec Illuminance { get; } = Define("isq.illuminance", "illuminance", RationalDimension.Illuminance, isKind: true);
+
+    /// <summary>Absorbed radiation dose in grays (distinct kind from <see cref="DoseEquivalent"/>).</summary>
+    public static QuantitySpec AbsorbedDose { get; } = Define("isq.absorbed_dose", "absorbed dose", RationalDimension.RadiationDose, isKind: true);
+
+    /// <summary>Dose equivalent in sieverts / rem (distinct kind from <see cref="AbsorbedDose"/>).</summary>
+    public static QuantitySpec DoseEquivalent { get; } = Define("isq.dose_equivalent", "dose equivalent", RationalDimension.RadiationDose, isKind: true);
+
+    /// <summary>Ionizing radiation exposure in C/kg or roentgen.</summary>
+    public static QuantitySpec RadiationExposure { get; } = Define("isq.radiation_exposure", "radiation exposure", RationalDimension.RadiationExposure, isKind: true);
+
+    /// <summary>Catalytic activity in katals.</summary>
+    public static QuantitySpec CatalyticActivity { get; } = Define("isq.catalytic_activity", "catalytic activity", RationalDimension.CatalyticActivity, isKind: true);
+
+    /// <summary>Information / data size in bits or bytes (IEC 80000-13; distinct kind from plain dimensionless ratios and angles).</summary>
+    public static QuantitySpec Information { get; } = Define("isq.information", "information", RationalDimension.None, Dimensionless, isKind: true);
+
+    /// <summary>Information transfer rate in bits/s or bytes/s (IEC 80000-13; distinct kind from <see cref="Frequency"/> and <see cref="Activity"/>).</summary>
+    public static QuantitySpec InformationRate { get; } = Define("isq.information_rate", "information rate", RationalDimension.Frequency, isKind: true);
+
+    /// <summary>Mass density.</summary>
+    public static QuantitySpec Density { get; } = Define("isq.density", "mass density", RationalDimension.Density, isKind: true);
+
+    /// <summary>Dynamic viscosity.</summary>
+    public static QuantitySpec DynamicViscosity { get; } = Define("isq.dynamic_viscosity", "dynamic viscosity", RationalDimension.DynamicViscosity, isKind: true);
+
+    /// <summary>Kinematic viscosity.</summary>
+    public static QuantitySpec KinematicViscosity { get; } = Define("isq.kinematic_viscosity", "kinematic viscosity", RationalDimension.KinematicViscosity, isKind: true);
+
+    /// <summary>Magnetic field strength.</summary>
+    public static QuantitySpec MagneticFieldStrength { get; } = Define("isq.magnetic_field_strength", "magnetic field strength", RationalDimension.MagneticFieldStrength, isKind: true);
+
+    /// <summary>Molar concentration.</summary>
+    public static QuantitySpec MolarConcentration { get; } = Define("isq.molar_concentration", "molar concentration", RationalDimension.MolarConcentration, isKind: true);
+
     /// <summary>Attempts to resolve a registered ISQ specification by ID.</summary>
     public static bool TryGetById(string id, out QuantitySpec? spec) => ById.TryGetValue(id, out spec);
 

@@ -246,4 +246,30 @@ public sealed class SharpUnitsLiteralAnalyzerTests
         string fixedText2 = (await changedDoc2.GetTextAsync()).ToString();
         Assert.Contains("Quantity.Delta(5, Units.Celsius)", fixedText2);
     }
+
+    [Fact]
+    public async Task AnalyzerCatalogHasZeroFalsePositivesAcrossAllStandardUnitsAliasesAndBinaryPrefixes()
+    {
+        var symbols = Units.AllStandard.Select(u => u.Symbol).Concat(
+        [
+            "Ohm", "ohm", "degC", "degF", "degR", "deg", "hr", "sec", "l", "cc", "mmHg", "Nm",
+            "ftlbf", "inlbf", "thou", "micron", "NM", "kt", "kmh", "gn", "gon", "turn",
+            "amu", "kp", "Btu", "G", "mG", "gauss", "CV", "permille", "o",
+            "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "Kibit", "Mibps", "MiBps",
+            "kB", "MB", "GB", "Mbps", "Gbps", "kcal", "cP", "cSt", "mM", "µM", "mCi", "mrem"
+        ]).Distinct().ToArray();
+
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine("using SharpUnits;");
+        sb.AppendLine("public static class CatalogParity { public static void Check() {");
+        foreach (string sym in symbols)
+        {
+            string escaped = sym.Replace("\\", "\\\\").Replace("\"", "\\\"");
+            sb.AppendLine($"    _ = Quantity.Of(1.0, \"{escaped}\");");
+        }
+        sb.AppendLine("} }");
+
+        var diagnostics = await AnalyzeAsync(sb.ToString());
+        Assert.Empty(diagnostics);
+    }
 }

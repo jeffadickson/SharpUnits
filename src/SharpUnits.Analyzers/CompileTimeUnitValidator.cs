@@ -80,13 +80,15 @@ namespace SharpUnits.Analyzers
         public readonly string Symbol;
         public readonly DimVector Dimension;
         public readonly bool AllowPrefixes;
+        public readonly bool AllowBinaryPrefixes;
         public readonly bool IsAffine;
 
-        public UnitInfo(string symbol, DimVector dimension, bool allowPrefixes = false, bool isAffine = false)
+        public UnitInfo(string symbol, DimVector dimension, bool allowPrefixes = false, bool isAffine = false, bool allowBinaryPrefixes = false)
         {
             Symbol = symbol;
             Dimension = dimension;
             AllowPrefixes = allowPrefixes;
+            AllowBinaryPrefixes = allowBinaryPrefixes;
             IsAffine = isAffine;
         }
     }
@@ -101,7 +103,10 @@ namespace SharpUnits.Analyzers
         private static readonly DimVector Temp = new DimVector(0, 0, 0, 0, 1, 0, 0);
         private static readonly DimVector Amount = new DimVector(0, 0, 0, 0, 0, 1, 0);
         private static readonly DimVector Lum = new DimVector(0, 0, 0, 0, 0, 0, 1);
+        private static readonly DimVector Area = new DimVector(2, 0, 0, 0, 0, 0, 0);
         private static readonly DimVector Volume = new DimVector(3, 0, 0, 0, 0, 0, 0);
+        private static readonly DimVector Velocity = new DimVector(1, 0, -1, 0, 0, 0, 0);
+        private static readonly DimVector Acceleration = new DimVector(1, 0, -2, 0, 0, 0, 0);
         private static readonly DimVector Freq = new DimVector(0, 0, -1, 0, 0, 0, 0);
         private static readonly DimVector Force = new DimVector(1, 1, -2, 0, 0, 0, 0);
         private static readonly DimVector Pressure = new DimVector(-1, 1, -2, 0, 0, 0, 0);
@@ -118,11 +123,21 @@ namespace SharpUnits.Analyzers
         private static readonly DimVector Illuminance = new DimVector(-2, 0, 0, 0, 0, 0, 1);
         private static readonly DimVector Dose = new DimVector(2, 0, -2, 0, 0, 0, 0);
         private static readonly DimVector Catalytic = new DimVector(0, 0, -1, 0, 0, 1, 0);
+        private static readonly DimVector DynamicViscosity = new DimVector(-1, 1, -1, 0, 0, 0, 0);
+        private static readonly DimVector KinematicViscosity = new DimVector(2, 0, -1, 0, 0, 0, 0);
+        private static readonly DimVector MagneticField = new DimVector(-1, 0, 0, 1, 0, 0, 0);
+        private static readonly DimVector MolarConcentration = new DimVector(-3, 0, 0, 0, 0, 1, 0);
+        private static readonly DimVector RadiationExposure = new DimVector(0, -1, 1, 1, 0, 0, 0);
 
         private static readonly HashSet<string> SingleCharPrefixes = new HashSet<string>(StringComparer.Ordinal)
         {
             "Q", "R", "Y", "Z", "E", "P", "T", "G", "M", "k", "h",
             "d", "c", "m", "µ", "μ", "u", "n", "p", "f", "a", "z", "y", "r", "q"
+        };
+
+        private static readonly HashSet<string> IecBinaryPrefixes = new HashSet<string>(StringComparer.Ordinal)
+        {
+            "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi", "Yi"
         };
 
         private static readonly Dictionary<string, UnitInfo> StandardUnits = new Dictionary<string, UnitInfo>(StringComparer.Ordinal)
@@ -160,40 +175,120 @@ namespace SharpUnits.Analyzers
             ["Gy"] = new UnitInfo("Gy", Dose, allowPrefixes: true),
             ["Sv"] = new UnitInfo("Sv", Dose, allowPrefixes: true),
             ["kat"] = new UnitInfo("kat", Catalytic, allowPrefixes: true),
-            // Non-SI / Engineering / Imperial
+            // IEC 80000-13 Information & Data Rate
+            ["bit"] = new UnitInfo("bit", None, allowPrefixes: true, allowBinaryPrefixes: true),
+            ["B"] = new UnitInfo("B", None, allowPrefixes: true, allowBinaryPrefixes: true),
+            ["bps"] = new UnitInfo("bps", Freq, allowPrefixes: true, allowBinaryPrefixes: true),
+            ["Bps"] = new UnitInfo("Bps", Freq, allowPrefixes: true, allowBinaryPrefixes: true),
+            ["Bd"] = new UnitInfo("Bd", Freq, allowPrefixes: true),
+            // Temperature, Time & Kinematics
             ["°F"] = new UnitInfo("°F", Temp, allowPrefixes: false, isAffine: true),
             ["°R"] = new UnitInfo("°R", Temp),
             ["min"] = new UnitInfo("min", Time),
             ["h"] = new UnitInfo("h", Time),
             ["d"] = new UnitInfo("d", Time),
+            ["wk"] = new UnitInfo("wk", Time),
+            ["yr"] = new UnitInfo("yr", Time),
+            ["rpm"] = new UnitInfo("rpm", Freq),
+            ["kn"] = new UnitInfo("kn", Velocity),
+            ["mph"] = new UnitInfo("mph", Velocity),
+            ["kph"] = new UnitInfo("kph", Velocity),
+            ["g0"] = new UnitInfo("g0", Acceleration),
+            ["Gal"] = new UnitInfo("Gal", Acceleration, allowPrefixes: true),
+            // Length, Astronomy, Area & Volume
             ["in"] = new UnitInfo("in", Length),
             ["ft"] = new UnitInfo("ft", Length),
             ["yd"] = new UnitInfo("yd", Length),
             ["mi"] = new UnitInfo("mi", Length),
+            ["nmi"] = new UnitInfo("nmi", Length),
             ["mil"] = new UnitInfo("mil", Length),
+            ["fathom"] = new UnitInfo("fathom", Length),
+            ["ch"] = new UnitInfo("ch", Length),
+            ["furlong"] = new UnitInfo("furlong", Length),
             ["Å"] = new UnitInfo("Å", Length),
+            ["au"] = new UnitInfo("au", Length),
+            ["ly"] = new UnitInfo("ly", Length),
+            ["pc"] = new UnitInfo("pc", Length, allowPrefixes: true),
+            ["ha"] = new UnitInfo("ha", Area),
+            ["are"] = new UnitInfo("are", Area),
+            ["ac"] = new UnitInfo("ac", Area),
+            ["barn"] = new UnitInfo("barn", Area, allowPrefixes: true),
             ["L"] = new UnitInfo("L", Volume, allowPrefixes: true),
             ["gal"] = new UnitInfo("gal", Volume),
+            ["gal_uk"] = new UnitInfo("gal_uk", Volume),
+            ["qt"] = new UnitInfo("qt", Volume),
+            ["pt"] = new UnitInfo("pt", Volume),
+            ["cup"] = new UnitInfo("cup", Volume),
+            ["floz"] = new UnitInfo("floz", Volume),
+            ["tbsp"] = new UnitInfo("tbsp", Volume),
+            ["tsp"] = new UnitInfo("tsp", Volume),
+            ["bbl"] = new UnitInfo("bbl", Volume),
+            // Mass, Force & Pressure
             ["t"] = new UnitInfo("t", Mass),
             ["lb"] = new UnitInfo("lb", Mass),
             ["oz"] = new UnitInfo("oz", Mass),
+            ["slug"] = new UnitInfo("slug", Mass),
+            ["Da"] = new UnitInfo("Da", Mass, allowPrefixes: true),
+            ["ton_us"] = new UnitInfo("ton_us", Mass),
+            ["ton_uk"] = new UnitInfo("ton_uk", Mass),
+            ["st"] = new UnitInfo("st", Mass),
+            ["gr"] = new UnitInfo("gr", Mass),
+            ["ct"] = new UnitInfo("ct", Mass),
+            ["ozt"] = new UnitInfo("ozt", Mass),
             ["lbf"] = new UnitInfo("lbf", Force),
+            ["kgf"] = new UnitInfo("kgf", Force),
+            ["dyn"] = new UnitInfo("dyn", Force, allowPrefixes: true),
+            ["kip"] = new UnitInfo("kip", Force),
+            ["ozf"] = new UnitInfo("ozf", Force),
             ["bar"] = new UnitInfo("bar", Pressure, allowPrefixes: true),
             ["atm"] = new UnitInfo("atm", Pressure),
+            ["at"] = new UnitInfo("at", Pressure),
             ["psi"] = new UnitInfo("psi", Pressure),
+            ["ksi"] = new UnitInfo("ksi", Pressure),
             ["Torr"] = new UnitInfo("Torr", Pressure, allowPrefixes: true),
+            ["inHg"] = new UnitInfo("inHg", Pressure),
+            ["inH2O"] = new UnitInfo("inH2O", Pressure),
+            ["cmH2O"] = new UnitInfo("cmH2O", Pressure),
+            ["mmH2O"] = new UnitInfo("mmH2O", Pressure),
+            ["Ba"] = new UnitInfo("Ba", Pressure, allowPrefixes: true),
+            // Angles & Dimensionless
             ["°"] = new UnitInfo("°", None),
+            ["arcmin"] = new UnitInfo("arcmin", None),
+            ["arcsec"] = new UnitInfo("arcsec", None),
+            ["grad"] = new UnitInfo("grad", None),
             ["rev"] = new UnitInfo("rev", None),
             ["%"] = new UnitInfo("%", None),
+            ["‰"] = new UnitInfo("‰", None),
             ["ppm"] = new UnitInfo("ppm", None),
             ["ppb"] = new UnitInfo("ppb", None),
+            ["ppt"] = new UnitInfo("ppt", None),
+            ["Np"] = new UnitInfo("Np", None, allowPrefixes: true),
+            // Energy, Torque, Power, Magnetism, Viscosity, Chemistry & Radiation
             ["eV"] = new UnitInfo("eV", Energy, allowPrefixes: true),
             ["Wh"] = new UnitInfo("Wh", Energy, allowPrefixes: true),
+            ["cal"] = new UnitInfo("cal", Energy, allowPrefixes: true),
+            ["Cal"] = new UnitInfo("Cal", Energy),
+            ["BTU"] = new UnitInfo("BTU", Energy),
+            ["erg"] = new UnitInfo("erg", Energy, allowPrefixes: true),
+            ["therm"] = new UnitInfo("therm", Energy),
             ["Ah"] = new UnitInfo("Ah", Charge, allowPrefixes: true),
             ["N·m"] = new UnitInfo("N·m", Energy),
+            ["ft·lbf"] = new UnitInfo("ft·lbf", Energy),
+            ["in·lbf"] = new UnitInfo("in·lbf", Energy),
             ["VA"] = new UnitInfo("VA", Power, allowPrefixes: true),
             ["var"] = new UnitInfo("var", Power, allowPrefixes: true),
             ["hp"] = new UnitInfo("hp", Power),
+            ["hp_m"] = new UnitInfo("hp_m", Power),
+            ["ton_ref"] = new UnitInfo("ton_ref", Power),
+            ["G"] = new UnitInfo("G", FluxDensity, allowPrefixes: true),
+            ["Oe"] = new UnitInfo("Oe", MagneticField, allowPrefixes: true),
+            ["Mx"] = new UnitInfo("Mx", Flux, allowPrefixes: true),
+            ["P"] = new UnitInfo("P", DynamicViscosity, allowPrefixes: true),
+            ["St"] = new UnitInfo("St", KinematicViscosity, allowPrefixes: true),
+            ["M"] = new UnitInfo("M", MolarConcentration, allowPrefixes: true),
+            ["Ci"] = new UnitInfo("Ci", Freq, allowPrefixes: true),
+            ["rem"] = new UnitInfo("rem", Dose, allowPrefixes: true),
+            ["R"] = new UnitInfo("R", RadiationExposure, allowPrefixes: true),
             // Aliases
             ["Ohm"] = new UnitInfo("Ω", Resistance, allowPrefixes: true),
             ["ohm"] = new UnitInfo("Ω", Resistance, allowPrefixes: true),
@@ -204,8 +299,28 @@ namespace SharpUnits.Analyzers
             ["hr"] = new UnitInfo("h", Time),
             ["sec"] = new UnitInfo("s", Time, allowPrefixes: true),
             ["l"] = new UnitInfo("L", Volume, allowPrefixes: true),
-            ["mmHg"] = new UnitInfo("Torr", Pressure),
-            ["Nm"] = new UnitInfo("N·m", Energy)
+            ["cc"] = new UnitInfo("mL", Volume),
+            ["mmHg"] = new UnitInfo("Torr", Pressure, allowPrefixes: true),
+            ["Nm"] = new UnitInfo("N·m", Energy),
+            ["ftlbf"] = new UnitInfo("ft·lbf", Energy),
+            ["inlbf"] = new UnitInfo("in·lbf", Energy),
+            ["thou"] = new UnitInfo("mil", Length),
+            ["micron"] = new UnitInfo("µm", Length),
+            ["NM"] = new UnitInfo("nmi", Length),
+            ["kt"] = new UnitInfo("kn", Velocity),
+            ["kmh"] = new UnitInfo("kph", Velocity),
+            ["gn"] = new UnitInfo("g0", Acceleration),
+            ["gon"] = new UnitInfo("grad", None),
+            ["turn"] = new UnitInfo("rev", None),
+            ["′"] = new UnitInfo("arcmin", None),
+            ["″"] = new UnitInfo("arcsec", None),
+            ["amu"] = new UnitInfo("Da", Mass, allowPrefixes: true),
+            ["kp"] = new UnitInfo("kgf", Force),
+            ["Btu"] = new UnitInfo("BTU", Energy),
+            ["gauss"] = new UnitInfo("G", FluxDensity, allowPrefixes: true),
+            ["CV"] = new UnitInfo("hp_m", Power),
+            ["permille"] = new UnitInfo("‰", None),
+            ["o"] = new UnitInfo("B", None, allowPrefixes: true, allowBinaryPrefixes: true)
         };
 
         private static readonly Dictionary<string, string> UnitsPropertyMap = new Dictionary<string, string>(StringComparer.Ordinal)
@@ -215,24 +330,47 @@ namespace SharpUnits.Analyzers
             ["Steradian"] = "sr", ["Hertz"] = "Hz", ["Newton"] = "N", ["Pascal"] = "Pa", ["Joule"] = "J",
             ["Watt"] = "W", ["Coulomb"] = "C", ["Volt"] = "V", ["Farad"] = "F", ["Ohm"] = "Ω",
             ["Siemens"] = "S", ["Weber"] = "Wb", ["Tesla"] = "T", ["Henry"] = "H", ["Celsius"] = "°C",
+            ["Lumen"] = "lm", ["Lux"] = "lx", ["Becquerel"] = "Bq", ["Gray"] = "Gy", ["Sievert"] = "Sv", ["Katal"] = "kat",
             ["Fahrenheit"] = "°F", ["Rankine"] = "°R", ["Milliampere"] = "mA", ["Microampere"] = "µA",
             ["Millivolt"] = "mV", ["Microvolt"] = "µV", ["Kilovolt"] = "kV", ["Kiloohm"] = "kΩ",
             ["Megaohm"] = "MΩ", ["Kilohertz"] = "kHz", ["Megahertz"] = "MHz", ["Gigahertz"] = "GHz",
             ["Millisecond"] = "ms", ["Microsecond"] = "µs", ["Nanosecond"] = "ns", ["Microfarad"] = "µF",
             ["Nanofarad"] = "nF", ["Picofarad"] = "pF", ["Millihenry"] = "mH", ["Microhenry"] = "µH",
-            ["Milliwatt"] = "mW", ["Kilowatt"] = "kW", ["Minute"] = "min", ["Hour"] = "h", ["Day"] = "d",
-            ["Inch"] = "in", ["Foot"] = "ft", ["Yard"] = "yd", ["Mile"] = "mi", ["Mil"] = "mil",
-            ["Liter"] = "L", ["Pound"] = "lb", ["Ounce"] = "oz", ["Bar"] = "bar", ["Atmosphere"] = "atm",
-            ["Psi"] = "psi", ["Torr"] = "Torr", ["Degree"] = "°", ["Revolution"] = "rev",
-            ["Percent"] = "%", ["PartsPerMillion"] = "ppm", ["PartsPerBillion"] = "ppb",
-            ["NewtonMeter"] = "N·m", ["VoltAmpere"] = "VA", ["Var"] = "var", ["Horsepower"] = "hp"
+            ["Milliwatt"] = "mW", ["Kilowatt"] = "kW", ["Micrometer"] = "µm", ["Milliliter"] = "mL",
+            ["Bit"] = "bit", ["Byte"] = "B", ["BitsPerSecond"] = "bps", ["BytesPerSecond"] = "Bps", ["Baud"] = "Bd",
+            ["Minute"] = "min", ["Hour"] = "h", ["Day"] = "d", ["Week"] = "wk", ["Year"] = "yr",
+            ["Rpm"] = "rpm", ["Knot"] = "kn", ["MilesPerHour"] = "mph", ["KilometersPerHour"] = "kph",
+            ["StandardGravity"] = "g0", ["Gal"] = "Gal",
+            ["Inch"] = "in", ["Foot"] = "ft", ["Yard"] = "yd", ["Mile"] = "mi", ["NauticalMile"] = "nmi",
+            ["Mil"] = "mil", ["Fathom"] = "fathom", ["Chain"] = "ch", ["Furlong"] = "furlong", ["Angstrom"] = "Å",
+            ["AstronomicalUnit"] = "au", ["LightYear"] = "ly", ["Parsec"] = "pc",
+            ["Hectare"] = "ha", ["Are"] = "are", ["Acre"] = "ac", ["Barn"] = "barn",
+            ["Liter"] = "L", ["GallonUs"] = "gal", ["GallonImperial"] = "gal_uk", ["QuartUs"] = "qt",
+            ["PintUs"] = "pt", ["CupUs"] = "cup", ["FluidOunceUs"] = "floz", ["TablespoonUs"] = "tbsp",
+            ["TeaspoonUs"] = "tsp", ["OilBarrel"] = "bbl",
+            ["Tonne"] = "t", ["Pound"] = "lb", ["Ounce"] = "oz", ["Slug"] = "slug", ["Dalton"] = "Da",
+            ["ShortTon"] = "ton_us", ["LongTon"] = "ton_uk", ["Stone"] = "st", ["Grain"] = "gr",
+            ["Carat"] = "ct", ["TroyOunce"] = "ozt",
+            ["PoundForce"] = "lbf", ["KilogramForce"] = "kgf", ["Dyne"] = "dyn", ["Kip"] = "kip", ["OunceForce"] = "ozf",
+            ["Bar"] = "bar", ["Atmosphere"] = "atm", ["TechnicalAtmosphere"] = "at", ["Psi"] = "psi",
+            ["Ksi"] = "ksi", ["Torr"] = "Torr", ["InchOfMercury"] = "inHg", ["InchOfWater"] = "inH2O",
+            ["CentimeterOfWater"] = "cmH2O", ["MillimeterOfWater"] = "mmH2O", ["Barye"] = "Ba",
+            ["Degree"] = "°", ["Arcminute"] = "arcmin", ["Arcsecond"] = "arcsec", ["Gradian"] = "grad",
+            ["Revolution"] = "rev", ["Percent"] = "%", ["Permille"] = "‰",
+            ["PartsPerMillion"] = "ppm", ["PartsPerBillion"] = "ppb", ["PartsPerTrillion"] = "ppt", ["Neper"] = "Np",
+            ["ElectronVolt"] = "eV", ["WattHour"] = "Wh", ["Calorie"] = "cal", ["Kilocalorie"] = "Cal",
+            ["Btu"] = "BTU", ["Erg"] = "erg", ["Therm"] = "therm", ["AmpereHour"] = "Ah",
+            ["NewtonMeter"] = "N·m", ["FootPoundTorque"] = "ft·lbf", ["InchPoundTorque"] = "in·lbf",
+            ["VoltAmpere"] = "VA", ["Var"] = "var", ["Horsepower"] = "hp", ["MetricHorsepower"] = "hp_m",
+            ["TonOfRefrigeration"] = "ton_ref", ["Gauss"] = "G", ["Oersted"] = "Oe", ["Maxwell"] = "Mx",
+            ["Poise"] = "P", ["Stokes"] = "St", ["Molar"] = "M", ["Curie"] = "Ci", ["Rem"] = "rem", ["Roentgen"] = "R"
         };
 
         private static readonly string[] CommonUnitSuggestions =
         {
-            "m", "mm", "cm", "km", "in", "ft", "mi", "mil",
-            "kg", "g", "mg", "lb", "oz",
-            "s", "ms", "µs", "us", "ns", "min", "h", "hr",
+            "m", "mm", "cm", "km", "in", "ft", "mi", "nmi", "mil",
+            "kg", "g", "mg", "lb", "oz", "slug", "Da",
+            "s", "ms", "µs", "us", "ns", "min", "h", "hr", "rpm", "g0", "kn", "mph", "kph",
             "A", "mA", "µA", "uA", "nA",
             "V", "mV", "µV", "uV", "kV", "MV",
             "Ω", "kΩ", "MΩ", "Ohm", "kOhm", "MOhm",
@@ -240,11 +378,13 @@ namespace SharpUnits.Analyzers
             "H", "mH", "µH", "uH", "nH",
             "Hz", "kHz", "MHz", "GHz",
             "W", "mW", "kW", "MW", "hp",
-            "J", "kJ", "MJ", "Wh", "kWh", "eV",
-            "N", "kN", "lbf", "N·m", "Nm",
-            "Pa", "kPa", "MPa", "GPa", "bar", "mbar", "atm", "psi", "Torr",
+            "J", "kJ", "MJ", "Wh", "kWh", "eV", "cal", "kcal", "BTU",
+            "N", "kN", "lbf", "kgf", "N·m", "Nm", "ft·lbf",
+            "Pa", "kPa", "MPa", "GPa", "bar", "mbar", "atm", "psi", "ksi", "Torr", "inHg", "inH2O",
             "K", "°C", "degC", "°F", "degF", "°R",
-            "rad", "deg", "°", "rev", "%", "ppm", "ppb", "L", "mL", "VA", "var"
+            "rad", "deg", "°", "arcmin", "arcsec", "rev", "%", "ppm", "ppb", "ppt", "L", "mL", "cc",
+            "VA", "var", "Gs", "G", "cP", "cSt", "M", "mM",
+            "bit", "B", "kB", "MB", "GB", "KiB", "MiB", "GiB", "TiB", "bps", "kbps", "Mbps", "Gbps"
         };
 
         public static string? SuggestClosestUnit(string input)
@@ -303,12 +443,22 @@ namespace SharpUnits.Analyzers
             if (StandardUnits.TryGetValue(symbol, out info))
                 return true;
 
-            if (symbol.Length > 2 && symbol.StartsWith("da", StringComparison.Ordinal))
+            if (symbol.Length > 2)
             {
+                string twoChar = symbol.Substring(0, 2);
                 string rest = symbol.Substring(2);
-                if (StandardUnits.TryGetValue(rest, out var baseInfo) && baseInfo.AllowPrefixes)
+                if (IecBinaryPrefixes.Contains(twoChar) &&
+                    StandardUnits.TryGetValue(rest, out var binBase) &&
+                    binBase.AllowBinaryPrefixes)
                 {
-                    info = new UnitInfo(symbol, baseInfo.Dimension, allowPrefixes: false, isAffine: false);
+                    info = new UnitInfo(symbol, binBase.Dimension, allowPrefixes: false, isAffine: false);
+                    return true;
+                }
+                if (twoChar == "da" &&
+                    StandardUnits.TryGetValue(rest, out var daBase) &&
+                    daBase.AllowPrefixes)
+                {
+                    info = new UnitInfo(symbol, daBase.Dimension, allowPrefixes: false, isAffine: false);
                     return true;
                 }
             }

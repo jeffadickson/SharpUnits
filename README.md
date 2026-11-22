@@ -161,6 +161,7 @@ dotnet test SharpUnits.sln -c Release
 
 ## Integration Guides & Release Docs
 
+- [Guide to Adding Units in SharpUnits](docs/adding-units.md) — runtime custom units, distinct ISQ kinds, custom affine origins, IEC binary prefixes, QUDV import, and contributing built-in catalog units.
 - [Supporting Units in StarLark-cs, Teal, and Cameo](docs/ecosystem-integration.md) — host value design (`IThreadSafeHostValue`), Teal `.d.tl` typed metamethods, and Cameo SysML QUDV / FMI interchange.
 - [Changelog](CHANGELOG.md) | [MIT License](LICENSE)
 

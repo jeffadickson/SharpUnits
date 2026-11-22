@@ -88,6 +88,9 @@ public sealed record UnitDefinition
     /// <summary>True when SI decimal prefixes may be applied automatically to this unit.</summary>
     public bool AllowPrefixes { get; }
 
+    /// <summary>True when IEC 80000-13 binary prefixes (<c>Ki</c>..<c>Yi</c>) may be applied automatically to this unit.</summary>
+    public bool AllowBinaryPrefixes { get; }
+
     /// <summary>Optional default semantic quantity kind associated with this unit.</summary>
     public QuantityKind? DefaultKind { get; }
 
@@ -105,8 +108,9 @@ public sealed record UnitDefinition
         string? name = null,
         bool allowPrefixes = false,
         QuantityKind? defaultKind = null,
-        QuantitySpec? defaultSpec = null)
-        : this(symbol, RationalDimension.From(dimension), converter, name, allowPrefixes, defaultKind, defaultSpec)
+        QuantitySpec? defaultSpec = null,
+        bool allowBinaryPrefixes = false)
+        : this(symbol, RationalDimension.From(dimension), converter, name, allowPrefixes, defaultKind, defaultSpec, allowBinaryPrefixes)
     {
     }
 
@@ -118,11 +122,12 @@ public sealed record UnitDefinition
         string? name = null,
         bool allowPrefixes = false,
         QuantityKind? defaultKind = null,
-        QuantitySpec? defaultSpec = null)
+        QuantitySpec? defaultSpec = null,
+        bool allowBinaryPrefixes = false)
     {
         if (string.IsNullOrWhiteSpace(symbol)) throw new ArgumentException("Unit symbol required.", nameof(symbol));
-        if (allowPrefixes && !converter.IsLinear)
-            throw new ArgumentException("Affine units cannot allow SI prefixes.", nameof(allowPrefixes));
+        if ((allowPrefixes || allowBinaryPrefixes) && !converter.IsLinear)
+            throw new ArgumentException("Affine units cannot allow prefixes.", nameof(allowPrefixes));
         var resolvedSpec = defaultSpec;
         if (resolvedSpec is null && defaultKind.HasValue && Isq.TryFromKind(defaultKind.Value, out var inferredSpec))
             resolvedSpec = inferredSpec;
@@ -133,6 +138,7 @@ public sealed record UnitDefinition
         RationalDimension = dimension;
         Converter = converter;
         AllowPrefixes = allowPrefixes;
+        AllowBinaryPrefixes = allowBinaryPrefixes;
         DefaultSpec = resolvedSpec;
         DefaultKind = defaultKind ?? resolvedSpec?.ToKind();
     }

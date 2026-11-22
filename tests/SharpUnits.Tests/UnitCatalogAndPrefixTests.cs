@@ -92,4 +92,84 @@ public sealed class UnitCatalogAndPrefixTests
             Assert.True(double.IsFinite(parsed.Scale));
         });
     }
+
+    [Theory]
+    [InlineData(1, "KiB", "B", 1024.0, 9)]
+    [InlineData(1, "MiB", "KiB", 1024.0, 9)]
+    [InlineData(1, "GiB", "MiB", 1024.0, 9)]
+    [InlineData(1, "TiB", "GiB", 1024.0, 9)]
+    [InlineData(1, "B", "bit", 8.0, 9)]
+    [InlineData(1, "kB", "B", 1000.0, 9)]
+    [InlineData(100, "Mbps", "MBps", 12.5, 9)]
+    [InlineData(1, "Mibps", "Kibps", 1024.0, 9)]
+    [InlineData(60, "rpm", "Hz", 1.0, 9)]
+    [InlineData(1, "g0", "Gal", 980.665, 6)]
+    [InlineData(1, "gn", "g0", 1.0, 9)]
+    [InlineData(1, "nmi", "m", 1852.0, 9)]
+    [InlineData(1, "kn", "kph", 1.852, 9)]
+    [InlineData(1, "mph", "kph", 1.609344, 9)]
+    [InlineData(1, "ha", "are", 100.0, 9)]
+    [InlineData(1, "gal", "qt", 4.0, 9)]
+    [InlineData(1, "gal", "floz", 128.0, 9)]
+    [InlineData(1, "cc", "mL", 1.0, 9)]
+    [InlineData(1, "bbl", "gal", 42.0, 9)]
+    [InlineData(1, "slug", "kg", 14.59390293720636, 9)]
+    [InlineData(1, "ton_us", "lb", 2000.0, 9)]
+    [InlineData(1, "ton_uk", "lb", 2240.0, 9)]
+    [InlineData(1, "kgf", "N", 9.80665, 9)]
+    [InlineData(1, "kip", "lbf", 1000.0, 9)]
+    [InlineData(1, "ksi", "psi", 1000.0, 9)]
+    [InlineData(1, "inHg", "Pa", 3386.388666666667, 6)]
+    [InlineData(1, "inH2O", "Pa", 249.08891, 6)]
+    [InlineData(60, "arcmin", "°", 1.0, 9)]
+    [InlineData(3600, "arcsec", "°", 1.0, 9)]
+    [InlineData(100, "grad", "°", 90.0, 9)]
+    [InlineData(1, "cal", "J", 4.184, 9)]
+    [InlineData(1, "kcal", "Cal", 1.0, 9)]
+    [InlineData(1, "BTU", "J", 1055.05585262, 6)]
+    [InlineData(10000, "G", "T", 1.0, 9)]
+    [InlineData(1000, "mG", "G", 1.0, 9)]
+    [InlineData(1, "P", "cP", 100.0, 9)]
+    [InlineData(1, "St", "cSt", 100.0, 9)]
+    [InlineData(1, "M", "mM", 1000.0, 9)]
+    [InlineData(100, "rem", "Sv", 1.0, 9)]
+    [InlineData(1, "Ci", "GBq", 37.0, 9)]
+    [InlineData(1, "thou", "mil", 1.0, 9)]
+    [InlineData(1, "micron", "µm", 1.0, 9)]
+    [InlineData(1000, "ppt", "ppb", 1.0, 9)]
+    [InlineData(10, "‰", "%", 1.0, 9)]
+    public void ExpandedEngineeringCatalogAndIecBinaryPrefixesConvertAccurately(
+        double value, string from, string to, double expected, int precision)
+    {
+        double actual = UnitRegistry.Standard.Convert(value, from, to);
+        Assert.Equal(expected, actual, precision);
+    }
+
+    [Fact]
+    public void Iso80000DistinctKindsPreventCrossDomainMixing()
+    {
+        // Radionuclide activity (Bq) vs periodic frequency (Hz)
+        Assert.Throws<InvalidOperationException>(() =>
+            Quantity.Of(10, Units.Becquerel) + Quantity.Of(10, Units.Hertz));
+
+        // Absorbed dose (Gy) vs dose equivalent (Sv / rem)
+        Assert.Throws<InvalidOperationException>(() =>
+            Quantity.Of(1, Units.Gray) + Quantity.Of(1, Units.Sievert));
+
+        // Luminous flux (lm) vs luminous intensity (cd)
+        Assert.Throws<InvalidOperationException>(() =>
+            Quantity.Of(100, Units.Lumen) + Quantity.Of(100, Units.Candela));
+
+        // Information (bit / B) vs plane angle (rad)
+        Assert.Throws<InvalidOperationException>(() =>
+            Quantity.Of(8, Units.Bit) + Quantity.Of(1, Units.Radian));
+
+        // Information rate (bps) vs periodic frequency (Hz)
+        Assert.Throws<InvalidOperationException>(() =>
+            Quantity.Of(100, Units.BitsPerSecond) + Quantity.Of(100, Units.Hertz));
+
+        // Binary prefixes rejected on non-information units (e.g. Kim, KiV)
+        Assert.Throws<KeyNotFoundException>(() => UnitRegistry.Standard.Resolve("Kim"));
+        Assert.Throws<KeyNotFoundException>(() => UnitRegistry.Standard.Resolve("KiV"));
+    }
 }

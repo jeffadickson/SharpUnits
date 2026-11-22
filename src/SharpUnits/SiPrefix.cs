@@ -90,3 +90,63 @@ public static class SiPrefixCatalog
         return prefix is not null;
     }
 }
+
+/// <summary>Immutable IEC 80000-13 binary prefix metadata (powers of 1024 = 2¹⁰).</summary>
+public sealed record BinaryPrefix
+{
+    /// <summary>Human-readable binary prefix name (e.g. <c>kibi</c>, <c>mebi</c>, <c>gibi</c>).</summary>
+    public string Name { get; }
+
+    /// <summary>Canonical IEC symbol (e.g. <c>Ki</c>, <c>Mi</c>, <c>Gi</c>).</summary>
+    public string Symbol { get; }
+
+    /// <summary>Base-2 exponent (10, 20, ..., 80).</summary>
+    public int BinaryExponent { get; }
+
+    /// <summary>Exact scale factor (<c>2^BinaryExponent</c>).</summary>
+    public double Value => Math.Pow(2d, BinaryExponent);
+
+    /// <summary>Constructs a valid IEC binary prefix.</summary>
+    public BinaryPrefix(string name, string symbol, int binaryExponent)
+    {
+        if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name required.", nameof(name));
+        if (string.IsNullOrWhiteSpace(symbol)) throw new ArgumentException("Symbol required.", nameof(symbol));
+        if (binaryExponent is < 10 or > 80) throw new ArgumentOutOfRangeException(nameof(binaryExponent));
+        Name = name;
+        Symbol = symbol;
+        BinaryExponent = binaryExponent;
+    }
+
+    /// <summary>Applies this binary prefix to a linear information unit.</summary>
+    public UnitDefinition Apply(UnitDefinition unit) => BinaryPrefixes.Apply(Symbol, unit);
+}
+
+/// <summary>Canonical IEC 80000-13 binary prefix catalog (<c>Ki</c> through <c>Yi</c>).</summary>
+public static class BinaryPrefixCatalog
+{
+    private static readonly BinaryPrefix[] Items =
+    [
+        new("yobi", "Yi", 80),
+        new("zebi", "Zi", 70),
+        new("exbi", "Ei", 60),
+        new("pebi", "Pi", 50),
+        new("tebi", "Ti", 40),
+        new("gibi", "Gi", 30),
+        new("mebi", "Mi", 20),
+        new("kibi", "Ki", 10)
+    ];
+
+    /// <summary>Returns all 8 IEC binary prefixes ordered from largest to smallest.</summary>
+    public static IReadOnlyList<BinaryPrefix> All => Array.AsReadOnly(Items);
+
+    /// <summary>Looks up a binary prefix by symbol (e.g. <c>Ki</c>, <c>Mi</c>, <c>Gi</c>).</summary>
+    public static BinaryPrefix Resolve(string symbol) =>
+        TryResolve(symbol, out var prefix) ? prefix! : throw new KeyNotFoundException($"Unknown IEC binary prefix: {symbol}");
+
+    /// <summary>Attempts to resolve an IEC binary prefix symbol.</summary>
+    public static bool TryResolve(string symbol, out BinaryPrefix? prefix)
+    {
+        prefix = Items.FirstOrDefault(p => p.Symbol == symbol);
+        return prefix is not null;
+    }
+}

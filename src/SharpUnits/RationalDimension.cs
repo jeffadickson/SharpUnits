@@ -88,6 +88,42 @@ public readonly record struct RationalDimension(
     /// <summary>Inductance (L²·M·T⁻²·I⁻²).</summary>
     public static RationalDimension Inductance => From(Dimension.Inductance);
 
+    /// <summary>Illuminance (L⁻²·J).</summary>
+    public static RationalDimension Illuminance => From(Dimension.Illuminance);
+
+    /// <summary>Radiation dose (L²·T⁻²).</summary>
+    public static RationalDimension RadiationDose => From(Dimension.RadiationDose);
+
+    /// <summary>Catalytic activity (T⁻¹·N).</summary>
+    public static RationalDimension CatalyticActivity => From(Dimension.CatalyticActivity);
+
+    /// <summary>Mass density (L⁻³·M).</summary>
+    public static RationalDimension Density => From(Dimension.Density);
+
+    /// <summary>Dynamic viscosity (L⁻¹·M·T⁻¹).</summary>
+    public static RationalDimension DynamicViscosity => From(Dimension.DynamicViscosity);
+
+    /// <summary>Kinematic viscosity (L²·T⁻¹).</summary>
+    public static RationalDimension KinematicViscosity => From(Dimension.KinematicViscosity);
+
+    /// <summary>Magnetic field strength (L⁻¹·I).</summary>
+    public static RationalDimension MagneticFieldStrength => From(Dimension.MagneticFieldStrength);
+
+    /// <summary>Electric field strength (L·M·T⁻³·I⁻¹).</summary>
+    public static RationalDimension ElectricFieldStrength => From(Dimension.ElectricFieldStrength);
+
+    /// <summary>Molar concentration (L⁻³·N).</summary>
+    public static RationalDimension MolarConcentration => From(Dimension.MolarConcentration);
+
+    /// <summary>Radiation exposure (M⁻¹·T·I).</summary>
+    public static RationalDimension RadiationExposure => From(Dimension.RadiationExposure);
+
+    /// <summary>Volumetric flow rate (L³·T⁻¹).</summary>
+    public static RationalDimension VolumetricFlowRate => From(Dimension.VolumetricFlowRate);
+
+    /// <summary>Mass flow rate (M·T⁻¹).</summary>
+    public static RationalDimension MassFlowRate => From(Dimension.MassFlowRate);
+
     /// <summary>True when all exponents are zero.</summary>
     public bool IsDimensionless =>
         Length.IsZero && Mass.IsZero && Time.IsZero && Current.IsZero &&
