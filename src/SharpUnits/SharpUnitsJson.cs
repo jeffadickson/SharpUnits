@@ -61,6 +61,20 @@ public static class SharpUnitsJsonExtensions
         options.Converters.Add(new QuantitySeriesJsonConverter<decimal>(cfg));
         options.Converters.Add(new QuantitySeriesJsonConverter<int>(cfg));
 
+        options.Converters.Add(new QuantityVector2JsonConverter<double>(cfg));
+        options.Converters.Add(new QuantityVector2JsonConverter<float>(cfg));
+        options.Converters.Add(new QuantityVector2JsonConverter<decimal>(cfg));
+
+        options.Converters.Add(new QuantityVector3JsonConverter<double>(cfg));
+        options.Converters.Add(new QuantityVector3JsonConverter<float>(cfg));
+        options.Converters.Add(new QuantityVector3JsonConverter<decimal>(cfg));
+
+        options.Converters.Add(new QuantityPoint2JsonConverter<double>(cfg));
+        options.Converters.Add(new QuantityPoint2JsonConverter<float>(cfg));
+
+        options.Converters.Add(new QuantityPoint3JsonConverter<double>(cfg));
+        options.Converters.Add(new QuantityPoint3JsonConverter<float>(cfg));
+
         // Strongly-typed core structs
         options.Converters.Add(new TypedQuantityJsonConverter<Length>(cfg, Units.Meter, v => new(v), q => q.Meters));
         options.Converters.Add(new TypedQuantityJsonConverter<Mass>(cfg, Units.Kilogram, v => new(v), q => q.Kilograms));
@@ -605,6 +619,210 @@ internal sealed class TemperatureDifferenceJsonConverter : JsonConverter<Tempera
         writer.WriteNumber("value", value.Kelvin);
         writer.WriteString("unit", "K");
         writer.WriteString("scale", "relative");
+        writer.WriteEndObject();
+    }
+}
+
+/// <summary>NativeAOT-safe JSON converter for <see cref="QuantityVector2{T}"/>.</summary>
+public sealed class QuantityVector2JsonConverter<T> : JsonConverter<QuantityVector2<T>> where T : INumber<T>
+{
+    private readonly SharpUnitsJsonOptions cfg;
+
+    /// <summary>Creates a converter with explicit options.</summary>
+    public QuantityVector2JsonConverter(SharpUnitsJsonOptions? config = null) => cfg = config ?? new();
+
+    /// <inheritdoc/>
+    public override QuantityVector2<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType != JsonTokenType.StartObject)
+            throw new JsonException($"Expected JSON object for QuantityVector2<{typeof(T).Name}>.");
+
+        bool hasX = false, hasY = false;
+        T x = T.Zero, y = T.Zero;
+        string? unitText = null, specId = null;
+
+        while (reader.Read() && reader.TokenType != JsonTokenType.EndObject)
+        {
+            string prop = reader.GetString()!;
+            reader.Read();
+            if (prop.Equals("x", StringComparison.OrdinalIgnoreCase)) { x = JsonNumberHelper.ReadNumber<T>(ref reader); hasX = true; }
+            else if (prop.Equals("y", StringComparison.OrdinalIgnoreCase)) { y = JsonNumberHelper.ReadNumber<T>(ref reader); hasY = true; }
+            else if (prop.Equals("unit", StringComparison.OrdinalIgnoreCase)) unitText = reader.GetString();
+            else if (prop.Equals("spec", StringComparison.OrdinalIgnoreCase)) specId = reader.TokenType == JsonTokenType.Null ? null : reader.GetString();
+            else if (cfg.StrictUnmappedMembers) throw new JsonException($"Unexpected property '{prop}'.");
+            else reader.Skip();
+        }
+
+        if (!hasX || !hasY || string.IsNullOrWhiteSpace(unitText))
+            throw new JsonException("QuantityVector2 JSON requires 'x', 'y', and 'unit'.");
+
+        try { return QuantityVector2<T>.FromData(new QuantityVector2Data<T>(x, y, unitText, specId), cfg.Environment); }
+        catch (Exception ex) { throw new JsonException($"Invalid QuantityVector2<{typeof(T).Name}> JSON: {ex.Message}", ex); }
+    }
+
+    /// <inheritdoc/>
+    public override void Write(Utf8JsonWriter writer, QuantityVector2<T> value, JsonSerializerOptions options)
+    {
+        writer.WriteStartObject();
+        writer.WritePropertyName("x"); JsonNumberHelper.WriteNumber(writer, value.X);
+        writer.WritePropertyName("y"); JsonNumberHelper.WriteNumber(writer, value.Y);
+        writer.WriteString("unit", cfg.AsciiSymbols ? value.Unit.AsciiSymbol : value.Unit.Symbol);
+        if (value.Spec is not null) writer.WriteString("spec", value.Spec.Id);
+        writer.WriteEndObject();
+    }
+}
+
+/// <summary>NativeAOT-safe JSON converter for <see cref="QuantityVector3{T}"/>.</summary>
+public sealed class QuantityVector3JsonConverter<T> : JsonConverter<QuantityVector3<T>> where T : INumber<T>
+{
+    private readonly SharpUnitsJsonOptions cfg;
+
+    /// <summary>Creates a converter with explicit options.</summary>
+    public QuantityVector3JsonConverter(SharpUnitsJsonOptions? config = null) => cfg = config ?? new();
+
+    /// <inheritdoc/>
+    public override QuantityVector3<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType != JsonTokenType.StartObject)
+            throw new JsonException($"Expected JSON object for QuantityVector3<{typeof(T).Name}>.");
+
+        bool hasX = false, hasY = false, hasZ = false;
+        T x = T.Zero, y = T.Zero, z = T.Zero;
+        string? unitText = null, specId = null;
+
+        while (reader.Read() && reader.TokenType != JsonTokenType.EndObject)
+        {
+            string prop = reader.GetString()!;
+            reader.Read();
+            if (prop.Equals("x", StringComparison.OrdinalIgnoreCase)) { x = JsonNumberHelper.ReadNumber<T>(ref reader); hasX = true; }
+            else if (prop.Equals("y", StringComparison.OrdinalIgnoreCase)) { y = JsonNumberHelper.ReadNumber<T>(ref reader); hasY = true; }
+            else if (prop.Equals("z", StringComparison.OrdinalIgnoreCase)) { z = JsonNumberHelper.ReadNumber<T>(ref reader); hasZ = true; }
+            else if (prop.Equals("unit", StringComparison.OrdinalIgnoreCase)) unitText = reader.GetString();
+            else if (prop.Equals("spec", StringComparison.OrdinalIgnoreCase)) specId = reader.TokenType == JsonTokenType.Null ? null : reader.GetString();
+            else if (cfg.StrictUnmappedMembers) throw new JsonException($"Unexpected property '{prop}'.");
+            else reader.Skip();
+        }
+
+        if (!hasX || !hasY || !hasZ || string.IsNullOrWhiteSpace(unitText))
+            throw new JsonException("QuantityVector3 JSON requires 'x', 'y', 'z', and 'unit'.");
+
+        try { return QuantityVector3<T>.FromData(new QuantityVector3Data<T>(x, y, z, unitText, specId), cfg.Environment); }
+        catch (Exception ex) { throw new JsonException($"Invalid QuantityVector3<{typeof(T).Name}> JSON: {ex.Message}", ex); }
+    }
+
+    /// <inheritdoc/>
+    public override void Write(Utf8JsonWriter writer, QuantityVector3<T> value, JsonSerializerOptions options)
+    {
+        writer.WriteStartObject();
+        writer.WritePropertyName("x"); JsonNumberHelper.WriteNumber(writer, value.X);
+        writer.WritePropertyName("y"); JsonNumberHelper.WriteNumber(writer, value.Y);
+        writer.WritePropertyName("z"); JsonNumberHelper.WriteNumber(writer, value.Z);
+        writer.WriteString("unit", cfg.AsciiSymbols ? value.Unit.AsciiSymbol : value.Unit.Symbol);
+        if (value.Spec is not null) writer.WriteString("spec", value.Spec.Id);
+        writer.WriteEndObject();
+    }
+}
+
+/// <summary>NativeAOT-safe JSON converter for affine <see cref="QuantityPoint2{T}"/>.</summary>
+public sealed class QuantityPoint2JsonConverter<T> : JsonConverter<QuantityPoint2<T>> where T : INumber<T>
+{
+    private readonly SharpUnitsJsonOptions cfg;
+
+    /// <summary>Creates a converter with explicit options.</summary>
+    public QuantityPoint2JsonConverter(SharpUnitsJsonOptions? config = null) => cfg = config ?? new();
+
+    /// <inheritdoc/>
+    public override QuantityPoint2<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType != JsonTokenType.StartObject)
+            throw new JsonException($"Expected JSON object for QuantityPoint2<{typeof(T).Name}>.");
+
+        bool hasX = false, hasY = false;
+        T x = T.Zero, y = T.Zero;
+        string? unitText = null, frameText = null, specId = null;
+
+        while (reader.Read() && reader.TokenType != JsonTokenType.EndObject)
+        {
+            string prop = reader.GetString()!;
+            reader.Read();
+            if (prop.Equals("x", StringComparison.OrdinalIgnoreCase)) { x = JsonNumberHelper.ReadNumber<T>(ref reader); hasX = true; }
+            else if (prop.Equals("y", StringComparison.OrdinalIgnoreCase)) { y = JsonNumberHelper.ReadNumber<T>(ref reader); hasY = true; }
+            else if (prop.Equals("unit", StringComparison.OrdinalIgnoreCase)) unitText = reader.GetString();
+            else if (prop.Equals("frame", StringComparison.OrdinalIgnoreCase)) frameText = reader.GetString();
+            else if (prop.Equals("spec", StringComparison.OrdinalIgnoreCase)) specId = reader.TokenType == JsonTokenType.Null ? null : reader.GetString();
+            else if (cfg.StrictUnmappedMembers) throw new JsonException($"Unexpected property '{prop}'.");
+            else reader.Skip();
+        }
+
+        if (!hasX || !hasY || string.IsNullOrWhiteSpace(unitText))
+            throw new JsonException("QuantityPoint2 JSON requires 'x', 'y', and 'unit'.");
+
+        try { return QuantityPoint2<T>.FromData(new QuantityPoint2Data<T>(x, y, unitText, frameText ?? SpatialOrigins.World.Id, specId), cfg.Environment); }
+        catch (Exception ex) { throw new JsonException($"Invalid QuantityPoint2<{typeof(T).Name}> JSON: {ex.Message}", ex); }
+    }
+
+    /// <inheritdoc/>
+    public override void Write(Utf8JsonWriter writer, QuantityPoint2<T> value, JsonSerializerOptions options)
+    {
+        writer.WriteStartObject();
+        writer.WritePropertyName("x"); JsonNumberHelper.WriteNumber(writer, value.X);
+        writer.WritePropertyName("y"); JsonNumberHelper.WriteNumber(writer, value.Y);
+        writer.WriteString("unit", cfg.AsciiSymbols ? value.Unit.AsciiSymbol : value.Unit.Symbol);
+        writer.WriteString("frame", value.Frame.Id);
+        if (value.Position.Spec is not null) writer.WriteString("spec", value.Position.Spec.Id);
+        writer.WriteEndObject();
+    }
+}
+
+/// <summary>NativeAOT-safe JSON converter for affine <see cref="QuantityPoint3{T}"/>.</summary>
+public sealed class QuantityPoint3JsonConverter<T> : JsonConverter<QuantityPoint3<T>> where T : INumber<T>
+{
+    private readonly SharpUnitsJsonOptions cfg;
+
+    /// <summary>Creates a converter with explicit options.</summary>
+    public QuantityPoint3JsonConverter(SharpUnitsJsonOptions? config = null) => cfg = config ?? new();
+
+    /// <inheritdoc/>
+    public override QuantityPoint3<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType != JsonTokenType.StartObject)
+            throw new JsonException($"Expected JSON object for QuantityPoint3<{typeof(T).Name}>.");
+
+        bool hasX = false, hasY = false, hasZ = false;
+        T x = T.Zero, y = T.Zero, z = T.Zero;
+        string? unitText = null, frameText = null, specId = null;
+
+        while (reader.Read() && reader.TokenType != JsonTokenType.EndObject)
+        {
+            string prop = reader.GetString()!;
+            reader.Read();
+            if (prop.Equals("x", StringComparison.OrdinalIgnoreCase)) { x = JsonNumberHelper.ReadNumber<T>(ref reader); hasX = true; }
+            else if (prop.Equals("y", StringComparison.OrdinalIgnoreCase)) { y = JsonNumberHelper.ReadNumber<T>(ref reader); hasY = true; }
+            else if (prop.Equals("z", StringComparison.OrdinalIgnoreCase)) { z = JsonNumberHelper.ReadNumber<T>(ref reader); hasZ = true; }
+            else if (prop.Equals("unit", StringComparison.OrdinalIgnoreCase)) unitText = reader.GetString();
+            else if (prop.Equals("frame", StringComparison.OrdinalIgnoreCase)) frameText = reader.GetString();
+            else if (prop.Equals("spec", StringComparison.OrdinalIgnoreCase)) specId = reader.TokenType == JsonTokenType.Null ? null : reader.GetString();
+            else if (cfg.StrictUnmappedMembers) throw new JsonException($"Unexpected property '{prop}'.");
+            else reader.Skip();
+        }
+
+        if (!hasX || !hasY || !hasZ || string.IsNullOrWhiteSpace(unitText))
+            throw new JsonException("QuantityPoint3 JSON requires 'x', 'y', 'z', and 'unit'.");
+
+        try { return QuantityPoint3<T>.FromData(new QuantityPoint3Data<T>(x, y, z, unitText, frameText ?? SpatialOrigins.World.Id, specId), cfg.Environment); }
+        catch (Exception ex) { throw new JsonException($"Invalid QuantityPoint3<{typeof(T).Name}> JSON: {ex.Message}", ex); }
+    }
+
+    /// <inheritdoc/>
+    public override void Write(Utf8JsonWriter writer, QuantityPoint3<T> value, JsonSerializerOptions options)
+    {
+        writer.WriteStartObject();
+        writer.WritePropertyName("x"); JsonNumberHelper.WriteNumber(writer, value.X);
+        writer.WritePropertyName("y"); JsonNumberHelper.WriteNumber(writer, value.Y);
+        writer.WritePropertyName("z"); JsonNumberHelper.WriteNumber(writer, value.Z);
+        writer.WriteString("unit", cfg.AsciiSymbols ? value.Unit.AsciiSymbol : value.Unit.Symbol);
+        writer.WriteString("frame", value.Frame.Id);
+        if (value.Position.Spec is not null) writer.WriteString("spec", value.Position.Spec.Id);
         writer.WriteEndObject();
     }
 }

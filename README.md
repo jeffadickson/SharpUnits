@@ -38,19 +38,29 @@ var noise = UnitRegistry.Standard.Resolve("nV") / Units.Hertz.Root(2); // "nV/Hz
 var halfPerimeter = Quantity<double>.Of(3, Units.Meter, Isq.Width) + Quantity<double>.Of(4, Units.Meter, Isq.Height); // Isq.Length
 ```
 
-### 2. Compile-Time Affine Spaces (`QuantityPoint<T>` & `PointOrigins`)
+### 2. Compile-Time Affine Spaces & 2-D/3-D Physical Vectors
 
 ```csharp
+using System.Numerics;
 using SharpUnits;
 
 // Temperature points stored without 273.15 offset drift; point + point does not compile!
 var t1 = QuantityPoint<decimal>.FromCelsius(20.1m); // 20.1 °C (Origin: IcePoint)
-var t2 = QuantityPoint<double>.FromFahrenheit(212); // 100 °C / 373.15 K
 var delta = QuantityPoint<double>.FromCelsius(100) - QuantityPoint<double>.FromFahrenheit(32); // 100 K
 
 // Gauge vs. Absolute pressure (plus custom instrument tare/zero origins)
-var gauge = QuantityPoint<double>.FromGaugePressure(2.0, Units.Bar);
-var abs   = gauge.RelativeTo(PointOrigins.Vacuum); // 3.01325 bar
+var abs = QuantityPoint<double>.FromGaugePressure(2.0, Units.Bar).RelativeTo(PointOrigins.Vacuum); // 3.01325 bar
+
+// 3-D physical vectors: Dot -> Work (J), Cross(r, F) -> Torque (Isq.Torque), plus System.Numerics drop-down
+var r      = QuantityVector3<double>.Of(2, 0, 0, Units.Meter);
+var f      = QuantityVector3<double>.Of(0, 5, 0, Units.Newton);
+var torque = QuantityVector3<double>.Cross(r, f);           // (0, 0, 10) N·m [Isq.Torque]
+Vector3 gpuVec = torque.ToVector3In(Units.NewtonMeter);     // Direct drop to System.Numerics.Vector3
+
+// Affine 3-D spatial points anchored to named frames (ENU, NED, World, Body)
+var p1 = QuantityPoint3<double>.At(1, 2, 3, Units.Meter, SpatialOrigins.Enu);
+var p2 = QuantityPoint3<double>.At(4, 6, 3, Units.Meter, SpatialOrigins.Enu);
+var dist = QuantityPoint3<double>.Distance(p1, p2);         // 5 m (ENU - NED throws!)
 ```
 
 ### 3. Plotting & DAQ: SIMD `QuantitySeries<T>` & `PlotAxisScaler`

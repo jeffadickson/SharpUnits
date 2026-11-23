@@ -48,6 +48,38 @@ public readonly record struct QuantitySeriesData<T>(
     string? Spec = null,
     string? Origin = null) where T : INumber<T>;
 
+/// <summary>Serializer-agnostic primitive wire record for <see cref="QuantityVector2{T}"/>.</summary>
+public readonly record struct QuantityVector2Data<T>(
+    T X,
+    T Y,
+    string Unit,
+    string? Spec = null) where T : INumber<T>;
+
+/// <summary>Serializer-agnostic primitive wire record for <see cref="QuantityVector3{T}"/>.</summary>
+public readonly record struct QuantityVector3Data<T>(
+    T X,
+    T Y,
+    T Z,
+    string Unit,
+    string? Spec = null) where T : INumber<T>;
+
+/// <summary>Serializer-agnostic primitive wire record for <see cref="QuantityPoint2{T}"/>.</summary>
+public readonly record struct QuantityPoint2Data<T>(
+    T X,
+    T Y,
+    string Unit,
+    string Frame,
+    string? Spec = null) where T : INumber<T>;
+
+/// <summary>Serializer-agnostic primitive wire record for <see cref="QuantityPoint3{T}"/>.</summary>
+public readonly record struct QuantityPoint3Data<T>(
+    T X,
+    T Y,
+    T Z,
+    string Unit,
+    string Frame,
+    string? Spec = null) where T : INumber<T>;
+
 /// <summary>
 /// NativeAOT-safe <see cref="TypeConverter"/> enabling <see cref="Quantity"/> binding in <c>IConfiguration</c>,
 /// ASP.NET Core, Blazor, Avalonia, WPF, YAML, and CSV pipelines.
@@ -127,6 +159,8 @@ public static class SharpUnitsBinary
     private const byte KindGenericQuantity = 2;
     private const byte KindQuantityPoint = 3;
     private const byte KindQuantitySeries = 4;
+    private const byte KindQuantityVector2 = 5;
+    private const byte KindQuantityVector3 = 6;
 
     private const byte TypeDouble = 1;
     private const byte TypeFloat = 2;
@@ -341,6 +375,92 @@ public static class SharpUnitsBinary
 
         bytesRead = offset;
         return QuantitySeries<T>.FromData(new QuantitySeriesData<T>(values, unit, spec, origin), environment);
+    }
+
+    // --- QuantityVector2<T> & QuantityVector3<T> ---
+
+    /// <summary>Writes a 2-D physical vector <see cref="QuantityVector2{T}"/> in compact binary format.</summary>
+    public static void Write<T>(IBufferWriter<byte> writer, QuantityVector2<T> value, bool asciiSymbol = false) where T : INumber<T>
+    {
+        ArgumentNullException.ThrowIfNull(writer);
+        byte typeTag = GetNumericTypeTag<T>();
+        ValidateFinite(value.X);
+        ValidateFinite(value.Y);
+
+        var data = value.ToData(asciiSymbol);
+        byte flags = string.IsNullOrEmpty(data.Spec) ? (byte)0 : FlagHasSpec;
+        WriteHeader(writer, KindQuantityVector2, typeTag, flags);
+        WriteUtf8String(writer, data.Unit);
+        if ((flags & FlagHasSpec) != 0) WriteUtf8String(writer, data.Spec!);
+        WriteScalar(writer, data.X);
+        WriteScalar(writer, data.Y);
+    }
+
+    /// <summary>Serializes a <see cref="QuantityVector2{T}"/> to a compact binary byte array.</summary>
+    public static byte[] ToBytes<T>(QuantityVector2<T> value, bool asciiSymbol = false) where T : INumber<T>
+    {
+        var buffer = new ArrayBufferWriter<byte>(64);
+        Write(buffer, value, asciiSymbol);
+        return buffer.WrittenSpan.ToArray();
+    }
+
+    /// <summary>Reads a <see cref="QuantityVector2{T}"/> from a compact binary frame.</summary>
+    public static QuantityVector2<T> ReadQuantityVector2<T>(ReadOnlySpan<byte> buffer, out int bytesRead, UnitEnvironment? environment = null) where T : INumber<T>
+    {
+        int offset = 0;
+        ReadHeader(buffer, ref offset, KindQuantityVector2, GetNumericTypeTag<T>(), out byte flags);
+        string unit = ReadUtf8String(buffer, ref offset);
+        string? spec = (flags & FlagHasSpec) != 0 ? ReadUtf8String(buffer, ref offset) : null;
+        T x = ReadScalar<T>(buffer, ref offset);
+        T y = ReadScalar<T>(buffer, ref offset);
+        ValidateFinite(x);
+        ValidateFinite(y);
+        bytesRead = offset;
+        return QuantityVector2<T>.FromData(new QuantityVector2Data<T>(x, y, unit, spec), environment);
+    }
+
+    /// <summary>Writes a 3-D physical vector <see cref="QuantityVector3{T}"/> in compact binary format.</summary>
+    public static void Write<T>(IBufferWriter<byte> writer, QuantityVector3<T> value, bool asciiSymbol = false) where T : INumber<T>
+    {
+        ArgumentNullException.ThrowIfNull(writer);
+        byte typeTag = GetNumericTypeTag<T>();
+        ValidateFinite(value.X);
+        ValidateFinite(value.Y);
+        ValidateFinite(value.Z);
+
+        var data = value.ToData(asciiSymbol);
+        byte flags = string.IsNullOrEmpty(data.Spec) ? (byte)0 : FlagHasSpec;
+        WriteHeader(writer, KindQuantityVector3, typeTag, flags);
+        WriteUtf8String(writer, data.Unit);
+        if ((flags & FlagHasSpec) != 0) WriteUtf8String(writer, data.Spec!);
+        WriteScalar(writer, data.X);
+        WriteScalar(writer, data.Y);
+        WriteScalar(writer, data.Z);
+    }
+
+    /// <summary>Serializes a <see cref="QuantityVector3{T}"/> to a compact binary byte array.</summary>
+    public static byte[] ToBytes<T>(QuantityVector3<T> value, bool asciiSymbol = false) where T : INumber<T>
+    {
+        var buffer = new ArrayBufferWriter<byte>(64);
+        Write(buffer, value, asciiSymbol);
+        return buffer.WrittenSpan.ToArray();
+    }
+
+    /// <summary>Reads a <see cref="QuantityVector3{T}"/> from a compact binary frame.</summary>
+    public static QuantityVector3<T> ReadQuantityVector3<T>(ReadOnlySpan<byte> buffer, out int bytesRead, UnitEnvironment? environment = null) where T : INumber<T>
+    {
+        int offset = 0;
+        ReadHeader(buffer, ref offset, KindQuantityVector3, GetNumericTypeTag<T>(), out byte flags);
+        string unit = ReadUtf8String(buffer, ref offset);
+        string? spec = (flags & FlagHasSpec) != 0 ? ReadUtf8String(buffer, ref offset) : null;
+        T x = ReadScalar<T>(buffer, ref offset);
+        T y = ReadScalar<T>(buffer, ref offset);
+        T z = ReadScalar<T>(buffer, ref offset);
+        ValidateFinite(x);
+        ValidateFinite(y);
+        ValidateFinite(z);
+        bytesRead = offset;
+        return QuantityVector3<T>.FromData(new QuantityVector3Data<T>(x, y, z, unit, spec), environment);
     }
 
     // --- Low-level helpers ---
